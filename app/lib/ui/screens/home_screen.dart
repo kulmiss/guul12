@@ -3,10 +3,12 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../../app/challenge_providers.dart';
 import '../../app/engagement_providers.dart';
 import '../../app/plan_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
+import '../../data/models.dart';
 import '../../domain/engagement.dart';
 import '../../domain/ethiopian_calendar.dart';
 import '../../domain/practice.dart';
@@ -38,6 +40,8 @@ class HomeScreen extends ConsumerWidget {
     final due = ref.watch(reviewDueCountProvider).value ?? 0;
     final plan = ref.watch(todayPlanProvider).value;
     final engagement = ref.watch(engagementProvider).value;
+    final challengeOn = config?.feature('daily_challenge') ?? false;
+    final challenge = challengeOn ? ref.watch(dailyChallengeProvider).value : null;
     final mistakes = ref.watch(mistakesProvider).value ?? const <int, List<Mistake>>{};
     final mistakeCount = mistakes.values.fold(0, (sum, list) => sum + list.length);
 
@@ -84,6 +88,26 @@ class HomeScreen extends ConsumerWidget {
                       ),
                     ),
                   _CountdownCard(examDate: config?.examDate, today: today),
+                  if (challenge != null && challengeOn && challenge.questions.isNotEmpty)
+                    Card(
+                      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        leading: CircleAvatar(
+                          child: Icon(
+                            challenge.result == null ? Icons.flag_outlined : Icons.emoji_events,
+                          ),
+                        ),
+                        title: Text(
+                          l.challengeTitle,
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        subtitle: Text(_challengeLine(l, challenge)),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () =>
+                            context.push(PracticeScreen.playPath(PracticeMode.dailyChallenge)),
+                      ),
+                    ),
                   if (plan != null)
                     Card(
                       margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
@@ -193,6 +217,15 @@ class HomeScreen extends ConsumerWidget {
       ),
     );
   }
+}
+
+String _challengeLine(AppLocalizations l, DailyChallengeInfo c) {
+  final r = c.result;
+  if (r == null) return l.challengeBody(c.questions.length);
+  final compare = r.betterThanPercent == null
+      ? l.challengeCompareLater
+      : l.challengeBetterThan(r.betterThanPercent!);
+  return '${l.challengeDone(r.correct, r.total)} · $compare';
 }
 
 class _CountdownCard extends StatelessWidget {

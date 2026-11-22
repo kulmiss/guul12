@@ -668,3 +668,47 @@ class WeeklyLeaderboard {
   final int? myRank;
   final bool hasNickname;
 }
+
+/// Today's daily challenge: the same questions for every student of a grade and stream.
+class DailyChallengeInfo {
+  const DailyChallengeInfo({required this.date, required this.questions, required this.result});
+
+  factory DailyChallengeInfo.fromJson(Map<String, Object?> json) {
+    final result = json['result'];
+    return DailyChallengeInfo(
+      date: asString(json['date']),
+      questions: asList(json['questions']).map((e) => Question.fromJson(asMap(e))).toList(),
+      result: result is Map ? ChallengeResult.fromJson(asMap(result)) : null,
+    );
+  }
+
+  /// `yyyy-mm-dd`, Addis Ababa time; sent back with the attempt.
+  final String date;
+  final List<Question> questions;
+
+  /// The first try of the day, once uploaded.
+  final ChallengeResult? result;
+}
+
+class ChallengeResult {
+  const ChallengeResult({
+    required this.correct,
+    required this.total,
+    required this.betterThanPercent,
+    required this.players,
+  });
+
+  factory ChallengeResult.fromJson(Map<String, Object?> json) => ChallengeResult(
+    correct: asInt(json['correct']),
+    total: asInt(json['total']),
+    betterThanPercent: asIntOrNull(json['better_than_percent']),
+    players: asInt(json['players']),
+  );
+
+  final int correct;
+  final int total;
+
+  /// Null until enough other students played today.
+  final int? betterThanPercent;
+  final int players;
+}

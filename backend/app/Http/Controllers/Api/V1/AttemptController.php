@@ -8,6 +8,7 @@ use App\Models\Attempt;
 use App\Models\AttemptAnswer;
 use App\Models\User;
 use App\Services\AttemptService;
+use App\Services\DailyChallengeService;
 use App\Services\ExamResultService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -16,6 +17,8 @@ use Illuminate\Validation\Rule;
 class AttemptController extends Controller
 {
     public const MAX_ANSWERS = 200;
+
+    public function __construct(private readonly DailyChallengeService $challenges) {}
 
     public function store(Request $request, AttemptService $attempts, ExamResultService $results): JsonResponse
     {
@@ -27,6 +30,7 @@ class AttemptController extends Controller
             'mode' => ['required', Rule::enum(PracticeMode::class)],
             'chapter_id' => ['nullable', 'integer', 'exists:chapters,id'],
             'mock_id' => ['nullable', 'integer', 'exists:mocks,id', 'required_if:mode,'.PracticeMode::ExamFixed->value, 'prohibited_unless:mode,'.PracticeMode::ExamFixed->value],
+            'challenge_date' => ['nullable', 'date_format:Y-m-d', 'required_if:mode,'.PracticeMode::DailyChallenge->value, 'prohibited_unless:mode,'.PracticeMode::DailyChallenge->value],
             'started_at' => ['required', 'date'],
             'finished_at' => ['required', 'date', 'after_or_equal:started_at', 'before_or_equal:'.now()->addMinutes(10)->toIso8601String()],
             'answers' => ['required', 'array', 'min:1', 'max:'.self::MAX_ANSWERS],
@@ -36,7 +40,14 @@ class AttemptController extends Controller
             'answers.*.time_ms' => ['required', 'integer', 'min:0'],
         ]);
 
-        /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, started_at: string, finished_at: string,
+        if (isset($data['challenge_date']) && ! DailyChallengeService::acceptsDate((string) $data['challenge_date'])) {
+            return response()->json([
+                'message' => 'This daily challenge is over.',
+                'errors' => ['challenge_date' => ['This daily challenge is over.']],
+            ], 422);
+        }
+
+        /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, challenge_date?: string|null, started_at: string, finished_at: string,
          *        answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>} $data */
         $result = $attempts->submit($user, $data);
 
@@ -73,6 +84,21 @@ class AttemptController extends Controller
             ])->values()->all(),
             // Exams only: right answers per chapter and the comparison with other students.
             'exam' => $attempt->mode->isExam() ? $results->details($attempt) : null,
+            'challenge' => $attempt->mode === PracticeMode::DailyChallenge ? $this->challenge($attempt) : null,
+        ];
+    }
+
+    /**
+     * @return array{date: string|null, better_than_percent: int|null, players: int}
+     */
+    private function challenge(Attempt $attempt): array
+    {
+        [$percent, $players] = $this->challenges->percentile($attempt);
+
+        return [
+            'date' => $attempt->challenge_date?->toDateString(),
+            'better_than_percent' => $percent,
+            'players' => $players,
         ];
     }
 }

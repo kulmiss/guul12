@@ -2125,6 +2125,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'See the weekly leaderboard'**
   String get leaderboardOpen;
+
+  /// Title
+  ///
+  /// In en, this message translates to:
+  /// **'Daily challenge'**
+  String get challengeTitle;
+
+  /// Home card before playing
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 question, the same for everyone in your grade today} other{{count} questions, the same for everyone in your grade today}}'**
+  String challengeBody(int count);
+
+  /// Home card after playing
+  ///
+  /// In en, this message translates to:
+  /// **'Today: {correct} / {total} right'**
+  String challengeDone(int correct, int total);
+
+  /// Comparison
+  ///
+  /// In en, this message translates to:
+  /// **'Better than {percent}% of today\'s players'**
+  String challengeBetterThan(int percent);
+
+  /// Not enough players yet
+  ///
+  /// In en, this message translates to:
+  /// **'Come back later to compare with other players'**
+  String get challengeCompareLater;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

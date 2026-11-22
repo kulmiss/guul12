@@ -115,7 +115,7 @@ class Question extends Model
      */
     public function scopeVisibleToStudents(Builder $query): Builder
     {
-        return $query->whereIn('status', array_map(fn (QuestionStatus $s) => $s->value, QuestionStatus::visibleToStudents()));
+        return $query->whereIn($query->qualifyColumn('status'), array_map(fn (QuestionStatus $s) => $s->value, QuestionStatus::visibleToStudents()));
     }
 
     /**

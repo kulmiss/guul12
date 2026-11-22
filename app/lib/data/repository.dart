@@ -295,12 +295,14 @@ class Repository {
     required DateTime finishedAt,
     required List<AttemptAnswer> answers,
     int? mockId,
+    String? challengeDate,
   }) async {
     final payload = <String, Object?>{
       'client_uuid': clientUuid,
       'mode': mode,
       'chapter_id': chapterId,
       'mock_id': ?mockId,
+      'challenge_date': ?challengeDate,
       'started_at': startedAt.toUtc().toIso8601String(),
       'finished_at': finishedAt.toUtc().toIso8601String(),
       'answers': [for (final a in answers) a.toJson()],
@@ -491,6 +493,10 @@ class Repository {
       (await db.examResults()).map(ExamRecord.fromJson).toList();
 
   /// Asks the server again, e.g. for "better than X%" once more students took the mock.
+  /// Today's daily challenge (online only).
+  Future<DailyChallengeInfo> dailyChallenge() async =>
+      DailyChallengeInfo.fromJson(await _authed(() => api.get('challenge')));
+
   /// This week's leaderboard (online only). Offline work is uploaded first so the student's own
   /// points are up to date.
   Future<WeeklyLeaderboard> leaderboard({String? appVersion}) async {

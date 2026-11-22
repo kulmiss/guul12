@@ -1761,5 +1761,43 @@
   "leaderboardOpen": "See the weekly leaderboard",
   "@leaderboardOpen": {
     "description": "Progress entry"
+  },
+  "challengeTitle": "Daily challenge",
+  "@challengeTitle": {
+    "description": "Title"
+  },
+  "challengeBody": "{count, plural, =1{1 question, the same for everyone in your grade today} other{{count} questions, the same for everyone in your grade today}}",
+  "@challengeBody": {
+    "description": "Home card before playing",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "challengeDone": "Today: {correct} / {total} right",
+  "@challengeDone": {
+    "description": "Home card after playing",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "challengeBetterThan": "Better than {percent}% of today's players",
+  "@challengeBetterThan": {
+    "description": "Comparison",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "challengeCompareLater": "Come back later to compare with other players",
+  "@challengeCompareLater": {
+    "description": "Not enough players yet"
   }
 }

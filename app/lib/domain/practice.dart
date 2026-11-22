@@ -14,7 +14,8 @@ enum PracticeMode {
   quickRevise('quick_revise'),
   chapterQuiz('chapter_quiz'),
   review('review'),
-  smart('smart');
+  smart('smart'),
+  dailyChallenge('daily_challenge');
 
   const PracticeMode(this.wire);
 
@@ -69,6 +70,8 @@ class PracticeBuilder {
       case PracticeMode.mixed:
         return _take(unique, mixedCount);
       case PracticeMode.onboarding:
+      case PracticeMode.dailyChallenge:
+        // The set was chosen elsewhere (warm-up file, or the server's challenge): keep its order.
         return List.of(unique);
       case PracticeMode.quick10:
       case PracticeMode.timed:

@@ -17,6 +17,8 @@ enum PracticeMode: string
     case Review = 'review';
     // Adaptive practice: weak chapters first, then new questions.
     case Smart = 'smart';
+    // The same 10 questions for every student of a grade and stream, once a day.
+    case DailyChallenge = 'daily_challenge';
 
     // Exams (no feedback until the end).
     case ExamFixed = 'exam_fixed';

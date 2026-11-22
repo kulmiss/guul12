@@ -34,10 +34,13 @@ class PracticeRequest {
 
 /// A ready-to-play set plus the passages its questions need.
 class PracticeSet {
-  const PracticeSet({required this.questions, required this.passages});
+  const PracticeSet({required this.questions, required this.passages, this.challengeDate});
 
   final List<Question> questions;
   final Map<int, Passage> passages;
+
+  /// For the daily challenge: the day it belongs to (sent back with the attempt).
+  final String? challengeDate;
 
   bool get isEmpty => questions.isEmpty;
 }
@@ -50,6 +53,14 @@ Future<PracticeSet> buildPracticeSet(
   Random? random,
   DateTime? now,
 }) async {
+  if (request.mode == PracticeMode.dailyChallenge) {
+    final challenge = await repo.dailyChallenge();
+    return PracticeSet(
+      questions: challenge.questions,
+      passages: const {},
+      challengeDate: challenge.date,
+    );
+  }
   final List<ChapterContent> chapters;
   switch (request.mode) {
     case PracticeMode.chapter:
@@ -80,6 +91,7 @@ Future<PracticeSet> buildPracticeSet(
     case PracticeMode.smart:
     case PracticeMode.quickRevise:
     case PracticeMode.onboarding:
+    case PracticeMode.dailyChallenge:
       chapters = await repo.db.chapters();
   }
 

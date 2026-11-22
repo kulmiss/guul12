@@ -22,6 +22,26 @@ class FakeServer {
   /// Feature switches sent in /config (missing = on).
   final Map<String, Object?> features = {'battles': true};
 
+  /// Today's challenge: 3 questions (keys B, D, A).
+  List<Map<String, Object?>> challengeQuestions = [
+    examQuestion(951, 'B'),
+    examQuestion(952, 'D'),
+    examQuestion(953, 'A', chapterId: 22),
+  ];
+
+  /// "Better than X%" once enough students played; null = not enough yet.
+  int? challengeBetterThan;
+
+  int challengeCorrect(Map<String, Object?> attempt) {
+    final keys = {
+      for (final q in challengeQuestions) q['id']: (q['answer_key']! as Map)['correct'],
+    };
+    return asList(attempt['answers'])
+        .map(asMap)
+        .where((a) => keys[a['question_id']] == a['response'])
+        .length;
+  }
+
   /// What GET /leaderboard returns.
   Map<String, Object?> leaderboard = {
     'week_start': '2026-11-16',
@@ -258,6 +278,20 @@ class FakeServer {
           'features': features,
           'premium': false,
           'show_ads': true,
+        });
+      case ('GET', 'challenge'):
+        final mine = receivedAttempts.where((a) => a['mode'] == 'daily_challenge').toList();
+        return json({
+          'date': '2026-11-22',
+          'questions': challengeQuestions,
+          'result': mine.isEmpty
+              ? null
+              : {
+                  'correct': challengeCorrect(mine.first),
+                  'total': challengeQuestions.length,
+                  'better_than_percent': challengeBetterThan,
+                  'players': challengeBetterThan == null ? 4 : 40,
+                },
         });
       case ('GET', 'leaderboard'):
         return json(leaderboard);

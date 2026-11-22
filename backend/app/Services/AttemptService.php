@@ -21,10 +21,11 @@ class AttemptService
     public function __construct(
         private readonly AnswerScorer $scorer,
         private readonly Settings $settings,
+        private readonly DailyChallengeService $challenges,
     ) {}
 
     /**
-     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, started_at: string, finished_at: string,
+     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, challenge_date?: string|null, started_at: string, finished_at: string,
      *               answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>}  $data
      * @return array{attempt: Attempt, created: bool}
      */
@@ -42,15 +43,24 @@ class AttemptService
         $minMs = $this->settings->int('min_answer_ms');
         $maxMs = $this->settings->int('max_answer_ms');
 
+        $ids = array_column($data['answers'], 'question_id');
+        $challengeDate = $data['challenge_date'] ?? null;
+        $challengeKey = null;
+        if (PracticeMode::from($data['mode']) === PracticeMode::DailyChallenge && $challengeDate !== null) {
+            // Only that day's challenge questions count (anything else is ignored, never trusted).
+            $challengeKey = DailyChallengeService::keyFor($user);
+            $ids = array_values(array_intersect($ids, $this->challenges->questionIds($challengeDate, $challengeKey)));
+        }
+
         /** @var Collection<int, Question> $questions */
         $questions = Question::query()
             ->visibleToStudents()
-            ->whereIn('id', array_column($data['answers'], 'question_id'))
+            ->whereIn('id', $ids)
             ->get()
             ->keyBy('id');
 
         try {
-            $attempt = $this->store($user, $data, $questions, $minMs, $maxMs);
+            $attempt = $this->store($user, $data, $questions, $minMs, $maxMs, $challengeKey === null ? null : [$challengeDate, $challengeKey]);
         } catch (UniqueConstraintViolationException) {
             // The same attempt arrived twice at the same moment; the first one won.
             $attempt = Attempt::query()->where('user_id', $user->id)->where('client_uuid', $data['client_uuid'])->firstOrFail();
@@ -64,19 +74,22 @@ class AttemptService
     }
 
     /**
-     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, started_at: string, finished_at: string,
+     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, challenge_date?: string|null, started_at: string, finished_at: string,
      *               answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>}  $data
      * @param  Collection<int, Question>  $questions
+     * @param  array{0: string, 1: string}|null  $challenge  date and key of a daily challenge
      */
-    private function store(User $user, array $data, $questions, int $minMs, int $maxMs): Attempt
+    private function store(User $user, array $data, $questions, int $minMs, int $maxMs, ?array $challenge): Attempt
     {
-        return DB::transaction(function () use ($user, $data, $questions, $minMs, $maxMs): Attempt {
+        return DB::transaction(function () use ($user, $data, $questions, $minMs, $maxMs, $challenge): Attempt {
             $attempt = Attempt::query()->create([
                 'user_id' => $user->id,
                 'client_uuid' => $data['client_uuid'],
                 'mode' => PracticeMode::from($data['mode']),
                 'chapter_id' => $data['chapter_id'] ?? null,
                 'mock_id' => $data['mock_id'] ?? null,
+                'challenge_date' => $challenge[0] ?? null,
+                'challenge_key' => $challenge[1] ?? null,
                 'started_at' => Carbon::parse($data['started_at'])->utc(),
                 'finished_at' => Carbon::parse($data['finished_at'])->utc(),
                 'total' => 0,

@@ -16,6 +16,8 @@ use Illuminate\Support\Carbon;
  * @property PracticeMode $mode
  * @property int|null $chapter_id
  * @property int|null $mock_id
+ * @property Carbon|null $challenge_date
+ * @property string|null $challenge_key
  * @property Carbon $started_at
  * @property Carbon $finished_at
  * @property int $total
@@ -25,7 +27,7 @@ use Illuminate\Support\Carbon;
  */
 class Attempt extends Model
 {
-    protected $fillable = ['user_id', 'client_uuid', 'mode', 'chapter_id', 'mock_id', 'started_at', 'finished_at', 'total', 'correct', 'too_fast'];
+    protected $fillable = ['user_id', 'client_uuid', 'mode', 'chapter_id', 'mock_id', 'challenge_date', 'challenge_key', 'started_at', 'finished_at', 'total', 'correct', 'too_fast'];
 
     /**
      * @return array<string, string>
@@ -36,6 +38,7 @@ class Attempt extends Model
             'mode' => PracticeMode::class,
             'started_at' => 'datetime',
             'finished_at' => 'datetime',
+            'challenge_date' => 'date',
             'total' => 'integer',
             'correct' => 'integer',
             'too_fast' => 'integer',

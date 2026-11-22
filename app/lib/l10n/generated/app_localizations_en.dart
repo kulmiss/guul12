@@ -1298,4 +1298,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get leaderboardOpen => 'See the weekly leaderboard';
+
+  @override
+  String get challengeTitle => 'Daily challenge';
+
+  @override
+  String challengeBody(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count questions, the same for everyone in your grade today',
+      one: '1 question, the same for everyone in your grade today',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String challengeDone(int correct, int total) {
+    return 'Today: $correct / $total right';
+  }
+
+  @override
+  String challengeBetterThan(int percent) {
+    return 'Better than $percent% of today\'s players';
+  }
+
+  @override
+  String get challengeCompareLater => 'Come back later to compare with other players';
 }

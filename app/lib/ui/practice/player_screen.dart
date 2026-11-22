@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:uuid/uuid.dart';
 
+import '../../app/challenge_providers.dart';
 import '../../app/practice_set.dart';
 import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
@@ -42,6 +43,7 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
       clientUuid: const Uuid().v4(),
       mode: _request.mode.wire,
       chapterId: _request.chapterId,
+      challengeDate: ref.read(practiceSetProvider(_request)).value?.challengeDate,
       startedAt: session.startedAt,
       finishedAt: ref.read(clockProvider)(),
       answers: [
@@ -62,6 +64,8 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
       ..invalidate(reviewDueCountProvider)
       ..invalidate(masteryProvider);
     final synced = await repo.tryUploadAttempts(appVersion: ref.read(appVersionProvider));
+    // The challenge result (and how others did) comes from the server after the upload.
+    if (_request.mode == PracticeMode.dailyChallenge) ref.invalidate(dailyChallengeProvider);
     if (mounted) setState(() => _synced = synced);
   }
 
@@ -160,6 +164,7 @@ String practiceModeLabel(AppLocalizations l, PracticeMode mode) => switch (mode)
   PracticeMode.review => l.practiceModeReview,
   PracticeMode.smart => l.practiceModeSmart,
   PracticeMode.onboarding => l.onboardingHookTitle,
+  PracticeMode.dailyChallenge => l.challengeTitle,
 };
 
 class _ResultView extends StatelessWidget {
