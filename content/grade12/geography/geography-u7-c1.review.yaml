@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-7-1-q001: {hash: '392c78952ec1a4c9c9505490258e0b19d349029498cd9e839e5810c15bcb8b37', answer: B}
+  g12-geography-7-1-q002: {hash: '848397a926e7245503d627c60aa3d0b749c540ae9dba5d5d59c6d0bcad3b897f', answer: C}
+  g12-geography-7-1-q003: {hash: 'b490adc158f244e491237243db7216af778fcc866a8dbb8c150df2831f5ca04e', answer: A}
+  g12-geography-7-1-q004: {hash: '8b49c1b7b0368f9f361f99b80d1762983049a1b90fadc9f4ca2fe458b522773d', answer: 3000}
+  g12-geography-7-1-q005: {hash: 'd09c2eb21a67b757a97c7a4660ca01d31be0245adf3e792ea22065c315a3c338', answer: D}
+  g12-geography-7-1-q006: {hash: '0ad11700824a4eea96343e0bf05e4c6f2933cc049ff92396a0910c32bc158ef3', answer: B}
+  g12-geography-7-1-q007: {hash: 'defbd26725fd29a72aba1befee4f547bbe727489d17205b2a17d5d61969a5800', answer: 4, note: 'Answer 4 is the classic FAO framework (availability, access, utilisation, stability). But the FAO Committee on World Food Security HLPE report (2020) proposed six dimensions, adding agency and sustainability. A careful student could answer 6. Suggest rewording: "How many dimensions (pillars) of food security are in the classic FAO definition from the 1996 World Food Summit?" or naming the four in the lesson.'}
+  g12-geography-7-1-q008: {hash: '0290e600e5a41b48785c99bcda766b126b6ad51d8301ccee18a41a60cb4757be', answer: C}
+  g12-geography-7-1-q009: {hash: 'd20dc76444a8d7fe9848d00d06d450e7235731cc268b3906ccfbd0c7e0afcf47', answer: A}
+  g12-geography-7-1-q010: {hash: '96ea4f27627b3dddb6ed01389183981e49bd66cee9398079f9528e1cb7840c29', answer: D}
+  g12-geography-7-1-q011: {hash: '9c452f4b1979f6c91b820d95ad3f11fc849eab6edb2e47097c0c0cc6527e2359', answer: A}
+  g12-geography-7-1-q012: {hash: '6a0b5a039c1ad36df690638153297ab16d7c5a2aed0e10a1613cc918e3b0ef3b', answer: [A, B, C]}
+  g12-geography-7-1-q013: {hash: 'cbbb085ca527779718e8b523c7708f1e18a709ec0ac7aa925681f86bcae21470', answer: B}
+  g12-geography-7-1-q014: {hash: '00fa511183714465124f6909699957ec2bf3bc0c665b8ecd948af7b8f859d3a9', answer: C}
+  g12-geography-7-1-q015: {hash: '974f2838926b1c7141d4ae9ed59211311b6639275e1873975a3bda8b2e284c1d', answer: true}
+  g12-geography-7-1-q016: {hash: '2aceb65d52a89767f428087e52a9136682afeee47fe65bf83dab7382c0a3e873', answer: false}
+  g12-geography-7-1-q017: {hash: 'b25e27eb74a49b1bf1ff679f11d157c6746bce452249d8fc664910fdf9b9bb61', answer: D}
+  g12-geography-7-1-q018: {hash: '2714e871f57164f501e7c416d731cdddb84c9238a28e62cc830ed18dc62fe27e', answer: A}
+  g12-geography-7-1-q019: {hash: 'b984fb660a62fbddd63f398d38bfef6068d18d1a6cbaa87b7b9c5d0006e8557f', answer: refugee}
+  g12-geography-7-1-q020: {hash: '79ef872cc7f95197528cb2ec924de44fe9e093e109a0add079c3024ee32ffb5f', answer: remittances}
+  g12-geography-7-1-q021: {hash: 'b50ed6555f5db624e8847e71ebb234d94e1a3d0cddbee569f1288c8826d12035', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-geography-7-1-q022: {hash: '24613b3e35e1fd3b99ffd11f39dbbd0b63370354a4be9d003583b59dded89078', answer: [B, D, A, C]}
+  g12-geography-7-1-q023: {hash: '6a61966d558340b92129e88e7967d3874a430ad09113fc078219ba35fce96a2f', answer: D}
+  g12-geography-7-1-q024: {hash: '67bdce98dc62cda6684301065439e1222a23d2422adfa92e1bead5029a20038d', answer: A}
+  g12-geography-7-1-q025: {hash: 'dc3717aa6c72ea8ffefa4b3bbb35aabe137c618f0f97bc390b7380ca1f8ead00', answer: B}
+  g12-geography-7-1-q026: {hash: '0abe605085d201019c31dbe3605b3ac2a08f7c49deb9e6a86ba699f19620311a', answer: C}
+  g12-geography-7-1-q027: {hash: '83f1c9c91861c15be1e017f4b23aa49fab4ec9912c0c747758cb68e6c85a91b2', answer: D}
+  g12-geography-7-1-q028: {hash: '767663464e54040972c672648948a319a50ec4aee2483d026f42de4986b95876', answer: false}
+  g12-geography-7-1-q029: {hash: '81cbe7bc6515bf2acc3a072bb6620ef5624a535502937ed9b595db3bb7bba662', answer: A}
+  g12-geography-7-1-q030: {hash: 'f94384835cb51239eaae10dbf37427842139e53cb33fbfc6e437902840e17792', answer: B}

@@ -3,7 +3,7 @@ summary:
     - 'Globalisation is the growing connection of the world through trade, investment, travel, communication and culture. It can bring jobs, technology and cheaper goods, but also inequality, job losses in some industries and loss of local culture.'
     - 'Migration is the movement of people from one place to another. Push factors drive people out (drought, conflict, unemployment); pull factors attract them (jobs, safety, services). Net migration $=$ immigrants $-$ emigrants.'
     - 'A refugee is a person who has fled their country because of conflict or persecution and cannot safely return; the UN agency UNHCR protects refugees. An internally displaced person (IDP) has fled but stays inside their own country. Ethiopia hosts one of the largest refugee populations in Africa.'
-    - 'Food security exists when all people at all times have access to enough safe, nutritious food. The FAO describes four dimensions: availability, access, utilisation and stability.'
+    - 'Food security exists when all people at all times have access to enough safe, nutritious food. The classic FAO framework has four dimensions: availability, access, utilisation and stability (some newer reports add agency and sustainability).'
     - 'Pandemics such as COVID-19 (declared a pandemic in 2020) show how disease can spread rapidly through global travel and affect health, schools, jobs and trade.'
     - 'Other global concerns: water scarcity, desertification, plastic pollution in oceans, loss of biodiversity, rapid urbanisation and the "digital divide" between people with and without internet access.'
     - 'Responses need cooperation at local, national and global levels, for example through the United Nations, the African Union and IGAD in the Horn of Africa.'
@@ -113,7 +113,7 @@ questions:
   - uid: g12-geography-7-1-q007
     type: numeric
     difficulty: 1
-    stem: 'How many dimensions of food security does the FAO describe?'
+    stem: 'How many dimensions of food security are there in the classic FAO framework taught in most textbooks?'
     answer: {value: 4, tolerance: 0}
     explanation: 'Availability, access, utilisation and stability.'
 

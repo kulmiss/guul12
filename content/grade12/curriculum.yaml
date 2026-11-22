@@ -323,6 +323,7 @@ subjects:
     chapters:
     - number: 1
       title: Geographical Enquiry and Map Making
+      file: geography/u8-c1.yaml
 - code: history
   units:
   - number: 1
