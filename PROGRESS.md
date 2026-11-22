@@ -3,7 +3,7 @@
 📍 Phase 1 of 5 · Step 8 of 8: CI green, release build, Phase 1 report → next: owner test of PR #1, then Phase 2 (content + quality gate)
 📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓░░░░░░░ 28% done · 72% left
-⚠️ Waiting for: owner test + merge of PR #1; answer on offline packs (DECISIONS #11); past-paper PDFs + permission letter
+⚠️ Waiting for: owner test + merge of PR #1; past-paper PDFs + permission letter
 
 | Phase | Weight | Status |
 |---|---|---|

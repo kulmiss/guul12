@@ -23,7 +23,7 @@
 | 19 | Region stored as a code (`somali`, `addis_ababa`, …): Ethiopia's 12 regions + 2 chartered cities (2023 list). Somali is first | Labels can be translated later; focus region is one tap away |
 | 20 | Stream question only for Grades 11–12; "retaking the exam" question only for Grade 12 | Streams start in Grade 11; only Grade 12 sit the national exam |
 | 21 | The 5-question warm-up in onboarding is bundled and stays on the phone (never uploaded) | Works offline on first start; no fake question IDs on the server |
-| 22 | Free students download a chapter when they first open it (needs internet once); whole-subject packs stay Premium | Matches DECISIONS #11 (still waiting for owner's OK) |
+| 22 | Free students download a chapter when they first open it (needs internet once); whole-subject packs stay Premium | Matches DECISIONS #11 (confirmed by owner) |
 | 23 | Practice sets: Quick 10 = up to half "last answer wrong" + new questions; Mixed 20; chapter/unit up to 30; Quick revise 5; Timed = 60 s per question | Spaced repetition proper comes in Phase 3 |
 | 24 | Practice shows right/wrong and the explanation straight after "Check" | Learning mode; exams (Phase 3) show results only at the end |
 | 25 | Ordering questions never start in the right order; items move by drag **or** up/down buttons | Fair question; works with screen readers and small screens |

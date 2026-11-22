@@ -14,5 +14,5 @@ Big decisions. Small technical choices are in [QUESTIONS.md](QUESTIONS.md).
 | 8 | 2026-11-22 | AdMob: age treatment TEEN, max content rating G, non-personalised ads; Play audience 13–15, 16–17, 18+ | Teen audience |
 | 9 | 2026-11-22 | **No calculator** in the exam: every maths/science question must be solvable by hand | Owner confirmed |
 | 10 | 2026-11-22 | Repo `kulmiss/guul12` (public for now), domain `guul12.kulmiss.com` | Owner choice |
-| 11 | 2026-11-22 | Offline content: every chapter a student opens is downloaded and kept offline (free). **Whole subject packs at once = Premium** (`/sync/pack`). Changed content syncs by a change cursor, only changed chapters are re-downloaded | Fits "everything studied works offline" + "all offline packs Premium" — *awaiting owner confirmation, see Phase 1 report* |
+| 11 | 2026-11-22 | Offline content: every chapter a student opens is downloaded and kept offline (free). **Whole subject packs at once = Premium** (`/sync/pack`). Changed content syncs by a change cursor, only changed chapters are re-downloaded | Fits "everything studied works offline" + "all offline packs Premium" — **confirmed by owner after Phase 1** |
 | 12 | 2026-11-22 | Mathematics is one subject; Grade 11–12 units carry a stream (natural/social), Grades 9–10 units are shared | Maths splits by stream only in Grades 11–12 |
