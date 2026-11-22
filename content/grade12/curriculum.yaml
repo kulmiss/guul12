@@ -293,6 +293,7 @@ subjects:
     chapters:
     - number: 1
       title: Management of Conflict Over Resources
+      file: geography/u3-c1.yaml
   - number: 4
     title: Population Policies, Programs and the Environment
     chapters:

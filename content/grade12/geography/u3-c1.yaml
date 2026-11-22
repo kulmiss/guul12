@@ -1,0 +1,366 @@
+summary:
+  key_points:
+    - 'Natural resources are renewable (water, forests, pasture, soil – they can be replaced if used carefully) or non-renewable (oil, coal, minerals – they run out).'
+    - 'Causes of conflict over resources: scarcity (made worse by drought and population growth), unequal distribution or access, unclear ownership, shared resources that cross borders (transboundary rivers), and competing uses, for example farming versus grazing.'
+    - '"Tragedy of the commons" (Garrett Hardin, 1968): when a resource is open to everyone and no one manages it, each user takes as much as possible and the resource is overused.'
+    - 'The Nile is shared by eleven countries. Most of its water at Aswan comes from the Ethiopian highlands through the Abay (Blue Nile), Tekeze and Baro-Akobo rivers. The Grand Ethiopian Renaissance Dam (GERD), begun in 2011 on the Abay in the Benishangul-Gumuz Region, is a hydropower project discussed among Ethiopia, Sudan and Egypt.'
+    - 'The Nile Basin Initiative (1999) brings basin countries together to cooperate. The international principle of "equitable and reasonable use" says shared rivers should be used fairly without causing significant harm to others.'
+    - 'Peaceful ways to manage conflict: dialogue, negotiation (the parties talk directly), mediation (a neutral third party helps), arbitration (a third party decides), and joint management with benefit sharing.'
+    - 'Traditional institutions also resolve disputes: councils of elders, Somali xeer (customary law) and the Oromo Gadaa system use agreed rules for sharing wells and grazing land.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-geography-3-1-se01
+    problem: 'Explain the difference between mediation and arbitration.'
+    steps:
+      - 'In mediation, a neutral person helps the two sides talk and reach their own agreement.'
+      - 'In arbitration, a neutral person or body listens to both sides and makes a decision the sides have agreed to accept.'
+    answer: 'Mediation helps the parties agree; arbitration decides for them.'
+  - uid: g12-geography-3-1-se02
+    problem: 'Why do disputes between pastoralists and farmers often increase during droughts?'
+    steps:
+      - 'Pasture and water become scarce, so herders move animals further, sometimes onto farmland.'
+      - 'Both groups need the same scarce land and water, so competition rises.'
+    answer: 'Scarcity increases competition for land and water.'
+  - uid: g12-geography-3-1-se03
+    problem: 'A shared grazing area has no rules. Using the "tragedy of the commons", predict what happens.'
+    steps:
+      - 'Each herder gains by adding more animals, while the cost of overgrazing is shared by everyone.'
+      - 'So all add animals, the grass is overgrazed and the land degrades for everyone.'
+    answer: 'Overgrazing and land degradation'
+
+flashcards:
+  - {uid: g12-geography-3-1-fc01, term: Renewable resource, definition: 'Can be replaced naturally if managed well, e.g. water, forests.'}
+  - {uid: g12-geography-3-1-fc02, term: Non-renewable resource, definition: 'Exists in limited amounts and runs out, e.g. oil.'}
+  - {uid: g12-geography-3-1-fc03, term: Tragedy of the commons, definition: 'Overuse of an open resource that no one manages.'}
+  - {uid: g12-geography-3-1-fc04, term: Transboundary river, definition: 'A river that flows through or along more than one country.'}
+  - {uid: g12-geography-3-1-fc05, term: Mediation, definition: 'A neutral third party helps the sides reach agreement.'}
+  - {uid: g12-geography-3-1-fc06, term: Arbitration, definition: 'A neutral third party makes a decision both sides accept.'}
+  - {uid: g12-geography-3-1-fc07, term: Equitable and reasonable use, definition: 'Principle for fair use of shared rivers without significant harm.'}
+  - {uid: g12-geography-3-1-fc08, term: Xeer, definition: 'Somali customary law used to settle disputes.'}
+  - {uid: g12-geography-3-1-fc09, term: Gadaa, definition: 'Traditional Oromo system of governance and dispute resolution.'}
+
+questions:
+  - uid: g12-geography-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these is a non-renewable resource?'
+    options:
+      A: 'Forests'
+      B: 'Oil'
+      C: 'River water'
+      D: 'Pasture'
+    answer: B
+    explanation: 'Oil takes millions of years to form, so it runs out when used.'
+
+  - uid: g12-geography-3-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which situation is most likely to lead to conflict over resources?'
+    options:
+      A: 'Water becomes scarce and several groups need the same well.'
+      B: 'Rainfall is plentiful for many years.'
+      C: 'A new library opens.'
+      D: 'People plant more trees.'
+    answer: A
+    explanation: 'Scarcity of a shared resource increases competition.'
+
+  - uid: g12-geography-3-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'The idea that an open resource with no management will be overused is called:'
+    options:
+      A: 'The greenhouse effect'
+      B: 'Plate tectonics'
+      C: 'The tragedy of the commons'
+      D: 'The demographic transition'
+    answer: C
+    explanation: 'Garrett Hardin described it in 1968.'
+
+  - uid: g12-geography-3-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'On which river is the Grand Ethiopian Renaissance Dam (GERD) being built?'
+    options:
+      A: 'Awash'
+      B: 'Omo'
+      C: 'Wabe Shebelle'
+      D: 'Abay (Blue Nile)'
+    answer: D
+    explanation: 'GERD is on the Abay in the Benishangul-Gumuz Region, near the border with Sudan.'
+
+  - uid: g12-geography-3-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Ethiopian rivers feed the Nile?'
+    options:
+      A: 'Awash, Wabe Shebelle and Genale'
+      B: 'Abay, Tekeze and Baro-Akobo'
+      C: 'Omo and Gibe only'
+      D: 'None; the Nile starts in Egypt'
+    answer: B
+    explanation: 'The Abay (Blue Nile), Tekeze (Atbara) and Baro-Akobo (Sobat) carry Ethiopian highland water to the Nile. The Awash ends inland and the Wabe Shebelle flows towards Somalia.'
+
+  - uid: g12-geography-3-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'In mediation, the third party:'
+    options:
+      A: 'Makes a binding decision for both sides'
+      B: 'Takes the side of the stronger party'
+      C: 'Helps the two sides reach their own agreement'
+      D: 'Uses force to end the dispute'
+    answer: C
+    explanation: 'A mediator is neutral and helps the parties agree; an arbitrator decides.'
+
+  - uid: g12-geography-3-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Two communities agree that an independent panel will hear both sides of a land dispute and give a decision they will follow. This is:'
+    options:
+      A: 'Arbitration'
+      B: 'Mediation'
+      C: 'Negotiation'
+      D: 'Avoidance'
+    answer: A
+    explanation: 'In arbitration the third party makes the decision.'
+
+  - uid: g12-geography-3-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Negotiation means the two sides talk directly to reach an agreement.'
+    answer: true
+    explanation: 'No third party is needed in negotiation.'
+
+  - uid: g12-geography-3-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which traditional institution is used among Somali communities to settle disputes, including over wells and grazing?'
+    options:
+      A: 'Gadaa'
+      B: 'Xeer'
+      C: 'Debo'
+      D: 'Iddir'
+    answer: B
+    explanation: 'Xeer is Somali customary law applied by elders.'
+
+  - uid: g12-geography-3-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which traditional system of the Oromo people includes rules for governance and resolving disputes?'
+    options:
+      A: 'Xeer'
+      B: 'Iqub'
+      C: 'Mahber'
+      D: 'Gadaa'
+    answer: D
+    explanation: 'The Gadaa system is a traditional Oromo institution of governance; it is inscribed by UNESCO as intangible heritage.'
+
+  - uid: g12-geography-3-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'The principle of "equitable and reasonable use" of a shared river means:'
+    options:
+      A: 'The upstream country can use all the water.'
+      B: 'Only the downstream country can use the water.'
+      C: 'Each country should use the river fairly without causing significant harm to others.'
+      D: 'Nobody may use the river.'
+    answer: C
+    explanation: 'It balances the needs of all basin states.'
+
+  - uid: g12-geography-3-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which organisation, created in 1999, brings Nile Basin countries together to cooperate?'
+    options:
+      A: 'The Nile Basin Initiative'
+      B: 'The World Health Organization'
+      C: 'The Organization of Petroleum Exporting Countries'
+      D: 'The European Union'
+    answer: A
+    explanation: 'The Nile Basin Initiative supports joint planning and development of the river.'
+
+  - uid: g12-geography-3-1-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are causes of resource conflicts? Choose all that apply.'
+    options:
+      A: 'Rapid population growth'
+      B: 'Drought'
+      C: 'Unclear land ownership'
+      D: 'Plentiful supplies for everyone'
+    answer: [A, B, C]
+    explanation: 'Conflicts arise from scarcity and unclear rules, not from abundance.'
+
+  - uid: g12-geography-3-1-q014
+    type: numeric
+    difficulty: 1
+    stem: 'A shared water point gives 1 200 litres a day. Village A takes 500 litres and village B takes 450 litres. How many litres are left for others?'
+    answer: {value: 250, tolerance: 0, unit: L}
+    explanation: '$1200 - 500 - 450 = 250$ litres.'
+
+  - uid: g12-geography-3-1-q015
+    type: numeric
+    difficulty: 2
+    stem: 'Elders agree that 60% of a 500-hectare grazing area will be used in the wet season and the rest saved for the dry season. How many hectares are saved for the dry season?'
+    answer: {value: 200, tolerance: 0, unit: ha}
+    explanation: '40% of 500 ha $= 200$ ha.'
+
+  - uid: g12-geography-3-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does sharing the benefits of a resource (for example, selling electricity from a dam to neighbours) help reduce conflict?'
+    options:
+      A: 'It makes one side lose everything.'
+      B: 'Each side gains something, so cooperation is more attractive than conflict.'
+      C: 'It stops the river from flowing.'
+      D: 'It removes the need for any agreement.'
+    answer: B
+    explanation: 'When all parties gain, they have reasons to keep cooperating.'
+
+  - uid: g12-geography-3-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Pasture and water are renewable resources, but they can still be destroyed by overuse.'
+    answer: true
+    explanation: 'Renewable resources need careful management; overgrazing can turn pasture into bare land.'
+
+  - uid: g12-geography-3-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'How many countries share the Nile basin?'
+    options:
+      A: '3'
+      B: '5'
+      C: '11'
+      D: '20'
+    answer: C
+    explanation: 'Eleven countries share the basin, including Ethiopia, Sudan, South Sudan, Egypt, Uganda and Kenya.'
+
+  - uid: g12-geography-3-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which action would best prevent conflict between farmers and herders over a river?'
+    options:
+      A: 'Fencing off the river for one group only'
+      B: 'Removing all animals from the region'
+      C: 'Ignoring complaints'
+      D: 'Agreeing on routes and times for animals to reach the water'
+    answer: D
+    explanation: 'Agreed corridors and schedules let both groups use the water peacefully.'
+
+  - uid: g12-geography-3-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'A resource that runs out and cannot be replaced in human time, such as coal, is called ________.'
+    answer: [non-renewable, nonrenewable, non renewable]
+    explanation: 'Coal, oil and most minerals are non-renewable.'
+
+  - uid: g12-geography-3-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'A river that flows through more than one country is called a ________ river.'
+    answer: [transboundary, shared, international]
+    explanation: 'The Nile, the Omo and the Juba-Shebelle system are examples.'
+
+  - uid: g12-geography-3-1-q022
+    type: true_false
+    difficulty: 1
+    stem: 'Using force is the best way to settle disputes over water.'
+    answer: false
+    explanation: 'Force causes suffering and rarely lasts; dialogue, negotiation and agreed rules are better.'
+
+  - uid: g12-geography-3-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each method with its description.'
+    left:
+      L1: 'Negotiation'
+      L2: 'Mediation'
+      L3: 'Arbitration'
+    right:
+      R1: 'A neutral party helps the sides agree'
+      R2: 'A neutral party makes the decision'
+      R3: 'The sides talk directly'
+      R4: 'One side gives up and leaves'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '"One side gives up" describes avoidance or withdrawal, not these methods.'
+
+  - uid: g12-geography-3-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these steps in a sensible order for settling a dispute over a shared well.'
+    items:
+      A: 'Agree on rules, such as times and amounts for each group.'
+      B: 'Bring both groups and respected elders together.'
+      C: 'Check later that the rules are being followed.'
+      D: 'Listen to each group''s needs and complaints.'
+    answer: [B, D, A, C]
+    explanation: 'Meet → listen → agree → monitor.'
+
+  - uid: g12-geography-3-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Why can upstream and downstream countries disagree about a dam on a shared river?'
+    options:
+      A: 'Dams always make rivers longer.'
+      B: 'Upstream use can change the amount or timing of water reaching downstream countries.'
+      C: 'Dams change the colour of water.'
+      D: 'Downstream countries never use rivers.'
+    answer: B
+    explanation: 'Filling and operating a reservoir can affect flows downstream, so agreements on rules are important.'
+
+  - uid: g12-geography-3-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did construction of the Grand Ethiopian Renaissance Dam begin?'
+    options:
+      A: '1991'
+      B: '2005'
+      C: '2020'
+      D: '2011'
+    answer: D
+    explanation: 'Construction began in 2011.'
+
+  - uid: g12-geography-3-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is an example of competing uses of the same resource?'
+    options:
+      A: 'Farmers want to irrigate land beside a river that herders use to water their animals.'
+      B: 'Two students read the same book at different times.'
+      C: 'A family plants trees in its own garden.'
+      D: 'A town builds a new school.'
+    answer: A
+    explanation: 'Irrigation and livestock watering both need the river.'
+
+  - uid: g12-geography-3-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do elders often play an important role in settling local resource disputes in Ethiopia?'
+    options:
+      A: 'They own all the resources.'
+      B: 'They are always government officials.'
+      C: 'They are respected and know the customary rules.'
+      D: 'They use weapons to enforce decisions.'
+    answer: C
+    explanation: 'Their authority comes from respect and knowledge of tradition.'
+
+  - uid: g12-geography-3-1-q029
+    type: true_false
+    difficulty: 2
+    stem: 'Most of the water that reaches the Nile in Egypt comes from the Ethiopian highlands.'
+    answer: true
+    explanation: 'The Abay, Tekeze and Baro-Akobo provide most of the annual flow, especially during the rainy season.'
+
+  - uid: g12-geography-3-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement best describes sustainable resource management?'
+    options:
+      A: 'Using as much as possible today'
+      B: 'Using resources in a way that meets present needs without harming future generations'
+      C: 'Leaving all resources unused'
+      D: 'Selling all resources to other countries'
+    answer: B
+    explanation: 'Sustainability balances use now with protection for the future.'

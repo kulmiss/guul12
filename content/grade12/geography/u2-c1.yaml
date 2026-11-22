@@ -228,7 +228,7 @@ questions:
     type: fill_in
     difficulty: 2
     stem: 'Long-term changes in the Earth''s orbit and tilt that affect climate are called ________ cycles.'
-    answer: [Milankovitch]
+    answer: [Milankovitch, Milankovic, Milankovich, Milanković, orbital]
     explanation: 'They are named after the Serbian scientist Milutin Milanković.'
 
   - uid: g12-geography-2-1-q019
@@ -241,7 +241,7 @@ questions:
   - uid: g12-geography-2-1-q020
     type: matching
     difficulty: 2
-    stem: 'Match each agreement or plan with its year.'
+    stem: 'Match each climate agreement with the year it was adopted.'
     left:
       L1: 'UN Framework Convention on Climate Change'
       L2: 'Kyoto Protocol'
@@ -269,14 +269,14 @@ questions:
   - uid: g12-geography-2-1-q022
     type: single_choice
     difficulty: 3
-    stem: 'An increase in cloud cover reflects more sunlight and slightly reduces warming. This is an example of:'
+    stem: 'As the Earth warms, it gives off more heat (infrared radiation) to space, which limits further warming. This is an example of:'
     options:
       A: 'Positive feedback'
       B: 'Plate movement'
       C: 'Negative feedback'
       D: 'Erosion'
     answer: C
-    explanation: 'A negative feedback works against the original change.'
+    explanation: 'A negative feedback works against the original change. (Clouds are complicated: scientists think their overall feedback is more likely to add to warming.)'
 
   - uid: g12-geography-2-1-q023
     type: single_choice

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-2-1-q001: {hash: '9591da9bbd071a152780479edfdb161f7bab4602393f4ae137d9a262271e392b', answer: B}
+  g12-geography-2-1-q002: {hash: '82a066d68ecf30dfb3ef572ec649867af3a62281dffb7a36ac29d16bda06f88d', answer: A}
+  g12-geography-2-1-q003: {hash: '930abf9ab9e0a393c0954b45954582fb96cdb8548a6dc989a3b943154784b298', answer: C}
+  g12-geography-2-1-q004: {hash: '40528c2e4fec0a5f3e70fffe4879db1a15d791a32cdb53320350b707be646d8b', answer: [A, B, C]}
+  g12-geography-2-1-q005: {hash: '3a4f3e0647b7a6d50a69b15a82f7e8d742af13565ba8abb5f5f4a0515182af40', answer: D}
+  g12-geography-2-1-q006: {hash: 'c26ee73a369e83a7c876b74094c410007de4e798f29ca537b96fcbb8748a49ac', answer: B}
+  g12-geography-2-1-q007: {hash: 'c7bf6d51df7c0ae7ca06c3e6321b24920968504e5e673b9f2ea7063ecc8d510f', answer: C}
+  g12-geography-2-1-q008: {hash: 'b978d282f537ead945a8bfa6e1628575b1e412638aa22d72fc8922fc0cf0de1b', answer: D}
+  g12-geography-2-1-q009: {hash: 'dfaa63da3f69ff5a16c017afba71ca3a092445bd53ec53040b3fbea07f597315', answer: 1997}
+  g12-geography-2-1-q010: {hash: '2e0762389599d1e824274cdc84d66b177fd26c13be57748d0d9144f3e555cf90', answer: A}
+  g12-geography-2-1-q011: {hash: '49392cf4fa3b90047305b36aba5c579ee2f07b57fbe07ebca0660003587a4d14', answer: false}
+  g12-geography-2-1-q012: {hash: 'df103012c66e512bdde1b0617d1e2b6989160ed76320154534df18a7f9893e29', answer: B}
+  g12-geography-2-1-q013: {hash: '64eb06f390bd07a0ec8ff1b24286ffe1eaec97fce7569480ca1d4b146d729b23', answer: C}
+  g12-geography-2-1-q014: {hash: 'effc391490d80744a467a8c2e4623a9e41e83fc35953b4f6746460bf46047fde', answer: D}
+  g12-geography-2-1-q015: {hash: '420cdd372fc31ae9c49de8a9ced5de90daa61f286eb03d60fd374d87d49015c6', answer: true}
+  g12-geography-2-1-q016: {hash: '1457cc4b8a8a8f8e454ddfe1da5c4522fa642620114804e990da184efb687767', answer: A}
+  g12-geography-2-1-q017: {hash: '1fa13753cdc9cf6612e269609c72a5ad24c8b6e22e76d035cf4cf3017e8bc84d', answer: 'albedo'}
+  g12-geography-2-1-q018: {hash: 'bdfd863eff0d793cb9dfbeaf2df960f66553d84ebbecc1af2829aaada6ae5b07', answer: 'Milankovitch', note: 'Accept spelling variants (Milankovic, Milankovich) and "orbital".'}
+  g12-geography-2-1-q019: {hash: 'fb00f50d2db52f5904e92243d3e1640414c45602741ed97a9daa105fe5f11d65', answer: true}
+  g12-geography-2-1-q020: {hash: '790b39d2586c2dacf203e9fef013c5f759a1e7f6d694b3d7494aeeef32da796c', answer: {L1: R3, L2: R1, L3: R2}, note: 'Stem says "agreement or plan" but there are only agreements; R4 (2030) is a distractor. Minor wording only.'}
+  g12-geography-2-1-q021: {hash: '8586e349770bf2a99b03d8ae3d0da459ceab12b5e44160d53bb6c80e943fabe7', answer: [B, A, D, C]}
+  g12-geography-2-1-q022: {hash: '7ba1c4cdefdb733fb31eb2baafdb8f5bfc185e5ab5c41f29e32b1309617d0744', answer: C, note: 'Correct as a hypothetical, but IPCC AR6 assesses the net cloud feedback as likely positive (low clouds reduce, high clouds trap heat). Consider wording "In this example, ..." or using a different negative-feedback example (e.g. more plant growth absorbing CO2, or Planck/radiative cooling) so students do not learn that clouds overall reduce warming.'}
+  g12-geography-2-1-q023: {hash: 'fe6e3893b094479debc38958a16a77fddb428beefb71f22e0980f32ad4a6403c', answer: D}
+  g12-geography-2-1-q024: {hash: '216d5412d91db01ff753386bd51e4cfabeec736e3bb2a9680bb2c11b6d9bbe51', answer: A}
+  g12-geography-2-1-q025: {hash: '388dc664e89519b680f7165b0753e315de1e84411540921366345b4d4a4d4e7b', answer: B}
+  g12-geography-2-1-q026: {hash: '8a00055e6f16b80ab198abd1c871b28b56736acdd72700e15921b018489a4d1e', answer: C}
+  g12-geography-2-1-q027: {hash: '7ad109c1d28c58f06676a8b67c7a311bd049687ee241d5e556dc0e1baab6195c', answer: D}
+  g12-geography-2-1-q028: {hash: 'd67a9a09e5602f2daaf2b14299908a8c58a4b203897865c07ab3ae7ed943d9ec', answer: 2011, note: 'Strategy published and launched 2011 (presented at COP17, Durban). Some sources mention the CRGE initiative starting in 2010, so the lesson should state 2011 explicitly to avoid ambiguity.'}
+  g12-geography-2-1-q029: {hash: '33ec8c3282606e9977ed25d25be3af0cff946747e2ae815e87d8ee07b10e0e3d', answer: false}
+  g12-geography-2-1-q030: {hash: 'fa6b4844840fad662a760b7fc85d6310a15f1492eb33c0b6c373aa466b4b69af', answer: A}
