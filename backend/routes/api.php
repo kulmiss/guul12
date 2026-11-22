@@ -12,6 +12,7 @@ use App\Http\Controllers\Api\V1\LeaderboardController;
 use App\Http\Controllers\Api\V1\MeController;
 use App\Http\Controllers\Api\V1\MockController;
 use App\Http\Controllers\Api\V1\RandomExamController;
+use App\Http\Controllers\Api\V1\ReferralController;
 use App\Http\Controllers\Api\V1\ReportController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,8 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::get('history', HistoryController::class)->name('history');
         Route::get('leaderboard', LeaderboardController::class)->name('leaderboard');
         Route::get('challenge', DailyChallengeController::class)->name('challenge');
+        Route::get('referral', [ReferralController::class, 'show'])->name('referral.show');
+        Route::post('referral', [ReferralController::class, 'store'])->name('referral.store');
 
         Route::get('battles', [BattleController::class, 'index'])->name('battles.index');
         Route::post('battles', [BattleController::class, 'store'])->name('battles.store');

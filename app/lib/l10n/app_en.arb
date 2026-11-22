@@ -1939,5 +1939,111 @@
   "battleClose": "Close",
   "@battleClose": {
     "description": "Button"
+  },
+  "inviteTitle": "Invite friends",
+  "@inviteTitle": {
+    "description": "Title and Me entry"
+  },
+  "inviteMeBody": "Study together: share your invite code",
+  "@inviteMeBody": {
+    "description": "Me entry subtitle"
+  },
+  "inviteYourCode": "Your invite code",
+  "@inviteYourCode": {
+    "description": "Label"
+  },
+  "inviteRewardRule": "When a friend you invite answers {answers} questions, you get {days} days of Premium (up to {max} friends a month).",
+  "@inviteRewardRule": {
+    "description": "Rule with reward",
+    "placeholders": {
+      "answers": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteNoRewardRule": "Invite friends to study for the exam with you.",
+  "@inviteNoRewardRule": {
+    "description": "Rule without reward"
+  },
+  "inviteShare": "Share",
+  "@inviteShare": {
+    "description": "Button"
+  },
+  "inviteCopy": "Copy",
+  "@inviteCopy": {
+    "description": "Button"
+  },
+  "inviteCopied": "Code copied",
+  "@inviteCopied": {
+    "description": "Snack bar"
+  },
+  "inviteShareText": "Study for the Grade 12 national exam with Guul 12. My invite code: {code}. {link}",
+  "@inviteShareText": {
+    "description": "Shared message",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      },
+      "link": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteStats": "Friends joined: {joined} · Counted: {valid} · Premium days earned: {days}",
+  "@inviteStats": {
+    "description": "Stats",
+    "placeholders": {
+      "joined": {
+        "type": "int"
+      },
+      "valid": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteEnterTitle": "Did a friend invite you?",
+  "@inviteEnterTitle": {
+    "description": "Section"
+  },
+  "inviteEnterLabel": "Friend's invite code",
+  "@inviteEnterLabel": {
+    "description": "Field"
+  },
+  "inviteEnterButton": "Use code",
+  "@inviteEnterButton": {
+    "description": "Button"
+  },
+  "inviteEntered": "Thanks! Your friend's code is saved.",
+  "@inviteEntered": {
+    "description": "Success"
+  },
+  "inviteErrorNotFound": "No student has this code.",
+  "@inviteErrorNotFound": {
+    "description": "Error"
+  },
+  "inviteErrorOwn": "That's your own code. Share it with friends instead.",
+  "@inviteErrorOwn": {
+    "description": "Error"
+  },
+  "inviteErrorAlready": "You already used a friend's code.",
+  "@inviteErrorAlready": {
+    "description": "Error"
+  },
+  "inviteErrorTooLate": "Codes can only be used in your first days with the app.",
+  "@inviteErrorTooLate": {
+    "description": "Error"
+  },
+  "inviteOffline": "Invites need the internet.",
+  "@inviteOffline": {
+    "description": "Offline"
   }
 }

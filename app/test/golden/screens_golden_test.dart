@@ -132,6 +132,10 @@ void main() {
       await tapOn(tester, find.text('Ayan'));
     },
     'battles': (tester) async => tapOn(tester, find.text('Battles')),
+    'invite': (tester) async {
+      await tapOn(tester, find.text('Me'));
+      await tapOn(tester, find.text('Invite friends'));
+    },
     'plan': (tester) async => tapOn(tester, find.text("Today's plan")),
     'exams': (tester) async {
       await tapOn(tester, find.text('Exams').last);

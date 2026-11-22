@@ -19,6 +19,7 @@ import '../ui/screens/me_screen.dart';
 import '../ui/screens/onboarding_screen.dart';
 import '../ui/screens/study_screens.dart';
 import '../ui/social/battles_screen.dart';
+import '../ui/social/invite_screen.dart';
 import '../ui/social/leaderboard_screen.dart';
 import '../ui/widgets/common.dart';
 import 'practice_set.dart';
@@ -185,6 +186,7 @@ final routerProvider = Provider<GoRouter>((ref) {
                 routes: [
                   GoRoute(path: 'profile', builder: (_, _) => const EditProfileScreen()),
                   GoRoute(path: 'identity', builder: (_, _) => const IdentityScreen()),
+                  GoRoute(path: 'invite', builder: (_, _) => const InviteScreen()),
                 ],
               ),
             ],

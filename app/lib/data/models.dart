@@ -815,3 +815,45 @@ class BattleWithQuestions {
   final BattleInfo battle;
   final List<Question> questions;
 }
+
+/// My invite code and what my invites have earned.
+class ReferralInfo {
+  const ReferralInfo({
+    required this.code,
+    required this.pending,
+    required this.valid,
+    required this.rewardedDays,
+    required this.canEnterCode,
+    required this.rewardDays,
+    required this.minAnswers,
+    required this.maxPerMonth,
+  });
+
+  factory ReferralInfo.fromJson(Map<String, Object?> json) => ReferralInfo(
+    code: asString(json['code']),
+    pending: asInt(json['pending']),
+    valid: asInt(json['valid']),
+    rewardedDays: asInt(json['rewarded_days']),
+    canEnterCode: asBool(json['can_enter_code']),
+    rewardDays: asInt(json['reward_days']),
+    minAnswers: asInt(json['min_answers']),
+    maxPerMonth: asInt(json['max_per_month']),
+  );
+
+  final String code;
+
+  /// Friends who entered my code and have not studied enough yet.
+  final int pending;
+
+  /// Friends who really studied.
+  final int valid;
+  final int rewardedDays;
+
+  /// True while I may still enter the code of a friend who invited me.
+  final bool canEnterCode;
+
+  /// Premium days per counted friend (0 = no Premium reward).
+  final int rewardDays;
+  final int minAnswers;
+  final int maxPerMonth;
+}

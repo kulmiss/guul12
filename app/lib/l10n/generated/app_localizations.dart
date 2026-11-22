@@ -2341,6 +2341,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Close'**
   String get battleClose;
+
+  /// Title and Me entry
+  ///
+  /// In en, this message translates to:
+  /// **'Invite friends'**
+  String get inviteTitle;
+
+  /// Me entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Study together: share your invite code'**
+  String get inviteMeBody;
+
+  /// Label
+  ///
+  /// In en, this message translates to:
+  /// **'Your invite code'**
+  String get inviteYourCode;
+
+  /// Rule with reward
+  ///
+  /// In en, this message translates to:
+  /// **'When a friend you invite answers {answers} questions, you get {days} days of Premium (up to {max} friends a month).'**
+  String inviteRewardRule(int answers, int days, int max);
+
+  /// Rule without reward
+  ///
+  /// In en, this message translates to:
+  /// **'Invite friends to study for the exam with you.'**
+  String get inviteNoRewardRule;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Share'**
+  String get inviteShare;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get inviteCopy;
+
+  /// Snack bar
+  ///
+  /// In en, this message translates to:
+  /// **'Code copied'**
+  String get inviteCopied;
+
+  /// Shared message
+  ///
+  /// In en, this message translates to:
+  /// **'Study for the Grade 12 national exam with Guul 12. My invite code: {code}. {link}'**
+  String inviteShareText(String code, String link);
+
+  /// Stats
+  ///
+  /// In en, this message translates to:
+  /// **'Friends joined: {joined} · Counted: {valid} · Premium days earned: {days}'**
+  String inviteStats(int joined, int valid, int days);
+
+  /// Section
+  ///
+  /// In en, this message translates to:
+  /// **'Did a friend invite you?'**
+  String get inviteEnterTitle;
+
+  /// Field
+  ///
+  /// In en, this message translates to:
+  /// **'Friend\'s invite code'**
+  String get inviteEnterLabel;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Use code'**
+  String get inviteEnterButton;
+
+  /// Success
+  ///
+  /// In en, this message translates to:
+  /// **'Thanks! Your friend\'s code is saved.'**
+  String get inviteEntered;
+
+  /// Error
+  ///
+  /// In en, this message translates to:
+  /// **'No student has this code.'**
+  String get inviteErrorNotFound;
+
+  /// Error
+  ///
+  /// In en, this message translates to:
+  /// **'That\'s your own code. Share it with friends instead.'**
+  String get inviteErrorOwn;
+
+  /// Error
+  ///
+  /// In en, this message translates to:
+  /// **'You already used a friend\'s code.'**
+  String get inviteErrorAlready;
+
+  /// Error
+  ///
+  /// In en, this message translates to:
+  /// **'Codes can only be used in your first days with the app.'**
+  String get inviteErrorTooLate;
+
+  /// Offline
+  ///
+  /// In en, this message translates to:
+  /// **'Invites need the internet.'**
+  String get inviteOffline;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

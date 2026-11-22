@@ -11,6 +11,7 @@ import 'data/token_store.dart';
 import 'services/google_auth.dart';
 import 'services/reminder_background.dart';
 import 'services/reminders.dart';
+import 'services/sharing.dart';
 import 'services/speech.dart';
 
 /// Set at build time, e.g. `--dart-define=API_BASE_URL=https://guul12.kulmiss.com`.
@@ -43,6 +44,7 @@ Future<void> main() async {
         appVersionProvider.overrideWithValue(appVersion),
         speechProvider.overrideWithValue(PhoneSpeech()),
         remindersProvider.overrideWithValue(reminders),
+        sharingProvider.overrideWithValue(const PhoneSharing()),
         googleAuthProvider.overrideWithValue(
           googleServerClientId.isEmpty
               ? const DisabledGoogleAuth()

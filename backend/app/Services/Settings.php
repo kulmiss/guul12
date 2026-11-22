@@ -60,6 +60,15 @@ class Settings
 
             // "Better than X% of students" on a mock result, once this many students took it (DECISIONS #19).
             'percentile_min_students' => 30,
+
+            // Referral: a friend counts after this many real answers within the days below; the
+            // inviter then gets this many Premium days (0 = no Premium reward), at most this many
+            // times a month. A code can be entered up to this many days after first opening the app.
+            'referral_min_answers' => 50,
+            'referral_qualify_days' => 14,
+            'referral_premium_days' => 7,
+            'referral_max_per_month' => 4,
+            'referral_enter_days' => 7,
         ];
     }
 

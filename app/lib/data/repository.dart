@@ -514,6 +514,16 @@ class Repository {
   Future<BattleWithQuestions> battle(int id) async =>
       BattleWithQuestions.fromJson(await _authed(() => api.get('battles/$id')));
 
+  /// My invite code and invites (online only).
+  Future<ReferralInfo> referral() async =>
+      ReferralInfo.fromJson(asMap((await _authed(() => api.get('referral')))['referral']));
+
+  /// Enter the code of the friend who invited me. Throws [ApiException]
+  /// (not_found, own_code, already_invited, too_late).
+  Future<ReferralInfo> enterReferralCode(String code) async => ReferralInfo.fromJson(
+    asMap((await _authed(() => api.post('referral', {'code': code})))['referral']),
+  );
+
   /// Today's daily challenge (online only).
   Future<DailyChallengeInfo> dailyChallenge() async =>
       DailyChallengeInfo.fromJson(await _authed(() => api.get('challenge')));

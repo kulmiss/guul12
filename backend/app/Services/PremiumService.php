@@ -63,7 +63,7 @@ class PremiumService
         return match ($plan) {
             PremiumPlan::Term => $this->settings->int('premium_term_days'),
             PremiumPlan::Year => $this->settings->int('premium_year_days'),
-            PremiumPlan::Referral => 7,
+            PremiumPlan::Referral => $this->settings->int('referral_premium_days'),
         };
     }
 

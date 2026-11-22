@@ -1426,4 +1426,67 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get battleClose => 'Close';
+
+  @override
+  String get inviteTitle => 'Invite friends';
+
+  @override
+  String get inviteMeBody => 'Study together: share your invite code';
+
+  @override
+  String get inviteYourCode => 'Your invite code';
+
+  @override
+  String inviteRewardRule(int answers, int days, int max) {
+    return 'When a friend you invite answers $answers questions, you get $days days of Premium (up to $max friends a month).';
+  }
+
+  @override
+  String get inviteNoRewardRule => 'Invite friends to study for the exam with you.';
+
+  @override
+  String get inviteShare => 'Share';
+
+  @override
+  String get inviteCopy => 'Copy';
+
+  @override
+  String get inviteCopied => 'Code copied';
+
+  @override
+  String inviteShareText(String code, String link) {
+    return 'Study for the Grade 12 national exam with Guul 12. My invite code: $code. $link';
+  }
+
+  @override
+  String inviteStats(int joined, int valid, int days) {
+    return 'Friends joined: $joined · Counted: $valid · Premium days earned: $days';
+  }
+
+  @override
+  String get inviteEnterTitle => 'Did a friend invite you?';
+
+  @override
+  String get inviteEnterLabel => 'Friend\'s invite code';
+
+  @override
+  String get inviteEnterButton => 'Use code';
+
+  @override
+  String get inviteEntered => 'Thanks! Your friend\'s code is saved.';
+
+  @override
+  String get inviteErrorNotFound => 'No student has this code.';
+
+  @override
+  String get inviteErrorOwn => 'That\'s your own code. Share it with friends instead.';
+
+  @override
+  String get inviteErrorAlready => 'You already used a friend\'s code.';
+
+  @override
+  String get inviteErrorTooLate => 'Codes can only be used in your first days with the app.';
+
+  @override
+  String get inviteOffline => 'Invites need the internet.';
 }

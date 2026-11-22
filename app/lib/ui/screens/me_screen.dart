@@ -62,6 +62,7 @@ class _MeScreenState extends ConsumerState<MeScreen> {
     final profile = ref.watch(profileProvider).value;
     final theme = ref.watch(themeModeProvider).value ?? ThemeMode.system;
     final googleOn = ref.watch(configProvider).value?.feature('google_sign_in') ?? true;
+    final referralOn = ref.watch(configProvider).value?.feature('referral') ?? false;
     final version = ref.watch(appVersionProvider);
 
     return Scaffold(
@@ -89,6 +90,14 @@ class _MeScreenState extends ConsumerState<MeScreen> {
                         ),
                       ),
                       _StudentIdCard(studentId: profile.studentId),
+                      if (referralOn)
+                        ListTile(
+                          leading: const Icon(Icons.card_giftcard_outlined),
+                          title: Text(l.inviteTitle),
+                          subtitle: Text(l.inviteMeBody),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.push('/me/invite'),
+                        ),
                       _PlanTile(profile: profile),
                       if (googleOn)
                         profile.signedIn

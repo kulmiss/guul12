@@ -28,6 +28,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property Gender|null $gender
  * @property int|null $target_score
  * @property string|null $reminder_time
+ * @property string|null $referral_code
  * @property string|null $nickname
  * @property string|null $avatar_style
  * @property string|null $avatar_seed

@@ -42,6 +42,18 @@ class FakeServer {
         .length;
   }
 
+  /// What GET /referral returns.
+  Map<String, Object?> referral = {
+    'code': 'Q4WX7P',
+    'pending': 1,
+    'valid': 2,
+    'rewarded_days': 14,
+    'can_enter_code': true,
+    'reward_days': 7,
+    'min_answers': 50,
+    'max_per_month': 4,
+  };
+
   /// Battles started or joined by the student, oldest first.
   final battles = <Map<String, Object?>>[];
 
@@ -318,6 +330,13 @@ class FakeServer {
           'premium': false,
           'show_ads': true,
         });
+      case ('GET', 'referral'):
+        return json({'referral': referral});
+      case ('POST', 'referral'):
+        final code = (body()['code']! as String).trim().toUpperCase();
+        if (code != 'FRIEND') return json({'code': 'not_found', 'message': 'No'}, 404);
+        referral = {...referral, 'can_enter_code': false};
+        return json({'referral': referral}, 201);
       case ('GET', 'battles'):
         return json({
           'battles': [for (final b in battles.reversed) battleJson(b)],

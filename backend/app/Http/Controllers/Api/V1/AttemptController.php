@@ -11,6 +11,8 @@ use App\Models\User;
 use App\Services\AttemptService;
 use App\Services\DailyChallengeService;
 use App\Services\ExamResultService;
+use App\Services\FeatureSwitches;
+use App\Services\ReferralService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -19,7 +21,11 @@ class AttemptController extends Controller
 {
     public const MAX_ANSWERS = 200;
 
-    public function __construct(private readonly DailyChallengeService $challenges) {}
+    public function __construct(
+        private readonly DailyChallengeService $challenges,
+        private readonly ReferralService $referrals,
+        private readonly FeatureSwitches $switches,
+    ) {}
 
     public function store(Request $request, AttemptService $attempts, ExamResultService $results): JsonResponse
     {
@@ -62,6 +68,10 @@ class AttemptController extends Controller
         /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, challenge_date?: string|null, battle_id?: int|null, started_at: string, finished_at: string,
          *        answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>} $data */
         $result = $attempts->submit($user, $data);
+        if ($result['created'] && $this->switches->enabled('referral')) {
+            // A friend who was invited counts once they really studied.
+            $this->referrals->check($user);
+        }
 
         return response()->json(['attempt' => $this->present($result['attempt'], $results)], $result['created'] ? 201 : 200);
     }
