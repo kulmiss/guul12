@@ -399,6 +399,7 @@ subjects:
     chapters:
     - number: 1
       title: Market Failure and Consumer Protection
+      file: economics/u3-c1.yaml
   - number: 4
     title: Macroeconomic Policy Instruments
     chapters:
