@@ -387,6 +387,7 @@ subjects:
     chapters:
     - number: 1
       title: The Fundamental Concepts of Macroeconomics
+      file: economics/u1-c1.yaml
   - number: 2
     title: Aggregate Demand and Aggregate Supply Analysis
     chapters:

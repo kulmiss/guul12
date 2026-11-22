@@ -1,0 +1,380 @@
+summary:
+  key_points:
+    - 'Macroeconomics studies the economy as a whole: total output, the general price level, unemployment, growth, and the role of government and trade. Microeconomics studies individual households, firms and markets.'
+    - 'Main macroeconomic goals: economic growth, low unemployment, price stability (low inflation), a sustainable balance of payments and a fair distribution of income.'
+    - 'Gross Domestic Product (GDP) is the market value of all final goods and services produced inside a country in a period. Gross National Income/Product (GNI/GNP) adds income residents earn abroad and subtracts income foreigners earn in the country: GNP $=$ GDP $+$ net factor income from abroad.'
+    - 'Three ways to measure GDP give the same total: the expenditure approach ($C + I + G + (X - M)$), the income approach (wages + rent + interest + profit) and the output (value-added) approach. Counting only final goods (or value added) avoids double counting.'
+    - 'Nominal GDP uses current prices; real GDP removes the effect of price changes: real GDP $= \frac{\text{nominal GDP}}{\text{GDP deflator}} \times 100$.'
+    - 'The circular flow: households supply factors of production to firms and receive income; firms sell goods and services to households. Leakages (saving, taxes, imports) take money out of the flow; injections (investment, government spending, exports) put it in.'
+    - 'Unemployment types: frictional (between jobs), structural (skills do not match jobs), cyclical (caused by recessions) and seasonal. Inflation is a sustained rise in the general price level.'
+    - 'The business cycle has phases: expansion (boom), peak, contraction (recession) and trough.'
+  formulas:
+    - label: Expenditure approach
+      latex: 'GDP = C + I + G + (X - M)'
+    - label: GNP
+      latex: 'GNP = GDP + \text{net factor income from abroad}'
+    - label: Real GDP
+      latex: '\text{Real GDP} = \frac{\text{Nominal GDP}}{\text{GDP deflator}} \times 100'
+    - label: Unemployment rate
+      latex: 'u = \frac{\text{unemployed}}{\text{labour force}} \times 100\%'
+
+solved_exercises:
+  - uid: g12-economics-1-1-se01
+    problem: 'An economy has C = 600, I = 150, G = 200, X = 100 and M = 150 (billion birr). Find GDP.'
+    steps:
+      - '$GDP = C + I + G + (X - M) = 600 + 150 + 200 + (100 - 150)$.'
+      - '$= 950 - 50 = 900$ billion birr.'
+    answer: '900 billion birr'
+  - uid: g12-economics-1-1-se02
+    problem: 'Nominal GDP is 1 200 billion birr and the GDP deflator is 120. Find real GDP.'
+    steps:
+      - '$\text{Real GDP} = \frac{1200}{120} \times 100$.'
+      - '$= 1000$ billion birr.'
+    answer: '1 000 billion birr'
+  - uid: g12-economics-1-1-se03
+    problem: 'A farmer sells wheat to a miller for 100 birr; the miller sells flour to a baker for 160 birr; the baker sells bread for 250 birr. How much is added to GDP?'
+    steps:
+      - 'Only the final good counts: the bread at 250 birr.'
+      - 'Check with value added: $100 + (160 - 100) + (250 - 160) = 100 + 60 + 90 = 250$ birr.'
+    answer: '250 birr'
+
+flashcards:
+  - {uid: g12-economics-1-1-fc01, term: Macroeconomics, definition: 'Study of the whole economy: output, prices, jobs, growth.'}
+  - {uid: g12-economics-1-1-fc02, term: GDP, definition: 'Value of all final goods and services produced inside a country in a period.'}
+  - {uid: g12-economics-1-1-fc03, term: GNP, definition: 'GDP plus net factor income from abroad.'}
+  - {uid: g12-economics-1-1-fc04, term: Real GDP, definition: 'GDP adjusted for price changes.'}
+  - {uid: g12-economics-1-1-fc05, term: Value added, definition: 'Value of output minus the cost of inputs bought from other firms.'}
+  - {uid: g12-economics-1-1-fc06, term: Leakages, definition: 'Saving, taxes and imports.'}
+  - {uid: g12-economics-1-1-fc07, term: Injections, definition: 'Investment, government spending and exports.'}
+  - {uid: g12-economics-1-1-fc08, term: Structural unemployment, definition: 'Unemployment caused by a mismatch of skills and jobs.'}
+  - {uid: g12-economics-1-1-fc09, term: Inflation, definition: 'A sustained rise in the general price level.'}
+
+questions:
+  - uid: g12-economics-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which topic belongs to macroeconomics rather than microeconomics?'
+    options:
+      A: 'The price of teff in one market'
+      B: 'The national unemployment rate'
+      C: 'How one firm sets its wages'
+      D: 'A household''s choice between two goods'
+    answer: B
+    explanation: 'Macroeconomics deals with whole-economy measures such as total unemployment.'
+
+  - uid: g12-economics-1-1-q002
+    type: numeric
+    difficulty: 2
+    stem: 'An economy has C = 600, I = 150, G = 200, X = 100 and M = 150 (billion birr). What is GDP, in billion birr?'
+    answer: {value: 900, tolerance: 0, unit: billion birr}
+    explanation: '$600 + 150 + 200 + (100 - 150) = 900$.'
+
+  - uid: g12-economics-1-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Nominal GDP is 1 200 billion birr and the GDP deflator is 120. What is real GDP?'
+    options:
+      A: '1 440 billion birr'
+      B: '1 080 billion birr'
+      C: '1 000 billion birr'
+      D: '120 billion birr'
+    answer: C
+    explanation: '$\frac{1200}{120} \times 100 = 1000$.'
+
+  - uid: g12-economics-1-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do economists use real GDP rather than nominal GDP to compare output between years?'
+    options:
+      A: 'Real GDP removes the effect of price changes.'
+      B: 'Real GDP includes only exports.'
+      C: 'Nominal GDP is always smaller.'
+      D: 'Real GDP counts second-hand goods.'
+    answer: A
+    explanation: 'Nominal GDP can rise just because prices rise, even if output does not.'
+
+  - uid: g12-economics-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'A farmer sells wheat to a miller for 100 birr, the miller sells flour to a baker for 160 birr, and the baker sells bread to consumers for 250 birr. How much does this add to GDP?'
+    options:
+      A: '510 birr'
+      B: '160 birr'
+      C: '100 birr'
+      D: '250 birr'
+    answer: D
+    explanation: 'Only the final product counts (or the sum of values added), to avoid double counting.'
+
+  - uid: g12-economics-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'GDP is 500 billion birr and net factor income from abroad is −20 billion birr. What is GNP?'
+    options:
+      A: '520 billion birr'
+      B: '480 billion birr'
+      C: '500 billion birr'
+      D: '20 billion birr'
+    answer: B
+    explanation: '$GNP = 500 + (-20) = 480$.'
+
+  - uid: g12-economics-1-1-q007
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are leakages from the circular flow of income? Choose all that apply.'
+    options:
+      A: 'Saving'
+      B: 'Taxes'
+      C: 'Imports'
+      D: 'Exports'
+    answer: [A, B, C]
+    explanation: 'Exports are an injection.'
+
+  - uid: g12-economics-1-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is an injection into the circular flow?'
+    options:
+      A: 'Saving'
+      B: 'Imports'
+      C: 'Government spending'
+      D: 'Taxes'
+    answer: C
+    explanation: 'Injections are investment, government spending and exports.'
+
+  - uid: g12-economics-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'A graduate is between jobs for a few weeks while looking for a better position. This is:'
+    options:
+      A: 'Frictional unemployment'
+      B: 'Structural unemployment'
+      C: 'Cyclical unemployment'
+      D: 'Disguised employment'
+    answer: A
+    explanation: 'Frictional unemployment is short-term, while people search for jobs.'
+
+  - uid: g12-economics-1-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Typists lose their jobs because offices now use computers, and they lack computer skills. This is:'
+    options:
+      A: 'Seasonal unemployment'
+      B: 'Frictional unemployment'
+      C: 'Cyclical unemployment'
+      D: 'Structural unemployment'
+    answer: D
+    explanation: 'Their skills no longer match the jobs available.'
+
+  - uid: g12-economics-1-1-q011
+    type: numeric
+    difficulty: 2
+    stem: 'A labour force of 40 million includes 6 million unemployed people. What is the unemployment rate, in per cent?'
+    answer: {value: 15, tolerance: 0, unit: '%'}
+    explanation: '$\frac{6}{40} \times 100\% = 15\%$.'
+
+  - uid: g12-economics-1-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'What is inflation?'
+    options:
+      A: 'A fall in the general price level'
+      B: 'A sustained rise in the general price level'
+      C: 'An increase in unemployment'
+      D: 'An increase in exports'
+    answer: B
+    explanation: 'Inflation means the purchasing power of money falls.'
+
+  - uid: g12-economics-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'In which phase of the business cycle does output fall and unemployment rise?'
+    options:
+      A: 'Expansion'
+      B: 'Peak'
+      C: 'Contraction (recession)'
+      D: 'Recovery'
+    answer: C
+    explanation: 'In a recession, demand and output fall and firms cut jobs.'
+
+  - uid: g12-economics-1-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'The expenditure, income and output approaches should all give the same value of GDP.'
+    answer: true
+    explanation: 'Spending on output equals the income it creates and the value of what is produced.'
+
+  - uid: g12-economics-1-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'The sale of a second-hand car is counted in this year''s GDP at its full price.'
+    answer: false
+    explanation: 'It was counted when it was first produced; only a dealer''s service fee would count.'
+
+  - uid: g12-economics-1-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which formula shows the expenditure approach to GDP?'
+    options:
+      A: 'Wages + rent + interest + profit'
+      B: 'Exports − imports only'
+      C: 'Saving + taxes + imports'
+      D: '$C + I + G + (X - M)$'
+    answer: D
+    explanation: 'Consumption, investment, government spending and net exports.'
+
+  - uid: g12-economics-1-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which macroeconomic goal does a central bank mainly pursue by keeping inflation low?'
+    options:
+      A: 'Price stability'
+      B: 'Full employment only'
+      C: 'Higher imports'
+      D: 'Lower exports'
+    answer: A
+    explanation: 'Stable prices protect the value of money and support planning.'
+
+  - uid: g12-economics-1-1-q018
+    type: single_choice
+    difficulty: 3
+    stem: 'Nominal GDP rises by 10% in a year and prices rise by 10%. What happened to real GDP?'
+    options:
+      A: 'It rose by 20%.'
+      B: 'It stayed about the same.'
+      C: 'It rose by 10%.'
+      D: 'It fell by 10%.'
+    answer: B
+    explanation: 'All of the nominal increase was caused by higher prices.'
+
+  - uid: g12-economics-1-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'The market value of all final goods and services produced within a country in a year is called gross domestic ________.'
+    answer: [product]
+    explanation: 'GDP = gross domestic product.'
+
+  - uid: g12-economics-1-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'The value of a firm''s output minus the cost of inputs bought from other firms is called value ________.'
+    answer: [added]
+    explanation: 'Adding values added across firms avoids double counting.'
+
+  - uid: g12-economics-1-1-q021
+    type: true_false
+    difficulty: 2
+    stem: 'Unemployment that rises during a recession and falls during a boom is called cyclical unemployment.'
+    answer: true
+    explanation: 'It follows the business cycle.'
+
+  - uid: g12-economics-1-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each type of unemployment with its example.'
+    left:
+      L1: 'Seasonal'
+      L2: 'Structural'
+      L3: 'Cyclical'
+    right:
+      R1: 'Factory workers laid off in a recession'
+      R2: 'Farm labourers without work after harvest'
+      R3: 'Miners without work when the mine closes and skills do not fit other jobs'
+      R4: 'A student working part-time'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'A student with a part-time job is employed.'
+
+  - uid: g12-economics-1-1-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Put the phases of the business cycle in order, starting from the expansion.'
+    items:
+      A: 'Trough'
+      B: 'Peak'
+      C: 'Expansion'
+      D: 'Contraction'
+    answer: [C, B, D, A]
+    explanation: 'Expansion → peak → contraction → trough, then recovery begins.'
+
+  - uid: g12-economics-1-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'In the simple circular flow, what do households supply to firms?'
+    options:
+      A: 'Finished goods'
+      B: 'Taxes'
+      C: 'Imports'
+      D: 'Factors of production such as labour and land'
+    answer: D
+    explanation: 'In return they receive wages, rent, interest and profit.'
+
+  - uid: g12-economics-1-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which item is part of the income approach to GDP?'
+    options:
+      A: 'Wages paid to workers'
+      B: 'Imports'
+      C: 'Transfer payments such as pensions'
+      D: 'Sales of second-hand goods'
+    answer: A
+    explanation: 'The income approach adds wages, rent, interest and profit; transfers are not payments for production.'
+
+  - uid: g12-economics-1-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Ethiopian workers abroad send home more income than foreigners in Ethiopia send out. Which is then true?'
+    options:
+      A: 'GNP is less than GDP.'
+      B: 'GDP and GNP are always equal.'
+      C: 'GNP is greater than GDP.'
+      D: 'GDP becomes zero.'
+    answer: C
+    explanation: 'Positive net factor income from abroad makes GNP larger than GDP.'
+
+  - uid: g12-economics-1-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is NOT normally counted in GDP?'
+    options:
+      A: 'A new house built this year'
+      B: 'A teacher''s salary'
+      C: 'Unpaid work done at home'
+      D: 'A new tractor sold to a farm'
+    answer: C
+    explanation: 'Household work that is not sold in markets is usually left out of GDP.'
+
+  - uid: g12-economics-1-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'GDP per capita is calculated by:'
+    options:
+      A: 'Dividing GDP by the population'
+      B: 'Adding exports and imports'
+      C: 'Multiplying GDP by the population'
+      D: 'Dividing GDP by the price level only'
+    answer: A
+    explanation: 'It shows average output per person.'
+
+  - uid: g12-economics-1-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is a macroeconomic goal?'
+    options:
+      A: 'Raising the price of one shop''s goods'
+      B: 'Increasing one firm''s profit'
+      C: 'Choosing a household budget'
+      D: 'Achieving steady economic growth'
+    answer: D
+    explanation: 'Growth, employment and price stability are national goals.'
+
+  - uid: g12-economics-1-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Exports are 80 and imports are 120 (billion birr). What are net exports?'
+    options:
+      A: '200'
+      B: '−40'
+      C: '40'
+      D: '1.5'
+    answer: B
+    explanation: '$X - M = 80 - 120 = -40$, a trade deficit.'
