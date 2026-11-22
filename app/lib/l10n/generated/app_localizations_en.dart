@@ -1325,4 +1325,105 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get challengeCompareLater => 'Come back later to compare with other players';
+
+  @override
+  String get battleTitle => 'Battles';
+
+  @override
+  String get battleHomeBody =>
+      'Answer the same 10 questions as another student. No chat, only nicknames.';
+
+  @override
+  String get battleQuick => 'Quick battle';
+
+  @override
+  String get battleQuickBody => 'Play against a student of your grade';
+
+  @override
+  String get battleFriend => 'Battle a friend';
+
+  @override
+  String get battleFriendBody => 'Get a code to give your friend';
+
+  @override
+  String get battleJoin => 'Join with a code';
+
+  @override
+  String get battleCodeLabel => 'Battle code';
+
+  @override
+  String get battleCodeTitle => 'Your battle code';
+
+  @override
+  String get battleCodeBody =>
+      'Tell your friend this code. They open Battles, tap \"Join with a code\" and enter it. The battle is open for 48 hours.';
+
+  @override
+  String get battlePlayNow => 'Play now';
+
+  @override
+  String get battleCancel => 'Cancel';
+
+  @override
+  String get battleMine => 'My battles';
+
+  @override
+  String get battleNone => 'No battles yet.';
+
+  @override
+  String get battleWaitingOpponent => 'Waiting for an opponent';
+
+  @override
+  String get battleYourTurn => 'Your turn';
+
+  @override
+  String battleTheirTurn(String name) {
+    return 'Waiting for $name';
+  }
+
+  @override
+  String get battleWon => 'You won';
+
+  @override
+  String get battleLost => 'You lost';
+
+  @override
+  String get battleDraw => 'Draw';
+
+  @override
+  String get battleExpired => 'Ended without a result';
+
+  @override
+  String battleScore(String mine, String name, String theirs) {
+    return 'You $mine · $name $theirs';
+  }
+
+  @override
+  String get battleNeedNickname =>
+      'Choose a nickname to start battles. Only your nickname and avatar are shown.';
+
+  @override
+  String get battleErrorNotFound => 'No battle has this code.';
+
+  @override
+  String get battleErrorFull => 'Another student already joined this battle.';
+
+  @override
+  String get battleErrorOwn => 'This is your own battle. Give the code to a friend.';
+
+  @override
+  String get battleErrorExpired => 'This battle has ended.';
+
+  @override
+  String get battleErrorLimit => 'That\'s enough battles for today. Come back tomorrow!';
+
+  @override
+  String get battleOffline => 'Battles need the internet.';
+
+  @override
+  String get battleRule =>
+      '10 questions · 60 seconds each · more right answers wins; on a tie, the faster one';
+
+  @override
+  String get battleClose => 'Close';
 }

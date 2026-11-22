@@ -18,6 +18,7 @@ use Illuminate\Support\Carbon;
  * @property int|null $mock_id
  * @property Carbon|null $challenge_date
  * @property string|null $challenge_key
+ * @property int|null $battle_id
  * @property Carbon $started_at
  * @property Carbon $finished_at
  * @property int $total
@@ -27,7 +28,7 @@ use Illuminate\Support\Carbon;
  */
 class Attempt extends Model
 {
-    protected $fillable = ['user_id', 'client_uuid', 'mode', 'chapter_id', 'mock_id', 'challenge_date', 'challenge_key', 'started_at', 'finished_at', 'total', 'correct', 'too_fast'];
+    protected $fillable = ['user_id', 'client_uuid', 'mode', 'chapter_id', 'mock_id', 'challenge_date', 'challenge_key', 'battle_id', 'started_at', 'finished_at', 'total', 'correct', 'too_fast'];
 
     /**
      * @return array<string, string>

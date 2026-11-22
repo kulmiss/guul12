@@ -712,3 +712,106 @@ class ChallengeResult {
   final int? betterThanPercent;
   final int players;
 }
+
+/// A battle as one player sees it: only nickname, avatar and scores of the other player.
+class BattleInfo {
+  const BattleInfo({
+    required this.id,
+    required this.code,
+    required this.isRandom,
+    required this.questionCount,
+    required this.expiresAt,
+    required this.status,
+    required this.me,
+    required this.opponent,
+  });
+
+  factory BattleInfo.fromJson(Map<String, Object?> json) {
+    final opponent = json['opponent'];
+    return BattleInfo(
+      id: asInt(json['id']),
+      code: asStringOrNull(json['code']),
+      isRandom: asBool(json['is_random']),
+      questionCount: asInt(json['question_count']),
+      expiresAt: DateTime.parse(asString(json['expires_at'])),
+      status: BattleStatus.fromWire(asString(json['status'])),
+      me: BattlePlayer.fromJson(asMap(json['me'])),
+      opponent: opponent is Map ? BattlePlayer.fromJson(asMap(opponent)) : null,
+    );
+  }
+
+  final int id;
+
+  /// Only for the student who started a friend battle.
+  final String? code;
+  final bool isRandom;
+  final int questionCount;
+  final DateTime expiresAt;
+  final BattleStatus status;
+  final BattlePlayer me;
+  final BattlePlayer? opponent;
+}
+
+enum BattleStatus {
+  waiting('waiting'),
+  yourTurn('your_turn'),
+  theirTurn('their_turn'),
+  won('won'),
+  lost('lost'),
+  draw('draw'),
+  expired('expired');
+
+  const BattleStatus(this.wire);
+
+  final String wire;
+
+  static BattleStatus fromWire(String value) =>
+      values.firstWhere((s) => s.wire == value, orElse: () => BattleStatus.expired);
+}
+
+class BattlePlayer {
+  const BattlePlayer({
+    required this.nickname,
+    required this.avatarStyle,
+    required this.avatarSeed,
+    required this.correct,
+    required this.total,
+    required this.timeMs,
+  });
+
+  factory BattlePlayer.fromJson(Map<String, Object?> json) {
+    final result = json['result'];
+    final r = result is Map ? asMap(result) : null;
+    return BattlePlayer(
+      nickname: asStringOrNull(json['nickname']),
+      avatarStyle: asStringOrNull(json['avatar_style']),
+      avatarSeed: asStringOrNull(json['avatar_seed']),
+      correct: r == null ? null : asInt(r['correct']),
+      total: r == null ? null : asInt(r['total']),
+      timeMs: r == null ? null : asInt(r['time_ms']),
+    );
+  }
+
+  final String? nickname;
+  final String? avatarStyle;
+  final String? avatarSeed;
+
+  /// Null until this player has played.
+  final int? correct;
+  final int? total;
+  final int? timeMs;
+
+  bool get played => correct != null;
+}
+
+class BattleWithQuestions {
+  const BattleWithQuestions({required this.battle, required this.questions});
+
+  factory BattleWithQuestions.fromJson(Map<String, Object?> json) => BattleWithQuestions(
+    battle: BattleInfo.fromJson(asMap(json['battle'])),
+    questions: asList(json['questions']).map((e) => Question.fromJson(asMap(e))).toList(),
+  );
+
+  final BattleInfo battle;
+  final List<Question> questions;
+}

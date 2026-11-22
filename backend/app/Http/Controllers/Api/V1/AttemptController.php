@@ -6,6 +6,7 @@ use App\Enums\PracticeMode;
 use App\Http\Controllers\Controller;
 use App\Models\Attempt;
 use App\Models\AttemptAnswer;
+use App\Models\Battle;
 use App\Models\User;
 use App\Services\AttemptService;
 use App\Services\DailyChallengeService;
@@ -31,6 +32,7 @@ class AttemptController extends Controller
             'chapter_id' => ['nullable', 'integer', 'exists:chapters,id'],
             'mock_id' => ['nullable', 'integer', 'exists:mocks,id', 'required_if:mode,'.PracticeMode::ExamFixed->value, 'prohibited_unless:mode,'.PracticeMode::ExamFixed->value],
             'challenge_date' => ['nullable', 'date_format:Y-m-d', 'required_if:mode,'.PracticeMode::DailyChallenge->value, 'prohibited_unless:mode,'.PracticeMode::DailyChallenge->value],
+            'battle_id' => ['nullable', 'integer', 'required_if:mode,'.PracticeMode::Battle->value, 'prohibited_unless:mode,'.PracticeMode::Battle->value],
             'started_at' => ['required', 'date'],
             'finished_at' => ['required', 'date', 'after_or_equal:started_at', 'before_or_equal:'.now()->addMinutes(10)->toIso8601String()],
             'answers' => ['required', 'array', 'min:1', 'max:'.self::MAX_ANSWERS],
@@ -47,7 +49,17 @@ class AttemptController extends Controller
             ], 422);
         }
 
-        /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, challenge_date?: string|null, started_at: string, finished_at: string,
+        if (isset($data['battle_id'])) {
+            $battle = Battle::query()->find((int) $data['battle_id']);
+            if ($battle === null || ! $battle->hasPlayer($user)) {
+                return response()->json([
+                    'message' => 'This battle is not yours.',
+                    'errors' => ['battle_id' => ['This battle is not yours.']],
+                ], 422);
+            }
+        }
+
+        /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, challenge_date?: string|null, battle_id?: int|null, started_at: string, finished_at: string,
          *        answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>} $data */
         $result = $attempts->submit($user, $data);
 

@@ -13,12 +13,13 @@ class PracticeScreen extends StatelessWidget {
   final int? chapterId;
   final int? unitId;
 
-  static String playPath(PracticeMode mode, {int? chapterId, int? unitId}) => Uri(
+  static String playPath(PracticeMode mode, {int? chapterId, int? unitId, int? battleId}) => Uri(
     path: '/practice/play',
     queryParameters: {
       'mode': mode.wire,
       'chapter': ?chapterId?.toString(),
       'unit': ?unitId?.toString(),
+      'battle': ?battleId?.toString(),
     },
   ).toString();
 

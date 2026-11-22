@@ -18,6 +18,7 @@ import '../ui/screens/identity_screen.dart';
 import '../ui/screens/me_screen.dart';
 import '../ui/screens/onboarding_screen.dart';
 import '../ui/screens/study_screens.dart';
+import '../ui/social/battles_screen.dart';
 import '../ui/social/leaderboard_screen.dart';
 import '../ui/widgets/common.dart';
 import 'practice_set.dart';
@@ -99,6 +100,7 @@ final routerProvider = Provider<GoRouter>((ref) {
                 mode: PracticeMode.fromWire(state.uri.queryParameters['mode'] ?? ''),
                 chapterId: _intParam(state, 'chapter'),
                 unitId: _intParam(state, 'unit'),
+                battleId: _intParam(state, 'battle'),
               ),
             ),
           ),
@@ -130,7 +132,10 @@ final routerProvider = Provider<GoRouter>((ref) {
                 path: '/home',
                 builder: (_, _) => const HomeScreen(),
                 // Inside the Home tab, so a task can open a chapter in the Study tab.
-                routes: [GoRoute(path: 'plan', builder: (_, _) => const PlanScreen())],
+                routes: [
+                  GoRoute(path: 'plan', builder: (_, _) => const PlanScreen()),
+                  GoRoute(path: 'battles', builder: (_, _) => const BattlesScreen()),
+                ],
               ),
             ],
           ),

@@ -70,6 +70,12 @@ String _flutterRoot() {
 FakeServer richServer() {
   final s = FakeServer();
   onboardedProfile(s);
+  s.profile.addAll({'nickname': 'Ayan', 'avatar_style': 'thumbs', 'avatar_seed': 'a06'});
+  s.battles.addAll([
+    {'id': 1, 'friend': false, 'opponent': 'Hodan'},
+    {'id': 2, 'friend': true, 'opponent': null},
+  ]);
+  s.receivedAttempts.add({'mode': 'battle', 'battle_id': 1, 'answers': <Object?>[]});
   s.leaderboard = {
     'week_start': '2026-11-16',
     'top': [
@@ -123,8 +129,9 @@ void main() {
     },
     'identity': (tester) async {
       await tapOn(tester, find.text('Me'));
-      await tapOn(tester, find.text('Choose a nickname'));
+      await tapOn(tester, find.text('Ayan'));
     },
+    'battles': (tester) async => tapOn(tester, find.text('Battles')),
     'plan': (tester) async => tapOn(tester, find.text("Today's plan")),
     'exams': (tester) async {
       await tapOn(tester, find.text('Exams').last);

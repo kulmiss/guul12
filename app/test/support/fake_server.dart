@@ -42,6 +42,45 @@ class FakeServer {
         .length;
   }
 
+  /// Battles started or joined by the student, oldest first.
+  final battles = <Map<String, Object?>>[];
+
+  List<Map<String, Object?>> battleQuestions = [
+    examQuestion(961, 'C'),
+    examQuestion(962, 'A'),
+    examQuestion(963, 'B'),
+  ];
+
+  Map<String, Object?> battleJson(Map<String, Object?> b) {
+    final mine = receivedAttempts.where((a) => a['mode'] == 'battle' && a['battle_id'] == b['id']);
+    final played = mine.isNotEmpty;
+    final opponent = b['opponent'] as String?;
+    return {
+      'id': b['id'],
+      'code': b['friend'] == true ? 'K7Q2MZ' : null,
+      'is_random': b['friend'] != true,
+      'subject_id': null,
+      'question_count': battleQuestions.length,
+      'seconds_per_question': 60,
+      'expires_at': '2026-11-24T10:00:00Z',
+      'status': !played ? 'your_turn' : (opponent == null ? 'waiting' : 'won'),
+      'me': {
+        'nickname': profile['nickname'],
+        'avatar_style': profile['avatar_style'],
+        'avatar_seed': profile['avatar_seed'],
+        'result': played ? {'correct': 2, 'total': 3, 'time_ms': 30000} : null,
+      },
+      'opponent': opponent == null
+          ? null
+          : {
+              'nickname': opponent,
+              'avatar_style': 'thumbs',
+              'avatar_seed': 'a04',
+              'result': {'correct': 1, 'total': 3, 'time_ms': 40000},
+            },
+    };
+  }
+
   /// What GET /leaderboard returns.
   Map<String, Object?> leaderboard = {
     'week_start': '2026-11-16',
@@ -279,6 +318,21 @@ class FakeServer {
           'premium': false,
           'show_ads': true,
         });
+      case ('GET', 'battles'):
+        return json({
+          'battles': [for (final b in battles.reversed) battleJson(b)],
+        });
+      case ('POST', 'battles'):
+        final friend = body()['type'] == 'friend';
+        final b = {'id': battles.length + 1, 'friend': friend, 'opponent': null as String?};
+        battles.add(b);
+        return json({'battle': battleJson(b), 'questions': battleQuestions}, 201);
+      case ('POST', 'battles/join'):
+        final code = (body()['code']! as String).trim().toUpperCase();
+        if (code != 'JOIN22') return json({'code': 'not_found', 'message': 'No'}, 404);
+        final b = {'id': battles.length + 1, 'friend': false, 'opponent': 'Ayan', 'joined': true};
+        battles.add(b);
+        return json({'battle': battleJson(b), 'questions': battleQuestions});
       case ('GET', 'challenge'):
         final mine = receivedAttempts.where((a) => a['mode'] == 'daily_challenge').toList();
         return json({
@@ -293,6 +347,9 @@ class FakeServer {
                   'players': challengeBetterThan == null ? 4 : 40,
                 },
         });
+      case ('GET', final p) when p.startsWith('battles/'):
+        final b = battles[int.parse(p.split('/').last) - 1];
+        return json({'battle': battleJson(b), 'questions': battleQuestions});
       case ('GET', 'leaderboard'):
         return json(leaderboard);
       case ('GET', 'me'):

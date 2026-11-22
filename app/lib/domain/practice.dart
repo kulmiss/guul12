@@ -15,7 +15,8 @@ enum PracticeMode {
   chapterQuiz('chapter_quiz'),
   review('review'),
   smart('smart'),
-  dailyChallenge('daily_challenge');
+  dailyChallenge('daily_challenge'),
+  battle('battle');
 
   const PracticeMode(this.wire);
 
@@ -24,8 +25,8 @@ enum PracticeMode {
   static PracticeMode fromWire(String value) =>
       PracticeMode.values.firstWhere((m) => m.wire == value, orElse: () => PracticeMode.quick10);
 
-  /// Seconds per question in timed mode; null = no timer.
-  int? get secondsPerQuestion => this == timed ? 60 : null;
+  /// Seconds per question in timed mode and battles; null = no timer.
+  int? get secondsPerQuestion => this == timed || this == battle ? 60 : null;
 }
 
 /// Builds the list of questions for a practice set. Pure and seedable, so it is easy to test.
@@ -71,7 +72,8 @@ class PracticeBuilder {
         return _take(unique, mixedCount);
       case PracticeMode.onboarding:
       case PracticeMode.dailyChallenge:
-        // The set was chosen elsewhere (warm-up file, or the server's challenge): keep its order.
+      case PracticeMode.battle:
+        // The set was chosen elsewhere (warm-up file, the server's challenge or battle): keep its order.
         return List.of(unique);
       case PracticeMode.quick10:
       case PracticeMode.timed:

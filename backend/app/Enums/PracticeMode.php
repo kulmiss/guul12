@@ -19,6 +19,8 @@ enum PracticeMode: string
     case Smart = 'smart';
     // The same 10 questions for every student of a grade and stream, once a day.
     case DailyChallenge = 'daily_challenge';
+    // Two students, the same questions, each when they like.
+    case Battle = 'battle';
 
     // Exams (no feedback until the end).
     case ExamFixed = 'exam_fixed';

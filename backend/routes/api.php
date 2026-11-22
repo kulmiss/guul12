@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\V1\AttemptController;
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\BattleController;
 use App\Http\Controllers\Api\V1\BookmarkController;
 use App\Http\Controllers\Api\V1\ConfigController;
 use App\Http\Controllers\Api\V1\ContentController;
@@ -40,6 +41,11 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::get('history', HistoryController::class)->name('history');
         Route::get('leaderboard', LeaderboardController::class)->name('leaderboard');
         Route::get('challenge', DailyChallengeController::class)->name('challenge');
+
+        Route::get('battles', [BattleController::class, 'index'])->name('battles.index');
+        Route::post('battles', [BattleController::class, 'store'])->name('battles.store');
+        Route::post('battles/join', [BattleController::class, 'join'])->name('battles.join');
+        Route::get('battles/{battle}', [BattleController::class, 'show'])->whereNumber('battle')->name('battles.show');
 
         Route::get('bookmarks', [BookmarkController::class, 'index'])->name('bookmarks.index');
         Route::put('bookmarks/{question}', [BookmarkController::class, 'store'])->whereNumber('question')->name('bookmarks.store');

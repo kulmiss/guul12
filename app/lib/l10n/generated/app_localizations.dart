@@ -2155,6 +2155,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Come back later to compare with other players'**
   String get challengeCompareLater;
+
+  /// Title
+  ///
+  /// In en, this message translates to:
+  /// **'Battles'**
+  String get battleTitle;
+
+  /// Home card
+  ///
+  /// In en, this message translates to:
+  /// **'Answer the same 10 questions as another student. No chat, only nicknames.'**
+  String get battleHomeBody;
+
+  /// Button: random opponent
+  ///
+  /// In en, this message translates to:
+  /// **'Quick battle'**
+  String get battleQuick;
+
+  /// Help
+  ///
+  /// In en, this message translates to:
+  /// **'Play against a student of your grade'**
+  String get battleQuickBody;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Battle a friend'**
+  String get battleFriend;
+
+  /// Help
+  ///
+  /// In en, this message translates to:
+  /// **'Get a code to give your friend'**
+  String get battleFriendBody;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Join with a code'**
+  String get battleJoin;
+
+  /// Field
+  ///
+  /// In en, this message translates to:
+  /// **'Battle code'**
+  String get battleCodeLabel;
+
+  /// Dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Your battle code'**
+  String get battleCodeTitle;
+
+  /// Dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Tell your friend this code. They open Battles, tap \"Join with a code\" and enter it. The battle is open for 48 hours.'**
+  String get battleCodeBody;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Play now'**
+  String get battlePlayNow;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get battleCancel;
+
+  /// Section
+  ///
+  /// In en, this message translates to:
+  /// **'My battles'**
+  String get battleMine;
+
+  /// Empty list
+  ///
+  /// In en, this message translates to:
+  /// **'No battles yet.'**
+  String get battleNone;
+
+  /// Opponent not found yet
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for an opponent'**
+  String get battleWaitingOpponent;
+
+  /// Status
+  ///
+  /// In en, this message translates to:
+  /// **'Your turn'**
+  String get battleYourTurn;
+
+  /// Status
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for {name}'**
+  String battleTheirTurn(String name);
+
+  /// Status
+  ///
+  /// In en, this message translates to:
+  /// **'You won'**
+  String get battleWon;
+
+  /// Status
+  ///
+  /// In en, this message translates to:
+  /// **'You lost'**
+  String get battleLost;
+
+  /// Status
+  ///
+  /// In en, this message translates to:
+  /// **'Draw'**
+  String get battleDraw;
+
+  /// Status
+  ///
+  /// In en, this message translates to:
+  /// **'Ended without a result'**
+  String get battleExpired;
+
+  /// Both scores
+  ///
+  /// In en, this message translates to:
+  /// **'You {mine} · {name} {theirs}'**
+  String battleScore(String mine, String name, String theirs);
+
+  /// No nickname
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a nickname to start battles. Only your nickname and avatar are shown.'**
+  String get battleNeedNickname;
+
+  /// Join error
+  ///
+  /// In en, this message translates to:
+  /// **'No battle has this code.'**
+  String get battleErrorNotFound;
+
+  /// Join error
+  ///
+  /// In en, this message translates to:
+  /// **'Another student already joined this battle.'**
+  String get battleErrorFull;
+
+  /// Join error
+  ///
+  /// In en, this message translates to:
+  /// **'This is your own battle. Give the code to a friend.'**
+  String get battleErrorOwn;
+
+  /// Join error
+  ///
+  /// In en, this message translates to:
+  /// **'This battle has ended.'**
+  String get battleErrorExpired;
+
+  /// Daily limit
+  ///
+  /// In en, this message translates to:
+  /// **'That\'s enough battles for today. Come back tomorrow!'**
+  String get battleErrorLimit;
+
+  /// Offline
+  ///
+  /// In en, this message translates to:
+  /// **'Battles need the internet.'**
+  String get battleOffline;
+
+  /// Rules line
+  ///
+  /// In en, this message translates to:
+  /// **'10 questions · 60 seconds each · more right answers wins; on a tie, the faster one'**
+  String get battleRule;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get battleClose;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

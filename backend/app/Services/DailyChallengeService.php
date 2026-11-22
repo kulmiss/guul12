@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Enums\PracticeMode;
-use App\Enums\QuestionType;
 use App\Models\Attempt;
 use App\Models\DailyChallenge;
 use App\Models\Question;
@@ -11,8 +10,6 @@ use App\Models\User;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
-use Random\Engine\Mt19937;
-use Random\Randomizer;
 
 /**
  * The daily challenge: 10 single-choice questions, the same for every student of one grade and
@@ -24,7 +21,10 @@ class DailyChallengeService
 
     public const SIZE = 10;
 
-    public function __construct(private readonly Settings $settings) {}
+    public function __construct(
+        private readonly Settings $settings,
+        private readonly QuestionPicker $picker,
+    ) {}
 
     public static function today(): string
     {
@@ -132,75 +132,13 @@ class DailyChallengeService
     private function draw(string $date, string $key): array
     {
         [$gradePart, $stream] = explode('-', $key, 2);
-        $grade = (int) substr($gradePart, 1);
-        $pool = $this->pool($grade, $stream === 'all' ? null : $stream);
-        if ($pool->count() < self::SIZE && $grade !== 12) {
-            // Not enough questions for this grade yet: use Grade 12 (always the main content).
-            $pool = $this->pool(12, $stream === 'all' ? null : $stream);
-        }
-        if ($pool->isEmpty()) {
-            return [];
-        }
 
-        $random = new Randomizer(new Mt19937(crc32('challenge|'.$date.'|'.$key)));
-        /** @var array<int, list<int>> $bySubject */
-        $bySubject = [];
-        foreach ($pool as $row) {
-            $bySubject[(int) $row->subject_id][] = (int) $row->id;
-        }
-        ksort($bySubject);
-        $queues = [];
-        foreach ($bySubject as $subjectId => $ids) {
-            $queues[$subjectId] = $random->shuffleArray($ids);
-        }
-        $subjects = $random->shuffleArray(array_keys($queues));
-
-        // Take turns between subjects until 10 questions are picked.
-        $out = [];
-        while (count($out) < self::SIZE) {
-            $added = false;
-            foreach ($subjects as $s) {
-                if (count($out) >= self::SIZE) {
-                    break;
-                }
-                if ($queues[$s] !== []) {
-                    $out[] = array_shift($queues[$s]);
-                    $added = true;
-                }
-            }
-            if (! $added) {
-                break;
-            }
-        }
-
-        return $out;
-    }
-
-    /**
-     * Visible single-choice questions (no reading passages) of the student's exam subjects.
-     *
-     * @return Collection<int, object{id: int, subject_id: int}>
-     */
-    private function pool(int $grade, ?string $stream): Collection
-    {
-        /** @var Collection<int, object{id: int, subject_id: int}> $rows */
-        $rows = Question::query()
-            ->visibleToStudents()
-            ->where('questions.type', QuestionType::SingleChoice->value)
-            ->whereNull('questions.passage_id')
-            ->join('chapters', 'chapters.id', '=', 'questions.chapter_id')
-            ->join('units', 'units.id', '=', 'chapters.unit_id')
-            ->join('subjects', 'subjects.id', '=', 'units.subject_id')
-            ->where('chapters.is_active', true)
-            ->where('units.is_active', true)
-            ->where('units.grade', $grade)
-            ->where(fn ($s) => $s->whereNull('units.stream')->when($stream !== null, fn ($q) => $q->orWhere('units.stream', $stream)))
-            ->where('subjects.is_exam_subject', true)
-            ->where(fn ($s) => $s->whereNull('subjects.stream')->when($stream !== null, fn ($q) => $q->orWhere('subjects.stream', $stream)))
-            ->orderBy('questions.id')
-            ->toBase()
-            ->get(['questions.id as id', 'subjects.id as subject_id']);
-
-        return $rows;
+        return $this->picker->pick(
+            (int) substr($gradePart, 1),
+            $stream === 'all' ? null : $stream,
+            null,
+            self::SIZE,
+            crc32('challenge|'.$date.'|'.$key),
+        );
     }
 }

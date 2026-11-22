@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:uuid/uuid.dart';
 
+import '../../app/battle_providers.dart';
 import '../../app/challenge_providers.dart';
 import '../../app/practice_set.dart';
 import '../../app/progress_providers.dart';
@@ -44,6 +45,7 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
       mode: _request.mode.wire,
       chapterId: _request.chapterId,
       challengeDate: ref.read(practiceSetProvider(_request)).value?.challengeDate,
+      battleId: ref.read(practiceSetProvider(_request)).value?.battleId,
       startedAt: session.startedAt,
       finishedAt: ref.read(clockProvider)(),
       answers: [
@@ -66,6 +68,7 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
     final synced = await repo.tryUploadAttempts(appVersion: ref.read(appVersionProvider));
     // The challenge result (and how others did) comes from the server after the upload.
     if (_request.mode == PracticeMode.dailyChallenge) ref.invalidate(dailyChallengeProvider);
+    if (_request.mode == PracticeMode.battle) ref.invalidate(battlesProvider);
     if (mounted) setState(() => _synced = synced);
   }
 
@@ -165,6 +168,7 @@ String practiceModeLabel(AppLocalizations l, PracticeMode mode) => switch (mode)
   PracticeMode.smart => l.practiceModeSmart,
   PracticeMode.onboarding => l.onboardingHookTitle,
   PracticeMode.dailyChallenge => l.challengeTitle,
+  PracticeMode.battle => l.battleTitle,
 };
 
 class _ResultView extends StatelessWidget {

@@ -11,11 +11,18 @@ import 'providers.dart';
 
 /// What the student asked to practise.
 class PracticeRequest {
-  const PracticeRequest({required this.mode, this.chapterId, this.unitId, this.seed = 0});
+  const PracticeRequest({
+    required this.mode,
+    this.chapterId,
+    this.unitId,
+    this.battleId,
+    this.seed = 0,
+  });
 
   final PracticeMode mode;
   final int? chapterId;
   final int? unitId;
+  final int? battleId;
 
   /// Changes for "Practise again" so a new set is built.
   final int seed;
@@ -26,21 +33,30 @@ class PracticeRequest {
       other.mode == mode &&
       other.chapterId == chapterId &&
       other.unitId == unitId &&
+      other.battleId == battleId &&
       other.seed == seed;
 
   @override
-  int get hashCode => Object.hash(mode, chapterId, unitId, seed);
+  int get hashCode => Object.hash(mode, chapterId, unitId, battleId, seed);
 }
 
 /// A ready-to-play set plus the passages its questions need.
 class PracticeSet {
-  const PracticeSet({required this.questions, required this.passages, this.challengeDate});
+  const PracticeSet({
+    required this.questions,
+    required this.passages,
+    this.challengeDate,
+    this.battleId,
+  });
 
   final List<Question> questions;
   final Map<int, Passage> passages;
 
   /// For the daily challenge: the day it belongs to (sent back with the attempt).
   final String? challengeDate;
+
+  /// For battles: the battle the attempt belongs to.
+  final int? battleId;
 
   bool get isEmpty => questions.isEmpty;
 }
@@ -60,6 +76,12 @@ Future<PracticeSet> buildPracticeSet(
       passages: const {},
       challengeDate: challenge.date,
     );
+  }
+  if (request.mode == PracticeMode.battle) {
+    final id = request.battleId;
+    if (id == null) return const PracticeSet(questions: [], passages: {});
+    final battle = await repo.battle(id);
+    return PracticeSet(questions: battle.questions, passages: const {}, battleId: id);
   }
   final List<ChapterContent> chapters;
   switch (request.mode) {
@@ -92,6 +114,7 @@ Future<PracticeSet> buildPracticeSet(
     case PracticeMode.quickRevise:
     case PracticeMode.onboarding:
     case PracticeMode.dailyChallenge:
+    case PracticeMode.battle:
       chapters = await repo.db.chapters();
   }
 

@@ -1799,5 +1799,145 @@
   "challengeCompareLater": "Come back later to compare with other players",
   "@challengeCompareLater": {
     "description": "Not enough players yet"
+  },
+  "battleTitle": "Battles",
+  "@battleTitle": {
+    "description": "Title"
+  },
+  "battleHomeBody": "Answer the same 10 questions as another student. No chat, only nicknames.",
+  "@battleHomeBody": {
+    "description": "Home card"
+  },
+  "battleQuick": "Quick battle",
+  "@battleQuick": {
+    "description": "Button: random opponent"
+  },
+  "battleQuickBody": "Play against a student of your grade",
+  "@battleQuickBody": {
+    "description": "Help"
+  },
+  "battleFriend": "Battle a friend",
+  "@battleFriend": {
+    "description": "Button"
+  },
+  "battleFriendBody": "Get a code to give your friend",
+  "@battleFriendBody": {
+    "description": "Help"
+  },
+  "battleJoin": "Join with a code",
+  "@battleJoin": {
+    "description": "Button"
+  },
+  "battleCodeLabel": "Battle code",
+  "@battleCodeLabel": {
+    "description": "Field"
+  },
+  "battleCodeTitle": "Your battle code",
+  "@battleCodeTitle": {
+    "description": "Dialog title"
+  },
+  "battleCodeBody": "Tell your friend this code. They open Battles, tap \"Join with a code\" and enter it. The battle is open for 48 hours.",
+  "@battleCodeBody": {
+    "description": "Dialog"
+  },
+  "battlePlayNow": "Play now",
+  "@battlePlayNow": {
+    "description": "Button"
+  },
+  "battleCancel": "Cancel",
+  "@battleCancel": {
+    "description": "Button"
+  },
+  "battleMine": "My battles",
+  "@battleMine": {
+    "description": "Section"
+  },
+  "battleNone": "No battles yet.",
+  "@battleNone": {
+    "description": "Empty list"
+  },
+  "battleWaitingOpponent": "Waiting for an opponent",
+  "@battleWaitingOpponent": {
+    "description": "Opponent not found yet"
+  },
+  "battleYourTurn": "Your turn",
+  "@battleYourTurn": {
+    "description": "Status"
+  },
+  "battleTheirTurn": "Waiting for {name}",
+  "@battleTheirTurn": {
+    "description": "Status",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "battleWon": "You won",
+  "@battleWon": {
+    "description": "Status"
+  },
+  "battleLost": "You lost",
+  "@battleLost": {
+    "description": "Status"
+  },
+  "battleDraw": "Draw",
+  "@battleDraw": {
+    "description": "Status"
+  },
+  "battleExpired": "Ended without a result",
+  "@battleExpired": {
+    "description": "Status"
+  },
+  "battleScore": "You {mine} · {name} {theirs}",
+  "@battleScore": {
+    "description": "Both scores",
+    "placeholders": {
+      "mine": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      },
+      "theirs": {
+        "type": "String"
+      }
+    }
+  },
+  "battleNeedNickname": "Choose a nickname to start battles. Only your nickname and avatar are shown.",
+  "@battleNeedNickname": {
+    "description": "No nickname"
+  },
+  "battleErrorNotFound": "No battle has this code.",
+  "@battleErrorNotFound": {
+    "description": "Join error"
+  },
+  "battleErrorFull": "Another student already joined this battle.",
+  "@battleErrorFull": {
+    "description": "Join error"
+  },
+  "battleErrorOwn": "This is your own battle. Give the code to a friend.",
+  "@battleErrorOwn": {
+    "description": "Join error"
+  },
+  "battleErrorExpired": "This battle has ended.",
+  "@battleErrorExpired": {
+    "description": "Join error"
+  },
+  "battleErrorLimit": "That's enough battles for today. Come back tomorrow!",
+  "@battleErrorLimit": {
+    "description": "Daily limit"
+  },
+  "battleOffline": "Battles need the internet.",
+  "@battleOffline": {
+    "description": "Offline"
+  },
+  "battleRule": "10 questions · 60 seconds each · more right answers wins; on a tie, the faster one",
+  "@battleRule": {
+    "description": "Rules line"
+  },
+  "battleClose": "Close",
+  "@battleClose": {
+    "description": "Button"
   }
 }
