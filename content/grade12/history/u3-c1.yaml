@@ -122,11 +122,16 @@ questions:
     explanation: 'He was mortally wounded at Metemma in March 1889.'
 
   - uid: g12-history-3-1-q008
-    type: numeric
+    type: single_choice
     difficulty: 2
     stem: 'In which year was Addis Ababa founded?'
-    answer: {value: 1886, tolerance: 0}
-    explanation: 'Menelik II and Empress Taytu founded it in 1886.'
+    options:
+      A: '1855'
+      B: '1886'
+      C: '1896'
+      D: '1931'
+    answer: B
+    explanation: 'Menelik II and Empress Taytu founded it in 1886 (some sources give 1887). 1855 is Tewodros''s coronation, 1896 is Adwa and 1931 is the first constitution.'
 
   - uid: g12-history-3-1-q009
     type: multiple_answers
@@ -254,7 +259,7 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'The mountain fortress where Tewodros II died in 1868 is called ________.'
-    answer: [Meqdela, Magdala, Mekdela, Makdala]
+    answer: [Meqdela, Magdala, Mekdela, Makdala, Maqdala]
     explanation: 'Spellings vary; it is in present-day South Wollo.'
 
   - uid: g12-history-3-1-q021
@@ -314,7 +319,7 @@ questions:
   - uid: g12-history-3-1-q026
     type: single_choice
     difficulty: 2
-    stem: 'Which treaty of 1884 between Ethiopia and Britain promised Ethiopia free transit through Massawa?'
+    stem: 'Which treaty of 1884 among Ethiopia, Britain and Egypt promised Ethiopia free transit through Massawa?'
     options:
       A: 'The Hewett Treaty (Adwa Treaty)'
       B: 'The Treaty of Wuchale'

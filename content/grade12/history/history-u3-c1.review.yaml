@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-3-1-q001: {hash: '146d32f5a410cff9675d6ffb4f3d055685cfd4980a8d97c3d18838015b77f151', answer: B}
+  g12-history-3-1-q002: {hash: '26412ef1ce51cc662b9a0e309a480118dcbdc1f7adfe469b23e4ee3b031c56d2', answer: A}
+  g12-history-3-1-q003: {hash: 'c64d2f5f94b12eba6c9818b790b5025c8876355e8e30fd6806c5a90455afc7ef', answer: 1855}
+  g12-history-3-1-q004: {hash: '1791458f85a87d4c460d60a2966eea4926e807e81683aa10a970660639cd82c0', answer: D}
+  g12-history-3-1-q005: {hash: '865cb799b206c4517a6b9f0cd90e657fccca65917030faf5061e56fc667f5807', answer: C}
+  g12-history-3-1-q006: {hash: '78624bde9cddfc7fb516bb646bfd12db5c48bcc2ec9b7d2e2dee7c71e7e31e51', answer: A}
+  g12-history-3-1-q007: {hash: '20cb82727419e9ba5721f6902c35fe7f45c5b6a21d7230723f8f40b46ad98978', answer: D}
+  g12-history-3-1-q008: {hash: '091283087d809e92ec16a067dfec29eaed5dcaf6131a55bcec12829007d17d69', answer: 1886, note: 'Founding date is disputed in sources: 1886 is the usual textbook date, but 1887 is also widely given (Taytu began building in 1886; the town was named/settled 1886-1887). A numeric item with one exact year may mark a student wrong for 1887. Suggest stating "according to the usual date" or converting to single_choice without 1887 as a distractor.'}
+  g12-history-3-1-q009: {hash: '7faa2a29587782b8aab91adcb8363834f0c0a7723a21049935b9e15668720726', answer: [A, B, C]}
+  g12-history-3-1-q010: {hash: '1198788e2639a0f88b26b60538a255c6947901f278aaea458f4f97a4f5a0d2ea', answer: B}
+  g12-history-3-1-q011: {hash: '3e98c1024e27e0cb1ad9e0a6ff9914a176cea7e7fa8bc4e74e7e8ff599a2a538', answer: C}
+  g12-history-3-1-q012: {hash: '40e1af1cfa9b2b0b882d3c46f977af56efbf4eabd16e67135c78aa5a5e56405c', answer: A}
+  g12-history-3-1-q013: {hash: '4cd9ef887863d6d6d0a569982887041977473f666f558a8e1a9728964214add9', answer: D}
+  g12-history-3-1-q014: {hash: '16ec35c14fe99df60e86bd7bc46ff1cad4ad94de1e9ebae2f59e8fd9fafbb18e', answer: true}
+  g12-history-3-1-q015: {hash: '59cc8b70fddf688a6fb91372e38a8154041cc34d8db0293b235cb83d0bfa0b0b', answer: A}
+  g12-history-3-1-q016: {hash: '869278b5095fa73b5c4f369797f24b83322b723cc987024e962abf4b44b18485', answer: C}
+  g12-history-3-1-q017: {hash: 'a7216346a3fff36fd1d7e625893460d34686f848b23aea3f1a32e3636b27c6d8', answer: A}
+  g12-history-3-1-q018: {hash: 'bc81ab473fca6f19482033399cd76da46cb34e6638de6acc2ff561edb94b3903', answer: false}
+  g12-history-3-1-q019: {hash: '7994f2a02d5499de6d181422a1b54a714c7a0ca160a3f8b02e4bbf3032790d99', answer: B}
+  g12-history-3-1-q020: {hash: 'd084344b60448b4d59a79d5521f4123fd13eb8d99051abb2759277e37dc2d89b', answer: 'Meqdela', note: 'Accept spelling variants Meqdela / Magdala / Mekdela / Maqdala.'}
+  g12-history-3-1-q021: {hash: '87f198112e0fbe0334a43584bbc1eca8b2cc66db829d57c92b60959ca5d69ca1', answer: 'Arbegnoch', note: 'Accept variants Arbegnoch / Arbegnotch / Arbegnuoch and singular Arbegna.'}
+  g12-history-3-1-q022: {hash: '416db90e0319f88935b4f6122615c152a8b5d1cd762cc3ec05d15370b4154fa0', answer: true}
+  g12-history-3-1-q023: {hash: '244bb945998efc57a87d86410f2efb6a681bfe91edc0450aba466f77809f80be', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-history-3-1-q024: {hash: '2d257ce49daff78079a035ff3526e8155c9414d1b4e2a3ec46c1beaf4740b9e6', answer: [B, D, A, C]}
+  g12-history-3-1-q025: {hash: '97af9eaedaec3aa9ff5ac939ca384334d2362d2bb6c300b66ae18780e0342669', answer: D}
+  g12-history-3-1-q026: {hash: '19fe4550179e7ac680d5730372e227e020a87db655928081d310109ee6a8e40a', answer: A, note: 'Minor: the Hewett (Adwa) Treaty of June 1884 was a three-party treaty (Britain, Egypt and Ethiopia), not only between Ethiopia and Britain. Answer is still clear.'}
+  g12-history-3-1-q027: {hash: '6c3e252abbd884eed14ab735377e5f86655eb953e7d5e4598af1a44b391b77ed', answer: D}
+  g12-history-3-1-q028: {hash: '48f28dfdb5c43e60c6e35953d363228303d2ab42de166ab87ca0966b48f82085', answer: C}
+  g12-history-3-1-q029: {hash: 'df9ff2a4a3a11e1cd8f28e0ee355c1bf9052c96cdfaf75b07e4a97c2abeb76ef', answer: B}
+  g12-history-3-1-q030: {hash: '95470c510723c6d9bbd86838bfe3d4b2a93a62b86217354e08e00d19ab4e1bfc', answer: A}
