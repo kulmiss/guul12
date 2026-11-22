@@ -1,0 +1,365 @@
+summary:
+  key_points:
+    - 'Climate has always changed naturally. Natural causes include changes in the Earth''s orbit and tilt over tens of thousands of years (Milankovitch cycles), changes in the Sun''s output, and large volcanic eruptions, whose ash and sulfur gases can cool the Earth for a year or two.'
+    - 'Since about 1850, human activities have become the main cause of warming: burning fossil fuels, clearing forests, farming and industry add greenhouse gases faster than nature removes them.'
+    - 'Scientists learn about past climates from "proxies": air bubbles trapped in ice cores, tree rings, layers of lake and ocean sediment, coral growth bands, and pollen.'
+    - 'Positive feedbacks make warming stronger: melting ice exposes dark land and sea that absorb more heat (lower albedo), and thawing permafrost releases methane.'
+    - 'Impacts in the Horn of Africa include less reliable rains, longer droughts in lowland pastoral areas, more intense floods, falling crop yields, and pressure on water and grazing that can lead to conflict and migration.'
+    - 'Ethiopia''s Climate Resilient Green Economy (CRGE) strategy, launched in 2011, aims for middle-income status with low emissions through better farming, forest protection, renewable power and efficient transport.'
+    - 'Global agreements: the UN Framework Convention on Climate Change (1992), the Kyoto Protocol (1997), which set binding targets for richer countries, and the Paris Agreement (2015), in which nearly all countries set their own targets (nationally determined contributions).'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-geography-2-1-se01
+    problem: 'How can an ice core from Antarctica tell scientists about the climate 100 000 years ago?'
+    steps:
+      - 'Snow falls in yearly layers and is pressed into ice, trapping tiny air bubbles.'
+      - 'Deep layers are older; the bubbles show past CO₂ levels, and the oxygen isotopes in the ice show past temperatures.'
+    answer: 'Trapped air and ice chemistry record past CO₂ and temperature.'
+  - uid: g12-geography-2-1-se02
+    problem: 'Explain why melting Arctic sea ice can speed up warming.'
+    steps:
+      - 'White ice reflects most sunlight (high albedo).'
+      - 'When it melts, the dark ocean absorbs more heat, causing more melting: a positive feedback.'
+    answer: 'Lower albedo → more absorption → more melting.'
+  - uid: g12-geography-2-1-se03
+    problem: 'Give one natural cause of short-term global cooling and explain it.'
+    steps:
+      - 'A very large volcanic eruption throws sulfur gases high into the stratosphere.'
+      - 'They form droplets that reflect sunlight, cooling the Earth for a year or two.'
+    answer: 'Large volcanic eruptions'
+
+flashcards:
+  - {uid: g12-geography-2-1-fc01, term: Milankovitch cycles, definition: 'Long-term changes in Earth''s orbit and tilt that affect climate.'}
+  - {uid: g12-geography-2-1-fc02, term: Climate proxy, definition: 'Natural record of past climate, e.g. ice cores or tree rings.'}
+  - {uid: g12-geography-2-1-fc03, term: Albedo, definition: 'How much sunlight a surface reflects; ice is high, sea water is low.'}
+  - {uid: g12-geography-2-1-fc04, term: Positive feedback, definition: 'A change that causes more of the same change.'}
+  - {uid: g12-geography-2-1-fc05, term: CRGE, definition: 'Ethiopia''s Climate Resilient Green Economy strategy (2011).'}
+  - {uid: g12-geography-2-1-fc06, term: Kyoto Protocol, definition: '1997 agreement with binding emission targets for richer countries.'}
+  - {uid: g12-geography-2-1-fc07, term: Nationally determined contribution, definition: 'Each country''s own climate target under the Paris Agreement.'}
+  - {uid: g12-geography-2-1-fc08, term: Permafrost, definition: 'Ground that stays frozen all year; releases methane as it thaws.'}
+
+questions:
+  - uid: g12-geography-2-1-q001
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a NATURAL cause of climate change?'
+    options:
+      A: 'Burning coal in power stations'
+      B: 'Changes in the Earth''s orbit and tilt over thousands of years'
+      C: 'Clearing forests for farms'
+      D: 'Using cars and lorries'
+    answer: B
+    explanation: 'Orbital (Milankovitch) cycles are natural; the others are human activities.'
+
+  - uid: g12-geography-2-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'A very large volcanic eruption usually affects global temperature by:'
+    options:
+      A: 'Cooling the Earth for a year or two'
+      B: 'Warming it permanently by several degrees'
+      C: 'Having no effect at all'
+      D: 'Stopping the seasons'
+    answer: A
+    explanation: 'Sulfur droplets in the stratosphere reflect sunlight, causing short-term cooling.'
+
+  - uid: g12-geography-2-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Scientists study air bubbles trapped in Antarctic ice to learn about:'
+    options:
+      A: 'Future earthquakes'
+      B: 'Ocean tides'
+      C: 'Past amounts of carbon dioxide in the atmosphere'
+      D: 'The age of the Moon'
+    answer: C
+    explanation: 'Each bubble is a tiny sample of the air from when the snow fell.'
+
+  - uid: g12-geography-2-1-q004
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are natural records ("proxies") of past climate? Choose all that apply.'
+    options:
+      A: 'Tree rings'
+      B: 'Ice cores'
+      C: 'Layers of lake sediment'
+      D: 'Satellite photos from last week'
+    answer: [A, B, C]
+    explanation: 'Satellite photos are direct modern measurements, not proxies for the distant past.'
+
+  - uid: g12-geography-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What does "albedo" measure?'
+    options:
+      A: 'The amount of rain in a year'
+      B: 'The height of a mountain'
+      C: 'The strength of wind'
+      D: 'How much sunlight a surface reflects'
+    answer: D
+    explanation: 'Fresh snow has a high albedo; dark oceans and forests have a low albedo.'
+
+  - uid: g12-geography-2-1-q006
+    type: single_choice
+    difficulty: 3
+    stem: 'Melting sea ice exposes dark ocean water, which absorbs more heat and causes more melting. This is an example of:'
+    options:
+      A: 'Negative feedback'
+      B: 'Positive feedback'
+      C: 'Plate tectonics'
+      D: 'Weathering'
+    answer: B
+    explanation: 'A positive feedback strengthens the original change.'
+
+  - uid: g12-geography-2-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Since about 1850, what has been the main cause of global warming?'
+    options:
+      A: 'Changes in the Earth''s orbit'
+      B: 'More volcanic eruptions'
+      C: 'Human activities that add greenhouse gases'
+      D: 'The Sun becoming much hotter'
+    answer: C
+    explanation: 'The rapid rise matches the growth in burning fossil fuels and clearing land.'
+
+  - uid: g12-geography-2-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'What is Ethiopia''s Climate Resilient Green Economy (CRGE) strategy?'
+    options:
+      A: 'A plan to build more coal power stations'
+      B: 'A football league'
+      C: 'A plan to stop all farming'
+      D: 'A plan to grow the economy while keeping greenhouse gas emissions low'
+    answer: D
+    explanation: 'CRGE (launched in 2011) combines growth with low emissions and resilience to climate change.'
+
+  - uid: g12-geography-2-1-q009
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the Kyoto Protocol adopted?'
+    answer: {value: 1997, tolerance: 0}
+    explanation: 'It was adopted in Kyoto, Japan, in 1997.'
+
+  - uid: g12-geography-2-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'How does the Paris Agreement differ from the Kyoto Protocol?'
+    options:
+      A: 'Under Paris, nearly all countries set their own targets; Kyoto set binding targets mainly for richer countries.'
+      B: 'Paris applies only to Europe.'
+      C: 'Kyoto was signed after Paris.'
+      D: 'Paris bans all fossil fuels immediately.'
+    answer: A
+    explanation: 'Paris uses nationally determined contributions from almost every country.'
+
+  - uid: g12-geography-2-1-q011
+    type: true_false
+    difficulty: 2
+    stem: 'The Earth''s climate never changed before humans existed.'
+    answer: false
+    explanation: 'There have been ice ages and warm periods throughout Earth''s history due to natural causes.'
+
+  - uid: g12-geography-2-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which group in Ethiopia is likely to be hit hardest by longer droughts in the lowlands?'
+    options:
+      A: 'Office workers in Addis Ababa'
+      B: 'Pastoralists who depend on pasture and water for livestock'
+      C: 'Airline crews'
+      D: 'Bank staff'
+    answer: B
+    explanation: 'Their livelihood depends directly on rain-fed grazing and water points.'
+
+  - uid: g12-geography-2-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'How can climate change contribute to conflict over resources?'
+    options:
+      A: 'It makes all resources more plentiful.'
+      B: 'It removes all borders.'
+      C: 'Scarcer water and pasture increase competition between groups.'
+      D: 'It has no effect on resources.'
+    answer: C
+    explanation: 'When droughts reduce water and grazing, groups may compete for what remains.'
+
+  - uid: g12-geography-2-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Thawing permafrost in the Arctic is a concern because it:'
+    options:
+      A: 'Makes the ground harder'
+      B: 'Reflects more sunlight'
+      C: 'Stops ocean currents'
+      D: 'Releases methane, a greenhouse gas'
+    answer: D
+    explanation: 'Frozen organic matter decays as it thaws, releasing CO₂ and methane.'
+
+  - uid: g12-geography-2-1-q015
+    type: true_false
+    difficulty: 1
+    stem: 'Tree rings can show whether past years were wet or dry.'
+    answer: true
+    explanation: 'Trees grow wider rings in good (wet, warm) years and narrow rings in poor years.'
+
+  - uid: g12-geography-2-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is part of Ethiopia''s green economy plan?'
+    options:
+      A: 'Expanding renewable power such as hydropower and wind'
+      B: 'Increasing deforestation'
+      C: 'Importing more diesel generators for all towns'
+      D: 'Burning more charcoal'
+    answer: A
+    explanation: 'CRGE emphasises renewable energy, forest protection and efficient farming.'
+
+  - uid: g12-geography-2-1-q017
+    type: fill_in
+    difficulty: 1
+    stem: 'The measure of how much sunlight a surface reflects is called its ________.'
+    answer: [albedo]
+    explanation: 'Ice has a high albedo; dark soil has a low albedo.'
+
+  - uid: g12-geography-2-1-q018
+    type: fill_in
+    difficulty: 2
+    stem: 'Long-term changes in the Earth''s orbit and tilt that affect climate are called ________ cycles.'
+    answer: [Milankovitch]
+    explanation: 'They are named after the Serbian scientist Milutin Milanković.'
+
+  - uid: g12-geography-2-1-q019
+    type: true_false
+    difficulty: 2
+    stem: 'Under the Paris Agreement, each country sets its own climate target, called a nationally determined contribution.'
+    answer: true
+    explanation: 'Countries update their targets every few years.'
+
+  - uid: g12-geography-2-1-q020
+    type: matching
+    difficulty: 2
+    stem: 'Match each agreement or plan with its year.'
+    left:
+      L1: 'UN Framework Convention on Climate Change'
+      L2: 'Kyoto Protocol'
+      L3: 'Paris Agreement'
+    right:
+      R1: '1997'
+      R2: '2015'
+      R3: '1992'
+      R4: '2030'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '2030 is a common target year for many plans, not the year of an agreement here.'
+
+  - uid: g12-geography-2-1-q021
+    type: ordering
+    difficulty: 2
+    stem: 'Put these steps in order to show how deforestation can lead to warming.'
+    items:
+      A: 'Less carbon dioxide is taken out of the air.'
+      B: 'Forests are cut down and burned.'
+      C: 'More heat is trapped and temperatures rise.'
+      D: 'Carbon dioxide builds up in the atmosphere.'
+    answer: [B, A, D, C]
+    explanation: 'Clearing → fewer trees absorb CO₂ (and burning releases it) → CO₂ builds up → more warming.'
+
+  - uid: g12-geography-2-1-q022
+    type: single_choice
+    difficulty: 3
+    stem: 'An increase in cloud cover reflects more sunlight and slightly reduces warming. This is an example of:'
+    options:
+      A: 'Positive feedback'
+      B: 'Plate movement'
+      C: 'Negative feedback'
+      D: 'Erosion'
+    answer: C
+    explanation: 'A negative feedback works against the original change.'
+
+  - uid: g12-geography-2-1-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sector releases the most greenhouse gases in Ethiopia, according to national plans?'
+    options:
+      A: 'Space travel'
+      B: 'Shipping'
+      C: 'Heavy industry such as steel making'
+      D: 'Agriculture and land use, including livestock and deforestation'
+    answer: D
+    explanation: 'With a large farming economy and many livestock, agriculture and forestry dominate Ethiopia''s emissions.'
+
+  - uid: g12-geography-2-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which adaptation would help highland farmers cope with heavier rainstorms?'
+    options:
+      A: 'Building terraces and planting trees on slopes'
+      B: 'Removing all vegetation'
+      C: 'Ploughing straight down the slope'
+      D: 'Burning crop residues'
+    answer: A
+    explanation: 'Terraces and trees slow run-off and reduce soil erosion.'
+
+  - uid: g12-geography-2-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Why are low-lying coastal cities around the world at risk from climate change?'
+    options:
+      A: 'Mountains will grow near them.'
+      B: 'Sea levels are rising as ice melts and water expands.'
+      C: 'Rivers will stop flowing.'
+      D: 'The sea will freeze.'
+    answer: B
+    explanation: 'Melting land ice and the expansion of warming seawater raise sea levels.'
+
+  - uid: g12-geography-2-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Warmer air can hold more water vapour. How can this affect extreme weather?'
+    options:
+      A: 'It makes all rain stop.'
+      B: 'It makes storms weaker everywhere.'
+      C: 'It can make heavy rainfall events more intense.'
+      D: 'It has no effect.'
+    answer: C
+    explanation: 'More moisture is available, so storms can release more rain at once, raising flood risk.'
+
+  - uid: g12-geography-2-1-q027
+    type: single_choice
+    difficulty: 1
+    stem: 'Which gas is the main human-made greenhouse gas?'
+    options:
+      A: 'Nitrogen'
+      B: 'Oxygen'
+      C: 'Argon'
+      D: 'Carbon dioxide'
+    answer: D
+    explanation: 'CO₂ from fossil fuels and land clearing is the largest contributor.'
+
+  - uid: g12-geography-2-1-q028
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was Ethiopia''s Climate Resilient Green Economy (CRGE) strategy launched?'
+    answer: {value: 2011, tolerance: 0}
+    explanation: 'Ethiopia launched CRGE in 2011.'
+
+  - uid: g12-geography-2-1-q029
+    type: true_false
+    difficulty: 2
+    stem: 'Climate change only affects temperature and does not change rainfall patterns.'
+    answer: false
+    explanation: 'It changes the timing, amount and intensity of rainfall too.'
+
+  - uid: g12-geography-2-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main purpose of an early-warning system for drought?'
+    options:
+      A: 'To give communities time to prepare, for example by storing food and water'
+      B: 'To cause rain'
+      C: 'To stop climate change completely'
+      D: 'To measure earthquakes'
+    answer: A
+    explanation: 'Early warnings allow action before a crisis becomes severe.'

@@ -2,7 +2,7 @@ summary:
   key_points:
     - 'The Earth has layers: a thin crust (continental crust is thicker and less dense; oceanic crust is thinner and denser), the mantle, a liquid outer core and a solid inner core. The rigid lithosphere (crust + top of the mantle) is broken into plates that move over the softer asthenosphere.'
     - 'Alfred Wegener proposed continental drift in 1912: the continents were once joined in a supercontinent called Pangaea. Evidence: the coastlines of South America and Africa fit together; the same fossils (such as Mesosaurus and Glossopteris) and rock types are found on continents now far apart; and old glacial deposits are found in places that are now hot.'
-    - 'Plates move a few centimetres a year, driven mainly by convection currents in the mantle, together with ridge push and slab pull. Sea-floor spreading at mid-ocean ridges (shown by magnetic stripes in the rocks) explains how plates move apart.'
+    - 'Plates move a few centimetres a year. They are driven by convection currents in the mantle together with slab pull (the sinking edge of a plate pulling the rest, often thought to be the strongest force) and ridge push. Sea-floor spreading at mid-ocean ridges (shown by magnetic stripes in the rocks) explains how plates move apart.'
     - 'Divergent boundaries: plates move apart, forming mid-ocean ridges and rift valleys. The East African Rift, including the Ethiopian Rift Valley and the Afar region, is an example.'
     - 'Convergent boundaries: plates move together. Where oceanic crust sinks under another plate (subduction), deep ocean trenches and volcanoes form. Where two continents collide, fold mountains form (the Himalayas).'
     - 'Transform boundaries: plates slide past each other, causing earthquakes (the San Andreas Fault in California).'
@@ -59,14 +59,14 @@ questions:
   - uid: g12-geography-1-1-q002
     type: single_choice
     difficulty: 1
-    stem: 'Who first proposed the theory of continental drift?'
+    stem: 'Who developed the theory of continental drift in 1912?'
     options:
       A: 'Alfred Wegener'
       B: 'Charles Darwin'
       C: 'Isaac Newton'
       D: 'Harry Hess'
     answer: A
-    explanation: 'Wegener proposed it in 1912. Harry Hess later described sea-floor spreading.'
+    explanation: 'Earlier thinkers had noticed the matching coastlines, but Wegener set out the full theory in 1912. Harry Hess later described sea-floor spreading.'
 
   - uid: g12-geography-1-1-q003
     type: single_choice
@@ -95,14 +95,14 @@ questions:
   - uid: g12-geography-1-1-q005
     type: single_choice
     difficulty: 2
-    stem: 'What is the main force that drives the movement of tectonic plates?'
+    stem: 'Which of these helps to drive the movement of tectonic plates?'
     options:
       A: 'Wind blowing on the continents'
       B: 'The Moon''s gravity'
       C: 'Ocean waves'
       D: 'Convection currents in the mantle'
     answer: D
-    explanation: 'Heat from the interior makes the mantle slowly circulate, dragging the plates (helped by ridge push and slab pull).'
+    explanation: 'Heat from the interior makes the mantle slowly circulate. Together with slab pull (often thought to be the strongest force) and ridge push, this moves the plates. Wind, waves and the Moon do not.'
 
   - uid: g12-geography-1-1-q006
     type: single_choice
@@ -343,9 +343,9 @@ questions:
     stem: 'Which type of seismic wave cannot travel through liquids?'
     options:
       A: 'P waves'
-      B: 'Surface waves on water'
+      B: 'Both P and S waves'
       C: 'S waves'
-      D: 'All seismic waves travel through liquids.'
+      D: 'Neither P nor S waves'
     answer: C
     explanation: 'S waves do not pass through the liquid outer core, which helped scientists discover that it is liquid.'
 

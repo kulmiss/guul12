@@ -287,6 +287,7 @@ subjects:
     chapters:
     - number: 1
       title: Climate Change
+      file: geography/u2-c1.yaml
   - number: 3
     title: Management of Conflict Over Resources
     chapters:
