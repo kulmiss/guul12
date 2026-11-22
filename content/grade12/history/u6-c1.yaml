@@ -5,8 +5,8 @@ summary:
     - 'A revised constitution was introduced in 1955. In December 1960 an attempted coup led by the brothers Germame and Mengistu Neway failed but showed growing discontent.'
     - 'Ethiopia played an international role: it sent the Kagnew Battalion to the UN force in Korea (1951–1953), served in the UN mission in the Congo, and hosted the founding of the OAU in Addis Ababa in 1963.'
     - 'From the mid-1960s, a student movement demanded land reform under the slogan "Land to the Tiller". Rising prices, the Wollo famine (1972–1974) and army unrest led to the 1974 revolution. The Derg (military committee) deposed Haile Selassie on 12 September 1974.'
-    - 'The Derg, later led by Mengistu Haile Mariam, declared socialism. The rural land proclamation of March 1975 nationalised all rural land, and urban land and extra houses were nationalised in July 1975. The Zemecha campaign sent students to rural areas. Violent repression during the "Red Terror" (1977–1978) killed many people.'
-    - 'In 1977 Somalia invaded the Ogaden. With Soviet and Cuban support, Ethiopia regained the territory by March 1978. The Workers'' Party of Ethiopia was founded in 1984, and the People''s Democratic Republic of Ethiopia was proclaimed under a new constitution in 1987.'
+    - 'The Derg, chaired from 1977 by Mengistu Haile Mariam, declared socialism. The rural land proclamation of March 1975 nationalised all rural land, and urban land and extra houses were nationalised in July 1975. The Zemecha campaign sent students to rural areas. Violent repression during the "Red Terror" (1977–1978) killed many people.'
+    - 'In 1977 war broke out in the Ogaden between Ethiopia and Somalia, whose army fought alongside the Western Somali Liberation Front. With Soviet and Cuban support, Ethiopia regained the territory by March 1978. The Workers'' Party of Ethiopia was founded in 1984, and the People''s Democratic Republic of Ethiopia was proclaimed under a new constitution in 1987.'
     - 'The 1984–1985 famine, forced resettlement and villagisation, and wars with armed fronts weakened the regime. The EPRDF and the EPLF advanced in 1990–1991; Mengistu fled in May 1991 and EPRDF forces entered Addis Ababa on 28 May 1991.'
   formulas: []
 
@@ -35,7 +35,7 @@ flashcards:
   - {uid: g12-history-6-1-fc02, term: 1960 coup attempt, definition: 'Failed attempt led by Germame and Mengistu Neway.'}
   - {uid: g12-history-6-1-fc03, term: Kagnew Battalion, definition: 'Ethiopian unit that served with the UN in Korea.'}
   - {uid: g12-history-6-1-fc04, term: Land to the Tiller, definition: 'Student slogan demanding land reform.'}
-  - {uid: g12-history-6-1-fc05, term: Derg, definition: 'Military committee that ruled Ethiopia from 1974 to 1991.'}
+  - {uid: g12-history-6-1-fc05, term: Derg, definition: 'Military committee that took power in 1974; formally dissolved in 1987, its leaders ruled until 1991.'}
   - {uid: g12-history-6-1-fc06, term: Rural land proclamation, definition: 'March 1975 law that nationalised all rural land.'}
   - {uid: g12-history-6-1-fc07, term: Zemecha, definition: 'Campaign that sent students to rural areas from 1974.'}
   - {uid: g12-history-6-1-fc08, term: Red Terror, definition: 'Violent repression by the Derg, 1977–1978.'}
@@ -138,12 +138,12 @@ questions:
     difficulty: 2
     stem: 'What was the Derg?'
     options:
-      A: 'The military committee that ruled Ethiopia from 1974 to 1991'
+      A: 'The military committee that took power in Ethiopia in 1974'
       B: 'A student union'
       C: 'A political party founded in 1991'
       D: 'The imperial parliament'
     answer: A
-    explanation: '"Derg" means committee or council in Ge''ez/Amharic.'
+    explanation: '"Derg" means committee or council in Ge''ez/Amharic. It was formally dissolved when the PDRE was proclaimed in 1987, but its leaders ruled until 1991.'
 
   - uid: g12-history-6-1-q010
     type: single_choice
@@ -172,14 +172,14 @@ questions:
   - uid: g12-history-6-1-q012
     type: single_choice
     difficulty: 2
-    stem: 'Which country invaded the Ogaden in 1977?'
+    stem: 'In 1977, the army of which neighbouring country fought Ethiopia in the Ogaden, alongside the Western Somali Liberation Front (WSLF)?'
     options:
       A: 'Sudan'
       B: 'Kenya'
       C: 'Somalia'
       D: 'Egypt'
     answer: C
-    explanation: 'Somali forces advanced deep into the Ogaden before being pushed back by March 1978.'
+    explanation: 'The Somali army and the WSLF gained much of the Ogaden in 1977; Ethiopian forces regained it by March 1978.'
 
   - uid: g12-history-6-1-q013
     type: single_choice
@@ -210,14 +210,14 @@ questions:
   - uid: g12-history-6-1-q016
     type: single_choice
     difficulty: 2
-    stem: 'Who became the leader of the Derg and head of state from 1977?'
+    stem: 'Who became chairman of the Derg in 1977 and President of the PDRE in 1987?'
     options:
       A: 'Germame Neway'
-      B: 'Tafari Benti only'
+      B: 'Tafari Benti'
       C: 'Haile Selassie I'
       D: 'Mengistu Haile Mariam'
     answer: D
-    explanation: 'Mengistu became head of state in February 1977 and ruled until 1991.'
+    explanation: 'Mengistu became chairman of the Derg in February 1977, President of the PDRE in 1987, and fled in May 1991.'
 
   - uid: g12-history-6-1-q017
     type: numeric
@@ -260,7 +260,7 @@ questions:
   - uid: g12-history-6-1-q021
     type: fill_in
     difficulty: 2
-    stem: 'Write the student slogan (three words, beginning "Land to the ...") that demanded land reform: Land to the ________.'
+    stem: 'Complete the student slogan that demanded land reform: "Land to the ________".'
     answer: [Tiller]
     explanation: 'The slogan "Land to the Tiller" became famous from the mid-1960s.'
 
@@ -326,7 +326,7 @@ questions:
   - uid: g12-history-6-1-q027
     type: single_choice
     difficulty: 2
-    stem: 'Which two armed movements were advancing on the Derg in 1990–1991?'
+    stem: 'Which two armed movements took control of Addis Ababa and Asmara in May 1991?'
     options:
       A: 'The Arbegnoch and the Dervishes'
       B: 'The EPRDF and the EPLF'

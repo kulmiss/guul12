@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-6-1-q001: {hash: '52c601479220d7221a0468ea6a018a17d9b714388d11846e0f933681294e9558', answer: B}
+  g12-history-6-1-q002: {hash: '1850f00882a0bfa0fee143e7054d51420f6615d494bb949f253ab2d9cde952f5', answer: A}
+  g12-history-6-1-q003: {hash: 'a59fa4c16d3f2f8d1f1234dacdab439b9c2bc5682eaca330f0a9d995eb8bfd34', answer: 1962}
+  g12-history-6-1-q004: {hash: '765d8456ee40ee8de2c672883c3fdc117242cc45f2aa4827c7cfc1e75075fa47', answer: C}
+  g12-history-6-1-q005: {hash: 'b603811e47407bd70bcaa6540fe7ee467d4f30701fe382f75066d6ee305f7fd4', answer: D}
+  g12-history-6-1-q006: {hash: '4acbc153e29229b2363ff0af4c7de24cbfb232cbbcef63ba85ced1bca1d0457a', answer: B}
+  g12-history-6-1-q007: {hash: '816baa7bc52cd329b0f87990070879fe9bd8f303021e1ba095ac35025cee31e7', answer: [A, B, C]}
+  g12-history-6-1-q008: {hash: '385fa0da3784da1f60adc132f77bcb33dd763c39a08fe2684740885c3bb747f6', answer: C}
+  g12-history-6-1-q009: {hash: 'ea28f0c661410e9df7f09f21d70c9e176fe07af08dc903637707c3581270ecac', answer: A, note: 'Minor inaccuracy: the Derg (PMAC) was formally dissolved in September 1987 when the PDRE was proclaimed; the same leadership ruled until 1991 under the PDRE/WPE. Suggest "the military committee that took power in 1974 (its regime lasted until 1991)" or similar.'}
+  g12-history-6-1-q010: {hash: 'c42ec401b4cda1e3b88ff2bd9cc4cfb65b066f2afba62229f63eb89a44b586e4', answer: D}
+  g12-history-6-1-q011: {hash: '45a73849b36a0433b9ca8f67edf97082f1be86975cea715e6a3affa4ec796c2a', answer: A}
+  g12-history-6-1-q012: {hash: '027c3ddb4e643580704b56daf584509bec7617b289a249e55d8c0975145721cb', answer: C, note: 'Factually correct (Somali regular army crossed in July 1977), but sensitive for a Somali Region audience: the war also involved the local WSLF insurgency. Consider neutral wording such as "Which country''s army entered the Ogaden in 1977, starting the Ethio-Somali war?" and have the explanation mention the WSLF.'}
+  g12-history-6-1-q013: {hash: 'd38fb16ab9cfb7e43e3a1616ec6de157c6dbbc0782cc9f0cd1deed16000f7f0c', answer: B}
+  g12-history-6-1-q014: {hash: '8d0e1125068d01a78a0d27c6d359ee184a7f3e76a3dd7545e3e0da828f9517a3', answer: true}
+  g12-history-6-1-q015: {hash: '7129ab9e808b6dab89a9c025f9db0089c1a45e9821232b6760fefa503edca1e0', answer: true}
+  g12-history-6-1-q016: {hash: 'b2a3a6868056f993302f1dac1c105d944b4497c5f801de1084d3fd38479b7f45', answer: D, note: 'Option B "Tafari Benti only" is oddly worded (the "only" hints it is a trap); suggest plain "Tafari Benti". Also "head of state" is loose: Mengistu was PMAC chairman from February 1977 and President of the PDRE from 1987.'}
+  g12-history-6-1-q017: {hash: 'd55e9b9bb142cd267c0b5fda8cab0a1446ced694ff29abcbb6aed91b8b475f61', answer: 1987}
+  g12-history-6-1-q018: {hash: '0885b987c9c34ffac937784ed7f00b31b9d3d9fb76c9214ea83ec4579ce32289', answer: A}
+  g12-history-6-1-q019: {hash: '2239aa4b6b8c0f03bacfaf60ab7280d3e5eab10a45243790643b10a1d65c5b4c', answer: C}
+  g12-history-6-1-q020: {hash: 'e0f37f3cbb51210aea627714bd2c7bf4a9fd0fb22345c9343818e7db81289520', answer: 'Derg'}
+  g12-history-6-1-q021: {hash: 'eb3838c152e81d86001b2c3169d602bfb4652384db3a2d30502a00c65c315639', answer: 'Tiller', note: 'Stem error: "Land to the Tiller" is four words, not three. Fix to "four words" or drop the word count.'}
+  g12-history-6-1-q022: {hash: 'c5f7d95f3a43cdf2536b0d0e00aba7e8d839171d87162ca993f6c140a1fe7706', answer: true}
+  g12-history-6-1-q023: {hash: '1b5e8c115f6959d1daa2df2c3808ea54d452ba34f2b1f8dd48544cc6eecd2871', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-history-6-1-q024: {hash: '46c8412983523a8be8cdc00a78a75acec5ba02d621755c24017416cf4b949b75', answer: [B, D, A, C]}
+  g12-history-6-1-q025: {hash: 'ce8e0d31871bfc3b7ac1ca135859c4f8b6b5a31bcccdad698777bbd421589f5c', answer: D}
+  g12-history-6-1-q026: {hash: 'b2097a53ddae1fa6be17f8e08d6deee5caa6a230a2e7358651ab1f02c8b4c2d8', answer: A}
+  g12-history-6-1-q027: {hash: '46ae8ad1f8efe1a1ac83f8f6cb39f1c03dc47c86022f481393248cc69aa3d101', answer: B}
+  g12-history-6-1-q028: {hash: 'fc39781efcbde4c820ca23b4b519c5878df211c34e1ae15feb19ff9298e35f60', answer: A}
+  g12-history-6-1-q029: {hash: '8ad2e7e1d7bab639ac95c2220de3d646103506fb5b770711dc7325ea7f84dd01', answer: D}
+  g12-history-6-1-q030: {hash: '38897fc849f9ba96ff42294e883cc961016a992c54fb617367bf4bccb5534005', answer: C}
