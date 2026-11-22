@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'After Napoleon''s defeat, the Congress of Vienna (1814–1815), led by statesmen such as Austria''s Metternich, redrew the map of Europe, restored old monarchies and tried to keep a balance of power so that no single state could dominate.'
+    - 'The Industrial Revolution began in Britain in the late 18th century. Machines, steam power (improved by James Watt), factories, railways and coal and iron industries changed how goods were made. People moved from villages to fast-growing industrial towns.'
+    - 'Capitalism is an economic system based on private ownership of businesses and land, production for profit, competition and markets. Adam Smith''s "The Wealth of Nations" (1776) argued for free markets (laissez-faire).'
+    - 'Industrialisation created a new working class that often faced long hours, low pay and poor housing. This led to trade unions and socialist ideas; Karl Marx and Friedrich Engels published "The Communist Manifesto" in 1848.'
+    - 'Nationalism is the belief that people who share a language, culture and history should form their own nation-state. In 1848 revolutions broke out across Europe demanding constitutions and national rights.'
+    - 'Italian unification: Mazzini spread nationalist ideas, Cavour (prime minister of Piedmont-Sardinia) used diplomacy, and Garibaldi''s "Red Shirts" took southern Italy. The Kingdom of Italy was proclaimed in 1861, and Rome became its capital after 1870.'
+    - 'German unification: Prussia''s chancellor Otto von Bismarck used "blood and iron" – wars with Denmark (1864), Austria (1866) and France (1870–71). The German Empire was proclaimed at Versailles in January 1871.'
+    - 'Industrial capitalism and nationalism fuelled competition for colonies, markets and raw materials, and rival alliances formed: the Triple Alliance (Germany, Austria-Hungary, Italy, 1882) and the Triple Entente (Britain, France, Russia, by 1907).'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-1-1-se01
+    problem: 'Why did the Industrial Revolution begin in Britain?'
+    steps:
+      - 'Britain had large coal and iron deposits, capital from trade, a growing population and many inventors.'
+      - 'It also had colonies that supplied raw materials and markets, and a stable government that protected property.'
+    answer: 'Resources, capital, labour, markets and stability'
+  - uid: g12-history-1-1-se02
+    problem: 'Describe how Bismarck used war to unify Germany.'
+    steps:
+      - 'He fought Denmark (1864) and Austria (1866), removing Austrian influence and uniting northern Germany under Prussia.'
+      - 'The war with France (1870–71) brought the southern German states in; the German Empire was proclaimed in January 1871.'
+    answer: 'Three short wars led to unification under Prussia.'
+  - uid: g12-history-1-1-se03
+    problem: 'Explain the link between industrial capitalism and the scramble for colonies.'
+    steps:
+      - 'Factories needed raw materials (cotton, rubber, minerals) and new markets for their goods.'
+      - 'European powers sought colonies to secure both, increasing rivalry between them.'
+    answer: 'Need for raw materials and markets'
+
+flashcards:
+  - {uid: g12-history-1-1-fc01, term: Congress of Vienna, definition: '1814–1815 meeting that reorganised Europe after Napoleon.'}
+  - {uid: g12-history-1-1-fc02, term: Balance of power, definition: 'Policy of preventing any one state from dominating.'}
+  - {uid: g12-history-1-1-fc03, term: Industrial Revolution, definition: 'Shift to machine and factory production, starting in Britain.'}
+  - {uid: g12-history-1-1-fc04, term: Capitalism, definition: 'Private ownership, production for profit and market competition.'}
+  - {uid: g12-history-1-1-fc05, term: Laissez-faire, definition: 'Idea that governments should not interfere in the economy.'}
+  - {uid: g12-history-1-1-fc06, term: Nationalism, definition: 'Belief that a people sharing culture and history should have its own state.'}
+  - {uid: g12-history-1-1-fc07, term: Cavour, definition: 'Prime minister of Piedmont-Sardinia who led Italian unification by diplomacy.'}
+  - {uid: g12-history-1-1-fc08, term: Bismarck, definition: 'Prussian chancellor who unified Germany through "blood and iron".'}
+  - {uid: g12-history-1-1-fc09, term: Triple Entente, definition: 'Britain, France and Russia.'}
+
+questions:
+  - uid: g12-history-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which meeting reorganised Europe after the defeat of Napoleon?'
+    options:
+      A: 'The Berlin Conference'
+      B: 'The Congress of Vienna'
+      C: 'The Treaty of Versailles'
+      D: 'The Paris Peace Conference of 1919'
+    answer: B
+    explanation: 'The Congress of Vienna met in 1814–1815.'
+
+  - uid: g12-history-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'In which country did the Industrial Revolution begin?'
+    options:
+      A: 'Britain'
+      B: 'France'
+      C: 'Germany'
+      D: 'Italy'
+    answer: A
+    explanation: 'It began in Britain in the late 18th century.'
+
+  - uid: g12-history-1-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement best describes capitalism?'
+    options:
+      A: 'The state owns all land and factories.'
+      B: 'Goods are shared equally without money.'
+      C: 'Businesses are privately owned and produce for profit in competitive markets.'
+      D: 'Only the church can own property.'
+    answer: C
+    explanation: 'Private ownership, profit and markets are the core features.'
+
+  - uid: g12-history-1-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Who wrote "The Wealth of Nations" (1776), which argued for free markets?'
+    options:
+      A: 'Karl Marx'
+      B: 'Otto von Bismarck'
+      C: 'Giuseppe Mazzini'
+      D: 'Adam Smith'
+    answer: D
+    explanation: 'Adam Smith is often called the father of modern economics.'
+
+  - uid: g12-history-1-1-q005
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did Marx and Engels publish "The Communist Manifesto"?'
+    answer: {value: 1848, tolerance: 0}
+    explanation: 'It appeared in 1848, the same year as revolutions across Europe.'
+
+  - uid: g12-history-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Who improved the steam engine in the 18th century, making it far more efficient for industry?'
+    options:
+      A: 'James Watt'
+      B: 'Adam Smith'
+      C: 'Karl Marx'
+      D: 'Charles Darwin'
+    answer: A
+    explanation: 'Watt''s improvements made steam power practical for factories and mines.'
+
+  - uid: g12-history-1-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which was a major social effect of the Industrial Revolution?'
+    options:
+      A: 'Towns emptied as people moved to villages.'
+      B: 'Rapid growth of industrial towns and a new working class'
+      C: 'The end of all trade'
+      D: 'The disappearance of factories'
+    answer: B
+    explanation: 'Workers moved to factory towns, often living in crowded conditions.'
+
+  - uid: g12-history-1-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Italian leader led the "Red Shirts" in the conquest of southern Italy?'
+    options:
+      A: 'Cavour'
+      B: 'Mazzini'
+      C: 'Metternich'
+      D: 'Garibaldi'
+    answer: D
+    explanation: 'Garibaldi''s volunteers took Sicily and Naples in 1860.'
+
+  - uid: g12-history-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statesman of Piedmont-Sardinia used diplomacy and alliances to lead Italian unification?'
+    options:
+      A: 'Cavour'
+      B: 'Garibaldi'
+      C: 'Bismarck'
+      D: 'Napoleon III'
+    answer: A
+    explanation: 'Count Camillo di Cavour gained French help against Austria.'
+
+  - uid: g12-history-1-1-q010
+    type: numeric
+    difficulty: 2
+    stem: 'In which year was the Kingdom of Italy proclaimed?'
+    answer: {value: 1861, tolerance: 0}
+    explanation: 'The Kingdom of Italy was proclaimed in 1861; Rome was added in 1870.'
+
+  - uid: g12-history-1-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policy is Otto von Bismarck famous for?'
+    options:
+      A: 'Peaceful negotiation only'
+      B: 'Free trade with no army'
+      C: '"Blood and iron" – using military power to unify Germany'
+      D: 'Giving up all Prussian land'
+    answer: C
+    explanation: 'He believed great questions were decided by "blood and iron", not speeches.'
+
+  - uid: g12-history-1-1-q012
+    type: ordering
+    difficulty: 2
+    stem: 'Put Prussia''s wars of German unification in order.'
+    items:
+      A: 'War with Austria'
+      B: 'War with France'
+      C: 'War with Denmark'
+    answer: [C, A, B]
+    explanation: 'Denmark (1864), Austria (1866), France (1870–71).'
+
+  - uid: g12-history-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Where was the German Empire proclaimed in January 1871?'
+    options:
+      A: 'Berlin'
+      B: 'The Hall of Mirrors at Versailles, France'
+      C: 'Vienna'
+      D: 'Rome'
+    answer: B
+    explanation: 'It was proclaimed at Versailles after Prussia''s victory over France.'
+
+  - uid: g12-history-1-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'Nationalism is the belief that a people sharing a language, culture and history should have their own state.'
+    answer: true
+    explanation: 'This idea drove the unification of Italy and Germany.'
+
+  - uid: g12-history-1-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'The Congress of Vienna aimed mainly to spread revolutionary and democratic ideas across Europe.'
+    answer: false
+    explanation: 'It aimed to restore monarchies, keep order and maintain a balance of power.'
+
+  - uid: g12-history-1-1-q016
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which were members of the Triple Alliance formed in 1882? Choose all that apply.'
+    options:
+      A: 'Germany'
+      B: 'Austria-Hungary'
+      C: 'Italy'
+      D: 'Britain'
+    answer: [A, B, C]
+    explanation: 'Britain joined France and Russia in the Triple Entente.'
+
+  - uid: g12-history-1-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which three countries formed the Triple Entente?'
+    options:
+      A: 'Germany, Austria-Hungary and Italy'
+      B: 'Britain, Germany and Russia'
+      C: 'France, Italy and Spain'
+      D: 'Britain, France and Russia'
+    answer: D
+    explanation: 'The Entente was completed in 1907.'
+
+  - uid: g12-history-1-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Why did industrial nations want colonies in the late 19th century?'
+    options:
+      A: 'To get raw materials and new markets for their goods'
+      B: 'To stop all trade'
+      C: 'To reduce their armies'
+      D: 'Because they had no factories'
+    answer: A
+    explanation: 'Factories needed cotton, rubber and minerals, and buyers for products.'
+
+  - uid: g12-history-1-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Italian thinker founded the "Young Italy" movement to spread nationalist ideas?'
+    options:
+      A: 'Garibaldi'
+      B: 'Victor Emmanuel II'
+      C: 'Mazzini'
+      D: 'Cavour'
+    answer: C
+    explanation: 'Giuseppe Mazzini inspired many with his call for a united, republican Italy.'
+
+  - uid: g12-history-1-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The economic idea that governments should not interfere in business is called ________.'
+    answer: [laissez-faire, laissez faire, laisser-faire]
+    explanation: 'It is French for "let (people) do".'
+
+  - uid: g12-history-1-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'The Austrian statesman who led the Congress of Vienna and opposed liberal revolutions was ________.'
+    answer: [Metternich, Klemens von Metternich, Prince Metternich]
+    explanation: 'He dominated European diplomacy until 1848.'
+
+  - uid: g12-history-1-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'Revolutions broke out in many European countries in 1848.'
+    answer: true
+    explanation: 'The "Springtime of Peoples" affected France, the German states, the Austrian Empire and Italy.'
+
+  - uid: g12-history-1-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each person with their role.'
+    left:
+      L1: 'Bismarck'
+      L2: 'Garibaldi'
+      L3: 'Karl Marx'
+    right:
+      R1: 'Led volunteers who conquered southern Italy'
+      R2: 'Co-wrote "The Communist Manifesto"'
+      R3: 'Chancellor who unified Germany'
+      R4: 'Wrote "The Wealth of Nations"'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '"The Wealth of Nations" was written by Adam Smith.'
+
+  - uid: g12-history-1-1-q024
+    type: single_choice
+    difficulty: 3
+    stem: 'Why did the growth of a factory working class encourage socialist ideas?'
+    options:
+      A: 'Workers became very rich.'
+      B: 'Factories were owned by workers.'
+      C: 'There were no cities.'
+      D: 'Harsh conditions led many to argue that workers should share in ownership and profits.'
+    answer: D
+    explanation: 'Long hours, low wages and poor housing led to calls for reform and for common ownership.'
+
+  - uid: g12-history-1-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'What was the main purpose of early trade unions?'
+    options:
+      A: 'To protect workers'' wages and conditions by acting together'
+      B: 'To own colonies'
+      C: 'To unify Germany'
+      D: 'To stop the use of money'
+    answer: A
+    explanation: 'Workers joined together to bargain with employers.'
+
+  - uid: g12-history-1-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which invention transformed land transport during the Industrial Revolution?'
+    options:
+      A: 'The aeroplane'
+      B: 'The steam railway locomotive'
+      C: 'The motor car'
+      D: 'The bicycle'
+    answer: B
+    explanation: 'Railways spread across Britain and Europe from the 1830s.'
+
+  - uid: g12-history-1-1-q027
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in the order they happened.'
+    items:
+      A: 'Proclamation of the German Empire'
+      B: 'Congress of Vienna ends'
+      C: 'Publication of "The Communist Manifesto"'
+      D: 'Proclamation of the Kingdom of Italy'
+    answer: [B, C, D, A]
+    explanation: '1815, 1848, 1861, 1871.'
+
+  - uid: g12-history-1-1-q028
+    type: single_choice
+    difficulty: 3
+    stem: 'How did nationalism threaten multinational empires such as Austria-Hungary?'
+    options:
+      A: 'It made all peoples want to stay under one ruler.'
+      B: 'It had no effect on empires.'
+      C: 'Different peoples within the empire demanded their own states or rights.'
+      D: 'It reduced the use of different languages.'
+    answer: C
+    explanation: 'Czechs, Hungarians, Serbs and others sought self-rule, weakening the empire.'
+
+  - uid: g12-history-1-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country did Prussia defeat in 1870–71, completing German unification?'
+    options:
+      A: 'Austria'
+      B: 'Denmark'
+      C: 'Russia'
+      D: 'France'
+    answer: D
+    explanation: 'The Franco-Prussian War brought the southern German states into the new empire.'
+
+  - uid: g12-history-1-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'What does "balance of power" mean in international relations?'
+    options:
+      A: 'Keeping strength spread among states so that none can dominate the others'
+      B: 'One country ruling the world'
+      C: 'Equal numbers of men and women in parliament'
+      D: 'Sharing electricity between countries'
+    answer: A
+    explanation: 'It was a key aim of the Congress of Vienna.'
