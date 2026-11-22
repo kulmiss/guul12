@@ -57,6 +57,7 @@ class ProgressScreen extends ConsumerWidget {
     final l = context.l10n;
     final mastery = ref.watch(masteryProvider).value ?? const <int, ChapterMastery>{};
     final engagement = ref.watch(engagementProvider).value;
+    final leaderboardOn = ref.watch(configProvider).value?.feature('leaderboard') ?? false;
     final catalog = ref.watch(catalogProvider).value ?? Catalog.empty;
     final stream = ref.watch(profileProvider).value?.effectiveStream;
 
@@ -83,6 +84,15 @@ class ProgressScreen extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (engagement != null) StreakCard(view: engagement),
+                if (leaderboardOn)
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                    child: OutlinedButton.icon(
+                      icon: const Icon(Icons.emoji_events_outlined),
+                      label: Text(l.leaderboardOpen),
+                      onPressed: () => context.push('/progress/leaderboard'),
+                    ),
+                  ),
                 if (answered == 0)
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),

@@ -19,6 +19,16 @@ class FakeServer {
   final List<Map<String, Object?>> changes = [];
   final List<Map<String, Object?>> receivedAttempts = [];
 
+  /// Feature switches sent in /config (missing = on).
+  final Map<String, Object?> features = {'battles': true};
+
+  /// What GET /leaderboard returns.
+  Map<String, Object?> leaderboard = {
+    'week_start': '2026-11-16',
+    'top': <Object?>[],
+    'me': {'has_nickname': false, 'xp': 0, 'rank': null},
+  };
+
   /// Nicknames the server's word filter refuses (422).
   final refusedNicknames = <String>{};
 
@@ -245,10 +255,12 @@ class FakeServer {
             'maintenance_message': null,
             'paper_max_score': 100,
           },
-          'features': {'battles': true},
+          'features': features,
           'premium': false,
           'show_ads': true,
         });
+      case ('GET', 'leaderboard'):
+        return json(leaderboard);
       case ('GET', 'me'):
         return json({'user': profile});
       case ('PATCH', 'me'):

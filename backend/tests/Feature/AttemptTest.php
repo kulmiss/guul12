@@ -8,6 +8,8 @@ use App\Models\Question;
 use App\Models\User;
 use App\Services\Settings;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
@@ -60,6 +62,24 @@ class AttemptTest extends TestCase
         $this->assertSame(1, $q1->times_correct);
         $this->assertSame(1, $q2->refresh()->times_answered);
         $this->assertSame(0, $q2->times_correct);
+    }
+
+    public function test_times_with_an_offset_are_stored_in_utc(): void
+    {
+        Carbon::setTestNow(Carbon::parse('2026-11-25 10:00:00', 'UTC'));
+        $q = Question::factory()->withOptions()->create();
+        $payload = [
+            ...$this->payload([['question_id' => $q->id, 'version' => 1, 'response' => 'B', 'time_ms' => 5000]]),
+            'started_at' => '2026-11-25T12:30:00+03:00',
+            'finished_at' => '2026-11-25T12:45:00+03:00',
+        ];
+        $this->postJson('/api/v1/attempts', $payload)->assertCreated();
+        Carbon::setTestNow();
+
+        $row = DB::table('attempts')->where('client_uuid', $payload['client_uuid'])->first();
+        $this->assertNotNull($row);
+        $this->assertSame('2026-11-25 09:30:00', (string) $row->started_at);
+        $this->assertSame('2026-11-25 09:45:00', (string) $row->finished_at);
     }
 
     public function test_uploading_the_same_attempt_twice_counts_once(): void

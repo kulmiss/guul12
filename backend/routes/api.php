@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\V1\BookmarkController;
 use App\Http\Controllers\Api\V1\ConfigController;
 use App\Http\Controllers\Api\V1\ContentController;
 use App\Http\Controllers\Api\V1\HistoryController;
+use App\Http\Controllers\Api\V1\LeaderboardController;
 use App\Http\Controllers\Api\V1\MeController;
 use App\Http\Controllers\Api\V1\MockController;
 use App\Http\Controllers\Api\V1\RandomExamController;
@@ -36,6 +37,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::post('attempts', [AttemptController::class, 'store'])->name('attempts.store');
         Route::get('attempts/{clientUuid}', [AttemptController::class, 'show'])->whereUuid('clientUuid')->name('attempts.show');
         Route::get('history', HistoryController::class)->name('history');
+        Route::get('leaderboard', LeaderboardController::class)->name('leaderboard');
 
         Route::get('bookmarks', [BookmarkController::class, 'index'])->name('bookmarks.index');
         Route::put('bookmarks/{question}', [BookmarkController::class, 'store'])->whereNumber('question')->name('bookmarks.store');

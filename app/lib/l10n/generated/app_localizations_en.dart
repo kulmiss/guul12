@@ -1261,4 +1261,41 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get identityNone => 'Choose a nickname';
+
+  @override
+  String get leaderboardTitle => 'Weekly leaderboard';
+
+  @override
+  String leaderboardWeek(String date) {
+    return 'Week of $date · resets every Monday';
+  }
+
+  @override
+  String leaderboardMyRank(int rank) {
+    return 'You are number $rank this week';
+  }
+
+  @override
+  String get leaderboardNoPoints => 'Answer questions this week to get on the board.';
+
+  @override
+  String get leaderboardNeedNickname =>
+      'Choose a nickname to appear on the board. Only your nickname and avatar are shown.';
+
+  @override
+  String get leaderboardEmpty => 'Nobody has points this week yet. Be the first!';
+
+  @override
+  String get leaderboardOffline => 'The leaderboard needs the internet.';
+
+  @override
+  String leaderboardRank(int rank) {
+    return '#$rank';
+  }
+
+  @override
+  String get leaderboardYou => 'You';
+
+  @override
+  String get leaderboardOpen => 'See the weekly leaderboard';
 }

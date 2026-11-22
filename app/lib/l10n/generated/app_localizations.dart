@@ -2065,6 +2065,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Choose a nickname'**
   String get identityNone;
+
+  /// Screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly leaderboard'**
+  String get leaderboardTitle;
+
+  /// Week line
+  ///
+  /// In en, this message translates to:
+  /// **'Week of {date} · resets every Monday'**
+  String leaderboardWeek(String date);
+
+  /// My rank
+  ///
+  /// In en, this message translates to:
+  /// **'You are number {rank} this week'**
+  String leaderboardMyRank(int rank);
+
+  /// No points yet
+  ///
+  /// In en, this message translates to:
+  /// **'Answer questions this week to get on the board.'**
+  String get leaderboardNoPoints;
+
+  /// No nickname
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a nickname to appear on the board. Only your nickname and avatar are shown.'**
+  String get leaderboardNeedNickname;
+
+  /// Empty list
+  ///
+  /// In en, this message translates to:
+  /// **'Nobody has points this week yet. Be the first!'**
+  String get leaderboardEmpty;
+
+  /// Offline
+  ///
+  /// In en, this message translates to:
+  /// **'The leaderboard needs the internet.'**
+  String get leaderboardOffline;
+
+  /// Rank number
+  ///
+  /// In en, this message translates to:
+  /// **'#{rank}'**
+  String leaderboardRank(int rank);
+
+  /// Marks my row
+  ///
+  /// In en, this message translates to:
+  /// **'You'**
+  String get leaderboardYou;
+
+  /// Progress entry
+  ///
+  /// In en, this message translates to:
+  /// **'See the weekly leaderboard'**
+  String get leaderboardOpen;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

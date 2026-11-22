@@ -1706,5 +1706,60 @@
   "identityNone": "Choose a nickname",
   "@identityNone": {
     "description": "Me screen when no nickname"
+  },
+  "leaderboardTitle": "Weekly leaderboard",
+  "@leaderboardTitle": {
+    "description": "Screen title"
+  },
+  "leaderboardWeek": "Week of {date} · resets every Monday",
+  "@leaderboardWeek": {
+    "description": "Week line",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "leaderboardMyRank": "You are number {rank} this week",
+  "@leaderboardMyRank": {
+    "description": "My rank",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "leaderboardNoPoints": "Answer questions this week to get on the board.",
+  "@leaderboardNoPoints": {
+    "description": "No points yet"
+  },
+  "leaderboardNeedNickname": "Choose a nickname to appear on the board. Only your nickname and avatar are shown.",
+  "@leaderboardNeedNickname": {
+    "description": "No nickname"
+  },
+  "leaderboardEmpty": "Nobody has points this week yet. Be the first!",
+  "@leaderboardEmpty": {
+    "description": "Empty list"
+  },
+  "leaderboardOffline": "The leaderboard needs the internet.",
+  "@leaderboardOffline": {
+    "description": "Offline"
+  },
+  "leaderboardRank": "#{rank}",
+  "@leaderboardRank": {
+    "description": "Rank number",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "leaderboardYou": "You",
+  "@leaderboardYou": {
+    "description": "Marks my row"
+  },
+  "leaderboardOpen": "See the weekly leaderboard",
+  "@leaderboardOpen": {
+    "description": "Progress entry"
   }
 }

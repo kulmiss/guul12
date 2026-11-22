@@ -70,6 +70,27 @@ String _flutterRoot() {
 FakeServer richServer() {
   final s = FakeServer();
   onboardedProfile(s);
+  s.leaderboard = {
+    'week_start': '2026-11-16',
+    'top': [
+      for (final (i, (nick, xp, style)) in [
+        ('Hodan', 1240, 'lorelei-neutral'),
+        ('Abdi_12', 1180, 'notionists-neutral'),
+        ('Sara', 1180, 'thumbs'),
+        ('Mohamed A.', 960, 'notionists-neutral'),
+        ('Ayan', 610, 'thumbs'),
+      ].indexed)
+        {
+          'rank': i == 2 ? 2 : i + 1,
+          'nickname': nick,
+          'avatar_style': style,
+          'avatar_seed': 'a0${i + 2}',
+          'xp': xp,
+          'is_me': i == 4,
+        },
+    ],
+    'me': {'has_nickname': true, 'xp': 610, 'rank': 5},
+  };
   return s;
 }
 
@@ -96,6 +117,10 @@ void main() {
       await tapOn(tester, find.byKey(const ValueKey('check')));
     },
     'me': (tester) async => tapOn(tester, find.text('Me')),
+    'leaderboard': (tester) async {
+      await tapOn(tester, find.text('Progress').last);
+      await tapOn(tester, find.text('See the weekly leaderboard'));
+    },
     'identity': (tester) async {
       await tapOn(tester, find.text('Me'));
       await tapOn(tester, find.text('Choose a nickname'));

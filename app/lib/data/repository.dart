@@ -491,6 +491,13 @@ class Repository {
       (await db.examResults()).map(ExamRecord.fromJson).toList();
 
   /// Asks the server again, e.g. for "better than X%" once more students took the mock.
+  /// This week's leaderboard (online only). Offline work is uploaded first so the student's own
+  /// points are up to date.
+  Future<WeeklyLeaderboard> leaderboard({String? appVersion}) async {
+    await tryUploadAttempts(appVersion: appVersion);
+    return WeeklyLeaderboard.fromJson(await _authed(() => api.get('leaderboard')));
+  }
+
   Future<ExamRecord?> refreshExamResult(String clientUuid) async {
     final json = await _authed(() => api.get('attempts/$clientUuid'));
     await _keepExamDetails(clientUuid, json);

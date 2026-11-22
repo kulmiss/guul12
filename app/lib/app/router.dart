@@ -18,6 +18,7 @@ import '../ui/screens/identity_screen.dart';
 import '../ui/screens/me_screen.dart';
 import '../ui/screens/onboarding_screen.dart';
 import '../ui/screens/study_screens.dart';
+import '../ui/social/leaderboard_screen.dart';
 import '../ui/widgets/common.dart';
 import 'practice_set.dart';
 import 'providers.dart';
@@ -161,7 +162,15 @@ final routerProvider = Provider<GoRouter>((ref) {
             routes: [GoRoute(path: '/exams', builder: (_, _) => const ExamsScreen())],
           ),
           StatefulShellBranch(
-            routes: [GoRoute(path: '/progress', builder: (_, _) => const ProgressScreen())],
+            routes: [
+              GoRoute(
+                path: '/progress',
+                builder: (_, _) => const ProgressScreen(),
+                routes: [
+                  GoRoute(path: 'leaderboard', builder: (_, _) => const LeaderboardScreen()),
+                ],
+              ),
+            ],
           ),
           StatefulShellBranch(
             routes: [

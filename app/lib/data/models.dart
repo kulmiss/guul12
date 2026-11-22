@@ -610,3 +610,61 @@ class MockHeader {
   final bool locked;
   final String contentHash;
 }
+
+/// One row of the weekly leaderboard: only nickname, avatar and points are ever shown.
+class LeaderboardEntry {
+  const LeaderboardEntry({
+    required this.rank,
+    required this.nickname,
+    required this.avatarStyle,
+    required this.avatarSeed,
+    required this.xp,
+    required this.isMe,
+  });
+
+  factory LeaderboardEntry.fromJson(Map<String, Object?> json) => LeaderboardEntry(
+    rank: asInt(json['rank']),
+    nickname: asString(json['nickname']),
+    avatarStyle: asStringOrNull(json['avatar_style']),
+    avatarSeed: asStringOrNull(json['avatar_seed']),
+    xp: asInt(json['xp']),
+    isMe: asBool(json['is_me']),
+  );
+
+  final int rank;
+  final String nickname;
+  final String? avatarStyle;
+  final String? avatarSeed;
+  final int xp;
+  final bool isMe;
+}
+
+class WeeklyLeaderboard {
+  const WeeklyLeaderboard({
+    required this.weekStart,
+    required this.top,
+    required this.myXp,
+    required this.myRank,
+    required this.hasNickname,
+  });
+
+  factory WeeklyLeaderboard.fromJson(Map<String, Object?> json) {
+    final me = asMap(json['me']);
+    return WeeklyLeaderboard(
+      weekStart: DateTime.parse(asString(json['week_start'])),
+      top: asList(json['top']).map((e) => LeaderboardEntry.fromJson(asMap(e))).toList(),
+      myXp: asInt(me['xp']),
+      myRank: asIntOrNull(me['rank']),
+      hasNickname: asBool(me['has_nickname']),
+    );
+  }
+
+  /// Monday of this week (Addis Ababa time).
+  final DateTime weekStart;
+  final List<LeaderboardEntry> top;
+  final int myXp;
+
+  /// Null without a nickname or before any points this week.
+  final int? myRank;
+  final bool hasNickname;
+}

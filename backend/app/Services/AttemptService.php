@@ -77,8 +77,8 @@ class AttemptService
                 'mode' => PracticeMode::from($data['mode']),
                 'chapter_id' => $data['chapter_id'] ?? null,
                 'mock_id' => $data['mock_id'] ?? null,
-                'started_at' => Carbon::parse($data['started_at']),
-                'finished_at' => Carbon::parse($data['finished_at']),
+                'started_at' => Carbon::parse($data['started_at'])->utc(),
+                'finished_at' => Carbon::parse($data['finished_at'])->utc(),
                 'total' => 0,
                 'correct' => 0,
             ]);
