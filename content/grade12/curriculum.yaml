@@ -102,6 +102,7 @@ subjects:
       file: physics/u4-c1.yaml
     - number: 2
       title: Electromagnetic induction and transformers
+      file: physics/u4-c2.yaml
   - number: 5
     title: Basics of Electronics
     chapters:

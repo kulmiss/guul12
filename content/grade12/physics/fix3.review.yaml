@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-4-1-q003: {hash: '6e6e6e7e5d5e6e45569b34ac2bdab6e94c75cf3524c4402336c7dae73e74e9f1', answer: C}
+  g12-physics-4-1-q018: {hash: '39b17fda4fb33647de0b1de3e004d77436264086e0480c094f4da0de2bdff2b5', answer: [A, B, C]}

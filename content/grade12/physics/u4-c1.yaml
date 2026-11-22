@@ -81,7 +81,7 @@ questions:
   - uid: g12-physics-4-1-q003
     type: single_choice
     difficulty: 1
-    stem: 'What is the SI unit of magnetic field strength $B$?'
+    stem: 'What is the SI unit of the magnetic field $B$ (also called magnetic flux density)?'
     options:
       A: 'Weber'
       B: 'Henry'
@@ -246,9 +246,9 @@ questions:
       A: 'Increasing the current'
       B: 'Adding more turns of wire'
       C: 'Putting a soft iron core inside the coil'
-      D: 'Using a thinner coil of the same number of turns and the same current'
+      D: 'Reversing the direction of the current'
     answer: [A, B, C]
-    explanation: 'More current, more turns and an iron core all increase the field. The thickness of the coil, on its own, does not.'
+    explanation: 'More current, more turns and an iron core all increase the field. Reversing the current only swaps the poles; the strength stays the same.'
 
   - uid: g12-physics-4-1-q019
     type: single_choice

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-4-1-q001: {hash: '80b4e804b9ae6132591abad5eb4cf53f9514354549fba1bbb5868ca57f01b9e7', answer: B}
+  g12-physics-4-1-q002: {hash: 'b8f5498e1e9b75d5591de3964c04c21bc7fa666d930c4ad040aa5c86df73481e', answer: A}
+  g12-physics-4-1-q003: {hash: '5eb1344f7273b59b0dfef92edd54fa81d0b129e7fd42d7deab425081565b4e1a', answer: C, note: 'Minor wording: strictly B is "magnetic flux density" (or "magnetic field"); "magnetic field strength" is often reserved for H (unit A/m). Suggest "magnetic field B" or "magnetic flux density B". Tesla is still the only sensible option.'}
+  g12-physics-4-1-q004: {hash: '1aa30cef32e45144946abbb5b6dc621f3b58c0a15b83f2715a19fefd4c2c1b45', answer: D}
+  g12-physics-4-1-q005: {hash: 'c3170babd47411d1579d98a097092d869754013cae3b9e08d371bc60d4394edc', answer: [A, C, D]}
+  g12-physics-4-1-q006: {hash: '5b8d9269c520cc4ad062db5d7170de18d07ade6cd7a9d10d8425516b439b32ac', answer: A}
+  g12-physics-4-1-q007: {hash: '36f7362576669fdd06a0c51c446d3a84a868b6fea7fdb1852edeec18bf4c8b04', answer: B}
+  g12-physics-4-1-q008: {hash: 'fe9aea40fb97105296aaec2af6f31dccdd69bc9ba09e9744ed06cd7967b5f7eb', answer: true}
+  g12-physics-4-1-q009: {hash: '7b39026313dbcae02cbf7babaa1cd152eaf8f038f4b6c03c2ab7805b6143fe01', answer: C}
+  g12-physics-4-1-q010: {hash: '98db05d8d6ff818ae31c0ad7345d1135a3f46cba67b218eace5531de34b2d2c0', answer: 0.5}
+  g12-physics-4-1-q011: {hash: 'a7e49a72966aca0c507dc4b9812d4cf1ae5a69a0cc97ad4b64c27d2b074c4da8', answer: D}
+  g12-physics-4-1-q012: {hash: '2f3e66eaff4dbd61d5a94cdbc884aaff297e154669f92851e57e939e6e08c537', answer: A}
+  g12-physics-4-1-q013: {hash: '187d64b465f8aa29ea96c6208999055367a617e67d0fed33c15491f365a3bc25', answer: false}
+  g12-physics-4-1-q014: {hash: 'f99851a22a81142eefe8cc05d59e24033fd44e4c04aef7d60b81069285382c73', answer: 3}
+  g12-physics-4-1-q015: {hash: 'ed5516a5f4037f154b25a45862c541a88d4eef99fb46decb4135acd6ea97bb2e', answer: C}
+  g12-physics-4-1-q016: {hash: '3a849ef33b450f795f5d65260bb5102fe6b8249d3f087410e6a51b3256316e5a', answer: D}
+  g12-physics-4-1-q017: {hash: 'fa38b2acdc619d49fe1f457d3d22537dcaf0a0c256c7d5517bd79a8864852165', answer: B}
+  g12-physics-4-1-q018: {hash: '5599fc31ac8e47dd3342f298b4c0b9800356b5207687e9ecf3d4f046c01396ad', answer: [A, B, C], note: 'Option D is ambiguous. "Thinner coil" could mean thinner wire (no effect at the same current) or a coil of smaller radius; for a short coil, a smaller radius gives a STRONGER field at the centre (B = mu0 N I / 2R), so D could be argued correct. Suggest rewording D clearly (e.g. "Using thinner wire, with the same number of turns and the same current") or replacing it with an unambiguous distractor such as "Reversing the current".'}
+  g12-physics-4-1-q019: {hash: 'c5e0c0ac8a31e585f8d926bd08e00fef121137449fd3153bc650a1e4d7ec3559', answer: B}
+  g12-physics-4-1-q020: {hash: 'c0b68f42f941c70b0bd1ba0bc21280b3d8c2b877943f0fc37522fd429ffe1967', answer: A}
+  g12-physics-4-1-q021: {hash: '68279b58341c71a705f67b4c31120d9f290cb1acddba1e54cb0cee6d6291aa75', answer: D}
+  g12-physics-4-1-q022: {hash: '999f841baa7dfc2956b5ac580e6211fef51946ca6bd9bff56f6e0fe5747f850a', answer: C}
+  g12-physics-4-1-q023: {hash: '0438ce18ea9469599b6a0ff42654a9a4bcbe03d02799644e1bbf75881dff8ac0', answer: D}
+  g12-physics-4-1-q024: {hash: '6a36d456ddc177af5a61943c434401cfe7b610930a96a2e7075fba5919fcd663', answer: domains}
+  g12-physics-4-1-q025: {hash: '8ea3041bd836dfc0ce08bb7510a9f324a494d7bad4b932d14bce252c50c0a926', answer: electromagnet}
+  g12-physics-4-1-q026: {hash: '16e25aa681c737c838c96d417717d28bf8ca80eae15c15070a00a6e6f303ec23', answer: true}
+  g12-physics-4-1-q027: {hash: 'df895bc9c86df9b243764a3694feb13fba830c98ea1db127de81ef76d3e3df8c', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-physics-4-1-q028: {hash: '7623b0c09e3e209ba69ee0cb256e6331bc5ebe813a8bd1dad061c85476f2eb23', answer: [B, D, A, C]}
+  g12-physics-4-1-q029: {hash: 'cf334df4b6643a83bfa04289c03aa59de772da36938838737934f50f4c85c473', answer: B}
+  g12-physics-4-1-q030: {hash: '3027f6b7240dddd6d8a5808ca63dc02cee7597c6c406104a52562a5c5f93d832', answer: A}
