@@ -108,8 +108,10 @@ subjects:
     chapters:
     - number: 1
       title: Semiconductors, diodes and rectification
+      file: physics/u5-c1.yaml
     - number: 2
       title: Transistors, integrated circuits and logic gates
+      file: physics/u5-c2.yaml
 - code: chemistry
   units:
   - number: 1

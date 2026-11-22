@@ -1,0 +1,377 @@
+summary:
+  key_points:
+    - 'A bipolar junction transistor (BJT) has three layers, n-p-n or p-n-p, and three terminals: emitter, base and collector.'
+    - 'A small base current $I_B$ controls a much larger collector current $I_C$. The currents obey $I_E = I_B + I_C$, and the current gain is $\beta = \frac{I_C}{I_B}$.'
+    - 'As a switch: with no base current the transistor is OFF (almost no $I_C$); with enough base current it is fully ON. As an amplifier: a small change in $I_B$ gives a large change in $I_C$.'
+    - 'An integrated circuit (IC, "chip") holds many transistors, resistors and other parts on one small piece of silicon. ICs made computers and phones small and cheap.'
+    - 'Digital circuits use two levels: 1 (high, on) and 0 (low, off). Logic gates combine inputs to give an output, shown in a truth table.'
+    - 'AND gives 1 only if all inputs are 1. OR gives 1 if at least one input is 1. NOT reverses its single input. NAND is AND followed by NOT; NOR is OR followed by NOT. XOR gives 1 when the two inputs are different.'
+    - 'A truth table for $n$ inputs has $2^n$ rows. NAND and NOR are "universal": any other gate can be built from them alone.'
+  formulas:
+    - label: Transistor currents
+      latex: 'I_E = I_B + I_C'
+    - label: Current gain
+      latex: '\beta = \frac{I_C}{I_B}'
+    - label: Rows in a truth table
+      latex: '\text{rows} = 2^n'
+
+solved_exercises:
+  - uid: g12-physics-5-2-se01
+    problem: 'A transistor has a current gain of 100. The base current is 0.05 mA. Find the collector and emitter currents.'
+    steps:
+      - '$I_C = \beta I_B = 100 \times 0.05 = 5$ mA.'
+      - '$I_E = I_B + I_C = 0.05 + 5 = 5.05$ mA.'
+    answer: '$I_C = 5$ mA, $I_E = 5.05$ mA'
+  - uid: g12-physics-5-2-se02
+    problem: 'Write the truth table of a NAND gate with inputs A and B.'
+    steps:
+      - 'First find A AND B: it is 1 only for A = 1, B = 1.'
+      - 'NOT reverses it: the NAND output is 0 only for A = 1, B = 1, and 1 for the other three rows (00, 01, 10).'
+    answer: '00 → 1, 01 → 1, 10 → 1, 11 → 0'
+  - uid: g12-physics-5-2-se03
+    problem: 'A security light should turn on only when it is dark AND movement is detected. Which gate is needed?'
+    steps:
+      - 'The output must be 1 only when both conditions are 1.'
+      - 'That is the definition of an AND gate.'
+    answer: 'An AND gate'
+
+flashcards:
+  - {uid: g12-physics-5-2-fc01, term: Transistor, definition: 'Three-terminal semiconductor device used as a switch or amplifier.'}
+  - {uid: g12-physics-5-2-fc02, term: 'Emitter, base, collector', definition: 'The three terminals of a bipolar transistor.'}
+  - {uid: g12-physics-5-2-fc03, term: Current gain, definition: '$\beta = \frac{I_C}{I_B}$, often about 100.'}
+  - {uid: g12-physics-5-2-fc04, term: Integrated circuit, definition: 'Many electronic components built on one silicon chip.'}
+  - {uid: g12-physics-5-2-fc05, term: AND gate, definition: 'Output 1 only when all inputs are 1.'}
+  - {uid: g12-physics-5-2-fc06, term: OR gate, definition: 'Output 1 when at least one input is 1.'}
+  - {uid: g12-physics-5-2-fc07, term: NOT gate, definition: 'Output is the opposite of its single input.'}
+  - {uid: g12-physics-5-2-fc08, term: XOR gate, definition: 'Output 1 when the two inputs are different.'}
+  - {uid: g12-physics-5-2-fc09, term: Truth table, definition: 'Table listing the output for every possible set of inputs.'}
+
+questions:
+  - uid: g12-physics-5-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What are the three terminals of a bipolar junction transistor?'
+    options:
+      A: 'Anode, cathode and grid'
+      B: 'Positive, negative and earth'
+      C: 'Emitter, base and collector'
+      D: 'Input, output and power'
+    answer: C
+    explanation: 'A BJT has an emitter, a base and a collector.'
+
+  - uid: g12-physics-5-2-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'A transistor has base current 0.1 mA and collector current 4.9 mA. What is the emitter current?'
+    options:
+      A: '4.8 mA'
+      B: '5.0 mA'
+      C: '0.49 mA'
+      D: '49 mA'
+    answer: B
+    explanation: '$I_E = I_B + I_C = 0.1 + 4.9 = 5.0$ mA.'
+
+  - uid: g12-physics-5-2-q003
+    type: numeric
+    difficulty: 2
+    stem: 'A transistor''s collector current is 10 mA when its base current is 0.1 mA. What is its current gain $\beta$?'
+    answer: {value: 100, tolerance: 0}
+    explanation: '$\beta = \frac{I_C}{I_B} = \frac{10}{0.1} = 100$. It has no unit.'
+
+  - uid: g12-physics-5-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'A transistor has $\beta = 200$ and a base current of 20 μA. What is the collector current?'
+    options:
+      A: '4 mA'
+      B: '10 mA'
+      C: '0.1 mA'
+      D: '220 μA'
+    answer: A
+    explanation: '$I_C = \beta I_B = 200 \times 20\ \mu\text{A} = 4000\ \mu\text{A} = 4$ mA.'
+
+  - uid: g12-physics-5-2-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'Which are the two main uses of a transistor?'
+    options:
+      A: 'Storing charge and making light'
+      B: 'Measuring current and voltage'
+      C: 'Changing AC to DC and stepping up voltage'
+      D: 'Switching and amplifying'
+    answer: D
+    explanation: 'A small base current can turn a large collector current on and off (switch) or control it smoothly (amplifier).'
+
+  - uid: g12-physics-5-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'In a transistor, a small base current controls a much larger collector current.'
+    answer: true
+    explanation: 'This is why the current gain $\beta$ is usually large, often around 100.'
+
+  - uid: g12-physics-5-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'A transistor is used as a switch. When there is no base current, the transistor is:'
+    options:
+      A: 'Fully on, with a large collector current'
+      B: 'Off, with almost no collector current'
+      C: 'Broken'
+      D: 'Acting as a battery'
+    answer: B
+    explanation: 'Without base current the collector current is almost zero, like an open switch.'
+
+  - uid: g12-physics-5-2-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'What is an integrated circuit (IC)?'
+    options:
+      A: 'A single large resistor'
+      B: 'A type of battery'
+      C: 'Many components such as transistors built together on one small silicon chip'
+      D: 'A coil of copper wire'
+    answer: C
+    explanation: 'One chip can hold millions or even billions of transistors.'
+
+  - uid: g12-physics-5-2-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'An AND gate gives an output of 1 when:'
+    options:
+      A: 'Both inputs are 1'
+      B: 'At least one input is 1'
+      C: 'Both inputs are 0'
+      D: 'The inputs are different'
+    answer: A
+    explanation: 'AND is 1 only when every input is 1.'
+
+  - uid: g12-physics-5-2-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'An OR gate has inputs A = 0 and B = 1. What is the output?'
+    options:
+      A: '0'
+      B: 'It depends on the previous output.'
+      C: '2'
+      D: '1'
+    answer: D
+    explanation: 'OR gives 1 if at least one input is 1.'
+
+  - uid: g12-physics-5-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'The input of a NOT gate is 1. What is the output?'
+    options:
+      A: '1'
+      B: '0'
+      C: '2'
+      D: 'No output'
+    answer: B
+    explanation: 'A NOT gate (inverter) gives the opposite of its input.'
+
+  - uid: g12-physics-5-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'For which inputs does a NAND gate give 0?'
+    options:
+      A: 'A = 0, B = 0'
+      B: 'A = 0, B = 1'
+      C: 'A = 1, B = 1'
+      D: 'A = 1, B = 0'
+    answer: C
+    explanation: 'NAND is NOT-AND. AND is 1 only for 1 and 1, so NAND is 0 only for that row.'
+
+  - uid: g12-physics-5-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'A NOR gate has inputs A = 1 and B = 0. What is the output?'
+    options:
+      A: '0'
+      B: '1'
+      C: 'Both 0 and 1'
+      D: 'It cannot be found.'
+    answer: A
+    explanation: 'A OR B = 1, and NOT 1 = 0. NOR gives 1 only when both inputs are 0.'
+
+  - uid: g12-physics-5-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which gate gives an output of 1 only when its two inputs are different?'
+    options:
+      A: 'AND'
+      B: 'NOR'
+      C: 'NAND'
+      D: 'XOR (exclusive OR)'
+    answer: D
+    explanation: 'XOR: 0,0 → 0; 0,1 → 1; 1,0 → 1; 1,1 → 0.'
+
+  - uid: g12-physics-5-2-q015
+    type: numeric
+    difficulty: 2
+    stem: 'How many rows does the truth table of a logic circuit with 3 inputs have?'
+    answer: {value: 8, tolerance: 0}
+    explanation: 'Each input can be 0 or 1, so there are $2^3 = 8$ different input combinations.'
+
+  - uid: g12-physics-5-2-q016
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which gates give an output of 1 when A = 0 and B = 0? Choose all that apply.'
+    options:
+      A: 'NAND'
+      B: 'AND'
+      C: 'NOR'
+      D: 'OR'
+    answer: [A, C]
+    explanation: 'AND and OR both give 0 for 0,0. Their inverses, NAND and NOR, give 1.'
+
+  - uid: g12-physics-5-2-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'The output of an AND gate is connected to a NOT gate. The combination acts as which gate?'
+    options:
+      A: 'OR'
+      B: 'NAND'
+      C: 'NOR'
+      D: 'XOR'
+    answer: B
+    explanation: 'NOT after AND is NAND (NOT-AND).'
+
+  - uid: g12-physics-5-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'A school bell should ring if the button at the front door OR the button at the back door is pressed. Which gate is needed?'
+    options:
+      A: 'AND'
+      B: 'NOT'
+      C: 'OR'
+      D: 'NAND'
+    answer: C
+    explanation: 'The output must be 1 if either input (or both) is 1: an OR gate.'
+
+  - uid: g12-physics-5-2-q019
+    type: true_false
+    difficulty: 2
+    stem: 'Any logic gate can be built using only NAND gates.'
+    answer: true
+    explanation: 'NAND is a universal gate. For example, joining both inputs of a NAND gives a NOT gate.'
+
+  - uid: g12-physics-5-2-q020
+    type: true_false
+    difficulty: 1
+    stem: 'A NOT gate has two inputs.'
+    answer: false
+    explanation: 'A NOT gate has only one input and one output.'
+
+  - uid: g12-physics-5-2-q021
+    type: single_choice
+    difficulty: 3
+    stem: 'Both inputs of a NAND gate are joined together and connected to one signal A. What does the gate now do?'
+    options:
+      A: 'It always gives 1.'
+      B: 'It always gives 0.'
+      C: 'It copies A.'
+      D: 'It acts as a NOT gate.'
+    answer: D
+    explanation: 'With both inputs equal to A: A = 0 gives NAND(0,0) = 1, and A = 1 gives NAND(1,1) = 0. That is NOT A.'
+
+  - uid: g12-physics-5-2-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'A table that lists the output of a logic gate for every possible combination of inputs is called a ________ table.'
+    answer: [truth]
+    explanation: 'For two inputs, a truth table has 4 rows.'
+
+  - uid: g12-physics-5-2-q023
+    type: fill_in
+    difficulty: 1
+    stem: 'The middle terminal of a bipolar transistor, through which the small controlling current flows, is called the ________.'
+    answer: [base]
+    explanation: 'The base current controls the larger collector current.'
+
+  - uid: g12-physics-5-2-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each gate with its rule.'
+    left:
+      L1: 'AND'
+      L2: 'OR'
+      L3: 'NOR'
+    right:
+      R1: 'Output 1 if at least one input is 1'
+      R2: 'Output 1 only if both inputs are 0'
+      R3: 'Output 1 only if both inputs are 1'
+      R4: 'Output is always 1'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'AND needs all inputs 1, OR needs any input 1, and NOR is the opposite of OR. No standard gate is always 1.'
+
+  - uid: g12-physics-5-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put these inventions in the order they first appeared, earliest first.'
+    items:
+      A: 'The integrated circuit'
+      B: 'The transistor'
+      C: 'The microprocessor'
+      D: 'The vacuum-tube diode'
+    answer: [D, B, A, C]
+    explanation: 'Vacuum-tube diode (1904), transistor (1947), integrated circuit (1958), microprocessor (1971).'
+
+  - uid: g12-physics-5-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Why did transistors replace vacuum tubes in most electronics?'
+    options:
+      A: 'Transistors are much smaller, use less power and last longer.'
+      B: 'Transistors give out more light.'
+      C: 'Transistors only work with AC.'
+      D: 'Transistors need very high voltages.'
+    answer: A
+    explanation: 'Vacuum tubes are large, fragile and need heated filaments. Transistors are tiny, cheap and efficient.'
+
+  - uid: g12-physics-5-2-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'An XOR gate has inputs A = 1 and B = 1. Its output goes into a NOT gate. What is the final output?'
+    options:
+      A: '0'
+      B: '1'
+      C: 'It depends on the supply voltage.'
+      D: 'There is no output.'
+    answer: B
+    explanation: 'XOR(1,1) = 0 because the inputs are the same. NOT 0 = 1.'
+
+  - uid: g12-physics-5-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'In an n-p-n transistor, which layer is the base?'
+    options:
+      A: 'One of the n layers'
+      B: 'Both n layers'
+      C: 'The thin p layer in the middle'
+      D: 'A metal plate outside the transistor'
+    answer: C
+    explanation: 'An n-p-n transistor has a thin p-type base between an n-type emitter and an n-type collector.'
+
+  - uid: g12-physics-5-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'A transistor amplifier has $\beta = 50$. The base current rises by 0.02 mA. By how much does the collector current rise?'
+    options:
+      A: '0.04 mA'
+      B: '2.5 mA'
+      C: '50.02 mA'
+      D: '1 mA'
+    answer: D
+    explanation: '$\Delta I_C = \beta \Delta I_B = 50 \times 0.02 = 1$ mA.'
+
+  - uid: g12-physics-5-2-q030
+    type: multiple_answers
+    difficulty: 1
+    stem: 'Which of these devices contain integrated circuits? Choose all that apply.'
+    options:
+      A: 'A mobile phone'
+      B: 'A digital watch'
+      C: 'A calculator'
+      D: 'A plain copper wire'
+    answer: [A, B, C]
+    explanation: 'Phones, watches and calculators all rely on silicon chips. A copper wire has no electronic components.'

@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Conductors (like copper) let charge flow easily; insulators (like glass) hardly at all. Semiconductors such as silicon and germanium are in between.'
+    - 'In a semiconductor, a higher temperature frees more charge carriers, so its resistance goes DOWN as it warms. A metal''s resistance goes up.'
+    - 'A pure (intrinsic) semiconductor has equal numbers of free electrons and holes. A hole is a missing electron and acts like a positive charge.'
+    - 'Doping adds a small amount of impurity. Pentavalent atoms (5 outer electrons, e.g. phosphorus, arsenic) make n-type material: electrons are the majority carriers. Trivalent atoms (3 outer electrons, e.g. boron, gallium) make p-type material: holes are the majority carriers.'
+    - 'Where p-type and n-type meet, a p-n junction forms with a thin depletion region that has almost no free carriers.'
+    - 'Forward bias (p side to +, n side to −) narrows the depletion region and the diode conducts once the voltage passes about 0.7 V for silicon (about 0.3 V for germanium). Reverse bias widens it and only a tiny current flows.'
+    - 'A diode lets current flow one way only, so it can rectify AC: one diode gives half-wave rectification; a bridge of four diodes gives full-wave rectification. A capacitor smooths the output.'
+    - 'Special diodes: an LED gives out light when forward biased; a Zener diode is used in reverse breakdown to hold a steady voltage; a photodiode and a solar cell respond to light.'
+  formulas:
+    - label: Current in a diode–resistor circuit (forward bias)
+      latex: 'I = \frac{V_{supply} - V_{diode}}{R}'
+    - label: Silicon diode turn-on voltage
+      latex: 'V_{diode} \approx 0.7\ \text{V}'
+    - label: Ripple frequency, full-wave
+      latex: 'f_{ripple} = 2 f_{supply}'
+
+solved_exercises:
+  - uid: g12-physics-5-1-se01
+    problem: 'A silicon diode (0.7 V) is forward biased in series with a 200 Ω resistor and a 4.7 V battery. Find the current.'
+    steps:
+      - 'Voltage across the resistor: $4.7 - 0.7 = 4$ V.'
+      - '$I = \frac{4}{200} = 0.02$ A $= 20$ mA.'
+    answer: '20 mA'
+  - uid: g12-physics-5-1-se02
+    problem: 'Silicon is doped with arsenic, which has 5 outer electrons. What type of semiconductor forms, and what are its majority carriers?'
+    steps:
+      - 'Four of arsenic''s electrons form bonds with silicon; the fifth is free.'
+      - 'Extra free electrons make n-type material; electrons are the majority carriers.'
+    answer: 'n-type; electrons'
+  - uid: g12-physics-5-1-se03
+    problem: 'A 50 Hz AC supply is full-wave rectified. What is the frequency of the ripple in the output?'
+    steps:
+      - 'Full-wave rectification turns both halves of each cycle into positive pulses.'
+      - 'There are 2 pulses per cycle: $2 \times 50 = 100$ Hz.'
+    answer: '100 Hz'
+
+flashcards:
+  - {uid: g12-physics-5-1-fc01, term: Semiconductor, definition: 'A material whose conductivity is between that of a conductor and an insulator, e.g. silicon.'}
+  - {uid: g12-physics-5-1-fc02, term: Hole, definition: 'A missing electron in a bond; it behaves like a positive charge carrier.'}
+  - {uid: g12-physics-5-1-fc03, term: Doping, definition: 'Adding a tiny amount of impurity to a semiconductor to increase its conductivity.'}
+  - {uid: g12-physics-5-1-fc04, term: n-type, definition: 'Doped with pentavalent atoms; majority carriers are electrons.'}
+  - {uid: g12-physics-5-1-fc05, term: p-type, definition: 'Doped with trivalent atoms; majority carriers are holes.'}
+  - {uid: g12-physics-5-1-fc06, term: Depletion region, definition: 'Thin layer at a p-n junction with almost no free charge carriers.'}
+  - {uid: g12-physics-5-1-fc07, term: Forward bias, definition: 'p side to +, n side to −; the diode conducts.'}
+  - {uid: g12-physics-5-1-fc08, term: Rectification, definition: 'Changing AC into DC using diodes.'}
+  - {uid: g12-physics-5-1-fc09, term: Zener diode, definition: 'Diode used in reverse breakdown to keep a constant voltage.'}
+
+questions:
+  - uid: g12-physics-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these is a semiconductor?'
+    options:
+      A: 'Copper'
+      B: 'Silicon'
+      C: 'Glass'
+      D: 'Rubber'
+    answer: B
+    explanation: 'Silicon (and germanium) are the most common semiconductors. Copper is a conductor; glass and rubber are insulators.'
+
+  - uid: g12-physics-5-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'What happens to the resistance of a pure semiconductor when it is heated?'
+    options:
+      A: 'It decreases, because more charge carriers are freed.'
+      B: 'It increases, like a metal.'
+      C: 'It stays the same.'
+      D: 'It becomes zero.'
+    answer: A
+    explanation: 'Heat breaks more bonds and frees more electrons and holes, so the semiconductor conducts better.'
+
+  - uid: g12-physics-5-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'In a semiconductor, a "hole" is:'
+    options:
+      A: 'A tiny crack in the crystal'
+      B: 'An extra electron'
+      C: 'A place where an electron is missing, which acts like a positive charge'
+      D: 'A neutron'
+    answer: C
+    explanation: 'When an electron leaves a bond, the gap left behind can move through the crystal like a positive carrier.'
+
+  - uid: g12-physics-5-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Silicon is doped with phosphorus, which has five outer electrons. What kind of semiconductor is made?'
+    options:
+      A: 'p-type'
+      B: 'Intrinsic'
+      C: 'An insulator'
+      D: 'n-type'
+    answer: D
+    explanation: 'The fifth electron of each phosphorus atom is free, adding negative carriers: n-type.'
+
+  - uid: g12-physics-5-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which impurity would make p-type silicon?'
+    options:
+      A: 'Boron, with 3 outer electrons'
+      B: 'Arsenic, with 5 outer electrons'
+      C: 'Phosphorus, with 5 outer electrons'
+      D: 'Extra silicon'
+    answer: A
+    explanation: 'A trivalent atom leaves one bond incomplete, creating a hole. Holes are the majority carriers in p-type material.'
+
+  - uid: g12-physics-5-1-q006
+    type: true_false
+    difficulty: 1
+    stem: 'In n-type material the majority charge carriers are electrons.'
+    answer: true
+    explanation: 'Pentavalent dopants give extra free electrons, which outnumber the holes.'
+
+  - uid: g12-physics-5-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'A diode is forward biased when:'
+    options:
+      A: 'Its p side is connected to the negative terminal'
+      B: 'It is not connected to anything'
+      C: 'Its p side is connected to the positive terminal and its n side to the negative terminal'
+      D: 'Both sides are connected to the positive terminal'
+    answer: C
+    explanation: 'In forward bias the positive terminal pushes holes and the negative terminal pushes electrons towards the junction.'
+
+  - uid: g12-physics-5-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'What happens to the depletion region when a diode is reverse biased?'
+    options:
+      A: 'It disappears.'
+      B: 'It becomes wider and only a tiny current flows.'
+      C: 'It becomes narrower and a large current flows.'
+      D: 'It turns into p-type material.'
+    answer: B
+    explanation: 'Reverse bias pulls carriers away from the junction, widening the depletion region.'
+
+  - uid: g12-physics-5-1-q009
+    type: numeric
+    difficulty: 2
+    stem: 'A silicon diode (0.7 V) and a 300 Ω resistor are in series with a 3.7 V battery, with the diode forward biased. What is the current, in milliamperes (mA)?'
+    answer: {value: 10, tolerance: 0, unit: mA}
+    explanation: '$I = \frac{3.7 - 0.7}{300} = \frac{3}{300} = 0.01$ A $= 10$ mA.'
+
+  - uid: g12-physics-5-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'About how much forward voltage does a silicon diode need before it conducts well?'
+    options:
+      A: '0.07 V'
+      B: '7 V'
+      C: '70 V'
+      D: '0.7 V'
+    answer: D
+    explanation: 'A silicon diode starts to conduct strongly at about 0.7 V; germanium at about 0.3 V.'
+
+  - uid: g12-physics-5-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the main job of a diode in a circuit?'
+    options:
+      A: 'To let current flow in one direction only'
+      B: 'To store large amounts of charge'
+      C: 'To increase the voltage of a supply'
+      D: 'To measure current'
+    answer: A
+    explanation: 'A diode conducts in forward bias and blocks in reverse bias.'
+
+  - uid: g12-physics-5-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A single diode is placed in series with a load on an AC supply. What is the output?'
+    options:
+      A: 'Smooth DC'
+      B: 'AC at twice the frequency'
+      C: 'Half-wave rectified DC: only one half of each cycle passes'
+      D: 'No current at all'
+    answer: C
+    explanation: 'The diode conducts only during the half-cycle that forward biases it.'
+
+  - uid: g12-physics-5-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'How many diodes does a bridge rectifier use?'
+    options:
+      A: '1'
+      B: '2'
+      C: '3'
+      D: '4'
+    answer: D
+    explanation: 'A bridge uses four diodes; two conduct in each half-cycle, giving full-wave rectification.'
+
+  - uid: g12-physics-5-1-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are true of full-wave rectification compared with half-wave? Choose all that apply.'
+    options:
+      A: 'Both halves of each AC cycle are used.'
+      B: 'The output is easier to smooth.'
+      C: 'It needs no diodes.'
+      D: 'The ripple frequency is twice the supply frequency.'
+    answer: [A, B, D]
+    explanation: 'Full-wave rectification uses both halves, gives twice as many pulses per second, and is easier to smooth. It needs diodes (a bridge uses four).'
+
+  - uid: g12-physics-5-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is a large capacitor connected across the output of a rectifier?'
+    options:
+      A: 'To make the output smoother'
+      B: 'To change DC back into AC'
+      C: 'To increase the frequency'
+      D: 'To protect the diodes from light'
+    answer: A
+    explanation: 'The capacitor charges at the peaks and discharges between them, filling in the gaps and reducing ripple.'
+
+  - uid: g12-physics-5-1-q016
+    type: numeric
+    difficulty: 2
+    stem: 'A 50 Hz AC supply is half-wave rectified. How many pulses per second are in the output?'
+    answer: {value: 50, tolerance: 0, unit: Hz}
+    explanation: 'Only one half of each cycle passes, so there is one pulse per cycle: 50 per second.'
+
+  - uid: g12-physics-5-1-q017
+    type: single_choice
+    difficulty: 1
+    stem: 'Which device gives out light when a current flows through it in forward bias?'
+    options:
+      A: 'A Zener diode'
+      B: 'A photodiode'
+      C: 'A light-emitting diode (LED)'
+      D: 'A resistor'
+    answer: C
+    explanation: 'In an LED, electrons and holes recombine at the junction and release energy as light.'
+
+  - uid: g12-physics-5-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'A Zener diode is mostly used to:'
+    options:
+      A: 'Give out light'
+      B: 'Keep a steady voltage, working in reverse breakdown'
+      C: 'Amplify sound'
+      D: 'Store energy'
+    answer: B
+    explanation: 'In reverse breakdown the Zener voltage stays almost constant, so it is used as a voltage regulator.'
+
+  - uid: g12-physics-5-1-q019
+    type: true_false
+    difficulty: 2
+    stem: 'A solar cell is a p-n junction that produces an emf when light falls on it.'
+    answer: true
+    explanation: 'Light frees electron–hole pairs near the junction, and the junction''s field separates them, giving a voltage.'
+
+  - uid: g12-physics-5-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'A pure (intrinsic) semiconductor contains:'
+    options:
+      A: 'Only free electrons'
+      B: 'Only holes'
+      C: 'More holes than free electrons'
+      D: 'Equal numbers of free electrons and holes'
+    answer: D
+    explanation: 'Each freed electron leaves exactly one hole behind, so the numbers are equal.'
+
+  - uid: g12-physics-5-1-q021
+    type: single_choice
+    difficulty: 1
+    stem: 'The thin layer at a p-n junction with almost no free charge carriers is called the:'
+    options:
+      A: 'Conduction layer'
+      B: 'Doping layer'
+      C: 'Depletion region'
+      D: 'Battery layer'
+    answer: C
+    explanation: 'Electrons and holes recombine across the junction, leaving a region depleted of free carriers.'
+
+  - uid: g12-physics-5-1-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'Adding a small amount of impurity to a pure semiconductor to change how well it conducts is called ________.'
+    answer: [doping]
+    explanation: 'Doping makes n-type or p-type material.'
+
+  - uid: g12-physics-5-1-q023
+    type: fill_in
+    difficulty: 1
+    stem: 'Changing alternating current into direct current is called ________.'
+    answer: [rectification, rectifying]
+    explanation: 'Diodes are used as rectifiers.'
+
+  - uid: g12-physics-5-1-q024
+    type: true_false
+    difficulty: 1
+    stem: 'A reverse-biased diode conducts a large current.'
+    answer: false
+    explanation: 'In reverse bias only a very small leakage current flows (until breakdown).'
+
+  - uid: g12-physics-5-1-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each material with its description.'
+    left:
+      L1: 'n-type semiconductor'
+      L2: 'p-type semiconductor'
+      L3: 'Intrinsic semiconductor'
+    right:
+      R1: 'Holes are the majority carriers.'
+      R2: 'Pure; equal numbers of electrons and holes.'
+      R3: 'Electrons are the majority carriers.'
+      R4: 'Has no charge carriers at any temperature.'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'n-type has extra electrons, p-type has extra holes and intrinsic material has equal numbers. Every semiconductor has some carriers above absolute zero.'
+
+  - uid: g12-physics-5-1-q026
+    type: ordering
+    difficulty: 2
+    stem: 'A mobile-phone charger changes 220 V AC into steady low-voltage DC. Put its stages in order.'
+    items:
+      A: 'Bridge rectifier'
+      B: 'Smoothing capacitor'
+      C: 'Step-down transformer'
+      D: 'Zener regulator'
+    answer: [C, A, B, D]
+    explanation: 'First lower the voltage, then rectify it, then smooth it, and finally hold it steady with a regulator.'
+
+  - uid: g12-physics-5-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'Two identical silicon diodes are in series, both forward biased, with a 100 Ω resistor and a 3.4 V battery. What is the current?'
+    options:
+      A: '20 mA'
+      B: '34 mA'
+      C: '27 mA'
+      D: '14 mA'
+    answer: A
+    explanation: 'The diodes drop $2 \times 0.7 = 1.4$ V. $I = \frac{3.4 - 1.4}{100} = 0.02$ A $= 20$ mA.'
+
+  - uid: g12-physics-5-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Germanium needs about 0.3 V to conduct, while silicon needs about 0.7 V. Why is silicon still used far more?'
+    options:
+      A: 'Silicon gives out light.'
+      B: 'Silicon works well at higher temperatures and is cheap and plentiful.'
+      C: 'Silicon is a metal.'
+      D: 'Silicon has no holes.'
+    answer: B
+    explanation: 'Silicon has lower leakage current, survives higher temperatures and is made from common sand.'
+
+  - uid: g12-physics-5-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'In a p-type semiconductor, the minority charge carriers are:'
+    options:
+      A: 'Holes'
+      B: 'Protons'
+      C: 'Neutrons'
+      D: 'Electrons'
+    answer: D
+    explanation: 'Holes are the majority in p-type, so the few free electrons are the minority carriers.'
+
+  - uid: g12-physics-5-1-q030
+    type: single_choice
+    difficulty: 3
+    stem: 'A diode is put in a torch circuit the wrong way round (reverse biased). What happens?'
+    options:
+      A: 'The bulb is brighter.'
+      B: 'The bulb does not light, because almost no current flows.'
+      C: 'The battery charges.'
+      D: 'The bulb lights normally.'
+    answer: B
+    explanation: 'A reverse-biased diode blocks the current, so the bulb stays off. This is how diodes protect circuits from batteries put in backwards.'
