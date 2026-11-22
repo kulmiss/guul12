@@ -2,7 +2,7 @@ summary:
   key_points:
     - 'Weather is the day-to-day state of the atmosphere; climate is the average weather of a place over about 30 years or more. Climate change is a long-term shift in temperatures and weather patterns.'
     - 'The main cause of today''s climate change is human activity that adds greenhouse gases: burning coal, oil and gas, cutting and burning forests, and farming (cattle and flooded rice fields release methane; fertilisers release nitrous oxide).'
-    - 'Evidence: the global average temperature has risen by about 1.1 °C since the late 1800s; glaciers and ice sheets are shrinking; sea levels are rising; heatwaves, droughts and floods are becoming more frequent or intense.'
+    - 'Evidence: the global average temperature for 2011–2020 was about 1.1 °C higher than in the late 1800s, and it is still rising; glaciers and ice sheets are shrinking; sea levels are rising; heatwaves, droughts and floods are becoming more frequent or intense.'
     - 'Effects on living things: habitats shift, species that cannot move or adapt may die out, coral reefs bleach, flowering and migration times change, and disease carriers such as malaria mosquitoes can spread to cooler highland areas that were once too cold for them.'
     - 'Effects in Ethiopia include more frequent droughts and floods, harvest losses, water shortages, pressure on pastoralists in lowland areas such as the Somali and Afar regions, and the risk of malaria rising in the highlands.'
     - 'Mitigation means reducing the causes: using renewable energy (hydropower, solar, wind), planting and protecting forests (carbon sinks), and using energy efficiently. Ethiopia''s Green Legacy initiative (from 2019) plants billions of tree seedlings.'
@@ -93,14 +93,14 @@ questions:
   - uid: g12-biology-6-1-q005
     type: single_choice
     difficulty: 2
-    stem: 'By about how much has the global average temperature risen since the late 1800s?'
+    stem: 'A major 2021 scientific assessment (IPCC) compared the years 2011–2020 with the late 1800s. By about how much had the global average temperature risen?'
     options:
       A: 'About 10 °C'
       B: 'About 0.01 °C'
       C: 'About 5 °C'
       D: 'About 1.1 °C'
     answer: D
-    explanation: 'Scientific assessments put recent warming at roughly 1.1 °C above pre-industrial levels.'
+    explanation: 'The IPCC found about 1.1 °C of warming for 2011–2020; warming has continued since then.'
 
   - uid: g12-biology-6-1-q006
     type: single_choice

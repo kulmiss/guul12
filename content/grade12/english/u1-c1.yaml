@@ -1,0 +1,381 @@
+summary:
+  key_points:
+    - 'Present simple: habits, facts and timetables (She walks to school. Water boils at 100 °C.). Add -s/-es for he, she and it.'
+    - 'Present continuous (am/is/are + -ing): actions happening now or temporary situations (They are studying for the exam this week).'
+    - 'Present perfect (have/has + past participle): past actions linked to now, often with ever, never, already, yet, just, since and for (I have lived in Jigjiga since 2020.).'
+    - 'Past simple: finished actions at a stated past time (We visited Harar last year.). Do not use it with "since" or with time phrases that are not finished, like "this week" when you mean up to now.'
+    - 'Past continuous (was/were + -ing): an action in progress when another happened (I was reading when the power went off.).'
+    - 'Past perfect (had + past participle): the earlier of two past actions (When we arrived, the bus had already left.).'
+    - 'Future: will for decisions and predictions; going to for plans and evidence; present continuous for fixed arrangements.'
+    - 'Stative verbs (know, believe, like, own, belong, seem) are not normally used in continuous forms: say "I know", not "I am knowing".'
+    - 'Subject–verb agreement: the verb agrees with the real subject. "Each of the students has a book." "The news is good."'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-1-1-se01
+    problem: 'Choose the correct form: "Hodan ______ (live) in Dire Dawa since she was a child."'
+    steps:
+      - '"Since" + a starting point shows an action that began in the past and continues now.'
+      - 'This needs the present perfect: "has lived" (or "has been living").'
+    answer: 'has lived'
+  - uid: g12-english-1-1-se02
+    problem: 'Correct the error: "When I reached the stadium, the match already started."'
+    steps:
+      - 'The match started before I reached the stadium, so it is the earlier past action.'
+      - 'Use the past perfect: "the match had already started."'
+    answer: 'When I reached the stadium, the match had already started.'
+  - uid: g12-english-1-1-se03
+    problem: 'Explain why "I am knowing the answer" is wrong.'
+    steps:
+      - '"Know" is a stative verb: it describes a state, not an action.'
+      - 'Stative verbs are normally used in simple forms: "I know the answer."'
+    answer: 'Use "I know the answer."'
+
+flashcards:
+  - {uid: g12-english-1-1-fc01, term: Present simple, definition: 'Habits, facts and timetables: "The sun rises in the east."'}
+  - {uid: g12-english-1-1-fc02, term: Present continuous, definition: 'Actions happening now or around now: "She is writing."'}
+  - {uid: g12-english-1-1-fc03, term: Present perfect, definition: 'have/has + past participle; past linked to now.'}
+  - {uid: g12-english-1-1-fc04, term: Past simple, definition: 'Finished action at a stated past time: "I saw him yesterday."'}
+  - {uid: g12-english-1-1-fc05, term: Past perfect, definition: 'had + past participle; the earlier of two past actions.'}
+  - {uid: g12-english-1-1-fc06, term: Since vs for, definition: 'Since + starting point (since 2019); for + length of time (for three years).'}
+  - {uid: g12-english-1-1-fc07, term: Stative verb, definition: 'Verb for a state (know, like, own); not usually used in -ing forms.'}
+  - {uid: g12-english-1-1-fc08, term: Subject–verb agreement, definition: 'Singular subject + singular verb; plural subject + plural verb.'}
+
+questions:
+  - uid: g12-english-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct verb: "Water ______ at 100 °C at sea level."'
+    options:
+      A: 'is boiling'
+      B: 'boils'
+      C: 'boiled'
+      D: 'has boiled'
+    answer: B
+    explanation: 'Scientific facts use the present simple.'
+
+  - uid: g12-english-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct verb: "Be quiet! The baby ______ in the next room right now."'
+    options:
+      A: 'is sleeping'
+      B: 'sleeps'
+      C: 'slept'
+      D: 'has slept'
+    answer: A
+    explanation: '"Right now" shows an action in progress: present continuous.'
+
+  - uid: g12-english-1-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "Abdi ______ in Jigjiga since 2019."'
+    options:
+      A: 'lives'
+      B: 'lived'
+      C: 'has lived'
+      D: 'is living'
+    answer: C
+    explanation: '"Since 2019" means from then until now, which needs the present perfect.'
+
+  - uid: g12-english-1-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "We ______ the National Museum in Addis Ababa last December."'
+    options:
+      A: 'have visited'
+      B: 'visit'
+      C: 'had been visiting'
+      D: 'visited'
+    answer: D
+    explanation: 'A finished past time ("last December") needs the past simple.'
+
+  - uid: g12-english-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verbs: "I ______ my homework when the lights ______ out."'
+    options:
+      A: 'was doing / went'
+      B: 'did / were going'
+      C: 'am doing / go'
+      D: 'have done / went'
+    answer: A
+    explanation: 'The longer action in progress takes the past continuous; the short action that interrupted it takes the past simple.'
+
+  - uid: g12-english-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "By the time the teacher arrived, the students ______ the classroom."'
+    options:
+      A: 'cleaned'
+      B: 'have cleaned'
+      C: 'had cleaned'
+      D: 'are cleaning'
+    answer: C
+    explanation: 'The cleaning happened before the teacher arrived: past perfect for the earlier action.'
+
+  - uid: g12-english-1-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best option: "Look at those dark clouds! It ______ rain."'
+    options:
+      A: 'rains'
+      B: 'is going to'
+      C: 'rained'
+      D: 'has rained'
+    answer: B
+    explanation: '"Going to" is used for a prediction based on present evidence.'
+
+  - uid: g12-english-1-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence is correct?'
+    options:
+      A: 'I am knowing the answer.'
+      B: 'She is owning two cars.'
+      C: 'This book is belonging to me.'
+      D: 'I know the answer.'
+    answer: D
+    explanation: 'Know, own and belong are stative verbs and are normally not used in continuous forms.'
+
+  - uid: g12-english-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "Each of the students ______ a calculator."'
+    options:
+      A: 'has'
+      B: 'have'
+      C: 'are having'
+      D: 'were having'
+    answer: A
+    explanation: 'The subject is "each", which is singular, so the verb is "has".'
+
+  - uid: g12-english-1-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "The news about the exam results ______ very good."'
+    options:
+      A: 'are'
+      B: 'were'
+      C: 'is'
+      D: 'have been'
+    answer: C
+    explanation: '"News" is an uncountable noun and takes a singular verb.'
+
+  - uid: g12-english-1-1-q011
+    type: true_false
+    difficulty: 1
+    stem: 'The sentence "She has finished her project yesterday." is correct.'
+    answer: false
+    explanation: 'With a finished past time like "yesterday", use the past simple: "She finished her project yesterday."'
+
+  - uid: g12-english-1-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct word: "My father has worked at the bank ______ fifteen years."'
+    options:
+      A: 'since'
+      B: 'from'
+      C: 'ago'
+      D: 'for'
+    answer: D
+    explanation: '"For" goes with a length of time; "since" goes with a starting point.'
+
+  - uid: g12-english-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "Have you ever ______ camel milk?"'
+    options:
+      A: 'tasted'
+      B: 'taste'
+      C: 'tasting'
+      D: 'tastes'
+    answer: A
+    explanation: 'The present perfect is have + past participle: "Have you ever tasted ...?"'
+
+  - uid: g12-english-1-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best option: "The train to Djibouti ______ at 8:30 tomorrow morning, according to the timetable."'
+    options:
+      A: 'was leaving'
+      B: 'leaves'
+      C: 'left'
+      D: 'has left'
+    answer: B
+    explanation: 'Timetabled future events often use the present simple.'
+
+  - uid: g12-english-1-1-q015
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are stative verbs that are not normally used in continuous forms? Choose all that apply.'
+    options:
+      A: 'believe'
+      B: 'own'
+      C: 'run'
+      D: 'seem'
+    answer: [A, B, D]
+    explanation: '"Run" is an action verb ("She is running"). Believe, own and seem describe states.'
+
+  - uid: g12-english-1-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'Choose the correct verb: "Fatuma was tired because she ______ all night."'
+    options:
+      A: 'has been studying'
+      B: 'is studying'
+      C: 'had been studying'
+      D: 'studies'
+    answer: C
+    explanation: 'The past perfect continuous shows a long action that went on before a past moment and explains it.'
+
+  - uid: g12-english-1-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "Neither the teacher nor the students ______ ready for the visit."'
+    options:
+      A: 'was'
+      B: 'is'
+      C: 'has been'
+      D: 'were'
+    answer: D
+    explanation: 'With "neither ... nor", the verb agrees with the nearer subject, "students", which is plural.'
+
+  - uid: g12-english-1-1-q018
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the past participle of "write"?'
+    options:
+      A: 'written'
+      B: 'wrote'
+      C: 'writed'
+      D: 'writing'
+    answer: A
+    explanation: 'write – wrote – written.'
+
+  - uid: g12-english-1-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'Complete with the past simple of "go": "Last week we ______ to Sof Omar Caves."'
+    answer: [went]
+    explanation: '"Go" is irregular: go – went – gone.'
+
+  - uid: g12-english-1-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete with the past participle of "begin": "The lesson had already ______ when I arrived."'
+    answer: [begun]
+    explanation: 'begin – began – begun. The past perfect needs the past participle.'
+
+  - uid: g12-english-1-1-q021
+    type: true_false
+    difficulty: 2
+    stem: 'The sentence "I have been waiting here for two hours." is grammatically correct.'
+    answer: true
+    explanation: 'The present perfect continuous with "for" shows an action that started in the past and is still going on.'
+
+  - uid: g12-english-1-1-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "The phone is ringing. I ______ it."'
+    options:
+      A: 'was answering'
+      B: 'answered'
+      C: 'will answer'
+      D: 'have answered'
+    answer: C
+    explanation: '"Will" is used for a decision made at the moment of speaking.'
+
+  - uid: g12-english-1-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each sentence with its tense.'
+    left:
+      L1: 'They had left before noon.'
+      L2: 'They are leaving now.'
+      L3: 'They have left already.'
+    right:
+      R1: 'Present continuous'
+      R2: 'Present perfect'
+      R3: 'Past perfect'
+      R4: 'Future simple'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'had + participle = past perfect; are + -ing = present continuous; have + participle = present perfect. No sentence uses "will".'
+
+  - uid: g12-english-1-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct question form: "______ you finish the assignment yet?"'
+    options:
+      A: 'Did ever'
+      B: 'Are'
+      C: 'Was'
+      D: 'Have'
+    answer: D
+    explanation: '"Yet" in questions usually goes with the present perfect: "Have you finished ... yet?"'
+
+  - uid: g12-english-1-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Read: "When Ali went to bed, he had already finished his homework. He had eaten dinner before he started it." Put the events in the order they happened.'
+    items:
+      A: 'Ali went to bed.'
+      B: 'Ali ate dinner.'
+      C: 'Ali finished his homework.'
+    answer: [B, C, A]
+    explanation: 'The past perfect marks earlier events: dinner, then homework, then bed.'
+
+  - uid: g12-english-1-1-q026
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct form: "She usually ______ tea in the morning."'
+    options:
+      A: 'drink'
+      B: 'drinks'
+      C: 'is drinking usually'
+      D: 'drunk'
+    answer: B
+    explanation: 'Habits use the present simple; third-person singular adds -s.'
+
+  - uid: g12-english-1-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'Which sentence uses tenses correctly?'
+    options:
+      A: 'Since she came to our school, she made many friends.'
+      B: 'She is coming to our school two years ago.'
+      C: 'Since she came to our school, she has made many friends.'
+      D: 'She has come to our school two years ago.'
+    answer: C
+    explanation: 'The main clause after "since + past time" uses the present perfect; "ago" needs the past simple.'
+
+  - uid: g12-english-1-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "Look! The children ______ football in the rain."'
+    options:
+      A: 'are playing'
+      B: 'play'
+      C: 'played'
+      D: 'have played'
+    answer: A
+    explanation: '"Look!" shows something happening now: present continuous.'
+
+  - uid: g12-english-1-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct verb: "Mathematics ______ my favourite subject."'
+    options:
+      A: 'are'
+      B: 'were'
+      C: 'have been'
+      D: 'is'
+    answer: D
+    explanation: 'Subject names ending in -s, such as mathematics and physics, take a singular verb.'
+
+  - uid: g12-english-1-1-q030
+    type: true_false
+    difficulty: 1
+    stem: 'In the sentence "We are meeting the principal at ten tomorrow.", the present continuous is used for a fixed future arrangement.'
+    answer: true
+    explanation: 'The present continuous often describes personal arrangements already made for the future.'
