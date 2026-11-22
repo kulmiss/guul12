@@ -18,8 +18,10 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('attempts', function (Blueprint $table) {
+            // MySQL: the foreign key uses the index, so it goes first.
+            $table->dropForeign(['mock_id']);
             $table->dropIndex(['mock_id', 'user_id', 'finished_at']);
-            $table->dropConstrainedForeignId('mock_id');
+            $table->dropColumn('mock_id');
         });
     }
 };

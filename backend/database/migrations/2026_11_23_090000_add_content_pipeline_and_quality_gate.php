@@ -34,7 +34,8 @@ return new class extends Migration
             $table->text('note')->nullable();
             $table->timestamps();
 
-            $table->unique(['question_id', 'question_version', 'reviewer_name']);
+            // Named by hand: the automatic name is longer than MySQL's 64-character limit.
+            $table->unique(['question_id', 'question_version', 'reviewer_name'], 'question_reviews_version_reviewer_unique');
         });
 
         // "Report a problem" from students.

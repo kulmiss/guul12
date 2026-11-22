@@ -21,7 +21,7 @@ class ChapterFactory extends Factory
     {
         return [
             'unit_id' => Unit::factory(),
-            'number' => $this->faker->unique()->numberBetween(1, 999999),
+            'number' => $this->faker->unique()->numberBetween(1, 65000), // unsigned smallint (MySQL)
             'title' => 'Chapter '.$this->faker->numerify('###'),
             'video_access' => Access::Free,
             'sort' => 0,

@@ -21,7 +21,7 @@ class UnitFactory extends Factory
         return [
             'subject_id' => Subject::factory(),
             'grade' => 12,
-            'number' => $this->faker->unique()->numberBetween(1, 999999),
+            'number' => $this->faker->unique()->numberBetween(1, 65000), // unsigned smallint (MySQL)
             'title' => 'Unit '.$this->faker->numerify('###'),
             'sort' => 0,
             'is_active' => true,
