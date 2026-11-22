@@ -1,0 +1,373 @@
+summary:
+  key_points:
+    - 'Main macroeconomic goals: steady economic growth, low and stable inflation, low unemployment, a healthy balance of payments and a fair distribution of income.'
+    - 'Fiscal policy is the use of government spending and taxation to influence the economy. In Ethiopia it is planned by the Ministry of Finance through the yearly federal budget.'
+    - 'Expansionary fiscal policy (more spending or lower taxes) raises aggregate demand and is used in a slowdown. Contractionary fiscal policy (less spending or higher taxes) cools demand and helps fight inflation.'
+    - 'A budget deficit is when government spending is greater than revenue; a budget surplus is when revenue is greater than spending. A deficit is financed by borrowing.'
+    - 'Monetary policy is the use of the money supply, interest rates and credit by the central bank. Ethiopia''s central bank is the National Bank of Ethiopia (NBE).'
+    - 'Monetary tools: the policy (central bank lending) rate, the reserve requirement ratio, and open market operations (buying or selling government bonds). Selling bonds, raising the reserve ratio or raising interest rates reduces money supply (contractionary); the opposite actions are expansionary.'
+    - 'Exchange rate policy and supply-side policies (training, infrastructure, removing barriers to business) are further instruments. Policies work with time lags, and goals can conflict, for example lower unemployment versus lower inflation.'
+  formulas:
+    - {label: 'Spending multiplier', latex: 'k = \frac{1}{1 - MPC}'}
+    - {label: 'Money multiplier', latex: 'm = \frac{1}{rr}'}
+    - {label: 'Budget balance', latex: '\text{Balance} = \text{Revenue} - \text{Spending}'}
+
+solved_exercises:
+  - uid: g12-economics-4-1-se01
+    problem: 'The marginal propensity to consume (MPC) is 0.75. The government spends an extra 20 million birr. By how much can national income rise?'
+    steps:
+      - 'Multiplier k = 1 / (1 − 0.75) = 1 / 0.25 = 4.'
+      - 'Change in income = 4 × 20 = 80 million birr.'
+    answer: '80 million birr'
+  - uid: g12-economics-4-1-se02
+    problem: 'Banks must keep 20% of deposits as reserves. What is the money multiplier?'
+    steps:
+      - 'm = 1 / rr = 1 / 0.20 = 5.'
+      - 'So each new 1 birr of reserves can support up to 5 birr of deposits.'
+    answer: '5'
+  - uid: g12-economics-4-1-se03
+    problem: 'Inflation is high. Give one fiscal and one monetary policy action to reduce it.'
+    steps:
+      - 'Fiscal: cut government spending or raise taxes, which lowers aggregate demand.'
+      - 'Monetary: raise the policy interest rate, raise the reserve ratio or sell government bonds, which reduces money supply.'
+    answer: 'Contractionary fiscal and monetary policy'
+
+flashcards:
+  - {uid: g12-economics-4-1-fc01, term: Fiscal policy, definition: 'Using government spending and taxes to influence the economy.'}
+  - {uid: g12-economics-4-1-fc02, term: Monetary policy, definition: 'Central bank control of money supply, interest rates and credit.'}
+  - {uid: g12-economics-4-1-fc03, term: Budget deficit, definition: 'Government spending greater than revenue.'}
+  - {uid: g12-economics-4-1-fc04, term: Budget surplus, definition: 'Government revenue greater than spending.'}
+  - {uid: g12-economics-4-1-fc05, term: Reserve requirement, definition: 'Share of deposits banks must keep and not lend.'}
+  - {uid: g12-economics-4-1-fc06, term: Open market operations, definition: 'Central bank buying or selling government bonds.'}
+  - {uid: g12-economics-4-1-fc07, term: Expansionary policy, definition: 'Policy that raises aggregate demand.'}
+  - {uid: g12-economics-4-1-fc08, term: Contractionary policy, definition: 'Policy that reduces aggregate demand.'}
+  - {uid: g12-economics-4-1-fc09, term: Spending multiplier, definition: '1 / (1 − MPC)'}
+
+questions:
+  - uid: g12-economics-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is the best definition of fiscal policy?'
+    options:
+      A: 'Central bank control of interest rates'
+      B: 'Use of government spending and taxation to influence the economy'
+      C: 'Rules for foreign trade only'
+      D: 'Private firms setting their prices'
+    answer: B
+    explanation: 'Fiscal policy works through the government budget.'
+
+  - uid: g12-economics-4-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which institution carries out monetary policy in Ethiopia?'
+    options:
+      A: 'The National Bank of Ethiopia'
+      B: 'The Ethiopian Revenue Authority'
+      C: 'The Ethiopian Statistics Service'
+      D: 'The House of Federation'
+    answer: A
+    explanation: 'The National Bank of Ethiopia is the country''s central bank.'
+
+  - uid: g12-economics-4-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is an example of expansionary fiscal policy?'
+    options:
+      A: 'Raising income tax rates'
+      B: 'Selling government bonds to banks'
+      C: 'Increasing government spending on roads'
+      D: 'Raising the reserve requirement'
+    answer: C
+    explanation: 'More government spending raises aggregate demand. Options B and D are monetary, not fiscal, tools.'
+
+  - uid: g12-economics-4-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'When is contractionary fiscal policy most suitable?'
+    options:
+      A: 'During a deep recession with high unemployment'
+      B: 'When prices are falling'
+      C: 'When demand is too weak'
+      D: 'When inflation is high because demand is too strong'
+    answer: D
+    explanation: 'Cutting spending or raising taxes cools demand and eases inflation.'
+
+  - uid: g12-economics-4-1-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'A budget deficit means:'
+    options:
+      A: 'Government spending is greater than government revenue.'
+      B: 'Government revenue is greater than government spending.'
+      C: 'Exports are greater than imports.'
+      D: 'Prices are falling.'
+    answer: A
+    explanation: 'The gap is usually financed by borrowing.'
+
+  - uid: g12-economics-4-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'A government collects 400 billion birr and spends 450 billion birr in a year. What is its budget balance?'
+    options:
+      A: 'A surplus of 50 billion birr'
+      B: 'A deficit of 50 billion birr'
+      C: 'A deficit of 850 billion birr'
+      D: 'A balanced budget'
+    answer: B
+    explanation: 'Balance = 400 − 450 = −50, a deficit of 50 billion birr.'
+
+  - uid: g12-economics-4-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'If the central bank wants to reduce the money supply, it should:'
+    options:
+      A: 'Buy government bonds from banks'
+      B: 'Lower the reserve requirement'
+      C: 'Raise its policy interest rate'
+      D: 'Lower its policy interest rate'
+    answer: C
+    explanation: 'Higher interest rates make borrowing dearer, so credit and money growth slow down.'
+
+  - uid: g12-economics-4-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'When the central bank buys government bonds from commercial banks, the banks:'
+    options:
+      A: 'Lose reserves and lend less'
+      B: 'Must close'
+      C: 'Pay higher taxes'
+      D: 'Gain reserves and can lend more'
+    answer: D
+    explanation: 'Buying bonds puts money into banks, which is expansionary.'
+
+  - uid: g12-economics-4-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the reserve requirement ratio?'
+    options:
+      A: 'The share of deposits that banks must keep and not lend out'
+      B: 'The tax rate on bank profits'
+      C: 'The exchange rate of the birr'
+      D: 'The share of income people save'
+    answer: A
+    explanation: 'A higher ratio leaves banks less to lend.'
+
+  - uid: g12-economics-4-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is a monetary policy tool?'
+    options:
+      A: 'Building new schools'
+      B: 'Open market operations'
+      C: 'Changing the income tax rate'
+      D: 'Paying unemployment benefits'
+    answer: B
+    explanation: 'The other three are fiscal measures that work through the budget.'
+
+  - uid: g12-economics-4-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'If the marginal propensity to consume (MPC) rises, what happens to the spending multiplier?'
+    options:
+      A: 'It falls.'
+      B: 'It stays the same.'
+      C: 'It rises.'
+      D: 'It becomes zero.'
+    answer: C
+    explanation: 'k = 1 / (1 − MPC). A larger MPC makes 1 − MPC smaller, so k is larger.'
+
+  - uid: g12-economics-4-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a supply-side policy?'
+    options:
+      A: 'Raising the policy interest rate'
+      B: 'Selling government bonds'
+      C: 'Raising the reserve requirement'
+      D: 'Investing in skills training for workers'
+    answer: D
+    explanation: 'Supply-side policies raise the economy''s ability to produce.'
+
+  - uid: g12-economics-4-1-q013
+    type: single_choice
+    difficulty: 3
+    stem: 'Why can policies to cut unemployment quickly make inflation worse?'
+    options:
+      A: 'Higher demand creates jobs but can also push prices up.'
+      B: 'Unemployment and inflation are never related.'
+      C: 'Lower unemployment always lowers prices.'
+      D: 'Only taxes affect prices.'
+    answer: A
+    explanation: 'This is a common conflict between macroeconomic goals.'
+
+  - uid: g12-economics-4-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'How is a budget deficit usually financed?'
+    options:
+      A: 'By lowering all taxes to zero'
+      B: 'By government borrowing'
+      C: 'By raising the reserve requirement'
+      D: 'By reducing exports'
+    answer: B
+    explanation: 'The government borrows at home or abroad, for example by selling bonds or treasury bills.'
+
+  - uid: g12-economics-4-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Higher interest rates usually affect investment by firms in which way?'
+    options:
+      A: 'Investment rises sharply.'
+      B: 'Investment is not affected.'
+      C: 'Investment falls because borrowing costs more.'
+      D: 'Investment becomes free.'
+    answer: C
+    explanation: 'Projects financed by loans become less profitable.'
+
+  - uid: g12-economics-4-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'A "time lag" in economic policy means:'
+    options:
+      A: 'Policies take effect immediately.'
+      B: 'Policies are only made once every ten years.'
+      C: 'The budget year starts late.'
+      D: 'There is a delay between a problem, the policy response and its effect on the economy.'
+    answer: D
+    explanation: 'Lags make the timing of policy difficult.'
+
+  - uid: g12-economics-4-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which action is contractionary monetary policy?'
+    options:
+      A: 'Selling government bonds to banks'
+      B: 'Cutting the policy interest rate'
+      C: 'Lowering the reserve requirement'
+      D: 'Increasing government spending'
+    answer: A
+    explanation: 'Selling bonds takes money out of banks. Option D is fiscal, not monetary.'
+
+  - uid: g12-economics-4-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a main macroeconomic goal?'
+    options:
+      A: 'Maximising the profit of one firm'
+      B: 'Low and stable inflation'
+      C: 'Raising the price of bread'
+      D: 'Stopping all imports'
+    answer: B
+    explanation: 'Others include growth, low unemployment and a healthy balance of payments.'
+
+  - uid: g12-economics-4-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A cut in income tax rates is expected to:'
+    options:
+      A: 'Reduce household spending'
+      B: 'Raise the reserve requirement'
+      C: 'Raise disposable income and household spending'
+      D: 'Reduce the money multiplier'
+    answer: C
+    explanation: 'People keep more of their income, so consumption tends to rise.'
+
+  - uid: g12-economics-4-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which body usually prepares the federal budget in Ethiopia?'
+    options:
+      A: 'The National Bank of Ethiopia'
+      B: 'Commercial banks'
+      C: 'Regional chambers of commerce'
+      D: 'The Ministry of Finance'
+    answer: D
+    explanation: 'The budget is then approved by parliament (the House of Peoples'' Representatives).'
+
+  - uid: g12-economics-4-1-q021
+    type: numeric
+    difficulty: 2
+    stem: 'The marginal propensity to consume (MPC) is 0.8. What is the spending multiplier?'
+    answer: {value: 5, tolerance: 0}
+    explanation: 'k = 1 / (1 − 0.8) = 1 / 0.2 = 5.'
+
+  - uid: g12-economics-4-1-q022
+    type: numeric
+    difficulty: 2
+    stem: 'The reserve requirement ratio is 10%. What is the money multiplier?'
+    answer: {value: 10, tolerance: 0}
+    explanation: 'm = 1 / 0.10 = 10.'
+
+  - uid: g12-economics-4-1-q023
+    type: true_false
+    difficulty: 2
+    stem: 'Lowering the reserve requirement is an expansionary monetary policy.'
+    answer: true
+    explanation: 'Banks can lend a larger share of deposits, so money supply grows.'
+
+  - uid: g12-economics-4-1-q024
+    type: true_false
+    difficulty: 2
+    stem: 'Raising taxes is an example of expansionary fiscal policy.'
+    answer: false
+    explanation: 'Higher taxes reduce spending power, so it is contractionary.'
+
+  - uid: g12-economics-4-1-q025
+    type: true_false
+    difficulty: 1
+    stem: 'A budget surplus means government revenue is greater than government spending.'
+    answer: true
+    explanation: 'The opposite case is a deficit.'
+
+  - uid: g12-economics-4-1-q026
+    type: fill_in
+    difficulty: 2
+    stem: 'Central bank buying and selling of government bonds is called open ________ operations.'
+    answer: [market]
+    explanation: 'Open market operations change bank reserves and the money supply.'
+
+  - uid: g12-economics-4-1-q027
+    type: fill_in
+    difficulty: 1
+    stem: 'Government spending and taxation together make up ________ policy.'
+    answer: [fiscal]
+    explanation: 'The word comes from the Latin for "treasury".'
+
+  - uid: g12-economics-4-1-q028
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which actions would help reduce high inflation? Choose all that apply.'
+    options:
+      A: 'Raising the policy interest rate'
+      B: 'Cutting government spending'
+      C: 'Raising the reserve requirement'
+      D: 'Buying government bonds from banks'
+    answer: [A, B, C]
+    explanation: 'Buying bonds adds money to banks, which is expansionary.'
+
+  - uid: g12-economics-4-1-q029
+    type: matching
+    difficulty: 2
+    stem: 'Match each action with the type of policy.'
+    left:
+      L1: 'Raising the tax on fuel'
+      L2: 'Changing the reserve requirement'
+      L3: 'Removing rules that make it slow to start a business'
+    right:
+      R1: 'Monetary policy'
+      R2: 'Supply-side policy'
+      R3: 'Fiscal policy'
+      R4: 'Trade embargo'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Taxes are fiscal, the reserve ratio is monetary, and easier business start-up raises productive capacity (supply side). A trade embargo is not used here.'
+
+  - uid: g12-economics-4-1-q030
+    type: ordering
+    difficulty: 3
+    stem: 'The central bank raises its policy interest rate. Put the effects in order.'
+    items:
+      A: 'Inflation slows down.'
+      B: 'Loans become more expensive.'
+      C: 'Borrowing and spending fall.'
+    answer: [B, C, A]
+    explanation: 'Dearer credit reduces borrowing and spending, which cools demand and prices.'
