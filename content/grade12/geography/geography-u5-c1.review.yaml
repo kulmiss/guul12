@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-5-1-q001: {hash: '76ed886a59e2431e6c7ce7fb0034a59ff2ab0c297f270af3a1ab4eaa8ffd13dc', answer: B}
+  g12-geography-5-1-q002: {hash: 'ba98ad63e616daa7d5809836d51d2f62a6d87c9ee0c600628ac11d9a8a83613d', answer: 500}
+  g12-geography-5-1-q003: {hash: '1f90056fa2ee5e6fba8bcc747c7c90836ed8ed8b2fccd6d14cef351b122f9694', answer: C}
+  g12-geography-5-1-q004: {hash: '255734068589012bd27d0cb0926fd091ca107d6339e794a79b7c3e01bcebc9b7', answer: A}
+  g12-geography-5-1-q005: {hash: '95cd43c16b4a3cdff0d0a2e0bf240dfada373171c93e8c967489bdff1af74509', answer: D}
+  g12-geography-5-1-q006: {hash: '7d27e54235bcb0ef9898a6758691839be446962d0378dc3ea16467750f1aa7b8', answer: B, note: 'Factually inaccurate date: after Eritrean independence in 1993 Ethiopia kept using Assab (and Massawa) for most of its trade until the 1998-2000 border war. Djibouti became the main port from 1998, not 1993. Change stem to "Since 1998" or "Today".'}
+  g12-geography-5-1-q007: {hash: 'b6353ca7321545efcb479fa38ec28424438c71b08ddfd57cfec7ee8c5b0f041b', answer: A}
+  g12-geography-5-1-q008: {hash: '59e8f71cff23945b5a7c404fbb8dedeb220ed9bf859c6aeaff8b8a3dd1f662fb', answer: C}
+  g12-geography-5-1-q009: {hash: '82a250050d91fcb6705960c6e3d7fc1b69a091132950bdf6c0e0f581f601ecb7', answer: D}
+  g12-geography-5-1-q010: {hash: '8bf1255999d7235573934252138d58951acdbcdbed7d1c4d1cc834faa4e38cbc', answer: true}
+  g12-geography-5-1-q011: {hash: '3f7f0659e0c8fd9eccdb2fa44e531e13d74a32bff76fd7f26cf062f6e3ab9b48', answer: B}
+  g12-geography-5-1-q012: {hash: '6c14eef313ac139c7bb9c17c1eed84f8d4f8a239bcc2927eef9e2248d681db79', answer: [A, B, C]}
+  g12-geography-5-1-q013: {hash: 'dd3f387920c0a72905e16ce23403bbd0d28f10c4e70f15980f83a52937fd50f4', answer: 5}
+  g12-geography-5-1-q014: {hash: 'f0fd7ade010a47087e05194dedbcc54631f5fe03336ee10cbfd06741e3855cfa', answer: C}
+  g12-geography-5-1-q015: {hash: 'e904b72b31bfd33179be188cd50176211955650f749138094beff8b6d51e87b0', answer: A}
+  g12-geography-5-1-q016: {hash: '48881fdb99d7ce4631ef5fa8d00c4fbb079b67d9375eeecb38a437e473fb5b15', answer: D}
+  g12-geography-5-1-q017: {hash: 'fc89c2f34383b47665b9350abe3ec50e8e0e23d765a13a8d473f521974e784d6', answer: true}
+  g12-geography-5-1-q018: {hash: 'fb900f1f822e5d212e4100e26d07d6c496660406365756e05151c6886bf84233', answer: true}
+  g12-geography-5-1-q019: {hash: '626745cbcf4bbfa38e2fedfdeefc89bc05a66ed5f70221a8bfcdb54b011c9478', answer: 'landlocked'}
+  g12-geography-5-1-q020: {hash: '9145573c9729ced0af2068da22110a5fae4e6de0ef9b64fa59f6afe195fa440d', answer: 'drain'}
+  g12-geography-5-1-q021: {hash: 'a30e360dce0e4e15f599c01bca6fcba01b349284867b7a694a55cf20700be7ba', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-geography-5-1-q022: {hash: 'a48cf243af5e840fd42b3424aaf5dc97ad186245068b5b21af75da5ae69711c4', answer: [B, D, A, C]}
+  g12-geography-5-1-q023: {hash: '96002c594eff8bd3d5be8ee788a61baa88b3286e155ea8c6c7bc66f7ba891af9', answer: B}
+  g12-geography-5-1-q024: {hash: '7ae1ccf7fb67e0c5de4778391e677704217c85681c8a2efa3c0d8a5cae907f2e', answer: D}
+  g12-geography-5-1-q025: {hash: '03e6b558ad6bef0099dd835541033736534825a5625203c595a06a73b2692db1', answer: A}
+  g12-geography-5-1-q026: {hash: 'd87491869449a3a343be0206a3e12e01b4c5509edc342644b49df3f0f5b20ab9', answer: B}
+  g12-geography-5-1-q027: {hash: 'f7c34c415ec1600254ebe5cab2742580186d07dbc68d7feff03d98b58bad703d', answer: C}
+  g12-geography-5-1-q028: {hash: 'eeec036e57e3bcdcc10e36adbd7aa98f3ee569e898b8a9e621b88453f6828268', answer: false}
+  g12-geography-5-1-q029: {hash: '6cd12cb707ca4c99b082c7207b7b2c398aaec81067d0732b8c0ff1fb9c32df80', answer: A}
+  g12-geography-5-1-q030: {hash: '0065e1b28672e54b036d657e0074054495c314965d58473540b64822a82f7923', answer: D}

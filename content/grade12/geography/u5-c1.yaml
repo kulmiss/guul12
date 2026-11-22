@@ -4,7 +4,7 @@ summary:
     - 'Indicators: GDP and GNI per capita (income per person); the Human Development Index (HDI), published by the UNDP since 1990, which combines life expectancy, education and income on a scale from 0 to 1; and the share of people below the international poverty line set by the World Bank.'
     - 'Common challenges in low-income countries: rapid population growth, low farm productivity and dependence on rain-fed agriculture, poor roads, power and water supply, low levels of skills, unemployment (especially among young people), a large informal sector, debt, and dependence on exporting a few primary products.'
     - 'Dependence on primary exports (such as coffee, oilseeds or minerals) is risky because world prices go up and down; the terms of trade often favour manufactured goods.'
-    - 'Being landlocked raises trade costs. Since 1993 Ethiopia has had no sea coast and sends most of its trade through the port of Djibouti, linked by road and by the electric Addis Ababa–Djibouti railway.'
+    - 'Being landlocked raises trade costs. Since 1993 Ethiopia has had no sea coast; since the 1998–2000 war with Eritrea it has sent most of its trade through the port of Djibouti, linked by road and by the electric Addis Ababa–Djibouti railway.'
     - '"Brain drain" is the emigration of skilled people such as doctors and engineers, which reduces a country''s human capital.'
     - 'Development strategies include investing in education and health, infrastructure, irrigation and better farming, industrial parks and manufacturing, regional trade, and good governance.'
   formulas:
@@ -102,14 +102,14 @@ questions:
   - uid: g12-geography-5-1-q006
     type: single_choice
     difficulty: 2
-    stem: 'Since 1993, which port has handled most of Ethiopia''s foreign trade?'
+    stem: 'Today, which port handles most of Ethiopia''s foreign trade?'
     options:
       A: 'Mombasa'
       B: 'Djibouti'
       C: 'Port Sudan'
       D: 'Dar es Salaam'
     answer: B
-    explanation: 'After Eritrea''s independence Ethiopia became landlocked and has relied mostly on Djibouti.'
+    explanation: 'Ethiopia became landlocked in 1993. It still used the Eritrean port of Assab until the 1998–2000 war, and since then it has relied mostly on Djibouti.'
 
   - uid: g12-geography-5-1-q007
     type: single_choice
