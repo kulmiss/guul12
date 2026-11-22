@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-5-2-q012: {hash: 'a8def0eea8300a7e8e7c9791e39799b000fc0353193b19d446a9714167d5c5bd', answer: [A, B]}
+  g12-biology-5-2-q017: {hash: '27c717478d4d02d1ca55c55a31b740b14485482cb427fbcc8266102419c819ed', answer: 2.5}

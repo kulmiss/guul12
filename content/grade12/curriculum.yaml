@@ -208,6 +208,7 @@ subjects:
     chapters:
     - number: 1
       title: 'Climate change: causes, effects and responses'
+      file: biology/u6-c1.yaml
 - code: english
   textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-English-STB-2023-web.pdf
   units:

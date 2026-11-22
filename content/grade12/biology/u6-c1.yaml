@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'Weather is the day-to-day state of the atmosphere; climate is the average weather of a place over about 30 years or more. Climate change is a long-term shift in temperatures and weather patterns.'
+    - 'The main cause of today''s climate change is human activity that adds greenhouse gases: burning coal, oil and gas, cutting and burning forests, and farming (cattle and flooded rice fields release methane; fertilisers release nitrous oxide).'
+    - 'Evidence: the global average temperature has risen by about 1.1 °C since the late 1800s; glaciers and ice sheets are shrinking; sea levels are rising; heatwaves, droughts and floods are becoming more frequent or intense.'
+    - 'Effects on living things: habitats shift, species that cannot move or adapt may die out, coral reefs bleach, flowering and migration times change, and disease carriers such as malaria mosquitoes can spread to cooler highland areas that were once too cold for them.'
+    - 'Effects in Ethiopia include more frequent droughts and floods, harvest losses, water shortages, pressure on pastoralists in lowland areas such as the Somali and Afar regions, and the risk of malaria rising in the highlands.'
+    - 'Mitigation means reducing the causes: using renewable energy (hydropower, solar, wind), planting and protecting forests (carbon sinks), and using energy efficiently. Ethiopia''s Green Legacy initiative (from 2019) plants billions of tree seedlings.'
+    - 'Adaptation means coping with the effects: drought-tolerant crops and livestock, water harvesting, terracing to stop soil erosion, and early-warning systems.'
+    - 'International action: the UN Framework Convention on Climate Change (UNFCCC) and the Paris Agreement (2015), which aims to keep warming well below 2 °C and to try to limit it to 1.5 °C.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-biology-6-1-se01
+    problem: 'A school plants 400 trees. Each tree absorbs about 20 kg of carbon dioxide per year once grown. How much CO₂ will they absorb per year?'
+    steps:
+      - 'Total $= 400 \times 20$ kg.'
+      - '$= 8\,000$ kg, which is 8 tonnes of $\text{CO}_2$ per year.'
+    answer: '8 000 kg (8 tonnes)'
+  - uid: g12-biology-6-1-se02
+    problem: 'Classify each action as mitigation or adaptation: (a) building water-harvesting ponds; (b) replacing a diesel generator with solar panels.'
+    steps:
+      - '(a) It helps people cope with drought, a result of climate change: adaptation.'
+      - '(b) It reduces greenhouse gas emissions, a cause of climate change: mitigation.'
+    answer: '(a) adaptation; (b) mitigation'
+  - uid: g12-biology-6-1-se03
+    problem: 'Explain why warmer temperatures may increase malaria in highland towns.'
+    steps:
+      - 'Anopheles mosquitoes and the Plasmodium parasite develop poorly in cold conditions.'
+      - 'As highlands warm, mosquitoes can survive and breed there, so people with little immunity become exposed.'
+    answer: 'Warmer highlands allow mosquitoes and parasites to survive.'
+
+flashcards:
+  - {uid: g12-biology-6-1-fc01, term: Climate, definition: 'Average weather of a place over about 30 years or more.'}
+  - {uid: g12-biology-6-1-fc02, term: Climate change, definition: 'Long-term shift in temperatures and weather patterns.'}
+  - {uid: g12-biology-6-1-fc03, term: Carbon sink, definition: 'Something that absorbs more carbon than it releases, e.g. forests and oceans.'}
+  - {uid: g12-biology-6-1-fc04, term: Mitigation, definition: 'Reducing the causes of climate change, e.g. cutting emissions.'}
+  - {uid: g12-biology-6-1-fc05, term: Adaptation, definition: 'Adjusting to the effects of climate change, e.g. drought-tolerant crops.'}
+  - {uid: g12-biology-6-1-fc06, term: Paris Agreement, definition: '2015 treaty to keep warming well below 2 °C, aiming for 1.5 °C.'}
+  - {uid: g12-biology-6-1-fc07, term: Green Legacy, definition: 'Ethiopian tree-planting initiative launched in 2019.'}
+  - {uid: g12-biology-6-1-fc08, term: Carbon footprint, definition: 'Total greenhouse gases caused by a person, product or activity.'}
+  - {uid: g12-biology-6-1-fc09, term: Coral bleaching, definition: 'Corals lose their algae and turn white when water is too warm.'}
+
+questions:
+  - uid: g12-biology-6-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the difference between weather and climate?'
+    options:
+      A: 'They mean exactly the same.'
+      B: 'Weather is day-to-day conditions; climate is the long-term average.'
+      C: 'Climate changes every hour.'
+      D: 'Weather is measured only in summer.'
+    answer: B
+    explanation: 'Climate is usually averaged over at least 30 years.'
+
+  - uid: g12-biology-6-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the main cause of the climate change happening today?'
+    options:
+      A: 'Human activities that release greenhouse gases'
+      B: 'Changes in the Moon''s orbit'
+      C: 'Volcanoes only'
+      D: 'Planting too many trees'
+    answer: A
+    explanation: 'Burning fossil fuels and cutting forests have greatly increased greenhouse gases since the 1800s.'
+
+  - uid: g12-biology-6-1-q003
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which farming activities release greenhouse gases? Choose all that apply.'
+    options:
+      A: 'Keeping large numbers of cattle'
+      B: 'Growing rice in flooded fields'
+      C: 'Using large amounts of nitrogen fertiliser'
+      D: 'Planting trees around farms'
+    answer: [A, B, C]
+    explanation: 'Cattle and flooded rice fields release methane; fertilisers release nitrous oxide. Trees absorb carbon dioxide.'
+
+  - uid: g12-biology-6-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does cutting down and burning forests add to climate change?'
+    options:
+      A: 'Trees release oxygen when burned.'
+      B: 'Forests make the air colder.'
+      C: 'Burning releases stored carbon as CO₂, and fewer trees remain to absorb CO₂.'
+      D: 'Forests produce methane.'
+    answer: C
+    explanation: 'Forests are carbon sinks; destroying them both adds CO₂ and removes a sink.'
+
+  - uid: g12-biology-6-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'By about how much has the global average temperature risen since the late 1800s?'
+    options:
+      A: 'About 10 °C'
+      B: 'About 0.01 °C'
+      C: 'About 5 °C'
+      D: 'About 1.1 °C'
+    answer: D
+    explanation: 'Scientific assessments put recent warming at roughly 1.1 °C above pre-industrial levels.'
+
+  - uid: g12-biology-6-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which observation is evidence of global warming?'
+    options:
+      A: 'Mountain glaciers are shrinking in many parts of the world.'
+      B: 'The number of days in a year is falling.'
+      C: 'Sea levels are falling everywhere.'
+      D: 'The Sun is getting smaller.'
+    answer: A
+    explanation: 'Melting glaciers and ice sheets, and rising sea levels, show the Earth is warming.'
+
+  - uid: g12-biology-6-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Why may malaria spread to highland areas of Ethiopia as the climate warms?'
+    options:
+      A: 'Highland people stop using bed nets.'
+      B: 'Warmer temperatures let mosquitoes and the malaria parasite survive at higher altitudes.'
+      C: 'Malaria is caused by cold weather.'
+      D: 'Highlands get more snow.'
+    answer: B
+    explanation: 'Highlands used to be too cold for Anopheles mosquitoes to breed well.'
+
+  - uid: g12-biology-6-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Climate change can make droughts more frequent or severe in some regions.'
+    answer: true
+    explanation: 'Higher temperatures increase evaporation and change rainfall patterns.'
+
+  - uid: g12-biology-6-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is an example of climate change MITIGATION?'
+    options:
+      A: 'Growing drought-tolerant sorghum'
+      B: 'Building flood defences'
+      C: 'Using hydropower and solar energy instead of burning fossil fuels'
+      D: 'Setting up drought early-warning systems'
+    answer: C
+    explanation: 'Mitigation reduces greenhouse gas emissions. The others help people adapt to effects.'
+
+  - uid: g12-biology-6-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is an example of climate change ADAPTATION?'
+    options:
+      A: 'Replacing diesel buses with electric ones'
+      B: 'Planting forests to absorb CO₂'
+      C: 'Reducing fertiliser use to cut emissions'
+      D: 'Harvesting rainwater in ponds for the dry season'
+    answer: D
+    explanation: 'Adaptation helps people cope with impacts such as longer dry seasons.'
+
+  - uid: g12-biology-6-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'Ethiopia''s Green Legacy initiative is mainly about:'
+    options:
+      A: 'Planting tree seedlings across the country'
+      B: 'Building coal power stations'
+      C: 'Importing more cars'
+      D: 'Draining wetlands'
+    answer: A
+    explanation: 'Launched in 2019, it aims to restore forests, reduce erosion and absorb carbon.'
+
+  - uid: g12-biology-6-1-q012
+    type: numeric
+    difficulty: 2
+    stem: 'A youth group plants 500 trees. When grown, each absorbs about 20 kg of CO₂ per year. How many kilograms of CO₂ will the trees absorb in one year?'
+    answer: {value: 10000, tolerance: 0, unit: kg}
+    explanation: '$500 \times 20 = 10\,000$ kg, or 10 tonnes.'
+
+  - uid: g12-biology-6-1-q013
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the Paris Agreement on climate change adopted?'
+    answer: {value: 2015, tolerance: 0}
+    explanation: 'It was adopted in December 2015 at the UN climate conference in Paris.'
+
+  - uid: g12-biology-6-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main temperature goal of the Paris Agreement?'
+    options:
+      A: 'To cool the Earth by 5 °C'
+      B: 'To keep warming well below 2 °C and try to limit it to 1.5 °C'
+      C: 'To allow warming of up to 4 °C'
+      D: 'To stop all weather changes'
+    answer: B
+    explanation: 'Limiting warming to 1.5 °C would greatly reduce risks compared with 2 °C.'
+
+  - uid: g12-biology-6-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Corals turn white ("bleach") and may die when sea water becomes too warm. Why?'
+    options:
+      A: 'They grow too fast.'
+      B: 'The water becomes too salty.'
+      C: 'They lose the algae that live inside them and give them food.'
+      D: 'Fish eat their colour.'
+    answer: C
+    explanation: 'Corals depend on photosynthetic algae; heat stress makes them expel the algae.'
+
+  - uid: g12-biology-6-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which group in Ethiopia is especially vulnerable to longer and more frequent droughts?'
+    options:
+      A: 'City office workers'
+      B: 'Pupils on school holidays'
+      C: 'Airline pilots'
+      D: 'Pastoralists in lowland areas such as the Somali and Afar regions'
+    answer: D
+    explanation: 'Pastoralists depend on rain-fed pasture and water for their livestock.'
+
+  - uid: g12-biology-6-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Oceans and forests act as carbon sinks that absorb carbon dioxide from the air.'
+    answer: true
+    explanation: 'Forests absorb CO₂ by photosynthesis; oceans dissolve it (which also makes sea water more acidic).'
+
+  - uid: g12-biology-6-1-q018
+    type: single_choice
+    difficulty: 3
+    stem: 'A plant species lives only near the cool summit of a mountain. As the climate warms, what is most likely to happen to it?'
+    options:
+      A: 'It loses suitable habitat because it cannot move higher, so it may become extinct.'
+      B: 'It will spread down to the warm lowlands.'
+      C: 'It will be unaffected.'
+      D: 'It will turn into a different species within a year.'
+    answer: A
+    explanation: 'Species already at the top of a mountain have nowhere cooler to go.'
+
+  - uid: g12-biology-6-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Terracing hillsides in the Ethiopian highlands helps farmers mainly by:'
+    options:
+      A: 'Increasing greenhouse gases'
+      B: 'Reducing soil erosion and keeping more rainwater in the soil'
+      C: 'Making the hills steeper'
+      D: 'Removing all trees'
+    answer: B
+    explanation: 'Terraces slow run-off, so heavy rain carries away less soil and more water soaks in.'
+
+  - uid: g12-biology-6-1-q020
+    type: true_false
+    difficulty: 1
+    stem: 'Only rich countries are affected by climate change.'
+    answer: false
+    explanation: 'Climate change affects every country, and poorer countries often suffer most because they have fewer resources to adapt.'
+
+  - uid: g12-biology-6-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'Actions that reduce the causes of climate change, such as cutting emissions, are called climate change ________.'
+    answer: [mitigation]
+    explanation: 'The other kind of response is adaptation.'
+
+  - uid: g12-biology-6-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The total amount of greenhouse gases caused by a person or activity is called its carbon ________.'
+    answer: [footprint]
+    explanation: 'Walking, using less energy and wasting less food reduce a carbon footprint.'
+
+  - uid: g12-biology-6-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each greenhouse gas with a major human source.'
+    left:
+      L1: 'Carbon dioxide'
+      L2: 'Methane'
+      L3: 'Nitrous oxide'
+    right:
+      R1: 'Cattle and flooded rice fields'
+      R2: 'Nitrogen fertilisers'
+      R3: 'Burning fossil fuels'
+      R4: 'Solar panels'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Solar panels do not emit greenhouse gases when they produce electricity.'
+
+  - uid: g12-biology-6-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order to show how burning fuel can lead to crop failure.'
+    items:
+      A: 'More heat is trapped and average temperatures rise.'
+      B: 'Fossil fuels are burned for energy.'
+      C: 'Droughts become more frequent and harvests fail.'
+      D: 'Carbon dioxide builds up in the atmosphere.'
+    answer: [B, D, A, C]
+    explanation: 'Emissions → more CO₂ → enhanced greenhouse effect → warming and drought → crop losses.'
+
+  - uid: g12-biology-6-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which personal action best reduces a student''s carbon footprint?'
+    options:
+      A: 'Leaving lights on all day'
+      B: 'Burning plastic waste'
+      C: 'Walking or cycling short distances instead of using a car'
+      D: 'Cutting trees for firewood every day'
+    answer: C
+    explanation: 'Walking and cycling produce no fuel emissions.'
+
+  - uid: g12-biology-6-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Most of Ethiopia''s electricity comes from hydropower. Why is this good for the climate?'
+    options:
+      A: 'Hydropower makes it rain more.'
+      B: 'Hydropower burns coal cleanly.'
+      C: 'Hydropower stops all droughts.'
+      D: 'Generating electricity from flowing water releases very little greenhouse gas.'
+    answer: D
+    explanation: 'Hydropower is a renewable source that does not burn fuel.'
+
+  - uid: g12-biology-6-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Some animals now breed or migrate earlier in the year than they used to. This is best explained by:'
+    options:
+      A: 'Warmer springs caused by climate change'
+      B: 'Changes in the length of the day'
+      C: 'Fewer predators'
+      D: 'More moonlight'
+    answer: A
+    explanation: 'Many species time their life cycles by temperature, so warming shifts these events earlier.'
+
+  - uid: g12-biology-6-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is planting drought-tolerant crop varieties useful for Ethiopian farmers?'
+    options:
+      A: 'They make the climate cooler.'
+      B: 'They can still give a harvest when rainfall is low.'
+      C: 'They need more water than other crops.'
+      D: 'They grow only in the rainy season.'
+    answer: B
+    explanation: 'This is adaptation: it protects food supplies against drought.'
+
+  - uid: g12-biology-6-1-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'Which international body coordinates global negotiations on climate change?'
+    options:
+      A: 'The World Cup committee'
+      B: 'The African Union Football Federation'
+      C: 'The UN Framework Convention on Climate Change (UNFCCC)'
+      D: 'The International Olympic Committee'
+    answer: C
+    explanation: 'Countries meet each year at UNFCCC conferences (COPs) to agree climate action.'
+
+  - uid: g12-biology-6-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about climate change is correct?'
+    options:
+      A: 'It is caused only by natural factors.'
+      B: 'It will only affect polar bears.'
+      C: 'Nothing can be done about it.'
+      D: 'Both reducing emissions and adapting to its effects are needed.'
+    answer: D
+    explanation: 'Mitigation limits future warming; adaptation reduces harm from warming that cannot be avoided.'

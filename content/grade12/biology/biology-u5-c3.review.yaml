@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-5-3-q001: {hash: 'ec9a6b0c3f4007a520881b8e458ddaa2b1ed25b247e04afe09531c951a414cb5', answer: B}
+  g12-biology-5-3-q002: {hash: '2ee48a41f7d305aa1be9985332943ccbe18b50531f9585ce20fcc19a94c757c7', answer: A}
+  g12-biology-5-3-q003: {hash: '31b34d76af1fe75ed3ae45505ff593317186253e574b3a8742722e66b0ccdf42', answer: C}
+  g12-biology-5-3-q004: {hash: '7e58dda1b53c66b984eb0fcb1263dcaa7dfddcedbb142f2a10a9fd6801b4ccb7', answer: D}
+  g12-biology-5-3-q005: {hash: '9ef0cf53c77084d2c31bd924521e3c0b8c56629b0374cc1eb216d52b14f83974', answer: 4900}
+  g12-biology-5-3-q006: {hash: '5cbc7804b0a2f48a14c54a1a15bca4996f91997cb619e19af8c027068e0a5649', answer: 80}
+  g12-biology-5-3-q007: {hash: '6f594c0e58b29fc6f5853e89c7ab1fd0ae9754d2460075857e787b6d9a1c93c5', answer: A}
+  g12-biology-5-3-q008: {hash: '003d05a24b3b783a39583ada08047d89c96c9a6f08efb119a10f5520ae708e0f', answer: C}
+  g12-biology-5-3-q009: {hash: '46f3e856cf2ea0e2d77a358533002dc6885e8a6405abf41d17a0d87c55656a45', answer: D, note: 'Correct only in the ABO system. With the Rh factor, O+ blood cannot safely go to Rh-negative people (only O-negative is the universal donor), so "safely" is too strong. Suggest saying "considering only the ABO system" or using "O negative".'}
+  g12-biology-5-3-q010: {hash: 'cf8a54b330a37fe39f785a21687089a63171dc632a2759f2b85838de265c17ea', answer: true}
+  g12-biology-5-3-q011: {hash: '339e75c97f334e5e0c82ff06b58845d19700d860a753a9683be5ad96e8e06bad', answer: [C, D, A, B]}
+  g12-biology-5-3-q012: {hash: 'a04f1e210e7df89bec9b6ea47edb24f5a3aaf0464a6e862ec95117beefc612e6', answer: A}
+  g12-biology-5-3-q013: {hash: '261584c5fb94d1bb4b09e041d8b5ad19699166087545249a3f2157b94243c866', answer: C}
+  g12-biology-5-3-q014: {hash: '3e4822bf2c9b8a71979608edf12d4f49c105b5514a907329c75d54636d7fc21e', answer: [A, B, C]}
+  g12-biology-5-3-q015: {hash: 'b67b51ce5aab1f810bf16a9c2b576481a261ae825b0c611bf711b2e2a963a28a', answer: D}
+  g12-biology-5-3-q016: {hash: '4bb014a1223f04c7ed41444f2223a03475c0d81785f648e11671d4c2d278b6b0', answer: B}
+  g12-biology-5-3-q017: {hash: '6dee33350a71e701275223244a7232081050ec7c047bc7e6edf1e84bafede08d', answer: C}
+  g12-biology-5-3-q018: {hash: '89d491afcc8cb025111ec75434c59969b2a92cbf68f59591cae20ce5fa5db967', answer: D, note: 'Minor: the ureter (option C) is not part of the nephron, so the stem "part of the nephron" does not fit all options. The answer is still clear.'}
+  g12-biology-5-3-q019: {hash: '5bbf9a75ee765ec2ea4f0e858dea0fc93e249e76ef1c1d1ca3aa5b6362486891', answer: false}
+  g12-biology-5-3-q020: {hash: '6c64327c34f1f3954de1e4e7351d29d6a2d52e2adc27bea12f99cddb8a691454', answer: A}
+  g12-biology-5-3-q021: {hash: '89f2ea5f30fac5b8ce4ec8e7d3d089308f8b068d2f4b6b11c73a11eb6993c643', answer: 'aorta'}
+  g12-biology-5-3-q022: {hash: 'fe83893f72f5a4a0a3ef6214a509d1545fcce4fc89b3aaffe3cc901d23e121fd', answer: 'nephrons'}
+  g12-biology-5-3-q023: {hash: '7f9662dcd02bafa1d8f9a2bda23f1f5be61c935cdcaeefe67c10c2aa1f27ef32', answer: true}
+  g12-biology-5-3-q024: {hash: '743d993240148b0fb5e596ed0846a6b768407491372c03fc279fe9acb48d4fcd', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-biology-5-3-q025: {hash: '99ec8461960ae958bbf0594876ff6c1c3b9526d9e26263c32aa504b837f6cb3f', answer: B}
+  g12-biology-5-3-q026: {hash: '8ed427c60e75608259b2ee4907376ae9f074af99f5d5a81d1a4c84e486579a55', answer: C}
+  g12-biology-5-3-q027: {hash: '9c27a22b08b37d6d90bc8e10d8762d64d9878d7049fbf312fb04e7feb2644083', answer: D}
+  g12-biology-5-3-q028: {hash: '403778229e5f0f75012d3c830bdfb0abeaf81ff75f6ff56f1b2675622bab24fd', answer: A}
+  g12-biology-5-3-q029: {hash: '220e7e55ad0599469a3512c5d4befaae90ad3b2ade73a2487c303411683bdcb5', answer: B}
+  g12-biology-5-3-q030: {hash: '1bd400e4872cd12e6ffd173949ad39baa73d1f532f30303caf026b9dd57c29a5', answer: C}
