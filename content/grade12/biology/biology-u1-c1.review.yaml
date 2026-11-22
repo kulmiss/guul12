@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-1-1-q001: {hash: '6eccfa36e698c20fc15a54abf3760b15aae6fad324f01d2aa120e3fa5ef83b50', answer: B}
+  g12-biology-1-1-q002: {hash: '391dbae4cf904f6d123c25a11db80940dcb3ae6c0fcb1dd1db4aeb283fe78052', answer: A}
+  g12-biology-1-1-q003: {hash: '030919da4cb793ea342d687621f2fed7e1617c1d9aac6c7fc657abf51b614273', answer: C}
+  g12-biology-1-1-q004: {hash: '8e6e8b12637d69cf7974b269c6e9c733b21125b466db8096ce1f65e2fa2e5920', answer: D}
+  g12-biology-1-1-q005: {hash: '25e2705848f09225ece91ef10adc4fdae60fbe6b9e2dacf899f74481407d0f6b', answer: A}
+  g12-biology-1-1-q006: {hash: '42849b52bda484006a16507cc4621dca0c7f3ec79096046ee9bcff5e031e6361', answer: B}
+  g12-biology-1-1-q007: {hash: 'd8b24a1790f83cb5e98aa3c083d7fbcbb434ab67462da08a2166c4f72c4854c5', answer: C}
+  g12-biology-1-1-q008: {hash: '2781d2e04178c35e96df6eafcad238d928beadecbc30e8a3606b35db369be91b', answer: true}
+  g12-biology-1-1-q009: {hash: '205767080e5cd5192f833cb4de1ce627b5bf5c6fbd73861b29dd030db0357177', answer: A}
+  g12-biology-1-1-q010: {hash: '161899f4b46e563dabe02884ab0ff80bf84535589ebfda21f5709ce7de247a09', answer: D}
+  g12-biology-1-1-q011: {hash: '61e7c4f17e6161dce658e5c52aea5a3a20239bec6be3fd4761d1244a41527098', answer: B}
+  g12-biology-1-1-q012: {hash: '26ff51a84549ea09a83bb22d5df8683360d176486f119f9e28a259325674b515', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-biology-1-1-q013: {hash: '071cc915928b96e90ed35eef403365d94854a1188a51384224c260bfc3354bcf', answer: C}
+  g12-biology-1-1-q014: {hash: 'b7ca5942da061204993c87763dcacdfa0b6d0a69b3012df5915de6b78b1ae890', answer: [A, B, C], note: 'Minor: the gelada is usually called endemic to Ethiopia, but some sources mention old or unconfirmed records from Eritrea. The definition in the stem says "found naturally nowhere else", so a careful student could hesitate on B. Consider wording such as "endemic to the Ethiopian highlands" or explaining it in the hint.'}
+  g12-biology-1-1-q015: {hash: 'a31c94903cc4b56e5bb751bebed88acfad932dd00a577f2d8202c4d1409a7908', answer: A}
+  g12-biology-1-1-q016: {hash: 'f9c9b4b2888bb8242935ff85aa93f59a42e1c2e15cc32ece218ae5ab471f0156', answer: D}
+  g12-biology-1-1-q017: {hash: '8f001fa9630761b7b151b387b20feacc7bb735ca61827d69b476f228d2e764ac', answer: false}
+  g12-biology-1-1-q018: {hash: '90bf18b80d6b008819677e751d1ffd6b407aef3b6084336721be396eca7080b0', answer: B}
+  g12-biology-1-1-q019: {hash: 'c92c6dcdd6bf302e706bf8f79512172f40ef74c6b72bdd6a09443409d61206ed', answer: C}
+  g12-biology-1-1-q020: {hash: '750f7fda4746477bcc277346c6db7cd05bc783d478b498dd3e55b41b27ab25af', answer: 50}
+  g12-biology-1-1-q021: {hash: 'a58a6bd5d39c25fa54fc7792c436a98e3fa54e777452f94d2b468d5e7b336adf', answer: 1928}
+  g12-biology-1-1-q022: {hash: '34e601e9ad50e445c377cb4a17e0180fbbea56cbe69c6e5a9628fb2085a76cee', answer: 'pasteurisation', note: 'Accept the US spelling "pasteurization" as well.'}
+  g12-biology-1-1-q023: {hash: '1e82a8224c61da8929a2a1e0fe7d9b4481eeff1efdfd569e087a093faa7c5f54', answer: 'endemic'}
+  g12-biology-1-1-q024: {hash: '48a00fb6f7bc62f1c0c1ae4e6c79a004fc4af4e5cb859842a25c46ec98c73838', answer: true}
+  g12-biology-1-1-q025: {hash: 'db599f4568cc05b45d886843ac90d059ada6d5788ab6b684fa198a6d25940794', answer: [B, D, A, C]}
+  g12-biology-1-1-q026: {hash: '3e70a30e8f761e42929ab8ed3a80ae23d3476171b518551f3829f2a047249285', answer: A}
+  g12-biology-1-1-q027: {hash: '3019cbf4235a4dbf2eae418127f49fde7419562127917187d7fc45384473e3b0', answer: D}
+  g12-biology-1-1-q028: {hash: '212e1b438bf3b05e04a064e2e8bf21cffa62b7822c269f5a88bbea8d539fae4c', answer: B}
+  g12-biology-1-1-q029: {hash: 'ada5361fc762d11a7b9eb9bf27a5014e1172adb965f73589267d4e59d4db1f91', answer: C}
+  g12-biology-1-1-q030: {hash: '7a6e28dedcf7f2f0e74fce1537898dead6cfef84a9b06b340c8d244311a38394', answer: A}

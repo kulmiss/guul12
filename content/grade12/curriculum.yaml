@@ -169,6 +169,7 @@ subjects:
     chapters:
     - number: 1
       title: Bacteria, viruses and fungi
+      file: biology/u2-c1.yaml
     - number: 2
       title: Microorganisms, health and industry
   - number: 3
