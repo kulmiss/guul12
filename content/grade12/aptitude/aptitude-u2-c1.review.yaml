@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-aptitude-2-1-q001: {hash: 'fd78848078733ec3b308d53f118dd18ab67b142dca7d635be2646f6dec0ef79c', answer: B}
+  g12-aptitude-2-1-q002: {hash: '601ad12e055ca24d7d57df19b49a940723ebc33d4f1dbd8ceae0cb81fa18d4c0', answer: A}
+  g12-aptitude-2-1-q003: {hash: '6a24df4c0c45fb8e57bcc5b43930043f7beec841e9e27562b9e3924e9f1c8308', answer: C}
+  g12-aptitude-2-1-q004: {hash: 'dcc5156bd2ea3f165379afef26bdd444ed0871f19b6655580511db0ad6d8b1cf', answer: D}
+  g12-aptitude-2-1-q005: {hash: '01de6eb900ad25084cdda9e161a3dcda3cfe397690deb568cdc122feac21fb2a', answer: 37}
+  g12-aptitude-2-1-q006: {hash: 'e3c1b182905a81205f96bb64d0c65d519987ef9b9f91cc121c946ee18b7ff3bf', answer: B}
+  g12-aptitude-2-1-q007: {hash: 'e506e8669e767c62897a7d65d7257f6e11f2f3a05684e9bc2563e5e47685aae1', answer: C}
+  g12-aptitude-2-1-q008: {hash: 'a6567c02f70f6731dd165804e5e9991d11c56f969926a350776e2500e8439694', answer: A}
+  g12-aptitude-2-1-q009: {hash: 'ca171ba543490f8f0d07ce723eaf34f03fdbc3368849f4b3b4c8dae01d2609f9', answer: D}
+  g12-aptitude-2-1-q010: {hash: '14fd861878126941eea4dbf59124554f16b0bf5084e1d62132a2d1249ef25f67', answer: 125}
+  g12-aptitude-2-1-q011: {hash: '670d1b628866a5960e24f49f59ce6302f3a1fa56e202f51b63430537250024ef', answer: B}
+  g12-aptitude-2-1-q012: {hash: '118006678764f1137dc2b3e31a9fad16ee8720d6f408985f271073e64753823a', answer: C}
+  g12-aptitude-2-1-q013: {hash: 'ed9d526e72751391307d82ef327431f8c14db3c8fa5395fef77ac60030afdc3a', answer: A}
+  g12-aptitude-2-1-q014: {hash: 'eec15ec9740788639b2e6fc4ea638dea6eec7be8a969e19195836387bfd58d9f', answer: 500}
+  g12-aptitude-2-1-q015: {hash: '1d51413b607f0b4267f76af390befb5e11b3b4ab940d52c536f97ce0da332aee', answer: C}
+  g12-aptitude-2-1-q016: {hash: '8b88b0cde4c9f7c699ecc6b2e4fa63173ec81852117850af5d9227c5b79e827a', answer: D}
+  g12-aptitude-2-1-q017: {hash: '4a79dbc356339cfc85fd0384290c03b95b569d36a737e4daaf68cc3dd5bebe9e', answer: B}
+  g12-aptitude-2-1-q018: {hash: '54a1a90a3debd6092f6215819659748c9c7e40a50466a2b4fd3c71b9bda27944', answer: A}
+  g12-aptitude-2-1-q019: {hash: 'd68d75a78ce2179c1905124598eb14eae98daf0b0751a8d88f7b5600b8c11f3d', answer: true}
+  g12-aptitude-2-1-q020: {hash: '82b6532768f4a554f8a3be24f56842000d94cbd4955bce6ef07248a88c768a2a', answer: false}
+  g12-aptitude-2-1-q021: {hash: '9e1ae8af7be6927e85be97bca91134f94805e63198fa070641c53f81677a699f', answer: true}
+  g12-aptitude-2-1-q022: {hash: 'd024e58c8b32f7acd825ea4062936472e1333b075f04bdc50fe77438456b8849', answer: [A, C]}
+  g12-aptitude-2-1-q023: {hash: '2017a7389cb2ed47ffe721dcc60fd2b73511f36b3b83be8a1ad1392df83c756d', answer: '50'}
+  g12-aptitude-2-1-q024: {hash: '327bd6a2d48340df1a03ceb3226f0ef200011d622a22cb1f760f8cfcac75319b', answer: '162'}
+  g12-aptitude-2-1-q025: {hash: '0cfc4c73507ebfde98e0a0b0c62fd8b3461b4cf92c49e49a0c59e4b753999362', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-aptitude-2-1-q026: {hash: '0ddf71df85cc39dde508238b9d7b79c5c59c133179cef4d007c5dda6dee1fc55', answer: [D, B, A, C]}
+  g12-aptitude-2-1-q027: {hash: 'f29ce282a010e39ee759ca82f9985a2c898b01fba2aecebd0c79ea31965f5032', answer: D}
+  g12-aptitude-2-1-q028: {hash: 'dad25a041c80e492df2965f343f6310023c289a2ac99c201bb201f3525c8f84c', answer: B}
+  g12-aptitude-2-1-q029: {hash: '42c5aec4c18bf876a5c8507a32686ba4a9dc9788d3fcd6519d165f124b07d0ec', answer: C}
+  g12-aptitude-2-1-q030: {hash: 'e3d38230c1284911512806d76fff61c9214c4712196f0079f0d03a610c9821c7', answer: A}
