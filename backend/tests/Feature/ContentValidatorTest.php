@@ -125,8 +125,14 @@ class ContentValidatorTest extends TestCase
         $this->editQuestion(0, ['options' => ['A' => 'x', 'C' => 'y', 'D' => 'z']]);
         $this->assertError('option letters must be A, B, C');
 
-        $this->editQuestion(0, ['options' => ['A' => 'Same', 'B' => 'same ', 'C' => 'Other']]);
+        $this->editQuestion(0, ['options' => ['A' => 'Same', 'B' => ' Same ', 'C' => 'Other']]);
         $this->assertError('two items say the same thing');
+
+        // Capital-letter and apostrophe questions: case and a final apostrophe change the answer.
+        foreach ([['We visited Lalibela.', 'we visited lalibela.', 'Other'], ['girls', 'girls\'', 'girl\'s']] as [$a, $b, $c]) {
+            $this->editQuestion(0, ['options' => ['A' => $a, 'B' => $b, 'C' => $c], 'answer' => 'A']);
+            $this->assertSame([], $this->errors(), "options differ: {$a} vs {$b}");
+        }
 
         $this->editQuestion(0, ['options' => ['A' => '$F(b) - F(a)$', 'B' => '$f(b) - f(a)$', 'C' => 'Other'], 'answer' => 'A']);
         $this->assertSame([], $this->errors(), 'letter case inside maths matters');
@@ -136,7 +142,7 @@ class ContentValidatorTest extends TestCase
             $this->assertSame([], $this->errors(), "symbols matter: {$a} vs {$b}");
         }
 
-        $this->editQuestion(0, ['options' => ['A' => 'Red.', 'B' => '"red"', 'C' => 'Blue']]);
+        $this->editQuestion(0, ['options' => ['A' => 'Red.', 'B' => '"Red"', 'C' => 'Blue']]);
         $this->assertError('two items say the same thing');
 
         // Punctuation questions: commas inside the text change the answer.

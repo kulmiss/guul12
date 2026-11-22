@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-4-1-q001: {hash: '94c478e64b9f9738ea4864414a0dc11e67422d57a854f859a99ddd9ead157d98', answer: B}
+  g12-english-4-1-q002: {hash: '7a73be462c58aed50df52f570d9aaf1a21ed370c72d906b564627872d35c026d', answer: D}
+  g12-english-4-1-q003: {hash: '84ca671dafb7dd514db8acddcfdf6ae5122d035299cb5b9c4605f660d3f45ee9', answer: B}
+  g12-english-4-1-q004: {hash: 'b009b4adcf8a293cccd18cdf765d179a77c9ac5b57b441fc1b11aed0f6dc8f41', answer: A}
+  g12-english-4-1-q005: {hash: 'f33566de978ad13c8afbef618420f525423e225d38239678f445262509fd0c04', answer: C}
+  g12-english-4-1-q006: {hash: 'f844c9929aa5f473e23c35ce6ae88be08bb0319a4b29bd81ef395943b96772fe', answer: C}
+  g12-english-4-1-q007: {hash: 'a528e9ffbc46569bd5daae4360df3cf7fc4e9b8ba065ea9f45336ec14a63ae22', answer: D}
+  g12-english-4-1-q008: {hash: 'f7b352242ea3d1d45b4d98d1e667ae8248be45758010117ff0598b9050649ba1', answer: A}
+  g12-english-4-1-q009: {hash: '088b46d79c9eb993ec89a3fdf5c23448fe9691046bac74df7024deacf5d2609d', answer: B}
+  g12-english-4-1-q010: {hash: 'af1cea7c758f05e0e915dcbc55034ef9aa873679f711853f39faff34f5516dfb', answer: C}
+  g12-english-4-1-q011: {hash: 'f7af223300bd737a7dfe3a86647464064095dd0e407bb2247ba8b4e2f07ef6e5', answer: A}
+  g12-english-4-1-q012: {hash: '9ed3e00701a74bcd297ad2e8585654f85ee0d5a75fef2c3fb98d345abbc69d9a', answer: D}
+  g12-english-4-1-q013: {hash: '7dbdf15867e601e932e2a81300bb01c403a67649c0a06a4862a2e40cc35986c7', answer: true}
+  g12-english-4-1-q014: {hash: '10811a0f627c2c9085a74e98eef68c8f643b7d5b0f53612efe2e1d9342d4a73e', answer: false}
+  g12-english-4-1-q015: {hash: 'be7c14c73ba28bb3b555ab2da41de9dcaff7ffaf9e1ce6f03e428caaafef677a', answer: B}
+  g12-english-4-1-q016: {hash: 'bf4f294d35e6140c6f12b636501d7215304deff03ac43e8116367d7cdb969ab9', answer: [A, B, C]}
+  g12-english-4-1-q017: {hash: '82bf61942e5fca1d3cea854a01ed9c991a4776ac232651720cf3b5246d5a9d8c', answer: C}
+  g12-english-4-1-q018: {hash: '10f13fa6615a07364486701a3f7d2c65659a6c8b1edddc668449c1a5fee0967f', answer: 'making'}
+  g12-english-4-1-q019: {hash: 'f856116b72da544f4a5bc00c208e3e69b7e63511b2a18ca52a04fc8083c5be53', answer: 'stopped'}
+  g12-english-4-1-q020: {hash: '41bcc5865207018a51f16c733ea8e2b76839fbd02b3e79cade0db8e408f6ee9e', answer: B, note: 'Minor: B is the only correct option, but it assumes the writer has only one sister. With several sisters the restrictive form "My sister who lives in Gode is a nurse." (no commas) would also be correct. That form is not offered, so the key is safe. Consider adding "(I have only one sister.)" to the stem.'}
+  g12-english-4-1-q021: {hash: '7b5d6e82d9cf7b60bbfe8f151c552826c41695ef823ace9773ae956056b8d65f', answer: D}
+  g12-english-4-1-q022: {hash: '4faa88b7f2474109b29a2c08bc080219e2d460a20fe3b4c13c6c709c6a3720ff', answer: true}
+  g12-english-4-1-q023: {hash: 'e5bb41c6fe409e3d9274fa4ae1b1aeb0b2750637ad0db3b884fe9afdd0dcdcc0', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-english-4-1-q024: {hash: 'f90f5b69c0ff4069442092fb8656788cdd5175c6073117394e82cf2f9eddafaa', answer: [B, C, D, A]}
+  g12-english-4-1-q025: {hash: '88e9f536bfdaee73c185546cfee64bf46fde923929ec44aa63667a85505d878f', answer: C}
+  g12-english-4-1-q026: {hash: '9b167f8ed771517b006ef79fea85a0725515fd16fbf302c678a418e4dbb3be37', answer: B}
+  g12-english-4-1-q027: {hash: 'b0959770edfc134523a3dfc5a1b104445f306bc538623a5cd52830090bbd59b0', answer: C}
+  g12-english-4-1-q028: {hash: '961a6f544859bb2db321cb902a9b0eeb70b437968ab5d61e62b262751b53c32f', answer: A}
+  g12-english-4-1-q029: {hash: 'd88727566bd51db74e605728190ecba3bcc910ac7ee701205531911941f6e64b', answer: D}
+  g12-english-4-1-q030: {hash: '26fce0bffd2473ab8d107a8ae00d153ee64aa34b4e47efa92b5dda88722d1e4a', answer: A}

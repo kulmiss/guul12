@@ -157,7 +157,7 @@ questions:
     options:
       A: 'Camels can survive without water for many days.'
       B: 'Solar lamps are cheap in Jigjiga.'
-      C: 'A family makes sacrifices during a drought so that a daughter can continue her education.'
+      C: 'During a hard drought, a girl keeps studying for her exam with her family''s support.'
       D: 'District offices should send more tankers.'
     answer: C
     explanation: 'The story centres on the family''s choices during the drought and Ifrah''s studies.'
@@ -287,7 +287,7 @@ questions:
     options:
       A: 'Banning phones completely'
       B: 'Allowing phones at all times'
-      C: 'Allowing phones only under clear rules set by the teacher'
+      C: 'Allowing phones only under clear rules for their use'
       D: 'Giving every student a new phone'
     answer: C
     explanation: '"The answer ... is not to ban phones completely but to set clear rules for their use."'
@@ -401,7 +401,7 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'Reading quickly to get the general idea of a text is called ________.'
-    answer: [skimming, skim]
+    answer: [skimming, skim, skim reading, skim-reading]
     explanation: 'Skimming gives the gist; scanning finds details.'
 
   - uid: g12-english-3-1-q028
@@ -430,11 +430,11 @@ questions:
   - uid: g12-english-3-1-q030
     type: ordering
     difficulty: 2
-    stem: 'Put these steps for answering a reading exam in a sensible order.'
+    stem: 'You are answering ONE multiple-choice question about a passage. Put these steps in a sensible order.'
     items:
-      A: 'Read the questions.'
-      B: 'Skim the passage for the general idea.'
-      C: 'Check your answers against the text.'
-      D: 'Scan the passage for the details each question needs.'
-    answer: [B, A, D, C]
-    explanation: 'Get the gist, see what is asked, find the evidence, then check.'
+      A: 'Mark your chosen letter on the answer sheet.'
+      B: 'Read the question carefully.'
+      C: 'Compare each option with that part of the passage.'
+      D: 'Find the part of the passage that the question is about.'
+    answer: [B, D, C, A]
+    explanation: 'Understand what is asked, locate the evidence, compare the options with it, and only then mark your answer.'
