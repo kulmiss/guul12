@@ -1,18 +1,31 @@
 # PROGRESS
 
-📍 Phase 2 of 5 · Step 6 of 6: all Grade 12 content, summary PDFs, fixed mocks, Phase 2 report → next: owner test of PR #2 (after PR #1), then Phase 3 (exams, adaptive practice, spaced repetition)
-📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left (past papers wait for the owner's PDFs)
-📊 Whole project: ▓▓▓▓▓░░░░░ 50% done · 50% left
-⚠️ Waiting for: owner test + merge of PR #1 and PR #2; past-paper PDFs + permission letter
+📍 Phase 3 of 5 · Step 8 of 8: exams, adaptive practice, mistakes, spaced repetition, study plan, Phase 3 report → next: Phase 4 (engagement, ads, AI help, Premium)
+📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
+📊 Whole project: ▓▓▓▓▓▓▓░░░ 66% done · 34% left
+⚠️ Waiting for: owner test + merge of PR #1, #2, #3 (in that order); `NOVA_USERNAME` / `NOVA_LICENSE_KEY` GitHub secrets for the Nova CI step
 
 | Phase | Weight | Status |
 |---|---|---|
 | 0 Research + plan | 4% | ✅ done |
 | 1 Backend core + app core | 24% | ✅ done — waiting for owner test (PR #1) |
 | 2 Content + quality gate + Grade 12 | 22% | ✅ done — waiting for owner test (PR #2) |
-| 3 Exams + adaptive + SRS | 16% | not started |
+| 3 Exams + adaptive + SRS | 16% | ✅ done — waiting for owner test (PR #3) |
 | 4 Engagement + ads + AI + Premium | 20% | not started |
 | 5 Landing + ops + store + Nova | 14% | not started |
+
+## Phase 3 steps
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Backend: mock list/download (Premium check), exam results by chapter, "better than X%" after 30 students, answer history | ✅ |
+| 2 | Random mock from the bank: 1 per Ethiopian day free, no answer-key patterns | ✅ |
+| 3 | App: Exams tab, Real Exam Mode (no pause, flags, question map), result + review, estimated score range | ✅ |
+| 4 | Nova ON (tested with Nova 5.7.6, 4 bugs fixed) + MySQL 8 CI job | ✅ |
+| 5 | Mistakes notebook + spaced repetition (1, 3, 7 days) | ✅ |
+| 6 | Smart practice, chapter strength, weak topics, Progress tab | ✅ |
+| 7 | Automatic study plan + last-30-days revision mode | ✅ |
+| 8 | CI green, Phase 3 report | ✅ 179 backend + 264 app tests |
 
 ## Phase 2 steps
 
