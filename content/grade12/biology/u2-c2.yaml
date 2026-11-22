@@ -1,0 +1,375 @@
+summary:
+  key_points:
+    - 'Pathogens are microorganisms that cause disease. Bacterial diseases include tuberculosis (spread through the air), cholera and typhoid (spread by contaminated water and food) and tetanus (from soil entering wounds). Viral diseases include HIV/AIDS, measles, polio, influenza and COVID-19. Fungi cause ringworm, athlete''s foot and thrush.'
+    - 'Malaria is caused by a protozoan, Plasmodium, carried by female Anopheles mosquitoes. Bed nets, removing standing water and prompt treatment reduce it.'
+    - 'HIV attacks helper T-cells (CD4 cells) of the immune system. It spreads through infected blood, unprotected sex and from mother to child; it does NOT spread by shaking hands, sharing food or mosquito bites. Antiretroviral drugs (ART) control it but do not cure it.'
+    - 'The body defends itself with skin, mucus, white blood cells and antibodies. Active immunity: the body makes its own antibodies (after infection or a vaccine) and it lasts long. Passive immunity: ready-made antibodies are received (from mother''s milk or an injection) and it is short-lived.'
+    - 'Prevention: vaccination, clean water and sanitation, hand washing, safe food, and oral rehydration solution (ORS) to replace water and salts lost in diarrhoea.'
+    - 'Useful microbes: yeast makes bread rise and ferments drinks; lactic acid bacteria make yoghurt and ergo (fermented milk); fermentation of teff batter gives injera its sour taste. Penicillium produces penicillin; engineered bacteria make insulin.'
+    - 'Microbes also decompose dead matter and recycle nutrients, produce biogas (mainly methane) from animal dung in digesters, treat sewage, make compost and clean up pollution (bioremediation).'
+  formulas:
+    - label: Anaerobic respiration in yeast
+      latex: '\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2'
+    - label: Lactic acid fermentation
+      latex: '\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_3\text{H}_6\text{O}_3'
+
+solved_exercises:
+  - uid: g12-biology-2-2-se01
+    problem: 'Explain why boiling drinking water helps prevent cholera.'
+    steps:
+      - 'Cholera is caused by the bacterium Vibrio cholerae, spread in water contaminated with faeces.'
+      - 'Boiling kills the bacteria, so the water no longer carries the disease.'
+    answer: 'Boiling kills the cholera bacteria.'
+  - uid: g12-biology-2-2-se02
+    problem: 'Compare the immunity a baby gets from breast milk with the immunity from a measles vaccine.'
+    steps:
+      - 'Breast milk gives ready-made antibodies: passive immunity, which lasts only weeks or months.'
+      - 'The vaccine makes the baby''s own immune system produce antibodies and memory cells: active immunity, which lasts for years.'
+    answer: 'Breast milk: passive, short-term. Vaccine: active, long-term.'
+  - uid: g12-biology-2-2-se03
+    problem: 'Why does bread dough rise when yeast is added?'
+    steps:
+      - 'Yeast respires the sugars in the dough and releases carbon dioxide gas.'
+      - 'The gas forms bubbles that make the dough expand; the alcohol formed evaporates during baking.'
+    answer: 'Yeast produces carbon dioxide.'
+
+flashcards:
+  - {uid: g12-biology-2-2-fc01, term: Pathogen, definition: 'A microorganism that causes disease.'}
+  - {uid: g12-biology-2-2-fc02, term: Vector, definition: 'An organism that carries a pathogen to a new host, e.g. the Anopheles mosquito.'}
+  - {uid: g12-biology-2-2-fc03, term: Antibody, definition: 'Protein made by white blood cells that targets a specific antigen.'}
+  - {uid: g12-biology-2-2-fc04, term: Active immunity, definition: 'The body makes its own antibodies; long-lasting.'}
+  - {uid: g12-biology-2-2-fc05, term: Passive immunity, definition: 'Ready-made antibodies are received; short-lived.'}
+  - {uid: g12-biology-2-2-fc06, term: ORS, definition: 'Oral rehydration solution; replaces water and salts lost in diarrhoea.'}
+  - {uid: g12-biology-2-2-fc07, term: Biogas, definition: 'Gas, mainly methane, made by microbes breaking down waste without oxygen.'}
+  - {uid: g12-biology-2-2-fc08, term: Bioremediation, definition: 'Using microorganisms to clean up pollution.'}
+  - {uid: g12-biology-2-2-fc09, term: Antiretroviral therapy, definition: 'Drugs that control HIV but do not cure it.'}
+
+questions:
+  - uid: g12-biology-2-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which disease is caused by a bacterium and spreads through the air when an infected person coughs?'
+    options:
+      A: 'Tuberculosis'
+      B: 'Malaria'
+      C: 'Measles'
+      D: 'Ringworm'
+    answer: A
+    explanation: 'Tuberculosis is caused by Mycobacterium tuberculosis. Measles is viral, malaria is protozoan and ringworm is fungal.'
+
+  - uid: g12-biology-2-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Cholera is mainly spread by:'
+    options:
+      A: 'Mosquito bites'
+      B: 'Shaking hands'
+      C: 'Water or food contaminated with faeces'
+      D: 'Sunlight'
+    answer: C
+    explanation: 'Vibrio cholerae lives in contaminated water; clean water and sanitation prevent it.'
+
+  - uid: g12-biology-2-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Which organism causes malaria?'
+    options:
+      A: 'A virus'
+      B: 'A protozoan called Plasmodium'
+      C: 'A fungus'
+      D: 'A bacterium called Vibrio'
+    answer: B
+    explanation: 'Plasmodium is a single-celled protozoan carried by female Anopheles mosquitoes.'
+
+  - uid: g12-biology-2-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'In malaria transmission, the female Anopheles mosquito is called a:'
+    options:
+      A: 'Pathogen'
+      B: 'Host cell'
+      C: 'Antibody'
+      D: 'Vector'
+    answer: D
+    explanation: 'A vector carries the pathogen from one host to another but is not itself the cause of the disease.'
+
+  - uid: g12-biology-2-2-q005
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are ways that HIV can be transmitted? Choose all that apply.'
+    options:
+      A: 'Sharing needles with an infected person'
+      B: 'From an infected mother to her baby'
+      C: 'Shaking hands'
+      D: 'Unprotected sex with an infected person'
+    answer: [A, B, D]
+    explanation: 'HIV spreads through blood, sexual fluids and from mother to child. It is not spread by casual contact.'
+
+  - uid: g12-biology-2-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'HIV can be spread by mosquito bites.'
+    answer: false
+    explanation: 'HIV cannot survive or multiply in mosquitoes, and mosquitoes do not inject the previous person''s blood.'
+
+  - uid: g12-biology-2-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which cells does HIV attack, weakening the immune system?'
+    options:
+      A: 'Red blood cells'
+      B: 'Nerve cells'
+      C: 'Helper T-cells (CD4 cells)'
+      D: 'Liver cells'
+    answer: C
+    explanation: 'Loss of helper T-cells leaves the body unable to fight other infections (AIDS).'
+
+  - uid: g12-biology-2-2-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the effect of antiretroviral therapy (ART) for people living with HIV?'
+    options:
+      A: 'It controls the virus so people can live long, healthy lives, but it is not a cure.'
+      B: 'It removes the virus from the body completely.'
+      C: 'It is a vaccine that prevents HIV.'
+      D: 'It works only against bacteria.'
+    answer: A
+    explanation: 'ART keeps the amount of virus very low, protecting the immune system and reducing transmission.'
+
+  - uid: g12-biology-2-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'A baby receives antibodies from its mother''s breast milk. What type of immunity is this?'
+    options:
+      A: 'Active natural immunity'
+      B: 'Passive natural immunity'
+      C: 'Active artificial immunity'
+      D: 'No immunity'
+    answer: B
+    explanation: 'The antibodies are ready-made (passive) and come naturally from the mother.'
+
+  - uid: g12-biology-2-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does immunity from a vaccine usually last longer than immunity from an antibody injection?'
+    options:
+      A: 'Vaccines contain more antibodies.'
+      B: 'Antibody injections kill memory cells.'
+      C: 'Injections are given in the arm.'
+      D: 'A vaccine makes the body produce its own memory cells.'
+    answer: D
+    explanation: 'Memory cells stay in the body for years and respond quickly to a later infection; injected antibodies break down in weeks.'
+
+  - uid: g12-biology-2-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'Oral rehydration solution (ORS) is given to people with diarrhoea to:'
+    options:
+      A: 'Kill viruses'
+      B: 'Replace lost water and salts'
+      C: 'Stop all bacteria growing'
+      D: 'Provide vitamins only'
+    answer: B
+    explanation: 'Diarrhoea can kill by dehydration; ORS (water, salt and sugar) replaces what is lost.'
+
+  - uid: g12-biology-2-2-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is the best way to reduce malaria in a village?'
+    options:
+      A: 'Drinking boiled water'
+      B: 'Taking antibiotics every day'
+      C: 'Sleeping under insecticide-treated bed nets and removing standing water'
+      D: 'Avoiding shaking hands'
+    answer: C
+    explanation: 'These measures reduce mosquito bites and mosquito breeding sites.'
+
+  - uid: g12-biology-2-2-q013
+    type: matching
+    difficulty: 2
+    stem: 'Match each disease with the type of organism that causes it.'
+    left:
+      L1: 'Measles'
+      L2: 'Typhoid'
+      L3: 'Athlete''s foot'
+    right:
+      R1: 'Bacterium'
+      R2: 'Fungus'
+      R3: 'Virus'
+      R4: 'Worm'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Measles is viral, typhoid is caused by Salmonella Typhi, and athlete''s foot is a fungal skin infection.'
+
+  - uid: g12-biology-2-2-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'Which microorganism is used to make bread rise?'
+    options:
+      A: 'Yeast'
+      B: 'Penicillium'
+      C: 'Rhizobium'
+      D: 'Plasmodium'
+    answer: A
+    explanation: 'Yeast ferments sugar and gives off carbon dioxide, which inflates the dough.'
+
+  - uid: g12-biology-2-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Ergo (Ethiopian fermented milk) and yoghurt are made mainly by:'
+    options:
+      A: 'Viruses'
+      B: 'Moulds that make penicillin'
+      C: 'Mosquitoes'
+      D: 'Lactic acid bacteria'
+    answer: D
+    explanation: 'Lactic acid bacteria turn milk sugar into lactic acid, which thickens and sours the milk.'
+
+  - uid: g12-biology-2-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Biogas made in a digester from cow dung is mainly:'
+    options:
+      A: 'Oxygen'
+      B: 'Methane'
+      C: 'Nitrogen'
+      D: 'Hydrogen sulfide only'
+    answer: B
+    explanation: 'Anaerobic bacteria break down the dung and release methane, which can be burned for cooking and light.'
+
+  - uid: g12-biology-2-2-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Biogas digesters work best when oxygen is kept out.'
+    answer: true
+    explanation: 'Methane-producing microbes are anaerobic; oxygen stops them working.'
+
+  - uid: g12-biology-2-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the role of decomposers such as bacteria and fungi in an ecosystem?'
+    options:
+      A: 'They make food by photosynthesis.'
+      B: 'They eat living plants only.'
+      C: 'They break down dead matter and return nutrients to the soil.'
+      D: 'They carry diseases between animals.'
+    answer: C
+    explanation: 'Without decomposers, nutrients would stay locked in dead bodies and waste.'
+
+  - uid: g12-biology-2-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Using microorganisms to break down an oil spill is called:'
+    options:
+      A: 'Bioremediation'
+      B: 'Pasteurisation'
+      C: 'Vaccination'
+      D: 'Fermentation of bread'
+    answer: A
+    explanation: 'Some bacteria can digest oil and other pollutants into harmless substances.'
+
+  - uid: g12-biology-2-2-q020
+    type: numeric
+    difficulty: 1
+    stem: 'A vaccination campaign reaches 450 out of 500 children in a district. What percentage of the children were vaccinated?'
+    answer: {value: 90, tolerance: 0, unit: '%'}
+    explanation: '$\frac{450}{500} \times 100\% = 90\%$.'
+
+  - uid: g12-biology-2-2-q021
+    type: numeric
+    difficulty: 1
+    stem: 'A family biogas digester produces 2 m³ of gas each day. How many cubic metres does it produce in one week?'
+    answer: {value: 14, tolerance: 0, unit: m³}
+    explanation: '$2 \times 7 = 14$ m³.'
+
+  - uid: g12-biology-2-2-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'A microorganism that causes disease is called a ________.'
+    answer: [pathogen]
+    explanation: 'Pathogens include some bacteria, viruses, fungi and protozoa.'
+
+  - uid: g12-biology-2-2-q023
+    type: fill_in
+    difficulty: 2
+    stem: 'Proteins made by white blood cells that attach to a specific antigen are called ________.'
+    answer: [antibodies, antibody]
+    explanation: 'Each antibody fits one particular antigen, marking the pathogen for destruction.'
+
+  - uid: g12-biology-2-2-q024
+    type: true_false
+    difficulty: 1
+    stem: 'Washing hands with soap helps prevent the spread of many diseases.'
+    answer: true
+    explanation: 'Hand washing removes pathogens that could otherwise be carried to the mouth or to food.'
+
+  - uid: g12-biology-2-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order for how a vaccine gives protection.'
+    items:
+      A: 'Memory cells remain in the body.'
+      B: 'A harmless form of the antigen is injected.'
+      C: 'On later infection, antibodies are made quickly and the person does not get ill.'
+      D: 'White blood cells make antibodies against the antigen.'
+    answer: [B, D, A, C]
+    explanation: 'Vaccine → first immune response → memory cells → fast second response.'
+
+  - uid: g12-biology-2-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which mould is used in industry to make the antibiotic penicillin?'
+    options:
+      A: 'Rhizopus'
+      B: 'Yeast'
+      C: 'Aspergillus'
+      D: 'Penicillium'
+    answer: D
+    explanation: 'Penicillium is grown in large fermenters and the penicillin it secretes is extracted.'
+
+  - uid: g12-biology-2-2-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'Why do people need a new influenza vaccine most years, but a measles vaccine gives protection for life?'
+    options:
+      A: 'The influenza virus changes (mutates) often, so old memory cells no longer recognise it.'
+      B: 'Measles is caused by a bacterium.'
+      C: 'Influenza vaccines are weaker on purpose.'
+      D: 'Memory cells only last for one year.'
+    answer: A
+    explanation: 'Influenza''s surface antigens change frequently; the measles virus is much more stable.'
+
+  - uid: g12-biology-2-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Which disease has been prevented in Ethiopia by giving children drops by mouth in vaccination campaigns?'
+    options:
+      A: 'Malaria'
+      B: 'Polio'
+      C: 'Tuberculosis'
+      D: 'Ringworm'
+    answer: B
+    explanation: 'Oral polio vaccine is given as drops; polio is a viral disease that can cause paralysis.'
+
+  - uid: g12-biology-2-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does teff batter left for a few days before baking give injera a sour taste?'
+    options:
+      A: 'The teff dries out.'
+      B: 'Salt is added.'
+      C: 'Microorganisms ferment the batter and produce acids.'
+      D: 'The batter is boiled.'
+    answer: C
+    explanation: 'Yeasts and lactic acid bacteria ferment the batter, producing acids and gas bubbles.'
+
+  - uid: g12-biology-2-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Tetanus bacteria usually enter the body through:'
+    options:
+      A: 'Deep wounds contaminated with soil'
+      B: 'Drinking milk'
+      C: 'Breathing in air'
+      D: 'Mosquito bites'
+    answer: A
+    explanation: 'Clostridium tetani spores live in soil; cleaning wounds and the tetanus vaccine prevent the disease.'

@@ -172,6 +172,7 @@ subjects:
       file: biology/u2-c1.yaml
     - number: 2
       title: Microorganisms, health and industry
+      file: biology/u2-c2.yaml
   - number: 3
     title: Energy Transformation
     chapters:
