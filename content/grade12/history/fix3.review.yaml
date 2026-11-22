@@ -1,0 +1,7 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-6-1-q009: {hash: '64c802c2e03682dea7e7733c902eeed6472d917baa3cae8d1a137f43a56c0279', answer: A}
+  g12-history-6-1-q012: {hash: 'a320d3b862dfe00f98b74001dd74a289255305af8dd83c161cc34a4c9782d2c3', answer: C}
+  g12-history-6-1-q016: {hash: '902081d5c596f31d16e5331d17582a2461673b9b6915a6f27a279ccdb492545b', answer: D}
+  g12-history-6-1-q021: {hash: '08408d7c6c7a73ee3ad3d6d7e0ca19ae3cbe20fa21f0e31bed1ea34e68768b3a', answer: 'Tiller'}
+  g12-history-6-1-q027: {hash: '40b9fd5085c41b8ccf09e88c8a3ed2e8266ec29a64bac6b89e1e76ef58d02393', answer: B}

@@ -313,7 +313,7 @@ questions:
   - uid: g12-history-7-1-q026
     type: single_choice
     difficulty: 2
-    stem: 'Which liberation movement led the struggle against apartheid in South Africa?'
+    stem: 'Which was the main liberation movement in the struggle against apartheid in South Africa?'
     options:
       A: 'FRELIMO'
       B: 'The ANC (African National Congress)'

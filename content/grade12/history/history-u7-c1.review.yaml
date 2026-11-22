@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-7-1-q001: {hash: '1793e2dbbbc1d2f052ef42d9cdde38e30030c8d7d8aeed89d1148cbf7255d7da', answer: B}
+  g12-history-7-1-q002: {hash: 'b029133577b9cd28c6d0c31b6d27b54c055f752eb901b228ce04704ee3416366', answer: A}
+  g12-history-7-1-q003: {hash: '47046fdb69f5d330039c6b27adb32fc21fd26f58865904bd29ea1bba4ac67d2f', answer: 1994}
+  g12-history-7-1-q004: {hash: '55f6e3914409ae64b35796c2b87cd415325f0651b63f91c9f525a2acf5022196', answer: D}
+  g12-history-7-1-q005: {hash: '4e2adbd2a3be51c0b7c4e28153cd70f9b1eabf34a5f59195da679320f16b1855', answer: B}
+  g12-history-7-1-q006: {hash: '3e6eb0ea0233efb47f9b1b0584d3c158d88b6fff60089125157962042c836160', answer: C}
+  g12-history-7-1-q007: {hash: '36e8bcb92716a6d9508b61692c4d0ff08f5f495a6987ba3f783e730a0ea52a98', answer: D}
+  g12-history-7-1-q008: {hash: '2804a2ef44bcba9a1c60c8ee054f391af1ac88b1171ff81e6c323119fac59cd6', answer: 1993}
+  g12-history-7-1-q009: {hash: '11fbf4536532a8080d31ff260713ff357c0abc2d838bcdf776d60f2cbe36b692', answer: A}
+  g12-history-7-1-q010: {hash: '31ae08f07c16d28da2e2e4ce81d76a4f3ced25717e78a0b21befdef165578718', answer: C}
+  g12-history-7-1-q011: {hash: '494a8a5729fddff1b4914eff473c47376d64134211f4e7369eb49e11cdc2b428', answer: D}
+  g12-history-7-1-q012: {hash: '790e95d416ff3505cba565ed6295787a03177db9f8cea9bc1edbeecf10e22bc9', answer: [A, B, C]}
+  g12-history-7-1-q013: {hash: '323062b54b62b97ce59344eac626cbe121e6341665bcfe6446334ecb53182175', answer: A}
+  g12-history-7-1-q014: {hash: '095ee0905dd9fdcd4f5d302178097bdd99f9c8a151406cbf103b3cddb012cb41', answer: true}
+  g12-history-7-1-q015: {hash: '94d64d9698fec3759058cb6ff0e85c734a9cecd2891d32f6ef846c526df8058e', answer: true}
+  g12-history-7-1-q016: {hash: '1403e1b39a165f0052fb5ec76e64441a85d1f747275c975ceba7ac2d16f55967', answer: C}
+  g12-history-7-1-q017: {hash: '9bd85ce7ed69eb21686d03777ba2fa6b91b804c107ee40764d9964b7d4c21858', answer: D}
+  g12-history-7-1-q018: {hash: '0271c6ae846ce56259b651e78bbb00545f9e31091a77b20b662d1b8760c919bb', answer: A}
+  g12-history-7-1-q019: {hash: '8149af686c5fcb429b6e42cb57abbc476e04f81ad098cdef58bbc9ef40dd0130', answer: B}
+  g12-history-7-1-q020: {hash: '8fdaa61f1e9bebc80c27cdac6c5c088352e421c9385ee48ee9241084f73984f9', answer: 'apartheid'}
+  g12-history-7-1-q021: {hash: '81cfb812a6aad3596f16ff074265dde0f4f15ac091656f46ca756d5c92d1ef4d', answer: 'Durban'}
+  g12-history-7-1-q022: {hash: 'ca966aa10d6af65d0de9f2805757be95c4305186b0e7afcced315e4c22066f70', answer: false}
+  g12-history-7-1-q023: {hash: 'c50e7e28ee252c5c9741ff626808688aca2c1eacd1fc75af563622029f0f1233', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-history-7-1-q024: {hash: '711f3877c66bae752b1f9f7ab93ca14c10c962aeaf894f7722127dfbf34bdead', answer: [C, B, D, A]}
+  g12-history-7-1-q025: {hash: 'a5d62e3074c62c69364a6a51c135f5a11e855c753fa6b6fe27424cf21cbaa316', answer: C}
+  g12-history-7-1-q026: {hash: '108aa07005d455ae06406ae268f800aab0845179ab4869d83f5e37ab801a5aa0', answer: B, note: 'Minor: other movements (PAC, UDF, Black Consciousness) also fought apartheid; "led the struggle" is the standard textbook view and no other option fits, so the key is safe. Consider "the main liberation movement".'}
+  g12-history-7-1-q027: {hash: 'c86a88b9e8bc5815cc0d0c79b280e43ccef7ad0c3649a86beb6b0a39f9a50c2f', answer: D}
+  g12-history-7-1-q028: {hash: '5b96781fec1aec3221759dfef9c413643ebb19df7f704cea76ab36bb5ff793d1', answer: A}
+  g12-history-7-1-q029: {hash: '0c0858025f1fd1848576b3e0f3ad0e0679956a2f636172cc0dda11d1a34b51b4', answer: B}
+  g12-history-7-1-q030: {hash: '0ce94ba84f12818c9e4849de8a7ae9b6da0f66bf5490f90f97ec6af191598d77', answer: C}
