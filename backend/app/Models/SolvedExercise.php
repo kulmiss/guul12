@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
+ * @property string|null $uid
  * @property int $chapter_id
  * @property int $sort
  * @property string $problem
@@ -21,7 +22,7 @@ class SolvedExercise extends Model
 {
     use RecordsContentChanges;
 
-    protected $fillable = ['chapter_id', 'sort', 'problem', 'steps', 'final_answer', 'status', 'source'];
+    protected $fillable = ['uid', 'chapter_id', 'sort', 'problem', 'steps', 'final_answer', 'status', 'source'];
 
     /**
      * @return array<string, string>

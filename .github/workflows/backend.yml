@@ -2,10 +2,10 @@ name: Backend
 
 on:
   pull_request:
-    paths: ['backend/**', '.github/workflows/backend.yml']
+    paths: ['backend/**', 'content/**', '.github/workflows/backend.yml']
   push:
     branches: [main, develop]
-    paths: ['backend/**', '.github/workflows/backend.yml']
+    paths: ['backend/**', 'content/**', '.github/workflows/backend.yml']
 
 permissions:
   contents: read
@@ -76,9 +76,13 @@ jobs:
       - name: Tests
         run: php artisan test
 
-      - name: Migrations run on a fresh database
+      - name: Content files pass the automatic checks
+        run: php artisan content:check ../content
+
+      - name: Migrations, seed and content import on a fresh database
         run: |
           touch database/database.sqlite
           php artisan migrate --force
           php artisan db:seed --force
+          php artisan content:import ../content
           php artisan migrate:rollback --force

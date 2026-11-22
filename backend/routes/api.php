@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\V1\BookmarkController;
 use App\Http\Controllers\Api\V1\ConfigController;
 use App\Http\Controllers\Api\V1\ContentController;
 use App\Http\Controllers\Api\V1\MeController;
+use App\Http\Controllers\Api\V1\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('v1')->name('api.v1.')->group(function (): void {
@@ -30,5 +31,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::get('bookmarks', [BookmarkController::class, 'index'])->name('bookmarks.index');
         Route::put('bookmarks/{question}', [BookmarkController::class, 'store'])->whereNumber('question')->name('bookmarks.store');
         Route::delete('bookmarks/{question}', [BookmarkController::class, 'destroy'])->whereNumber('question')->name('bookmarks.destroy');
+
+        Route::post('questions/{question}/reports', [ReportController::class, 'store'])->whereNumber('question')->name('questions.reports.store');
     });
 });

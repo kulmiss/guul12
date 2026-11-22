@@ -13,6 +13,8 @@ enum QuestionStatus: string
     case Published = 'published';
     case Reported = 'reported';
     case Fixed = 'fixed';
+    // Removed from the content files; kept because old attempts point to it. Never shown.
+    case Retired = 'retired';
 
     /**
      * Statuses students can see in the app.

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
+ * @property string|null $uid
  * @property int $chapter_id
  * @property int $sort
  * @property string $term
@@ -19,7 +20,7 @@ class Flashcard extends Model
 {
     use RecordsContentChanges;
 
-    protected $fillable = ['chapter_id', 'sort', 'term', 'definition', 'status'];
+    protected $fillable = ['uid', 'chapter_id', 'sort', 'term', 'definition', 'status'];
 
     /**
      * @return array<string, string>

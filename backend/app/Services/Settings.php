@@ -49,6 +49,13 @@ class Settings
             // Anti-cheat: answers faster than this are flagged.
             'min_answer_ms' => 800,
             'max_answer_ms' => 600000,
+
+            // Quality gate. A Beta question becomes Published after this many answers with no
+            // open report; if fewer than this share (percent) answer it right, it goes to review.
+            'beta_min_answers' => 30,
+            'quality_min_correct_percent' => 15,
+            // Open reports on the same question version that send it to review.
+            'report_threshold' => 3,
         ];
     }
 

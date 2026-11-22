@@ -1,0 +1,350 @@
+# Grade 12 curriculum (new curriculum, MoE 2023).
+# Unit titles follow the official textbooks. Chapters are Guul 12's own topic split of each unit.
+# English and Aptitude are organised by exam skill. Mathematics units are for both streams.
+# Add `file: <subject>/u<unit>-c<chapter>.yaml` to a chapter when its content is written.
+grade: 12
+subjects:
+- code: mathematics
+  textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-Mathematics-STB-2023-web.pdf
+  units:
+  - number: 1
+    title: Sequence and Series
+    chapters:
+    - number: 1
+      title: 'Sequences: arithmetic and geometric'
+    - number: 2
+      title: Sigma notation and partial sums
+    - number: 3
+      title: Infinite series and applications
+  - number: 2
+    title: Introduction to Calculus
+    chapters:
+    - number: 1
+      title: Limits
+    - number: 2
+      title: Derivatives and rules of differentiation
+    - number: 3
+      title: Applications of derivatives
+    - number: 4
+      title: Integration and area under a curve
+  - number: 3
+    title: Statistics
+    chapters:
+    - number: 1
+      title: Sampling and presenting data
+    - number: 2
+      title: Measures of location and dispersion
+  - number: 4
+    title: Introduction to Linear Programming
+    chapters:
+    - number: 1
+      title: Linear inequalities and their graphs
+    - number: 2
+      title: Solving linear programming problems
+  - number: 5
+    title: Mathematical Application in Business
+    chapters:
+    - number: 1
+      title: Percent, interest and the time value of money
+    - number: 2
+      title: Saving, borrowing, investment and taxation
+- code: physics
+  textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-Physics-STB-2023-web.pdf
+  units:
+  - number: 1
+    title: Application of Physics in Other Fields
+    chapters:
+    - number: 1
+      title: Physics and the other sciences
+    - number: 2
+      title: Physics in technology and medicine
+  - number: 2
+    title: Two-Dimensional Motion
+    chapters:
+    - number: 1
+      title: Projectile motion
+    - number: 2
+      title: Circular and rotational motion
+    - number: 3
+      title: Gravitation and planetary motion
+  - number: 3
+    title: Fluid Mechanics
+    chapters:
+    - number: 1
+      title: 'Fluid statics: pressure, Pascal and Archimedes'
+    - number: 2
+      title: 'Fluid flow: continuity and Bernoulli'
+  - number: 4
+    title: Electromagnetism
+    chapters:
+    - number: 1
+      title: Magnets, magnetic fields and magnetic forces
+    - number: 2
+      title: Electromagnetic induction and transformers
+  - number: 5
+    title: Basics of Electronics
+    chapters:
+    - number: 1
+      title: Semiconductors, diodes and rectification
+    - number: 2
+      title: Transistors, integrated circuits and logic gates
+- code: chemistry
+  units:
+  - number: 1
+    title: Acid-Base Equilibrium
+    chapters:
+    - number: 1
+      title: Acid-base theories
+    - number: 2
+      title: Ionic equilibria of weak acids and bases, pH
+    - number: 3
+      title: Buffers, salt hydrolysis, indicators and titration
+  - number: 2
+    title: Electrochemistry
+    chapters:
+    - number: 1
+      title: Redox reactions and electrochemical cells
+    - number: 2
+      title: Electrolysis and Faraday's laws
+  - number: 3
+    title: Industrial Chemistry
+    chapters:
+    - number: 1
+      title: Industrial production of chemicals
+    - number: 2
+      title: Manufacturing industries in Ethiopia
+  - number: 4
+    title: Polymers
+    chapters:
+    - number: 1
+      title: Polymers and polymerization
+  - number: 5
+    title: Introduction to Environmental Chemistry
+    chapters:
+    - number: 1
+      title: Environment, pollution and green chemistry
+- code: biology
+  units:
+  - number: 1
+    title: Application of Biology
+    chapters:
+    - number: 1
+      title: Biology in everyday life and society
+  - number: 2
+    title: Microorganisms
+    chapters:
+    - number: 1
+      title: Bacteria, viruses and fungi
+    - number: 2
+      title: Microorganisms, health and industry
+  - number: 3
+    title: Energy Transformation
+    chapters:
+    - number: 1
+      title: Photosynthesis
+    - number: 2
+      title: Cellular respiration and energy flow
+  - number: 4
+    title: Evolution
+    chapters:
+    - number: 1
+      title: Theories and evidence of evolution
+    - number: 2
+      title: Mechanisms of evolution and classification
+  - number: 5
+    title: Human Body Systems
+    chapters:
+    - number: 1
+      title: Nervous system and sense organs
+    - number: 2
+      title: Endocrine system and homeostasis
+    - number: 3
+      title: Circulation, respiration and excretion
+  - number: 6
+    title: Climate Change
+    chapters:
+    - number: 1
+      title: 'Climate change: causes, effects and responses'
+- code: english
+  textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-English-STB-2023-web.pdf
+  units:
+  - number: 1
+    title: Grammar
+    chapters:
+    - number: 1
+      title: Tenses and verb forms
+    - number: 2
+      title: Conditionals and modal verbs
+    - number: 3
+      title: Passive voice and reported speech
+    - number: 4
+      title: Clauses, articles, prepositions and linking words
+  - number: 2
+    title: Vocabulary
+    chapters:
+    - number: 1
+      title: Word meaning in context
+    - number: 2
+      title: Word formation, idioms and phrasal verbs
+  - number: 3
+    title: Reading
+    chapters:
+    - number: 1
+      title: Reading comprehension
+  - number: 4
+    title: Writing Skills
+    chapters:
+    - number: 1
+      title: Punctuation, spelling and paragraph order
+- code: aptitude
+  units:
+  - number: 1
+    title: Verbal Reasoning
+    chapters:
+    - number: 1
+      title: Analogies and word relationships
+    - number: 2
+      title: Sentence completion and verbal logic
+  - number: 2
+    title: Quantitative Reasoning
+    chapters:
+    - number: 1
+      title: Number series and arithmetic reasoning
+    - number: 2
+      title: Word problems and data interpretation
+  - number: 3
+    title: Logical Reasoning
+    chapters:
+    - number: 1
+      title: Patterns, codes, directions and arrangements
+- code: geography
+  units:
+  - number: 1
+    title: Major Geological Processes Associated with Plate Tectonics
+    chapters:
+    - number: 1
+      title: Major Geological Processes Associated with Plate Tectonics
+  - number: 2
+    title: Climate Change
+    chapters:
+    - number: 1
+      title: Climate Change
+  - number: 3
+    title: Management of Conflict Over Resources
+    chapters:
+    - number: 1
+      title: Management of Conflict Over Resources
+  - number: 4
+    title: Population Policies, Programs and the Environment
+    chapters:
+    - number: 1
+      title: Population Policies, Programs and the Environment
+  - number: 5
+    title: Challenges of Economic Development
+    chapters:
+    - number: 1
+      title: Challenges of Economic Development
+  - number: 6
+    title: Solutions to Environmental and Sustainability Problems
+    chapters:
+    - number: 1
+      title: Solutions to Environmental and Sustainability Problems
+  - number: 7
+    title: Contemporary Global Geographic Issues and Public Concerns
+    chapters:
+    - number: 1
+      title: Contemporary Global Geographic Issues and Public Concerns
+  - number: 8
+    title: Geographical Enquiry and Map Making
+    chapters:
+    - number: 1
+      title: Geographical Enquiry and Map Making
+- code: history
+  units:
+  - number: 1
+    title: Development of Capitalism and Nationalism, 1815–1914
+    chapters:
+    - number: 1
+      title: Development of Capitalism and Nationalism, 1815–1914
+  - number: 2
+    title: Africa and the Colonial Experience, 1880s–1960s
+    chapters:
+    - number: 1
+      title: Africa and the Colonial Experience, 1880s–1960s
+  - number: 3
+    title: Social, Economic and Political Developments in Ethiopia, Mid-19th Century to 1941
+    chapters:
+    - number: 1
+      title: Social, Economic and Political Developments in Ethiopia, Mid-19th Century to 1941
+  - number: 4
+    title: Society and Politics in the Age of World Wars, 1914–1945
+    chapters:
+    - number: 1
+      title: Society and Politics in the Age of World Wars, 1914–1945
+  - number: 5
+    title: Global and Regional Developments Since 1945
+    chapters:
+    - number: 1
+      title: Global and Regional Developments Since 1945
+  - number: 6
+    title: 'Ethiopia: Internal Developments and External Influences, 1941–1991'
+    chapters:
+    - number: 1
+      title: 'Ethiopia: Internal Developments and External Influences, 1941–1991'
+  - number: 7
+    title: Africa Since the 1960s
+    chapters:
+    - number: 1
+      title: Africa Since the 1960s
+  - number: 8
+    title: Post-1991 Developments in Ethiopia
+    chapters:
+    - number: 1
+      title: Post-1991 Developments in Ethiopia
+  - number: 9
+    title: Indigenous Knowledge Systems and Heritages of Ethiopia
+    chapters:
+    - number: 1
+      title: Indigenous Knowledge Systems and Heritages of Ethiopia
+- code: economics
+  units:
+  - number: 1
+    title: The Fundamental Concepts of Macroeconomics
+    chapters:
+    - number: 1
+      title: The Fundamental Concepts of Macroeconomics
+  - number: 2
+    title: Aggregate Demand and Aggregate Supply Analysis
+    chapters:
+    - number: 1
+      title: Aggregate Demand and Aggregate Supply Analysis
+  - number: 3
+    title: Market Failure and Consumer Protection
+    chapters:
+    - number: 1
+      title: Market Failure and Consumer Protection
+  - number: 4
+    title: Macroeconomic Policy Instruments
+    chapters:
+    - number: 1
+      title: Macroeconomic Policy Instruments
+  - number: 5
+    title: Tax Theory and Practice
+    chapters:
+    - number: 1
+      title: Tax Theory and Practice
+  - number: 6
+    title: Poverty and Inequality
+    chapters:
+    - number: 1
+      title: Poverty and Inequality
+  - number: 7
+    title: Macroeconomic Reforms in Ethiopia
+    chapters:
+    - number: 1
+      title: Macroeconomic Reforms in Ethiopia
+  - number: 8
+    title: Economy, Environment and Climate Change
+    chapters:
+    - number: 1
+      title: Economy, Environment and Climate Change

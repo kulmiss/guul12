@@ -9,13 +9,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * Reading passage shared by several passage questions.
  *
  * @property int $id
+ * @property string|null $uid
  * @property string $title
  * @property string $body
  * @property string|null $source
  */
 class Passage extends Model
 {
-    protected $fillable = ['title', 'body', 'source'];
+    protected $fillable = ['uid', 'title', 'body', 'source'];
 
     protected static function booted(): void
     {

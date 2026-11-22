@@ -16,6 +16,8 @@ use Illuminate\Support\Carbon;
 
 /**
  * @property int $id
+ * @property string|null $uid
+ * @property string|null $content_hash
  * @property int $chapter_id
  * @property int|null $passage_id
  * @property QuestionType $type
@@ -47,7 +49,7 @@ class Question extends Model
     private const VERSIONED_FIELDS = ['type', 'stem', 'media_path', 'answer_key', 'explanation', 'passage_id'];
 
     protected $fillable = [
-        'chapter_id', 'passage_id', 'type', 'stem', 'media_path', 'difficulty', 'status',
+        'uid', 'chapter_id', 'passage_id', 'type', 'stem', 'media_path', 'difficulty', 'status',
         'answer_key', 'explanation', 'source', 'tags',
     ];
 
