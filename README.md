@@ -23,6 +23,18 @@ php artisan serve
 composer check                                # Pint + Larastan + tests
 ```
 
+## App quick start
+
+```bash
+cd app
+flutter pub get
+flutter test                       # unit + widget + golden tests
+flutter run --dart-define=API_BASE_URL=http://10.0.2.2:8000   # emulator → local backend
+flutter build apk --release --split-per-abi
+```
+
+Build settings and the upload key: [docs/android-release.md](docs/android-release.md).
+
 ## Rules
 
 - The repo is **public** for now: never commit `.env`, the Nova licence, AdMob IDs, Firebase files,

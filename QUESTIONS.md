@@ -19,3 +19,17 @@
 | 15 | Nova code lives in `backend/nova/` (namespace `App\Nova`), loaded only when `laravel/nova` is installed | Install, CI and tests never need the licence |
 | 16 | Premium plan lengths: term 120 days, year 365 days (editable settings) | Ethiopian school term ≈ 4 months |
 | 17 | A new Premium grant starts when the current one ends (stacking) | Students never lose paid days |
+| 18 | App uses the `material_ui` package (Flutter 3.50 moved Material widgets out of the SDK; `flutter/material` is deprecated) | No deprecation warnings |
+| 19 | Region stored as a code (`somali`, `addis_ababa`, …): Ethiopia's 12 regions + 2 chartered cities (2023 list). Somali is first | Labels can be translated later; focus region is one tap away |
+| 20 | Stream question only for Grades 11–12; "retaking the exam" question only for Grade 12 | Streams start in Grade 11; only Grade 12 sit the national exam |
+| 21 | The 5-question warm-up in onboarding is bundled and stays on the phone (never uploaded) | Works offline on first start; no fake question IDs on the server |
+| 22 | Free students download a chapter when they first open it (needs internet once); whole-subject packs stay Premium | Matches DECISIONS #11 (still waiting for owner's OK) |
+| 23 | Practice sets: Quick 10 = up to half "last answer wrong" + new questions; Mixed 20; chapter/unit up to 30; Quick revise 5; Timed = 60 s per question | Spaced repetition proper comes in Phase 3 |
+| 24 | Practice shows right/wrong and the explanation straight after "Check" | Learning mode; exams (Phase 3) show results only at the end |
+| 25 | Ordering questions never start in the right order; items move by drag **or** up/down buttons | Fair question; works with screen readers and small screens |
+| 26 | Theme (phone / light / dark) is saved on the phone only | Not personal data, no need to sync |
+| 27 | Android: minSdk 24 (Android 7.0), internet permission only, app-data backup off | Old phones supported; token never leaves the phone |
+| 28 | Noto Sans is subset to Latin + Greek + common symbols (−1.1 MB). Ethiopic fonts come with the Amharic UI | Smaller download for students on mobile data |
+| 29 | Golden (screenshot) tests use the real fonts and a pinned Flutter (3.50.1) in CI | Pixel comparisons stay stable |
+| 30 | Reminder time is saved in the profile now; the daily reminder notification (WorkManager, inexact) is built in Phase 4 | Phase 4 = engagement |
+| 31 | The router re-checks redirects only when "onboarded" or the minimum build changes | A test found that refreshing on every profile edit undid the "Save" screen close |

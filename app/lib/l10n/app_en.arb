@@ -1,0 +1,808 @@
+{
+  "appName": "Guul 12",
+  "@appName": {
+    "description": "App name. Do not translate."
+  },
+  "commonContinue": "Continue",
+  "@commonContinue": {
+    "description": "Primary button to go to the next step"
+  },
+  "commonSkip": "Skip",
+  "@commonSkip": {
+    "description": "Button to skip an optional step"
+  },
+  "commonRetry": "Try again",
+  "@commonRetry": {
+    "description": "Retry after an error"
+  },
+  "commonDone": "Done",
+  "@commonDone": {
+    "description": "Finish a step"
+  },
+  "commonNext": "Next",
+  "@commonNext": {
+    "description": "Go to the next question or card"
+  },
+  "commonPrevious": "Previous",
+  "@commonPrevious": {
+    "description": "Go to the previous question or card"
+  },
+  "commonCheck": "Check",
+  "@commonCheck": {
+    "description": "Check my answer"
+  },
+  "commonCopied": "Copied",
+  "@commonCopied": {
+    "description": "Snackbar after copying text"
+  },
+  "commonOffline": "You are offline. Your progress is saved and will sync later.",
+  "@commonOffline": {
+    "description": "Banner when there is no internet"
+  },
+  "commonError": "Something went wrong. Please try again.",
+  "@commonError": {
+    "description": "Generic error"
+  },
+  "commonLoading": "Loading…",
+  "@commonLoading": {
+    "description": "Loading indicator label"
+  },
+  "premiumLabel": "Premium",
+  "@premiumLabel": {
+    "description": "Small label on locked items. Must not mention price or how to buy."
+  },
+  "betaLabel": "Beta",
+  "@betaLabel": {
+    "description": "Label on new questions that are still being checked"
+  },
+  "onboardingGradeTitle": "Which grade are you in?",
+  "@onboardingGradeTitle": {
+    "description": "First onboarding screen"
+  },
+  "onboardingGradeOption": "Grade {grade}",
+  "@onboardingGradeOption": {
+    "description": "Grade choice button",
+    "placeholders": {
+      "grade": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingHookTitle": "Quick warm-up: 5 questions",
+  "@onboardingHookTitle": {
+    "description": "Title of the 30-second hook quiz"
+  },
+  "onboardingHookResult": "You got {correct} of {total}!",
+  "@onboardingHookResult": {
+    "description": "Hook quiz result",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingHookResultBody": "Let's set up your plan so you can do even better.",
+  "@onboardingHookResultBody": {
+    "description": "Text under hook quiz result"
+  },
+  "onboardingStreamTitle": "Which stream are you in?",
+  "@onboardingStreamTitle": {
+    "description": "Stream choice screen (Grades 11–12)"
+  },
+  "streamNatural": "Natural Science",
+  "@streamNatural": {
+    "description": "Natural science stream"
+  },
+  "streamSocial": "Social Science",
+  "@streamSocial": {
+    "description": "Social science stream"
+  },
+  "onboardingRetakerTitle": "Are you taking the national exam again?",
+  "@onboardingRetakerTitle": {
+    "description": "Retaker question"
+  },
+  "onboardingRetakerYes": "Yes, I am retaking it",
+  "@onboardingRetakerYes": {
+    "description": "Retaker answer yes"
+  },
+  "onboardingRetakerNo": "No, first time",
+  "@onboardingRetakerNo": {
+    "description": "Retaker answer no"
+  },
+  "onboardingRegionTitle": "Where do you study?",
+  "@onboardingRegionTitle": {
+    "description": "Region and city screen"
+  },
+  "onboardingRegionLabel": "Region",
+  "@onboardingRegionLabel": {
+    "description": "Region field label"
+  },
+  "onboardingCityLabel": "City or town",
+  "@onboardingCityLabel": {
+    "description": "City field label"
+  },
+  "onboardingGenderTitle": "Gender (optional)",
+  "@onboardingGenderTitle": {
+    "description": "Optional gender screen"
+  },
+  "genderFemale": "Female",
+  "@genderFemale": {
+    "description": "Gender option"
+  },
+  "genderMale": "Male",
+  "@genderMale": {
+    "description": "Gender option"
+  },
+  "onboardingPrivacyNote": "Used only for anonymous statistics. Never shown to other students.",
+  "@onboardingPrivacyNote": {
+    "description": "Privacy note under personal questions"
+  },
+  "onboardingTargetTitle": "What is your target score?",
+  "@onboardingTargetTitle": {
+    "description": "Target score screen"
+  },
+  "onboardingTargetValue": "{score} / 600",
+  "@onboardingTargetValue": {
+    "description": "Target score value",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingReminderTitle": "When should we remind you to study?",
+  "@onboardingReminderTitle": {
+    "description": "Reminder time screen"
+  },
+  "onboardingReminderPick": "Pick a time",
+  "@onboardingReminderPick": {
+    "description": "Button to open time picker"
+  },
+  "onboardingFinish": "Start studying",
+  "@onboardingFinish": {
+    "description": "Last onboarding button"
+  },
+  "navHome": "Home",
+  "@navHome": {
+    "description": "Bottom navigation"
+  },
+  "navStudy": "Study",
+  "@navStudy": {
+    "description": "Bottom navigation"
+  },
+  "navMe": "Me",
+  "@navMe": {
+    "description": "Bottom navigation"
+  },
+  "homeGreeting": "Welcome back",
+  "@homeGreeting": {
+    "description": "Home screen greeting"
+  },
+  "homeExamCountdown": "{days, plural, =0{Exam is today} =1{1 day to the exam} other{{days} days to the exam}}",
+  "@homeExamCountdown": {
+    "description": "Exam countdown",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "homeExamDates": "{gregorian} · {ethiopian} E.C.",
+  "@homeExamDates": {
+    "description": "Exam date in Gregorian and Ethiopian calendars",
+    "placeholders": {
+      "gregorian": {
+        "type": "String"
+      },
+      "ethiopian": {
+        "type": "String"
+      }
+    }
+  },
+  "homeExamDateUnknown": "Exam date not announced yet",
+  "@homeExamDateUnknown": {
+    "description": "When admin has not set the exam date"
+  },
+  "homeQuick10": "Quick 10",
+  "@homeQuick10": {
+    "description": "Start a quick 10-question practice"
+  },
+  "homeQuick10Body": "10 mixed questions from what you have studied",
+  "@homeQuick10Body": {
+    "description": "Subtitle for Quick 10"
+  },
+  "homeContinueStudying": "Continue studying",
+  "@homeContinueStudying": {
+    "description": "Card to open the study section"
+  },
+  "homeNoContentYet": "Open a subject in Study to download it for offline use.",
+  "@homeNoContentYet": {
+    "description": "Home when nothing is downloaded yet"
+  },
+  "studyTitle": "Study",
+  "@studyTitle": {
+    "description": "Study tab title"
+  },
+  "studyGrade": "Grade {grade}",
+  "@studyGrade": {
+    "description": "Grade heading",
+    "placeholders": {
+      "grade": {
+        "type": "int"
+      }
+    }
+  },
+  "studyUnit": "Unit {number}: {title}",
+  "@studyUnit": {
+    "description": "Unit heading",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "studyChapter": "{number}. {title}",
+  "@studyChapter": {
+    "description": "Chapter row",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "studyEmpty": "Content for this part is coming soon.",
+  "@studyEmpty": {
+    "description": "Nothing in this list yet"
+  },
+  "studyCatalogEmpty": "Connect to the internet once to download the list of subjects.",
+  "@studyCatalogEmpty": {
+    "description": "No catalog downloaded yet"
+  },
+  "studyDownloadedOffline": "Saved for offline use",
+  "@studyDownloadedOffline": {
+    "description": "Chapter is stored on the phone"
+  },
+  "chapterSummary": "Summary",
+  "@chapterSummary": {
+    "description": "Chapter section"
+  },
+  "chapterKeyPoints": "Key points",
+  "@chapterKeyPoints": {
+    "description": "Summary heading"
+  },
+  "chapterFormulas": "Formulas",
+  "@chapterFormulas": {
+    "description": "Summary heading"
+  },
+  "chapterSolvedExercises": "Solved exercises",
+  "@chapterSolvedExercises": {
+    "description": "Chapter section"
+  },
+  "chapterSolvedStep": "Step {number}",
+  "@chapterSolvedStep": {
+    "description": "Solved exercise step",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterShowSolution": "Show solution",
+  "@chapterShowSolution": {
+    "description": "Reveal the steps of a solved exercise"
+  },
+  "chapterAnswer": "Answer",
+  "@chapterAnswer": {
+    "description": "Final answer label"
+  },
+  "chapterFlashcards": "Flashcards",
+  "@chapterFlashcards": {
+    "description": "Chapter section"
+  },
+  "chapterFlashcardHint": "Tap to flip · swipe for the next card",
+  "@chapterFlashcardHint": {
+    "description": "Hint on flashcards"
+  },
+  "chapterFlashcardCount": "{current} / {total}",
+  "@chapterFlashcardCount": {
+    "description": "Flashcard position",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterQuiz": "Chapter quiz",
+  "@chapterQuiz": {
+    "description": "Chapter section"
+  },
+  "chapterQuizCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@chapterQuizCount": {
+    "description": "Number of questions",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterTextbook": "Official textbook (PDF)",
+  "@chapterTextbook": {
+    "description": "Link to the Ministry of Education textbook"
+  },
+  "chapterVideo": "Video lesson",
+  "@chapterVideo": {
+    "description": "Video slot (shown only when a video exists)"
+  },
+  "practiceTitle": "Practice",
+  "@practiceTitle": {
+    "description": "Practice mode picker title"
+  },
+  "practiceModeQuick10": "Quick 10",
+  "@practiceModeQuick10": {
+    "description": "Practice mode"
+  },
+  "practiceModeChapter": "This chapter",
+  "@practiceModeChapter": {
+    "description": "Practice mode"
+  },
+  "practiceModeUnit": "Whole unit",
+  "@practiceModeUnit": {
+    "description": "Practice mode"
+  },
+  "practiceModeMixed": "Mixed",
+  "@practiceModeMixed": {
+    "description": "Practice mode"
+  },
+  "practiceModeTimed": "Timed (1 minute each)",
+  "@practiceModeTimed": {
+    "description": "Practice mode"
+  },
+  "practiceModeWrongOnly": "Only my wrong answers",
+  "@practiceModeWrongOnly": {
+    "description": "Practice mode"
+  },
+  "practiceModeQuickRevise": "Quick revise (5 minutes)",
+  "@practiceModeQuickRevise": {
+    "description": "Practice mode: key points then 5 questions"
+  },
+  "practiceNoQuestions": "No questions here yet. Study a chapter first.",
+  "@practiceNoQuestions": {
+    "description": "Empty practice set"
+  },
+  "practiceNoWrongAnswers": "No wrong answers to practise. Well done!",
+  "@practiceNoWrongAnswers": {
+    "description": "Wrong-only mode with nothing to show"
+  },
+  "practiceQuestionOf": "Question {current} of {total}",
+  "@practiceQuestionOf": {
+    "description": "Progress label",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceCorrect": "Correct!",
+  "@practiceCorrect": {
+    "description": "Feedback after a correct answer"
+  },
+  "practiceWrong": "Not quite",
+  "@practiceWrong": {
+    "description": "Feedback after a wrong answer"
+  },
+  "practiceCorrectAnswer": "Correct answer: {answer}",
+  "@practiceCorrectAnswer": {
+    "description": "Shows the right answer",
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceExplanation": "Explanation",
+  "@practiceExplanation": {
+    "description": "Explanation heading"
+  },
+  "practiceTimeLeft": "{seconds}s",
+  "@practiceTimeLeft": {
+    "description": "Seconds left in timed mode",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceTimeUp": "Time is up",
+  "@practiceTimeUp": {
+    "description": "Timed mode ran out"
+  },
+  "practiceReadAloud": "Read aloud",
+  "@practiceReadAloud": {
+    "description": "Read the question with text-to-speech"
+  },
+  "practiceBookmark": "Bookmark",
+  "@practiceBookmark": {
+    "description": "Bookmark the question"
+  },
+  "practiceBookmarked": "Bookmarked",
+  "@practiceBookmarked": {
+    "description": "Question is bookmarked"
+  },
+  "practiceTrue": "True",
+  "@practiceTrue": {
+    "description": "True/false option"
+  },
+  "practiceFalse": "False",
+  "@practiceFalse": {
+    "description": "True/false option"
+  },
+  "practiceTypeAnswer": "Type your answer",
+  "@practiceTypeAnswer": {
+    "description": "Fill-in field hint"
+  },
+  "practiceTypeNumber": "Type a number",
+  "@practiceTypeNumber": {
+    "description": "Numeric field hint"
+  },
+  "practiceUnit": "Unit: {unit}",
+  "@practiceUnit": {
+    "description": "Expected unit for numeric answers",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceChooseAll": "Choose all that apply",
+  "@practiceChooseAll": {
+    "description": "Multiple answers hint"
+  },
+  "practiceMatchHint": "Tap an item on the left, then its match on the right",
+  "@practiceMatchHint": {
+    "description": "Matching hint"
+  },
+  "practiceOrderHint": "Drag to put the items in the right order",
+  "@practiceOrderHint": {
+    "description": "Ordering hint"
+  },
+  "practiceMoveUp": "Move up",
+  "@practiceMoveUp": {
+    "description": "Accessibility: move item up"
+  },
+  "practiceMoveDown": "Move down",
+  "@practiceMoveDown": {
+    "description": "Accessibility: move item down"
+  },
+  "practiceReadPassage": "Read the passage",
+  "@practiceReadPassage": {
+    "description": "Passage heading"
+  },
+  "practiceResultTitle": "Practice finished",
+  "@practiceResultTitle": {
+    "description": "Result screen title"
+  },
+  "practiceResultScore": "{correct} / {total} correct",
+  "@practiceResultScore": {
+    "description": "Result score",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceResultSaved": "Saved. It will sync when you are online.",
+  "@practiceResultSaved": {
+    "description": "Attempt stored for upload"
+  },
+  "practiceResultSynced": "Saved and synced.",
+  "@practiceResultSynced": {
+    "description": "Attempt uploaded"
+  },
+  "practiceAgain": "Practise again",
+  "@practiceAgain": {
+    "description": "Restart practice"
+  },
+  "meTitle": "Me",
+  "@meTitle": {
+    "description": "Profile tab title"
+  },
+  "meStudentId": "Your student ID",
+  "@meStudentId": {
+    "description": "Private student ID label"
+  },
+  "meStudentIdHelp": "Private. Keep it for support.",
+  "@meStudentIdHelp": {
+    "description": "Help under student ID. Must not mention payment."
+  },
+  "meCopy": "Copy",
+  "@meCopy": {
+    "description": "Copy button"
+  },
+  "mePremiumUntil": "Premium until {date}",
+  "@mePremiumUntil": {
+    "description": "Premium status",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "meFree": "Free plan",
+  "@meFree": {
+    "description": "Not Premium. Must not mention price or buying."
+  },
+  "meSignIn": "Sign in with Google",
+  "@meSignIn": {
+    "description": "Google sign-in button"
+  },
+  "meSignInWhy": "Keep your progress if you change phones.",
+  "@meSignInWhy": {
+    "description": "Why sign in"
+  },
+  "meSignedIn": "Signed in",
+  "@meSignedIn": {
+    "description": "Shown when signed in with Google"
+  },
+  "meSignInFailed": "Sign-in did not work. Please try again.",
+  "@meSignInFailed": {
+    "description": "Sign-in error"
+  },
+  "meSignInConflict": "This phone is already signed in with another Google account.",
+  "@meSignInConflict": {
+    "description": "Account conflict"
+  },
+  "meSettings": "Settings",
+  "@meSettings": {
+    "description": "Settings heading"
+  },
+  "meTheme": "Theme",
+  "@meTheme": {
+    "description": "Theme setting"
+  },
+  "meThemeSystem": "Same as phone",
+  "@meThemeSystem": {
+    "description": "Theme option"
+  },
+  "meThemeLight": "Light",
+  "@meThemeLight": {
+    "description": "Theme option"
+  },
+  "meThemeDark": "Dark",
+  "@meThemeDark": {
+    "description": "Theme option"
+  },
+  "meGrade": "Grade",
+  "@meGrade": {
+    "description": "Profile field"
+  },
+  "meStream": "Stream",
+  "@meStream": {
+    "description": "Profile field"
+  },
+  "meEditProfile": "Edit study profile",
+  "@meEditProfile": {
+    "description": "Open onboarding answers again"
+  },
+  "meVersion": "Version {version}",
+  "@meVersion": {
+    "description": "App version",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "ethiopianMonth": "{month, select, m1{Meskerem} m2{Tikimt} m3{Hidar} m4{Tahsas} m5{Tir} m6{Yekatit} m7{Megabit} m8{Miyazya} m9{Ginbot} m10{Sene} m11{Hamle} m12{Nehase} m13{Pagume} other{?}}",
+  "@ethiopianMonth": {
+    "description": "Ethiopian month name; month is m1…m13",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "ethiopianDate": "{month} {day}, {year}",
+  "@ethiopianDate": {
+    "description": "Ethiopian date, e.g. Sene 23, 2018",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "day": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingStep": "Step {current} of {total}",
+  "@onboardingStep": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingCityHint": "For example: Jijiga",
+  "@onboardingCityHint": {
+    "description": "UI text."
+  },
+  "onboardingReminderNone": "No reminder",
+  "@onboardingReminderNone": {
+    "description": "UI text."
+  },
+  "onboardingReminderAt": "Every day at {time}",
+  "@onboardingReminderAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingWelcomeTitle": "Pass the national exam with Guul 12",
+  "@onboardingWelcomeTitle": {
+    "description": "UI text."
+  },
+  "onboardingWelcomeBody": "Short lessons, smart practice and mock exams. Works offline.",
+  "@onboardingWelcomeBody": {
+    "description": "UI text."
+  },
+  "onboardingStart": "Get started",
+  "@onboardingStart": {
+    "description": "UI text."
+  },
+  "regionName": "{code, select, somali{Somali} addis_ababa{Addis Ababa} afar{Afar} amhara{Amhara} benishangul_gumuz{Benishangul-Gumuz} central_ethiopia{Central Ethiopia} dire_dawa{Dire Dawa} gambela{Gambela} harari{Harari} oromia{Oromia} sidama{Sidama} south_ethiopia{South Ethiopia} south_west_ethiopia{South West Ethiopia} tigray{Tigray} other{Other}}",
+  "@regionName": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "updateRequiredTitle": "Please update Guul 12",
+  "@updateRequiredTitle": {
+    "description": "UI text."
+  },
+  "updateRequiredBody": "This version is too old. Update the app from Google Play to continue.",
+  "@updateRequiredBody": {
+    "description": "UI text."
+  },
+  "studyNoChapters": "No chapters yet.",
+  "@studyNoChapters": {
+    "description": "UI text."
+  },
+  "studyPremiumLocked": "🔒 Premium",
+  "@studyPremiumLocked": {
+    "description": "UI text."
+  },
+  "chapterPractice": "Practise this chapter",
+  "@chapterPractice": {
+    "description": "UI text."
+  },
+  "chapterNoSummary": "The summary for this chapter is coming soon.",
+  "@chapterNoSummary": {
+    "description": "UI text."
+  },
+  "chapterOffline": "Connect to the internet once to download this chapter.",
+  "@chapterOffline": {
+    "description": "UI text."
+  },
+  "practiceChooseMode": "How do you want to practise?",
+  "@practiceChooseMode": {
+    "description": "UI text."
+  },
+  "practiceFinish": "Finish",
+  "@practiceFinish": {
+    "description": "UI text."
+  },
+  "practiceReview": "Review your answers",
+  "@practiceReview": {
+    "description": "UI text."
+  },
+  "practiceYourAnswer": "Your answer: {answer}",
+  "@practiceYourAnswer": {
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceNoAnswer": "No answer",
+  "@practiceNoAnswer": {
+    "description": "UI text."
+  },
+  "practiceLeaveTitle": "Stop practising?",
+  "@practiceLeaveTitle": {
+    "description": "UI text."
+  },
+  "practiceLeaveBody": "Answers so far will not be saved.",
+  "@practiceLeaveBody": {
+    "description": "UI text."
+  },
+  "practiceLeave": "Stop",
+  "@practiceLeave": {
+    "description": "UI text."
+  },
+  "practiceStay": "Keep going",
+  "@practiceStay": {
+    "description": "UI text."
+  },
+  "practicePairs": "{count, plural, =1{1 pair made} other{{count} pairs made}}",
+  "@practicePairs": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceClearPairs": "Clear pairs",
+  "@practiceClearPairs": {
+    "description": "UI text."
+  },
+  "meSignInUnavailable": "Google sign-in is not available yet.",
+  "@meSignInUnavailable": {
+    "description": "UI text."
+  },
+  "meRegion": "Region",
+  "@meRegion": {
+    "description": "UI text."
+  },
+  "meTarget": "Target score",
+  "@meTarget": {
+    "description": "UI text."
+  },
+  "meReminder": "Study reminder",
+  "@meReminder": {
+    "description": "UI text."
+  },
+  "meRetaker": "Retaking the exam",
+  "@meRetaker": {
+    "description": "UI text."
+  },
+  "meGender": "Gender",
+  "@meGender": {
+    "description": "UI text."
+  },
+  "meNotSet": "Not set",
+  "@meNotSet": {
+    "description": "UI text."
+  },
+  "meStudentIdPending": "Connect to the internet once to get your student ID.",
+  "@meStudentIdPending": {
+    "description": "UI text."
+  },
+  "meSave": "Save",
+  "@meSave": {
+    "description": "UI text."
+  },
+  "practicePickAnswer": "Choose or type an answer first.",
+  "@practicePickAnswer": {
+    "description": "Shown when Check is pressed with no answer."
+  },
+  "meStudyProfile": "Study profile",
+  "@meStudyProfile": {
+    "description": "Section title on Me."
+  }
+}
