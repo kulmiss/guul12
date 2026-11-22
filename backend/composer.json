@@ -74,7 +74,7 @@
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ],
         "lint:nova": [
-            "find nova -name '*.php' -print0 | xargs -0 -n1 php -l"
+            "find app/Nova -name '*.php' -print0 | xargs -0 -n1 php -l"
         ],
         "check": [
             "@php vendor/bin/pint --test",
