@@ -181,6 +181,7 @@ subjects:
       file: biology/u3-c1.yaml
     - number: 2
       title: Cellular respiration and energy flow
+      file: biology/u3-c2.yaml
   - number: 4
     title: Evolution
     chapters:
