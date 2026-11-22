@@ -1240,5 +1240,99 @@
         "type": "String"
       }
     }
+  },
+  "practiceModeSmart": "Smart practice",
+  "@practiceModeSmart": {
+    "description": "Adaptive practice mode"
+  },
+  "homeSmartBody": "10 questions picked for you: due reviews and your weak chapters first.",
+  "@homeSmartBody": {
+    "description": "Home smart practice subtitle"
+  },
+  "navProgress": "Progress",
+  "@navProgress": {
+    "description": "Bottom navigation"
+  },
+  "progressTitle": "Progress",
+  "@progressTitle": {
+    "description": "Progress tab title"
+  },
+  "progressAnswered": "{count, plural, =1{1 question answered} other{{count} questions answered}}",
+  "@progressAnswered": {
+    "description": "Progress summary",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progressAccuracy": "{percent}% right (last answer to each question)",
+  "@progressAccuracy": {
+    "description": "Progress summary",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "progressEmpty": "Study a chapter and answer some questions to see your progress here.",
+  "@progressEmpty": {
+    "description": "Progress empty state"
+  },
+  "progressWeak": "Weak topics",
+  "@progressWeak": {
+    "description": "Progress section"
+  },
+  "progressWeakNone": "No weak topics right now. Keep practising!",
+  "@progressWeakNone": {
+    "description": "No weak chapters"
+  },
+  "progressStrength": "Chapter strength",
+  "@progressStrength": {
+    "description": "Progress section: mastery by subject"
+  },
+  "progressChapterInfo": "{score}/100 · {answered} answered",
+  "@progressChapterInfo": {
+    "description": "Chapter mastery line",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "answered": {
+        "type": "int"
+      }
+    }
+  },
+  "progressSubjectStarted": "{started} of {total, plural, =1{1 chapter} other{{total} chapters}} started",
+  "@progressSubjectStarted": {
+    "description": "Under a subject on the Progress screen",
+    "placeholders": {
+      "started": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "progressPractise": "Practise",
+  "@progressPractise": {
+    "description": "Practise a weak chapter"
+  },
+  "masteryNotStarted": "Not started",
+  "@masteryNotStarted": {
+    "description": "Mastery level"
+  },
+  "masteryLearning": "Learning",
+  "@masteryLearning": {
+    "description": "Mastery level"
+  },
+  "masteryGood": "Good",
+  "@masteryGood": {
+    "description": "Mastery level"
+  },
+  "masteryStrong": "Strong",
+  "@masteryStrong": {
+    "description": "Mastery level"
   }
 }

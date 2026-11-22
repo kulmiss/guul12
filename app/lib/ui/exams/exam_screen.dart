@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../app/exam_providers.dart';
+import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
 import '../../data/models.dart';
@@ -98,7 +99,8 @@ class _ExamScreenState extends ConsumerState<ExamScreen> with WidgetsBindingObse
       ..invalidate(examInProgressProvider)
       ..invalidate(examResultsProvider)
       ..invalidate(mistakesProvider)
-      ..invalidate(reviewDueCountProvider);
+      ..invalidate(reviewDueCountProvider)
+      ..invalidate(masteryProvider);
     if (timeUp) messenger.showSnackBar(SnackBar(content: Text(l.examTimeUp)));
     if (mounted) fireAndForget(router.pushReplacement('/exam/result/${record.clientUuid}'));
   }

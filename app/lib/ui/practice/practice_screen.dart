@@ -28,6 +28,7 @@ class PracticeScreen extends StatelessWidget {
     final modes = <(PracticeMode, IconData)>[
       if (chapterId != null) (PracticeMode.chapter, Icons.menu_book_outlined),
       if (unitId != null) (PracticeMode.unit, Icons.library_books_outlined),
+      (PracticeMode.smart, Icons.auto_awesome_outlined),
       (PracticeMode.quick10, Icons.bolt),
       (PracticeMode.mixed, Icons.shuffle),
       (PracticeMode.timed, Icons.timer_outlined),

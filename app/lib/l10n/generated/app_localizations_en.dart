@@ -901,4 +901,77 @@ class AppLocalizationsEn extends AppLocalizations {
   String mistakesNextReview(String date) {
     return 'Next review: $date';
   }
+
+  @override
+  String get practiceModeSmart => 'Smart practice';
+
+  @override
+  String get homeSmartBody =>
+      '10 questions picked for you: due reviews and your weak chapters first.';
+
+  @override
+  String get navProgress => 'Progress';
+
+  @override
+  String get progressTitle => 'Progress';
+
+  @override
+  String progressAnswered(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count questions answered',
+      one: '1 question answered',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String progressAccuracy(int percent) {
+    return '$percent% right (last answer to each question)';
+  }
+
+  @override
+  String get progressEmpty =>
+      'Study a chapter and answer some questions to see your progress here.';
+
+  @override
+  String get progressWeak => 'Weak topics';
+
+  @override
+  String get progressWeakNone => 'No weak topics right now. Keep practising!';
+
+  @override
+  String get progressStrength => 'Chapter strength';
+
+  @override
+  String progressChapterInfo(int score, int answered) {
+    return '$score/100 · $answered answered';
+  }
+
+  @override
+  String progressSubjectStarted(int started, int total) {
+    String _temp0 = intl.Intl.pluralLogic(
+      total,
+      locale: localeName,
+      other: '$total chapters',
+      one: '1 chapter',
+    );
+    return '$started of $_temp0 started';
+  }
+
+  @override
+  String get progressPractise => 'Practise';
+
+  @override
+  String get masteryNotStarted => 'Not started';
+
+  @override
+  String get masteryLearning => 'Learning';
+
+  @override
+  String get masteryGood => 'Good';
+
+  @override
+  String get masteryStrong => 'Strong';
 }

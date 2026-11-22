@@ -3,10 +3,12 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
 import '../../data/models.dart';
 import '../../domain/practice.dart';
 import '../practice/practice_screen.dart';
+import '../progress/progress_screen.dart';
 import '../widgets/common.dart';
 import '../widgets/math_text.dart';
 
@@ -76,6 +78,7 @@ class _ChapterBody extends ConsumerWidget {
     final premium = ref.watch(profileProvider).value?.premiumActive ?? false;
     final videosOn = ref.watch(configProvider).value?.feature('videos') ?? true;
     final summary = chapter.summary;
+    final mastery = ref.watch(masteryProvider).value?[header.id];
 
     final actions = Wrap(
       spacing: 12,
@@ -118,6 +121,18 @@ class _ChapterBody extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              if (mastery != null && mastery.answered > 0)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                  child: Wrap(
+                    spacing: 8,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      MasteryChip(level: mastery.level),
+                      Text(l.progressChapterInfo(mastery.score, mastery.answered)),
+                    ],
+                  ),
+                ),
               Padding(padding: const EdgeInsets.fromLTRB(16, 16, 16, 0), child: actions),
               SectionTitle(l.chapterSummary),
               if (summary == null)

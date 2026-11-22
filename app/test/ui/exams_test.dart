@@ -116,6 +116,30 @@ void main() {
     expect(find.textContaining('2 / 4 ·'), findsOneWidget);
   });
 
+  testWidgets('a finished exam updates the Progress tab at once', (tester) async {
+    await pumpGuul(tester, server: examServer());
+    await tapOn(tester, find.text('Progress').last);
+    expect(find.textContaining('to see your progress here'), findsOneWidget);
+
+    await openExams(tester);
+    await startMock1(tester);
+    await tapOn(tester, find.text('Option A'));
+    await tapOn(tester, find.byTooltip('All questions'));
+    await tapOn(tester, find.bySemanticsLabel('4, Not answered'));
+    await tapOn(tester, find.text('Submit exam'));
+    await tapOn(
+      tester,
+      find.descendant(of: find.byType(AlertDialog), matching: find.text('Submit exam')),
+    );
+    expect(find.text('1 / 4 correct'), findsOneWidget);
+    await tapOn(tester, find.text('Done'));
+
+    // Every exam question counts, a skipped one as wrong: 4 answered, 1 right.
+    await tapOn(tester, find.text('Progress').last);
+    expect(find.text('4 questions answered'), findsOneWidget);
+    expect(find.text('25% right (last answer to each question)'), findsOneWidget);
+  });
+
   testWidgets('leaving keeps the exam (the clock does not stop); it can be continued', (
     tester,
   ) async {

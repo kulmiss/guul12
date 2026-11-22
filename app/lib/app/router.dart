@@ -9,6 +9,7 @@ import '../ui/exams/exam_screen.dart';
 import '../ui/exams/exams_screen.dart';
 import '../ui/practice/player_screen.dart';
 import '../ui/practice/practice_screen.dart';
+import '../ui/progress/progress_screen.dart';
 import '../ui/review/mistakes_screen.dart';
 import '../ui/screens/chapter_screen.dart';
 import '../ui/screens/home_screen.dart';
@@ -151,6 +152,9 @@ final routerProvider = Provider<GoRouter>((ref) {
             routes: [GoRoute(path: '/exams', builder: (_, _) => const ExamsScreen())],
           ),
           StatefulShellBranch(
+            routes: [GoRoute(path: '/progress', builder: (_, _) => const ProgressScreen())],
+          ),
+          StatefulShellBranch(
             routes: [
               GoRoute(
                 path: '/me',
@@ -182,6 +186,7 @@ class AppShell extends StatelessWidget {
       (Icons.home_outlined, Icons.home, l.navHome),
       (Icons.menu_book_outlined, Icons.menu_book, l.navStudy),
       (Icons.assignment_outlined, Icons.assignment, l.navExams),
+      (Icons.insights_outlined, Icons.insights, l.navProgress),
       (Icons.person_outline, Icons.person, l.navMe),
     ];
     if (isWide(context)) {

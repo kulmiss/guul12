@@ -146,38 +146,51 @@ void main() {
     }
   }
 
-  for (final dark in [false, true]) {
-    final file = 'mistakes_phone_${dark ? 'dark' : 'light'}.png';
-    testWidgets(file, (tester) async {
-      await pumpGuul(
-        tester,
-        server: richServer(),
-        before: (repo) async {
-          await prepared(repo);
-          await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
-          await repo.saveAttempt(
-            clientUuid: '00000000-0000-4000-8000-00000000abcd',
-            mode: 'quick10',
-            chapterId: 21,
-            startedAt: testNow,
-            finishedAt: testNow,
-            answers: const [
-              AttemptAnswer(
-                questionId: 2101,
-                chapterId: 21,
-                version: 1,
-                response: 'A',
-                timeMs: 9000,
-                correctLocally: false,
-              ),
-            ],
-          );
-        },
-      );
+  // Scenes that need one wrong answer saved first.
+  final afterMistake = <String, Scene>{
+    'mistakes': (tester) async {
       await tapOn(tester, find.text('My mistakes'));
       await tapOn(tester, find.text('What is 2 + 2?'));
-      await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
-    });
+    },
+    'progress': (tester) async {
+      await tapOn(tester, find.text('Progress').last);
+      await tapOn(tester, find.text('Physics').last);
+    },
+  };
+
+  for (final MapEntry(key: name, value: scene) in afterMistake.entries) {
+    for (final dark in [false, true]) {
+      final file = '${name}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        await pumpGuul(
+          tester,
+          server: richServer(),
+          before: (repo) async {
+            await prepared(repo);
+            await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+            await repo.saveAttempt(
+              clientUuid: '00000000-0000-4000-8000-00000000abcd',
+              mode: 'quick10',
+              chapterId: 21,
+              startedAt: testNow,
+              finishedAt: testNow,
+              answers: const [
+                AttemptAnswer(
+                  questionId: 2101,
+                  chapterId: 21,
+                  version: 1,
+                  response: 'A',
+                  timeMs: 9000,
+                  correctLocally: false,
+                ),
+              ],
+            );
+          },
+        );
+        await scene(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
   }
 
   testWidgets('onboarding_grade_phone_light.png', (tester) async {

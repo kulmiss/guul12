@@ -4,6 +4,7 @@ import 'package:material_ui/material_ui.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../app/practice_set.dart';
+import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
 import '../../data/models.dart';
@@ -55,10 +56,11 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
           ),
       ],
     );
-    // Mistakes and reviews changed.
+    // Mistakes, reviews and chapter strength changed.
     ref
       ..invalidate(mistakesProvider)
-      ..invalidate(reviewDueCountProvider);
+      ..invalidate(reviewDueCountProvider)
+      ..invalidate(masteryProvider);
     final synced = await repo.tryUploadAttempts(appVersion: ref.read(appVersionProvider));
     if (mounted) setState(() => _synced = synced);
   }
@@ -156,6 +158,7 @@ String practiceModeLabel(AppLocalizations l, PracticeMode mode) => switch (mode)
   PracticeMode.wrongOnly => l.practiceModeWrongOnly,
   PracticeMode.quickRevise => l.practiceModeQuickRevise,
   PracticeMode.review => l.practiceModeReview,
+  PracticeMode.smart => l.practiceModeSmart,
   PracticeMode.onboarding => l.onboardingHookTitle,
 };
 

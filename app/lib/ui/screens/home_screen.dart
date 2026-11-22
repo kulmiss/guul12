@@ -71,6 +71,21 @@ class HomeScreen extends ConsumerWidget {
                           : context.push(PracticeScreen.playPath(PracticeMode.quick10)),
                     ),
                   ),
+                  if (saved.isNotEmpty)
+                    Card(
+                      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        leading: const CircleAvatar(child: Icon(Icons.auto_awesome_outlined)),
+                        title: Text(
+                          l.practiceModeSmart,
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        subtitle: Text(l.homeSmartBody),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push(PracticeScreen.playPath(PracticeMode.smart)),
+                      ),
+                    ),
                   if (due > 0)
                     Card(
                       margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),

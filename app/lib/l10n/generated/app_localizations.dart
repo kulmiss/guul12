@@ -1567,6 +1567,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Next review: {date}'**
   String mistakesNextReview(String date);
+
+  /// Adaptive practice mode
+  ///
+  /// In en, this message translates to:
+  /// **'Smart practice'**
+  String get practiceModeSmart;
+
+  /// Home smart practice subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'10 questions picked for you: due reviews and your weak chapters first.'**
+  String get homeSmartBody;
+
+  /// Bottom navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get navProgress;
+
+  /// Progress tab title
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get progressTitle;
+
+  /// Progress summary
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 question answered} other{{count} questions answered}}'**
+  String progressAnswered(int count);
+
+  /// Progress summary
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% right (last answer to each question)'**
+  String progressAccuracy(int percent);
+
+  /// Progress empty state
+  ///
+  /// In en, this message translates to:
+  /// **'Study a chapter and answer some questions to see your progress here.'**
+  String get progressEmpty;
+
+  /// Progress section
+  ///
+  /// In en, this message translates to:
+  /// **'Weak topics'**
+  String get progressWeak;
+
+  /// No weak chapters
+  ///
+  /// In en, this message translates to:
+  /// **'No weak topics right now. Keep practising!'**
+  String get progressWeakNone;
+
+  /// Progress section: mastery by subject
+  ///
+  /// In en, this message translates to:
+  /// **'Chapter strength'**
+  String get progressStrength;
+
+  /// Chapter mastery line
+  ///
+  /// In en, this message translates to:
+  /// **'{score}/100 · {answered} answered'**
+  String progressChapterInfo(int score, int answered);
+
+  /// Under a subject on the Progress screen
+  ///
+  /// In en, this message translates to:
+  /// **'{started} of {total, plural, =1{1 chapter} other{{total} chapters}} started'**
+  String progressSubjectStarted(int started, int total);
+
+  /// Practise a weak chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Practise'**
+  String get progressPractise;
+
+  /// Mastery level
+  ///
+  /// In en, this message translates to:
+  /// **'Not started'**
+  String get masteryNotStarted;
+
+  /// Mastery level
+  ///
+  /// In en, this message translates to:
+  /// **'Learning'**
+  String get masteryLearning;
+
+  /// Mastery level
+  ///
+  /// In en, this message translates to:
+  /// **'Good'**
+  String get masteryGood;
+
+  /// Mastery level
+  ///
+  /// In en, this message translates to:
+  /// **'Strong'**
+  String get masteryStrong;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

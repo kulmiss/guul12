@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/api_client.dart';
 import '../data/models.dart';
 import '../data/repository.dart';
+import '../domain/mastery.dart';
 import '../domain/practice.dart';
 import 'providers.dart';
 
@@ -76,6 +77,7 @@ Future<PracticeSet> buildPracticeSet(
     case PracticeMode.timed:
     case PracticeMode.wrongOnly:
     case PracticeMode.review:
+    case PracticeMode.smart:
     case PracticeMode.quickRevise:
     case PracticeMode.onboarding:
       chapters = await repo.db.chapters();
@@ -86,14 +88,23 @@ Future<PracticeSet> buildPracticeSet(
     for (final c in chapters)
       for (final p in c.passages) p.id: p,
   };
+  final smart = request.mode == PracticeMode.smart;
+  final mastery = smart
+      ? chapterMastery(
+          stats: await repo.db.chapterStats(),
+          questionsPerChapter: {for (final c in chapters) c.header.id: c.questions.length},
+        )
+      : const <ChapterMastery>[];
+  final weak = weakTopics(mastery, max: mastery.length).map((m) => m.chapterId).toList();
   final questions = PracticeBuilder(random: random ?? Random(request.seed)).build(
     mode: request.mode,
     pool: pool,
     wrong: await repo.db.lastAnswerWrong(),
     answered: await repo.db.answeredQuestionIds(),
-    due: request.mode == PracticeMode.review
+    due: request.mode == PracticeMode.review || smart
         ? await repo.db.dueQuestionIds(now ?? repo.now())
         : const {},
+    weakChapters: weak,
   );
   return PracticeSet(questions: questions, passages: passages);
 }
