@@ -139,6 +139,10 @@ class ContentValidatorTest extends TestCase
         $this->editQuestion(0, ['options' => ['A' => 'Red.', 'B' => '"red"', 'C' => 'Blue']]);
         $this->assertError('two items say the same thing');
 
+        // Punctuation questions: commas inside the text change the answer.
+        $this->editQuestion(0, ['options' => ['A' => 'Lake Tana, which is large, is old.', 'B' => 'Lake Tana which is large, is old.', 'C' => 'Other'], 'answer' => 'A']);
+        $this->assertSame([], $this->errors(), 'inner punctuation matters');
+
         $this->editQuestion(0, ['options' => ['A' => 'x', 'B' => 'y', 'C' => 'z'], 'answer' => 'D']);
         $this->assertError('answer must be one of the option letters');
 

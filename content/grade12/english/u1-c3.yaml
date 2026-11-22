@@ -177,7 +177,7 @@ questions:
       A: 'She asked me where do I live.'
       B: 'She asked me where did I live?'
       C: 'She asked me where I lived.'
-      D: 'She asked me where I live?'
+      D: 'She asked me where do I lived.'
     answer: C
     explanation: 'Reported questions use statement word order, backshift and no question mark.'
 
@@ -362,7 +362,7 @@ questions:
     stem: 'Report: He asked me, "What time does the bus leave?"'
     options:
       A: 'He asked me what time does the bus leave.'
-      B: 'He asked me what time the bus leaves?'
+      B: 'He asked me what time does the bus left.'
       C: 'He asked me what time the bus left.'
       D: 'He asked me what time did the bus leave.'
     answer: C

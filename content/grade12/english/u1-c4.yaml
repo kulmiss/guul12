@@ -1,0 +1,380 @@
+summary:
+  key_points:
+    - 'Relative pronouns: who (people), which (things), whose (possession), where (places), when (times). "That" can replace who or which in defining clauses, but NOT in non-defining clauses that are set off with commas.'
+    - 'Defining clauses tell us which one ("The student who won the prize is my cousin."). Non-defining clauses add extra information between commas ("Harar, which is a walled city, attracts many visitors.").'
+    - 'Articles: use "a" before a consonant SOUND (a book, a university, a one-way street) and "an" before a vowel SOUND (an apple, an hour, an honest man). Use "the" for something specific or unique (the sun, the Nile, the teacher I told you about). Use no article for general plural or uncountable nouns ("Water is essential for life.") and for most countries ("Ethiopia"), but say the United States, the Netherlands.'
+    - 'Prepositions of time: at + clock time and night (at 7 o''clock, at night); on + days and dates (on Monday, on 11 September); in + months, years, seasons and parts of the day (in July, in 2026, in the morning).'
+    - 'Dependent prepositions: interested in, good at, afraid of, depend on, responsible for, proud of, different from, married to.'
+    - 'Linking words: addition – moreover, furthermore, in addition; contrast – however, although, whereas, despite / in spite of (+ noun or -ing); cause – because (+ clause), because of / due to (+ noun); result – therefore, as a result, so; purpose – so that, in order to.'
+    - '"Although" is followed by a clause (subject + verb); "despite" is followed by a noun or -ing form. "Although it rained, we played." / "Despite the rain, we played."'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-1-4-se01
+    problem: 'Join with a relative pronoun: "This is the farmer. His cows won the prize."'
+    steps:
+      - '"His" shows possession, so use "whose".'
+      - '"This is the farmer whose cows won the prize."'
+    answer: 'This is the farmer whose cows won the prize.'
+  - uid: g12-english-1-4-se02
+    problem: 'Rewrite using "despite": "Although she was ill, she sat the exam."'
+    steps:
+      - '"Despite" needs a noun or -ing form, not a clause.'
+      - '"Despite being ill, she sat the exam." (or "Despite her illness, ...")'
+    answer: 'Despite being ill, she sat the exam.'
+  - uid: g12-english-1-4-se03
+    problem: 'Choose a or an: "___ hour", "___ university", "___ honest answer".'
+    steps:
+      - 'Hour and honest begin with a silent h, so they start with a vowel sound: an hour, an honest answer.'
+      - 'University begins with a "yoo" sound (consonant sound): a university.'
+    answer: 'an hour, a university, an honest answer'
+
+flashcards:
+  - {uid: g12-english-1-4-fc01, term: Who / which, definition: 'who for people; which for things.'}
+  - {uid: g12-english-1-4-fc02, term: Whose, definition: 'Relative pronoun showing possession.'}
+  - {uid: g12-english-1-4-fc03, term: Non-defining clause, definition: 'Extra information between commas; cannot use "that".'}
+  - {uid: g12-english-1-4-fc04, term: A vs an, definition: 'Decided by the first SOUND: a university, an hour.'}
+  - {uid: g12-english-1-4-fc05, term: At / on / in (time), definition: 'at 5 pm; on Monday; in June, in 2026.'}
+  - {uid: g12-english-1-4-fc06, term: Although vs despite, definition: 'although + clause; despite + noun or -ing.'}
+  - {uid: g12-english-1-4-fc07, term: Because vs because of, definition: 'because + clause; because of + noun.'}
+  - {uid: g12-english-1-4-fc08, term: However, definition: 'Contrast linker that usually starts a new sentence, followed by a comma.'}
+  - {uid: g12-english-1-4-fc09, term: Therefore, definition: 'Result linker: "It rained; therefore, the match was cancelled."'}
+
+questions:
+  - uid: g12-english-1-4-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct word: "The doctor ______ treated me was very kind."'
+    options:
+      A: 'which'
+      B: 'who'
+      C: 'whose'
+      D: 'where'
+    answer: B
+    explanation: '"Who" refers to people.'
+
+  - uid: g12-english-1-4-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct word: "That is the girl ______ father is a pilot."'
+    options:
+      A: 'whose'
+      B: 'who'
+      C: 'which'
+      D: 'whom'
+    answer: A
+    explanation: '"Whose" shows possession: her father.'
+
+  - uid: g12-english-1-4-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct word: "Jigjiga is the city ______ I was born."'
+    options:
+      A: 'which'
+      B: 'who'
+      C: 'where'
+      D: 'whose'
+    answer: C
+    explanation: '"Where" introduces a clause about a place (= in which).'
+
+  - uid: g12-english-1-4-q004
+    type: single_choice
+    difficulty: 3
+    stem: 'Which sentence is correctly punctuated and uses the correct pronoun?'
+    options:
+      A: 'Lake Tana, that is the largest lake in Ethiopia, is the source of the Blue Nile.'
+      B: 'Lake Tana which is the largest lake in Ethiopia, is the source of the Blue Nile.'
+      C: 'Lake Tana, who is the largest lake in Ethiopia, is the source of the Blue Nile.'
+      D: 'Lake Tana, which is the largest lake in Ethiopia, is the source of the Blue Nile.'
+    answer: D
+    explanation: 'A non-defining clause needs two commas and cannot use "that"; "who" is for people.'
+
+  - uid: g12-english-1-4-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct article: "She waited for ______ hour."'
+    options:
+      A: 'an'
+      B: 'a'
+      C: 'the a'
+      D: 'no article'
+    answer: A
+    explanation: 'The "h" in hour is silent, so it begins with a vowel sound.'
+
+  - uid: g12-english-1-4-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct article: "Haramaya is ______ university in eastern Ethiopia."'
+    options:
+      A: 'an'
+      B: 'a'
+      C: 'the an'
+      D: 'no article'
+    answer: B
+    explanation: '"University" begins with a "yoo" consonant sound, so use "a".'
+
+  - uid: g12-english-1-4-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct option: "______ Nile is the longest river in Africa."'
+    options:
+      A: 'A'
+      B: 'An'
+      C: 'The'
+      D: 'no article'
+    answer: C
+    explanation: 'Names of rivers, seas and oceans take "the".'
+
+  - uid: g12-english-1-4-q008
+    type: true_false
+    difficulty: 2
+    stem: 'The sentence "The water is essential for all living things." is the best way to state this general fact.'
+    answer: false
+    explanation: 'General statements about uncountable nouns use no article: "Water is essential for all living things."'
+
+  - uid: g12-english-1-4-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct preposition: "The exam starts ______ 8:30."'
+    options:
+      A: 'on'
+      B: 'in'
+      C: 'by in'
+      D: 'at'
+    answer: D
+    explanation: 'Use "at" with clock times.'
+
+  - uid: g12-english-1-4-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct preposition: "Ethiopian New Year is celebrated ______ September."'
+    options:
+      A: 'at'
+      B: 'on'
+      C: 'in'
+      D: 'by at'
+    answer: C
+    explanation: 'Use "in" with months.'
+
+  - uid: g12-english-1-4-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct preposition: "We have a football match ______ Saturday."'
+    options:
+      A: 'on'
+      B: 'in'
+      C: 'at'
+      D: 'by in'
+    answer: A
+    explanation: 'Use "on" with days of the week.'
+
+  - uid: g12-english-1-4-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct preposition: "Ruqia is very good ______ mathematics."'
+    options:
+      A: 'in at'
+      B: 'at'
+      C: 'on'
+      D: 'for'
+    answer: B
+    explanation: 'The fixed expression is "good at".'
+
+  - uid: g12-english-1-4-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct preposition: "Success depends ______ hard work."'
+    options:
+      A: 'of'
+      B: 'at'
+      C: 'from'
+      D: 'on'
+    answer: D
+    explanation: 'The verb "depend" takes "on".'
+
+  - uid: g12-english-1-4-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct linker: "______ the heavy rain, the farmers went to the market."'
+    options:
+      A: 'Although'
+      B: 'Despite'
+      C: 'Because'
+      D: 'Therefore'
+    answer: B
+    explanation: '"The heavy rain" is a noun phrase, so use "despite". "Although" needs a clause.'
+
+  - uid: g12-english-1-4-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct linker: "______ it was very hot, the athletes finished the race."'
+    options:
+      A: 'Although'
+      B: 'Despite'
+      C: 'Because of'
+      D: 'In spite of'
+    answer: A
+    explanation: '"It was very hot" is a clause, so use "although". Despite and in spite of need a noun or -ing.'
+
+  - uid: g12-english-1-4-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct linker: "The road was closed ______ the flood."'
+    options:
+      A: 'because'
+      B: 'although'
+      C: 'because of'
+      D: 'therefore'
+    answer: C
+    explanation: '"Because of" is followed by a noun phrase; "because" needs a clause.'
+
+  - uid: g12-english-1-4-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best linker: "The prices of fuel went up. ______, transport became more expensive."'
+    options:
+      A: 'However'
+      B: 'Although'
+      C: 'Despite'
+      D: 'As a result'
+    answer: D
+    explanation: 'The second sentence is a result of the first.'
+
+  - uid: g12-english-1-4-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best linker: "Some students prefer to study in the morning, ______ others work better at night."'
+    options:
+      A: 'whereas'
+      B: 'because'
+      C: 'so that'
+      D: 'therefore'
+    answer: A
+    explanation: '"Whereas" contrasts two different facts in one sentence.'
+
+  - uid: g12-english-1-4-q019
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which linkers add more information (addition)? Choose all that apply.'
+    options:
+      A: 'Moreover'
+      B: 'Furthermore'
+      C: 'In addition'
+      D: 'However'
+    answer: [A, B, C]
+    explanation: '"However" shows contrast.'
+
+  - uid: g12-english-1-4-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'Complete with a relative pronoun: "The book ______ you lent me is very interesting."'
+    answer: [which, that]
+    explanation: 'In a defining clause about a thing, both "which" and "that" are correct.'
+
+  - uid: g12-english-1-4-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete with one word: "She is interested ______ studying medicine."'
+    answer: [in]
+    explanation: 'The fixed expression is "interested in".'
+
+  - uid: g12-english-1-4-q022
+    type: true_false
+    difficulty: 1
+    stem: '"An university" is the correct form.'
+    answer: false
+    explanation: '"University" starts with a consonant sound ("yoo"), so it is "a university".'
+
+  - uid: g12-english-1-4-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each linker with its function.'
+    left:
+      L1: 'therefore'
+      L2: 'however'
+      L3: 'so that'
+    right:
+      R1: 'contrast'
+      R2: 'purpose'
+      R3: 'result'
+      R4: 'time order'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '"First", "then" and "finally" show time order; none of the three linkers does.'
+
+  - uid: g12-english-1-4-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct linker: "He saved money ______ he could buy a bicycle."'
+    options:
+      A: 'although'
+      B: 'so that'
+      C: 'because of'
+      D: 'despite'
+    answer: B
+    explanation: '"So that" introduces a purpose clause.'
+
+  - uid: g12-english-1-4-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the parts in order to make a correct sentence.'
+    items:
+      A: 'whose bag was stolen'
+      B: 'The student'
+      C: 'reported it to the police.'
+    answer: [B, A, C]
+    explanation: '"The student whose bag was stolen reported it to the police."'
+
+  - uid: g12-english-1-4-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct preposition: "Who is responsible ______ cleaning the classroom today?"'
+    options:
+      A: 'of'
+      B: 'at'
+      C: 'for'
+      D: 'on'
+    answer: C
+    explanation: 'The fixed expression is "responsible for".'
+
+  - uid: g12-english-1-4-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct preposition: "My brother is afraid ______ snakes."'
+    options:
+      A: 'from'
+      B: 'at'
+      C: 'with'
+      D: 'of'
+    answer: D
+    explanation: 'The fixed expression is "afraid of".'
+
+  - uid: g12-english-1-4-q028
+    type: single_choice
+    difficulty: 3
+    stem: 'Choose the correct article use: "______ United States and ______ Ethiopia have embassies in each other''s capitals."'
+    options:
+      A: 'The / no article'
+      B: 'No article / the'
+      C: 'The / the'
+      D: 'A / an'
+    answer: A
+    explanation: 'Country names with "States", "Republic" or "Kingdom" take "the"; most single-word country names, such as Ethiopia, take no article.'
+
+  - uid: g12-english-1-4-q029
+    type: true_false
+    difficulty: 2
+    stem: 'In "My uncle, who lives in Harar, is a teacher.", the clause between the commas gives extra (non-essential) information.'
+    answer: true
+    explanation: 'It is a non-defining relative clause; the sentence still makes sense without it.'
+
+  - uid: g12-english-1-4-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct preposition: "We usually study ______ the evening."'
+    options:
+      A: 'at'
+      B: 'in'
+      C: 'on'
+      D: 'by at'
+    answer: B
+    explanation: 'Use "in" with parts of the day: in the morning, in the afternoon, in the evening (but "at night").'

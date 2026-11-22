@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-1-3-q001: {hash: 'aa4e613e786ca2346e326a096acfbcccc643715f6b7df87fc56b01563e5b4e58', answer: B}
+  g12-english-1-3-q002: {hash: '6c69c8c74528e3c9f690f093c91e1aa51ab97e4e37af52c2fcb378293a4b8a6e', answer: A}
+  g12-english-1-3-q003: {hash: '3660a155cfa1c152012b82a18160f23cf663cc56cfdd73cbc4e6ad445be6d929', answer: C}
+  g12-english-1-3-q004: {hash: 'd032af75ad1310bd4088687b53bdc41d83374b7fe2b923d0b09b07718c5a2768', answer: D}
+  g12-english-1-3-q005: {hash: '1ea009e9cc958c7a0f017bd0b8075d69c10e8c8e00d1668c446e65a2f5ed6358', answer: A}
+  g12-english-1-3-q006: {hash: '9d7b39a1c1d16a95fa54f99089df51e8894fd7867d92f2916e37864c9be91de6', answer: B}
+  g12-english-1-3-q007: {hash: 'a87ec0fc4a8abed2179d06211410800eec6d3b4961d465a41043c0fbd3fcab1a', answer: false}
+  g12-english-1-3-q008: {hash: 'a7b578dad94f6fdf0a46db3acb6f7c5f97b5ab57b0574f166b561995f8274718', answer: C}
+  g12-english-1-3-q009: {hash: '62aa865197bbd28d9b6891a8aa8f46324d5eeeedb58f9d1aba3496145ca82e74', answer: D}
+  g12-english-1-3-q010: {hash: 'f951547190abc718ac6c6bb2beb6a86bc31478c85665c7683bba3acb315997ed', answer: A}
+  g12-english-1-3-q011: {hash: '505802e537de337f91c651858d698eb6c6ae784a58390eec4b1b6b1140e4af1f', answer: B}
+  g12-english-1-3-q012: {hash: 'bc3af5d9d9f0517730e5cc6f205def5844f7c12877375257a1ae9e09ef2f48e4', answer: C, note: 'Option D ("She asked me where I live?") differs from C only by optional backshift plus a question mark. Without backshift, "She asked me where I live." is acceptable standard English when the fact is still true, so D is ruled out ONLY by the stray "?". That is a punctuation trap students may miss; consider making D clearly wrong (e.g. inverted word order) or explaining in the feedback that the question mark is the error.'}
+  g12-english-1-3-q013: {hash: '79fd03daf94d1bbb2b00f4d264b630f93addb1574b9327a66889ccf15d3dcc85', answer: D, note: 'Minor: C ("He asked were we ready.") is heard in some varieties (e.g. Irish English) and informal speech, but it is non-standard in written English, so D is the only safe answer. Fine as is.'}
+  g12-english-1-3-q014: {hash: 'de2579cad51dcb45729f44356411eb2db47e13d37c8e9f1e66f5d214f6a4538b', answer: A}
+  g12-english-1-3-q015: {hash: '825dae193c22df0d1c409e5a06150b56e13d5ee6cdbae6bb6e33363a96a0f15d', answer: [A, C, D]}
+  g12-english-1-3-q016: {hash: 'ad49a09de9c833b0e8d778f103373bfd96cdf4be8a1b20fdb55964629f89879c', answer: D}
+  g12-english-1-3-q017: {hash: '9c4080622b7b810090864a8bf14bb022fa0f1639f5693d72d4193b6aff74ff6b', answer: A}
+  g12-english-1-3-q018: {hash: '9a47b2b6858172ab7ae8fd7f41995286cad89c474a6b078cc7dbc0652e1ca10a', answer: true}
+  g12-english-1-3-q019: {hash: '9d41717a7518d75f45e5c1a60c595e493a8c0b9d1af95602e9a6ba2c279a8e2b', answer: 'spoken'}
+  g12-english-1-3-q020: {hash: 'c101154730c4e3b5562d5eac939d76c3f1519707d6c66bb706ed79256cd4518b', answer: 'by'}
+  g12-english-1-3-q021: {hash: 'a1e10079aaebbf8bbf77b131d7435ddf5a12fad150568ce6886f0e5a7b7ef217', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-english-1-3-q022: {hash: '12f3c2428894d932f6731959aaf030ebecc5166ecd19383531aa2309c784e7ee', answer: B}
+  g12-english-1-3-q023: {hash: '09abf45908ea48306bf36bcae8065681c82c21b0720577bdb3e780bdffe92668', answer: C}
+  g12-english-1-3-q024: {hash: 'e2e0a636525789cda513f77e829a0fcf663de35c30c4fbd32909a75df534a435', answer: true}
+  g12-english-1-3-q025: {hash: '70a2be3761cb2c349ec87f8496ece210ef2dfba000df44a2dc0e283c29539b76', answer: [B, C, A]}
+  g12-english-1-3-q026: {hash: '66ac47080bfb17192be25b136bd7bc6e3d3c48ecaed56c233396063d116f8dfb', answer: D}
+  g12-english-1-3-q027: {hash: '24e447fd583d97b0d8015f78b8427c1ae471ac174a58adf3c2f2b1e324ce1c72', answer: A}
+  g12-english-1-3-q028: {hash: '049d505e943559d1d485fb01f2dc873ed9a61072b6e150ffb534e72aade1625f', answer: B}
+  g12-english-1-3-q029: {hash: '9ae70d8688a280a56118f213f387f53903f2f5a3ebca1af611c6423e9fd9055a', answer: C, note: 'Option B ("He asked me what time the bus leaves?") differs from C only by optional backshift plus a question mark. A bus timetable is a still-true/habitual fact, so "He asked me what time the bus leaves." is fully acceptable standard English; B is wrong ONLY because of the "?". Strong candidate for two-right-answers complaints; recommend rewriting B so it is clearly wrong (e.g. keep inverted order) or using a one-off past event in the stem.'}
+  g12-english-1-3-q030: {hash: '382671a9ec14058fe952c1be253047b8e51f9087ddf13201b5f0399edfe083dd', answer: D}
