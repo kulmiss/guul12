@@ -248,7 +248,7 @@ questions:
   - uid: g12-english-2-1-q019
     type: fill_in
     difficulty: 1
-    stem: 'Write the antonym (opposite) of "ancient" that begins with m: m______.'
+    stem: 'Write one word that is the antonym (opposite) of "ancient". It starts with the letter m.'
     answer: [modern]
     explanation: 'Ancient = very old; modern = new.'
 

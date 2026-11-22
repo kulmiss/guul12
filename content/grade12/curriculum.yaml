@@ -235,6 +235,7 @@ subjects:
       file: english/u2-c1.yaml
     - number: 2
       title: Word formation, idioms and phrasal verbs
+      file: english/u2-c2.yaml
   - number: 3
     title: Reading
     chapters:
