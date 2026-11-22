@@ -126,7 +126,7 @@ questions:
   - uid: g12-aptitude-1-2-q008
     type: single_choice
     difficulty: 2
-    stem: 'All roses are flowers. Which statement MUST be true?'
+    stem: 'All roses are flowers. (Roses exist.) Which statement MUST be true?'
     options:
       A: 'All flowers are roses.'
       B: 'Some roses are not flowers.'
@@ -224,7 +224,7 @@ questions:
   - uid: g12-aptitude-1-2-q017
     type: multiple_answers
     difficulty: 3
-    stem: 'All squares are rectangles. All rectangles have four sides. Which conclusions MUST be true? Choose all that apply.'
+    stem: 'All squares are rectangles. All rectangles have four sides. (Squares exist.) Which conclusions MUST be true? Choose all that apply.'
     options:
       A: 'All squares have four sides.'
       B: 'Some rectangles are squares.'
@@ -261,7 +261,7 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'Complete with one word that shows contrast: "The test was hard, ________ most students passed."'
-    answer: [but, yet]
+    answer: [but, yet, though, although]
     explanation: 'The second part is unexpected, so a contrast word is needed.'
 
   - uid: g12-aptitude-1-2-q021
@@ -297,7 +297,7 @@ questions:
   - uid: g12-aptitude-1-2-q024
     type: ordering
     difficulty: 3
-    stem: 'Put these statements in order to form a valid argument ending with the conclusion.'
+    stem: 'Put these statements in order to form a valid argument: start with the general rule and end with the conclusion.'
     items:
       A: 'Therefore, Ayan is good at problem solving.'
       B: 'Ayan studies mathematics.'

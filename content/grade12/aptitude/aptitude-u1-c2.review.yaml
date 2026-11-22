@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-aptitude-1-2-q001: {hash: 'a09ad672b81052c8775056ade5d97662c8af50ecb6b4a41d7843d7ed585cbfc5', answer: B}
+  g12-aptitude-1-2-q002: {hash: '3d49309e80722a4260cf5590b2de6c9686dc184b051c36e09e3361bf4e7592ac', answer: A}
+  g12-aptitude-1-2-q003: {hash: 'f62f0680d292d8f2cb54dca405dc8dbb824dbb74f52ee6f5b58c2b081afb810e', answer: C}
+  g12-aptitude-1-2-q004: {hash: '3f8f819f6cde9fdd7828f7e3bb8cd97189f79d642ac3a761bc32df603566a581', answer: D}
+  g12-aptitude-1-2-q005: {hash: '02e8b3a582786f7eb655de6e4520641f80181179ad2ae02a89f70424aa767439', answer: A}
+  g12-aptitude-1-2-q006: {hash: 'a38e8aef5994a0180d8cb1d0aea92c87054bc3824bdc993568a90a88468eb015', answer: B}
+  g12-aptitude-1-2-q007: {hash: 'cc1261c196c511c5557cf866c4273b721646afdffcf6c4561926b0fadd1f3527', answer: A}
+  g12-aptitude-1-2-q008: {hash: '844e9912bf2e28ac998d8b8d8421cdc4b608fc75f5859b0d8a68f21690dcc89c', answer: D, note: 'D only follows if roses exist (existential import). This is the usual convention in aptitude tests, so D is acceptable, but the explanation should say that conversion of "All roses are flowers" gives "Some flowers are roses" assuming roses exist.'}
+  g12-aptitude-1-2-q009: {hash: 'f1ae32aef856d4cf457b56393040a6d7a2846bc8863cd8caccab542145713e22', answer: C}
+  g12-aptitude-1-2-q010: {hash: '68cc3f618e004da4839caf67cf3778e454800e445043e26f6d6d3e4a17fbf631', answer: B}
+  g12-aptitude-1-2-q011: {hash: '2b6db997e165416885ceece746f70b2a11eed8974ac42814b7037c9d668fcf47', answer: false}
+  g12-aptitude-1-2-q012: {hash: '0493be9b45b4816c0440ab71ec5168c4d00e609cbbe5658bf679b37d548cd304', answer: true}
+  g12-aptitude-1-2-q013: {hash: '01850a14c2fbb17e9013eb5ff574357e7771a1e5ef59f1edff7b301ce2b51c99', answer: B}
+  g12-aptitude-1-2-q014: {hash: '8e8472aea42be0d20e17d24a67347ad335eb74ad6a484e316aa698efe1c75d72', answer: D}
+  g12-aptitude-1-2-q015: {hash: 'f5d61c25ffd827ec05346252408e09e1e74903b56b214145bbbcf0369509cf08', answer: B}
+  g12-aptitude-1-2-q016: {hash: 'abe93c6fa21fad153752b8f82121201633d21b894f1a6bd7c43f8f89af743b18', answer: C}
+  g12-aptitude-1-2-q017: {hash: 'c829f949f74c1ee995598f0492c156b7199815d8d7ef6a7ac3a2714bfd493c1d', answer: [A, B], note: 'B ("Some rectangles are squares") follows only under existential import (squares exist), the same convention as q008. A strict reader could argue only A must be true. Make sure the key and explanation match q008 (if q008 keys D, this must include B), and state the convention in the explanation.'}
+  g12-aptitude-1-2-q018: {hash: 'cc68a7b502044553c94437997fdb13ce6a4fa3f69e92d22c2a9b855c65880d17', answer: A}
+  g12-aptitude-1-2-q019: {hash: 'dd2ef179a31f962b76f0b94c632c359565e75529f06accd9fbb7c4cb8c8d8c88', answer: D}
+  g12-aptitude-1-2-q020: {hash: '7554f1e81502e474e8985f7297f7346e1faebc6162d365e7cad14b27b01f77d3', answer: but, note: 'Also correct: yet. "Though"/"although" also fit grammatically ("The test was hard, though most students passed"). The accepted answers should include but, yet, though and although.'}
+  g12-aptitude-1-2-q021: {hash: 'fe147e223d822bcc3971bc5b32283ada17c0464dc6ec0bba46c5e30eba12af17', answer: so}
+  g12-aptitude-1-2-q022: {hash: '05d0f467117153b43f5450eec009d8e349f1caa18b31cac7ba570e5a0aef4a5a', answer: true}
+  g12-aptitude-1-2-q023: {hash: '074bf3c0e07288867077a9611aa42269a6568bd13f29f3173702eeaacea3e01c', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-aptitude-1-2-q024: {hash: '9ede8426c2d99567cf8c33fd27760788352e559fa30d1d27b3b7b5556845bf86', answer: [C, B, A], note: 'Order of the two premises is not fixed: [B, C, A] is an equally valid argument. Only "A last" is logically required. Either accept both orders or reword the stem (e.g. "general rule first, then the fact, then the conclusion").'}
+  g12-aptitude-1-2-q025: {hash: 'e0277d09b314077c68c11a7faee69a076705d40163a3fcd8a5818aabeeb5d4d2', answer: D}
+  g12-aptitude-1-2-q026: {hash: 'd2b76d367863e3f104182be82b34bd16acf431c0d82af44e6a4f36ac8abec25b', answer: D}
+  g12-aptitude-1-2-q027: {hash: '6bd115b3686eef62735ad11e2120703872965acd4f806ea7e63585ea96528baa', answer: A}
+  g12-aptitude-1-2-q028: {hash: 'ef381f18f83eefc257809c268cff6996a6e72037ad13b88aff0fee37dd9509c0', answer: B}
+  g12-aptitude-1-2-q029: {hash: '186ebda4b7c8108cf262ff6c531107089cc4823836cbe7d464debecfd0ec65b3', answer: C}
+  g12-aptitude-1-2-q030: {hash: '88b3554e887b6600039bebb99bf42131dca69bdab9536947e3d679a3e9067dd6', answer: B}
