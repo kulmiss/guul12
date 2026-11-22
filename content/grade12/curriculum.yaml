@@ -305,6 +305,7 @@ subjects:
     chapters:
     - number: 1
       title: Challenges of Economic Development
+      file: geography/u5-c1.yaml
   - number: 6
     title: Solutions to Environmental and Sustainability Problems
     chapters:

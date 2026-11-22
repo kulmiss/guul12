@@ -78,7 +78,7 @@ questions:
   - uid: g12-geography-4-1-q004
     type: single_choice
     difficulty: 2
-    stem: 'A town has 4 000 people aged 0–14, 1 000 aged 65 and over, and 10 000 aged 15–64. What is the dependency ratio?'
+    stem: 'A town has 4 000 people aged 0–14, 1 000 aged 65 and over, and 10 000 aged 15–64. What is the dependency ratio (dependants per 100 people aged 15–64)?'
     options:
       A: '40'
       B: '100'
@@ -217,7 +217,7 @@ questions:
   - uid: g12-geography-4-1-q016
     type: single_choice
     difficulty: 3
-    stem: 'Country X has a birth rate of 12 and a death rate of 14 per 1 000. Which stage of the demographic transition is it most likely in?'
+    stem: 'Country X has a birth rate of 12 and a death rate of 14 per 1 000. In the five-stage demographic transition model, which stage is it most likely in?'
     options:
       A: 'Stage 1'
       B: 'Stage 5'
@@ -285,14 +285,14 @@ questions:
   - uid: g12-geography-4-1-q023
     type: single_choice
     difficulty: 2
-    stem: 'Rapid movement of people from rural areas to cities is called:'
+    stem: 'The growth in the share of a country''s people who live in towns and cities is called:'
     options:
       A: 'Deforestation'
       B: 'Urbanisation'
       C: 'Desertification'
       D: 'Emigration only'
     answer: B
-    explanation: 'Urbanisation is the growth of the share of people living in towns and cities.'
+    explanation: 'Urbanisation is mainly caused by migration from rural areas and by natural increase in towns.'
 
   - uid: g12-geography-4-1-q024
     type: single_choice

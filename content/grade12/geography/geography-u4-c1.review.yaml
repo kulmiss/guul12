@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-4-1-q001: {hash: '9ed2b266f0aee31fcf457f24129093222c6cafd211c7aba9daf15215505eed7f', answer: 2.5}
+  g12-geography-4-1-q002: {hash: 'a202e85490f5f637a4165bd6ead807010c8df2201673f71a92db067b44098581', answer: B}
+  g12-geography-4-1-q003: {hash: '016ac524d93cdbbbe4972af43129bc133e0f53daea383aeb3f76fb6c70d7611f', answer: 200}
+  g12-geography-4-1-q004: {hash: '8e94929858a9a16f50f85b4667e909c6c837766ff86dcdf90a925c157f55fe35', answer: C, note: 'Answer 50 is dependants per 100 people of working age. The stem gives no unit; adding "per 100 working-age people" to the stem would make it clearer.'}
+  g12-geography-4-1-q005: {hash: '2faaad9ca1a53927026c05c3415b6c5a96b6a402cd3c41c861fe1102fe200ea6', answer: A}
+  g12-geography-4-1-q006: {hash: '54318b2f61fcc23d02b41e3bc6a0e4acdc778c63636a3759e1074d810e8ce7a8', answer: C}
+  g12-geography-4-1-q007: {hash: '661e8eb6ea277aa2538d6bc580c0587457131364e093d0da9f0f727babf2bd26', answer: D}
+  g12-geography-4-1-q008: {hash: '0ee52f8191786de95550179f79f36d7b419b84f0f8a15d96a83b76ad09b156ae', answer: A}
+  g12-geography-4-1-q009: {hash: '62cda363d22a594d02def8fc7157bbe3ae2b6a3176d3ee886f8f2ec9bac0b946', answer: B}
+  g12-geography-4-1-q010: {hash: 'e091c1b2b03294003fd543c7fbec8901d86f51c4926b4d6e0deb575b3e1434d2', answer: C}
+  g12-geography-4-1-q011: {hash: '5f16945ca1439750da58edd5402090871d0d734b12e9444ebd60028966048f77', answer: [A, B, C]}
+  g12-geography-4-1-q012: {hash: 'b88251bf2c11b0b10dca2438527f5ae252a7edf9c4ec5837d983cb3ec79bde5e', answer: A}
+  g12-geography-4-1-q013: {hash: '3da65c2ef8b33c254a368606d1de190644a2c0ff71eee40ff585baaf11ad023e', answer: true}
+  g12-geography-4-1-q014: {hash: '9ad1d163ee18ae39e2f51ee2ad1890b8ba8249c7f9704daf3a78d4227688d389', answer: C}
+  g12-geography-4-1-q015: {hash: '9a58a986b59f6b1d91b6560f6c8d9e26db79f630017c8eb13a3969c294768a89', answer: D}
+  g12-geography-4-1-q016: {hash: '0f3e632a4134ca6b4ea3a262325b9f899a96df30cda0a0707eaee92c52ae83ce', answer: B, note: 'The answer depends on the 5-stage model. Some textbooks teach only 4 stages, and there a death rate above the birth rate fits no stage. This is fine only if the chapter teaches Stage 5.'}
+  g12-geography-4-1-q017: {hash: 'ba8e8dafd891a3d2ec3d4c5f815c1ffc33e568afc91728e44664792c6c1acbb4', answer: true}
+  g12-geography-4-1-q018: {hash: '5185dbba00e45325371dd7ee3b7bdb40960502194f41d1bed7455a7119ea88d6', answer: false}
+  g12-geography-4-1-q019: {hash: '86cd7b43616c4a2fe2717edaecc30f8545bde421fd684037d165d8d7c1868c83', answer: density}
+  g12-geography-4-1-q020: {hash: 'adc1d6652cfec06400bec381036a0946bf1c96f951e85d66d8c5e2cfd0764651', answer: transition}
+  g12-geography-4-1-q021: {hash: '6a572b718b8f49e568e8ff8e6291f64895f367d0db3cadf6aa07ec09ef1654a5', answer: {L1: R3, L2: R2, L3: R1}}
+  g12-geography-4-1-q022: {hash: 'ec1a7c052790a576518113553b263bd6e9c920a1df56d7f602d4b99b8e2c2b5f', answer: [B, C, A, D]}
+  g12-geography-4-1-q023: {hash: 'c3dbdfbb0c8e5fb0cc210693bb7af2d1978a73c7b39faad3ce8266835a0d2eff', answer: B, note: 'Not precise. Urbanisation is the growth in the share of people living in towns. The movement itself is rural-urban migration, which causes urbanisation. Suggested stem: "The growth of towns as people move from rural areas to cities is called:". Still, B is the only reasonable option.'}
+  g12-geography-4-1-q024: {hash: '56939ff83752abea99a61100ed67432f73e0eaa0e4bc966e685a2cf61cea9dc6', answer: D}
+  g12-geography-4-1-q025: {hash: 'a2c25a63db72bb1ab1cb3de49f74b77174033a2986025f7ecd2d3877f7739096', answer: D}
+  g12-geography-4-1-q026: {hash: 'e8343fac550fa39d52756a49a813b2cd6d9d6c17cadd13cfa183bd2efd4153d4', answer: A}
+  g12-geography-4-1-q027: {hash: '6a67503dcad68ce4a8e39f999163c89a3d4fea7fea3fd0cc0bb085cd7ea5c2e4', answer: B}
+  g12-geography-4-1-q028: {hash: '7fcb5907742b3011d67ca5737f5e9566ca69c7d3268657e0c1d53c56e382b5a9', answer: C, note: 'The dates are close enough. The policy started in 1979-1980. The end was announced in late 2015, and the two-child policy started in January 2016. "About 1980 to 2015" is acceptable.'}
+  g12-geography-4-1-q029: {hash: '0f597b0e5299cbde1fc7c329accd14c3e524ec030c74116404a049b39ee287e1', answer: true}
+  g12-geography-4-1-q030: {hash: '23874894f83e6cfe72c03e0c56a157ede8ce932651daeb15f3cd4379914d9c57', answer: A}

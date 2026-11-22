@@ -1,0 +1,369 @@
+summary:
+  key_points:
+    - 'Economic development means lasting improvement in people''s living standards, not only more production. Economic growth is a rise in total output (GDP).'
+    - 'Indicators: GDP and GNI per capita (income per person); the Human Development Index (HDI), published by the UNDP since 1990, which combines life expectancy, education and income on a scale from 0 to 1; and the share of people below the international poverty line set by the World Bank.'
+    - 'Common challenges in low-income countries: rapid population growth, low farm productivity and dependence on rain-fed agriculture, poor roads, power and water supply, low levels of skills, unemployment (especially among young people), a large informal sector, debt, and dependence on exporting a few primary products.'
+    - 'Dependence on primary exports (such as coffee, oilseeds or minerals) is risky because world prices go up and down; the terms of trade often favour manufactured goods.'
+    - 'Being landlocked raises trade costs. Since 1993 Ethiopia has had no sea coast and sends most of its trade through the port of Djibouti, linked by road and by the electric Addis Ababa–Djibouti railway.'
+    - '"Brain drain" is the emigration of skilled people such as doctors and engineers, which reduces a country''s human capital.'
+    - 'Development strategies include investing in education and health, infrastructure, irrigation and better farming, industrial parks and manufacturing, regional trade, and good governance.'
+  formulas:
+    - label: GDP per capita
+      latex: '\text{GDP per capita} = \frac{\text{GDP}}{\text{population}}'
+    - label: Growth rate
+      latex: 'g = \frac{\text{GDP}_{new} - \text{GDP}_{old}}{\text{GDP}_{old}} \times 100\%'
+
+solved_exercises:
+  - uid: g12-geography-5-1-se01
+    problem: 'A country''s GDP is 2 billion dollars and its population is 4 million. Find GDP per capita.'
+    steps:
+      - '$\frac{2\,000\,000\,000}{4\,000\,000}$.'
+      - '$= 500$ dollars per person.'
+    answer: '500 dollars'
+  - uid: g12-geography-5-1-se02
+    problem: 'Why is GDP per capita alone not a complete measure of development?'
+    steps:
+      - 'It is an average, so it hides inequality; a few rich people can raise it while many remain poor.'
+      - 'It does not show health, education or the environment, which the HDI and other indicators include.'
+    answer: 'It hides inequality and ignores health and education.'
+  - uid: g12-geography-5-1-se03
+    problem: 'Explain one disadvantage of depending mainly on one export crop.'
+    steps:
+      - 'If the world price of that crop falls, export earnings fall sharply.'
+      - 'The country then has less foreign currency to import fuel, machines and medicines.'
+    answer: 'Earnings become unstable when prices fall.'
+
+flashcards:
+  - {uid: g12-geography-5-1-fc01, term: Economic growth, definition: 'Increase in total output (GDP).'}
+  - {uid: g12-geography-5-1-fc02, term: Economic development, definition: 'Lasting improvement in living standards and well-being.'}
+  - {uid: g12-geography-5-1-fc03, term: GDP per capita, definition: 'GDP divided by population.'}
+  - {uid: g12-geography-5-1-fc04, term: HDI, definition: 'Human Development Index: life expectancy, education and income (0 to 1).'}
+  - {uid: g12-geography-5-1-fc05, term: Informal sector, definition: 'Small unregistered work, e.g. street trading, outside official records.'}
+  - {uid: g12-geography-5-1-fc06, term: Terms of trade, definition: 'Export prices compared with import prices.'}
+  - {uid: g12-geography-5-1-fc07, term: Landlocked, definition: 'Having no sea coast.'}
+  - {uid: g12-geography-5-1-fc08, term: Brain drain, definition: 'Emigration of skilled and educated people.'}
+
+questions:
+  - uid: g12-geography-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which three things does the Human Development Index (HDI) combine?'
+    options:
+      A: 'Population, area and rainfall'
+      B: 'Life expectancy, education and income'
+      C: 'Exports, imports and debt'
+      D: 'Number of cars, phones and roads'
+    answer: B
+    explanation: 'The HDI measures a long and healthy life, knowledge and a decent standard of living.'
+
+  - uid: g12-geography-5-1-q002
+    type: numeric
+    difficulty: 2
+    stem: 'A country''s GDP is 2 billion dollars and its population is 4 million. What is its GDP per capita, in dollars?'
+    answer: {value: 500, tolerance: 0, unit: dollars}
+    explanation: '$\frac{2\,000\,000\,000}{4\,000\,000} = 500$.'
+
+  - uid: g12-geography-5-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the difference between economic growth and economic development?'
+    options:
+      A: 'They are exactly the same.'
+      B: 'Development only measures exports.'
+      C: 'Growth is a rise in output; development is a lasting improvement in people''s well-being.'
+      D: 'Growth means more people; development means more land.'
+    answer: C
+    explanation: 'An economy can grow while many people''s lives improve little.'
+
+  - uid: g12-geography-5-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is GDP per capita alone an incomplete measure of development?'
+    options:
+      A: 'It is an average that hides inequality and ignores health and education.'
+      B: 'It is too hard to calculate.'
+      C: 'It is measured only every 100 years.'
+      D: 'It counts only farmers.'
+    answer: A
+    explanation: 'Two countries with the same average income can differ greatly in poverty, health and schooling.'
+
+  - uid: g12-geography-5-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which organisation publishes the Human Development Index?'
+    options:
+      A: 'The World Health Organization'
+      B: 'The African Union'
+      C: 'FIFA'
+      D: 'The United Nations Development Programme (UNDP)'
+    answer: D
+    explanation: 'The UNDP has published the HDI in its Human Development Report since 1990.'
+
+  - uid: g12-geography-5-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Since 1993, which port has handled most of Ethiopia''s foreign trade?'
+    options:
+      A: 'Mombasa'
+      B: 'Djibouti'
+      C: 'Port Sudan'
+      D: 'Dar es Salaam'
+    answer: B
+    explanation: 'After Eritrea''s independence Ethiopia became landlocked and has relied mostly on Djibouti.'
+
+  - uid: g12-geography-5-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'How does being landlocked make development harder?'
+    options:
+      A: 'It increases the cost and time of importing and exporting goods.'
+      B: 'It stops all rainfall.'
+      C: 'It prevents farming.'
+      D: 'It has no effect on trade.'
+    answer: A
+    explanation: 'Goods must cross another country to reach a port, adding transport and transit costs.'
+
+  - uid: g12-geography-5-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is depending mainly on a few primary exports risky?'
+    options:
+      A: 'Primary products never sell.'
+      B: 'It always causes floods.'
+      C: 'World prices for them can fall sharply, cutting export earnings.'
+      D: 'They are always more valuable than manufactured goods.'
+    answer: C
+    explanation: 'Price swings make income unstable, and raw goods usually earn less than processed ones.'
+
+  - uid: g12-geography-5-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What is meant by "brain drain"?'
+    options:
+      A: 'A disease of the nervous system'
+      B: 'Students forgetting what they learned'
+      C: 'Too many universities'
+      D: 'Skilled and educated people emigrating to other countries'
+    answer: D
+    explanation: 'It reduces the number of doctors, engineers and teachers in the home country.'
+
+  - uid: g12-geography-5-1-q010
+    type: true_false
+    difficulty: 1
+    stem: 'The HDI is measured on a scale from 0 to 1, where higher values mean higher human development.'
+    answer: true
+    explanation: 'Countries with values above about 0.8 are classed as very high human development.'
+
+  - uid: g12-geography-5-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which describes the informal sector?'
+    options:
+      A: 'Large registered factories'
+      B: 'Small, often unregistered activities such as street trading and shoe shining'
+      C: 'Government ministries'
+      D: 'International banks'
+    answer: B
+    explanation: 'Informal work is common in towns but often has low, insecure incomes.'
+
+  - uid: g12-geography-5-1-q012
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are common challenges to development in low-income countries? Choose all that apply.'
+    options:
+      A: 'Poor infrastructure such as roads and electricity'
+      B: 'Dependence on rain-fed agriculture'
+      C: 'High youth unemployment'
+      D: 'Too many highly skilled workers with nothing to do'
+    answer: [A, B, C]
+    explanation: 'Skill shortages, not surpluses, are the usual problem.'
+
+  - uid: g12-geography-5-1-q013
+    type: numeric
+    difficulty: 2
+    stem: 'A country''s GDP rises from 40 billion to 42 billion dollars in a year. What is the growth rate, in per cent?'
+    answer: {value: 5, tolerance: 0, unit: '%'}
+    explanation: '$\frac{2}{40} \times 100\% = 5\%$.'
+
+  - uid: g12-geography-5-1-q014
+    type: single_choice
+    difficulty: 3
+    stem: 'A country''s GDP grows by 3% a year while its population grows by 3% a year. What happens to GDP per capita?'
+    options:
+      A: 'It rises by 6%.'
+      B: 'It falls by 3%.'
+      C: 'It stays about the same.'
+      D: 'It doubles.'
+    answer: C
+    explanation: 'Output and population grow at the same rate, so output per person hardly changes.'
+
+  - uid: g12-geography-5-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does irrigation help development in countries that depend on rain-fed farming?'
+    options:
+      A: 'It reduces the risk of crop failure in dry years and allows more than one harvest.'
+      B: 'It makes the soil less fertile.'
+      C: 'It stops people from farming.'
+      D: 'It increases floods in cities.'
+    answer: A
+    explanation: 'A reliable water supply raises yields and makes farm incomes more stable.'
+
+  - uid: g12-geography-5-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which railway links Ethiopia''s capital with the sea?'
+    options:
+      A: 'Addis Ababa–Mombasa railway'
+      B: 'Addis Ababa–Port Sudan railway'
+      C: 'Addis Ababa–Berbera railway'
+      D: 'Addis Ababa–Djibouti railway'
+    answer: D
+    explanation: 'The electric Addis Ababa–Djibouti railway connects the capital to Djibouti''s port.'
+
+  - uid: g12-geography-5-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'A country can have rising GDP while inequality also rises.'
+    answer: true
+    explanation: 'If most new income goes to a small group, GDP grows but many people may not benefit.'
+
+  - uid: g12-geography-5-1-q018
+    type: true_false
+    difficulty: 1
+    stem: 'Investing in education and health is considered important for long-term development.'
+    answer: true
+    explanation: 'Healthy, skilled people are more productive (human capital).'
+
+  - uid: g12-geography-5-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'A country with no sea coast is described as ________.'
+    answer: [landlocked, land-locked]
+    explanation: 'Ethiopia, Uganda and South Sudan are landlocked.'
+
+  - uid: g12-geography-5-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'The emigration of skilled people from a country is called brain ________.'
+    answer: [drain]
+    explanation: 'It reduces the home country''s skilled workforce.'
+
+  - uid: g12-geography-5-1-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each term with its meaning.'
+    left:
+      L1: 'GDP per capita'
+      L2: 'Terms of trade'
+      L3: 'Infrastructure'
+    right:
+      R1: 'Basic facilities such as roads, power and water'
+      R2: 'Average output per person'
+      R3: 'The prices of exports compared with imports'
+      R4: 'The number of births per year'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'Births per year is a population measure.'
+
+  - uid: g12-geography-5-1-q022
+    type: ordering
+    difficulty: 2
+    stem: 'Put these HDI values in order from lowest human development to highest.'
+    items:
+      A: '0.75'
+      B: '0.45'
+      C: '0.92'
+      D: '0.60'
+    answer: [B, D, A, C]
+    explanation: 'A higher HDI value means higher human development.'
+
+  - uid: g12-geography-5-1-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do governments build industrial parks?'
+    options:
+      A: 'To reduce the number of jobs'
+      B: 'To attract factories, create jobs and increase manufactured exports'
+      C: 'To stop all trade'
+      D: 'To replace schools'
+    answer: B
+    explanation: 'Industrial parks offer land, power and services in one place to attract investors.'
+
+  - uid: g12-geography-5-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the best example of adding value to a primary product before export?'
+    options:
+      A: 'Exporting raw hides'
+      B: 'Exporting unwashed coffee cherries'
+      C: 'Exporting live cattle only'
+      D: 'Turning hides into leather shoes and exporting the shoes'
+    answer: D
+    explanation: 'Processing raises the value of exports and creates jobs at home.'
+
+  - uid: g12-geography-5-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'A country borrows heavily and must spend a large share of its export earnings repaying debt. What is the likely effect?'
+    options:
+      A: 'Less money is left for schools, health and infrastructure.'
+      B: 'More money for development'
+      C: 'Debt disappears automatically.'
+      D: 'Exports always double.'
+    answer: A
+    explanation: 'Debt repayments compete with spending on services and investment.'
+
+  - uid: g12-geography-5-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which factor most directly raises the productivity of farmers?'
+    options:
+      A: 'Removing extension workers'
+      B: 'Using improved seeds, fertiliser and better methods'
+      C: 'Ploughing down steep slopes'
+      D: 'Cutting all trees on the farm'
+    answer: B
+    explanation: 'Better inputs and knowledge increase the harvest per hectare.'
+
+  - uid: g12-geography-5-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about regional trade (for example, within Africa) is correct?'
+    options:
+      A: 'It always harms all countries.'
+      B: 'It is not allowed.'
+      C: 'It can open larger markets for local products.'
+      D: 'It only involves landlocked countries.'
+    answer: C
+    explanation: 'Agreements such as the African Continental Free Trade Area aim to increase trade among African countries.'
+
+  - uid: g12-geography-5-1-q028
+    type: true_false
+    difficulty: 2
+    stem: 'A large informal sector usually provides workers with secure jobs and pensions.'
+    answer: false
+    explanation: 'Informal jobs are usually insecure, with low pay and no social protection.'
+
+  - uid: g12-geography-5-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'What happened in 1993 that made Ethiopia landlocked?'
+    options:
+      A: 'Eritrea became independent.'
+      B: 'The Red Sea dried up.'
+      C: 'Ethiopia sold its ports.'
+      D: 'A new railway opened.'
+    answer: A
+    explanation: 'With Eritrea''s independence, the ports of Assab and Massawa were no longer in Ethiopia.'
+
+  - uid: g12-geography-5-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can good governance support development?'
+    options:
+      A: 'It increases corruption.'
+      B: 'It makes rules unpredictable.'
+      C: 'It discourages investment.'
+      D: 'Fair, predictable rules and low corruption encourage investment and good use of public money.'
+    answer: D
+    explanation: 'Investors and citizens benefit when laws are clear and public resources are well managed.'
