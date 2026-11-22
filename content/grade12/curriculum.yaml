@@ -220,8 +220,10 @@ subjects:
       file: english/u1-c1.yaml
     - number: 2
       title: Conditionals and modal verbs
+      file: english/u1-c2.yaml
     - number: 3
       title: Passive voice and reported speech
+      file: english/u1-c3.yaml
     - number: 4
       title: Clauses, articles, prepositions and linking words
   - number: 2

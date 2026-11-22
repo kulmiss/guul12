@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-1-2-q001: {hash: 'd8f345e2b630960076d47e4cd71ca4eacab900dbd69317c9a9f86778d61ee5f7', answer: B}
+  g12-english-1-2-q002: {hash: 'b9f542915b5f5934c1a78a532b0c4a40fcdb1f1639ced067651762e66b30091b', answer: A}
+  g12-english-1-2-q003: {hash: 'add0d053960370983c26fe8e7aa57f54730ce0fe6262b1f183b603d620b65221', answer: C, note: 'Minor: D (had had) can form a mixed conditional (past condition, present result) such as "If I had had money, I would be rich now". With "would build" it is odd but a strict teacher could argue it is not impossible. C is clearly the intended second conditional. Consider replacing D with a plainly wrong form (e.g. "would have").'}
+  g12-english-1-2-q004: {hash: '93f67c7aa62ec130340aaba9b6e368cefb4a86b8240441e633a37ca6308c7758', answer: D}
+  g12-english-1-2-q005: {hash: 'dc4d0c6f95c69a13c44d63c4fb2ea190a35d7b2f47aa6449ecefc3bce89b3ab8', answer: A}
+  g12-english-1-2-q006: {hash: '0134a655b5a4bd9a15c2ff50cf1dd37417aa94d4c49828dfcf63dd6e74b65b54', answer: B}
+  g12-english-1-2-q007: {hash: 'e5ab8b57242306ec96b8a9b410394f12fb32183aec76bf237b62dd7fd65a3a24', answer: false}
+  g12-english-1-2-q008: {hash: 'f13ca5a2e6a3aa148f875d610dea0dacf8c29b3a4b4a23c8ea0596d621c4c996', answer: C}
+  g12-english-1-2-q009: {hash: '07da6c58656749cf7a7105dc0bb89d0d1ce7c306ec8e9212e134c48f3493de85', answer: D}
+  g12-english-1-2-q010: {hash: '20d74b721c05b8199908f19137116bca24c16460c9b15fa744721a16c76f5494', answer: A}
+  g12-english-1-2-q011: {hash: '38ee98015f950dfd28d634adbc393dacc86530ed3e4d215bd561c1c3d0176f58', answer: B}
+  g12-english-1-2-q012: {hash: 'c04ede608ac51692acfb3eaa44dc6496bc14bd2691735cf8db6f602c8300f57b', answer: C}
+  g12-english-1-2-q013: {hash: '0b362baf9061ee598984776b6a38415590eea5f3ffd47f78ba41093a68bbded0', answer: D}
+  g12-english-1-2-q014: {hash: '657befbb735138f58417f35c37cf70f3f55f6dc326e79e930fa7978f68ddc94e', answer: A}
+  g12-english-1-2-q015: {hash: 'a5fe3d1cb63ba864298acb0592a642b8356e0b2139adf83f421291da37ee3e12', answer: [A, B, C]}
+  g12-english-1-2-q016: {hash: '5d16a5e21df25290e93e23bb4993f15fbf865ba797378856d979fd80a709414a', answer: C}
+  g12-english-1-2-q017: {hash: '2627f470ccd2ce9a1079e2ffac84558e4fb5ef6441541ef3309ed0eec5a1877c', answer: B}
+  g12-english-1-2-q018: {hash: '699d9d10d2fe0881bb1d7cad7384037684f635987d541865c19dcfa0dfb7a28c', answer: false}
+  g12-english-1-2-q019: {hash: '35bb63faf2b1d39f839fa51969c0a25b07ed5f22a9746262b0a035c45706d493', answer: had}
+  g12-english-1-2-q020: {hash: '95a50b83bf272315320ee9f4af58cca3350a81e4120cac7922cd509f0b639193', answer: unless}
+  g12-english-1-2-q021: {hash: '6f709a56e4c2f789599f85794a5b1d9bafc82dfcb927a12d98609861914f2f11', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-english-1-2-q022: {hash: '10d15e06428b920a5e0547d9b69fd721e6a991a84d96f2e3ec7db2b5cfa30703', answer: D}
+  g12-english-1-2-q023: {hash: '5e0bfc4bbb3f21a59e174a77a2ff0803d0d8d82cf098e0661245218457398ada', answer: A, note: 'Minor: "Must I borrow your dictionary, please?" (B) is grammatical, though pragmatically odd as a request for permission. Stem asks for the "correct form"; consider rewording to "Choose the polite way to ask for permission" so only May fits.'}
+  g12-english-1-2-q024: {hash: 'f3035d373644c502c20274af6b6c73b990ba749bc5ec6c30cfbfb1bcae8efc66', answer: true}
+  g12-english-1-2-q025: {hash: 'a312a3ead93d14e8f90fb4155c9d2577130434ea8b68c58c9eb313f20abd6f68', answer: [B, A, C]}
+  g12-english-1-2-q026: {hash: 'e88d9aa4543fbade4e02dd9c3c87706c38be2eb400c67916cf0944beb8edd51f', answer: C}
+  g12-english-1-2-q027: {hash: '3779f2d101230083ca28a30a1f55e7334f208249efc9d13b23633b649743a0e7', answer: D}
+  g12-english-1-2-q028: {hash: '49620b5a7916c21c33d67b8b76906cd7bda54e59e3ad9db75c006ab354c777a6', answer: A}
+  g12-english-1-2-q029: {hash: 'bbfdddd4ed46a9df290796d4864022302d779588d947fd18a6a82a8362aa97b7', answer: B}
+  g12-english-1-2-q030: {hash: 'eb0aae963d05ee731c980ec3b1c9e4530ac23d04432914ee314877f36a519e6a', answer: C}

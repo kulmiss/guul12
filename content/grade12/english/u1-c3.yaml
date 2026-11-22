@@ -1,0 +1,381 @@
+summary:
+  key_points:
+    - 'Active: the subject does the action ("The farmers harvest the teff."). Passive: the subject receives the action ("The teff is harvested by the farmers.").'
+    - 'Form the passive with the right tense of "be" + past participle: is/are made (present), was/were made (past), has/have been made (present perfect), will be made (future), is/are being made (present continuous), can/must be made (modals).'
+    - 'Use the passive when the doer is unknown, unimportant or obvious, or in formal and scientific writing. Add "by + agent" only if it is useful.'
+    - 'Only verbs with an object (transitive verbs) can be made passive. "Arrive", "happen" and "die" have no passive.'
+    - 'Reported speech: when the reporting verb is in the past (said, told), tenses usually move one step back: present → past, present perfect → past perfect, past → past perfect, will → would, can → could, may → might.'
+    - 'Pronouns and time and place words change: now → then, today → that day, tomorrow → the next day, yesterday → the day before, here → there, this → that.'
+    - '"Say" has no person object ("He said that..."); "tell" needs one ("He told me that...").'
+    - 'Reported questions use statement word order and no question mark: "Where do you live?" → She asked me where I lived. Yes/no questions use if or whether: She asked if I was ready.'
+    - 'Reported commands use tell/ask + object + (not) to + verb: "Close the door." → He told me to close the door.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-1-3-se01
+    problem: 'Change to the passive: "The Ministry will open three new universities next year."'
+    steps:
+      - 'The object "three new universities" becomes the subject; future passive is will be + past participle.'
+      - '"Three new universities will be opened (by the Ministry) next year."'
+    answer: 'Three new universities will be opened next year.'
+  - uid: g12-english-1-3-se02
+    problem: 'Report: Abdi said, "I am studying for the exam now."'
+    steps:
+      - 'Present continuous moves back to past continuous; "I" becomes "he"; "now" becomes "then".'
+      - 'Abdi said that he was studying for the exam then.'
+    answer: 'Abdi said that he was studying for the exam then.'
+  - uid: g12-english-1-3-se03
+    problem: 'Report the question: The teacher asked, "Have you finished your essay?"'
+    steps:
+      - 'It is a yes/no question, so use "if" or "whether" and statement word order.'
+      - 'Present perfect moves back to past perfect: The teacher asked if I had finished my essay.'
+    answer: 'The teacher asked if I had finished my essay.'
+
+flashcards:
+  - {uid: g12-english-1-3-fc01, term: Passive voice, definition: 'be + past participle; the subject receives the action.'}
+  - {uid: g12-english-1-3-fc02, term: Agent, definition: 'The doer in a passive sentence, introduced by "by".'}
+  - {uid: g12-english-1-3-fc03, term: Transitive verb, definition: 'Verb that takes an object; only these can be passive.'}
+  - {uid: g12-english-1-3-fc04, term: Backshift, definition: 'Moving tenses one step back in reported speech.'}
+  - {uid: g12-english-1-3-fc05, term: Say vs tell, definition: 'say (that)...; tell + person (that)...'}
+  - {uid: g12-english-1-3-fc06, term: Reported yes/no question, definition: 'asked + if/whether + statement order.'}
+  - {uid: g12-english-1-3-fc07, term: Reported command, definition: 'told/asked + person + (not) to + verb.'}
+  - {uid: g12-english-1-3-fc08, term: Time-word changes, definition: 'tomorrow → the next day; yesterday → the day before; now → then.'}
+
+questions:
+  - uid: g12-english-1-3-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the passive form of: "Farmers grow coffee in Jimma."'
+    options:
+      A: 'Coffee grows farmers in Jimma.'
+      B: 'Coffee is grown in Jimma by farmers.'
+      C: 'Coffee was growing in Jimma.'
+      D: 'Farmers are grown coffee in Jimma.'
+    answer: B
+    explanation: 'Present simple passive: is/are + past participle.'
+
+  - uid: g12-english-1-3-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct passive: "Someone stole my bicycle last night."'
+    options:
+      A: 'My bicycle was stolen last night.'
+      B: 'My bicycle is stolen last night.'
+      C: 'My bicycle has stolen last night.'
+      D: 'My bicycle stole last night.'
+    answer: A
+    explanation: 'Past simple passive: was/were + past participle. The unknown doer ("someone") is left out.'
+
+  - uid: g12-english-1-3-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct passive: "They have built a new hospital in Gode."'
+    options:
+      A: 'A new hospital was build in Gode.'
+      B: 'A new hospital has build in Gode.'
+      C: 'A new hospital has been built in Gode.'
+      D: 'A new hospital is building in Gode.'
+    answer: C
+    explanation: 'Present perfect passive: has/have been + past participle.'
+
+  - uid: g12-english-1-3-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct passive: "The committee will announce the results tomorrow."'
+    options:
+      A: 'The results will announce tomorrow.'
+      B: 'The results will be announcing tomorrow.'
+      C: 'The results announced tomorrow.'
+      D: 'The results will be announced tomorrow.'
+    answer: D
+    explanation: 'Future passive: will be + past participle.'
+
+  - uid: g12-english-1-3-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct passive: "Workers are repairing the road."'
+    options:
+      A: 'The road is being repaired.'
+      B: 'The road is repairing.'
+      C: 'The road has repaired.'
+      D: 'The road repairs.'
+    answer: A
+    explanation: 'Present continuous passive: is/are being + past participle.'
+
+  - uid: g12-english-1-3-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct passive: "You must complete the form in ink."'
+    options:
+      A: 'The form must completed in ink.'
+      B: 'The form must be completed in ink.'
+      C: 'The form must be complete in ink.'
+      D: 'The form must being completed in ink.'
+    answer: B
+    explanation: 'Modal passive: modal + be + past participle.'
+
+  - uid: g12-english-1-3-q007
+    type: true_false
+    difficulty: 2
+    stem: 'The verb "arrive" can be used in the passive voice.'
+    answer: false
+    explanation: '"Arrive" has no object (it is intransitive), so it cannot be passive.'
+
+  - uid: g12-english-1-3-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is the passive used in "The patient was taken to hospital"?'
+    options:
+      A: 'Because the patient did the action'
+      B: 'Because it is a question'
+      C: 'Because who took the patient is not important or not known'
+      D: 'Because the sentence is in the future'
+    answer: C
+    explanation: 'The passive focuses on the person or thing affected when the doer is not important.'
+
+  - uid: g12-english-1-3-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: Hana said, "I am tired."'
+    options:
+      A: 'Hana said that she is tiring.'
+      B: 'Hana said that I was tired.'
+      C: 'Hana told that she was tired.'
+      D: 'Hana said that she was tired.'
+    answer: D
+    explanation: 'Present → past, "I" → "she", and "say" takes no person object.'
+
+  - uid: g12-english-1-3-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: Omar said, "I will call you tomorrow."'
+    options:
+      A: 'Omar said that he would call me the next day.'
+      B: 'Omar said that he would calling me the next day.'
+      C: 'Omar said that I would call him the next day.'
+      D: 'Omar said that he called me tomorrow.'
+    answer: A
+    explanation: '"Will" → "would", "I" → "he", "you" → "me", "tomorrow" → "the next day".'
+
+  - uid: g12-english-1-3-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: The teacher said to us, "Open your books."'
+    options:
+      A: 'The teacher told us open our books.'
+      B: 'The teacher told us to open our books.'
+      C: 'The teacher said us to open our books.'
+      D: 'The teacher asked that we opened our books now.'
+    answer: B
+    explanation: 'Commands: told + object + to + base verb.'
+
+  - uid: g12-english-1-3-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: She asked me, "Where do you live?"'
+    options:
+      A: 'She asked me where do I live.'
+      B: 'She asked me where did I live?'
+      C: 'She asked me where I lived.'
+      D: 'She asked me where I live?'
+    answer: C
+    explanation: 'Reported questions use statement word order, backshift and no question mark.'
+
+  - uid: g12-english-1-3-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: He asked, "Are you ready?"'
+    options:
+      A: 'He asked are we ready.'
+      B: 'He asked that we were ready?'
+      C: 'He asked were we ready.'
+      D: 'He asked whether we were ready.'
+    answer: D
+    explanation: 'Yes/no questions are reported with if or whether plus statement word order.'
+
+  - uid: g12-english-1-3-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct verb: "My sister ______ me that she had passed the exam."'
+    options:
+      A: 'told'
+      B: 'said'
+      C: 'spoke'
+      D: 'talked'
+    answer: A
+    explanation: '"Tell" is followed by a person object; "say" is not ("She said that...").'
+
+  - uid: g12-english-1-3-q015
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these sentences are in the passive voice? Choose all that apply.'
+    options:
+      A: 'The letter was written by Amina.'
+      B: 'Amina wrote the letter.'
+      C: 'The bridge is being built.'
+      D: 'English is spoken in many countries.'
+    answer: [A, C, D]
+    explanation: 'Each passive has a form of "be" + past participle. Sentence B is active.'
+
+  - uid: g12-english-1-3-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'Report: Ali said, "I have lost my keys."'
+    options:
+      A: 'Ali said that he lost him keys.'
+      B: 'Ali said that he lost my keys.'
+      C: 'Ali said that I had lost his keys.'
+      D: 'Ali said that he had lost his keys.'
+    answer: D
+    explanation: 'Present perfect moves back to past perfect; pronouns change to match the speaker.'
+
+  - uid: g12-english-1-3-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: The doctor said to me, "Don''t eat too much sugar."'
+    options:
+      A: 'The doctor told me not to eat too much sugar.'
+      B: 'The doctor told me to not eating too much sugar.'
+      C: 'The doctor said me don''t eat too much sugar.'
+      D: 'The doctor told me that I don''t eat too much sugar.'
+    answer: A
+    explanation: 'Negative commands: told + object + not to + base verb.'
+
+  - uid: g12-english-1-3-q018
+    type: true_false
+    difficulty: 1
+    stem: 'In reported speech, "yesterday" usually becomes "the day before".'
+    answer: true
+    explanation: 'Other common changes: today → that day, tomorrow → the next day.'
+
+  - uid: g12-english-1-3-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'Complete the passive with the past participle of "speak": "Somali is ______ in Ethiopia, Somalia, Djibouti and Kenya."'
+    answer: [spoken]
+    explanation: 'speak – spoke – spoken.'
+
+  - uid: g12-english-1-3-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete with one word: "The new library was opened ______ the mayor."'
+    answer: [by]
+    explanation: 'The agent in a passive sentence is introduced by "by".'
+
+  - uid: g12-english-1-3-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each direct speech word with its usual reported form.'
+    left:
+      L1: 'now'
+      L2: 'here'
+      L3: 'tomorrow'
+    right:
+      R1: 'there'
+      R2: 'the next day'
+      R3: 'then'
+      R4: 'the day before'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '"The day before" replaces "yesterday", which is not in the list.'
+
+  - uid: g12-english-1-3-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: She said, "I can swim."'
+    options:
+      A: 'She said that she can swimming.'
+      B: 'She said that she could swim.'
+      C: 'She said that I could swim.'
+      D: 'She told that she could swim.'
+    answer: B
+    explanation: '"Can" moves back to "could"; "say" takes no person object.'
+
+  - uid: g12-english-1-3-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct passive question: "Did they invite you to the wedding?"'
+    options:
+      A: 'Were you invite to the wedding?'
+      B: 'Did you invited to the wedding?'
+      C: 'Were you invited to the wedding?'
+      D: 'Was you invited to the wedding?'
+    answer: C
+    explanation: 'Past passive question: Was/Were + subject + past participle; "you" takes "were".'
+
+  - uid: g12-english-1-3-q024
+    type: true_false
+    difficulty: 2
+    stem: '"The experiment was carried out at 25 °C." is a typical use of the passive in scientific writing.'
+    answer: true
+    explanation: 'Science reports often use the passive to focus on the process rather than the person.'
+
+  - uid: g12-english-1-3-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the words in order to make a correct passive sentence.'
+    items:
+      A: 'by the students.'
+      B: 'The trees'
+      C: 'were planted'
+    answer: [B, C, A]
+    explanation: '"The trees were planted by the students."'
+
+  - uid: g12-english-1-3-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Choose the correct passive: "People believe that the old church is 800 years old."'
+    options:
+      A: 'The old church believes to be 800 years old.'
+      B: 'The old church is believing 800 years old.'
+      C: 'The old church believed being 800 years old.'
+      D: 'The old church is believed to be 800 years old.'
+    answer: D
+    explanation: 'With verbs like believe, say and think: subject + is believed + to + verb.'
+
+  - uid: g12-english-1-3-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: Tadesse said, "I visited Lalibela last year."'
+    options:
+      A: 'Tadesse said that he had visited Lalibela the year before.'
+      B: 'Tadesse said that I visited Lalibela last year.'
+      C: 'Tadesse said that he visits Lalibela the next year.'
+      D: 'Tadesse told that he visited Lalibela.'
+    answer: A
+    explanation: 'Past simple → past perfect; "last year" → "the year before".'
+
+  - uid: g12-english-1-3-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence is in the active voice?'
+    options:
+      A: 'The match was won by our school.'
+      B: 'Our school won the match.'
+      C: 'The cup has been given to our captain.'
+      D: 'The winners will be announced.'
+    answer: B
+    explanation: 'In B the subject (our school) does the action.'
+
+  - uid: g12-english-1-3-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Report: He asked me, "What time does the bus leave?"'
+    options:
+      A: 'He asked me what time does the bus leave.'
+      B: 'He asked me what time the bus leaves?'
+      C: 'He asked me what time the bus left.'
+      D: 'He asked me what time did the bus leave.'
+    answer: C
+    explanation: 'Statement word order, backshift to past, no question mark.'
+
+  - uid: g12-english-1-3-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the past participle needed for the passive: "The windows were ______ (break) by the storm."'
+    options:
+      A: 'broke'
+      B: 'breaked'
+      C: 'breaking'
+      D: 'broken'
+    answer: D
+    explanation: 'break – broke – broken.'
