@@ -272,7 +272,7 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'Conditions chosen in industry that balance a good yield with a fast enough rate and reasonable cost are called ________ conditions.'
-    answer: [compromise]
+    answer: [compromise, optimum, optimal]
     explanation: 'The Haber process temperature of about 450 °C is a compromise.'
 
   - uid: g12-chemistry-3-1-q022
@@ -320,14 +320,14 @@ questions:
   - uid: g12-chemistry-3-1-q026
     type: single_choice
     difficulty: 3
-    stem: 'Which fertiliser contains the highest percentage of nitrogen by mass? (N = 14, H = 1, O = 16, S = 32, C = 12)'
+    stem: 'Which fertiliser contains the highest percentage of nitrogen by mass? (N = 14, H = 1, O = 16, S = 32, C = 12, K = 39)'
     options:
-      A: 'Ammonium sulfate, $(\text{NH}_4)_2\text{SO}_4$ (21%)'
+      A: 'Ammonium sulfate, $(\text{NH}_4)_2\text{SO}_4$'
       B: 'Urea, $\text{CO(NH}_2)_2$'
-      C: 'Ammonium nitrate, $\text{NH}_4\text{NO}_3$ (35%)'
-      D: 'Potassium nitrate, $\text{KNO}_3$ (14%)'
+      C: 'Ammonium nitrate, $\text{NH}_4\text{NO}_3$'
+      D: 'Potassium nitrate, $\text{KNO}_3$'
     answer: B
-    explanation: 'Urea: $\frac{28}{60} \approx 46.7\%$ nitrogen, more than any of the others.'
+    explanation: 'Urea: $\frac{28}{60} \approx 46.7\%$. Ammonium nitrate: $\frac{28}{80} = 35\%$. Ammonium sulfate: $\frac{28}{132} \approx 21\%$. Potassium nitrate: $\frac{14}{101} \approx 14\%$.'
 
   - uid: g12-chemistry-3-1-q027
     type: single_choice

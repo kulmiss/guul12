@@ -143,6 +143,7 @@ subjects:
       file: chemistry/u3-c1.yaml
     - number: 2
       title: Manufacturing industries in Ethiopia
+      file: chemistry/u3-c2.yaml
   - number: 4
     title: Polymers
     chapters:

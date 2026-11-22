@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Ethiopia''s manufacturing industries turn local raw materials (limestone, clay, sand, sugarcane, hides, cotton, grains) into products. Each depends on chemical changes.'
+    - 'Cement: limestone and clay are heated to about 1 450 °C in a rotary kiln to make clinker. Clinker is ground with a little gypsum ($\text{CaSO}_4 \cdot 2\text{H}_2\text{O}$), which slows down setting. Heating limestone: $\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2$.'
+    - 'Glass: sand ($\text{SiO}_2$), sodium carbonate and limestone are melted at about 1 500 °C to make soda-lime glass. Adding boron oxide gives heat-resistant borosilicate glass; metal oxides colour glass (e.g. cobalt gives blue).'
+    - 'Ceramics: clay is shaped, dried and fired in a kiln, which makes it hard and water-resistant. Fine porcelain is made from kaolin (china clay).'
+    - 'Sugar: sugarcane is crushed, the juice is purified with lime, concentrated by evaporation and crystallised; crystals are separated in a centrifuge. Molasses, a by-product, can be fermented to ethanol. Wonji and Metehara are long-established Ethiopian sugar factories.'
+    - 'Leather tanning: animal hides are treated with chromium(III) salts or plant tannins so they do not rot. Chromium waste must be treated to protect rivers.'
+    - 'Soap: fats or oils + sodium hydroxide → soap + glycerol (saponification). Detergents also clean well in hard water, where soap forms scum.'
+    - 'Brewing and fermentation: yeast turns glucose into ethanol and carbon dioxide, $\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2$.'
+  formulas:
+    - label: Decomposition of limestone
+      latex: '\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2'
+    - label: Saponification
+      latex: '\text{fat} + 3\text{NaOH} \rightarrow 3\ \text{soap} + \text{glycerol}'
+    - label: Fermentation
+      latex: '\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2'
+
+solved_exercises:
+  - uid: g12-chemistry-3-2-se01
+    problem: 'What mass of calcium oxide forms when 200 kg of limestone ($\text{CaCO}_3$) is fully decomposed in a cement kiln? (Ca = 40, C = 12, O = 16)'
+    steps:
+      - '$M(\text{CaCO}_3) = 100$, $M(\text{CaO}) = 56$. 100 kg gives 56 kg.'
+      - '200 kg gives $2 \times 56 = 112$ kg.'
+    answer: '112 kg'
+  - uid: g12-chemistry-3-2-se02
+    problem: 'Why is gypsum added to cement clinker?'
+    steps:
+      - 'Without gypsum, cement mixed with water would set (harden) within minutes.'
+      - 'Gypsum slows the setting so builders have time to mix and place the concrete.'
+    answer: 'To control (slow down) setting'
+  - uid: g12-chemistry-3-2-se03
+    problem: 'How much ethanol can 180 g of glucose produce by fermentation? (C = 12, H = 1, O = 16)'
+    steps:
+      - '$M(\text{glucose}) = 180$, so 180 g = 1 mol, giving 2 mol ethanol.'
+      - '$M(\text{C}_2\text{H}_5\text{OH}) = 46$, so mass $= 2 \times 46 = 92$ g.'
+    answer: '92 g'
+
+flashcards:
+  - {uid: g12-chemistry-3-2-fc01, term: Clinker, definition: 'Hard lumps made by heating limestone and clay in a cement kiln.'}
+  - {uid: g12-chemistry-3-2-fc02, term: Gypsum in cement, definition: 'Added to clinker to slow down setting.'}
+  - {uid: g12-chemistry-3-2-fc03, term: Soda-lime glass, definition: 'Ordinary glass from sand, sodium carbonate and limestone.'}
+  - {uid: g12-chemistry-3-2-fc04, term: Borosilicate glass, definition: 'Heat-resistant glass containing boron oxide, used for laboratory glassware.'}
+  - {uid: g12-chemistry-3-2-fc05, term: Kaolin, definition: 'White china clay used to make porcelain.'}
+  - {uid: g12-chemistry-3-2-fc06, term: Molasses, definition: 'Thick syrup left after sugar crystallises; can be fermented to ethanol.'}
+  - {uid: g12-chemistry-3-2-fc07, term: Tanning, definition: 'Treating hides with chromium salts or tannins to make leather.'}
+  - {uid: g12-chemistry-3-2-fc08, term: Saponification, definition: 'Making soap by heating fats or oils with a strong base.'}
+  - {uid: g12-chemistry-3-2-fc09, term: Fermentation, definition: 'Yeast converts sugar into ethanol and carbon dioxide.'}
+
+questions:
+  - uid: g12-chemistry-3-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which two main raw materials are heated together to make cement clinker?'
+    options:
+      A: 'Sand and salt'
+      B: 'Limestone and clay'
+      C: 'Iron ore and coke'
+      D: 'Sugar and lime'
+    answer: B
+    explanation: 'Limestone provides calcium oxide and clay provides silica and alumina.'
+
+  - uid: g12-chemistry-3-2-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is gypsum added to ground cement clinker?'
+    options:
+      A: 'To slow down the setting of the cement'
+      B: 'To make the cement white'
+      C: 'To make it set instantly'
+      D: 'To add iron'
+    answer: A
+    explanation: 'Gypsum controls the setting time so concrete can be mixed and placed.'
+
+  - uid: g12-chemistry-3-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What gas is released when limestone is heated in a cement kiln?'
+    options:
+      A: 'Oxygen'
+      B: 'Hydrogen'
+      C: 'Carbon dioxide'
+      D: 'Nitrogen'
+    answer: C
+    explanation: '$\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2$. Cement making is a major source of $\text{CO}_2$.'
+
+  - uid: g12-chemistry-3-2-q004
+    type: numeric
+    difficulty: 2
+    stem: 'What mass of calcium oxide, in kg, is produced when 50 kg of pure limestone ($\text{CaCO}_3$) is completely decomposed? (Ca = 40, C = 12, O = 16)'
+    answer: {value: 28, tolerance: 0, unit: kg}
+    explanation: '100 kg of $\text{CaCO}_3$ gives 56 kg of CaO, so 50 kg gives 28 kg.'
+
+  - uid: g12-chemistry-3-2-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the main raw material for making glass?'
+    options:
+      A: 'Clay'
+      B: 'Iron'
+      C: 'Salt'
+      D: 'Sand (silicon dioxide)'
+    answer: D
+    explanation: 'Glass is mostly silica, $\text{SiO}_2$, melted with sodium carbonate and limestone.'
+
+  - uid: g12-chemistry-3-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is sodium carbonate added to sand when making glass?'
+    options:
+      A: 'It lowers the melting temperature of the mixture.'
+      B: 'It makes the glass blue.'
+      C: 'It makes the glass heat-resistant.'
+      D: 'It removes carbon dioxide.'
+    answer: A
+    explanation: 'Pure silica melts above 1 700 °C; sodium carbonate acts as a flux to lower the melting point and save energy.'
+
+  - uid: g12-chemistry-3-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Laboratory beakers that can be heated without cracking are made of:'
+    options:
+      A: 'Soda-lime glass'
+      B: 'Lead glass'
+      C: 'Borosilicate glass'
+      D: 'Coloured bottle glass'
+    answer: C
+    explanation: 'Boron oxide gives glass a low thermal expansion, so it resists sudden temperature changes.'
+
+  - uid: g12-chemistry-3-2-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Firing clay in a kiln makes it hard and water-resistant.'
+    answer: true
+    explanation: 'High temperature drives out water and fuses the clay particles together.'
+
+  - uid: g12-chemistry-3-2-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'Fine white porcelain is made mainly from:'
+    options:
+      A: 'Limestone'
+      B: 'Kaolin (china clay)'
+      C: 'Sugarcane'
+      D: 'Gypsum'
+    answer: B
+    explanation: 'Kaolin is a pure white clay used for porcelain and fine ceramics.'
+
+  - uid: g12-chemistry-3-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'In a sugar factory, what is used to purify (clarify) the cane juice?'
+    options:
+      A: 'Sulfuric acid'
+      B: 'Salt'
+      C: 'Chlorine'
+      D: 'Lime (calcium hydroxide)'
+    answer: D
+    explanation: 'Lime neutralises acids in the juice and helps impurities settle out.'
+
+  - uid: g12-chemistry-3-2-q011
+    type: ordering
+    difficulty: 2
+    stem: 'Put the main steps of making sugar from sugarcane in order.'
+    items:
+      A: 'Evaporate water to concentrate the juice.'
+      B: 'Crush the cane to extract juice.'
+      C: 'Separate the crystals in a centrifuge.'
+      D: 'Clarify the juice with lime.'
+    answer: [B, D, A, C]
+    explanation: 'Extract, purify, concentrate (and crystallise), then separate the crystals from the molasses.'
+
+  - uid: g12-chemistry-3-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Molasses from a sugar factory can be used to make ethanol. Which process is used?'
+    options:
+      A: 'Fermentation by yeast'
+      B: 'Electrolysis'
+      C: 'Saponification'
+      D: 'Polymerisation'
+    answer: A
+    explanation: 'Yeast ferments the remaining sugars in molasses into ethanol, which can be used as fuel.'
+
+  - uid: g12-chemistry-3-2-q013
+    type: numeric
+    difficulty: 3
+    stem: 'What mass of ethanol, in grams, can be made by fermenting 90 g of glucose? (C = 12, H = 1, O = 16)'
+    answer: {value: 46, tolerance: 0, unit: g}
+    explanation: '90 g glucose = 0.5 mol, giving 1 mol of ethanol = 46 g.'
+
+  - uid: g12-chemistry-3-2-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'Which gas is produced along with ethanol during fermentation?'
+    options:
+      A: 'Oxygen'
+      B: 'Methane'
+      C: 'Carbon dioxide'
+      D: 'Hydrogen'
+    answer: C
+    explanation: '$\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2$. The gas makes bread rise and drinks bubbly.'
+
+  - uid: g12-chemistry-3-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the purpose of tanning animal hides?'
+    options:
+      A: 'To colour them red'
+      B: 'To turn them into a stable material (leather) that does not rot'
+      C: 'To remove all protein from them'
+      D: 'To make them dissolve in water'
+    answer: B
+    explanation: 'Tanning agents cross-link the protein (collagen) fibres, making the hide durable.'
+
+  - uid: g12-chemistry-3-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which chemicals are most commonly used in modern chrome tanning?'
+    options:
+      A: 'Sodium chloride only'
+      B: 'Sugar solutions'
+      C: 'Copper sulfate'
+      D: 'Chromium(III) salts'
+    answer: D
+    explanation: 'Basic chromium(III) sulfate is widely used. Its waste must be treated before release.'
+
+  - uid: g12-chemistry-3-2-q017
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are the products of saponification of a fat with sodium hydroxide? Choose all that apply.'
+    options:
+      A: 'Soap (sodium salts of fatty acids)'
+      B: 'Glycerol'
+      C: 'Hydrogen gas'
+      D: 'Carbon dioxide'
+    answer: [A, B]
+    explanation: 'Fat + NaOH → soap + glycerol. No gas is produced.'
+
+  - uid: g12-chemistry-3-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do detergents work better than soap in hard water?'
+    options:
+      A: 'Detergents do not form scum with calcium and magnesium ions.'
+      B: 'Detergents are made from sugar.'
+      C: 'Hard water has no ions.'
+      D: 'Soap dissolves too well in hard water.'
+    answer: A
+    explanation: 'Soap reacts with $\text{Ca}^{2+}$ and $\text{Mg}^{2+}$ to form insoluble scum; detergent salts stay dissolved.'
+
+  - uid: g12-chemistry-3-2-q019
+    type: true_false
+    difficulty: 2
+    stem: 'Untreated waste from tanneries can pollute rivers with chromium compounds.'
+    answer: true
+    explanation: 'Chromium compounds can be toxic, so tannery effluent must be treated.'
+
+  - uid: g12-chemistry-3-2-q020
+    type: single_choice
+    difficulty: 1
+    stem: 'Which Ethiopian raw material is the main source for the sugar industry?'
+    options:
+      A: 'Teff'
+      B: 'Coffee'
+      C: 'Sugarcane'
+      D: 'Cotton'
+    answer: C
+    explanation: 'Ethiopian sugar factories such as Wonji and Metehara process sugarcane grown on nearby plantations.'
+
+  - uid: g12-chemistry-3-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Adding a small amount of cobalt oxide to molten glass gives glass that is:'
+    options:
+      A: 'Red'
+      B: 'Blue'
+      C: 'Heat-resistant'
+      D: 'Opaque white'
+    answer: B
+    explanation: 'Metal oxides colour glass: cobalt gives a deep blue.'
+
+  - uid: g12-chemistry-3-2-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'The process of making soap by heating a fat or oil with sodium hydroxide is called ________.'
+    answer: [saponification, saponifying]
+    explanation: 'Fat + NaOH → soap + glycerol.'
+
+  - uid: g12-chemistry-3-2-q023
+    type: fill_in
+    difficulty: 1
+    stem: 'The hard lumps formed when limestone and clay are heated in a cement kiln are called ________.'
+    answer: [clinker, clinkers]
+    explanation: 'Clinker is ground with gypsum to make cement.'
+
+  - uid: g12-chemistry-3-2-q024
+    type: true_false
+    difficulty: 2
+    stem: 'The cement industry releases carbon dioxide both from burning fuel and from decomposing limestone.'
+    answer: true
+    explanation: 'Both the kiln fuel and the reaction $\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2$ produce $\text{CO}_2$.'
+
+  - uid: g12-chemistry-3-2-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each industry with a key raw material.'
+    left:
+      L1: 'Glass'
+      L2: 'Cement'
+      L3: 'Leather'
+    right:
+      R1: 'Animal hides'
+      R2: 'Silica sand'
+      R3: 'Limestone'
+      R4: 'Copper ore'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'Glass uses sand, cement uses limestone and leather uses hides. Copper ore is for copper metal.'
+
+  - uid: g12-chemistry-3-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'In brewing, barley grains are first soaked and allowed to sprout (malting). Why?'
+    options:
+      A: 'To kill the yeast'
+      B: 'To add colour only'
+      C: 'To remove all sugar'
+      D: 'So enzymes in the grain turn starch into sugars that yeast can ferment'
+    answer: D
+    explanation: 'Germination activates enzymes that break starch down into fermentable sugars.'
+
+  - uid: g12-chemistry-3-2-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'A cement factory heats 1 000 tonnes of limestone ($\text{CaCO}_3$). What mass of $\text{CO}_2$ is released from the limestone alone? (Ca = 40, C = 12, O = 16)'
+    options:
+      A: '440 tonnes'
+      B: '560 tonnes'
+      C: '1 000 tonnes'
+      D: '44 tonnes'
+    answer: A
+    explanation: '100 t $\text{CaCO}_3$ gives 44 t $\text{CO}_2$, so 1 000 t gives 440 t.'
+
+  - uid: g12-chemistry-3-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Bagasse, the fibre left after crushing sugarcane, is often used in sugar factories as:'
+    options:
+      A: 'A fertiliser for glass'
+      B: 'An acid for cleaning'
+      C: 'Fuel for the boilers'
+      D: 'A sweetener'
+    answer: C
+    explanation: 'Burning bagasse provides steam and electricity for the factory; it can also be used to make paper.'
+
+  - uid: g12-chemistry-3-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does Ethiopia have good conditions for a leather industry?'
+    options:
+      A: 'It has very large deposits of chromium.'
+      B: 'It has one of the largest livestock populations in Africa, giving many hides and skins.'
+      C: 'Leather is made from coffee.'
+      D: 'It has the coldest climate in Africa.'
+    answer: B
+    explanation: 'A large number of cattle, sheep and goats supplies hides and skins as raw material.'
+
+  - uid: g12-chemistry-3-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a good way for industries to reduce their effect on the environment?'
+    options:
+      A: 'Treating waste water before it reaches rivers'
+      B: 'Releasing all gases through tall chimneys'
+      C: 'Burying chemical waste anywhere'
+      D: 'Using as much water as possible'
+    answer: A
+    explanation: 'Treating effluent removes harmful chemicals; tall chimneys only spread pollution further.'
