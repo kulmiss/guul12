@@ -86,7 +86,8 @@ class ContentImportTest extends TestCase
         // Options are stored in order with sides.
         $this->assertSame(['L1', 'L2', 'R1', 'R2'], $this->q('q06')->options->pluck('key')->all());
         $this->assertSame(['TRUE', 'FALSE'], $this->q('q02')->options->pluck('key')->all());
-        $this->assertSame(['value' => 3, 'tolerance' => 0, 'unit' => 's'], $this->q('q04')->answer_key);
+        // assertEquals: MySQL 8 stores JSON keys in its own order.
+        $this->assertEquals(['value' => 3, 'tolerance' => 0, 'unit' => 's'], $this->q('q04')->answer_key);
     }
 
     public function test_a_disagreeing_solve_blocks_the_question(): void
