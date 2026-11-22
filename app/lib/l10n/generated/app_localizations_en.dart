@@ -605,4 +605,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get meStudyProfile => 'Study profile';
+
+  @override
+  String get practiceReport => 'Report a problem';
+
+  @override
+  String get reportTitle => 'What is wrong with this question?';
+
+  @override
+  String get reportWrongAnswer => 'The answer is wrong';
+
+  @override
+  String get reportUnclear => 'The question is unclear';
+
+  @override
+  String get reportTypo => 'There is a typo';
+
+  @override
+  String get reportOther => 'Something else';
+
+  @override
+  String get reportNote => 'Tell us more (optional)';
+
+  @override
+  String get reportSend => 'Send';
+
+  @override
+  String get reportThanks => 'Thank you! We will check this question.';
 }

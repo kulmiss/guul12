@@ -42,6 +42,7 @@ void main() {
     await settle(tester);
     expect(find.text('Not quite'), findsOneWidget);
     expect(find.text('Correct answer: False'), findsOneWidget);
+    expect(find.text('Report a problem'), findsNothing, reason: 'warm-up questions are local only');
     await tester.tap(find.byKey(const ValueKey('next')));
     await settle(tester);
     await tapText(tester, '30');

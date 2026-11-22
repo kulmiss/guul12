@@ -141,4 +141,32 @@ void main() {
     expect(find.byType(NavigationRail), findsOneWidget);
     expect(find.byType(NavigationBar), findsNothing);
   });
+
+  testWidgets('report a problem from the feedback panel reaches the server', (tester) async {
+    final (_, server) = await pumpGuul(
+      tester,
+      server: onboardedServer(),
+      before: (repo) async {
+        await repo.syncAll();
+        await repo.chapter(21);
+      },
+    );
+    await tapOn(tester, find.text('Quick 10'));
+    expect(find.text('Report a problem'), findsNothing, reason: 'only after Check');
+    await tapOn(tester, find.text('4'));
+    await tapOn(tester, find.byKey(const ValueKey('check')));
+
+    await tapOn(tester, find.text('Report a problem'));
+    expect(find.text('What is wrong with this question?'), findsOneWidget);
+    final send = find.byKey(const ValueKey('report-send'));
+    expect(tester.widget<FilledButton>(send).onPressed, isNull, reason: 'pick a reason first');
+    await tapOn(tester, find.text('There is a typo'));
+    await tester.enterText(find.byType(TextField), 'Two plus two is spelt wrong');
+    await tapOn(tester, send);
+
+    expect(find.text('Thank you! We will check this question.'), findsOneWidget);
+    expect(server.receivedReports, [
+      {'question_id': 2101, 'reason': 'typo', 'note': 'Two plus two is spelt wrong'},
+    ]);
+  });
 }

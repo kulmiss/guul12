@@ -228,6 +228,46 @@ void main() {
     expect(await repo.recentChapters(), [24, 23, 21]);
   });
 
+  test('reports wait offline, replace each other per question, and are sent later', () async {
+    final (repo, server, _) = await makeRepository();
+    await repo.syncAll();
+    server.online = false;
+
+    await repo.reportQuestion(2101, reason: 'unclear');
+    await repo.reportQuestion(2101, reason: 'wrong_answer', note: '  C is right  ');
+    await repo.reportQuestion(2201, reason: 'typo', note: '   ');
+    expect(server.receivedReports, isEmpty);
+
+    server.online = true;
+    expect(await repo.uploadReports(), 2);
+    expect(server.receivedReports, [
+      {'question_id': 2101, 'reason': 'wrong_answer', 'note': 'C is right'},
+      {'question_id': 2201, 'reason': 'typo'},
+    ]);
+    expect(await repo.uploadReports(), 0, reason: 'nothing left to send');
+  });
+
+  test('refused reports are dropped; busy server keeps them', () async {
+    final (repo, server, _) = await makeRepository();
+    await repo.syncAll();
+    server.online = false;
+    await repo.reportQuestion(2101, reason: 'typo');
+    server
+      ..online = true
+      ..reportStatus = 503;
+    expect(await repo.syncAll(), isFalse);
+
+    server
+      ..reportStatus = 429
+      ..reportCode = 'report_limit';
+    expect(await repo.uploadReports(), 0);
+    server
+      ..reportStatus = 201
+      ..reportCode = null;
+    expect(await repo.uploadReports(), 0, reason: 'dropped after the daily limit answer');
+    expect(server.receivedReports, isEmpty);
+  });
+
   test('unknown profile fields are refused', () async {
     final (repo, _, _) = await makeRepository();
 

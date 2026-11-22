@@ -804,5 +804,41 @@
   "meStudyProfile": "Study profile",
   "@meStudyProfile": {
     "description": "Section title on Me."
+  },
+  "practiceReport": "Report a problem",
+  "@practiceReport": {
+    "description": "Report a problem sheet."
+  },
+  "reportTitle": "What is wrong with this question?",
+  "@reportTitle": {
+    "description": "Report a problem sheet."
+  },
+  "reportWrongAnswer": "The answer is wrong",
+  "@reportWrongAnswer": {
+    "description": "Report a problem sheet."
+  },
+  "reportUnclear": "The question is unclear",
+  "@reportUnclear": {
+    "description": "Report a problem sheet."
+  },
+  "reportTypo": "There is a typo",
+  "@reportTypo": {
+    "description": "Report a problem sheet."
+  },
+  "reportOther": "Something else",
+  "@reportOther": {
+    "description": "Report a problem sheet."
+  },
+  "reportNote": "Tell us more (optional)",
+  "@reportNote": {
+    "description": "Report a problem sheet."
+  },
+  "reportSend": "Send",
+  "@reportSend": {
+    "description": "Report a problem sheet."
+  },
+  "reportThanks": "Thank you! We will check this question.",
+  "@reportThanks": {
+    "description": "Report a problem sheet."
   }
 }

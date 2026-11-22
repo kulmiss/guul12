@@ -13,6 +13,7 @@ abstract final class Keys {
   static const pendingProfile = 'profile_pending';
   static const config = 'config';
   static const recentChapters = 'recent_chapters';
+  static const pendingReports = 'pending_reports';
 }
 
 /// Offline-first data access. Every read comes from the phone; the network only refreshes it.
@@ -276,6 +277,60 @@ class Repository {
     return (await db.pendingAttempts()).isEmpty;
   }
 
+  // ---- reports ---------------------------------------------------------------------------------
+
+  /// Saves a "Report a problem" on the phone and sends it when possible.
+  /// A second report for the same question replaces the first one still waiting.
+  Future<void> reportQuestion(int questionId, {required String reason, String? note}) async {
+    final pending = await _pendingReports()
+      ..removeWhere((r) => r['question_id'] == questionId);
+    final text = note?.trim();
+    pending.add({
+      'question_id': questionId,
+      'reason': reason,
+      if (text != null && text.isNotEmpty) 'note': text,
+    });
+    await db.writeJson(Keys.pendingReports, {'items': pending});
+    unawaited(_tryQuietly(() async => uploadReports()));
+  }
+
+  Future<List<Map<String, Object?>>> _pendingReports() async {
+    final json = await db.readJson(Keys.pendingReports);
+    return json == null ? [] : asList(json['items']).map(asMap).toList();
+  }
+
+  Future<int>? _reportsInFlight;
+
+  /// Sends waiting reports. Returns how many were sent. Calls made while a send is running
+  /// share it, so a report is never sent twice.
+  Future<int> uploadReports() =>
+      _reportsInFlight ??= _sendReports().whenComplete(() => _reportsInFlight = null);
+
+  Future<int> _sendReports() async {
+    var sent = 0;
+    for (final report in await _pendingReports()) {
+      final id = asInt(report['question_id']);
+      try {
+        await _authed(
+          () => api.post('questions/$id/reports', {
+            'reason': report['reason'],
+            if (report['note'] != null) 'note': report['note'],
+          }),
+        );
+        sent++;
+      } on ApiException catch (e) {
+        // Offline or busy: keep it for later. Refused (question gone, daily limit): drop it.
+        final retryLater =
+            e.isOffline || e.status >= 500 || (e.status == 429 && e.code != 'report_limit');
+        if (retryLater) rethrow;
+      }
+      final left = await _pendingReports()
+        ..removeWhere((r) => r['question_id'] == id && r['reason'] == report['reason']);
+      await db.writeJson(Keys.pendingReports, {'items': left});
+    }
+    return sent;
+  }
+
   // ---- bookmarks -------------------------------------------------------------------------------
 
   Future<Set<int>> bookmarks() => db.bookmarks();
@@ -310,6 +365,7 @@ class Repository {
       await uploadProfile();
       await refreshConfig();
       await uploadAttempts();
+      await uploadReports();
       await syncBookmarks();
       if ((await catalog()).subjects.isEmpty) await refreshCatalog();
       await syncContent();

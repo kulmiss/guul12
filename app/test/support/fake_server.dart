@@ -41,6 +41,11 @@ class FakeServer {
   int googleStatus = 200;
   int minSupportedBuild = 1;
 
+  /// Reports received by POST questions/{id}/reports, and the status to answer with.
+  final List<Map<String, Object?>> receivedReports = [];
+  int reportStatus = 201;
+  String? reportCode;
+
   Map<String, Object?> catalogJson() => {
     'cursor': cursor,
     'subjects': [
@@ -211,6 +216,11 @@ class FakeServer {
       final id = int.parse(path.split('/').last);
       chapterDownloads[id] = (chapterDownloads[id] ?? 0) + 1;
       return json(chapterJson(id));
+    }
+    if (request.method == 'POST' && RegExp(r'^questions/\d+/reports$').hasMatch(path)) {
+      final id = int.parse(path.split('/')[1]);
+      if (reportStatus < 300) receivedReports.add({'question_id': id, ...body()});
+      return json({'code': ?reportCode, 'report': <String, Object?>{}}, reportStatus);
     }
     if (path.startsWith('bookmarks/')) {
       final id = int.parse(path.split('/').last);

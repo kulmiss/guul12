@@ -11,6 +11,7 @@ import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/math_text.dart';
 import 'question_input.dart';
+import 'report_sheet.dart';
 
 /// Plays a list of questions one by one: answer → Check → feedback with explanation → Next.
 /// Used by the practice screen and by the onboarding warm-up.
@@ -22,12 +23,16 @@ class PracticeRunner extends ConsumerStatefulWidget {
     this.passages = const {},
     this.secondsPerQuestion,
     this.allowBookmarks = true,
+    this.allowReports = true,
   });
 
   final List<Question> questions;
   final Map<int, Passage> passages;
   final int? secondsPerQuestion;
   final bool allowBookmarks;
+
+  /// Off for the onboarding warm-up (those questions are not on the server).
+  final bool allowReports;
   final ValueChanged<PracticeSession> onFinished;
 
   @override
@@ -96,6 +101,18 @@ class _PracticeRunnerState extends ConsumerState<PracticeRunner> {
     } else {
       widget.onFinished(_session);
     }
+  }
+
+  Future<void> _report(Question q) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final thanks = context.l10n.reportThanks;
+    final repo = ref.read(repositoryProvider);
+    final choice = await showReportSheet(context);
+    if (choice == null) return;
+    await repo.reportQuestion(q.id, reason: choice.reason, note: choice.note);
+    messenger
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text(thanks)));
   }
 
   @override
@@ -190,6 +207,15 @@ class _PracticeRunnerState extends ConsumerState<PracticeRunner> {
                       },
                     ),
                     if (answer != null) _FeedbackPanel(question: q, answer: answer),
+                    if (answer != null && widget.allowReports)
+                      Align(
+                        alignment: AlignmentDirectional.centerEnd,
+                        child: TextButton.icon(
+                          icon: const Icon(Icons.outlined_flag),
+                          label: Text(l.practiceReport),
+                          onPressed: () => _report(q),
+                        ),
+                      ),
                   ],
                 ),
               ),

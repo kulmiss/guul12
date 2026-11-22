@@ -1075,6 +1075,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Study profile'**
   String get meStudyProfile;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Report a problem'**
+  String get practiceReport;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'What is wrong with this question?'**
+  String get reportTitle;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'The answer is wrong'**
+  String get reportWrongAnswer;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'The question is unclear'**
+  String get reportUnclear;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'There is a typo'**
+  String get reportTypo;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Something else'**
+  String get reportOther;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell us more (optional)'**
+  String get reportNote;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get reportSend;
+
+  /// Report a problem sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you! We will check this question.'**
+  String get reportThanks;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

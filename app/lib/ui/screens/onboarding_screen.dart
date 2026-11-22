@@ -372,6 +372,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 key: ValueKey('hook-$_grade'),
                 questions: list,
                 allowBookmarks: false,
+                allowReports: false,
                 onFinished: (session) {
                   setState(() => _hookScore = (session.correctCount, session.total));
                   fireAndForget(_continue());
