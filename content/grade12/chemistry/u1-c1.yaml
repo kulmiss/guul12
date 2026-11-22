@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Acids taste sour, turn blue litmus red, and react with active metals to give hydrogen gas and with carbonates to give carbon dioxide. Bases taste bitter, feel slippery and turn red litmus blue.'
+    - 'Arrhenius theory: an acid produces $\text{H}^+$ (as $\text{H}_3\text{O}^+$) in water; a base produces $\text{OH}^-$ in water. It only works for water solutions.'
+    - 'Brønsted–Lowry theory: an acid is a proton ($\text{H}^+$) donor and a base is a proton acceptor. When an acid gives away a proton it becomes its conjugate base; when a base accepts one it becomes its conjugate acid.'
+    - 'Lewis theory: an acid is an electron-pair acceptor (e.g. $\text{BF}_3$, $\text{AlCl}_3$, $\text{H}^+$) and a base is an electron-pair donor (e.g. $\text{NH}_3$, $\text{H}_2\text{O}$, $\text{OH}^-$). It is the broadest of the three.'
+    - 'Amphiprotic (amphoteric) substances such as $\text{H}_2\text{O}$ and $\text{HCO}_3^-$ can act as either an acid or a base.'
+    - 'Water ionises slightly: $\text{H}_2\text{O} + \text{H}_2\text{O} \rightleftharpoons \text{H}_3\text{O}^+ + \text{OH}^-$, with $K_w = [\text{H}_3\text{O}^+][\text{OH}^-] = 1.0 \times 10^{-14}$ at 25 °C.'
+    - 'Strong acids (HCl, HBr, HI, $\text{HNO}_3$, $\text{H}_2\text{SO}_4$, $\text{HClO}_4$) ionise completely in water; weak acids ($\text{CH}_3\text{COOH}$, HF, $\text{H}_2\text{CO}_3$) only partly. The stronger the acid, the weaker its conjugate base.'
+    - 'Neutralisation: acid + base → salt + water, e.g. $\text{HCl} + \text{NaOH} \rightarrow \text{NaCl} + \text{H}_2\text{O}$.'
+  formulas:
+    - label: Ion product of water (25 °C)
+      latex: 'K_w = [\text{H}_3\text{O}^+][\text{OH}^-] = 1.0 \times 10^{-14}'
+    - label: Conjugate pairs
+      latex: '\text{HA} + \text{B} \rightleftharpoons \text{A}^- + \text{HB}^+'
+    - label: Neutralisation (ionic)
+      latex: '\text{H}^+ + \text{OH}^- \rightarrow \text{H}_2\text{O}'
+
+solved_exercises:
+  - uid: g12-chemistry-1-1-se01
+    problem: 'In $\text{NH}_3 + \text{H}_2\text{O} \rightleftharpoons \text{NH}_4^+ + \text{OH}^-$, identify the Brønsted–Lowry acid, base and the two conjugate pairs.'
+    steps:
+      - '$\text{H}_2\text{O}$ gives a proton to $\text{NH}_3$, so $\text{H}_2\text{O}$ is the acid and $\text{NH}_3$ is the base.'
+      - 'Pairs: $\text{NH}_3 / \text{NH}_4^+$ (base / conjugate acid) and $\text{H}_2\text{O} / \text{OH}^-$ (acid / conjugate base).'
+    answer: 'Acid $\text{H}_2\text{O}$, base $\text{NH}_3$; pairs $\text{NH}_3/\text{NH}_4^+$ and $\text{H}_2\text{O}/\text{OH}^-$'
+  - uid: g12-chemistry-1-1-se02
+    problem: 'At 25 °C a solution has $[\text{H}_3\text{O}^+] = 1 \times 10^{-3}$ M. Find $[\text{OH}^-]$.'
+    steps:
+      - '$[\text{OH}^-] = \frac{K_w}{[\text{H}_3\text{O}^+]} = \frac{1 \times 10^{-14}}{1 \times 10^{-3}}$.'
+      - '$= 1 \times 10^{-11}$ M. The solution is acidic.'
+    answer: '$1 \times 10^{-11}$ M'
+  - uid: g12-chemistry-1-1-se03
+    problem: 'Explain why $\text{BF}_3$ is a Lewis acid even though it has no hydrogen.'
+    steps:
+      - 'Boron in $\text{BF}_3$ has only six electrons around it and an empty orbital.'
+      - 'It can accept an electron pair, e.g. from $\text{NH}_3$, forming $\text{F}_3\text{B–NH}_3$. An electron-pair acceptor is a Lewis acid.'
+    answer: 'It accepts an electron pair.'
+
+flashcards:
+  - {uid: g12-chemistry-1-1-fc01, term: Arrhenius acid, definition: 'A substance that produces $\text{H}^+$ ions in water.'}
+  - {uid: g12-chemistry-1-1-fc02, term: Brønsted–Lowry acid, definition: 'A proton donor.'}
+  - {uid: g12-chemistry-1-1-fc03, term: Brønsted–Lowry base, definition: 'A proton acceptor.'}
+  - {uid: g12-chemistry-1-1-fc04, term: Lewis acid, definition: 'An electron-pair acceptor, e.g. $\text{BF}_3$.'}
+  - {uid: g12-chemistry-1-1-fc05, term: Lewis base, definition: 'An electron-pair donor, e.g. $\text{NH}_3$.'}
+  - {uid: g12-chemistry-1-1-fc06, term: Conjugate base, definition: 'What remains after an acid loses a proton.'}
+  - {uid: g12-chemistry-1-1-fc07, term: Amphiprotic, definition: 'Able to donate or accept a proton, e.g. water.'}
+  - {uid: g12-chemistry-1-1-fc08, term: Ion product of water, definition: '$K_w = 1.0 \times 10^{-14}$ at 25 °C.'}
+  - {uid: g12-chemistry-1-1-fc09, term: Strong acid, definition: 'An acid that ionises completely in water, e.g. HCl.'}
+
+questions:
+  - uid: g12-chemistry-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'According to Arrhenius, an acid is a substance that:'
+    options:
+      A: 'Accepts an electron pair'
+      B: 'Produces $\text{H}^+$ ions when dissolved in water'
+      C: 'Produces $\text{OH}^-$ ions in water'
+      D: 'Accepts a proton'
+    answer: B
+    explanation: 'Arrhenius defined acids by the $\text{H}^+$ (hydronium) ions they produce in water.'
+
+  - uid: g12-chemistry-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'In the Brønsted–Lowry theory, a base is:'
+    options:
+      A: 'A proton acceptor'
+      B: 'A proton donor'
+      C: 'An electron-pair acceptor'
+      D: 'Any substance containing oxygen'
+    answer: A
+    explanation: 'Brønsted–Lowry acids donate protons and bases accept them.'
+
+  - uid: g12-chemistry-1-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the conjugate base of HCl?'
+    options:
+      A: '$\text{H}_2\text{Cl}^+$'
+      B: '$\text{H}^+$'
+      C: '$\text{Cl}^-$'
+      D: '$\text{OH}^-$'
+    answer: C
+    explanation: 'Removing a proton from HCl leaves $\text{Cl}^-$.'
+
+  - uid: g12-chemistry-1-1-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the conjugate acid of $\text{NH}_3$?'
+    options:
+      A: '$\text{NH}_2^-$'
+      B: '$\text{N}^{3-}$'
+      C: '$\text{H}_3\text{O}^+$'
+      D: '$\text{NH}_4^+$'
+    answer: D
+    explanation: 'Adding a proton to $\text{NH}_3$ gives the ammonium ion, $\text{NH}_4^+$.'
+
+  - uid: g12-chemistry-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'In the reaction $\text{HNO}_3 + \text{H}_2\text{O} \rightarrow \text{H}_3\text{O}^+ + \text{NO}_3^-$, water acts as:'
+    options:
+      A: 'A Brønsted–Lowry acid'
+      B: 'A Brønsted–Lowry base'
+      C: 'A catalyst'
+      D: 'A salt'
+    answer: B
+    explanation: 'Water accepts a proton from $\text{HNO}_3$ to become $\text{H}_3\text{O}^+$, so it is the base here.'
+
+  - uid: g12-chemistry-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is a Lewis acid but NOT a Brønsted–Lowry acid?'
+    options:
+      A: '$\text{BF}_3$'
+      B: 'HCl'
+      C: '$\text{H}_2\text{SO}_4$'
+      D: '$\text{CH}_3\text{COOH}$'
+    answer: A
+    explanation: '$\text{BF}_3$ has no proton to donate, but its boron atom can accept an electron pair.'
+
+  - uid: g12-chemistry-1-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'A Lewis base is a substance that:'
+    options:
+      A: 'Accepts an electron pair'
+      B: 'Donates a proton'
+      C: 'Donates an electron pair'
+      D: 'Produces $\text{H}^+$ in water'
+    answer: C
+    explanation: 'Lewis bases, such as $\text{NH}_3$ with its lone pair, donate an electron pair to form a bond.'
+
+  - uid: g12-chemistry-1-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Water can act as both an acid and a base.'
+    answer: true
+    explanation: 'Water is amphiprotic: it donates a proton to $\text{NH}_3$ and accepts one from HCl.'
+
+  - uid: g12-chemistry-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'At 25 °C, a solution has $[\text{H}_3\text{O}^+] = 1 \times 10^{-4}$ M. What is $[\text{OH}^-]$?'
+    options:
+      A: '$1 \times 10^{-4}$ M'
+      B: '$1 \times 10^{4}$ M'
+      C: '$1 \times 10^{-18}$ M'
+      D: '$1 \times 10^{-10}$ M'
+    answer: D
+    explanation: '$[\text{OH}^-] = \frac{1 \times 10^{-14}}{1 \times 10^{-4}} = 1 \times 10^{-10}$ M.'
+
+  - uid: g12-chemistry-1-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the concentration of $\text{H}_3\text{O}^+$ in pure water at 25 °C?'
+    options:
+      A: '$1 \times 10^{-7}$ M'
+      B: '$1 \times 10^{-14}$ M'
+      C: '1 M'
+      D: '$7$ M'
+    answer: A
+    explanation: 'In pure water $[\text{H}_3\text{O}^+] = [\text{OH}^-]$, and their product is $10^{-14}$, so each is $10^{-7}$ M.'
+
+  - uid: g12-chemistry-1-1-q011
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are strong acids in water? Choose all that apply.'
+    options:
+      A: 'HCl'
+      B: '$\text{HNO}_3$'
+      C: '$\text{CH}_3\text{COOH}$'
+      D: 'HF'
+    answer: [A, B]
+    explanation: 'HCl and $\text{HNO}_3$ ionise completely. Ethanoic acid and hydrofluoric acid are weak acids.'
+
+  - uid: g12-chemistry-1-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which ion is amphiprotic?'
+    options:
+      A: '$\text{Na}^+$'
+      B: '$\text{Cl}^-$'
+      C: '$\text{HCO}_3^-$'
+      D: '$\text{NH}_4^+$'
+    answer: C
+    explanation: '$\text{HCO}_3^-$ can lose a proton to form $\text{CO}_3^{2-}$ or gain one to form $\text{H}_2\text{CO}_3$.'
+
+  - uid: g12-chemistry-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can the Arrhenius theory NOT explain why ammonia gas reacts with hydrogen chloride gas to form ammonium chloride?'
+    options:
+      A: 'Ammonia contains no nitrogen.'
+      B: 'The reaction happens without water, and ammonia has no $\text{OH}^-$ to release.'
+      C: 'Hydrogen chloride is a base.'
+      D: 'Ammonium chloride is not a salt.'
+    answer: B
+    explanation: 'Arrhenius theory is limited to water solutions and to bases that contain $\text{OH}^-$. Brønsted–Lowry theory explains it as a proton transfer.'
+
+  - uid: g12-chemistry-1-1-q014
+    type: numeric
+    difficulty: 1
+    stem: 'How many protons can one molecule of phosphoric acid, $\text{H}_3\text{PO}_4$, donate in total?'
+    answer: {value: 3, tolerance: 0}
+    explanation: 'Phosphoric acid is triprotic: it has three ionisable hydrogen atoms.'
+
+  - uid: g12-chemistry-1-1-q015
+    type: numeric
+    difficulty: 2
+    stem: 'How many moles of NaOH are needed to completely neutralise 0.2 mol of $\text{H}_2\text{SO}_4$?'
+    answer: {value: 0.4, tolerance: 0, unit: mol}
+    explanation: '$\text{H}_2\text{SO}_4 + 2\text{NaOH} \rightarrow \text{Na}_2\text{SO}_4 + 2\text{H}_2\text{O}$. Each mole of acid needs 2 mol NaOH: $2 \times 0.2 = 0.4$ mol.'
+
+  - uid: g12-chemistry-1-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'HCl is a very strong acid. What can you say about its conjugate base, $\text{Cl}^-$?'
+    options:
+      A: 'It is a very strong base.'
+      B: 'It is a strong acid.'
+      C: 'It is amphiprotic.'
+      D: 'It is a very weak base.'
+    answer: D
+    explanation: 'The stronger the acid, the weaker its conjugate base. $\text{Cl}^-$ has almost no tendency to take back a proton.'
+
+  - uid: g12-chemistry-1-1-q017
+    type: single_choice
+    difficulty: 1
+    stem: 'What gas is produced when dilute hydrochloric acid reacts with zinc?'
+    options:
+      A: 'Hydrogen'
+      B: 'Oxygen'
+      C: 'Carbon dioxide'
+      D: 'Chlorine'
+    answer: A
+    explanation: '$\text{Zn} + 2\text{HCl} \rightarrow \text{ZnCl}_2 + \text{H}_2$.'
+
+  - uid: g12-chemistry-1-1-q018
+    type: single_choice
+    difficulty: 1
+    stem: 'What gas is given off when an acid reacts with calcium carbonate (limestone)?'
+    options:
+      A: 'Hydrogen'
+      B: 'Ammonia'
+      C: 'Carbon dioxide'
+      D: 'Nitrogen'
+    answer: C
+    explanation: '$\text{CaCO}_3 + 2\text{HCl} \rightarrow \text{CaCl}_2 + \text{H}_2\text{O} + \text{CO}_2$.'
+
+  - uid: g12-chemistry-1-1-q019
+    type: true_false
+    difficulty: 2
+    stem: 'Every Brønsted–Lowry base is also a Lewis base.'
+    answer: true
+    explanation: 'To accept a proton, a base must donate an electron pair to it, so it is also a Lewis base.'
+
+  - uid: g12-chemistry-1-1-q020
+    type: true_false
+    difficulty: 1
+    stem: 'A weak acid ionises completely in water.'
+    answer: false
+    explanation: 'A weak acid ionises only partly; most of its molecules stay un-ionised at equilibrium.'
+
+  - uid: g12-chemistry-1-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'In $\text{NH}_3 + \text{BF}_3 \rightarrow \text{H}_3\text{N–BF}_3$, which substance is the Lewis base?'
+    options:
+      A: '$\text{BF}_3$'
+      B: '$\text{NH}_3$'
+      C: 'Both'
+      D: 'Neither'
+    answer: B
+    explanation: 'The nitrogen of $\text{NH}_3$ donates its lone pair to boron, so $\text{NH}_3$ is the Lewis base.'
+
+  - uid: g12-chemistry-1-1-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Which pair is a conjugate acid–base pair?'
+    options:
+      A: '$\text{HCl}$ and $\text{NaOH}$'
+      B: '$\text{H}_3\text{O}^+$ and $\text{OH}^-$'
+      C: '$\text{H}_2\text{SO}_4$ and $\text{SO}_4^{2-}$'
+      D: '$\text{H}_2\text{O}$ and $\text{OH}^-$'
+    answer: D
+    explanation: 'A conjugate pair differs by exactly one proton. $\text{H}_2\text{SO}_4$ and $\text{SO}_4^{2-}$ differ by two.'
+
+  - uid: g12-chemistry-1-1-q023
+    type: fill_in
+    difficulty: 1
+    stem: 'The reaction of an acid with a base to form a salt and water is called ________.'
+    answer: [neutralisation, neutralization]
+    explanation: 'For example, $\text{HCl} + \text{NaOH} \rightarrow \text{NaCl} + \text{H}_2\text{O}$.'
+
+  - uid: g12-chemistry-1-1-q024
+    type: fill_in
+    difficulty: 2
+    stem: 'A substance, like water, that can either donate or accept a proton is described as ________.'
+    answer: [amphiprotic, amphoteric]
+    explanation: 'Amphiprotic species act as acids towards bases and as bases towards acids.'
+
+  - uid: g12-chemistry-1-1-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each theory with its definition of an acid.'
+    left:
+      L1: 'Arrhenius'
+      L2: 'Brønsted–Lowry'
+      L3: 'Lewis'
+    right:
+      R1: 'Proton donor'
+      R2: 'Electron-pair acceptor'
+      R3: 'Produces $\text{H}^+$ in water'
+      R4: 'Produces $\text{OH}^-$ in water'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Producing $\text{OH}^-$ in water is the Arrhenius definition of a base, not an acid.'
+
+  - uid: g12-chemistry-1-1-q026
+    type: ordering
+    difficulty: 2
+    stem: 'At 25 °C, put these solutions in order from most acidic to most basic, using their $[\text{H}_3\text{O}^+]$.'
+    items:
+      A: '$1 \times 10^{-7}$ M'
+      B: '$1 \times 10^{-12}$ M'
+      C: '$1 \times 10^{-2}$ M'
+      D: '$1 \times 10^{-5}$ M'
+    answer: [C, D, A, B]
+    explanation: 'The larger $[\text{H}_3\text{O}^+]$, the more acidic. $10^{-7}$ M is neutral and $10^{-12}$ M is basic.'
+
+  - uid: g12-chemistry-1-1-q027
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these is a strong base?'
+    options:
+      A: 'Sodium hydroxide, NaOH'
+      B: 'Ammonia, $\text{NH}_3$'
+      C: 'Ethanoic acid'
+      D: 'Water'
+    answer: A
+    explanation: 'NaOH dissociates completely in water. Ammonia is a weak base.'
+
+  - uid: g12-chemistry-1-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'What colour does blue litmus paper turn in an acid?'
+    options:
+      A: 'Green'
+      B: 'Red'
+      C: 'It stays blue.'
+      D: 'Yellow'
+    answer: B
+    explanation: 'Acids turn blue litmus red; bases turn red litmus blue.'
+
+  - uid: g12-chemistry-1-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'In $\text{HSO}_4^- + \text{CO}_3^{2-} \rightleftharpoons \text{SO}_4^{2-} + \text{HCO}_3^-$, which species are the two Brønsted–Lowry acids (one on each side)?'
+    options:
+      A: '$\text{CO}_3^{2-}$ and $\text{SO}_4^{2-}$'
+      B: '$\text{CO}_3^{2-}$ and $\text{HCO}_3^-$'
+      C: '$\text{SO}_4^{2-}$ and $\text{HSO}_4^-$'
+      D: '$\text{HSO}_4^-$ and $\text{HCO}_3^-$'
+    answer: D
+    explanation: '$\text{HSO}_4^-$ donates a proton forward; in the reverse reaction $\text{HCO}_3^-$ donates a proton back.'
+
+  - uid: g12-chemistry-1-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which theory of acids and bases is the broadest, covering reactions with no protons at all?'
+    options:
+      A: 'Arrhenius'
+      B: 'Brønsted–Lowry'
+      C: 'Lewis'
+      D: 'All three are equally broad.'
+    answer: C
+    explanation: 'The Lewis theory is based on electron pairs, so it also covers acids like $\text{BF}_3$ and $\text{AlCl}_3$.'

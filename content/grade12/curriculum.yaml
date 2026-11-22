@@ -119,6 +119,7 @@ subjects:
     chapters:
     - number: 1
       title: Acid-base theories
+      file: chemistry/u1-c1.yaml
     - number: 2
       title: Ionic equilibria of weak acids and bases, pH
     - number: 3

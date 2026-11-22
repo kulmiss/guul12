@@ -320,7 +320,7 @@ questions:
   - uid: g12-physics-5-1-q026
     type: ordering
     difficulty: 2
-    stem: 'A mobile-phone charger changes 220 V AC into steady low-voltage DC. Put its stages in order.'
+    stem: 'A simple low-voltage DC power supply changes 220 V AC into steady low-voltage DC. Put its stages in order.'
     items:
       A: 'Bridge rectifier'
       B: 'Smoothing capacitor'
