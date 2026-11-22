@@ -1,0 +1,32 @@
+title = "guul12 gitleaks config"
+
+[extend]
+# Use all the default gitleaks rules.
+useDefault = true
+
+# Extra rules for this project.
+[[rules]]
+id = "admob-app-id"
+description = "AdMob app or unit ID (must stay out of the public repo)"
+regex = '''ca-app-pub-\d{16}[~/]\d{10}'''
+keywords = ["ca-app-pub-"]
+
+[[rules]]
+id = "nova-licence-auth"
+description = "Nova licence in a composer auth file"
+regex = '''nova\.laravel\.com"\s*:\s*\{[^}]*"password"\s*:\s*"[^"]+"'''
+keywords = ["nova.laravel.com"]
+
+[[rules]]
+id = "telegram-bot-token"
+description = "Telegram bot token"
+regex = '''\b\d{8,10}:[A-Za-z0-9_-]{35}\b'''
+keywords = ["telegram", "bot"]
+
+[allowlist]
+description = "Known safe files"
+paths = [
+  '''backend/composer\.lock''',
+  '''app/pubspec\.lock''',
+  '''landing/package-lock\.json''',
+]

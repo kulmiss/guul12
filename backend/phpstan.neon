@@ -1,0 +1,15 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 8
+    paths:
+        - app
+        - config
+        - database
+        - routes
+        - tests
+    # Nova code is only analysed once Laravel Nova is installed (see docs/nova-setup.md).
+    excludePaths:
+        - nova (?)
+    tmpDir: storage/framework/cache/phpstan
