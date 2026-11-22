@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-aptitude-1-1-q001: {hash: 'ee968f2f5f85a7c27f8399791a2f12322238dbb08f866e1a0d70cdac3ea5cc62', answer: B}
+  g12-aptitude-1-1-q002: {hash: '631c00c51d1287048dc1fb1d12c9ff2d331b1b5989e837cc1e46aaad5bb54773', answer: A}
+  g12-aptitude-1-1-q003: {hash: 'bcb73fb27080b07bf261be0e5d15a3d18b619e698e0dcc8966be94d764b998fc', answer: C}
+  g12-aptitude-1-1-q004: {hash: '089ead4f06a525843c0e3e90967ae639796aa7feb3ddeec695eec3c3e7a88c75', answer: D}
+  g12-aptitude-1-1-q005: {hash: '5c4c9275d519d0260b1dc24a3856c88892781cf1a215095d59baf25a4bc6978a', answer: A}
+  g12-aptitude-1-1-q006: {hash: 'c09977aed614922564bae8e28ec88ac69df9f4f188c0dc7d69e692d57ff23947', answer: B}
+  g12-aptitude-1-1-q007: {hash: '4d5df9fded2040a23285ab38d5b9dd5cac38515de470ca04b05a47a5bccc336f', answer: D}
+  g12-aptitude-1-1-q008: {hash: '48c4a59db4bc3e0df915de16ad139edef10a7554e5ac96be1e322f8b7f7c3c82', answer: A}
+  g12-aptitude-1-1-q009: {hash: '49cad1245b80eba89bf8975edc8d2d80ff8b0d87634aadc4a86aad5244a91560', answer: C, note: 'Two options can complete the analogy. Mango is botanically a fruit (the plant part), so under a "plant part" reading carrot : root (B) also works; only the food-category reading gives vegetable (C). Suggest replacing option B with a clearly wrong distractor (e.g. "seed" or "red").'}
+  g12-aptitude-1-1-q010: {hash: '28bccef849c0789298c6866c7458dbaf33c96864eb406cb50e1455659d89e108', answer: D}
+  g12-aptitude-1-1-q011: {hash: '2dcef24476a8f2b1ca5b528223e5cf75bdc9adf148bcd91085f9e7971aafbb60', answer: A}
+  g12-aptitude-1-1-q012: {hash: 'ffc5cf51157d29ac97d912b8f61efadf75e1fc50a7f77f0b10c4ff8db40285cc', answer: C}
+  g12-aptitude-1-1-q013: {hash: '3b74aab25a98f57c70f5eb4bac3b183a9bc98eab659db9d3813dbd5b83f0681f', answer: A}
+  g12-aptitude-1-1-q014: {hash: '8fc799a996597799ca981ff95ce43f47b2d5131bab0983fff036d45dbd0cf890', answer: D}
+  g12-aptitude-1-1-q015: {hash: 'ef746fe124b4d9f729ec82af8e0aad42a1010426630695c00e6d337fe7da9351', answer: C}
+  g12-aptitude-1-1-q016: {hash: 'a19139c86513578ba33ad17d82141eef8f250e94fca822ab5784cd6f6adf8371', answer: B}
+  g12-aptitude-1-1-q017: {hash: '6e4822b9598a71fa8e122adedb5798022fb34674d9280c078817aec5d932c1aa', answer: A}
+  g12-aptitude-1-1-q018: {hash: '1eca6acb86c4fc3232aa6fefcbe51dbbe41ab2bace4762176a098114b888b8b0', answer: B}
+  g12-aptitude-1-1-q019: {hash: '1416891e179a1360eab491e55d27ce90428c9c52a040353c3549ee8f657574e4', answer: true}
+  g12-aptitude-1-1-q020: {hash: 'b59f519b34815290bd60b0467cc105fe055e39505dccfda3d29b4bdadafac4d5', answer: true, note: 'Slightly debatable: leaf : tree is part-to-whole (a component), while tree : forest is member-to-group (one of many in a collection). Many analogy guides treat these as different relationships, so a careful student could answer false. Suggest a clearer pair, or say "part-to-whole in the broad sense" in the explanation.'}
+  g12-aptitude-1-1-q021: {hash: 'bfcef5de34d6217a9884d51414e1d3f4b0bdc395cc03da355b685d5ee188ab56', answer: false}
+  g12-aptitude-1-1-q022: {hash: '728b445a64b821e29a6fe00e8f4158c99b68d397be920888e74f5e2761054496', answer: [A, B, C], note: 'Minor: strictly a scale measures weight and a balance measures mass. C is still clearly meant as instrument : quantity, but "balance : mass" would be more exact.'}
+  g12-aptitude-1-1-q023: {hash: 'b465f756049779743c61f841a118742567bb493da96737a823e659e34c5421b3', answer: winter}
+  g12-aptitude-1-1-q024: {hash: '392ac0be8070fe5bad6f8052b97ccdc513e903d120e6412c7e7044692bb6664e', answer: taste}
+  g12-aptitude-1-1-q025: {hash: 'f0754c663546df0fc8a60e5ed3ae6cc73a9082c7a6311a4f13d62842ed482105', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-aptitude-1-1-q026: {hash: '07cd4b0b1a9edbc2f691bf210f6fbda7267fc76bcd92d0c194db959914e931a4', answer: [B, D, A, C]}
+  g12-aptitude-1-1-q027: {hash: '86dc369c0f1672711d14db56b4b1d8f2f30700c1b2c5829e0f4c4319f283511c', answer: D}
+  g12-aptitude-1-1-q028: {hash: 'd19a54cec7dc5e989fcdf553b53a1e9358e01368944249ba0d6b03d76068c55c', answer: C}
+  g12-aptitude-1-1-q029: {hash: '67a60956862cc7407ee6a63e833f00caf460c0b2f8ccf5bb7b401bbba06ba165', answer: C}
+  g12-aptitude-1-1-q030: {hash: 'b85234fc2ce8d4706c9f5b3a8b51154e3613e78f82b065f36129d33feaed6657', answer: B}

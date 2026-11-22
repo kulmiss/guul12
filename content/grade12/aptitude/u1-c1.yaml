@@ -1,0 +1,377 @@
+summary:
+  key_points:
+    - 'An analogy compares two pairs of words that share the same relationship: A is to B as C is to D (A : B :: C : D).'
+    - 'Step 1: say the relationship of the first pair in a clear sentence ("A pen is used for writing"). Step 2: test each option with the same sentence. Step 3: if two options fit, make the sentence more exact.'
+    - 'Common relationships: synonym (big : large), antonym (hot : cold), part to whole (page : book), worker to tool (carpenter : saw), worker to product (baker : bread), cause to effect (fire : smoke), object to use (knife : cut), young to adult (calf : cow), group (flock : sheep), degree (warm : hot), place (doctor : hospital), category (mango : fruit).'
+    - 'Keep the order of the pair the same: if the first pair is part : whole, the answer must also be part : whole, not whole : part.'
+    - 'Odd-one-out questions: find the rule that links all but one item; the one that breaks the rule is the answer.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-aptitude-1-1-se01
+    problem: 'Pen : write :: knife : ?'
+    steps:
+      - 'Relationship: a pen is used to write.'
+      - 'A knife is used to cut.'
+    answer: 'cut'
+  - uid: g12-aptitude-1-1-se02
+    problem: 'Calf : cow :: kid : ? (options: goat, child, horse, lamb)'
+    steps:
+      - 'A calf is the young of a cow.'
+      - 'A kid is the young of a goat. ("Child" uses another meaning of "kid"; the pattern here is animal young.)'
+    answer: 'goat'
+  - uid: g12-aptitude-1-1-se03
+    problem: 'Which is the odd one out: Nile, Awash, Wabe Shebelle, Tana?'
+    steps:
+      - 'The Nile, Awash and Wabe Shebelle are rivers.'
+      - 'Tana is a lake, so it is the odd one out.'
+    answer: 'Tana'
+
+flashcards:
+  - {uid: g12-aptitude-1-1-fc01, term: Analogy, definition: 'Two pairs with the same relationship: A : B :: C : D.'}
+  - {uid: g12-aptitude-1-1-fc02, term: Bridge sentence, definition: 'A sentence that states the relationship of the first pair.'}
+  - {uid: g12-aptitude-1-1-fc03, term: Part to whole, definition: 'petal : flower, page : book.'}
+  - {uid: g12-aptitude-1-1-fc04, term: Worker to tool, definition: 'farmer : plough, carpenter : saw.'}
+  - {uid: g12-aptitude-1-1-fc05, term: Young to adult, definition: 'calf : cow, puppy : dog.'}
+  - {uid: g12-aptitude-1-1-fc06, term: Degree, definition: 'warm : hot, drizzle : downpour.'}
+  - {uid: g12-aptitude-1-1-fc07, term: Odd one out, definition: 'Find the rule shared by all but one item.'}
+
+questions:
+  - uid: g12-aptitude-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Hot : cold :: tall : ?'
+    options:
+      A: 'high'
+      B: 'short'
+      C: 'big'
+      D: 'long'
+    answer: B
+    explanation: 'Hot and cold are opposites; the opposite of tall is short.'
+
+  - uid: g12-aptitude-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Page : book :: petal : ?'
+    options:
+      A: 'flower'
+      B: 'leaf'
+      C: 'tree'
+      D: 'garden'
+    answer: A
+    explanation: 'A page is part of a book; a petal is part of a flower.'
+
+  - uid: g12-aptitude-1-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Puppy : dog :: calf : ?'
+    options:
+      A: 'horse'
+      B: 'sheep'
+      C: 'cow'
+      D: 'goat'
+    answer: C
+    explanation: 'A puppy is a young dog; a calf is a young cow.'
+
+  - uid: g12-aptitude-1-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Baker : bread :: tailor : ?'
+    options:
+      A: 'needle'
+      B: 'shop'
+      C: 'cloth'
+      D: 'clothes'
+    answer: D
+    explanation: 'A baker makes bread; a tailor makes clothes. Needle is a tool and cloth is a raw material.'
+
+  - uid: g12-aptitude-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Doctor : hospital :: teacher : ?'
+    options:
+      A: 'school'
+      B: 'student'
+      C: 'book'
+      D: 'lesson'
+    answer: A
+    explanation: 'A doctor works in a hospital; a teacher works in a school.'
+
+  - uid: g12-aptitude-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Knife : cut :: broom : ?'
+    options:
+      A: 'house'
+      B: 'sweep'
+      C: 'stick'
+      D: 'dust'
+    answer: B
+    explanation: 'A knife is used to cut; a broom is used to sweep.'
+
+  - uid: g12-aptitude-1-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Warm : hot :: cool : ?'
+    options:
+      A: 'warm'
+      B: 'wet'
+      C: 'mild'
+      D: 'freezing'
+    answer: D
+    explanation: 'Hot is a stronger degree of warm; freezing is a stronger degree of cool.'
+
+  - uid: g12-aptitude-1-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Flock : sheep :: swarm : ?'
+    options:
+      A: 'bees'
+      B: 'cows'
+      C: 'fish'
+      D: 'lions'
+    answer: A
+    explanation: 'A flock is a group of sheep; a swarm is a group of bees.'
+
+  - uid: g12-aptitude-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Mango : fruit :: carrot : ?'
+    options:
+      A: 'orange'
+      B: 'sweet'
+      C: 'vegetable'
+      D: 'plant'
+    answer: C
+    explanation: 'A mango is a kind of fruit; a carrot is a kind of vegetable.'
+
+  - uid: g12-aptitude-1-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Fire : smoke :: rain : ?'
+    options:
+      A: 'cloud'
+      B: 'sky'
+      C: 'umbrella'
+      D: 'flood'
+    answer: D
+    explanation: 'Fire can cause smoke; heavy rain can cause a flood (cause → effect). Clouds come before rain.'
+
+  - uid: g12-aptitude-1-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Ear : hear :: nose : ?'
+    options:
+      A: 'smell'
+      B: 'face'
+      C: 'chew'
+      D: 'see'
+    answer: A
+    explanation: 'The ear is the organ of hearing; the nose is the organ of smell.'
+
+  - uid: g12-aptitude-1-1-q012
+    type: single_choice
+    difficulty: 3
+    stem: 'Author : novel :: composer : ?'
+    options:
+      A: 'piano'
+      B: 'singer'
+      C: 'symphony'
+      D: 'concert hall'
+    answer: C
+    explanation: 'An author writes a novel; a composer writes a symphony (creator → work).'
+
+  - uid: g12-aptitude-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Addis Ababa : Ethiopia :: Nairobi : ?'
+    options:
+      A: 'Kenya'
+      B: 'Uganda'
+      C: 'Somalia'
+      D: 'Tanzania'
+    answer: A
+    explanation: 'Addis Ababa is the capital of Ethiopia; Nairobi is the capital of Kenya.'
+
+  - uid: g12-aptitude-1-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Bird : nest :: bee : ?'
+    options:
+      A: 'honey'
+      B: 'flower'
+      C: 'wing'
+      D: 'hive'
+    answer: D
+    explanation: 'A bird lives in a nest; a bee lives in a hive.'
+
+  - uid: g12-aptitude-1-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the odd one out?'
+    options:
+      A: 'Triangle'
+      B: 'Square'
+      C: 'Circle'
+      D: 'Pentagon'
+    answer: C
+    explanation: 'Triangle, square and pentagon are polygons with straight sides; a circle has no straight sides.'
+
+  - uid: g12-aptitude-1-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the odd one out?'
+    options:
+      A: 'Nile'
+      B: 'Tana'
+      C: 'Awash'
+      D: 'Omo'
+    answer: B
+    explanation: 'The Nile, Awash and Omo are rivers; Tana is a lake.'
+
+  - uid: g12-aptitude-1-1-q017
+    type: single_choice
+    difficulty: 3
+    stem: 'Hour : minute :: minute : ?'
+    options:
+      A: 'second'
+      B: 'day'
+      C: 'week'
+      D: 'clock'
+    answer: A
+    explanation: 'An hour is made of 60 minutes; a minute is made of 60 seconds.'
+
+  - uid: g12-aptitude-1-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Pilot : aeroplane :: captain : ?'
+    options:
+      A: 'airport'
+      B: 'ship'
+      C: 'ocean'
+      D: 'passenger'
+    answer: B
+    explanation: 'A pilot controls an aeroplane; a captain controls a ship.'
+
+  - uid: g12-aptitude-1-1-q019
+    type: true_false
+    difficulty: 1
+    stem: 'In the analogy "wheel : car :: page : book", both pairs show a part-to-whole relationship.'
+    answer: true
+    explanation: 'A wheel is part of a car and a page is part of a book.'
+
+  - uid: g12-aptitude-1-1-q020
+    type: true_false
+    difficulty: 2
+    stem: '"Leaf : tree :: feather : bird" uses the same relationship in both pairs.'
+    answer: true
+    explanation: 'In both pairs the first is a part of the second (part to whole).'
+
+  - uid: g12-aptitude-1-1-q021
+    type: true_false
+    difficulty: 2
+    stem: '"Glove : hand :: shoe : sock" is a correct analogy.'
+    answer: false
+    explanation: 'A glove covers a hand, so the match is "shoe : foot". A sock is another covering, not the body part.'
+
+  - uid: g12-aptitude-1-1-q022
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which pairs show the same relationship as "thermometer : temperature"? Choose all that apply.'
+    options:
+      A: 'ruler : length'
+      B: 'clock : time'
+      C: 'balance : mass'
+      D: 'pencil : paper'
+    answer: [A, B, C]
+    explanation: 'Each is an instrument and what it measures. A pencil does not measure paper.'
+
+  - uid: g12-aptitude-1-1-q023
+    type: fill_in
+    difficulty: 1
+    stem: 'Complete: Day : night :: summer : ________.'
+    answer: [winter]
+    explanation: 'Day and night are opposites in the daily cycle; summer and winter are opposite seasons.'
+
+  - uid: g12-aptitude-1-1-q024
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete: Eye : see :: tongue : ________.'
+    answer: [taste]
+    explanation: 'Each organ is matched to its sense.'
+
+  - uid: g12-aptitude-1-1-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each pair with the relationship it shows.'
+    left:
+      L1: 'farmer : plough'
+      L2: 'drizzle : downpour'
+      L3: 'brave : courageous'
+    right:
+      R1: 'Synonyms'
+      R2: 'Worker and tool'
+      R3: 'Smaller and bigger degree'
+      R4: 'Young and adult'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'None of the pairs is young and adult (like kitten : cat).'
+
+  - uid: g12-aptitude-1-1-q026
+    type: ordering
+    difficulty: 2
+    stem: 'Put these in order from smallest to largest.'
+    items:
+      A: 'Region'
+      B: 'Village'
+      C: 'Country'
+      D: 'Zone'
+    answer: [B, D, A, C]
+    explanation: 'In Ethiopia a village is part of a zone, a zone is part of a region, and a region is part of the country.'
+
+  - uid: g12-aptitude-1-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'Seed : tree :: egg : ?'
+    options:
+      A: 'nest'
+      B: 'shell'
+      C: 'yolk'
+      D: 'bird'
+    answer: D
+    explanation: 'A seed grows into a tree; an egg develops into a bird (beginning → grown form).'
+
+  - uid: g12-aptitude-1-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the odd one out?'
+    options:
+      A: 'Copper'
+      B: 'Iron'
+      C: 'Oxygen'
+      D: 'Zinc'
+    answer: C
+    explanation: 'Copper, iron and zinc are metals; oxygen is a non-metal gas.'
+
+  - uid: g12-aptitude-1-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'Drought : famine :: flood : ?'
+    options:
+      A: 'river'
+      B: 'rain'
+      C: 'soil erosion'
+      D: 'dam'
+    answer: C
+    explanation: 'A drought can lead to famine; a flood can lead to soil erosion (event → result). Rain comes before a flood.'
+
+  - uid: g12-aptitude-1-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Cheetah : fast :: tortoise : ?'
+    options:
+      A: 'small'
+      B: 'slow'
+      C: 'shell'
+      D: 'old'
+    answer: B
+    explanation: 'The cheetah is known for being fast; the tortoise is known for being slow (animal → typical quality of movement).'

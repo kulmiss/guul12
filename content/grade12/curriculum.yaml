@@ -255,8 +255,10 @@ subjects:
     chapters:
     - number: 1
       title: Analogies and word relationships
+      file: aptitude/u1-c1.yaml
     - number: 2
       title: Sentence completion and verbal logic
+      file: aptitude/u1-c2.yaml
   - number: 2
     title: Quantitative Reasoning
     chapters:
