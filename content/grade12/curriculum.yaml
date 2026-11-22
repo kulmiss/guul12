@@ -196,6 +196,7 @@ subjects:
     chapters:
     - number: 1
       title: Nervous system and sense organs
+      file: biology/u5-c1.yaml
     - number: 2
       title: Endocrine system and homeostasis
     - number: 3
