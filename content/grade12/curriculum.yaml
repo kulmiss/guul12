@@ -69,8 +69,10 @@ subjects:
     chapters:
     - number: 1
       title: Physics and the other sciences
+      file: physics/u1-c1.yaml
     - number: 2
       title: Physics in technology and medicine
+      file: physics/u1-c2.yaml
   - number: 2
     title: Two-Dimensional Motion
     chapters:
