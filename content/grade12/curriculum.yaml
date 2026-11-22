@@ -134,6 +134,7 @@ subjects:
       file: chemistry/u2-c1.yaml
     - number: 2
       title: Electrolysis and Faraday's laws
+      file: chemistry/u2-c2.yaml
   - number: 3
     title: Industrial Chemistry
     chapters:

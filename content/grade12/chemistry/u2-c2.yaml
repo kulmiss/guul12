@@ -1,0 +1,377 @@
+summary:
+  key_points:
+    - 'Electrolysis uses electrical energy to drive a non-spontaneous redox reaction. The liquid that conducts and is decomposed is the electrolyte (a molten or dissolved ionic compound).'
+    - 'In an electrolytic cell the anode is POSITIVE and the cathode is NEGATIVE. Oxidation still happens at the anode and reduction at the cathode. Cations move to the cathode, anions to the anode.'
+    - 'Molten NaCl gives sodium metal at the cathode and chlorine gas at the anode. Concentrated aqueous NaCl (brine) gives hydrogen at the cathode, chlorine at the anode and leaves NaOH in solution.'
+    - 'Aqueous $\text{CuSO}_4$ with inert electrodes: copper at the cathode, oxygen at the anode, and the blue colour fades. With a copper anode, the anode dissolves instead – this is used to purify copper.'
+    - 'Electrolysis of acidified water gives hydrogen at the cathode and oxygen at the anode in a 2 : 1 volume ratio.'
+    - 'Faraday''s first law: the mass of substance produced is proportional to the charge passed, $Q = It$. Faraday''s second law: for the same charge, the moles produced depend on the number of electrons needed per ion.'
+    - 'One mole of electrons carries 1 faraday: $F \approx 96\,500$ C/mol. Moles of electrons $= \frac{Q}{F}$; moles of metal $= \frac{Q}{zF}$, where $z$ is the charge on the ion.'
+    - 'Uses: electroplating (object as cathode), refining copper, extracting reactive metals like sodium and aluminium, and making chlorine and sodium hydroxide.'
+  formulas:
+    - label: Charge
+      latex: 'Q = It'
+    - label: Moles of electrons
+      latex: 'n_{e^-} = \frac{Q}{F}, \quad F = 96\,500\ \text{C/mol}'
+    - label: Mass deposited
+      latex: 'm = \frac{Q M}{z F}'
+
+solved_exercises:
+  - uid: g12-chemistry-2-2-se01
+    problem: 'A current of 2.0 A flows through copper(II) sulfate solution for 965 s. What mass of copper forms? ($M_{\text{Cu}} = 63.5$ g/mol, $F = 96\,500$ C/mol)'
+    steps:
+      - '$Q = It = 2.0 \times 965 = 1930$ C; moles of electrons $= \frac{1930}{96\,500} = 0.020$ mol.'
+      - '$\text{Cu}^{2+} + 2e^- \rightarrow \text{Cu}$, so moles Cu $= 0.010$ mol; mass $= 0.010 \times 63.5 = 0.635$ g.'
+    answer: '0.635 g'
+  - uid: g12-chemistry-2-2-se02
+    problem: 'How many faradays are needed to produce 1 mol of aluminium from $\text{Al}^{3+}$?'
+    steps:
+      - '$\text{Al}^{3+} + 3e^- \rightarrow \text{Al}$.'
+      - 'One mole of Al needs 3 mol of electrons, i.e. 3 faradays (about 289 500 C).'
+    answer: '3 F'
+  - uid: g12-chemistry-2-2-se03
+    problem: 'A spoon is to be silver-plated. Describe the set-up.'
+    steps:
+      - 'The spoon is the cathode (negative), where $\text{Ag}^+ + e^- \rightarrow \text{Ag}$ coats it.'
+      - 'The anode is pure silver, which dissolves to replace the ions; the electrolyte contains $\text{Ag}^+$ (e.g. silver nitrate).'
+    answer: 'Spoon = cathode, silver = anode, silver salt electrolyte'
+
+flashcards:
+  - {uid: g12-chemistry-2-2-fc01, term: Electrolysis, definition: 'Decomposing an electrolyte using electric current.'}
+  - {uid: g12-chemistry-2-2-fc02, term: Electrolyte, definition: 'Molten or dissolved ionic substance that conducts electricity.'}
+  - {uid: g12-chemistry-2-2-fc03, term: Anode (electrolysis), definition: 'Positive electrode; oxidation happens here.'}
+  - {uid: g12-chemistry-2-2-fc04, term: Cathode (electrolysis), definition: 'Negative electrode; reduction happens here.'}
+  - {uid: g12-chemistry-2-2-fc05, term: Faraday constant, definition: 'Charge on one mole of electrons, about 96 500 C/mol.'}
+  - {uid: g12-chemistry-2-2-fc06, term: Faraday's first law, definition: 'Mass produced is proportional to the charge passed.'}
+  - {uid: g12-chemistry-2-2-fc07, term: Electroplating, definition: 'Coating an object (the cathode) with a thin metal layer by electrolysis.'}
+  - {uid: g12-chemistry-2-2-fc08, term: Inert electrode, definition: 'Electrode that does not react, e.g. graphite or platinum.'}
+  - {uid: g12-chemistry-2-2-fc09, term: Brine, definition: 'Concentrated sodium chloride solution; electrolysed to make $\text{Cl}_2$, $\text{H}_2$ and NaOH.'}
+
+questions:
+  - uid: g12-chemistry-2-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'In an electrolytic cell, the cathode is:'
+    options:
+      A: 'Positive, and oxidation happens there'
+      B: 'Negative, and reduction happens there'
+      C: 'Positive, and reduction happens there'
+      D: 'Not connected to the power supply'
+    answer: B
+    explanation: 'The cathode is joined to the negative terminal; cations gain electrons there.'
+
+  - uid: g12-chemistry-2-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Why must sodium chloride be molten or dissolved for electrolysis?'
+    options:
+      A: 'So its ions are free to move'
+      B: 'So it becomes a metal'
+      C: 'So it stops conducting'
+      D: 'So it gives off oxygen'
+    answer: A
+    explanation: 'In solid NaCl the ions are fixed in a lattice; melting or dissolving lets them move and carry current.'
+
+  - uid: g12-chemistry-2-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What is formed at the cathode when molten sodium chloride is electrolysed?'
+    options:
+      A: 'Chlorine gas'
+      B: 'Hydrogen gas'
+      C: 'Sodium metal'
+      D: 'Oxygen gas'
+    answer: C
+    explanation: '$\text{Na}^+ + e^- \rightarrow \text{Na}$ at the cathode; chlorine forms at the anode.'
+
+  - uid: g12-chemistry-2-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Concentrated sodium chloride solution (brine) is electrolysed with inert electrodes. What forms at the cathode?'
+    options:
+      A: 'Sodium metal'
+      B: 'Chlorine gas'
+      C: 'Oxygen gas'
+      D: 'Hydrogen gas'
+    answer: D
+    explanation: 'Water is reduced more easily than $\text{Na}^+$: $2\text{H}_2\text{O} + 2e^- \rightarrow \text{H}_2 + 2\text{OH}^-$.'
+
+  - uid: g12-chemistry-2-2-q005
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which products are obtained from the electrolysis of brine? Choose all that apply.'
+    options:
+      A: 'Chlorine'
+      B: 'Hydrogen'
+      C: 'Sodium hydroxide'
+      D: 'Sodium metal'
+    answer: [A, B, C]
+    explanation: 'Chlorine forms at the anode, hydrogen at the cathode, and NaOH stays in solution. Sodium metal needs molten NaCl.'
+
+  - uid: g12-chemistry-2-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Copper(II) sulfate solution is electrolysed with graphite electrodes. What happens to the blue colour of the solution?'
+    options:
+      A: 'It fades, because $\text{Cu}^{2+}$ ions are removed at the cathode.'
+      B: 'It gets darker.'
+      C: 'It turns green.'
+      D: 'It does not change.'
+    answer: A
+    explanation: 'Copper is deposited at the cathode, so the concentration of blue $\text{Cu}^{2+}$ falls.'
+
+  - uid: g12-chemistry-2-2-q007
+    type: single_choice
+    difficulty: 3
+    stem: 'Copper(II) sulfate solution is electrolysed using copper electrodes. What happens at the anode?'
+    options:
+      A: 'Oxygen gas bubbles off.'
+      B: 'Copper is deposited on it.'
+      C: 'The copper anode dissolves to form $\text{Cu}^{2+}$ ions.'
+      D: 'Hydrogen gas forms.'
+    answer: C
+    explanation: 'A copper anode is oxidised, $\text{Cu} \rightarrow \text{Cu}^{2+} + 2e^-$. This is how impure copper is refined.'
+
+  - uid: g12-chemistry-2-2-q008
+    type: true_false
+    difficulty: 2
+    stem: 'When acidified water is electrolysed, the volume of hydrogen produced is twice the volume of oxygen.'
+    answer: true
+    explanation: '$2\text{H}_2\text{O} \rightarrow 2\text{H}_2 + \text{O}_2$: 2 volumes of hydrogen to 1 of oxygen.'
+
+  - uid: g12-chemistry-2-2-q009
+    type: numeric
+    difficulty: 1
+    stem: 'A current of 5 A flows for 10 minutes. How much charge passes, in coulombs?'
+    answer: {value: 3000, tolerance: 0, unit: C}
+    explanation: '$Q = It = 5 \times 600 = 3000$ C.'
+
+  - uid: g12-chemistry-2-2-q010
+    type: numeric
+    difficulty: 2
+    stem: '9 650 C of charge is passed through silver nitrate solution. What mass of silver, in grams, is deposited? ($M_{\text{Ag}} = 108$ g/mol, $F = 96\,500$ C/mol)'
+    answer: {value: 10.8, tolerance: 0, unit: g}
+    explanation: 'Moles of electrons $= \frac{9650}{96\,500} = 0.1$ mol. $\text{Ag}^+ + e^- \rightarrow \text{Ag}$, so 0.1 mol Ag $= 10.8$ g.'
+
+  - uid: g12-chemistry-2-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'How many moles of electrons are needed to deposit 1 mol of copper from $\text{Cu}^{2+}$?'
+    options:
+      A: '1'
+      B: '2'
+      C: '0.5'
+      D: '4'
+    answer: B
+    explanation: '$\text{Cu}^{2+} + 2e^- \rightarrow \text{Cu}$.'
+
+  - uid: g12-chemistry-2-2-q012
+    type: single_choice
+    difficulty: 3
+    stem: 'The same charge is passed through solutions of $\text{AgNO}_3$ and $\text{CuSO}_4$ in series. 0.2 mol of silver is deposited. How many moles of copper are deposited?'
+    options:
+      A: '0.2 mol'
+      B: '0.4 mol'
+      C: '0.05 mol'
+      D: '0.1 mol'
+    answer: D
+    explanation: '0.2 mol Ag needs 0.2 mol of electrons. Copper needs 2 electrons per atom: $\frac{0.2}{2} = 0.1$ mol Cu.'
+
+  - uid: g12-chemistry-2-2-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the approximate value of the Faraday constant?'
+    options:
+      A: '96 500 C/mol'
+      B: '$6.02 \times 10^{23}$ C/mol'
+      C: '1.6 C/mol'
+      D: '8.31 C/mol'
+    answer: A
+    explanation: 'One mole of electrons carries about 96 500 coulombs.'
+
+  - uid: g12-chemistry-2-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'An iron spoon is to be plated with silver. Where should the spoon be placed?'
+    options:
+      A: 'As the anode'
+      B: 'In the salt bridge'
+      C: 'As the cathode'
+      D: 'Outside the electrolyte'
+    answer: C
+    explanation: 'Silver ions are reduced to silver metal at the cathode, coating the spoon.'
+
+  - uid: g12-chemistry-2-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Faraday''s first law of electrolysis states that the mass of substance produced at an electrode is proportional to:'
+    options:
+      A: 'The size of the electrode'
+      B: 'The temperature'
+      C: 'The volume of the electrolyte'
+      D: 'The quantity of charge passed'
+    answer: D
+    explanation: '$m \propto Q = It$. Doubling the current or the time doubles the mass.'
+
+  - uid: g12-chemistry-2-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'A current deposits 2 g of copper in 30 minutes. How much copper would the same current deposit in 90 minutes?'
+    options:
+      A: '6 g'
+      B: '2 g'
+      C: '4 g'
+      D: '0.67 g'
+    answer: A
+    explanation: 'Three times the time means three times the charge, so $3 \times 2 = 6$ g.'
+
+  - uid: g12-chemistry-2-2-q017
+    type: true_false
+    difficulty: 2
+    stem: 'An electrolytic cell turns chemical energy into electrical energy.'
+    answer: false
+    explanation: 'That is a galvanic cell. An electrolytic cell uses electrical energy to force a chemical change.'
+
+  - uid: g12-chemistry-2-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is aluminium extracted by electrolysis instead of by heating its oxide with carbon?'
+    options:
+      A: 'Aluminium is very unreactive.'
+      B: 'Aluminium is very reactive, and carbon cannot reduce its oxide easily.'
+      C: 'Carbon is too expensive.'
+      D: 'Aluminium oxide is a gas.'
+    answer: B
+    explanation: 'Aluminium is above carbon in the reactivity series, so only electrolysis (of alumina in molten cryolite) is practical.'
+
+  - uid: g12-chemistry-2-2-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'During electrolysis, positive ions (cations) move towards the:'
+    options:
+      A: 'Anode'
+      B: 'Salt bridge'
+      C: 'Cathode'
+      D: 'Power supply directly'
+    answer: C
+    explanation: 'Opposite charges attract: cations go to the negative cathode.'
+
+  - uid: g12-chemistry-2-2-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'A current of 1.93 A is passed through molten $\text{AlCl}_3$ for 1 000 s. How many moles of aluminium are produced? ($F = 96\,500$ C/mol)'
+    options:
+      A: '0.02 mol'
+      B: '0.06 mol'
+      C: '0.0067 mol'
+      D: '0.2 mol'
+    answer: C
+    explanation: '$Q = 1930$ C $= 0.02$ mol of electrons. $\text{Al}^{3+} + 3e^-$, so moles Al $= \frac{0.02}{3} \approx 0.0067$ mol.'
+
+  - uid: g12-chemistry-2-2-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'A molten or dissolved ionic substance that conducts electricity and is decomposed by it is called an ________.'
+    answer: [electrolyte]
+    explanation: 'Examples are molten NaCl and copper(II) sulfate solution.'
+
+  - uid: g12-chemistry-2-2-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'Coating an object with a thin layer of metal by electrolysis is called ________.'
+    answer: [electroplating, electro-plating, plating]
+    explanation: 'Electroplating protects objects from corrosion and improves their look.'
+
+  - uid: g12-chemistry-2-2-q023
+    type: true_false
+    difficulty: 1
+    stem: 'In electrolysis, oxidation takes place at the anode.'
+    answer: true
+    explanation: 'In both galvanic and electrolytic cells, the anode is where oxidation happens.'
+
+  - uid: g12-chemistry-2-2-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each electrolyte (inert electrodes) with the product at its anode.'
+    left:
+      L1: 'Molten lead(II) bromide'
+      L2: 'Concentrated NaCl solution'
+      L3: 'Dilute sulfuric acid'
+    right:
+      R1: 'Chlorine'
+      R2: 'Oxygen'
+      R3: 'Bromine'
+      R4: 'Hydrogen'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Bromide ions are oxidised to bromine; concentrated chloride gives chlorine; in dilute sulfuric acid water is oxidised to oxygen. Hydrogen forms at cathodes, not anodes.'
+
+  - uid: g12-chemistry-2-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'The same charge passes through these molten salts. Put them in order of moles of metal produced, most first.'
+    items:
+      A: '$\text{AlCl}_3$ (gives Al)'
+      B: '$\text{NaCl}$ (gives Na)'
+      C: '$\text{MgCl}_2$ (gives Mg)'
+    answer: [B, C, A]
+    explanation: 'Moles of metal $= \frac{n_{e^-}}{z}$. Na needs 1 electron, Mg 2, Al 3, so Na > Mg > Al.'
+
+  - uid: g12-chemistry-2-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'In copper refining, where does the pure copper collect?'
+    options:
+      A: 'At the impure copper anode'
+      B: 'At the bottom as "anode mud"'
+      C: 'In the air'
+      D: 'On the pure copper cathode'
+    answer: D
+    explanation: 'Copper dissolves from the impure anode and is deposited as pure copper on the cathode; impurities fall as anode mud.'
+
+  - uid: g12-chemistry-2-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which gas is produced at the anode during the electrolysis of molten sodium chloride?'
+    options:
+      A: 'Hydrogen'
+      B: 'Chlorine'
+      C: 'Oxygen'
+      D: 'Nitrogen'
+    answer: B
+    explanation: '$2\text{Cl}^- \rightarrow \text{Cl}_2 + 2e^-$ at the anode.'
+
+  - uid: g12-chemistry-2-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Which electrodes are called "inert"?'
+    options:
+      A: 'Graphite and platinum, which do not react during electrolysis'
+      B: 'Zinc and iron'
+      C: 'Copper and silver'
+      D: 'Sodium and potassium'
+    answer: A
+    explanation: 'Inert electrodes only carry the current; they are not changed by the reaction.'
+
+  - uid: g12-chemistry-2-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'How long must a current of 2 A flow to deposit 0.01 mol of copper from $\text{Cu}^{2+}$? ($F = 96\,500$ C/mol)'
+    options:
+      A: '482.5 s'
+      B: '1 930 s'
+      C: '965 s'
+      D: '96.5 s'
+    answer: C
+    explanation: 'Needed electrons: 0.02 mol, so $Q = 0.02 \times 96\,500 = 1930$ C. $t = \frac{1930}{2} = 965$ s.'
+
+  - uid: g12-chemistry-2-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'In the electrolysis of brine, why does the solution become basic?'
+    options:
+      A: 'Chlorine dissolves to form a base.'
+      B: '$\text{OH}^-$ ions form at the cathode when water is reduced, leaving NaOH in solution.'
+      C: 'Sodium metal reacts with the anode.'
+      D: 'Oxygen gas dissolves in the solution.'
+    answer: B
+    explanation: '$2\text{H}_2\text{O} + 2e^- \rightarrow \text{H}_2 + 2\text{OH}^-$; the $\text{OH}^-$ stays with $\text{Na}^+$ ions.'
