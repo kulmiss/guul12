@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-7-1-q001: {hash: '755dbfc711bcef0d0a20fa2ab16135eb53d3f7e9cf26f50704dbda6af8257548', answer: B}
+  g12-economics-7-1-q002: {hash: '23a10acc7c8ff805ee46708367fe685210f17da724873f0fad465f4e8e20fc6e', answer: A}
+  g12-economics-7-1-q003: {hash: '70d49911f3af22b35836bdeed3e807e1aefd59c1dcc31837929fc7662dd6148d', answer: C}
+  g12-economics-7-1-q004: {hash: 'b918d39e933ef0061cf704d23eabe247a9ad7b018a4051f70b59bf89162ea038', answer: D}
+  g12-economics-7-1-q005: {hash: '207560f8a87e1c977785e6129083b8cddcb5a527887694b5609cdef27fdb6db2', answer: A}
+  g12-economics-7-1-q006: {hash: '60e6add687af0dbb3a9da449fb99c9d39aa7064bbfc143905094a467513e1ba0', answer: B}
+  g12-economics-7-1-q007: {hash: '802d18fe44a56388759dabfb86c56c180d4e0b9ff42621866c32a0490b593d0c', answer: C}
+  g12-economics-7-1-q008: {hash: 'cac40b12bfdea419467186d911de5d60cd2baa18701063f225429c50e16c80df', answer: D}
+  g12-economics-7-1-q009: {hash: '1d85d86c579a8b1c410e1ce6972bd5c863d2d7d4993145bc86260b75171bb4d7', answer: A}
+  g12-economics-7-1-q010: {hash: 'ca0e33d8bd4c385d6aefdf847349afbe0ab91fe96b6c2f735badb75e179de505', answer: B}
+  g12-economics-7-1-q011: {hash: '8cf8d701e01dd9a349e802cc939618532d2af5b481b7abc884c01573b1f0bab5', answer: C}
+  g12-economics-7-1-q012: {hash: 'b070e9cf920e02f0c50053c1f97fa34a66edce7d77aa3af081cce62e8da21f2b', answer: D}
+  g12-economics-7-1-q013: {hash: '756284d29afb89d53340429c824abaa2cdf6170032ef2fe284cf10fff95c39e3', answer: A}
+  g12-economics-7-1-q014: {hash: '34c1835bd3fbcb4efd74251b377218549fb6c8b9e83f43129ec21f2da4162946', answer: B, note: 'The stem gives the answer away: it says "a second telecom licence", so option B (Telecommunications) can be picked with no knowledge. Suggest rewording, e.g. "In 2021 Ethiopia granted a licence to a second private operator (Safaricom). Which sector was opened?" without the word telecom, or ask which company got the licence.'}
+  g12-economics-7-1-q015: {hash: '1593b99d1f7f59848b32fa70549e22c3ef85f1111110e341dd8c6ec501f4b94f', answer: C}
+  g12-economics-7-1-q016: {hash: '52323fba9fa1b8805d1626cbfd06192f72c180ee65713c7911d8e5ce7e19c0de', answer: D}
+  g12-economics-7-1-q017: {hash: 'e1be991ff96db87281a9405559fce453cbb3f728529617ed6dba276b2445149a', answer: A}
+  g12-economics-7-1-q018: {hash: '6ec0e30813f2f1e02874257c6904a1aab283bd0e1368e2a400ead3116589f312', answer: B}
+  g12-economics-7-1-q019: {hash: 'cc28eddb7d754f794fddd9acd88e8d7252d043432ae3cb8eb05e6a892a261757', answer: C}
+  g12-economics-7-1-q020: {hash: '383271f2d980aefceb413813ff41d350ab71af19ed11ef9d357df57fea5499d0', answer: D}
+  g12-economics-7-1-q021: {hash: 'ef9139ad913d7a3c84304f2f9e99265b39e57c7930787f6d965120c085602332', answer: 17}
+  g12-economics-7-1-q022: {hash: 'e598a632bc5fd0abc3b99129b817624e0b1965710396d447be069c495c13762f', answer: 60000}
+  g12-economics-7-1-q023: {hash: '544f0fa957a306a217198f44e540eb1513b9abe228c568f0a65ee3ece4ff2d18', answer: false}
+  g12-economics-7-1-q024: {hash: '7cbacf0380422079e123b625a354af4725c39756bc6953b13d4e5e5788f6e2ec', answer: true}
+  g12-economics-7-1-q025: {hash: 'e4086d22595d46a3e40253898426499e175ed6020dd4d08a5c782ec0e26f6830', answer: false}
+  g12-economics-7-1-q026: {hash: '14093286a8e862385698eab929345eeb03579bae4dbf8d0720e155746ec5a2a4', answer: 'privatisation', note: 'Accept the US spelling "privatization" as well.'}
+  g12-economics-7-1-q027: {hash: '6e8439d1911cf4103756db1bb1b8836a7200b70e130ad61aea962413709a8daf', answer: 'devaluation'}
+  g12-economics-7-1-q028: {hash: '99c36787c7828f85a010597ef6ebc543ac442b24bee4c68fbc8bbbf847208638', answer: [A, B, C]}
+  g12-economics-7-1-q029: {hash: 'ba360551abc432dacc98e49fdddbd209fd5aecfd4b18ab357ed62cbe7065d819', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-economics-7-1-q030: {hash: 'b2a7160027515b52fceec1442d24ebfd8146b2c13622cc2420b6b3e15011565b', answer: [B, C, A]}

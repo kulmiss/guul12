@@ -423,6 +423,7 @@ subjects:
     chapters:
     - number: 1
       title: Macroeconomic Reforms in Ethiopia
+      file: economics/u7-c1.yaml
   - number: 8
     title: Economy, Environment and Climate Change
     chapters:

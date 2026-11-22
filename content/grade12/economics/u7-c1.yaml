@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'Macroeconomic reform means major changes to how an economy is organised, such as the role of the state and markets, prices, the exchange rate, trade and the financial sector.'
+    - 'Under the Derg (1974–1991) Ethiopia had a command (centrally planned) economy: rural and urban land and many large firms were nationalised, and the state set many prices and controlled trade.'
+    - 'From 1991–1992 the transitional government began moving towards a market-oriented economy. With support from the IMF and World Bank, a structural adjustment programme devalued the birr (1992), freed many prices, reduced subsidies and began privatising some state enterprises. Under the 1995 Constitution, land remains the property of the state and the peoples.'
+    - 'Agricultural Development Led Industrialization (ADLI), adopted in the early 1990s, aimed to raise farm productivity first, so that agriculture would supply food, raw materials, exports and markets for industry.'
+    - 'Development plans followed: SDPRP (2002/03–2004/05), PASDEP (2005/06–2009/10), the Growth and Transformation Plans GTP I (2010/11–2014/15) and GTP II (2015/16–2019/20), and the Ten-Year Development Plan (2020/21–2029/30). GTP II stressed manufacturing and industrial parks.'
+    - 'The Homegrown Economic Reform agenda (launched 2019) targeted foreign-exchange shortages, high debt and inflation, and opened sectors to private investment: for example, a second private telecom operator was licensed in 2021.'
+    - 'In July 2024 the National Bank of Ethiopia moved the birr to a market-based exchange rate, supported by a four-year IMF Extended Credit Facility of about US\$3.4 billion. The Ethiopian Securities Exchange was launched on 10 January 2025.'
+    - 'Reforms bring benefits (more investment, exports and efficiency) but also costs, such as higher import prices and pressure on poor households, so social safety nets are used alongside them.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-economics-7-1-se01
+    problem: 'What is the main idea of ADLI?'
+    steps:
+      - 'Most Ethiopians work in agriculture, so raising farm productivity raises many incomes.'
+      - 'A stronger agriculture then supplies food, raw materials, exports and buyers for industrial goods, helping industry grow.'
+    answer: 'Use agricultural growth to lead industrialisation'
+  - uid: g12-economics-7-1-se02
+    problem: 'Explain one benefit and one cost of moving to a market-based exchange rate.'
+    steps:
+      - 'Benefit: the official and parallel rates move closer, foreign currency becomes easier to get, and exports become more competitive.'
+      - 'Cost: the birr buys less foreign currency, so imported goods such as fuel and medicine can become more expensive.'
+    answer: 'More foreign-exchange supply and exports; higher import prices'
+  - uid: g12-economics-7-1-se03
+    problem: 'How did the economy after 1991 differ from the Derg economy?'
+    steps:
+      - 'Under the Derg the state planned production, set prices and owned most large firms.'
+      - 'After 1991 markets set more prices, private business was allowed to grow and some state firms were privatised, although land stayed public.'
+    answer: 'From command economy to a market-oriented mixed economy'
+
+flashcards:
+  - {uid: g12-economics-7-1-fc01, term: Command economy, definition: 'The state plans production and sets prices.'}
+  - {uid: g12-economics-7-1-fc02, term: Structural adjustment, definition: 'Market reforms such as devaluation, freeing prices and privatisation.'}
+  - {uid: g12-economics-7-1-fc03, term: ADLI, definition: 'Agricultural Development Led Industrialization.'}
+  - {uid: g12-economics-7-1-fc04, term: GTP, definition: 'Growth and Transformation Plan (GTP I 2010/11–2014/15, GTP II 2015/16–2019/20).'}
+  - {uid: g12-economics-7-1-fc05, term: Privatisation, definition: 'Selling state-owned enterprises to private owners.'}
+  - {uid: g12-economics-7-1-fc06, term: Devaluation, definition: 'Lowering the value of the currency against others.'}
+  - {uid: g12-economics-7-1-fc07, term: Homegrown Economic Reform, definition: 'Reform agenda launched in 2019 to fix FX shortages, debt and inflation.'}
+  - {uid: g12-economics-7-1-fc08, term: Market-based exchange rate, definition: 'Rate set by supply and demand; adopted for the birr in July 2024.'}
+  - {uid: g12-economics-7-1-fc09, term: ESX, definition: 'Ethiopian Securities Exchange, launched 10 January 2025.'}
+
+questions:
+  - uid: g12-economics-7-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What type of economic system did Ethiopia have under the Derg (1974–1991)?'
+    options:
+      A: 'A free-market economy'
+      B: 'A command (centrally planned) economy'
+      C: 'A barter-only economy'
+      D: 'A traditional hunting economy'
+    answer: B
+    explanation: 'The state nationalised land and large firms and planned production.'
+
+  - uid: g12-economics-7-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'What does ADLI stand for?'
+    options:
+      A: 'Agricultural Development Led Industrialization'
+      B: 'African Development Loan Initiative'
+      C: 'Addis Development and Land Investment'
+      D: 'Agricultural Debt and Loan Insurance'
+    answer: A
+    explanation: 'It was Ethiopia''s main development strategy from the early 1990s.'
+
+  - uid: g12-economics-7-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Why did ADLI put agriculture first?'
+    options:
+      A: 'Agriculture had no workers.'
+      B: 'Industry was already fully developed.'
+      C: 'Most people worked in agriculture, so farm growth could raise incomes and supply industry.'
+      D: 'Agriculture was banned before 1991.'
+    answer: C
+    explanation: 'Farms provide food, raw materials, exports and buyers for industrial goods.'
+
+  - uid: g12-economics-7-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Which was part of the structural adjustment programme of the early 1990s?'
+    options:
+      A: 'Nationalising all shops'
+      B: 'Fixing all prices by the state'
+      C: 'Closing the country to foreign trade'
+      D: 'Devaluing the birr and freeing many prices'
+    answer: D
+    explanation: 'The programme moved the economy towards market prices.'
+
+  - uid: g12-economics-7-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Under the 1995 Constitution, who owns rural and urban land in Ethiopia?'
+    options:
+      A: 'The state and the peoples of Ethiopia'
+      B: 'Private individuals who can sell it freely'
+      C: 'Foreign companies'
+      D: 'Banks'
+    answer: A
+    explanation: 'Land is public property; people hold use rights but cannot sell land.'
+
+  - uid: g12-economics-7-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What does privatisation mean?'
+    options:
+      A: 'The state buying private firms'
+      B: 'Selling state-owned enterprises to private owners'
+      C: 'Raising taxes on private firms'
+      D: 'Closing all private businesses'
+    answer: B
+    explanation: 'It was one way of reducing the role of the state in production.'
+
+  - uid: g12-economics-7-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which plan covered 2010/11–2014/15?'
+    options:
+      A: 'PASDEP'
+      B: 'The Ten-Year Development Plan'
+      C: 'GTP I (Growth and Transformation Plan I)'
+      D: 'SDPRP'
+    answer: C
+    explanation: 'GTP II followed for 2015/16–2019/20.'
+
+  - uid: g12-economics-7-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which plan is meant to run from 2020/21 to 2029/30?'
+    options:
+      A: 'GTP I'
+      B: 'GTP II'
+      C: 'PASDEP'
+      D: 'The Ten-Year Development Plan'
+    answer: D
+    explanation: 'It replaced the five-year GTP cycle with a ten-year horizon.'
+
+  - uid: g12-economics-7-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which problems did the Homegrown Economic Reform agenda (2019) mainly target?'
+    options:
+      A: 'Foreign-exchange shortages, high debt and inflation'
+      B: 'Too much foreign currency'
+      C: 'Falling population'
+      D: 'Too many exports'
+    answer: A
+    explanation: 'It also aimed to open more sectors to private investment.'
+
+  - uid: g12-economics-7-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'In July 2024, what change did the National Bank of Ethiopia make to the birr?'
+    options:
+      A: 'It replaced the birr with the dollar.'
+      B: 'It moved to a market-based exchange rate.'
+      C: 'It fixed the birr permanently to gold.'
+      D: 'It stopped all foreign trade.'
+    answer: B
+    explanation: 'Banks could buy and sell foreign currency at negotiated rates.'
+
+  - uid: g12-economics-7-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which institution supported the July 2024 reforms with a four-year Extended Credit Facility of about US\$3.4 billion?'
+    options:
+      A: 'The African Union'
+      B: 'The United Nations Security Council'
+      C: 'The International Monetary Fund (IMF)'
+      D: 'The World Trade Organization'
+    answer: C
+    explanation: 'The IMF Executive Board approved it on 29 July 2024.'
+
+  - uid: g12-economics-7-1-q012
+    type: single_choice
+    difficulty: 3
+    stem: 'When a currency loses value against the dollar, what usually happens to imported goods?'
+    options:
+      A: 'They become cheaper in local currency.'
+      B: 'Their prices do not change.'
+      C: 'They disappear from the market.'
+      D: 'They become more expensive in local currency.'
+    answer: D
+    explanation: 'More birr are needed to buy the same dollar amount of imports.'
+
+  - uid: g12-economics-7-1-q013
+    type: single_choice
+    difficulty: 3
+    stem: 'When the birr loses value, why can Ethiopian exports such as coffee become more competitive?'
+    options:
+      A: 'Foreign buyers need less of their own currency to pay the same birr price.'
+      B: 'Coffee production stops.'
+      C: 'Export taxes always fall.'
+      D: 'Foreign buyers must pay more.'
+    answer: A
+    explanation: 'A cheaper birr makes Ethiopian goods cheaper for foreigners.'
+
+  - uid: g12-economics-7-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'In 2021 Ethiopia licensed a new private operator to compete with a state-owned firm that had long been the only provider. Which sector was this?'
+    options:
+      A: 'Air transport'
+      B: 'Telecommunications'
+      C: 'Railways'
+      D: 'Electricity transmission'
+    answer: B
+    explanation: 'A private operator began competing with the state-owned Ethio Telecom.'
+
+  - uid: g12-economics-7-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'What was launched in Addis Ababa on 10 January 2025?'
+    options:
+      A: 'A new national currency'
+      B: 'A central bank'
+      C: 'The Ethiopian Securities Exchange'
+      D: 'The first Ethiopian airline'
+    answer: C
+    explanation: 'It lets companies raise capital by selling shares and bonds.'
+
+  - uid: g12-economics-7-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which area did GTP II especially promote?'
+    options:
+      A: 'Closing factories'
+      B: 'Ending all exports'
+      C: 'Reducing schools'
+      D: 'Manufacturing and industrial parks'
+    answer: D
+    explanation: 'Industrial parks such as Hawassa were built to attract investment and create jobs.'
+
+  - uid: g12-economics-7-1-q017
+    type: single_choice
+    difficulty: 3
+    stem: 'Why are safety net programmes often used alongside big economic reforms?'
+    options:
+      A: 'To protect poor households from short-term costs such as higher prices'
+      B: 'To stop the reforms'
+      C: 'To raise taxes on the poor'
+      D: 'To close banks'
+    answer: A
+    explanation: 'Reforms can raise prices before their benefits arrive.'
+
+  - uid: g12-economics-7-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'What does a "parallel" (black) market for foreign exchange show?'
+    options:
+      A: 'That foreign currency is easy to buy at the official rate'
+      B: 'That demand for foreign currency is greater than the supply at the official rate'
+      C: 'That nobody wants dollars'
+      D: 'That the birr is too strong to trade'
+    answer: B
+    explanation: 'When the official rate is held too high, people pay more on the side market.'
+
+  - uid: g12-economics-7-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement best describes the direction of Ethiopia''s economic reforms after 1991?'
+    options:
+      A: 'From a market economy to a command economy'
+      B: 'From trade to self-sufficiency only'
+      C: 'From a command economy towards a market-oriented mixed economy'
+      D: 'No change at all'
+    answer: C
+    explanation: 'Markets gained a bigger role while the state kept key sectors and land.'
+
+  - uid: g12-economics-7-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which plan came directly before GTP I?'
+    options:
+      A: 'GTP II'
+      B: 'The Ten-Year Development Plan'
+      C: 'The Homegrown Economic Reform'
+      D: 'PASDEP'
+    answer: D
+    explanation: 'PASDEP covered 2005/06–2009/10.'
+
+  - uid: g12-economics-7-1-q021
+    type: numeric
+    difficulty: 2
+    stem: 'The Derg period of the command economy began in 1974 and ended in 1991. How many years did it last?'
+    answer: {value: 17, tolerance: 0}
+    explanation: '1991 − 1974 = 17 years.'
+
+  - uid: g12-economics-7-1-q022
+    type: numeric
+    difficulty: 2
+    stem: 'An imported machine costs US\$1,000. The exchange rate changes from 60 birr per dollar to 120 birr per dollar. By how many birr does the machine''s price rise?'
+    answer: {value: 60000, tolerance: 0}
+    explanation: 'Old price 60,000 birr; new price 120,000 birr; the rise is 60,000 birr.'
+
+  - uid: g12-economics-7-1-q023
+    type: true_false
+    difficulty: 2
+    stem: 'After 1991, land in Ethiopia became private property that could be freely bought and sold.'
+    answer: false
+    explanation: 'Land remains the property of the state and the peoples under the 1995 Constitution.'
+
+  - uid: g12-economics-7-1-q024
+    type: true_false
+    difficulty: 1
+    stem: 'Under a command economy, the state makes most decisions about what to produce and at what price.'
+    answer: true
+    explanation: 'That is the main feature of central planning.'
+
+  - uid: g12-economics-7-1-q025
+    type: true_false
+    difficulty: 2
+    stem: 'Devaluing the birr makes imported goods cheaper for Ethiopian buyers.'
+    answer: false
+    explanation: 'Devaluation makes imports more expensive in birr.'
+
+  - uid: g12-economics-7-1-q026
+    type: fill_in
+    difficulty: 2
+    stem: 'Selling state-owned enterprises to private owners is called ________.'
+    answer: [privatisation, privatization]
+    explanation: 'It reduces the state''s direct role in production.'
+
+  - uid: g12-economics-7-1-q027
+    type: fill_in
+    difficulty: 2
+    stem: 'Lowering the official value of a currency against other currencies is called ________.'
+    answer: [devaluation]
+    explanation: 'The birr was devalued in 1992 as part of structural adjustment.'
+
+  - uid: g12-economics-7-1-q028
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which were features of the Derg''s command economy? Choose all that apply.'
+    options:
+      A: 'Nationalisation of land'
+      B: 'State ownership of many large firms'
+      C: 'State control of many prices'
+      D: 'A market-based exchange rate'
+    answer: [A, B, C]
+    explanation: 'The market-based exchange rate came in July 2024.'
+
+  - uid: g12-economics-7-1-q029
+    type: matching
+    difficulty: 2
+    stem: 'Match each plan with its period.'
+    left:
+      L1: 'PASDEP'
+      L2: 'GTP I'
+      L3: 'GTP II'
+    right:
+      R1: '2010/11–2014/15'
+      R2: '2015/16–2019/20'
+      R3: '2005/06–2009/10'
+      R4: '1974–1991'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '1974–1991 was the Derg period, not a plan in this list.'
+
+  - uid: g12-economics-7-1-q030
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in time order, earliest first.'
+    items:
+      A: 'The birr moves to a market-based exchange rate.'
+      B: 'The Derg nationalises land.'
+      C: 'The structural adjustment programme devalues the birr.'
+    answer: [B, C, A]
+    explanation: 'Land nationalisation 1975; devaluation 1992; market-based rate July 2024.'
