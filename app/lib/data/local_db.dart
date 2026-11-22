@@ -182,6 +182,20 @@ class LocalDb {
   }
 
   /// Per chapter: different questions answered, and how many were right the last time.
+  /// Every saved answer's time and result (for streak and XP), oldest first.
+  Future<List<({DateTime at, bool correct})>> answerEvents() async {
+    final rows = await _db.rawQuery(
+      'SELECT answered_at, correct FROM answers ORDER BY answered_at, id',
+    );
+    return [
+      for (final r in rows)
+        (
+          at: DateTime.fromMillisecondsSinceEpoch(r['answered_at']! as int),
+          correct: r['correct'] == 1,
+        ),
+    ];
+  }
+
   Future<List<ChapterStat>> chapterStats() async {
     final rows = await _db.rawQuery(
       'SELECT a.chapter_id AS chapter_id, COUNT(*) AS answered, SUM(a.correct) AS correct FROM answers a '

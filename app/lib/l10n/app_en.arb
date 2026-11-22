@@ -1460,5 +1460,169 @@
   "planEmpty": "Nothing to plan yet. Open a subject in Study to begin.",
   "@planEmpty": {
     "description": "No chapters available"
+  },
+  "streakDays": "{days, plural, =0{No streak yet} =1{1-day streak} other{{days}-day streak}}",
+  "@streakDays": {
+    "description": "Streak",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "streakToday": "{count} / {goal} questions today",
+  "@streakToday": {
+    "description": "Daily goal progress",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "streakGoalDone": "Daily goal reached",
+  "@streakGoalDone": {
+    "description": "Daily goal reached"
+  },
+  "engagementBest": "{days, plural, =1{Best: 1 day} other{Best: {days} days}}",
+  "@engagementBest": {
+    "description": "Best streak",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "engagementXp": "{xp} XP",
+  "@engagementXp": {
+    "description": "Total points",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "engagementWeekXp": "{xp} XP this week",
+  "@engagementWeekXp": {
+    "description": "Points since Monday",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "badgesTitle": "Badges",
+  "@badgesTitle": {
+    "description": "Badges section"
+  },
+  "badgesEarned": "{count} of {total} earned",
+  "@badgesEarned": {
+    "description": "Badges earned",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "badgeProgress": "{value} / {goal}",
+  "@badgeProgress": {
+    "description": "Badge progress",
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "badgeEarned": "Earned",
+  "@badgeEarned": {
+    "description": "Badge earned label"
+  },
+  "badgeFirstSteps": "First steps",
+  "@badgeFirstSteps": {
+    "description": "Badge"
+  },
+  "badgeFirstStepsBody": "Answer 10 questions",
+  "@badgeFirstStepsBody": {
+    "description": "Badge goal"
+  },
+  "badgeHundred": "Hundred",
+  "@badgeHundred": {
+    "description": "Badge"
+  },
+  "badgeHundredBody": "Answer 100 questions",
+  "@badgeHundredBody": {
+    "description": "Badge goal"
+  },
+  "badgeThousand": "Thousand",
+  "@badgeThousand": {
+    "description": "Badge"
+  },
+  "badgeThousandBody": "Answer 1,000 questions",
+  "@badgeThousandBody": {
+    "description": "Badge goal"
+  },
+  "badgeStreak3": "3 days in a row",
+  "@badgeStreak3": {
+    "description": "Badge"
+  },
+  "badgeStreak3Body": "Reach the daily goal 3 days in a row",
+  "@badgeStreak3Body": {
+    "description": "Badge goal"
+  },
+  "badgeStreak7": "One week",
+  "@badgeStreak7": {
+    "description": "Badge"
+  },
+  "badgeStreak7Body": "Reach the daily goal 7 days in a row",
+  "@badgeStreak7Body": {
+    "description": "Badge goal"
+  },
+  "badgeStreak30": "One month",
+  "@badgeStreak30": {
+    "description": "Badge"
+  },
+  "badgeStreak30Body": "Reach the daily goal 30 days in a row",
+  "@badgeStreak30Body": {
+    "description": "Badge goal"
+  },
+  "badgeFirstExam": "First exam",
+  "@badgeFirstExam": {
+    "description": "Badge"
+  },
+  "badgeFirstExamBody": "Finish a mock exam",
+  "@badgeFirstExamBody": {
+    "description": "Badge goal"
+  },
+  "badgeExamStar": "Exam star",
+  "@badgeExamStar": {
+    "description": "Badge"
+  },
+  "badgeExamStarBody": "Score 80% or more in an exam",
+  "@badgeExamStarBody": {
+    "description": "Badge goal"
+  },
+  "badgeStrongChapter": "Strong chapter",
+  "@badgeStrongChapter": {
+    "description": "Badge"
+  },
+  "badgeStrongChapterBody": "Make a chapter Strong",
+  "@badgeStrongChapterBody": {
+    "description": "Badge goal"
+  },
+  "badgeStrongTen": "Ten strong",
+  "@badgeStrongTen": {
+    "description": "Badge"
+  },
+  "badgeStrongTenBody": "Make 10 chapters Strong",
+  "@badgeStrongTenBody": {
+    "description": "Badge goal"
   }
 }

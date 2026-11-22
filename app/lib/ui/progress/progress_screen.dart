@@ -2,15 +2,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../../app/engagement_providers.dart';
 import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
 import '../../data/models.dart';
+import '../../domain/engagement.dart';
 import '../../domain/mastery.dart';
 import '../../domain/practice.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../practice/practice_screen.dart';
 import '../screens/study_screens.dart';
 import '../widgets/common.dart';
+import 'badges.dart';
 
 String masteryLabel(AppLocalizations l, MasteryLevel level) => switch (level) {
   MasteryLevel.notStarted => l.masteryNotStarted,
@@ -53,6 +56,7 @@ class ProgressScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l = context.l10n;
     final mastery = ref.watch(masteryProvider).value ?? const <int, ChapterMastery>{};
+    final engagement = ref.watch(engagementProvider).value;
     final catalog = ref.watch(catalogProvider).value ?? Catalog.empty;
     final stream = ref.watch(profileProvider).value?.effectiveStream;
 
@@ -71,68 +75,78 @@ class ProgressScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(l.progressTitle)),
-      body: answered == 0
-          ? MessageView(message: l.progressEmpty, icon: Icons.insights_outlined)
-          : ListView(
-              padding: const EdgeInsets.only(bottom: 24),
+      body: ListView(
+        padding: const EdgeInsets.only(bottom: 24),
+        children: [
+          ContentWidth(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                ContentWidth(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Card(
-                        margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                l.progressAnswered(answered),
-                                style: Theme.of(context).textTheme.titleMedium,
-                              ),
-                              const SizedBox(height: 4),
-                              Text(l.progressAccuracy((100 * correct / answered).round())),
-                            ],
+                if (engagement != null) StreakCard(view: engagement),
+                if (answered == 0)
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                    child: Text(l.progressEmpty),
+                  )
+                else ...[
+                  Card(
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            l.progressAnswered(answered),
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
+                          const SizedBox(height: 4),
+                          Text(l.progressAccuracy((100 * correct / answered).round())),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SectionTitle(l.progressWeak),
+                  if (weak.isEmpty)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(l.progressWeakNone),
+                    ),
+                  for (final m in weak)
+                    Card(
+                      margin: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                      child: ListTile(
+                        title: Text(chapterName(m.chapterId)),
+                        subtitle: Text(l.progressChapterInfo(m.score, m.answered)),
+                        trailing: TextButton(
+                          onPressed: () => context.push(
+                            PracticeScreen.playPath(PracticeMode.chapter, chapterId: m.chapterId),
+                          ),
+                          child: Text(l.progressPractise),
                         ),
                       ),
-                      SectionTitle(l.progressWeak),
-                      if (weak.isEmpty)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: Text(l.progressWeakNone),
-                        ),
-                      for (final m in weak)
-                        Card(
-                          margin: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-                          child: ListTile(
-                            title: Text(chapterName(m.chapterId)),
-                            subtitle: Text(l.progressChapterInfo(m.score, m.answered)),
-                            trailing: TextButton(
-                              onPressed: () => context.push(
-                                PracticeScreen.playPath(
-                                  PracticeMode.chapter,
-                                  chapterId: m.chapterId,
-                                ),
-                              ),
-                              child: Text(l.progressPractise),
-                            ),
-                          ),
-                        ),
-                      SectionTitle(l.progressStrength),
-                      for (final subject in catalog.subjectsFor(stream))
-                        _SubjectStrength(
-                          subject: subject,
-                          catalog: catalog,
-                          stream: stream,
-                          mastery: mastery,
-                        ),
-                    ],
+                    ),
+                  SectionTitle(l.progressStrength),
+                  for (final subject in catalog.subjectsFor(stream))
+                    _SubjectStrength(
+                      subject: subject,
+                      catalog: catalog,
+                      stream: stream,
+                      mastery: mastery,
+                    ),
+                ],
+                if (engagement != null) ...[
+                  SectionTitle(
+                    '${l.badgesTitle} · ${l.badgesEarned(engagement.earnedCount, Achievement.values.length)}',
                   ),
-                ),
+                  for (final a in Achievement.values)
+                    AchievementTile(achievement: a, view: engagement),
+                ],
               ],
             ),
+          ),
+        ],
+      ),
     );
   }
 }

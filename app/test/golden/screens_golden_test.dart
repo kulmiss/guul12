@@ -153,10 +153,7 @@ void main() {
       await tapOn(tester, find.text('My mistakes'));
       await tapOn(tester, find.text('What is 2 + 2?'));
     },
-    'progress': (tester) async {
-      await tapOn(tester, find.text('Progress').last);
-      await tapOn(tester, find.text('Physics').last);
-    },
+    'progress': (tester) async => tapOn(tester, find.text('Progress').last),
   };
 
   for (final MapEntry(key: name, value: scene) in afterMistake.entries) {

@@ -1074,4 +1074,121 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get planEmpty => 'Nothing to plan yet. Open a subject in Study to begin.';
+
+  @override
+  String streakDays(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: '$days-day streak',
+      one: '1-day streak',
+      zero: 'No streak yet',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String streakToday(int count, int goal) {
+    return '$count / $goal questions today';
+  }
+
+  @override
+  String get streakGoalDone => 'Daily goal reached';
+
+  @override
+  String engagementBest(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'Best: $days days',
+      one: 'Best: 1 day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String engagementXp(int xp) {
+    return '$xp XP';
+  }
+
+  @override
+  String engagementWeekXp(int xp) {
+    return '$xp XP this week';
+  }
+
+  @override
+  String get badgesTitle => 'Badges';
+
+  @override
+  String badgesEarned(int count, int total) {
+    return '$count of $total earned';
+  }
+
+  @override
+  String badgeProgress(int value, int goal) {
+    return '$value / $goal';
+  }
+
+  @override
+  String get badgeEarned => 'Earned';
+
+  @override
+  String get badgeFirstSteps => 'First steps';
+
+  @override
+  String get badgeFirstStepsBody => 'Answer 10 questions';
+
+  @override
+  String get badgeHundred => 'Hundred';
+
+  @override
+  String get badgeHundredBody => 'Answer 100 questions';
+
+  @override
+  String get badgeThousand => 'Thousand';
+
+  @override
+  String get badgeThousandBody => 'Answer 1,000 questions';
+
+  @override
+  String get badgeStreak3 => '3 days in a row';
+
+  @override
+  String get badgeStreak3Body => 'Reach the daily goal 3 days in a row';
+
+  @override
+  String get badgeStreak7 => 'One week';
+
+  @override
+  String get badgeStreak7Body => 'Reach the daily goal 7 days in a row';
+
+  @override
+  String get badgeStreak30 => 'One month';
+
+  @override
+  String get badgeStreak30Body => 'Reach the daily goal 30 days in a row';
+
+  @override
+  String get badgeFirstExam => 'First exam';
+
+  @override
+  String get badgeFirstExamBody => 'Finish a mock exam';
+
+  @override
+  String get badgeExamStar => 'Exam star';
+
+  @override
+  String get badgeExamStarBody => 'Score 80% or more in an exam';
+
+  @override
+  String get badgeStrongChapter => 'Strong chapter';
+
+  @override
+  String get badgeStrongChapterBody => 'Make a chapter Strong';
+
+  @override
+  String get badgeStrongTen => 'Ten strong';
+
+  @override
+  String get badgeStrongTenBody => 'Make 10 chapters Strong';
 }

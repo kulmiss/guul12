@@ -1789,6 +1789,186 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Nothing to plan yet. Open a subject in Study to begin.'**
   String get planEmpty;
+
+  /// Streak
+  ///
+  /// In en, this message translates to:
+  /// **'{days, plural, =0{No streak yet} =1{1-day streak} other{{days}-day streak}}'**
+  String streakDays(int days);
+
+  /// Daily goal progress
+  ///
+  /// In en, this message translates to:
+  /// **'{count} / {goal} questions today'**
+  String streakToday(int count, int goal);
+
+  /// Daily goal reached
+  ///
+  /// In en, this message translates to:
+  /// **'Daily goal reached'**
+  String get streakGoalDone;
+
+  /// Best streak
+  ///
+  /// In en, this message translates to:
+  /// **'{days, plural, =1{Best: 1 day} other{Best: {days} days}}'**
+  String engagementBest(int days);
+
+  /// Total points
+  ///
+  /// In en, this message translates to:
+  /// **'{xp} XP'**
+  String engagementXp(int xp);
+
+  /// Points since Monday
+  ///
+  /// In en, this message translates to:
+  /// **'{xp} XP this week'**
+  String engagementWeekXp(int xp);
+
+  /// Badges section
+  ///
+  /// In en, this message translates to:
+  /// **'Badges'**
+  String get badgesTitle;
+
+  /// Badges earned
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} earned'**
+  String badgesEarned(int count, int total);
+
+  /// Badge progress
+  ///
+  /// In en, this message translates to:
+  /// **'{value} / {goal}'**
+  String badgeProgress(int value, int goal);
+
+  /// Badge earned label
+  ///
+  /// In en, this message translates to:
+  /// **'Earned'**
+  String get badgeEarned;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'First steps'**
+  String get badgeFirstSteps;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Answer 10 questions'**
+  String get badgeFirstStepsBody;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'Hundred'**
+  String get badgeHundred;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Answer 100 questions'**
+  String get badgeHundredBody;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'Thousand'**
+  String get badgeThousand;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Answer 1,000 questions'**
+  String get badgeThousandBody;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'3 days in a row'**
+  String get badgeStreak3;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Reach the daily goal 3 days in a row'**
+  String get badgeStreak3Body;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'One week'**
+  String get badgeStreak7;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Reach the daily goal 7 days in a row'**
+  String get badgeStreak7Body;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'One month'**
+  String get badgeStreak30;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Reach the daily goal 30 days in a row'**
+  String get badgeStreak30Body;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'First exam'**
+  String get badgeFirstExam;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Finish a mock exam'**
+  String get badgeFirstExamBody;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'Exam star'**
+  String get badgeExamStar;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Score 80% or more in an exam'**
+  String get badgeExamStarBody;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'Strong chapter'**
+  String get badgeStrongChapter;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Make a chapter Strong'**
+  String get badgeStrongChapterBody;
+
+  /// Badge
+  ///
+  /// In en, this message translates to:
+  /// **'Ten strong'**
+  String get badgeStrongTen;
+
+  /// Badge goal
+  ///
+  /// In en, this message translates to:
+  /// **'Make 10 chapters Strong'**
+  String get badgeStrongTenBody;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

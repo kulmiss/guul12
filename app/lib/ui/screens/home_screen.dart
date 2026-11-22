@@ -3,9 +3,11 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../../app/engagement_providers.dart';
 import '../../app/plan_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
+import '../../domain/engagement.dart';
 import '../../domain/ethiopian_calendar.dart';
 import '../../domain/practice.dart';
 import '../../l10n/generated/app_localizations.dart';
@@ -35,6 +37,7 @@ class HomeScreen extends ConsumerWidget {
     final maintenance = config?.maintenanceMessage;
     final due = ref.watch(reviewDueCountProvider).value ?? 0;
     final plan = ref.watch(todayPlanProvider).value;
+    final engagement = ref.watch(engagementProvider).value;
     final mistakes = ref.watch(mistakesProvider).value ?? const <int, List<Mistake>>{};
     final mistakeCount = mistakes.values.fold(0, (sum, list) => sum + list.length);
 
@@ -60,6 +63,26 @@ class HomeScreen extends ConsumerWidget {
                     padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                     child: Text(l.homeGreeting, style: Theme.of(context).textTheme.headlineSmall),
                   ),
+                  if (engagement != null && engagement.engagement.totalAnswered > 0)
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.local_fire_department,
+                            size: 20,
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
+                          const SizedBox(width: 6),
+                          Flexible(
+                            child: Text(
+                              '${l.streakDays(engagement.engagement.streak)} · '
+                              '${engagement.engagement.goalReachedToday ? l.streakGoalDone : l.streakToday(engagement.engagement.todayAnswered, EngagementRules.dailyGoal)}',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   _CountdownCard(examDate: config?.examDate, today: today),
                   if (plan != null)
                     Card(
