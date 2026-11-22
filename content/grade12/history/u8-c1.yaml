@@ -171,7 +171,7 @@ questions:
   - uid: g12-history-8-1-q012
     type: numeric
     difficulty: 2
-    stem: 'Into how many regional states is Ethiopia divided today (not counting the two city administrations)?'
+    stem: 'Since August 2023, into how many regional states has Ethiopia been divided (not counting the two city administrations)?'
     answer: {value: 12, tolerance: 0}
     explanation: 'The original nine grew to twelve with Sidama (2020), South West Ethiopia Peoples'' (2021), and South Ethiopia and Central Ethiopia (2023), which replaced the former SNNPR.'
 

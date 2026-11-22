@@ -379,6 +379,7 @@ subjects:
     chapters:
     - number: 1
       title: Indigenous Knowledge Systems and Heritages of Ethiopia
+      file: history/u9-c1.yaml
 - code: economics
   units:
   - number: 1
