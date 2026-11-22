@@ -33,7 +33,9 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
   mocktail: ^1.0.5
+  plugin_platform_interface: ^2.1.8
   sqflite_common_ffi: ^2.4.7
+  url_launcher_platform_interface: ^2.3.2
 
 flutter:
   uses-material-design: true

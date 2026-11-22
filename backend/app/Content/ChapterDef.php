@@ -20,6 +20,8 @@ final class ChapterDef
         public readonly array $flashcards,
         public readonly array $passages,
         public readonly array $questions,
+        /** Absolute path of the built summary PDF (content/pdf/…), or null when there is none. */
+        public readonly ?string $summaryPdf = null,
     ) {}
 
     public function passage(?string $uid): ?PassageDef

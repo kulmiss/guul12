@@ -35,6 +35,9 @@ class FakeServer {
   final Set<int> bookmarks = {};
   final Map<int, int> chapterDownloads = {};
   final List<String> calls = [];
+
+  /// Summary PDF URL per chapter id (none by default).
+  final Map<int, String> summaryPdfUrls = {};
   int Function(Map<String, Object?> body)? attemptStatus;
 
   /// Answer for POST auth/google: 200 signs in; 409 = account conflict.
@@ -91,7 +94,7 @@ class FakeServer {
     'chapters': [chapterHeader(21), chapterHeader(22)],
   };
 
-  static Map<String, Object?> chapterHeader(int id) => {
+  Map<String, Object?> chapterHeader(int id) => {
     'id': id,
     'unit_id': 11,
     'number': id - 20,
@@ -99,11 +102,12 @@ class FakeServer {
     'textbook_url': null,
     'video_youtube_id': null,
     'video_access': 'free',
-    'has_summary_pdf': false,
+    'has_summary_pdf': summaryPdfUrls.containsKey(id),
+    'summary_pdf_url': summaryPdfUrls[id],
     'sort': id,
   };
 
-  static Map<String, Object?> chapterJson(int id) => {
+  Map<String, Object?> chapterJson(int id) => {
     'cursor': 10,
     'chapter': chapterHeader(id),
     'summary': {

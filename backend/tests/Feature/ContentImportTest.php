@@ -18,6 +18,7 @@ use App\Models\Unit;
 use App\Models\User;
 use Database\Seeders\CurriculumSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Tests\Support\ContentFixture;
 use Tests\TestCase;
@@ -232,5 +233,81 @@ class ContentImportTest extends TestCase
         $this->assertTrue($json['questions'][0]['is_beta']);
         $this->assertSame('Launch day', $json['passages'][0]['title']);
         $this->assertSame(['A projectile has constant horizontal velocity.', 'Vertical motion has acceleration $g$.'], $json['summary']['key_points']);
+    }
+
+    public function test_summary_pdfs_are_published_under_a_hashed_name_and_kept_in_step(): void
+    {
+        Storage::fake('public');
+        $this->fx->writeReview(self::FILE);
+        $this->fx->writePdf(self::FILE, '%PDF-1.7 first');
+        $report = $this->import();
+
+        $first = 'summaries/g12-physics-2-1-'.substr(hash('sha256', '%PDF-1.7 first'), 0, 12).'.pdf';
+        $chapter = Chapter::query()->where('number', 1)->firstOrFail();
+        $this->assertSame($first, $chapter->summary_pdf_path);
+        $this->assertSame(1, $report->get('summary_pdfs_published'));
+        Storage::disk('public')->assertExists($first);
+        $this->assertSame('%PDF-1.7 first', Storage::disk('public')->get($first));
+        // The planned chapter (no file) has no PDF.
+        $this->assertNull(Chapter::query()->where('number', 2)->firstOrFail()->summary_pdf_path);
+
+        // Same PDF again: nothing happens, no sync noise.
+        $changes = ContentChange::query()->count();
+        $report = $this->import();
+        $this->assertSame(0, $report->get('summary_pdfs_published'));
+        $this->assertSame($changes, ContentChange::query()->count());
+
+        // A rebuilt PDF gets a new URL; the old file is removed and the app is told.
+        $chapterChanges = fn (): int => ContentChange::query()->where('entity', 'chapter')->where('entity_id', $chapter->id)->count();
+        $before = $chapterChanges();
+        $this->fx->writePdf(self::FILE, '%PDF-1.7 second');
+        $this->import();
+        $second = 'summaries/g12-physics-2-1-'.substr(hash('sha256', '%PDF-1.7 second'), 0, 12).'.pdf';
+        $this->assertSame($second, $chapter->refresh()->summary_pdf_path);
+        Storage::disk('public')->assertExists($second);
+        Storage::disk('public')->assertMissing($first);
+        $this->assertSame($before + 1, $chapterChanges());
+
+        // PDF deleted from the content folder: the chapter loses it too.
+        $this->fx->writePdf(self::FILE, null);
+        $report = $this->import();
+        $this->assertNull($chapter->refresh()->summary_pdf_path);
+        $this->assertSame(1, $report->get('summary_pdfs_removed'));
+        Storage::disk('public')->assertMissing($second);
+    }
+
+    public function test_a_lost_pdf_file_is_copied_again(): void
+    {
+        Storage::fake('public');
+        $this->fx->writePdf(self::FILE, '%PDF-1.7 x');
+        $this->import();
+        $path = Chapter::query()->where('number', 1)->firstOrFail()->summary_pdf_path;
+        $this->assertNotNull($path);
+        Storage::disk('public')->delete($path);
+
+        $this->import();
+
+        Storage::disk('public')->assertExists($path);
+    }
+
+    public function test_the_summary_pdf_url_reaches_the_app(): void
+    {
+        Storage::fake('public');
+        $this->fx->writeReview(self::FILE);
+        $this->fx->writePdf(self::FILE, '%PDF-1.7 app');
+        $this->import();
+        $user = User::factory()->create();
+        $chapter = Chapter::query()->where('number', 1)->firstOrFail();
+        $other = Chapter::query()->where('number', 2)->firstOrFail();
+
+        $json = $this->actingAs($user)->getJson("/api/v1/chapters/{$chapter->id}")->assertOk()->json();
+        $this->assertTrue($json['chapter']['has_summary_pdf']);
+        $this->assertSame(Storage::disk('public')->url((string) $chapter->summary_pdf_path), $json['chapter']['summary_pdf_url']);
+
+        $catalog = $this->actingAs($user)->getJson('/api/v1/catalog')->assertOk()->json();
+        $headers = array_column($catalog['chapters'], null, 'id');
+        $this->assertSame($json['chapter']['summary_pdf_url'], $headers[$chapter->id]['summary_pdf_url']);
+        $this->assertNull($headers[$other->id]['summary_pdf_url']);
+        $this->assertFalse($headers[$other->id]['has_summary_pdf']);
     }
 }

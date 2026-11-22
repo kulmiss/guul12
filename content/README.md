@@ -66,3 +66,22 @@ Maths uses `$…$` (inline) or `$$…$$` (block). Write `\$` for a real dollar s
 3. **Beta → Published** after enough students answer it with no open report (setting `beta_min_answers`).
    Questions almost nobody gets right are sent back to review.
 4. **Wrong key found later**: fix the file, re-solve, import. Old answers are re-scored quietly.
+
+## Summary PDFs
+
+Every written chapter has a printable summary PDF (key points, formulas, solved exercises, flashcards), built from
+the chapter file. The PDF links only to the **price-free** landing page `guul12.kulmiss.com/app` (DECISIONS #3).
+
+```bash
+cd content/tools/pdf
+npm ci
+npm run build     # builds missing or out-of-date PDFs into content/pdf/ (needs Google Chrome)
+npm run check     # CI: fails if a PDF is missing, out of date, edited by hand or left over
+npm test
+```
+
+`content/pdf/manifest.json` stores, for each PDF, the hash of what it was built from and the hash of the file.
+So **after changing a chapter's summary, exercises or flashcards, run `npm run build` and commit the PDFs.**
+`content:import` copies each PDF to the public disk under a name with its hash and sends the URL to the app
+(production needs `php artisan storage:link` and the right `APP_URL`).
+

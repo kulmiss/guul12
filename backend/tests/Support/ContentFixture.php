@@ -102,6 +102,23 @@ final class ContentFixture
     }
 
     /**
+     * Writes (or, with null, removes) the built summary PDF of a chapter file.
+     */
+    public function writePdf(string $file, ?string $bytes): void
+    {
+        $path = $this->root.'/pdf/grade12/'.substr($file, 0, -strlen('.yaml')).'.pdf';
+        if ($bytes === null) {
+            @unlink($path);
+
+            return;
+        }
+        if (! is_dir(dirname($path))) {
+            mkdir(dirname($path), 0777, true);
+        }
+        file_put_contents($path, $bytes);
+    }
+
+    /**
      * Writes an independent-solve file for a chapter. By default every answer equals the key;
      * pass overrides (uid suffix => answer) to disagree.
      *

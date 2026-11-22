@@ -247,6 +247,9 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get chapterSummaryPdf => 'Chapter summary (PDF)';
+
+  @override
   String get chapterTextbook => 'Official textbook (PDF)';
 
   @override

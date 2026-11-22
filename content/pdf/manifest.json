@@ -1,0 +1,332 @@
+{
+  "files": {
+    "grade12/aptitude/u1-c1.pdf": {
+      "source": "a04b1cb095e1636282e96abc87b973b61640a98f8503cc948dbf275126b3e80c",
+      "pdf": "feaa3a9b620804fd3fd0609de87211cd63ebc7fffb20a59dc320707829643d7b"
+    },
+    "grade12/aptitude/u1-c2.pdf": {
+      "source": "422b5c271a8b05c8e7035c26c6141c8bced1c0dbedc4ff2db3419d8ec981b0fc",
+      "pdf": "63fcf67f86c075bb64692040abe95a2f5e2161fdcfd7df122ebc062f1e125624"
+    },
+    "grade12/aptitude/u2-c1.pdf": {
+      "source": "44c01f207fa1b11ba20ac4ac47b94b18214adcaf3566347ff396fe771f25a59d",
+      "pdf": "5261f818dca5b2fb520d0b687884a62aabec8a34f0897d2b93cade2a9acf5bd8"
+    },
+    "grade12/aptitude/u2-c2.pdf": {
+      "source": "fc9e417634826598dd9450ef275db8751d83a7c2dd78b12ad660f1bdcf106a20",
+      "pdf": "41676529cb5e9fea8346e68e368c1072379d85700759029c7ea0885afeaad01a"
+    },
+    "grade12/aptitude/u3-c1.pdf": {
+      "source": "76a97425b357caf7e9f07536ed73a2d6799270e6bd10fdc748ad89af030c895d",
+      "pdf": "b5feb7fef14384361e4dd8df3bf5cda6a9486ffc83dee752edab13ab24836c72"
+    },
+    "grade12/biology/u1-c1.pdf": {
+      "source": "00f2e76626276a5581d5a26eb69d37d0c49e2dbb97d09433ada3f5a07e550fcd",
+      "pdf": "d4d4cfd7b6a14da23354084958ae3a509d79ea0fe3eef73785fdf81415711a28"
+    },
+    "grade12/biology/u2-c1.pdf": {
+      "source": "643ffc47ff6ee62f6c258f0d031406896d23ed19ddb5ce24a4da03f9abb9928a",
+      "pdf": "2d04f96f50cc63a6447f5857687735f67a86b68618101f70e64392904cd81d63"
+    },
+    "grade12/biology/u2-c2.pdf": {
+      "source": "711b24556eb9aab45fc8c3aa72248cc91ee61ccbf77195f5ef85539108b32fb4",
+      "pdf": "6e60f4a927d9c9a2a682567083c3c682ad6a8bc592ebfbc7d3f8284ff8ba6998"
+    },
+    "grade12/biology/u3-c1.pdf": {
+      "source": "a5d92623c03af6aeb34fba11c84846535cd0430f98bf9ba70d1a02f4246f2ae7",
+      "pdf": "63baa90f90c61fcd0ebb1a169fe4439a6fd20c629a91371ab2ec54caa72036d2"
+    },
+    "grade12/biology/u3-c2.pdf": {
+      "source": "217460b2d2d781b0586cb014bf17118626817d8ba901491f353f47a3a594afa2",
+      "pdf": "8d21036054287e0952441c4bb1150659866cb6a0debbe8e373fab5e2bd37968f"
+    },
+    "grade12/biology/u4-c1.pdf": {
+      "source": "a98f5bb663d31ac94f6d93694974840bf59d9bea62781a70ea598811d281525b",
+      "pdf": "9fb52c5d1a2f908004f25cf14b395fc8f7526d6574420d6e3e2bf77cb5524e5e"
+    },
+    "grade12/biology/u4-c2.pdf": {
+      "source": "f7184f35eac1352ad89b51e42b1865bc279403baf2116a07387dd70a59c3fea1",
+      "pdf": "657ba6725b8772efa59db5cb935d7acdb7debe7267311f3e4fedee34454811b3"
+    },
+    "grade12/biology/u5-c1.pdf": {
+      "source": "3aff45c841903165255ce640593fad0c4e743bfcb864a5bef89d61ce52e1af9f",
+      "pdf": "8c4e25185d590e328178c7d39f9bd115182f06937ead9602e8d5117919db0cff"
+    },
+    "grade12/biology/u5-c2.pdf": {
+      "source": "323da7a5ff7b0bdabe090636d583ec54eef48c3125b63bccda1e0c4eb222683e",
+      "pdf": "3e751bb4fb4c13fbce701bf401125e46948bdb2faa2f06a8e8961f11b2aca76c"
+    },
+    "grade12/biology/u5-c3.pdf": {
+      "source": "6926ee25f5ffc7635b5c8ef0081b84719d0ca965a788032624e23c717a3a9dcf",
+      "pdf": "906785f28b40e2cf92797673bc6f2f3c36965a4d84b144bdcb3f639e03d93e59"
+    },
+    "grade12/biology/u6-c1.pdf": {
+      "source": "0e205018e38d7966acbae4c2e72f91ea3580e629d5bfbca6378a776310d3eb72",
+      "pdf": "61a5bddfd72d737df94d98f63083b42525587810037222de2ce20cc583392002"
+    },
+    "grade12/chemistry/u1-c1.pdf": {
+      "source": "ab847e52be55aee93209dd8401eef88737fd38f460b2b2de7903a671d3b36ea0",
+      "pdf": "059a964eaa890168c67825e190f3f9325fe8f126dea0820bb06c811861c7f114"
+    },
+    "grade12/chemistry/u1-c2.pdf": {
+      "source": "a5e6a456faa7960a2899c04355759761b70db0835831eabd8ed5f0d367460c61",
+      "pdf": "ada8bd076a5b806463cd167fda058fe72be1b178ec974e3c5c272cc15137429c"
+    },
+    "grade12/chemistry/u1-c3.pdf": {
+      "source": "8e13192fabb2d2fb25c34698c16b68c52ce7f1b7015a441ab0f39379c6949319",
+      "pdf": "e905299f5ab6e69a05a5063f64fa1ece9343c6568459db909aa770e9e5678a4f"
+    },
+    "grade12/chemistry/u2-c1.pdf": {
+      "source": "a8c42a96c860b343da12ac04796c28f504860ce9097ba2ad16dee59bef881f95",
+      "pdf": "bb7561bf4b22f36b3b44f2dd4ae76952244b2bf8be49be1e8b2e5433e36c33d2"
+    },
+    "grade12/chemistry/u2-c2.pdf": {
+      "source": "7d09085245970c73031968b4dc1f2567db980d64ed6f9300a70f4f5c1c7107be",
+      "pdf": "d6545c733ab4bf9f85d3b1e9c05c0cebe26c5d44185d274e0d3df6cc13924a16"
+    },
+    "grade12/chemistry/u3-c1.pdf": {
+      "source": "9726978cc9fc79c65569de463ff7494f69e43d02f2d804826488732d05e1fe74",
+      "pdf": "3109286343bc07e6d844fb1bec8a9c06447ad37222470f3c4f8d911c55d59fb6"
+    },
+    "grade12/chemistry/u3-c2.pdf": {
+      "source": "e576765e109460c04cfe0e497c9e175ac96df3afa36cd0b16bc9891dad1bc474",
+      "pdf": "f45f5db35831ed4bd9971713d465641c2f4ac9571f55d21db4c94c4726adee19"
+    },
+    "grade12/chemistry/u4-c1.pdf": {
+      "source": "32db0aa3ed7f4145a0e4b7ac4cc963183d796c2174738613678afd3d25528ac9",
+      "pdf": "8aed56de321af95e68bf7eb49e555554fed4c8aca4c7a8fa0b33e33e62247999"
+    },
+    "grade12/chemistry/u5-c1.pdf": {
+      "source": "6e668ddb0303e5336c8c76a31c539b861a8e2aa0d8dff271101bd9a18bf1d562",
+      "pdf": "2ed42932e0540cf2c743d0eb90a5fde6cee721ec0a3071bd6b9e203f83aeada9"
+    },
+    "grade12/economics/u1-c1.pdf": {
+      "source": "f748fa6e056a4dbaf70fa0cf7f66509aa3ffb8bfa1adac484ea173cf8908578f",
+      "pdf": "a44dd68fb41966db8c163ff650861cfd09080b7d4e95d055560599dbcf910ed0"
+    },
+    "grade12/economics/u2-c1.pdf": {
+      "source": "198c9a9ee4f1dbde598a58bab622d444d6b2b0cb0b21cbf826c4b1daee314c35",
+      "pdf": "b2f1e058a2fc6135d0486222c9213855fcfd91ed1e9c8666617b2fe313311c8f"
+    },
+    "grade12/economics/u3-c1.pdf": {
+      "source": "9ff97207e723d9239432f97b4c900ecf8d178e603008d292df34f296eb4e0b22",
+      "pdf": "5415bb54db8763430b4962b6a0aba73ed1841affc84007bd457c9e2b31c575da"
+    },
+    "grade12/economics/u4-c1.pdf": {
+      "source": "9df0909ef31ef5b2811927c4286083f9be6720d7a45d006a2a151fc7cee7a73c",
+      "pdf": "2d250d0935e10ff8e87b0a5dd807b05ecac77828a95c068ca5565e732cc7cac2"
+    },
+    "grade12/economics/u5-c1.pdf": {
+      "source": "c7efe470cf0d352386084564472cb1da548d6e5f93cd009ac665c9889ce2bd33",
+      "pdf": "80ba213753c82be5905f5cb21a55a8a555d13251097170137269f0ede0013ea3"
+    },
+    "grade12/economics/u6-c1.pdf": {
+      "source": "6bc22408867da6427a0693cdd7bd7a5576cdcb453eea0dc111dd1c5205f6bdd3",
+      "pdf": "8ce12a8ed96630258eec209527234d6422553ce332395028ed3cfa52a554b46a"
+    },
+    "grade12/economics/u7-c1.pdf": {
+      "source": "b6a41d350d77d7f1af1ecf911fe59678b6fd2bdc4597b5bf938d87d0dc71c46d",
+      "pdf": "5b183b440d057dac96ae8eb8fd09f7864d48d99403c10794f2bb0f5ead6489f4"
+    },
+    "grade12/economics/u8-c1.pdf": {
+      "source": "709262cdf1bcca72928f00be0949136691ac025682e01c803ac4de4fab60e27a",
+      "pdf": "eb5bb5d9bde6ace6889604f4eb943afbd2f1b065558ed0333259fee9a86a1bf3"
+    },
+    "grade12/english/u1-c1.pdf": {
+      "source": "4bab244cb93dd1b4ee5849af76ae9b14e92fe09eb612cb056f8c13d81c24296e",
+      "pdf": "52bfea4908ab9e0e4488269315c5eedebb97a97ab61b7281d4c06dad5f6ff2e3"
+    },
+    "grade12/english/u1-c2.pdf": {
+      "source": "aedcdaa0e31ac13f9fcbbc2e1e0bcef55d99fd3a485972c3bd95ae2dafd1f934",
+      "pdf": "9c0f7b166eb5b0560ad7cf8055c51a800d8a6acad3081efac49c7847d2e3fc7f"
+    },
+    "grade12/english/u1-c3.pdf": {
+      "source": "9e83853480482379727c8674a08bdc31b4540fdd2f1d06099e2cc7fb042b2854",
+      "pdf": "5402bf36fd7587d5eeaa219f09f048c5fc9d2c1340d82856422d91f79e3ddadb"
+    },
+    "grade12/english/u1-c4.pdf": {
+      "source": "de6749db536f7e68f5b90cbd8d543f9e391189abc5019bd1ecb2efc173302170",
+      "pdf": "a3dcf6f10dfc8e6641ed254ed7198686b68671eb466c6e9c800fac145f476694"
+    },
+    "grade12/english/u2-c1.pdf": {
+      "source": "769aa1a3444ecf654652ab81ec557e6f4ace7a660e48dfe660f6ba8f2d8880d5",
+      "pdf": "f31f20480100811585d635be76a89520a33792f84ce0ded3d1486d5bbc613c5b"
+    },
+    "grade12/english/u2-c2.pdf": {
+      "source": "2e6b286384095e4db04fd9833ccb6aa340836eebbbbb996c2309679637665293",
+      "pdf": "44599694d719007e48231c84a01ecb63a6cf63cd17627c5335a2f221190d804f"
+    },
+    "grade12/english/u3-c1.pdf": {
+      "source": "69005f10096ceb5308752c1c0166fd1d90cae212bbb7af589de3e0e5b968b5b6",
+      "pdf": "79405fc5e97c8fa2d48249f4cd761edaf6eec0d6c81ed8af3b642a4d81658cfc"
+    },
+    "grade12/english/u4-c1.pdf": {
+      "source": "ca3f0c7bd02667e2e93091378b2637737e8ba551f732f11fac45cc4c6dea5e68",
+      "pdf": "43c216a8790760508a332fdcc9ed09437f1a03d1d1d5faa8101575e57225988c"
+    },
+    "grade12/geography/u1-c1.pdf": {
+      "source": "4d701cd168f7401dc09d8515e95b71aa7088ad6e41f8c9c0b1edab1af2f7ae0c",
+      "pdf": "7d68c342cb3dad60120b861df2dd522130f35ead92f94b680d86221d3ea57464"
+    },
+    "grade12/geography/u2-c1.pdf": {
+      "source": "2fc9b66f1890d793d03755b880fea455ca4df9708532e7f3c5341fb19e0ff08c",
+      "pdf": "61e373cbdcf693d1184b37923b387a0020c63b40dd3ad3ff8538400ffbf808a5"
+    },
+    "grade12/geography/u3-c1.pdf": {
+      "source": "a910a5aa5b33f220265b53bb26b600030b3b4bf7f35d76542d5acfac2d4b70cd",
+      "pdf": "5b5f64a569301c720b98e7ccb0d3df51a071dadf549c5da09c6fb80cea234888"
+    },
+    "grade12/geography/u4-c1.pdf": {
+      "source": "a92867b30f9a6aebc963d7e1f3c7c53f3c70b0aa1c7678fec8fc386c054fb571",
+      "pdf": "9db62491eb8d5265dc062f116e95f23e135783b67bbebef29e0aa91758a74484"
+    },
+    "grade12/geography/u5-c1.pdf": {
+      "source": "7e710464b184de470aa21e46ddc34d8c15682412cc9ed8d3fea9c211983dfc18",
+      "pdf": "52de013fd022347be4b1f362cf038b0e9711455d32883b57ec26a162f7034175"
+    },
+    "grade12/geography/u6-c1.pdf": {
+      "source": "c85b705ff8253db3a1b7c0bb053c66e19f9ca55253b3943ae264038f4ebc6409",
+      "pdf": "fc9bbd96356943cf573a4e00b9708581cbb5ecd6a788ebc288d6309d0ce1de11"
+    },
+    "grade12/geography/u7-c1.pdf": {
+      "source": "8530e8b20999159839023744aeb50ad2a88e35a065ba8eb57592a8fefb212d2d",
+      "pdf": "ad4038ed4f890203bbf21fae1b663cfb4a3f0a18bf65cbda201b70cf4a0c20e8"
+    },
+    "grade12/geography/u8-c1.pdf": {
+      "source": "65399938357cc4a4977b8208853a42d58189bc4d5038848295f6f39ed5ccd221",
+      "pdf": "c690440c7d6d60fd8d2a491c2654e30c4b229b71b9e86ac634b322670c50972e"
+    },
+    "grade12/history/u1-c1.pdf": {
+      "source": "e9ebc62fc852ea3a82d36b37d7fe9648a7088aa6dbb4ed908ebd5d1e076c543d",
+      "pdf": "6f30ad1444683f60a03ace2b9c7e4c3e855d79b36c33fccfa2f1d71100141932"
+    },
+    "grade12/history/u2-c1.pdf": {
+      "source": "e805eaa1a978c673231798585d31e9ea1311bee153ceae2c8fe1b7a05294b29f",
+      "pdf": "5cff78e364d46d39e90622ae30acd66b58b44ba37c280c8624ccd93d7f612aae"
+    },
+    "grade12/history/u3-c1.pdf": {
+      "source": "ea9352ea0e0ec5dbd8c0444c478d4c09f56b35b73a14641dfaa49bf33be80f4f",
+      "pdf": "a09e992aa15eb7479469622c537d469b1afd859693c6cd0fe4ba796ddab871b2"
+    },
+    "grade12/history/u4-c1.pdf": {
+      "source": "db59c9c5c21c31ba4cadc38dc626eab2102cdd31d1310b64993a65ce5b231ded",
+      "pdf": "ef076a3d1256eb7c9dbe599123826e48db163bbcd179cbcd8aaee44f2c3f53a9"
+    },
+    "grade12/history/u5-c1.pdf": {
+      "source": "1e5a434e5916c4b817382b9b6c794b3fe631d4c9b5183e04eeb4e83e74990f97",
+      "pdf": "9b4280503df33633cf0305dd4aa0d542f34eb9aab14d10ce27b5eeddc6741f1d"
+    },
+    "grade12/history/u6-c1.pdf": {
+      "source": "c5ac43db3b35aa7613da3a47ee695eea55276f3f7a13d1dc9da5fb86ead04dd9",
+      "pdf": "c76049906eb0b87cfa031a7f1f1e18eba8d18c11ac48d5b3ba21a200cc6967f5"
+    },
+    "grade12/history/u7-c1.pdf": {
+      "source": "d4bb0d8ef7e4b42bb53bac5463be980c6aae1f9d7ab75a5bb012e208eef31351",
+      "pdf": "466f78b3ad3dfa679784935e8e025dcdb3ce763fa953afaf20cf51e015b8a38a"
+    },
+    "grade12/history/u8-c1.pdf": {
+      "source": "2486a6a7544fe798e3f529b779620bd65905ef4cc20a8e5aca3803409fd9f57b",
+      "pdf": "cc6f8ef275c6a18a8ff042d2a997c4ca9e71498bd31f9d804ac957d46418546e"
+    },
+    "grade12/history/u9-c1.pdf": {
+      "source": "ab1a1a91155f908184d80bd4d30febfb41c1ccc040795dcafd4c2389a200c1ae",
+      "pdf": "86300f07d69bac437f073dca23bcac28a42c704a506eb29db3d72dce6c81bf3c"
+    },
+    "grade12/mathematics/u1-c1.pdf": {
+      "source": "0d47eb9db27b255fb5d3bf9e96e6f62e4a28e7a1c6426956b1e42ba6ccb8312b",
+      "pdf": "96ed9f5e027829e8475167944a7de00cc46ddfc40a4ed81fb772481700d4a2d7"
+    },
+    "grade12/mathematics/u1-c2.pdf": {
+      "source": "7b03d3391f5f8084616ea20b1556cf4dc1715093ea05ea36055a320d9445a4c8",
+      "pdf": "45ddf08350e56d4ff06de7254166d88c8216a9eeac3a734bdadd87e63c2d6087"
+    },
+    "grade12/mathematics/u1-c3.pdf": {
+      "source": "b72f656f81f35c37e73aaf01e85e2feed46df9c2d686cb9075c2e47714851d39",
+      "pdf": "d73a3f24f728bf857c430c1d344a35c3dc0820f4f26618f5d030c68511af67d3"
+    },
+    "grade12/mathematics/u2-c1.pdf": {
+      "source": "c9f2183b788a35c706b1513653e44c8abd60ccbd6bef9abee28f507541059c3d",
+      "pdf": "cdd287aefcd52aab274493db20c324b3e7ac5ae34401226fb5ca3c41f6c66835"
+    },
+    "grade12/mathematics/u2-c2.pdf": {
+      "source": "763133cd07bea04225149b804eee8605d4418df5ff5adde1c18bca101bda3936",
+      "pdf": "4cabf6d6810913ffda31c04e14473d7bf0f6245b382ecf54ab08441d957dc00e"
+    },
+    "grade12/mathematics/u2-c3.pdf": {
+      "source": "561aca842608f5885355b502100bcccd4a241aec438e4cb7b8604fdda964c6fd",
+      "pdf": "b223f8597b117aaa5d29fac5606da99aa3767f54b075141537f21eacfdce03b5"
+    },
+    "grade12/mathematics/u2-c4.pdf": {
+      "source": "371d752342b2398bf045fbb9b53473d08d37eb9f51ad8ffefc0fdbeb0b889b37",
+      "pdf": "6006ce5866d59a861a79bccb0b68c1a173d700a084dec662d485f2c18e29f414"
+    },
+    "grade12/mathematics/u3-c1.pdf": {
+      "source": "e8f3302be9ce0c72520cd7f615c0c4ea31664d691bcc8a9d2505b91ed928bc1f",
+      "pdf": "fcc49630256ca7b3a1ecb2e7c1002fbb96c05ae962c74d20772a14349ce3f66c"
+    },
+    "grade12/mathematics/u3-c2.pdf": {
+      "source": "94407d76c8aa2092bcc1845615754c1ad81664526c006d59d6efc14a84bc47d6",
+      "pdf": "99c70500e8e31990407494c22f9593048909672c6c9452ad310647cf4ccdbd92"
+    },
+    "grade12/mathematics/u4-c1.pdf": {
+      "source": "93f394d6e343af589312015e64f8a06f6968b2a5b825cf83ea8028d72737a4c6",
+      "pdf": "c982497bf3b802a79fdab258a4098f2de9d89bc2c5b90fd6ff985b7f4b2678e6"
+    },
+    "grade12/mathematics/u4-c2.pdf": {
+      "source": "07ffa598a8d02ceadb7fa72d2d40a57f0d13ad417e1c847b8e42efb963161d05",
+      "pdf": "7ba469ecf48560068df002672a75b612923797e6429ae1aa10b68f0eb45009db"
+    },
+    "grade12/mathematics/u5-c1.pdf": {
+      "source": "764ad1ca9b361381024e97044e19934cde9ec011e2cacfe7b56040c690d8be27",
+      "pdf": "59f7d4d5038e2de3b957d2dbfdcdc3b567dd51760dd504fc8197bfef461c1d87"
+    },
+    "grade12/mathematics/u5-c2.pdf": {
+      "source": "199f2f85434912077c4ea25511acb1000bfed139981163ea04fa64c65d307113",
+      "pdf": "bf8e54e5d83fc7c262a75e774d594cc3d95ef0235279f7c4fa26126c1fb8a932"
+    },
+    "grade12/physics/u1-c1.pdf": {
+      "source": "648aef33feee8d58480b18ed2c639f42ba76f2b8c3432ebcea2eec6616f55d25",
+      "pdf": "0f3d55c9df8b647fd6a6fd017731a65ed36dbdadc3258f972a7c04cb406920f7"
+    },
+    "grade12/physics/u1-c2.pdf": {
+      "source": "c8b47ca284af1915b1c879da561cda54809b1e9ed03278feab1e547b8ad6cd27",
+      "pdf": "ca01e09526fd75cb95c0fc0eee62590c420ae2b71c4a462e3c1b7775d7e3411a"
+    },
+    "grade12/physics/u2-c1.pdf": {
+      "source": "f4db1d51eafb7cabe02d544c7e113bad69198d08400a37562c17d9771857f44d",
+      "pdf": "558e1cffcd78acdadb03d218b27c82ab78f3679f0670a21f2112e86f389821d1"
+    },
+    "grade12/physics/u2-c2.pdf": {
+      "source": "762baf6e0df9856d0e644273877ef15fa4304345507c6b8be98a17323b5419d5",
+      "pdf": "ca3612f3d9cffe82aecc68dde60e1ada16cfa1509a76949a01b19fc7d0b99e07"
+    },
+    "grade12/physics/u2-c3.pdf": {
+      "source": "09995e81ab56eeab1f01f3545ed846410b62d0d65a59aa7bf685cc56dbc84063",
+      "pdf": "f9b3d923f2cc7dd7ffac182fa84d03e80048028a8485d681ef2bd946fc052d88"
+    },
+    "grade12/physics/u3-c1.pdf": {
+      "source": "17ec86807d9c3eb94041d3a93a9b324fe6fdd863cd05e9554dd273e8d7a1c3e0",
+      "pdf": "e041495dbec97c8179c13d313a9f4b4b7cfa61e549dbd7895cc6c72e38edf399"
+    },
+    "grade12/physics/u3-c2.pdf": {
+      "source": "0beb270c06f223dc165593cf353cd76943b5a70be6c3c49bb134fc9c5f684182",
+      "pdf": "5626cf335df0458c1a68e0e3aaec81c05b727cfa36b84d5793518d10dba78692"
+    },
+    "grade12/physics/u4-c1.pdf": {
+      "source": "1071365a0c0026bf239f397a17e208618399839fce9200b3634239cd038d239b",
+      "pdf": "98cb0e5b0ff69c5d20a1cf9e4b0aaa74702edd66000c258b22fec48eab662616"
+    },
+    "grade12/physics/u4-c2.pdf": {
+      "source": "7fb15508fe0aa57ef3a2c175cd9610b8f74015e0ff32127dfde5f65215bd79cf",
+      "pdf": "43ff9a4a86327c0547fec4f4be7ebe9c8268eeca08a1d4dc6358c87fb3cc9887"
+    },
+    "grade12/physics/u5-c1.pdf": {
+      "source": "35c62a88999ac51de0a2586fa49d10ba9947e2deae9853fbd968dea861167a42",
+      "pdf": "542a0290e28d3cefb75b6e8db39001e576a3b32c9d53fab9e98deb54fb97d710"
+    },
+    "grade12/physics/u5-c2.pdf": {
+      "source": "360b8f03ec47acff76599cdb588a36f177dda58e55a2a78d387a767230ddde4e",
+      "pdf": "e79cadf07dcc79299d6de1991953acbab4205f387d26cd6027e3687e2874dbcc"
+    }
+  }
+}

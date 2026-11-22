@@ -1,0 +1,43 @@
+name: Content
+
+on:
+  pull_request:
+    paths: ['content/**', 'app/assets/fonts/**', 'backend/database/seeders/CurriculumSeeder.php', '.github/workflows/content.yml']
+  push:
+    branches: [main, develop]
+    paths: ['content/**', 'app/assets/fonts/**', 'backend/database/seeders/CurriculumSeeder.php', '.github/workflows/content.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pdfs:
+    name: Summary PDFs
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: content/tools/pdf
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: content/tools/pdf/package-lock.json
+
+      - name: Install
+        run: npm ci --no-fund
+
+      - name: Security audit
+        run: npm audit --audit-level=low
+
+      - name: Tests (maths renders, links, no payment words)
+        run: npm test
+
+      - name: Every chapter has an up-to-date PDF
+        run: npm run check

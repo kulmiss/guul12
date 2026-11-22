@@ -10,6 +10,7 @@ use App\Models\QuestionOption;
 use App\Models\SolvedExercise;
 use App\Models\Subject;
 use App\Models\Unit;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Builds the JSON the app stores offline. Only content students may see is included.
@@ -62,6 +63,8 @@ class ContentPayload
             'video_youtube_id' => $chapter->video_youtube_id,
             'video_access' => $chapter->video_access->value,
             'has_summary_pdf' => $chapter->summary_pdf_path !== null,
+            // Free for everyone (QUESTIONS.md #33). The PDF links only to the price-free landing page.
+            'summary_pdf_url' => $chapter->summary_pdf_path === null ? null : Storage::disk('public')->url($chapter->summary_pdf_path),
             'sort' => $chapter->sort,
         ];
     }

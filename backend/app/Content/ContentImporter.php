@@ -16,6 +16,7 @@ use App\Models\Unit;
 use App\Services\Quality\RescoreService;
 use App\Services\Scoring\AnswerScorer;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Writes validated content into the database. Safe to run again: rows are matched by
@@ -123,6 +124,8 @@ final class ContentImporter
      */
     private function importChapter(Chapter $chapter, ChapterDef $def, array $reviews, ImportReport $report): void
     {
+        $this->publishSummaryPdf($chapter, $def, $report);
+
         if ($def->file === null) {
             return; // planned chapter: catalog entry only, nothing to touch yet
         }
@@ -210,6 +213,38 @@ final class ContentImporter
             $old->save();
             $report->count('questions_retired');
         }
+    }
+
+    /**
+     * Copies the chapter's summary PDF to the public disk under a name that contains its hash,
+     * so a changed PDF gets a new URL (no stale copies in phone or browser caches).
+     */
+    private function publishSummaryPdf(Chapter $chapter, ChapterDef $def, ImportReport $report): void
+    {
+        $disk = Storage::disk('public');
+        $target = null;
+        if ($def->summaryPdf !== null) {
+            $hash = hash_file('sha256', $def->summaryPdf);
+            $target = 'summaries/'.$def->code.'-'.substr((string) $hash, 0, 12).'.pdf';
+        }
+        if ($chapter->summary_pdf_path === $target && ($target === null || $disk->exists($target))) {
+            return;
+        }
+
+        if ($target !== null) {
+            $stream = fopen((string) $def->summaryPdf, 'rb');
+            if ($stream === false || ! $disk->put($target, $stream)) {
+                throw new \RuntimeException("Could not publish {$def->summaryPdf}");
+            }
+            fclose($stream);
+        }
+        $old = $chapter->summary_pdf_path;
+        $chapter->summary_pdf_path = $target;
+        $chapter->save();
+        if ($old !== null && $old !== $target) {
+            $disk->delete($old);
+        }
+        $report->count($target === null ? 'summary_pdfs_removed' : 'summary_pdfs_published');
     }
 
     /**

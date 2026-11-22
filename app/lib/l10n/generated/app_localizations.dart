@@ -494,6 +494,12 @@ abstract class AppLocalizations {
   /// **'{count, plural, =1{1 question} other{{count} questions}}'**
   String chapterQuizCount(int count);
 
+  /// Opens the printable Guul 12 summary of this chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Chapter summary (PDF)'**
+  String get chapterSummaryPdf;
+
   /// Link to the Ministry of Education textbook
   ///
   /// In en, this message translates to:

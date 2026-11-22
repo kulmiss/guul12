@@ -135,6 +135,7 @@ class ChapterHeader {
     required this.videoYoutubeId,
     required this.videoIsPremium,
     required this.hasSummaryPdf,
+    required this.summaryPdfUrl,
     required this.sort,
   });
 
@@ -147,6 +148,7 @@ class ChapterHeader {
     videoYoutubeId: asStringOrNull(json['video_youtube_id']),
     videoIsPremium: asString(json['video_access']) == 'premium',
     hasSummaryPdf: asBool(json['has_summary_pdf']),
+    summaryPdfUrl: asStringOrNull(json['summary_pdf_url']),
     sort: asInt(json['sort']),
   );
 
@@ -158,6 +160,9 @@ class ChapterHeader {
   final String? videoYoutubeId;
   final bool videoIsPremium;
   final bool hasSummaryPdf;
+
+  /// Chapter summary PDF (free for everyone). It links only to the price-free landing page.
+  final String? summaryPdfUrl;
   final int sort;
 }
 

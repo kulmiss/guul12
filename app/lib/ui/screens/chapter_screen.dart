@@ -10,7 +10,7 @@ import '../practice/practice_screen.dart';
 import '../widgets/common.dart';
 import '../widgets/math_text.dart';
 
-/// Opens an outside link (official textbook PDF, YouTube) in the browser or app.
+/// Opens an outside link (summary PDF, official textbook PDF, YouTube) in the browser or app.
 Future<void> openExternal(String url) async {
   final uri = Uri.tryParse(url);
   if (uri == null || !(uri.scheme == 'https' || uri.scheme == 'http')) return;
@@ -182,8 +182,17 @@ class _ChapterBody extends ConsumerWidget {
                 SectionTitle(l.chapterSolvedExercises),
                 for (final ex in chapter.solvedExercises) _SolvedExerciseCard(exercise: ex),
               ],
-              if (header.textbookUrl != null || (videosOn && header.videoYoutubeId != null))
+              if (header.summaryPdfUrl != null ||
+                  header.textbookUrl != null ||
+                  (videosOn && header.videoYoutubeId != null))
                 const SizedBox(height: 12),
+              if (header.summaryPdfUrl != null)
+                ListTile(
+                  leading: const Icon(Icons.description_outlined),
+                  title: Text(l.chapterSummaryPdf),
+                  trailing: const Icon(Icons.open_in_new),
+                  onTap: () => openExternal(header.summaryPdfUrl!),
+                ),
               if (header.textbookUrl != null)
                 ListTile(
                   leading: const Icon(Icons.picture_as_pdf_outlined),

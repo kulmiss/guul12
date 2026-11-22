@@ -28,3 +28,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# Node tools
+node_modules/

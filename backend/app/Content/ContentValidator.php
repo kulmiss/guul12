@@ -331,7 +331,11 @@ final class ContentValidator
             $this->errors[] = "{$at}: unknown section '{$key}'";
         }
 
-        return new ChapterDef($code, $number, $title, $file, $summary, $exercises, $flashcards, $passages, $questions);
+        // Summary PDFs are built by content/tools/pdf into content/pdf/<grade>/<file>.pdf.
+        $pdf = dirname($dir).'/pdf/'.basename($dir).'/'.substr($file, 0, -strlen('.yaml')).'.pdf';
+
+        return new ChapterDef($code, $number, $title, $file, $summary, $exercises, $flashcards, $passages, $questions,
+            is_file($pdf) ? $pdf : null);
     }
 
     // ---- questions --------------------------------------------------------------------------

@@ -1,8 +1,28 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+import 'package:url_launcher_platform_interface/link.dart';
+import 'package:url_launcher_platform_interface/url_launcher_platform_interface.dart';
 
 import '../support/app_harness.dart';
 import '../support/fake_server.dart';
+
+/// Records the links the app opens instead of opening them.
+class _FakeLauncher extends UrlLauncherPlatform with MockPlatformInterfaceMixin {
+  final List<String> opened = [];
+
+  @override
+  LinkDelegate? get linkDelegate => null;
+
+  @override
+  Future<bool> canLaunch(String url) async => true;
+
+  @override
+  Future<bool> launchUrl(String url, LaunchOptions options) async {
+    opened.add(url);
+    return true;
+  }
+}
 
 FakeServer onboardedServer() => FakeServer()..let(onboardedProfile);
 
@@ -168,5 +188,27 @@ void main() {
     expect(server.receivedReports, [
       {'question_id': 2101, 'reason': 'typo', 'note': 'Two plus two is spelt wrong'},
     ]);
+  });
+
+  testWidgets('the chapter summary PDF opens only when the chapter has one', (tester) async {
+    final launcher = _FakeLauncher();
+    final original = UrlLauncherPlatform.instance;
+    UrlLauncherPlatform.instance = launcher;
+    addTearDown(() => UrlLauncherPlatform.instance = original);
+    const url = 'https://guul12.kulmiss.com/storage/summaries/g12-physics-2-1-0123456789ab.pdf';
+    final server = onboardedServer()..summaryPdfUrls[21] = url;
+    await pumpGuul(tester, server: server);
+
+    await tapOn(tester, find.text('Study'));
+    await tapOn(tester, find.text('Physics'));
+    await tapOn(tester, find.text('Unit 2: Two-dimensional motion'));
+    await tapOn(tester, find.text('1. Chapter 21'));
+    await tapOn(tester, find.text('Chapter summary (PDF)'));
+    expect(launcher.opened, [url]);
+
+    await tester.pageBack();
+    await settle(tester);
+    await tapOn(tester, find.text('2. Chapter 22'));
+    expect(find.text('Chapter summary (PDF)'), findsNothing);
   });
 }

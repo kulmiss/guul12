@@ -337,6 +337,10 @@
       }
     }
   },
+  "chapterSummaryPdf": "Chapter summary (PDF)",
+  "@chapterSummaryPdf": {
+    "description": "Opens the printable Guul 12 summary of this chapter"
+  },
   "chapterTextbook": "Official textbook (PDF)",
   "@chapterTextbook": {
     "description": "Link to the Ministry of Education textbook"
