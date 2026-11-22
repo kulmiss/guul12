@@ -1,0 +1,380 @@
+summary:
+  key_points:
+    - 'pH measures acidity: $\text{pH} = -\log[\text{H}_3\text{O}^+]$. At 25 °C, pH < 7 is acidic, pH = 7 is neutral and pH > 7 is basic. Similarly $\text{pOH} = -\log[\text{OH}^-]$ and $\text{pH} + \text{pOH} = 14$.'
+    - 'A change of 1 pH unit means a tenfold change in $[\text{H}_3\text{O}^+]$.'
+    - 'Strong acids and bases ionise completely, so $[\text{H}_3\text{O}^+]$ or $[\text{OH}^-]$ comes straight from the concentration (counting how many $\text{H}^+$ or $\text{OH}^-$ each formula unit gives).'
+    - 'A weak acid sets up an equilibrium $\text{HA} + \text{H}_2\text{O} \rightleftharpoons \text{H}_3\text{O}^+ + \text{A}^-$ with acid dissociation constant $K_a = \frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}$. A larger $K_a$ (smaller $\text{p}K_a$) means a stronger acid.'
+    - 'For a weak acid of concentration $C$ that ionises only a little: $[\text{H}_3\text{O}^+] \approx \sqrt{K_a C}$. Percent ionisation $= \frac{[\text{H}_3\text{O}^+]}{C} \times 100\%$; it increases when the acid is diluted.'
+    - 'A weak base: $\text{B} + \text{H}_2\text{O} \rightleftharpoons \text{BH}^+ + \text{OH}^-$, $K_b = \frac{[\text{BH}^+][\text{OH}^-]}{[\text{B}]}$ and $[\text{OH}^-] \approx \sqrt{K_b C}$.'
+    - 'For a conjugate pair, $K_a \times K_b = K_w = 1.0 \times 10^{-14}$ at 25 °C.'
+  formulas:
+    - label: pH and pOH
+      latex: '\text{pH} = -\log[\text{H}_3\text{O}^+], \quad \text{pH} + \text{pOH} = 14'
+    - label: Acid dissociation constant
+      latex: 'K_a = \frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}'
+    - label: Weak acid approximation
+      latex: '[\text{H}_3\text{O}^+] \approx \sqrt{K_a C}'
+    - label: Conjugate pair
+      latex: 'K_a K_b = K_w'
+    - label: Percent ionisation
+      latex: '\%\ \text{ionised} = \frac{[\text{H}_3\text{O}^+]_{eq}}{C} \times 100\%'
+
+solved_exercises:
+  - uid: g12-chemistry-1-2-se01
+    problem: 'Find the pH of 0.001 M NaOH at 25 °C.'
+    steps:
+      - 'NaOH is a strong base: $[\text{OH}^-] = 1 \times 10^{-3}$ M, so pOH = 3.'
+      - 'pH = 14 − 3 = 11.'
+    answer: 'pH = 11'
+  - uid: g12-chemistry-1-2-se02
+    problem: 'A weak acid HA has $K_a = 1 \times 10^{-5}$. Find the pH and percent ionisation of a 0.1 M solution.'
+    steps:
+      - '$[\text{H}_3\text{O}^+] \approx \sqrt{K_a C} = \sqrt{1 \times 10^{-5} \times 0.1} = \sqrt{1 \times 10^{-6}} = 1 \times 10^{-3}$ M, so pH = 3.'
+      - 'Percent ionised $= \frac{1 \times 10^{-3}}{0.1} \times 100\% = 1\%$.'
+    answer: 'pH = 3; 1% ionised'
+  - uid: g12-chemistry-1-2-se03
+    problem: 'The $K_a$ of a weak acid is $1 \times 10^{-4}$. Find $K_b$ of its conjugate base.'
+    steps:
+      - '$K_b = \frac{K_w}{K_a} = \frac{1 \times 10^{-14}}{1 \times 10^{-4}}$.'
+      - '$K_b = 1 \times 10^{-10}$.'
+    answer: '$1 \times 10^{-10}$'
+
+flashcards:
+  - {uid: g12-chemistry-1-2-fc01, term: pH, definition: '$-\log[\text{H}_3\text{O}^+]$; below 7 acidic, 7 neutral, above 7 basic (25 °C).'}
+  - {uid: g12-chemistry-1-2-fc02, term: pOH, definition: '$-\log[\text{OH}^-]$; pH + pOH = 14 at 25 °C.'}
+  - {uid: g12-chemistry-1-2-fc03, term: Acid dissociation constant, definition: '$K_a$; larger value means a stronger acid.'}
+  - {uid: g12-chemistry-1-2-fc04, term: pKa, definition: '$-\log K_a$; smaller value means a stronger acid.'}
+  - {uid: g12-chemistry-1-2-fc05, term: Base dissociation constant, definition: '$K_b$ for $\text{B} + \text{H}_2\text{O} \rightleftharpoons \text{BH}^+ + \text{OH}^-$.'}
+  - {uid: g12-chemistry-1-2-fc06, term: Percent ionisation, definition: 'Fraction of weak acid molecules that ionise, times 100%.'}
+  - {uid: g12-chemistry-1-2-fc07, term: Ka × Kb, definition: 'Equals $K_w = 1.0 \times 10^{-14}$ for a conjugate pair at 25 °C.'}
+  - {uid: g12-chemistry-1-2-fc08, term: Tenfold rule, definition: 'One pH unit lower means ten times more $\text{H}_3\text{O}^+$.'}
+
+questions:
+  - uid: g12-chemistry-1-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the pH of 0.01 M hydrochloric acid?'
+    options:
+      A: '1'
+      B: '2'
+      C: '12'
+      D: '0.01'
+    answer: B
+    explanation: 'HCl is a strong acid, so $[\text{H}_3\text{O}^+] = 1 \times 10^{-2}$ M and pH = 2.'
+
+  - uid: g12-chemistry-1-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'At 25 °C, a solution with pH 9 is:'
+    options:
+      A: 'Basic'
+      B: 'Acidic'
+      C: 'Neutral'
+      D: 'A strong acid'
+    answer: A
+    explanation: 'pH above 7 means basic at 25 °C.'
+
+  - uid: g12-chemistry-1-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'A solution has pH 4. What is $[\text{H}_3\text{O}^+]$?'
+    options:
+      A: '4 M'
+      B: '$1 \times 10^{4}$ M'
+      C: '$1 \times 10^{-10}$ M'
+      D: '$1 \times 10^{-4}$ M'
+    answer: D
+    explanation: '$[\text{H}_3\text{O}^+] = 10^{-\text{pH}} = 1 \times 10^{-4}$ M.'
+
+  - uid: g12-chemistry-1-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Solution X has pH 3 and solution Y has pH 5. How do their $\text{H}_3\text{O}^+$ concentrations compare?'
+    options:
+      A: 'X has 2 times more.'
+      B: 'Y has 100 times more.'
+      C: 'X has 100 times more.'
+      D: 'They are the same.'
+    answer: C
+    explanation: 'Each pH unit is a factor of 10. A difference of 2 units is $10^2 = 100$, and the lower pH (X) is more acidic.'
+
+  - uid: g12-chemistry-1-2-q005
+    type: numeric
+    difficulty: 2
+    stem: 'What is the pH of 0.005 M barium hydroxide, $\text{Ba(OH)}_2$, at 25 °C? (It is a strong base.)'
+    answer: {value: 12, tolerance: 0}
+    explanation: 'Each $\text{Ba(OH)}_2$ gives 2 $\text{OH}^-$: $[\text{OH}^-] = 0.01$ M, pOH = 2, pH = 14 − 2 = 12.'
+
+  - uid: g12-chemistry-1-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'A 0.1 M solution of a weak acid has $K_a = 1 \times 10^{-5}$. What is its approximate pH?'
+    options:
+      A: '3'
+      B: '1'
+      C: '5'
+      D: '6'
+    answer: A
+    explanation: '$[\text{H}_3\text{O}^+] \approx \sqrt{1 \times 10^{-5} \times 0.1} = \sqrt{10^{-6}} = 10^{-3}$ M, so pH ≈ 3.'
+
+  - uid: g12-chemistry-1-2-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'For the weak acid HA, which is the correct expression for $K_a$?'
+    options:
+      A: '$\frac{[\text{HA}]}{[\text{H}_3\text{O}^+][\text{A}^-]}$'
+      B: '$[\text{H}_3\text{O}^+][\text{A}^-][\text{HA}]$'
+      C: '$\frac{[\text{H}_3\text{O}^+]}{[\text{HA}]}$'
+      D: '$\frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}$'
+    answer: D
+    explanation: 'Products over reactants; water is left out because it is the solvent.'
+
+  - uid: g12-chemistry-1-2-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Acid P has $K_a = 1 \times 10^{-3}$ and acid Q has $K_a = 1 \times 10^{-6}$. Which statement is correct?'
+    options:
+      A: 'Q is the stronger acid.'
+      B: 'P is the stronger acid.'
+      C: 'They are equally strong.'
+      D: 'Both are strong acids.'
+    answer: B
+    explanation: 'A larger $K_a$ means the acid ionises more, so P is stronger. Both are still weak acids.'
+
+  - uid: g12-chemistry-1-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'An acid has $\text{p}K_a = 4.8$ and another has $\text{p}K_a = 3.2$. Which is stronger?'
+    options:
+      A: 'The one with $\text{p}K_a = 4.8$'
+      B: 'They are the same.'
+      C: 'The one with $\text{p}K_a = 3.2$'
+      D: 'It cannot be told from $\text{p}K_a$.'
+    answer: C
+    explanation: 'A smaller $\text{p}K_a$ means a larger $K_a$, so a stronger acid.'
+
+  - uid: g12-chemistry-1-2-q010
+    type: numeric
+    difficulty: 2
+    stem: 'A 0.1 M weak acid solution has $[\text{H}_3\text{O}^+] = 2 \times 10^{-3}$ M. What percentage of the acid is ionised?'
+    answer: {value: 2, tolerance: 0, unit: '%'}
+    explanation: '$\frac{2 \times 10^{-3}}{0.1} \times 100\% = 2\%$.'
+
+  - uid: g12-chemistry-1-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'A weak acid has $K_a = 1 \times 10^{-4}$. What is $K_b$ for its conjugate base at 25 °C?'
+    options:
+      A: '$1 \times 10^{-4}$'
+      B: '$1 \times 10^{-18}$'
+      C: '$1 \times 10^{4}$'
+      D: '$1 \times 10^{-10}$'
+    answer: D
+    explanation: '$K_b = \frac{K_w}{K_a} = \frac{10^{-14}}{10^{-4}} = 10^{-10}$.'
+
+  - uid: g12-chemistry-1-2-q012
+    type: true_false
+    difficulty: 2
+    stem: 'Diluting a weak acid increases its percent ionisation.'
+    answer: true
+    explanation: 'By Le Chatelier''s principle, adding water shifts the equilibrium towards the ions, so a larger fraction ionises (even though $[\text{H}_3\text{O}^+]$ itself falls).'
+
+  - uid: g12-chemistry-1-2-q013
+    type: true_false
+    difficulty: 1
+    stem: 'At 25 °C, a solution with pH 2 has a higher $[\text{H}_3\text{O}^+]$ than one with pH 6.'
+    answer: true
+    explanation: 'A lower pH means more $\text{H}_3\text{O}^+$: $10^{-2}$ M versus $10^{-6}$ M.'
+
+  - uid: g12-chemistry-1-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'A solution has pOH 5 at 25 °C. What is its pH?'
+    options:
+      A: '9'
+      B: '5'
+      C: '19'
+      D: '7'
+    answer: A
+    explanation: 'pH = 14 − pOH = 14 − 5 = 9.'
+
+  - uid: g12-chemistry-1-2-q015
+    type: single_choice
+    difficulty: 3
+    stem: 'A 0.1 M ammonia solution has $K_b = 1 \times 10^{-5}$. What is its approximate pH at 25 °C?'
+    options:
+      A: '3'
+      B: '5'
+      C: '11'
+      D: '9'
+    answer: C
+    explanation: '$[\text{OH}^-] \approx \sqrt{10^{-5} \times 0.1} = 10^{-3}$ M, so pOH = 3 and pH = 14 − 3 = 11.'
+
+  - uid: g12-chemistry-1-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: '0.1 M HCl and 0.1 M ethanoic acid ($\text{CH}_3\text{COOH}$) are compared. Which statement is correct?'
+    options:
+      A: 'They have the same pH.'
+      B: 'Ethanoic acid has the lower pH.'
+      C: 'HCl has the higher pH.'
+      D: 'HCl has the lower pH because it ionises completely.'
+    answer: D
+    explanation: 'At the same concentration, the strong acid gives far more $\text{H}_3\text{O}^+$, so its pH is lower.'
+
+  - uid: g12-chemistry-1-2-q017
+    type: single_choice
+    difficulty: 1
+    stem: 'Pure water at 25 °C has pH:'
+    options:
+      A: '0'
+      B: '7'
+      C: '14'
+      D: '1'
+    answer: B
+    explanation: '$[\text{H}_3\text{O}^+] = 10^{-7}$ M, so pH = 7.'
+
+  - uid: g12-chemistry-1-2-q018
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these solutions are basic at 25 °C? Choose all that apply.'
+    options:
+      A: 'pH 12'
+      B: '$[\text{OH}^-] = 1 \times 10^{-3}$ M'
+      C: '$[\text{H}_3\text{O}^+] = 1 \times 10^{-2}$ M'
+      D: 'pOH 4'
+    answer: [A, B, D]
+    explanation: 'pH 12 is basic; $[\text{OH}^-] = 10^{-3}$ gives pH 11; pOH 4 gives pH 10. $[\text{H}_3\text{O}^+] = 10^{-2}$ gives pH 2, which is acidic.'
+
+  - uid: g12-chemistry-1-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A 0.1 M strong acid HX is diluted 10 times with water. What is the new pH?'
+    options:
+      A: '1'
+      B: '0.1'
+      C: '2'
+      D: '10'
+    answer: C
+    explanation: 'The new concentration is 0.01 M, so $[\text{H}_3\text{O}^+] = 10^{-2}$ M and pH = 2.'
+
+  - uid: g12-chemistry-1-2-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'A 0.01 M weak acid solution has pH 4. What is the approximate $K_a$?'
+    options:
+      A: '$1 \times 10^{-4}$'
+      B: '$1 \times 10^{-2}$'
+      C: '$1 \times 10^{-8}$'
+      D: '$1 \times 10^{-6}$'
+    answer: D
+    explanation: '$[\text{H}_3\text{O}^+] = [\text{A}^-] = 10^{-4}$ M and $[\text{HA}] \approx 0.01$ M. $K_a = \frac{(10^{-4})^2}{10^{-2}} = 10^{-6}$.'
+
+  - uid: g12-chemistry-1-2-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'At 25 °C, pH + pOH = ________.'
+    answer: ['14']
+    explanation: 'This comes from $K_w = 10^{-14}$.'
+
+  - uid: g12-chemistry-1-2-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The negative logarithm of the acid dissociation constant, $-\log K_a$, is written ________.'
+    answer: [pKa, 'p K_a', 'pK_a']
+    explanation: 'Smaller $\text{p}K_a$ values belong to stronger acids.'
+
+  - uid: g12-chemistry-1-2-q023
+    type: true_false
+    difficulty: 2
+    stem: 'A weak acid with a large $K_a$ has a conjugate base with a large $K_b$.'
+    answer: false
+    explanation: '$K_a K_b = K_w$ is constant, so a large $K_a$ goes with a small $K_b$.'
+
+  - uid: g12-chemistry-1-2-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each solution (25 °C) with its pH.'
+    left:
+      L1: '0.001 M HCl'
+      L2: '0.01 M NaOH'
+      L3: 'Pure water'
+    right:
+      R1: '7'
+      R2: '12'
+      R3: '3'
+      R4: '1'
+    answer: {L1: R3, L2: R2, L3: R1}
+    explanation: '0.001 M HCl: pH 3. 0.01 M NaOH: pOH 2, so pH 12. Pure water: pH 7.'
+
+  - uid: g12-chemistry-1-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'All at 0.1 M and 25 °C. Put these solutions in order of increasing pH (lowest first).'
+    items:
+      A: 'NaOH'
+      B: 'HCl'
+      C: 'NaCl'
+      D: 'Ethanoic acid'
+    answer: [B, D, C, A]
+    explanation: 'Strong acid (pH 1), weak acid (about 3), neutral salt (7), strong base (13).'
+
+  - uid: g12-chemistry-1-2-q026
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these is the most acidic?'
+    options:
+      A: 'Lemon juice, pH 2'
+      B: 'Milk, pH 6.5'
+      C: 'Pure water, pH 7'
+      D: 'Soap solution, pH 10'
+    answer: A
+    explanation: 'The lowest pH is the most acidic.'
+
+  - uid: g12-chemistry-1-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Adding sodium ethanoate (containing $\text{CH}_3\text{COO}^-$) to ethanoic acid solution shifts the equilibrium $\text{CH}_3\text{COOH} \rightleftharpoons \text{H}^+ + \text{CH}_3\text{COO}^-$. What happens to the pH?'
+    options:
+      A: 'It falls.'
+      B: 'It rises.'
+      C: 'It stays exactly the same.'
+      D: 'It becomes 0.'
+    answer: B
+    explanation: 'Extra $\text{CH}_3\text{COO}^-$ pushes the equilibrium to the left (common-ion effect), lowering $[\text{H}^+]$, so the pH rises.'
+
+  - uid: g12-chemistry-1-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can we leave $[\text{H}_2\text{O}]$ out of the $K_a$ expression?'
+    options:
+      A: 'Water does not take part in the reaction.'
+      B: 'Water is a gas.'
+      C: 'Water is the solvent and its concentration hardly changes.'
+      D: 'Water has a concentration of zero.'
+    answer: C
+    explanation: 'Water is present in huge excess, so its concentration is effectively constant and is included in $K_a$.'
+
+  - uid: g12-chemistry-1-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'A weak base $\text{B}$ has $K_b = 1 \times 10^{-6}$. What is $K_a$ of its conjugate acid $\text{BH}^+$ at 25 °C?'
+    options:
+      A: '$1 \times 10^{-6}$'
+      B: '$1 \times 10^{-8}$'
+      C: '$1 \times 10^{-7}$'
+      D: '$1 \times 10^{-20}$'
+    answer: B
+    explanation: '$K_a = \frac{K_w}{K_b} = \frac{10^{-14}}{10^{-6}} = 10^{-8}$.'
+
+  - uid: g12-chemistry-1-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Which instrument gives the most accurate pH reading?'
+    options:
+      A: 'A pH meter'
+      B: 'Blue litmus paper'
+      C: 'A thermometer'
+      D: 'A measuring cylinder'
+    answer: A
+    explanation: 'A pH meter reads pH electronically, often to 0.01. Litmus only shows acid or base.'

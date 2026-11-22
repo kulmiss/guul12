@@ -122,6 +122,7 @@ subjects:
       file: chemistry/u1-c1.yaml
     - number: 2
       title: Ionic equilibria of weak acids and bases, pH
+      file: chemistry/u1-c2.yaml
     - number: 3
       title: Buffers, salt hydrolysis, indicators and titration
   - number: 2

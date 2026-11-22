@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-chemistry-1-1-q001: {hash: '1c2768fef236b0f5fa5d98a3227d6e28427145eda17692ed1b2e8aad5b200c5d', answer: B}
+  g12-chemistry-1-1-q002: {hash: '7c6ab1e9b823fd2179e9e56b40ce7ff9e631e1a6d500fa5a8407fd4bae86dd95', answer: A}
+  g12-chemistry-1-1-q003: {hash: '901117beb3424aa7c7a911739ca511bddc021fc91eec1d49271387f9e91fbbc2', answer: C}
+  g12-chemistry-1-1-q004: {hash: '37ef808e5295f671ae8856c0fb6f988f000a192ccee8483d2efb60459bdc0704', answer: D}
+  g12-chemistry-1-1-q005: {hash: 'f8f23dec166515adda88c5b7961006362ce5d5def53d724493ca9bd86b2cd35d', answer: B}
+  g12-chemistry-1-1-q006: {hash: '25a940e4e8d9ae482d917fb8059464d9cda71a2ffcb0220bc464c4e1bbe82ed4', answer: A}
+  g12-chemistry-1-1-q007: {hash: 'e731255d7d5dfa80124ab3641f10ecae52514a606b4569d120a133669fe8b040', answer: C}
+  g12-chemistry-1-1-q008: {hash: '7482a38d1600d39aba1f88624ee5def3f6d060cdd79f38fb8dd38f5b309ee3bd', answer: true}
+  g12-chemistry-1-1-q009: {hash: 'a85475d79f7dd80c88084d8ecf1488eb97d561d886b4edfa528d92214f91c8a3', answer: D}
+  g12-chemistry-1-1-q010: {hash: '70b3bedf34d6f8a70d168483ad90a358dc5e0e8c7ee37728123bb2d5217db671', answer: A}
+  g12-chemistry-1-1-q011: {hash: '522ee51b08a2f9474392ed04d9e1abf3ce98b28e05db49bad580b34438b8c208', answer: [A, B]}
+  g12-chemistry-1-1-q012: {hash: '641945e37ec3035fd8da1e8041aaf0b96359ca1fba74e7f919396663610587f0', answer: C}
+  g12-chemistry-1-1-q013: {hash: 'd2c2692db37c5ff6acb1b2887b0c0895e755afa64acfc501b64b621883bf55ce', answer: B}
+  g12-chemistry-1-1-q014: {hash: 'aceb4bd605364cf15e793f937c840b68f392ba70ce66cdac59a66c901f6b5b14', answer: 3}
+  g12-chemistry-1-1-q015: {hash: '820ad379206d2ce5bce52b1457b3ce735493c68cc6ac40eb2263d4785bf0553c', answer: 0.4}
+  g12-chemistry-1-1-q016: {hash: '309f6b1ec7c747aa4afe4f397acf61f13edd5f557ebc024a4d61a1d437d85052', answer: D}
+  g12-chemistry-1-1-q017: {hash: '22759eba08848cfdb79afe5ccfdf2ad91855a392d3407a7098df124a7fe4b93e', answer: A}
+  g12-chemistry-1-1-q018: {hash: 'ebd7d1a7bf05f26760e91986d41343772d4915b7b505f16883c16d83444297b8', answer: C}
+  g12-chemistry-1-1-q019: {hash: 'de1cb7003781cbd61ec11d205753c688870c464b3b61c0d4ac9561ed81f80cea', answer: true}
+  g12-chemistry-1-1-q020: {hash: '608e0495cb724ea1648f7bc56ff65d248e3cbdf15adb5213a21c6e06fc3264cd', answer: false}
+  g12-chemistry-1-1-q021: {hash: 'a3b426f300c44edd84e8fbe574529ca6cde44b78c55fa6293bfb7979d47a6d08', answer: B}
+  g12-chemistry-1-1-q022: {hash: '5fa5e35093460300d46efae5d0bebb40d06a38eb471f218ccb3d0d2ed7648934', answer: D}
+  g12-chemistry-1-1-q023: {hash: '6352f6d7ccd045addff70dce71b88719723d3fb46c868aee8c564bba2fe2da25', answer: 'neutralisation', note: 'Accept the US spelling ''neutralization'' too.'}
+  g12-chemistry-1-1-q024: {hash: '282242156defd3954a2c5a282198a1f1fefb59088457846ea1c1b4d5630dcb06', answer: 'amphiprotic', note: 'Many students and textbooks also say ''amphoteric'' for water; consider accepting it as an alternative answer.'}
+  g12-chemistry-1-1-q025: {hash: '1c894812d301498c747a2cc241459e8b31c582e53513f28711cc604a76b1a2b4', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-chemistry-1-1-q026: {hash: 'beb2d6e01592e507dcf81e6d10de2db42d45880f0bd0c60e59ca7d875d719330', answer: [C, D, A, B]}
+  g12-chemistry-1-1-q027: {hash: '6c39c5477003b9c2ce50f8bfd8e5fd29f22b750c598f14b912d29629e1983e77', answer: A}
+  g12-chemistry-1-1-q028: {hash: 'b943cad6ee253de554c60ced637454eaab458148bb8dbb732e22d5965d489560', answer: B}
+  g12-chemistry-1-1-q029: {hash: '0b5a2e88787bd9ab1f05ef4046472f7a97a903747771d3bd19e104bbb1644e7b', answer: D}
+  g12-chemistry-1-1-q030: {hash: 'e81e0f6b26f13b33ada945179070c2a2e953fa6f3f58336f892830fa70ce81cf', answer: C}
