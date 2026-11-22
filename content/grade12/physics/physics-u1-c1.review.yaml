@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-1-1-q001: {hash: '8097068025654a667f853416b95b29c5204663df25edeaebf73a60de3c4423a5', answer: B}
+  g12-physics-1-1-q002: {hash: 'ef12d89e2f0802635073684734b05d393a4523cfef31a2a3d7aedf782128386b', answer: A}
+  g12-physics-1-1-q003: {hash: 'e881d5183365cf36094f468aa505279f63582c97046a82f31ccf605eeb74ca1a', answer: 10}
+  g12-physics-1-1-q004: {hash: '6962996afdc33cdca7891d16b61d5d9935a75e317b8506a1861165d017507f66', answer: C}
+  g12-physics-1-1-q005: {hash: 'dd6d0d9c315435eeb35e58e7a3239fe08c3478a98f97025f0b825177953c53e3', answer: D}
+  g12-physics-1-1-q006: {hash: '66133ffeff1356ce17bcc65a0fdab186625280b9965ed29edb193268b7286c42', answer: true}
+  g12-physics-1-1-q007: {hash: 'ec70293cf438993c0f12afcfed836f4cd95e2580da1a7323c4f747237668d525', answer: A, note: 'Minor: options C (plane mirror) and D (prism) are not lenses, so they are weak distractors and the question asks "what kind of lens". Consider replacing with lens-type distractors (e.g. cylindrical lens). Key itself is fine.'}
+  g12-physics-1-1-q008: {hash: '8e5cc8126117416bf359b15b28564682c340ca3fbaef5f8f465d9ce90b202e8a', answer: B}
+  g12-physics-1-1-q009: {hash: '9a8bca405309bf5eaf4cac5b4586d63975d9c8e8a59441b36526268a82567e52', answer: C}
+  g12-physics-1-1-q010: {hash: '4032d8d9497a4b6618fdefdad462892da7dfef9c97456592694de71e1fec4c86', answer: D}
+  g12-physics-1-1-q011: {hash: '31aaf1ba009d72451fc104b8586f1c4ce00d57b0f324f83b8635fad2dcd4039c', answer: A}
+  g12-physics-1-1-q012: {hash: '21f75f8756bce154d85d329114b563c0867caa901137e431c6a98b8a689a599b', answer: 1.44}
+  g12-physics-1-1-q013: {hash: 'dff9872c982f5933fc9e86ae0da0f7040cd3b50b159f13d54c9db5f93bc41ef4', answer: B}
+  g12-physics-1-1-q014: {hash: 'a21ecdcc5798b6655d227565b48dcf9f91cdf1d6e6df51442b2bf8a4630ee58e', answer: [A, B, C]}
+  g12-physics-1-1-q015: {hash: '08ad5dbc8e23dcc8513232dec682cbc44b553781db0d4a624f234baee16d064d', answer: 'half-life'}
+  g12-physics-1-1-q016: {hash: 'ff4abaa506bd8e48bc389ea6d955bba1b09a6bdd5265f31ed3173b067beab7af', answer: C}
+  g12-physics-1-1-q017: {hash: '9760c2aa1f0d28f2e8dda45582664fd2de6726daa878b73a9593e16b38ab66a0', answer: true}
+  g12-physics-1-1-q018: {hash: '52d1ef2dcb0c8f131600b5c450d3878f76d0d3aa6e51d195f0b9cefb2e891179', answer: D}
+  g12-physics-1-1-q019: {hash: '8910a5691b8582ba168e297443efc54eae363d3e3a00de7524fb4c6fd238738b', answer: A}
+  g12-physics-1-1-q020: {hash: '1e7487e4133113f6a1fcb00e3fdadbf533a1e37b526dfb5e17afc8e9988ca0ef', answer: B}
+  g12-physics-1-1-q021: {hash: '5b3b952c170e040a2f66c2607f7833046df453a34cb219ee009304c9169e072c', answer: C}
+  g12-physics-1-1-q022: {hash: 'aa5e680d2a66fbc102ab8e73f2cfdd6c52215b0b74e0bcbd40335905ef39598a', answer: {L1: R2, L2: R4, L3: R1}}
+  g12-physics-1-1-q023: {hash: '06696518f297aaa9df34d4f4ed320637b15b5ff1b67e1c4e22931c7408d0e105', answer: [A, B, C, D]}
+  g12-physics-1-1-q024: {hash: '562f6ef6170cb64c1193ba69114447c987922233fd651872fd252348ae7df677', answer: D}
+  g12-physics-1-1-q025: {hash: 'e80cb1aa831c667d43393ba548af8b9ae6ef1af009d5d865065cf45e6aa5835d', answer: A}
+  g12-physics-1-1-q026: {hash: '8a46f0ef881bc1b12127cc3ab3bdd87bb5298e81ed37aabfeddf7a0e2c9cb0c0', answer: false}
+  g12-physics-1-1-q027: {hash: 'f972bfb374579ac2632465404732504f7c007163072fa19b6a4d6c7809358653', answer: B}
+  g12-physics-1-1-q028: {hash: '340cd2e7f631bb3241effb84f207d8c6d9d2d912964b2f0f60286491323e1bf7', answer: C}
+  g12-physics-1-1-q029: {hash: 'f90d05bc1327023fa2fb81fd2494af31aab5c18ae411d0d0258d68909e8aa642', answer: D}
+  g12-physics-1-1-q030: {hash: '6876cce41475f2805d3610816f6144b1df7ae8a9341cf4e7cf8b341631e69ba7', answer: A}

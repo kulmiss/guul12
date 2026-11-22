@@ -114,12 +114,12 @@ questions:
   - uid: g12-physics-1-1-q007
     type: single_choice
     difficulty: 1
-    stem: 'What kind of lens is the lens of the human eye?'
+    stem: 'Which statement best describes the lens of the human eye?'
     options:
-      A: 'A converging (convex) lens'
-      B: 'A diverging (concave) lens'
-      C: 'A plane mirror'
-      D: 'A prism'
+      A: 'A converging lens that forms a real image on the retina'
+      B: 'A diverging lens that forms a virtual image on the retina'
+      C: 'A converging lens that forms a virtual image in front of the eye'
+      D: 'A diverging lens that forms a real image behind the retina'
     answer: A
     explanation: 'The eye lens brings light rays together to form a real image on the retina, so it is converging.'
 

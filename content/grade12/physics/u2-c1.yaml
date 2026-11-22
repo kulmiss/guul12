@@ -1,0 +1,384 @@
+summary:
+  key_points:
+    - 'A projectile moves under gravity alone (air resistance ignored). Its path is a parabola.'
+    - 'Treat the motion as two independent parts: horizontal motion at constant velocity $v_x = v_0 \cos\theta$, and vertical motion with constant acceleration $g$ downward.'
+    - 'At the highest point the vertical velocity is zero; the velocity is horizontal and equals $v_0 \cos\theta$. The acceleration is still $g$ downward.'
+    - 'Time of flight depends only on the vertical motion. A ball dropped and a ball thrown horizontally from the same height land at the same time.'
+    - 'On level ground the range is greatest at $45°$. Angles that add up to $90°$ (such as $30°$ and $60°$) give the same range.'
+    - 'Doubling the launch speed (same angle) doubles the time of flight and multiplies the range and maximum height by 4.'
+    - 'In this chapter use $g = 10$ m/s² unless told otherwise.'
+  formulas:
+    - label: Components of the launch velocity
+      latex: 'v_x = v_0 \cos\theta, \quad v_y = v_0 \sin\theta'
+    - label: Time of flight (level ground)
+      latex: 'T = \frac{2 v_0 \sin\theta}{g}'
+    - label: Maximum height
+      latex: 'H = \frac{v_0^2 \sin^2\theta}{2g}'
+    - label: Range (level ground)
+      latex: 'R = \frac{v_0^2 \sin 2\theta}{g}'
+    - label: Horizontal launch from height h
+      latex: 't = \sqrt{\frac{2h}{g}}, \quad x = v_0 t'
+
+solved_exercises:
+  - uid: g12-physics-2-1-se01
+    problem: 'A stone is thrown horizontally at 12 m/s from the top of an 80 m cliff. How long does it take to land, and how far from the cliff does it land? ($g = 10$ m/s²)'
+    steps:
+      - 'Vertical: $80 = \frac{1}{2}(10)t^2$, so $t^2 = 16$ and $t = 4$ s.'
+      - 'Horizontal: $x = 12 \times 4 = 48$ m.'
+    answer: '4 s; 48 m from the cliff.'
+  - uid: g12-physics-2-1-se02
+    problem: 'A football is kicked at 25 m/s at $37°$ above the ground. Take $\sin 37° = 0.6$, $\cos 37° = 0.8$, $g = 10$ m/s². Find the time of flight, the maximum height and the range.'
+    steps:
+      - 'Components: $v_x = 25 \times 0.8 = 20$ m/s and $v_y = 25 \times 0.6 = 15$ m/s.'
+      - 'Time to the top: $\frac{15}{10} = 1.5$ s, so the time of flight is 3 s.'
+      - 'Maximum height: $\frac{15^2}{2 \times 10} = 11.25$ m.'
+      - 'Range: $20 \times 3 = 60$ m.'
+    answer: '3 s; 11.25 m; 60 m'
+  - uid: g12-physics-2-1-se03
+    problem: 'Show that launch angles of $30°$ and $60°$ give the same range for the same speed.'
+    steps:
+      - '$R = \frac{v_0^2 \sin 2\theta}{g}$.'
+      - 'For $30°$: $\sin 60°$. For $60°$: $\sin 120° = \sin 60°$.'
+      - 'The two values are equal, so the ranges are equal.'
+    answer: 'Both give $R = \frac{v_0^2 \sin 60°}{g}$.'
+
+flashcards:
+  - {uid: g12-physics-2-1-fc01, term: Projectile, definition: 'An object moving only under the force of gravity after it is launched.'}
+  - {uid: g12-physics-2-1-fc02, term: Trajectory, definition: 'The path of a projectile; a parabola when air resistance is ignored.'}
+  - {uid: g12-physics-2-1-fc03, term: Horizontal velocity of a projectile, definition: 'Constant: $v_0 \cos\theta$.'}
+  - {uid: g12-physics-2-1-fc04, term: Vertical acceleration of a projectile, definition: '$g$ downward, the same at every point of the flight.'}
+  - {uid: g12-physics-2-1-fc05, term: Time of flight, definition: 'Total time in the air: $\frac{2 v_0 \sin\theta}{g}$ on level ground.'}
+  - {uid: g12-physics-2-1-fc06, term: Range, definition: 'Horizontal distance travelled: $\frac{v_0^2 \sin 2\theta}{g}$ on level ground.'}
+  - {uid: g12-physics-2-1-fc07, term: Maximum height, definition: '$\frac{v_0^2 \sin^2\theta}{2g}$, reached when the vertical velocity is zero.'}
+  - {uid: g12-physics-2-1-fc08, term: Angle for maximum range, definition: '$45°$ on level ground (no air resistance).'}
+  - {uid: g12-physics-2-1-fc09, term: Independence of motions, definition: 'Horizontal and vertical motions do not affect each other.'}
+
+questions:
+  - uid: g12-physics-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Ignoring air resistance, what happens to the horizontal velocity of a projectile during its flight?'
+    options:
+      A: 'It stays constant.'
+      B: 'It increases steadily.'
+      C: 'It decreases to zero at the top.'
+      D: 'It changes direction at the top.'
+    answer: A
+    explanation: 'No horizontal force acts on the projectile, so its horizontal velocity does not change.'
+
+  - uid: g12-physics-2-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the acceleration of a projectile at the highest point of its path?'
+    options:
+      A: 'Zero'
+      B: '$g$ upward'
+      C: '$g$ downward'
+      D: 'It is horizontal.'
+    answer: C
+    explanation: 'Gravity acts at every point, so the acceleration is always $g$ downward — even at the top, where only the vertical velocity is zero.'
+
+  - uid: g12-physics-2-1-q003
+    type: numeric
+    difficulty: 1
+    stem: 'A ball is thrown horizontally from the top of a building 45 m high. How long, in seconds, does it take to reach the ground? ($g = 10$ m/s²)'
+    answer: {value: 3, tolerance: 0, unit: s}
+    explanation: '$45 = \frac{1}{2}(10)t^2$ gives $t^2 = 9$ and $t = 3$ s.'
+
+  - uid: g12-physics-2-1-q004
+    type: numeric
+    difficulty: 2
+    stem: 'A ball rolls off a 20 m high cliff with a horizontal speed of 8 m/s. How far from the foot of the cliff, in metres, does it land? ($g = 10$ m/s²)'
+    answer: {value: 16, tolerance: 0, unit: m}
+    explanation: 'Fall time: $20 = 5t^2$, so $t = 2$ s. Horizontal distance: $8 \times 2 = 16$ m.'
+
+  - uid: g12-physics-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'A ball is kicked at 20 m/s at $30°$ above level ground. What is its time of flight? ($g = 10$ m/s²)'
+    options:
+      A: '1 s'
+      B: '2 s'
+      C: '4 s'
+      D: '3.5 s'
+    answer: B
+    explanation: '$T = \frac{2 v_0 \sin\theta}{g} = \frac{2 \times 20 \times 0.5}{10} = 2$ s.'
+
+  - uid: g12-physics-2-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'A ball is kicked at 20 m/s at $30°$ above level ground. What maximum height does it reach? ($g = 10$ m/s²)'
+    options:
+      A: '10 m'
+      B: '20 m'
+      C: '2.5 m'
+      D: '5 m'
+    answer: D
+    explanation: 'Vertical component: $20 \sin 30° = 10$ m/s. $H = \frac{10^2}{2 \times 10} = 5$ m.'
+
+  - uid: g12-physics-2-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'A stone is thrown at 20 m/s at $45°$ above level ground. What is its range? ($g = 10$ m/s²)'
+    options:
+      A: '40 m'
+      B: '20 m'
+      C: '80 m'
+      D: '28 m'
+    answer: A
+    explanation: '$R = \frac{v_0^2 \sin 90°}{g} = \frac{400 \times 1}{10} = 40$ m.'
+
+  - uid: g12-physics-2-1-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'Ignoring air resistance, at what launch angle is the range on level ground greatest?'
+    options:
+      A: '$30°$'
+      B: '$60°$'
+      C: '$45°$'
+      D: '$90°$'
+    answer: C
+    explanation: '$R = \frac{v_0^2 \sin 2\theta}{g}$ is largest when $\sin 2\theta = 1$, that is $2\theta = 90°$ and $\theta = 45°$.'
+
+  - uid: g12-physics-2-1-q009
+    type: true_false
+    difficulty: 2
+    stem: 'With the same launch speed on level ground, projectiles launched at $30°$ and at $60°$ have the same range.'
+    answer: true
+    explanation: '$\sin 60° = \sin 120°$, so $\sin 2\theta$ is the same for both angles. The $60°$ projectile goes higher and stays up longer but lands at the same place.'
+
+  - uid: g12-physics-2-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'A projectile is launched with speed $v_0$ at angle $\theta$. What is its velocity at the highest point?'
+    options:
+      A: 'Zero'
+      B: '$v_0 \cos\theta$, horizontal'
+      C: '$v_0 \sin\theta$, vertical'
+      D: '$v_0$, at angle $\theta$'
+    answer: B
+    explanation: 'At the top the vertical velocity is zero, leaving only the unchanged horizontal velocity $v_0 \cos\theta$.'
+
+  - uid: g12-physics-2-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'A shell is fired at 50 m/s at $37°$ above the horizontal. Take $\sin 37° = 0.6$ and $\cos 37° = 0.8$. What is the vertical component of its initial velocity?'
+    options:
+      A: '40 m/s'
+      B: '50 m/s'
+      C: '20 m/s'
+      D: '30 m/s'
+    answer: D
+    explanation: '$v_y = 50 \sin 37° = 50 \times 0.6 = 30$ m/s. (The horizontal component is $50 \times 0.8 = 40$ m/s.)'
+
+  - uid: g12-physics-2-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A projectile has an initial vertical velocity of 30 m/s upward. How long does it take to reach its highest point? ($g = 10$ m/s²)'
+    options:
+      A: '3 s'
+      B: '6 s'
+      C: '1.5 s'
+      D: '30 s'
+    answer: A
+    explanation: 'The vertical velocity falls by 10 m/s each second: $t = \frac{30}{10} = 3$ s.'
+
+  - uid: g12-physics-2-1-q013
+    type: numeric
+    difficulty: 3
+    stem: 'A shell is fired at 50 m/s at $37°$ above level ground. Take $\sin 37° = 0.6$, $\cos 37° = 0.8$ and $g = 10$ m/s². What is its range, in metres?'
+    answer: {value: 240, tolerance: 0, unit: m}
+    explanation: '$v_x = 40$ m/s and $v_y = 30$ m/s. Time of flight $= \frac{2 \times 30}{10} = 6$ s. Range $= 40 \times 6 = 240$ m.'
+
+  - uid: g12-physics-2-1-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Ignoring air resistance, which quantities change during the flight of a projectile? Choose all that apply.'
+    options:
+      A: 'Its vertical velocity'
+      B: 'Its horizontal velocity'
+      C: 'Its height'
+      D: 'Its acceleration'
+    answer: [A, C]
+    explanation: 'The vertical velocity and the height change. The horizontal velocity and the acceleration ($g$ downward) stay constant.'
+
+  - uid: g12-physics-2-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'Ignoring air resistance, the path of a projectile is a ________.'
+    answer: [parabola, parabolic path, parabolic curve]
+    explanation: 'Constant horizontal velocity combined with constant vertical acceleration gives a parabola.'
+
+  - uid: g12-physics-2-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'From the same height and at the same moment, ball P is dropped and ball Q is thrown horizontally. Ignoring air resistance, which lands first?'
+    options:
+      A: 'Ball P'
+      B: 'Ball Q'
+      C: 'They land at the same time.'
+      D: 'It depends on their masses.'
+    answer: C
+    explanation: 'Both start with zero vertical velocity and fall with the same acceleration, so they take the same time. Q simply lands farther away.'
+
+  - uid: g12-physics-2-1-q017
+    type: true_false
+    difficulty: 1
+    stem: 'Air resistance makes a real projectile travel farther than the formula for range predicts.'
+    answer: false
+    explanation: 'Air resistance opposes the motion and removes energy, so the real range is shorter.'
+
+  - uid: g12-physics-2-1-q018
+    type: single_choice
+    difficulty: 3
+    stem: 'A stone is thrown horizontally at 15 m/s from a cliff and lands 2 s later. What is its speed just before it lands? ($g = 10$ m/s²)'
+    options:
+      A: '35 m/s'
+      B: '25 m/s'
+      C: '20 m/s'
+      D: '15 m/s'
+    answer: B
+    explanation: 'Vertical velocity after 2 s: $10 \times 2 = 20$ m/s. Speed $= \sqrt{15^2 + 20^2} = \sqrt{625} = 25$ m/s.'
+
+  - uid: g12-physics-2-1-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Which formula gives the range of a projectile on level ground?'
+    options:
+      A: '$\frac{v_0^2 \sin^2\theta}{2g}$'
+      B: '$\frac{2 v_0 \sin\theta}{g}$'
+      C: '$v_0 \cos\theta$'
+      D: '$\frac{v_0^2 \sin 2\theta}{g}$'
+    answer: D
+    explanation: 'Range $= v_x \times T = v_0 \cos\theta \times \frac{2 v_0 \sin\theta}{g} = \frac{v_0^2 \sin 2\theta}{g}$. A is maximum height and B is time of flight.'
+
+  - uid: g12-physics-2-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'The launch speed of a projectile is doubled while the angle stays the same. What happens to its range on level ground?'
+    options:
+      A: 'It becomes 4 times as large.'
+      B: 'It doubles.'
+      C: 'It stays the same.'
+      D: 'It halves.'
+    answer: A
+    explanation: 'The range is proportional to $v_0^2$, so doubling $v_0$ multiplies the range by $2^2 = 4$.'
+
+  - uid: g12-physics-2-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Which change always makes a projectile stay longer in the air (level ground, no air resistance)?'
+    options:
+      A: 'A larger horizontal velocity'
+      B: 'A heavier projectile'
+      C: 'A larger vertical component of the launch velocity'
+      D: 'A smaller launch angle with the same speed'
+    answer: C
+    explanation: 'Time of flight $= \frac{2v_y}{g}$ depends only on the vertical component. Mass and horizontal speed do not affect it.'
+
+  - uid: g12-physics-2-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each quantity with its formula (launch speed $v_0$, angle $\theta$, level ground).'
+    left:
+      L1: 'Time of flight'
+      L2: 'Maximum height'
+      L3: 'Range'
+    right:
+      R1: '$\frac{v_0^2 \sin 2\theta}{g}$'
+      R2: '$\frac{2 v_0 \sin\theta}{g}$'
+      R3: '$v_0 \cos\theta$'
+      R4: '$\frac{v_0^2 \sin^2\theta}{2g}$'
+    answer: {L1: R2, L2: R4, L3: R1}
+    explanation: 'Time of flight is twice the time to the top; maximum height comes from $v_y^2 = 2gH$; range is $v_x \times T$. $v_0 \cos\theta$ is the horizontal velocity.'
+
+  - uid: g12-physics-2-1-q023
+    type: ordering
+    difficulty: 3
+    stem: 'Projectiles are launched at the same speed from level ground at these angles. Put them in order of range, from shortest to longest.'
+    items:
+      A: '$15°$'
+      B: '$30°$'
+      C: '$45°$'
+      D: '$85°$'
+    answer: [D, A, B, C]
+    explanation: 'Range is proportional to $\sin 2\theta$: $\sin 170° = \sin 10° \approx 0.17$, $\sin 30° = 0.5$, $\sin 60° \approx 0.87$, $\sin 90° = 1$.'
+
+  - uid: g12-physics-2-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'A ball rolls off a table 1.25 m high. How long does it take to hit the floor? ($g = 10$ m/s²)'
+    options:
+      A: '0.25 s'
+      B: '0.5 s'
+      C: '1 s'
+      D: 'It depends on the ball''s speed.'
+    answer: B
+    explanation: '$1.25 = 5t^2$, so $t^2 = 0.25$ and $t = 0.5$ s. The horizontal speed does not affect the fall time.'
+
+  - uid: g12-physics-2-1-q025
+    type: single_choice
+    difficulty: 1
+    stem: 'An object is launched horizontally. How far has it fallen vertically after 1 s? ($g = 10$ m/s²)'
+    options:
+      A: '10 m'
+      B: '1 m'
+      C: '20 m'
+      D: '5 m'
+    answer: D
+    explanation: '$y = \frac{1}{2}gt^2 = \frac{1}{2}(10)(1)^2 = 5$ m.'
+
+  - uid: g12-physics-2-1-q026
+    type: true_false
+    difficulty: 1
+    stem: 'The vertical motion of a projectile is motion with constant acceleration.'
+    answer: true
+    explanation: 'Vertically the projectile always accelerates at $g$ downward, so the equations of uniformly accelerated motion apply.'
+
+  - uid: g12-physics-2-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'At which point of its path does a projectile (launched at an angle above the horizontal) have its smallest speed?'
+    options:
+      A: 'At the highest point'
+      B: 'At the launch point'
+      C: 'Just before landing'
+      D: 'Its speed is the same everywhere.'
+    answer: A
+    explanation: 'At the top the vertical velocity is zero, so the speed equals the horizontal velocity alone — the smallest it gets.'
+
+  - uid: g12-physics-2-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'A ball is kicked at 20 m/s at $30°$ above the ground. What is its horizontal velocity? ($\cos 30° = \frac{\sqrt{3}}{2}$)'
+    options:
+      A: '10 m/s'
+      B: '20 m/s'
+      C: '$10\sqrt{3}$ m/s'
+      D: '$20\sqrt{3}$ m/s'
+    answer: C
+    explanation: '$v_x = 20 \cos 30° = 20 \times \frac{\sqrt{3}}{2} = 10\sqrt{3} \approx 17.3$ m/s.'
+
+  - uid: g12-physics-2-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'A bullet is fired horizontally at 300 m/s towards a target 150 m away. How far does it drop before reaching the target? ($g = 10$ m/s²)'
+    options:
+      A: '0.5 m'
+      B: '1.25 m'
+      C: '5 m'
+      D: '2.5 m'
+    answer: B
+    explanation: 'Time to reach the target: $\frac{150}{300} = 0.5$ s. Drop: $\frac{1}{2}(10)(0.5)^2 = 1.25$ m.'
+
+  - uid: g12-physics-2-1-q030
+    type: single_choice
+    difficulty: 3
+    stem: 'A plane flying horizontally at 100 m/s at a height of 500 m drops a food package. How far ahead of the drop point does the package land? ($g = 10$ m/s², no air resistance)'
+    options:
+      A: '500 m'
+      B: '5 000 m'
+      C: '100 m'
+      D: '1 000 m'
+    answer: D
+    explanation: 'Fall time: $500 = 5t^2$, so $t = 10$ s. Horizontal distance: $100 \times 10 = 1000$ m.'

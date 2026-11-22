@@ -78,17 +78,22 @@ subjects:
     chapters:
     - number: 1
       title: Projectile motion
+      file: physics/u2-c1.yaml
     - number: 2
       title: Circular and rotational motion
+      file: physics/u2-c2.yaml
     - number: 3
       title: Gravitation and planetary motion
+      file: physics/u2-c3.yaml
   - number: 3
     title: Fluid Mechanics
     chapters:
     - number: 1
       title: 'Fluid statics: pressure, Pascal and Archimedes'
+      file: physics/u3-c1.yaml
     - number: 2
       title: 'Fluid flow: continuity and Bernoulli'
+      file: physics/u3-c2.yaml
   - number: 4
     title: Electromagnetism
     chapters:

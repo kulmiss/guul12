@@ -175,7 +175,7 @@ questions:
       C: '12 hours'
       D: '365 days'
     answer: A
-    explanation: 'It goes round once while the Earth turns once, so it keeps pace with the ground below.'
+    explanation: 'It goes round once while the Earth turns once, so it keeps pace with the ground below. (Strictly one turn of the Earth takes about 23 h 56 min, usually rounded to 24 hours.)'
 
   - uid: g12-physics-1-2-q013
     type: single_choice
@@ -205,7 +205,7 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'The test that records the electrical activity of the heart is called an ________ (write the full name or its letters).'
-    answer: [electrocardiogram, ECG, EKG, electrocardiograph]
+    answer: [electrocardiogram, ECG, EKG, electrocardiograph, electrocardiogram (ECG)]
     explanation: 'An electrocardiogram (ECG) records the small voltages produced by the heart muscle.'
 
   - uid: g12-physics-1-2-q016

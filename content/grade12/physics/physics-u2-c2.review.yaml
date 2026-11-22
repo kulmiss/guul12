@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-2-2-q001: {hash: '14225ccc4923f174a43ddbfdb26354d23b98121c3b846c231d0516391d421cf0', answer: B}
+  g12-physics-2-2-q002: {hash: 'a59c7514bc4999e704df7502afb23944198ebe82e99dc53c144ab93dbac57044', answer: D}
+  g12-physics-2-2-q003: {hash: 'cd19ee058dbd2254fe567beea73db6bad12af7de7a25617a4fb9835fd6ec9552', answer: 2}
+  g12-physics-2-2-q004: {hash: '00ef616a3be761a52ea2e768add796465f6c7bc99c57d5e1f0288c8d6a57e1e1', answer: A}
+  g12-physics-2-2-q005: {hash: '6065bc579b2b25ab1f9612697dc5a86f6adc0f7281462c7ef1aad8ddf154474c', answer: C}
+  g12-physics-2-2-q006: {hash: '965c9daf3291899a8c75c325668d3cf3067a19e54bdda73723757bf0afd4bd20', answer: false}
+  g12-physics-2-2-q007: {hash: '847d71428f9bc6f3107200caec99a69d1f78d6c8e14d47d79a64309fca1550ed', answer: A}
+  g12-physics-2-2-q008: {hash: '9377eb098ea8bca97cee78e59f756cbd220559bde14e45f2467020344923c7e0', answer: B}
+  g12-physics-2-2-q009: {hash: 'd570988292205db6f445307c36606777f35d4a181d90e310dfce800377a98fef', answer: 10}
+  g12-physics-2-2-q010: {hash: '4fe510f9b09533fb3a8cffa3b3c2ac9b9248a989c38accac17d512288f6139ed', answer: C}
+  g12-physics-2-2-q011: {hash: '516cc5b79644e60b988f32e8833b65b70d5603ab1dc8381bf954070e7cea1180', answer: D}
+  g12-physics-2-2-q012: {hash: '73bdbb50a951b7f28b2e20b15fe0eea7235b79d89064c8e2ae564399062f4780', answer: A}
+  g12-physics-2-2-q013: {hash: '41832b2d178bfbb187bb42e759c177de67fc70137215017a86d6f4c2d5339567', answer: B}
+  g12-physics-2-2-q014: {hash: '0aabb65b9d2805ff1b5d194804314ebaa9efa05961de44242bdf9032e9f8e642', answer: [A, C]}
+  g12-physics-2-2-q015: {hash: '33f91d25c6c9314d007e7ea0f8245f9a92b56067603064451f4375d7e018d00d', answer: 'torque', note: 'Ethiopian textbooks also call this the "moment of a force" (or "moment"); the fill-in marking should accept moment / moment of force as well as torque.'}
+  g12-physics-2-2-q016: {hash: '70efb21b210411e8774128c56660a33da3e321ad2d58eaf74aad9b447bfc9752', answer: C}
+  g12-physics-2-2-q017: {hash: 'c968ab956e133d3a537ca30a56229ee7642cf236a3df0875ec9729fe712e5424', answer: true}
+  g12-physics-2-2-q018: {hash: '4311336453274b6a5ac27a148831eda99ebd46093192ffa481f94c8f42280889', answer: D}
+  g12-physics-2-2-q019: {hash: '8553f0eea39e8191705cfd429a6affa72cafa34bca82ff7aa17c4aa6ed919fa0', answer: A}
+  g12-physics-2-2-q020: {hash: '40edf4777b6a2f8c9563c602ab2b395579cf918ba211256909cb57e513e86d75', answer: B}
+  g12-physics-2-2-q021: {hash: '010e12592114096c13941d4cd8e9ba3a09a19a46a6ab76a5f604ea202d8e1022', answer: C}
+  g12-physics-2-2-q022: {hash: '6d6d77394b8ecf8f947d61b5e692a28958895ba0922d4aa7ce5b9e85957b2620', answer: {L1: R2, L2: R4, L3: R1}}
+  g12-physics-2-2-q023: {hash: '2e032647365def3407643862cb68d3a864bec3dc1c26b87d6664df2c3df489ff', answer: [A, C, B, D]}
+  g12-physics-2-2-q024: {hash: '686eda00262ee94729a71d0e06336c28ab6b9aaedfd4a9346eb82d12b036e718', answer: D}
+  g12-physics-2-2-q025: {hash: '4998278e821f758ddb18b6a0127f791a49b99680296d8cffb99920bc8b55d6ee', answer: A}
+  g12-physics-2-2-q026: {hash: 'e99fa124ae41990adb11b4482f1b272330caaebf44a7361122ffec67070ff774', answer: false}
+  g12-physics-2-2-q027: {hash: 'd9abe98ed6f2701a5cfc42979bed78b6bfc8bd7f55eb29f81dbc24b36fcb6e13', answer: B}
+  g12-physics-2-2-q028: {hash: '35fe934a6ad8509a3496492722292b0cba30cb13707cf2e0571dcff2d77c1929', answer: C}
+  g12-physics-2-2-q029: {hash: '9ef3efe868b319db2137111c5977d075ca5e007d2714d6fecca0c65b9b013b85', answer: D}
+  g12-physics-2-2-q030: {hash: '3e9ab1ecc71a9ee31e6270b6b4ac4b28313aa67dc21055ab2a4179b1913fa6cf', answer: A}

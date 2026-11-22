@@ -1,0 +1,386 @@
+summary:
+  key_points:
+    - 'In streamline (laminar) flow every particle follows a smooth path and the paths do not cross; at high speeds flow becomes turbulent, with swirls and eddies.'
+    - 'An ideal fluid is incompressible and non-viscous, and its flow is steady.'
+    - 'Volume flow rate $Q = Av$ (m³/s). The continuity equation $A_1 v_1 = A_2 v_2$ says what goes in must come out (conservation of mass): where a pipe narrows, the fluid speeds up.'
+    - 'Bernoulli''s principle: along a streamline $P + \frac{1}{2}\rho v^2 + \rho g h$ is constant (conservation of energy). Where a fluid moves faster, its pressure is lower.'
+    - 'Applications: lift on aircraft wings, sprayers and carburettors (Venturi effect), roofs lifted by strong winds, and two boats moving side by side being pulled together.'
+    - 'Torricelli''s law: liquid leaves a hole a depth $h$ below the surface with speed $v = \sqrt{2gh}$.'
+    - 'Viscosity is internal friction in a fluid; honey is very viscous, water much less.'
+  formulas:
+    - label: Volume flow rate
+      latex: 'Q = Av'
+    - label: Continuity equation
+      latex: 'A_1 v_1 = A_2 v_2'
+    - label: Bernoulli's equation
+      latex: 'P + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}'
+    - label: Torricelli's law
+      latex: 'v = \sqrt{2gh}'
+    - label: Horizontal pipe pressure drop
+      latex: 'P_1 - P_2 = \frac{1}{2}\rho\left(v_2^2 - v_1^2\right)'
+
+solved_exercises:
+  - uid: g12-physics-3-2-se01
+    problem: 'Water flows at 1.5 m/s in a pipe of cross-sectional area 6 cm². The pipe narrows to 2 cm². Find the speed in the narrow part and the flow rate.'
+    steps:
+      - 'Continuity: $6 \times 1.5 = 2 \times v_2$, so $v_2 = 4.5$ m/s.'
+      - 'Flow rate: $Q = A v = 6 \times 10^{-4} \times 1.5 = 9 \times 10^{-4}$ m³/s.'
+    answer: '4.5 m/s; $9 \times 10^{-4}$ m³/s'
+  - uid: g12-physics-3-2-se02
+    problem: 'In a horizontal pipe, water speeds up from 1 m/s to 3 m/s. What is the pressure drop? ($\rho = 1000$ kg/m³)'
+    steps:
+      - '$P_1 - P_2 = \frac{1}{2}\rho(v_2^2 - v_1^2) = \frac{1}{2} \times 1000 \times (9 - 1)$.'
+      - '$= 500 \times 8 = 4000$ Pa.'
+    answer: '4 000 Pa'
+  - uid: g12-physics-3-2-se03
+    problem: 'A water tank has a small hole 1.8 m below the water surface. How fast does water come out? ($g = 10$ m/s²)'
+    steps:
+      - '$v = \sqrt{2gh} = \sqrt{2 \times 10 \times 1.8} = \sqrt{36}$.'
+      - '$v = 6$ m/s.'
+    answer: '6 m/s'
+
+flashcards:
+  - {uid: g12-physics-3-2-fc01, term: Streamline flow, definition: 'Smooth flow in which fluid particles follow paths that do not cross.'}
+  - {uid: g12-physics-3-2-fc02, term: Turbulent flow, definition: 'Irregular flow with eddies, usually at high speeds.'}
+  - {uid: g12-physics-3-2-fc03, term: Ideal fluid, definition: 'Incompressible, non-viscous, with steady flow.'}
+  - {uid: g12-physics-3-2-fc04, term: Volume flow rate, definition: 'Volume passing per second: $Q = Av$.'}
+  - {uid: g12-physics-3-2-fc05, term: Continuity equation, definition: '$A_1v_1 = A_2v_2$: narrower section, faster flow.'}
+  - {uid: g12-physics-3-2-fc06, term: Bernoulli's principle, definition: 'Faster-moving fluid has lower pressure; energy per unit volume is conserved.'}
+  - {uid: g12-physics-3-2-fc07, term: Venturi effect, definition: 'Pressure drops where a fluid flows through a narrow section.'}
+  - {uid: g12-physics-3-2-fc08, term: Viscosity, definition: 'Internal friction that resists the flow of a fluid.'}
+  - {uid: g12-physics-3-2-fc09, term: Torricelli's law, definition: 'Speed of efflux from a hole at depth $h$: $\sqrt{2gh}$.'}
+
+questions:
+  - uid: g12-physics-3-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Water flows at 2 m/s through a pipe of area 4 cm². The pipe narrows to 1 cm². What is the speed in the narrow part?'
+    options:
+      A: '0.5 m/s'
+      B: '2 m/s'
+      C: '8 m/s'
+      D: '4 m/s'
+    answer: C
+    explanation: '$A_1 v_1 = A_2 v_2$: $4 \times 2 = 1 \times v_2$, so $v_2 = 8$ m/s.'
+
+  - uid: g12-physics-3-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Water moves at 3 m/s through a pipe of cross-sectional area 0.02 m². What is the volume flow rate?'
+    options:
+      A: '0.06 m³/s'
+      B: '0.6 m³/s'
+      C: '150 m³/s'
+      D: '0.0067 m³/s'
+    answer: A
+    explanation: '$Q = Av = 0.02 \times 3 = 0.06$ m³/s.'
+
+  - uid: g12-physics-3-2-q003
+    type: numeric
+    difficulty: 2
+    stem: 'A tank has a small hole 5 m below the water surface. At what speed, in m/s, does water leave the hole? ($g = 10$ m/s²)'
+    answer: {value: 10, tolerance: 0, unit: m/s}
+    explanation: '$v = \sqrt{2gh} = \sqrt{2 \times 10 \times 5} = \sqrt{100} = 10$ m/s.'
+
+  - uid: g12-physics-3-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'According to Bernoulli''s principle, where a fluid flows faster (at the same height), its pressure is:'
+    options:
+      A: 'Higher'
+      B: 'Lower'
+      C: 'Unchanged'
+      D: 'Zero'
+    answer: B
+    explanation: '$P + \frac{1}{2}\rho v^2$ stays constant at the same height, so a larger speed means a smaller pressure.'
+
+  - uid: g12-physics-3-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'How does the shape of an aeroplane wing help produce lift?'
+    options:
+      A: 'Air below the wing moves faster, lowering the pressure there.'
+      B: 'The wing is lighter than air.'
+      C: 'The engines push the wing upward.'
+      D: 'Air over the top moves faster, so the pressure above is lower than below.'
+    answer: D
+    explanation: 'The pressure difference between the slower air underneath and the faster air above pushes the wing up.'
+
+  - uid: g12-physics-3-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'When an ideal fluid flows into a narrower part of a pipe, its speed increases.'
+    answer: true
+    explanation: 'The same volume must pass each second, so with a smaller area the speed must be larger ($A_1 v_1 = A_2 v_2$).'
+
+  - uid: g12-physics-3-2-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'When you put your thumb over part of the end of a garden hose, the water squirts farther. Why?'
+    options:
+      A: 'The smaller opening makes the water leave faster.'
+      B: 'The water becomes denser.'
+      C: 'Your thumb adds energy to the water.'
+      D: 'The flow rate increases a lot.'
+    answer: A
+    explanation: 'By continuity, reducing the outlet area increases the speed of the water leaving the hose.'
+
+  - uid: g12-physics-3-2-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'What is streamline flow?'
+    options:
+      A: 'Flow full of swirls and eddies'
+      B: 'Flow of a fluid that does not move'
+      C: 'Smooth flow in which particles follow paths that do not cross'
+      D: 'Flow only in streams and rivers'
+    answer: C
+    explanation: 'In streamline (laminar) flow the fluid moves in smooth layers; swirling flow is turbulent.'
+
+  - uid: g12-physics-3-2-q009
+    type: numeric
+    difficulty: 3
+    stem: 'Water flows at 1.5 m/s in a round pipe. The pipe''s diameter is halved. What is the new speed, in m/s?'
+    answer: {value: 6, tolerance: 0, unit: m/s}
+    explanation: 'Halving the diameter makes the area $\frac{1}{4}$ as large, so the speed becomes 4 times larger: $4 \times 1.5 = 6$ m/s.'
+
+  - uid: g12-physics-3-2-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Honey flows much more slowly than water because honey has a higher:'
+    options:
+      A: 'Temperature'
+      B: 'Viscosity'
+      C: 'Speed'
+      D: 'Transparency'
+    answer: B
+    explanation: 'Viscosity is internal friction in a fluid. Honey''s high viscosity resists flow.'
+
+  - uid: g12-physics-3-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which set of properties describes an ideal fluid?'
+    options:
+      A: 'Compressible, viscous, turbulent'
+      B: 'Compressible, non-viscous, turbulent'
+      C: 'Incompressible, viscous, unsteady'
+      D: 'Incompressible, non-viscous, steady flow'
+    answer: D
+    explanation: 'An ideal fluid keeps a constant density, has no internal friction, and flows steadily.'
+
+  - uid: g12-physics-3-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'The three terms of Bernoulli''s equation, $P + \frac{1}{2}\rho v^2 + \rho g h$, each represent:'
+    options:
+      A: 'Energy per unit volume of the fluid'
+      B: 'Force per unit mass'
+      C: 'Momentum of the fluid'
+      D: 'Power of the fluid'
+    answer: A
+    explanation: 'Pressure, kinetic energy per volume ($\frac{1}{2}\rho v^2$) and potential energy per volume ($\rho g h$) all have units of J/m³ = Pa.'
+
+  - uid: g12-physics-3-2-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'The continuity equation $A_1 v_1 = A_2 v_2$ is a statement of the conservation of:'
+    options:
+      A: 'Energy'
+      B: 'Momentum'
+      C: 'Mass'
+      D: 'Charge'
+    answer: C
+    explanation: 'For an incompressible fluid, the mass (and volume) entering a section per second equals what leaves it.'
+
+  - uid: g12-physics-3-2-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are explained by Bernoulli''s principle? Choose all that apply.'
+    options:
+      A: 'A paint sprayer'
+      B: 'Lift on an aeroplane wing'
+      C: 'A hydraulic jack'
+      D: 'A Venturi meter measuring flow speed'
+    answer: [A, B, D]
+    explanation: 'Sprayers, wings and Venturi meters rely on low pressure in fast-moving fluid. A hydraulic jack uses Pascal''s principle.'
+
+  - uid: g12-physics-3-2-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The internal friction of a fluid, which resists its flow, is called ________.'
+    answer: [viscosity]
+    explanation: 'Viscosity is high for honey and oil and low for water and air.'
+
+  - uid: g12-physics-3-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Water flows through a horizontal Venturi tube that is narrow in the middle. Where is the pressure lowest?'
+    options:
+      A: 'At the wide entrance'
+      B: 'At the narrowest part'
+      C: 'At the wide exit'
+      D: 'The pressure is the same everywhere.'
+    answer: B
+    explanation: 'The water is fastest in the narrowest part, so by Bernoulli''s principle its pressure is lowest there.'
+
+  - uid: g12-physics-3-2-q017
+    type: true_false
+    difficulty: 1
+    stem: 'Bernoulli''s equation is an expression of the conservation of energy for a flowing fluid.'
+    answer: true
+    explanation: 'It balances pressure energy, kinetic energy and potential energy per unit volume along a streamline.'
+
+  - uid: g12-physics-3-2-q018
+    type: single_choice
+    difficulty: 3
+    stem: 'In a horizontal pipe, water speeds up from 2 m/s to 4 m/s. By how much does the pressure drop? ($\rho = 1000$ kg/m³)'
+    options:
+      A: '2 000 Pa'
+      B: '1 000 Pa'
+      C: '8 000 Pa'
+      D: '6 000 Pa'
+    answer: D
+    explanation: '$\Delta P = \frac{1}{2}\rho(v_2^2 - v_1^2) = 500 \times (16 - 4) = 6000$ Pa.'
+
+  - uid: g12-physics-3-2-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'A pipe delivers water at 0.002 m³/s. How long does it take to fill a 0.6 m³ tank?'
+    options:
+      A: '300 s'
+      B: '30 s'
+      C: '1 200 s'
+      D: '0.0012 s'
+    answer: A
+    explanation: '$t = \frac{V}{Q} = \frac{0.6}{0.002} = 300$ s, which is 5 minutes.'
+
+  - uid: g12-physics-3-2-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'During a strong windstorm, a tin roof can be lifted off a house. Why?'
+    options:
+      A: 'The wind makes the roof heavier.'
+      B: 'The air inside the house moves faster than outside.'
+      C: 'The fast air above the roof has lower pressure than the still air inside.'
+      D: 'Wind pushes the roof down too hard.'
+    answer: C
+    explanation: 'Air rushing over the roof has reduced pressure, so the higher pressure of the still air inside pushes the roof up.'
+
+  - uid: g12-physics-3-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Two boats moving fast side by side tend to be pulled towards each other. Why?'
+    options:
+      A: 'Gravity between the boats is very strong.'
+      B: 'Water moving fast between them has lower pressure than the water on their outer sides.'
+      C: 'The boats are magnetic.'
+      D: 'The water between them is denser.'
+    answer: B
+    explanation: 'The water squeezed between the boats speeds up and its pressure drops; the higher outside pressure pushes them together.'
+
+  - uid: g12-physics-3-2-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each equation with its name.'
+    left:
+      L1: '$A_1 v_1 = A_2 v_2$'
+      L2: '$P + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}$'
+      L3: '$v = \sqrt{2gh}$'
+    right:
+      R1: 'Bernoulli''s equation'
+      R2: 'Torricelli''s law'
+      R3: 'Pascal''s principle for a hydraulic press'
+      R4: 'Continuity equation'
+    answer: {L1: R4, L2: R1, L3: R2}
+    explanation: 'Continuity relates areas and speeds, Bernoulli relates pressure, speed and height, and Torricelli gives the speed out of a hole. The hydraulic press uses $\frac{F_1}{A_1} = \frac{F_2}{A_2}$.'
+
+  - uid: g12-physics-3-2-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Water flows steadily through one pipe whose sections have these areas. Put the sections in order of water speed, slowest first.'
+    items:
+      A: '10 cm²'
+      B: '2 cm²'
+      C: '5 cm²'
+      D: '1 cm²'
+    answer: [A, C, B, D]
+    explanation: 'Speed is inversely proportional to area ($v = \frac{Q}{A}$), so the largest area has the slowest flow.'
+
+  - uid: g12-physics-3-2-q024
+    type: single_choice
+    difficulty: 1
+    stem: 'When does the flow of a fluid usually become turbulent?'
+    options:
+      A: 'When it stops moving'
+      B: 'When it flows very slowly'
+      C: 'When its viscosity is very high'
+      D: 'When it flows at high speed'
+    answer: D
+    explanation: 'Above a certain speed the smooth layers break up into eddies and swirls.'
+
+  - uid: g12-physics-3-2-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'An artery is partly blocked, so its inside area is smaller at one point. What happens to the blood speed at that point?'
+    options:
+      A: 'It increases.'
+      B: 'It decreases.'
+      C: 'It stays the same.'
+      D: 'The blood stops.'
+    answer: A
+    explanation: 'For the same flow rate, a smaller area means a larger speed (continuity). The pressure there also drops.'
+
+  - uid: g12-physics-3-2-q026
+    type: true_false
+    difficulty: 1
+    stem: 'Under the same pressure difference, a very viscous liquid flows faster through a pipe than water does.'
+    answer: false
+    explanation: 'Higher viscosity means more internal friction, so the liquid flows more slowly.'
+
+  - uid: g12-physics-3-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Water flows at 4 m/s through a pipe of area 0.01 m². What volume passes in one minute?'
+    options:
+      A: '0.04 m³'
+      B: '24 m³'
+      C: '2.4 m³'
+      D: '0.24 m³'
+    answer: C
+    explanation: '$Q = 0.01 \times 4 = 0.04$ m³/s. In 60 s: $0.04 \times 60 = 2.4$ m³.'
+
+  - uid: g12-physics-3-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the SI unit of volume flow rate?'
+    options:
+      A: 'm/s'
+      B: 'm³/s'
+      C: 'kg/m³'
+      D: 'Pa'
+    answer: B
+    explanation: 'Volume flow rate is volume per unit time: cubic metres per second.'
+
+  - uid: g12-physics-3-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Smoke goes up a chimney faster when a wind blows across the top. Why?'
+    options:
+      A: 'The wind heats the smoke.'
+      B: 'The wind pushes the smoke down.'
+      C: 'The smoke becomes heavier.'
+      D: 'The moving air at the top lowers the pressure there, so air and smoke are pushed up from below.'
+    answer: D
+    explanation: 'Fast-moving air over the chimney top has reduced pressure, which draws the smoke upward.'
+
+  - uid: g12-physics-3-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'A smooth stream of water from a tap gets narrower as it falls. Why?'
+    options:
+      A: 'The water speeds up as it falls, so by continuity its cross-section becomes smaller.'
+      B: 'The water evaporates.'
+      C: 'Air pressure squeezes it.'
+      D: 'The water becomes denser.'
+    answer: A
+    explanation: 'Gravity accelerates the water. The flow rate $Av$ is constant, so as $v$ grows the area $A$ shrinks.'

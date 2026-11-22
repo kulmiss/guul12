@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-2-3-q001: {hash: '635fb638fcae4018ffc7f090fad603b10f7315bd8c1956e57ce7a204822b31fe', answer: C}
+  g12-physics-2-3-q002: {hash: '338fff214a09d47fd0c5630815b2640330f27d49b7cc0b51b5b1d0f3ca2c4f2d', answer: A}
+  g12-physics-2-3-q003: {hash: '8211859fe26e64478dc39ab2669665f7b400d9fcfc15a13cf32305b82e38fe7a', answer: 4.00}
+  g12-physics-2-3-q004: {hash: '4e929c6af72bde0625096055e82d51990f34e3984b529a9f7d9de1f750d25114', answer: D}
+  g12-physics-2-3-q005: {hash: 'bd34c686e780308e3f2802eca7dd1fe409c0b2da009bcbacb21da32bcb48f549', answer: B}
+  g12-physics-2-3-q006: {hash: 'ba6d19727b78b8c03e9cbdb8b0634a51dddbed2edd6c1fab787b5e413bb10104', answer: A}
+  g12-physics-2-3-q007: {hash: '5d7cddb25b750f947e87714314d9e3e02f2191d08d280a3176fa8738ee7952de', answer: false}
+  g12-physics-2-3-q008: {hash: '557b1230fe4ffe1fabc01e6be14eec96291a4931fcf040cc65336ecf29eaeb99', answer: C}
+  g12-physics-2-3-q009: {hash: '5c730ad6a8098d34ca5ccd4b6a7e540e63ceb5db8d96db7c02cc0dd870909eca', answer: 96}
+  g12-physics-2-3-q010: {hash: '7ac5508d128d2d29198c276820a18533e7ea79eebd72e85f4e3f7f52faa6baed', answer: D}
+  g12-physics-2-3-q011: {hash: '92552f218dc796a5553222b25d59859f11a224d859e7e47b6b1c49bad6fad406', answer: B}
+  g12-physics-2-3-q012: {hash: '07d72af7a7ec9e29a9d1faaba94b39024d1840a0253b530c6ab59b5577bfc97a', answer: A}
+  g12-physics-2-3-q013: {hash: 'f7b9c14af627d98b5f2a2f3e8d51d733b253dd8964d88a396216d7ebb2bffc67', answer: C}
+  g12-physics-2-3-q014: {hash: '8f11298b74eded63492b2e6b706cf385502d6f2147ef43457ea637249d1fb5b8', answer: [A, C]}
+  g12-physics-2-3-q015: {hash: '073ed5cad148593d005906573aad7368864469bda2010d4d2862ee0a066e64f8', answer: constant}
+  g12-physics-2-3-q016: {hash: 'cff4d3e14c2e19e08463b644e0da3cb8448835ad46964c7a8cd2a7a2f839c901', answer: D}
+  g12-physics-2-3-q017: {hash: 'a3162e1989237dc6d8136ec86b33563dd84154b6eafe32661f81b8a2ae02ffa1', answer: true}
+  g12-physics-2-3-q018: {hash: 'b0586bae23b2eb01b8c9342c6e766772e083e70371e14dd2d520f0ad65cb74d1', answer: B}
+  g12-physics-2-3-q019: {hash: '231b95a9f005f2009353a673b57467ecdbf5d26fe6cf61db254ff5371c83ab00', answer: A}
+  g12-physics-2-3-q020: {hash: '2482eace6b5ca8c7c10badbb121baa0e9d72e0c164dc13be30430966bcff14a1', answer: C}
+  g12-physics-2-3-q021: {hash: '54a479ca58dc27f5b1e6d05ee9e9dbc4a1b2f3a8997b8ffc2da3183361ae8d41', answer: D}
+  g12-physics-2-3-q022: {hash: 'cf38d330c9b2dac4d616342d3fff52bdbab765a10ca24fe34f028ffb165f4771', answer: {L1: R2, L2: R4, L3: R1}}
+  g12-physics-2-3-q023: {hash: 'c6b458b49dc79bbaad91c6dde8a1106070b88a5c4dc8d1a59e87e94b64d71ea1', answer: [B, D, A, C]}
+  g12-physics-2-3-q024: {hash: '64b0f218a5288a3486eab2300df11bc00498ff1f34435210695d7f83c1b6780e', answer: B}
+  g12-physics-2-3-q025: {hash: '78eb0ab4e222396305b111b1570584bdd16a632668e27955144f57eeef1ae29c', answer: A}
+  g12-physics-2-3-q026: {hash: 'f0bb38d591e6f0d380b4e3930eb2ee149894d3f83228188535d44a15a7659fff', answer: true, note: 'Correct, but a careful teacher may want the explanation to say the planet is then at the focus and the constant in T^2/r^3 is different (it depends on the planet''s mass, not the Sun''s).'}
+  g12-physics-2-3-q027: {hash: 'b6105c3473f4517005f0efec3a60329eb62edd07d15fcfd9a310a08d6fd4e8b7', answer: C}
+  g12-physics-2-3-q028: {hash: '63445d6a21ed8288795ce108ef3427b183e6c7e224f6d4892252a9f6fb7c898b', answer: D}
+  g12-physics-2-3-q029: {hash: '1a73103fcea2c6235aa57ad1ca6307380cbc59f034a751066482c6d30614a41f', answer: 4}
+  g12-physics-2-3-q030: {hash: '7fb8c253f1aba1dae1b3089f06d3375ebaaae13390ce5a9e46dbb153b5cd70b2', answer: B}

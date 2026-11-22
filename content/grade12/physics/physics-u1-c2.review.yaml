@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-1-2-q001: {hash: '19dc9f3de2100a50911ed3d489877151a5d32b2820140fd19e4921a1b44e6de8', answer: C}
+  g12-physics-1-2-q002: {hash: 'fa07e413e51fe4326f943f61f08392896b7dc065afa0a9adada51246d8d43b71', answer: A}
+  g12-physics-1-2-q003: {hash: 'c7b7d42400ba47f14dc5ac4495d16e90e7750a1daed6929d2db4cca7b5f04235', answer: D}
+  g12-physics-1-2-q004: {hash: '19029f85bbc1ba6f94e79eae287795ac1fd198737c2132993f040df597523695', answer: B}
+  g12-physics-1-2-q005: {hash: '5e6b2c51474d1465f2832c38fa0fe69f8e39acfdc0d668ee8444e60da37f8173', answer: A}
+  g12-physics-1-2-q006: {hash: '5b220bcab2592bb82fa4ca31ddb79219e0f7a896635bf722005e66b416595198', answer: false}
+  g12-physics-1-2-q007: {hash: '79fc79d89cc822d37564265f228d5cd6351789dccf2f4339b35dcb84f238124c', answer: 30}
+  g12-physics-1-2-q008: {hash: 'f76b40a557257cda565c219dd7e2b4d88f7b340c6aef5acd525736337c1b051f', answer: 3000}
+  g12-physics-1-2-q009: {hash: '28d37efcc0cea532260525fabb994d09820e2018dab6797fc5dad31bab11fdfa', answer: C}
+  g12-physics-1-2-q010: {hash: '02816d3266248bfedc53efd03868ebf9ba63298f543c9925703b4192a8d01402', answer: B}
+  g12-physics-1-2-q011: {hash: 'e63d458775327e52a26053db7703e63da44628336ba813e06f8978d001f22bce', answer: D}
+  g12-physics-1-2-q012: {hash: '94a8a14553c6496cef4467acfd1631c508d810ab33d9843b3e43e2fd839b7c99', answer: A, note: 'Minor: strictly the period is one sidereal day (about 23 h 56 min); "24 hours" is the accepted school answer and no other option is close, so the key is fine.'}
+  g12-physics-1-2-q013: {hash: 'cffe18d7da7f37c231651dabeec31c3311317482dfe68d4fb84ff5f4114ba7ec', answer: C}
+  g12-physics-1-2-q014: {hash: '482254a5431c95de6ce57d6ad9521ceafd0d1815e545d04dfb649bb44e57bfc5', answer: [A, B, D]}
+  g12-physics-1-2-q015: {hash: 'ddbc63c7e792cfcf28fbe7633f64994dbf7f412b445ec967d5c16b4e18698beb', answer: 'electrocardiogram (ECG)', note: 'Make sure the accepted answers include "electrocardiogram", "electrocardiograph", "ECG" and "EKG" (case-insensitive), since all are in common use.'}
+  g12-physics-1-2-q016: {hash: 'fab5271bc4199c36e9492771aa51bb8e88ef8e3dc4e57ae4ca20ad88b7e5aff9', answer: B}
+  g12-physics-1-2-q017: {hash: 'fa0d37e7cb17eb16bc7af7c0d5082b41c84a28ea535b1dce78210a0e1d891df4', answer: true}
+  g12-physics-1-2-q018: {hash: 'ebb49c1ba16479c69bff0b4d3583ad188221be18213f30dde5841df4b4cd4d0e', answer: D}
+  g12-physics-1-2-q019: {hash: '0f9e3b51f003569f72bf9bab54524d0652b34774e3268264bbbe589d9b9dbf83', answer: A}
+  g12-physics-1-2-q020: {hash: '6ad5f33fad4b1274252a3cb7d719f0586f4a860af6c20503cdd88a336782ad73', answer: C}
+  g12-physics-1-2-q021: {hash: '84b6c014a19d39dabe12cd0f55893f11cdd73ec42e4005e752e3a49a72ee2ebd', answer: B}
+  g12-physics-1-2-q022: {hash: '6baf56980c0ac5e69e6131b7ca6d145f75dcae378331d042285a07a2f694fcf5', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-physics-1-2-q023: {hash: '13197394df58c864db4e258ff4777e35e51d8aa97262108de194ed7f4b2404c3', answer: [B, D, A, C]}
+  g12-physics-1-2-q024: {hash: 'cba1d0e69992a1e174ca0d4a0a42fdc71efaf8048895de00b122597286b908a6', answer: D}
+  g12-physics-1-2-q025: {hash: '33b9c56a1a5dc8662c78fda8a52ecf78f7c2c4d6f7ae6ded6034a7b42da28438', answer: A}
+  g12-physics-1-2-q026: {hash: 'ba49c5192cea5bc2f4e81438c89915d3a9d76a68d2639f1187c651838c5b914f', answer: true}
+  g12-physics-1-2-q027: {hash: '9767100f1c17b6aa25657aac8d1c686947cc319fb05c2c061f4b6dd280efeb94', answer: C}
+  g12-physics-1-2-q028: {hash: 'de4773eced3c089844d723f96fa0a7beb9bc685e3eb4b61585f2f30bea16202d', answer: B}
+  g12-physics-1-2-q029: {hash: '3de21716f3d16b8ffc35173ef3b096060069d468141ceb6a6cacc4731e00c4fe', answer: D}
+  g12-physics-1-2-q030: {hash: '51ac64dec8bc59402dc8b4c65b8976b4c2cac8c36234103770c2b436d91b5780', answer: A}

@@ -1,0 +1,387 @@
+summary:
+  key_points:
+    - 'Density $\rho = \frac{m}{V}$. Water has a density of about 1 000 kg/m³ (1 g/cm³).'
+    - 'Pressure is force per unit area, $P = \frac{F}{A}$, measured in pascals (1 Pa = 1 N/m²). A small area gives a large pressure (sharp knives, nails).'
+    - 'In a fluid at rest, pressure increases with depth: $P = \rho g h$ (plus atmospheric pressure for the absolute pressure). It acts equally in all directions and does not depend on the shape of the container.'
+    - 'Atmospheric pressure at sea level is about $1.0 \times 10^5$ Pa. It is lower at high places such as Addis Ababa, so water boils below 100 °C there.'
+    - 'Pascal''s principle: pressure applied to an enclosed fluid is passed on equally to every part of it. Hydraulic machines use this: $\frac{F_1}{A_1} = \frac{F_2}{A_2}$.'
+    - 'Archimedes'' principle: a body in a fluid feels an upward buoyant force equal to the weight of the fluid it displaces, $F_b = \rho_{\text{fluid}} V_{\text{displaced}}\, g$.'
+    - 'An object floats if its average density is less than the fluid''s; then the fraction submerged equals $\frac{\rho_{\text{object}}}{\rho_{\text{fluid}}}$.'
+  formulas:
+    - label: Density
+      latex: '\rho = \frac{m}{V}'
+    - label: Pressure
+      latex: 'P = \frac{F}{A}'
+    - label: Pressure at depth h
+      latex: 'P = P_{\text{atm}} + \rho g h'
+    - label: Hydraulic press
+      latex: '\frac{F_1}{A_1} = \frac{F_2}{A_2}'
+    - label: Buoyant force
+      latex: 'F_b = \rho_{\text{fluid}}\, V\, g'
+
+solved_exercises:
+  - uid: g12-physics-3-1-se01
+    problem: 'A hydraulic jack has a small piston of area 4 cm² and a large piston of area 400 cm². What force on the small piston lifts a 12 000 N car? '
+    steps:
+      - 'Pascal''s principle: $\frac{F_1}{A_1} = \frac{F_2}{A_2}$.'
+      - '$F_1 = F_2 \times \frac{A_1}{A_2} = 12\,000 \times \frac{4}{400}$.'
+      - '$F_1 = 120$ N.'
+    answer: '120 N'
+  - uid: g12-physics-3-1-se02
+    problem: 'Find the pressure due to the water at the bottom of a 3 m deep well. ($\rho = 1000$ kg/m³, $g = 10$ m/s²)'
+    steps:
+      - '$P = \rho g h = 1000 \times 10 \times 3$.'
+      - '$P = 30\,000$ Pa $= 3 \times 10^4$ Pa (above atmospheric pressure).'
+    answer: '$3 \times 10^4$ Pa'
+  - uid: g12-physics-3-1-se03
+    problem: 'A stone weighs 30 N in air and 18 N when fully under water. Find the buoyant force and the stone''s volume. ($g = 10$ m/s²)'
+    steps:
+      - 'Buoyant force $= 30 - 18 = 12$ N.'
+      - '$F_b = \rho V g$, so $V = \frac{12}{1000 \times 10} = 1.2 \times 10^{-3}$ m³.'
+    answer: '12 N; $1.2 \times 10^{-3}$ m³'
+
+flashcards:
+  - {uid: g12-physics-3-1-fc01, term: Density, definition: 'Mass per unit volume, $\rho = \frac{m}{V}$, in kg/m³.'}
+  - {uid: g12-physics-3-1-fc02, term: Pressure, definition: 'Force per unit area, $P = \frac{F}{A}$, in pascals.'}
+  - {uid: g12-physics-3-1-fc03, term: Pascal, definition: '1 Pa = 1 N/m².'}
+  - {uid: g12-physics-3-1-fc04, term: Pressure at depth, definition: '$P = \rho g h$ due to the liquid; it grows with depth and density.'}
+  - {uid: g12-physics-3-1-fc05, term: Pascal's principle, definition: 'Pressure on an enclosed fluid is passed on equally throughout the fluid.'}
+  - {uid: g12-physics-3-1-fc06, term: Archimedes' principle, definition: 'Buoyant force = weight of the fluid displaced.'}
+  - {uid: g12-physics-3-1-fc07, term: Condition for floating, definition: 'Average density of the object less than the density of the fluid.'}
+  - {uid: g12-physics-3-1-fc08, term: Apparent weight, definition: 'Weight in a fluid = true weight − buoyant force.'}
+  - {uid: g12-physics-3-1-fc09, term: Atmospheric pressure, definition: 'Pressure of the air, about $1.0 \times 10^5$ Pa at sea level; lower at altitude.'}
+
+questions:
+  - uid: g12-physics-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'A box weighing 600 N rests on an area of 0.2 m². What pressure does it exert on the floor?'
+    options:
+      A: '120 Pa'
+      B: '3 000 Pa'
+      C: '600 Pa'
+      D: '30 Pa'
+    answer: B
+    explanation: '$P = \frac{F}{A} = \frac{600}{0.2} = 3000$ Pa.'
+
+  - uid: g12-physics-3-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the pressure due to water at a depth of 10 m? ($\rho = 1000$ kg/m³, $g = 10$ m/s²)'
+    options:
+      A: '$1 \times 10^3$ Pa'
+      B: '$1 \times 10^4$ Pa'
+      C: '$1 \times 10^6$ Pa'
+      D: '$1 \times 10^5$ Pa'
+    answer: D
+    explanation: '$P = \rho g h = 1000 \times 10 \times 10 = 1 \times 10^5$ Pa — about one extra atmosphere.'
+
+  - uid: g12-physics-3-1-q003
+    type: numeric
+    difficulty: 2
+    stem: 'In a hydraulic press, a force of 50 N acts on a small piston of area 0.01 m². The large piston has an area of 0.5 m². What force, in newtons, does the large piston exert?'
+    answer: {value: 2500, tolerance: 0, unit: N}
+    explanation: '$F_2 = F_1 \times \frac{A_2}{A_1} = 50 \times \frac{0.5}{0.01} = 50 \times 50 = 2500$ N.'
+
+  - uid: g12-physics-3-1-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'Which statement is Pascal''s principle?'
+    options:
+      A: 'Pressure applied to an enclosed fluid is transmitted equally to every part of the fluid.'
+      B: 'A floating body displaces its own weight of fluid.'
+      C: 'Pressure in a fluid decreases with depth.'
+      D: 'Faster-moving fluid has lower pressure.'
+    answer: A
+    explanation: 'Pascal''s principle is about enclosed fluids passing on pressure; B is about flotation and D is Bernoulli''s principle.'
+
+  - uid: g12-physics-3-1-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'According to Archimedes'' principle, the buoyant force on an object in a fluid equals:'
+    options:
+      A: 'The mass of the object'
+      B: 'The weight of the object'
+      C: 'The weight of the fluid displaced by the object'
+      D: 'The volume of the object'
+    answer: C
+    explanation: 'The fluid pushes up with a force equal to the weight of the fluid that the object pushes aside.'
+
+  - uid: g12-physics-3-1-q006
+    type: true_false
+    difficulty: 1
+    stem: 'At a given depth in a liquid at rest, the pressure acts equally in all directions.'
+    answer: true
+    explanation: 'A small object at that depth is pushed equally from the sides, top and bottom by the pressure at that point.'
+
+  - uid: g12-physics-3-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'An object has a mass of 2 kg and a volume of 0.001 m³. What is its density, and what does it do in water (density 1 000 kg/m³)?'
+    options:
+      A: '500 kg/m³; it floats'
+      B: '2 000 kg/m³; it sinks'
+      C: '2 000 kg/m³; it floats'
+      D: '0.0005 kg/m³; it floats'
+    answer: B
+    explanation: '$\rho = \frac{2}{0.001} = 2000$ kg/m³, which is greater than water''s density, so it sinks.'
+
+  - uid: g12-physics-3-1-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'When does an object float in a liquid?'
+    options:
+      A: 'When its average density is less than the density of the liquid'
+      B: 'When its mass is small'
+      C: 'When its volume is small'
+      D: 'When it is made of metal'
+    answer: A
+    explanation: 'Floating depends on density, not on mass or size alone: a heavy steel ship floats because its average density (with the air inside) is less than water''s.'
+
+  - uid: g12-physics-3-1-q009
+    type: numeric
+    difficulty: 2
+    stem: 'A block of volume 0.002 m³ is fully under water. What buoyant force, in newtons, acts on it? ($\rho = 1000$ kg/m³, $g = 10$ m/s²)'
+    answer: {value: 20, tolerance: 0, unit: N}
+    explanation: '$F_b = \rho V g = 1000 \times 0.002 \times 10 = 20$ N.'
+
+  - uid: g12-physics-3-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'A wooden block of density 600 kg/m³ floats in water (1 000 kg/m³). What fraction of its volume is under water?'
+    options:
+      A: '40%'
+      B: '100%'
+      C: '6%'
+      D: '60%'
+    answer: D
+    explanation: 'For a floating object, fraction submerged $= \frac{\rho_{\text{object}}}{\rho_{\text{fluid}}} = \frac{600}{1000} = 60\%$.'
+
+  - uid: g12-physics-3-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Three containers of different shapes are filled with water to the same height. How do the pressures at their bottoms compare?'
+    options:
+      A: 'The widest container has the greatest pressure.'
+      B: 'The narrowest container has the greatest pressure.'
+      C: 'The pressures are equal.'
+      D: 'It depends on how much water each holds.'
+    answer: C
+    explanation: '$P = \rho g h$ depends only on density and depth, not on the shape or amount of liquid.'
+
+  - uid: g12-physics-3-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'About how large is atmospheric pressure at sea level?'
+    options:
+      A: '$1 \times 10^3$ Pa'
+      B: '$1 \times 10^5$ Pa'
+      C: '$1 \times 10^7$ Pa'
+      D: '10 Pa'
+    answer: B
+    explanation: 'Standard atmospheric pressure is about 101 000 Pa, roughly $1.0 \times 10^5$ Pa.'
+
+  - uid: g12-physics-3-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Water boils at a lower temperature in Addis Ababa (about 2 300 m high) than at sea level. Why?'
+    options:
+      A: 'The air pressure is lower at high altitude.'
+      B: 'The air is warmer at high altitude.'
+      C: 'Gravity is much stronger there.'
+      D: 'The water contains more salt.'
+    answer: A
+    explanation: 'Water boils when its vapour pressure equals the surrounding pressure. Lower air pressure is reached at a lower temperature (about 92–93 °C in Addis Ababa).'
+
+  - uid: g12-physics-3-1-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which devices work by Pascal''s principle? Choose all that apply.'
+    options:
+      A: 'Hydraulic car brakes'
+      B: 'A hydraulic jack'
+      C: 'A hot-air balloon'
+      D: 'A hydraulic lift in a garage'
+    answer: [A, B, D]
+    explanation: 'Brakes, jacks and lifts pass pressure through an enclosed liquid. A hot-air balloon rises because of buoyancy (Archimedes).'
+
+  - uid: g12-physics-3-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The SI unit of pressure, equal to one newton per square metre, is the ________.'
+    answer: [pascal, Pa]
+    explanation: '1 pascal (Pa) = 1 N/m².'
+
+  - uid: g12-physics-3-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'An object weighs 50 N in air and 30 N when fully under water. What is the buoyant force on it?'
+    options:
+      A: '80 N'
+      B: '50 N'
+      C: '30 N'
+      D: '20 N'
+    answer: D
+    explanation: 'The water holds up part of the weight: $50 - 30 = 20$ N.'
+
+  - uid: g12-physics-3-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'A steel ship floats because it displaces a weight of water equal to its own weight.'
+    answer: true
+    explanation: 'Its hollow shape lets it push aside a large volume of water; it settles until the buoyant force equals its weight.'
+
+  - uid: g12-physics-3-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Taking atmospheric pressure as $1.0 \times 10^5$ Pa, what is the total (absolute) pressure 5 m below the surface of a lake? ($\rho = 1000$ kg/m³, $g = 10$ m/s²)'
+    options:
+      A: '$5 \times 10^4$ Pa'
+      B: '$1.05 \times 10^5$ Pa'
+      C: '$1.5 \times 10^5$ Pa'
+      D: '$6 \times 10^5$ Pa'
+    answer: C
+    explanation: '$P = P_{\text{atm}} + \rho g h = 1.0 \times 10^5 + 1000 \times 10 \times 5 = 1.5 \times 10^5$ Pa.'
+
+  - uid: g12-physics-3-1-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Why is the wall of a dam built thicker at the bottom than at the top?'
+    options:
+      A: 'To make the dam look stronger'
+      B: 'Because water pressure increases with depth'
+      C: 'Because water is warmer at the bottom'
+      D: 'To hold more water at the top'
+    answer: B
+    explanation: 'The pressure $\rho g h$ is greatest at the bottom, so the wall must be strongest there.'
+
+  - uid: g12-physics-3-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'A hydrometer floats in two liquids. In which liquid does it sink deeper?'
+    options:
+      A: 'In the liquid with the lower density'
+      B: 'In the liquid with the higher density'
+      C: 'It sinks to the same depth in both.'
+      D: 'In the liquid that is hotter'
+    answer: A
+    explanation: 'It must displace its own weight of liquid. A less dense liquid gives less buoyancy per unit volume, so more volume must be under the surface.'
+
+  - uid: g12-physics-3-1-q021
+    type: single_choice
+    difficulty: 1
+    stem: 'Why does a sharp knife cut more easily than a blunt one?'
+    options:
+      A: 'It is heavier.'
+      B: 'It has a larger contact area.'
+      C: 'It is made of a softer metal.'
+      D: 'The same force on a smaller area gives a larger pressure.'
+    answer: D
+    explanation: '$P = \frac{F}{A}$: a sharp edge has a tiny area, so the pressure is large.'
+
+  - uid: g12-physics-3-1-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each formula with the quantity it gives.'
+    left:
+      L1: '$\frac{F}{A}$'
+      L2: '$\frac{m}{V}$'
+      L3: '$\rho_{\text{fluid}} V g$'
+    right:
+      R1: 'Density'
+      R2: 'Buoyant force'
+      R3: 'Power'
+      R4: 'Pressure'
+    answer: {L1: R4, L2: R1, L3: R2}
+    explanation: 'Force over area is pressure; mass over volume is density; the weight of displaced fluid is the buoyant force.'
+
+  - uid: g12-physics-3-1-q023
+    type: ordering
+    difficulty: 1
+    stem: 'Put these depths in a lake in order of water pressure, from lowest to highest.'
+    items:
+      A: '2 m'
+      B: '10 m'
+      C: '0.5 m'
+      D: '5 m'
+    answer: [C, A, D, B]
+    explanation: 'Pressure increases with depth ($\rho g h$), so the order follows the depth.'
+
+  - uid: g12-physics-3-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Mercury is 13.6 times as dense as water. Counting only the pressure due to the liquid (not the air above), how does the pressure 0.1 m below the surface of mercury compare with the pressure 0.1 m below the surface of water?'
+    options:
+      A: 'The same'
+      B: '$\frac{1}{13.6}$ as large'
+      C: '13.6 times as large'
+      D: '136 times as large'
+    answer: C
+    explanation: 'At the same depth $P = \rho g h$ is proportional to density, so it is 13.6 times larger. (Total pressure, which adds atmospheric pressure, would not be in this ratio.)'
+
+  - uid: g12-physics-3-1-q025
+    type: single_choice
+    difficulty: 1
+    stem: 'A submarine dives deeper. What happens to the water pressure on its hull?'
+    options:
+      A: 'It decreases.'
+      B: 'It increases.'
+      C: 'It stays the same.'
+      D: 'It becomes zero.'
+    answer: B
+    explanation: 'Pressure grows with depth, which is why submarines need thick, strong hulls.'
+
+  - uid: g12-physics-3-1-q026
+    type: true_false
+    difficulty: 2
+    stem: 'The buoyant force on a fully submerged object depends on the object''s mass.'
+    answer: false
+    explanation: 'It depends on the volume of fluid displaced and the fluid''s density. A 1 kg stone and a 1 kg block of wood have different buoyant forces when fully under water.'
+
+  - uid: g12-physics-3-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'To make a submarine sink, its ballast tanks are filled with sea water. Why does this work?'
+    options:
+      A: 'It increases the submarine''s average density.'
+      B: 'It increases the buoyant force.'
+      C: 'It reduces the submarine''s weight.'
+      D: 'It reduces the water pressure.'
+    answer: A
+    explanation: 'Taking in water adds mass without changing the volume, so the average density rises above that of sea water.'
+
+  - uid: g12-physics-3-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'A stone has a mass of 500 g and a volume of 250 cm³. What is its density?'
+    options:
+      A: '0.5 g/cm³'
+      B: '250 g/cm³'
+      C: '125 g/cm³'
+      D: '2 g/cm³'
+    answer: D
+    explanation: '$\rho = \frac{500}{250} = 2$ g/cm³ $= 2000$ kg/m³.'
+
+  - uid: g12-physics-3-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'A woman standing on narrow heels can press harder on a floor than an elephant standing on its wide feet. Why?'
+    options:
+      A: 'The woman weighs more than the elephant.'
+      B: 'The elephant has no weight on the floor.'
+      C: 'Her weight acts on a much smaller area, giving a larger pressure.'
+      D: 'Pressure does not depend on area.'
+    answer: C
+    explanation: 'Pressure is force divided by area. A small weight on a tiny area can give a greater pressure than a large weight on a large area.'
+
+  - uid: g12-physics-3-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does a hot-air balloon rise?'
+    options:
+      A: 'Hot air has more mass than cold air.'
+      B: 'The buoyant force from the cooler outside air is greater than the total weight of the balloon.'
+      C: 'Pascal''s principle pushes it up.'
+      D: 'Hot air pulls the balloon up by gravity.'
+    answer: B
+    explanation: 'Hot air is less dense than the surrounding air, so the displaced cool air weighs more than the balloon and its contents.'
