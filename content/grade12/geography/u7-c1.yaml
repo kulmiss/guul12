@@ -1,0 +1,373 @@
+summary:
+  key_points:
+    - 'Globalisation is the growing connection of the world through trade, investment, travel, communication and culture. It can bring jobs, technology and cheaper goods, but also inequality, job losses in some industries and loss of local culture.'
+    - 'Migration is the movement of people from one place to another. Push factors drive people out (drought, conflict, unemployment); pull factors attract them (jobs, safety, services). Net migration $=$ immigrants $-$ emigrants.'
+    - 'A refugee is a person who has fled their country because of conflict or persecution and cannot safely return; the UN agency UNHCR protects refugees. An internally displaced person (IDP) has fled but stays inside their own country. Ethiopia hosts one of the largest refugee populations in Africa.'
+    - 'Food security exists when all people at all times have access to enough safe, nutritious food. The FAO describes four dimensions: availability, access, utilisation and stability.'
+    - 'Pandemics such as COVID-19 (declared a pandemic in 2020) show how disease can spread rapidly through global travel and affect health, schools, jobs and trade.'
+    - 'Other global concerns: water scarcity, desertification, plastic pollution in oceans, loss of biodiversity, rapid urbanisation and the "digital divide" between people with and without internet access.'
+    - 'Responses need cooperation at local, national and global levels, for example through the United Nations, the African Union and IGAD in the Horn of Africa.'
+  formulas:
+    - label: Net migration
+      latex: '\text{net migration} = \text{immigrants} - \text{emigrants}'
+
+solved_exercises:
+  - uid: g12-geography-7-1-se01
+    problem: 'In a year, 8 000 people move into a region and 5 000 move out. Find the net migration.'
+    steps:
+      - 'Net migration $= 8000 - 5000$.'
+      - '$= 3000$ (a net gain of people).'
+    answer: '+3 000'
+  - uid: g12-geography-7-1-se02
+    problem: 'A family leaves a drought-hit village for a town where relatives can help them find work. Name one push and one pull factor.'
+    steps:
+      - 'Push: drought in the village.'
+      - 'Pull: job opportunities (and family support) in the town.'
+    answer: 'Push: drought; pull: jobs and family support'
+  - uid: g12-geography-7-1-se03
+    problem: 'A market is full of food, but many families cannot afford it. Which dimension of food security is weak?'
+    steps:
+      - 'Food is available, so availability is not the problem.'
+      - 'People cannot obtain it because of low income, so "access" is weak.'
+    answer: 'Access'
+
+flashcards:
+  - {uid: g12-geography-7-1-fc01, term: Globalisation, definition: 'Growing worldwide connection through trade, travel, communication and culture.'}
+  - {uid: g12-geography-7-1-fc02, term: Push factor, definition: 'Something that drives people away from a place.'}
+  - {uid: g12-geography-7-1-fc03, term: Pull factor, definition: 'Something that attracts people to a place.'}
+  - {uid: g12-geography-7-1-fc04, term: Refugee, definition: 'Person who fled their country due to conflict or persecution.'}
+  - {uid: g12-geography-7-1-fc05, term: IDP, definition: 'Internally displaced person: fled home but stayed in their own country.'}
+  - {uid: g12-geography-7-1-fc06, term: UNHCR, definition: 'UN agency that protects refugees.'}
+  - {uid: g12-geography-7-1-fc07, term: Food security, definition: 'Reliable access for all to enough safe, nutritious food.'}
+  - {uid: g12-geography-7-1-fc08, term: Digital divide, definition: 'Gap between people with and without access to digital technology.'}
+  - {uid: g12-geography-7-1-fc09, term: IGAD, definition: 'Intergovernmental Authority on Development, a regional body in the Horn of Africa.'}
+
+questions:
+  - uid: g12-geography-7-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is globalisation?'
+    options:
+      A: 'A country closing its borders'
+      B: 'The growing connection of the world through trade, travel, communication and culture'
+      C: 'The study of maps'
+      D: 'A type of rock'
+    answer: B
+    explanation: 'Globalisation links economies and societies across the world.'
+
+  - uid: g12-geography-7-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is a push factor for migration?'
+    options:
+      A: 'Better jobs in the city'
+      B: 'Good schools elsewhere'
+      C: 'Drought and crop failure at home'
+      D: 'Relatives living in the new place'
+    answer: C
+    explanation: 'Push factors drive people away from where they live.'
+
+  - uid: g12-geography-7-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is a pull factor for migration?'
+    options:
+      A: 'Job opportunities in the destination'
+      B: 'War at home'
+      C: 'Famine at home'
+      D: 'Floods at home'
+    answer: A
+    explanation: 'Pull factors attract people to a new place.'
+
+  - uid: g12-geography-7-1-q004
+    type: numeric
+    difficulty: 1
+    stem: 'In one year, 8 000 people moved into a region and 5 000 moved out. What was the net migration?'
+    answer: {value: 3000, tolerance: 0}
+    explanation: '$8000 - 5000 = 3000$.'
+
+  - uid: g12-geography-7-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the difference between a refugee and an internally displaced person (IDP)?'
+    options:
+      A: 'There is no difference.'
+      B: 'A refugee moves for a holiday.'
+      C: 'An IDP lives in another country.'
+      D: 'A refugee has crossed an international border; an IDP has fled but stayed inside their own country.'
+    answer: D
+    explanation: 'Both have fled danger; only the refugee has left their country.'
+
+  - uid: g12-geography-7-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which United Nations agency is responsible for protecting refugees?'
+    options:
+      A: 'UNESCO'
+      B: 'UNHCR'
+      C: 'FAO'
+      D: 'WHO'
+    answer: B
+    explanation: 'UNHCR is the UN Refugee Agency.'
+
+  - uid: g12-geography-7-1-q007
+    type: numeric
+    difficulty: 1
+    stem: 'How many dimensions of food security does the FAO describe?'
+    answer: {value: 4, tolerance: 0}
+    explanation: 'Availability, access, utilisation and stability.'
+
+  - uid: g12-geography-7-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'A market has plenty of food, but many families cannot afford to buy it. Which dimension of food security is weak?'
+    options:
+      A: 'Availability'
+      B: 'Stability'
+      C: 'Access'
+      D: 'Utilisation'
+    answer: C
+    explanation: 'Food exists, but people cannot obtain it.'
+
+  - uid: g12-geography-7-1-q009
+    type: single_choice
+    difficulty: 3
+    stem: 'Children eat enough food, but because of unsafe water and frequent diarrhoea their bodies cannot use the nutrients well. Which dimension of food security is affected?'
+    options:
+      A: 'Utilisation'
+      B: 'Availability'
+      C: 'Access'
+      D: 'Stability'
+    answer: A
+    explanation: 'Utilisation is about the body making good use of food, which depends on health, water and sanitation.'
+
+  - uid: g12-geography-7-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did the World Health Organization declare COVID-19 a pandemic?'
+    options:
+      A: '2018'
+      B: '2019'
+      C: '2021'
+      D: '2020'
+    answer: D
+    explanation: 'The WHO declared it a pandemic in March 2020.'
+
+  - uid: g12-geography-7-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can diseases spread around the world faster today than 100 years ago?'
+    options:
+      A: 'People travel much more and much faster, especially by air.'
+      B: 'There are fewer people.'
+      C: 'Diseases have become slower.'
+      D: 'Countries trade less.'
+    answer: A
+    explanation: 'Global air travel can carry an infection between continents in hours.'
+
+  - uid: g12-geography-7-1-q012
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are possible benefits of globalisation for a developing country? Choose all that apply.'
+    options:
+      A: 'Access to new technology'
+      B: 'Foreign investment that creates jobs'
+      C: 'Larger export markets'
+      D: 'Guaranteed equal income for everyone'
+    answer: [A, B, C]
+    explanation: 'Globalisation does not guarantee equality; it can increase inequality.'
+
+  - uid: g12-geography-7-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What is meant by the "digital divide"?'
+    options:
+      A: 'A division sign in mathematics'
+      B: 'The gap between people who have access to computers and the internet and those who do not'
+      C: 'A border between two countries'
+      D: 'A type of mobile phone'
+    answer: B
+    explanation: 'Rural and poorer communities often have less access to digital technology.'
+
+  - uid: g12-geography-7-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which regional organisation brings together countries of the Horn of Africa and East Africa for cooperation on development, drought and peace?'
+    options:
+      A: 'The European Union'
+      B: 'ASEAN'
+      C: 'IGAD'
+      D: 'NATO'
+    answer: C
+    explanation: 'IGAD is the Intergovernmental Authority on Development; its members include Ethiopia, Djibouti, Somalia and Kenya.'
+
+  - uid: g12-geography-7-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'Ethiopia hosts one of the largest refugee populations in Africa.'
+    answer: true
+    explanation: 'Ethiopia hosts many refugees from neighbouring countries such as South Sudan, Somalia and Eritrea.'
+
+  - uid: g12-geography-7-1-q016
+    type: true_false
+    difficulty: 1
+    stem: 'Plastic waste in the ocean breaks down quickly and harmlessly within a few weeks.'
+    answer: false
+    explanation: 'Plastic can last for hundreds of years, breaking into tiny pieces (microplastics) that harm sea life.'
+
+  - uid: g12-geography-7-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a possible negative effect of globalisation?'
+    options:
+      A: 'Cheaper imported goods'
+      B: 'Faster communication'
+      C: 'Wider choice of products'
+      D: 'Local industries struggling to compete with cheap imports'
+    answer: D
+    explanation: 'Competition can close local factories and workshops.'
+
+  - uid: g12-geography-7-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Remittances are an important link between migrants and their home countries. What are remittances?'
+    options:
+      A: 'Money that migrants send home to their families'
+      B: 'Taxes paid by tourists'
+      C: 'Loans from the World Bank'
+      D: 'Imported food aid'
+    answer: A
+    explanation: 'Remittances support families and bring foreign currency into the economy.'
+
+  - uid: g12-geography-7-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'A person who has fled their home country because of war or persecution is called a ________.'
+    answer: [refugee]
+    explanation: 'Refugees are protected under international law.'
+
+  - uid: g12-geography-7-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'Money sent home by people working abroad is called ________.'
+    answer: [remittances, remittance]
+    explanation: 'Remittances are a major source of income for many families.'
+
+  - uid: g12-geography-7-1-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each organisation with its main area of work.'
+    left:
+      L1: 'WHO'
+      L2: 'FAO'
+      L3: 'UNHCR'
+    right:
+      R1: 'Refugees'
+      R2: 'Health'
+      R3: 'Food and agriculture'
+      R4: 'Football'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'Football is organised by FIFA, not a UN agency.'
+
+  - uid: g12-geography-7-1-q022
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order to show how a long drought can lead to migration to a city.'
+    items:
+      A: 'Families sell livestock and run out of food.'
+      B: 'Rains fail for two seasons.'
+      C: 'Some family members move to a town to find work.'
+      D: 'Crops fail and pasture dries up.'
+    answer: [B, D, A, C]
+    explanation: 'Rain failure → crop and pasture loss → loss of assets and food → migration.'
+
+  - uid: g12-geography-7-1-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'Which dimension of food security is threatened when harvests are good one year but fail the next?'
+    options:
+      A: 'Utilisation'
+      B: 'Access'
+      C: 'Availability only in cities'
+      D: 'Stability'
+    answer: D
+    explanation: 'Stability means reliable food supplies over time, without sudden shortages.'
+
+  - uid: g12-geography-7-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which action helps reduce plastic pollution?'
+    options:
+      A: 'Using reusable bags and bottles'
+      B: 'Burning plastic in the open'
+      C: 'Dumping plastic in rivers'
+      D: 'Buying more single-use plastic'
+    answer: A
+    explanation: 'Reusing reduces the amount of plastic thrown away.'
+
+  - uid: g12-geography-7-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'A country sees many young doctors and engineers leaving for jobs abroad. What problem might this cause at home?'
+    options:
+      A: 'Too many hospitals'
+      B: 'Brain drain: a shortage of skilled workers'
+      C: 'Lower demand for health care'
+      D: 'More doctors per person'
+    answer: B
+    explanation: 'Losing trained people reduces services and slows development.'
+
+  - uid: g12-geography-7-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does mobile phone banking matter in rural areas?'
+    options:
+      A: 'It stops all trade.'
+      B: 'It requires a bank building in every village.'
+      C: 'It lets people send, receive and save money without travelling to a bank.'
+      D: 'It works only in big cities.'
+    answer: C
+    explanation: 'Mobile money reduces the cost and distance of financial services.'
+
+  - uid: g12-geography-7-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is an example of cultural globalisation?'
+    options:
+      A: 'Building a local well'
+      B: 'Traditional farming with oxen'
+      C: 'A village market selling local vegetables'
+      D: 'Young people around the world following the same international music and films'
+    answer: D
+    explanation: 'Shared media and entertainment spread similar cultural products worldwide.'
+
+  - uid: g12-geography-7-1-q028
+    type: true_false
+    difficulty: 2
+    stem: 'Global problems such as pandemics and climate change can be solved by one country acting alone.'
+    answer: false
+    explanation: 'They cross borders, so countries must cooperate.'
+
+  - uid: g12-geography-7-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these best improves food availability in a drought-prone area?'
+    options:
+      A: 'Small-scale irrigation and drought-tolerant crops'
+      B: 'Removing all trees'
+      C: 'Overgrazing'
+      D: 'Leaving fields unplanted'
+    answer: A
+    explanation: 'These measures help produce food even in dry years.'
+
+  - uid: g12-geography-7-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Rural–urban migration in many African countries is mainly driven by:'
+    options:
+      A: 'Snow in rural areas'
+      B: 'Better job and education opportunities in towns, and pressure on rural land'
+      C: 'Towns having fewer services'
+      D: 'Higher rents in cities'
+    answer: B
+    explanation: 'Pull factors in towns combine with push factors such as small farms and droughts.'

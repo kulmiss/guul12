@@ -242,13 +242,13 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'Replanting trees where a forest has been cut down is called ________.'
-    answer: [reforestation, re-forestation]
+    answer: [reforestation, re-forestation, reafforestation]
     explanation: 'Afforestation is planting where there was no forest before.'
 
   - uid: g12-geography-6-1-q020
     type: fill_in
     difficulty: 2
-    stem: 'Write the three Rs of waste management in the best order, separated by commas: reduce, ________, recycle.'
+    stem: 'Complete the waste hierarchy with ONE word: reduce → ________ → recycle.'
     answer: [reuse]
     explanation: 'Reduce, reuse, recycle.'
 
@@ -280,12 +280,11 @@ questions:
     difficulty: 2
     stem: 'Put these steps for restoring a degraded hillside in a sensible order.'
     items:
-      A: 'Plant grasses and trees on the protected land.'
+      A: 'Build terraces and check dams, and plant grasses and trees.'
       B: 'Agree with the community to close the area to grazing.'
       C: 'Monitor recovery and share benefits such as cut grass.'
-      D: 'Build terraces and check dams to stop erosion.'
-    answer: [B, D, A, C]
-    explanation: 'Community agreement first, then physical structures, then planting, then monitoring.'
+    answer: [B, A, C]
+    explanation: 'Community agreement comes first so the work is protected; then the physical and planting work; then monitoring and benefit sharing.'
 
   - uid: g12-geography-6-1-q024
     type: single_choice
