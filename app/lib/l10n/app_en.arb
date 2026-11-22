@@ -1624,5 +1624,34 @@
   "badgeStrongTenBody": "Make 10 chapters Strong",
   "@badgeStrongTenBody": {
     "description": "Badge goal"
+  },
+  "reminderTitle": "Time to practise",
+  "@reminderTitle": {
+    "description": "Daily reminder title"
+  },
+  "reminderKeepStreak": "{remaining, plural, =1{Keep your {streak}-day streak: 1 more question today.} other{Keep your {streak}-day streak: {remaining} more questions today.}}",
+  "@reminderKeepStreak": {
+    "description": "Reminder when a streak is running",
+    "placeholders": {
+      "streak": {
+        "type": "int"
+      },
+      "remaining": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderStart": "{remaining, plural, =1{1 more question today to reach your daily goal.} other{{remaining} questions today to reach your daily goal.}}",
+  "@reminderStart": {
+    "description": "Reminder without a streak",
+    "placeholders": {
+      "remaining": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderChannel": "Daily reminder",
+  "@reminderChannel": {
+    "description": "Android notification channel name"
   }
 }

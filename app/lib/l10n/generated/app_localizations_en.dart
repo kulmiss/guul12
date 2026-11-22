@@ -1191,4 +1191,32 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get badgeStrongTenBody => 'Make 10 chapters Strong';
+
+  @override
+  String get reminderTitle => 'Time to practise';
+
+  @override
+  String reminderKeepStreak(int streak, int remaining) {
+    String _temp0 = intl.Intl.pluralLogic(
+      remaining,
+      locale: localeName,
+      other: 'Keep your $streak-day streak: $remaining more questions today.',
+      one: 'Keep your $streak-day streak: 1 more question today.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String reminderStart(int remaining) {
+    String _temp0 = intl.Intl.pluralLogic(
+      remaining,
+      locale: localeName,
+      other: '$remaining questions today to reach your daily goal.',
+      one: '1 more question today to reach your daily goal.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get reminderChannel => 'Daily reminder';
 }

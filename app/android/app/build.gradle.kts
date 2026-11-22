@@ -17,12 +17,15 @@ val hasUploadKey = keyProperties.getProperty("storeFile") != null
 
 android {
     namespace = "com.kulmiss.guul12"
-    compileSdk = flutter.compileSdkVersion
+    // 37+: needed by flutter_local_notifications / androidx.core (compile only; targetSdk unchanged).
+    compileSdk = maxOf(37, flutter.compileSdkVersion)
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        // flutter_local_notifications uses java.time on older Android versions.
+        isCoreLibraryDesugaringEnabled = true
     }
 
     defaultConfig {
@@ -62,4 +65,8 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }

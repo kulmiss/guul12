@@ -6,6 +6,7 @@ import 'package:material_ui/material_ui.dart';
 import '../data/models.dart';
 import '../data/repository.dart';
 import '../services/google_auth.dart';
+import '../services/reminders.dart';
 import '../services/speech.dart';
 
 /// Overridden in main() and in tests.
@@ -14,6 +15,7 @@ final repositoryProvider = Provider<Repository>(
 );
 final googleAuthProvider = Provider<GoogleAuth>((ref) => const DisabledGoogleAuth());
 final speechProvider = Provider<Speech>((ref) => const SilentSpeech());
+final remindersProvider = Provider<Reminders>((ref) => const NoReminders());
 final clockProvider = Provider<DateTime Function()>((ref) => DateTime.now);
 final appVersionProvider = Provider<String>((ref) => '1.0.0+1');
 

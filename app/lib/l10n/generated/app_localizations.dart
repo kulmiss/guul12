@@ -1969,6 +1969,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Make 10 chapters Strong'**
   String get badgeStrongTenBody;
+
+  /// Daily reminder title
+  ///
+  /// In en, this message translates to:
+  /// **'Time to practise'**
+  String get reminderTitle;
+
+  /// Reminder when a streak is running
+  ///
+  /// In en, this message translates to:
+  /// **'{remaining, plural, =1{Keep your {streak}-day streak: 1 more question today.} other{Keep your {streak}-day streak: {remaining} more questions today.}}'**
+  String reminderKeepStreak(int streak, int remaining);
+
+  /// Reminder without a streak
+  ///
+  /// In en, this message translates to:
+  /// **'{remaining, plural, =1{1 more question today to reach your daily goal.} other{{remaining} questions today to reach your daily goal.}}'**
+  String reminderStart(int remaining);
+
+  /// Android notification channel name
+  ///
+  /// In en, this message translates to:
+  /// **'Daily reminder'**
+  String get reminderChannel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

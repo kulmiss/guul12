@@ -159,5 +159,36 @@ void main() {
         expect(manifest.contains(p), isFalse, reason: p);
       }
     });
+
+    test('Android manifest asks only for internet + notifications; foreground work removed', () {
+      final manifest = File('android/app/src/main/AndroidManifest.xml').readAsStringSync();
+      final permissions = RegExp(r'<uses-permission ([^>]*)/>').allMatches(manifest).map((m) {
+        final name = RegExp(r'android:name="([^"]+)"').firstMatch(m.group(1)!)!.group(1)!;
+        return (name, m.group(1)!.contains('tools:node="remove"'));
+      }).toList();
+      expect(
+        [
+          for (final (name, removed) in permissions)
+            if (!removed) name,
+        ],
+        ['android.permission.INTERNET', 'android.permission.POST_NOTIFICATIONS'],
+      );
+      expect(
+        [
+          for (final (name, removed) in permissions)
+            if (removed) name,
+        ],
+        unorderedEquals([
+          'android.permission.FOREGROUND_SERVICE',
+          'android.permission.FOREGROUND_SERVICE_SHORT_SERVICE',
+        ]),
+      );
+      expect(
+        RegExp(
+          r'android:name="androidx\.work\.impl\.foreground\.SystemForegroundService"\s+tools:node="remove"',
+        ).hasMatch(manifest),
+        isTrue,
+      );
+    });
   });
 }

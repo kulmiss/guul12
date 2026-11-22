@@ -7,6 +7,7 @@ import 'package:guul12/app/providers.dart';
 import 'package:guul12/data/hook_questions.dart';
 import 'package:guul12/data/repository.dart';
 import 'package:guul12/services/google_auth.dart';
+import 'package:guul12/services/reminders.dart';
 import 'package:guul12/services/speech.dart';
 import 'package:guul12/ui/screens/onboarding_screen.dart';
 import 'package:material_ui/material_ui.dart';
@@ -48,6 +49,7 @@ Future<(Repository, FakeServer)> pumpGuul(
   Size size = phoneSize,
   String appVersion = '1.0.0+1',
   Speech? speech,
+  Reminders? reminders,
   GoogleAuth? googleAuth,
   Future<void> Function(Repository repo)? before,
   DateTime Function()? clock,
@@ -66,6 +68,7 @@ Future<(Repository, FakeServer)> pumpGuul(
         clockProvider.overrideWithValue(clock ?? () => testNow),
         appVersionProvider.overrideWithValue(appVersion),
         speechProvider.overrideWithValue(speech ?? const SilentSpeech()),
+        remindersProvider.overrideWithValue(reminders ?? const NoReminders()),
         googleAuthProvider.overrideWithValue(googleAuth ?? const DisabledGoogleAuth()),
         // The real asset loader uses platform channels; read the same file directly.
         hookQuestionsProvider.overrideWith(

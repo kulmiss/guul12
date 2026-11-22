@@ -9,6 +9,8 @@ import 'data/local_db.dart';
 import 'data/repository.dart';
 import 'data/token_store.dart';
 import 'services/google_auth.dart';
+import 'services/reminder_background.dart';
+import 'services/reminders.dart';
 import 'services/speech.dart';
 
 /// Set at build time, e.g. `--dart-define=API_BASE_URL=https://guul12.kulmiss.com`.
@@ -26,6 +28,7 @@ const appVersion = String.fromEnvironment('APP_VERSION', defaultValue: '1.0.0+1'
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final db = await LocalDb.open();
+  final reminders = await PhoneReminders.start(dispatcher: reminderDispatcher);
   final tokens = SecureTokenStore();
   final repository = Repository(
     api: ApiClient(baseUrl: apiBaseUrl, tokens: tokens, client: http.Client()),
@@ -39,6 +42,7 @@ Future<void> main() async {
         repositoryProvider.overrideWithValue(repository),
         appVersionProvider.overrideWithValue(appVersion),
         speechProvider.overrideWithValue(PhoneSpeech()),
+        remindersProvider.overrideWithValue(reminders),
         googleAuthProvider.overrideWithValue(
           googleServerClientId.isEmpty
               ? const DisabledGoogleAuth()

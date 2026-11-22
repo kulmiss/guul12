@@ -122,7 +122,10 @@ class Repository {
   // ---- profile ---------------------------------------------------------------------------------
 
   /// Server profile with any changes not yet uploaded applied on top.
-  Future<Profile> profile() async {
+  Future<Profile> profile() => profileFrom(db);
+
+  /// The profile from the phone only (also used by the background reminder, which has no API).
+  static Future<Profile> profileFrom(LocalDb db) async {
     final server = await db.readJson(Keys.serverProfile) ?? _emptyProfileJson;
     final pending = await db.readJson(Keys.pendingProfile) ?? const {};
     return Profile.fromJson({...server, ...pending});

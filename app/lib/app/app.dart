@@ -4,6 +4,7 @@ import 'package:material_ui/material_ui.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../ui/theme.dart';
 import 'providers.dart';
+import 'reminder_job.dart';
 import 'router.dart';
 
 class GuulApp extends ConsumerStatefulWidget {
@@ -20,6 +21,26 @@ class _GuulAppState extends ConsumerState<GuulApp> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
     // First sync in the background; the app works from the phone meanwhile.
     WidgetsBinding.instance.addPostFrameCallback((_) => fireAndForget(runSync(ref)));
+    ref.listenManual<(bool, String?)>(
+      profileProvider.select((p) => (p.hasValue, p.value?.reminderTime)),
+      (previous, next) => fireAndForget(_onReminderTime(previous, next)),
+      fireImmediately: true,
+    );
+  }
+
+  /// Keeps the phone's reminder in step with the profile. The notification permission is asked
+  /// only when the student sets a new reminder time, not on every start.
+  Future<void> _onReminderTime((bool, String?)? previous, (bool, String?) next) async {
+    final (loaded, time) = next;
+    if (!loaded) return;
+    final reminders = ref.read(remindersProvider);
+    final changed = previous != null && previous.$1 && previous.$2 != time;
+    if (changed && time != null) await reminders.askPermission();
+    await syncReminder(
+      db: ref.read(repositoryProvider).db,
+      reminders: reminders,
+      now: ref.read(clockProvider)(),
+    );
   }
 
   @override

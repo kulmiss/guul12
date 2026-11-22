@@ -1,8 +1,12 @@
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:guul12/app/app.dart';
+import 'package:guul12/app/providers.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../support/app_harness.dart';
+import '../support/fake_reminders.dart';
 import '../support/fake_server.dart';
 
 FakeServer onboarded() {
@@ -112,5 +116,29 @@ void main() {
     expect(server.profile['stream'], 'social');
     expect(server.profile['is_retaker'], false);
     expect(server.profile['region'], 'somali');
+  });
+
+  testWidgets('reminder: planned from the profile; permission asked only when it is set', (
+    tester,
+  ) async {
+    final server = FakeServer();
+    onboardedProfile(server);
+    final reminders = FakeReminders();
+    await pumpGuul(tester, server: server, reminders: reminders);
+    expect(reminders.permissionAsks, 0);
+    expect(reminders.scheduled, isEmpty);
+    expect(reminders.cancels, greaterThan(0), reason: 'no reminder time yet');
+
+    final container = ProviderScope.containerOf(tester.element(find.byType(GuulApp)));
+    await container.read(profileProvider.notifier).save({'reminder_time': '19:30'});
+    await settle(tester);
+    expect(reminders.permissionAsks, 1);
+    expect(reminders.scheduled, [DateTime(2026, 11, 22, 19, 30)]);
+
+    final cancels = reminders.cancels;
+    await container.read(profileProvider.notifier).save({'reminder_time': null});
+    await settle(tester);
+    expect(reminders.permissionAsks, 1, reason: 'switching off asks nothing');
+    expect(reminders.cancels, cancels + 1);
   });
 }
