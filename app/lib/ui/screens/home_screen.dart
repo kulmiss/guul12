@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../app/providers.dart';
+import '../../app/review_providers.dart';
 import '../../domain/ethiopian_calendar.dart';
 import '../../domain/practice.dart';
 import '../../l10n/generated/app_localizations.dart';
@@ -30,6 +31,9 @@ class HomeScreen extends ConsumerWidget {
     final saved = ref.watch(savedChaptersProvider).value ?? const <int>{};
     final today = ref.watch(clockProvider)();
     final maintenance = config?.maintenanceMessage;
+    final due = ref.watch(reviewDueCountProvider).value ?? 0;
+    final mistakes = ref.watch(mistakesProvider).value ?? const <int, List<Mistake>>{};
+    final mistakeCount = mistakes.values.fold(0, (sum, list) => sum + list.length);
 
     final recentHeaders = [for (final id in recent) ?catalog?.chapter(id)];
 
@@ -38,6 +42,8 @@ class HomeScreen extends ConsumerWidget {
       body: RefreshIndicator(
         onRefresh: () => runSync(ref),
         child: ListView(
+          // Pull to refresh must work even when the list is shorter than the screen.
+          physics: const AlwaysScrollableScrollPhysics(),
           padding: const EdgeInsets.only(bottom: 24),
           children: [
             ContentWidth(
@@ -65,6 +71,33 @@ class HomeScreen extends ConsumerWidget {
                           : context.push(PracticeScreen.playPath(PracticeMode.quick10)),
                     ),
                   ),
+                  if (due > 0)
+                    Card(
+                      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                      color: Theme.of(context).colorScheme.secondaryContainer,
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        leading: const CircleAvatar(child: Icon(Icons.event_repeat)),
+                        title: Text(
+                          l.homeReviewDue(due),
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        subtitle: Text(l.homeReviewBody),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push(PracticeScreen.playPath(PracticeMode.review)),
+                      ),
+                    ),
+                  if (mistakeCount > 0)
+                    Card(
+                      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                      child: ListTile(
+                        leading: const Icon(Icons.menu_book_outlined),
+                        title: Text(l.homeMistakes),
+                        subtitle: Text(l.homeMistakesBody(mistakeCount)),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push('/mistakes'),
+                      ),
+                    ),
                   if (saved.isNotEmpty)
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),

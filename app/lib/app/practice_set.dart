@@ -47,6 +47,7 @@ Future<PracticeSet> buildPracticeSet(
   Repository repo,
   PracticeRequest request, {
   Random? random,
+  DateTime? now,
 }) async {
   final List<ChapterContent> chapters;
   switch (request.mode) {
@@ -74,6 +75,7 @@ Future<PracticeSet> buildPracticeSet(
     case PracticeMode.mixed:
     case PracticeMode.timed:
     case PracticeMode.wrongOnly:
+    case PracticeMode.review:
     case PracticeMode.quickRevise:
     case PracticeMode.onboarding:
       chapters = await repo.db.chapters();
@@ -89,6 +91,9 @@ Future<PracticeSet> buildPracticeSet(
     pool: pool,
     wrong: await repo.db.lastAnswerWrong(),
     answered: await repo.db.answeredQuestionIds(),
+    due: request.mode == PracticeMode.review
+        ? await repo.db.dueQuestionIds(now ?? repo.now())
+        : const {},
   );
   return PracticeSet(questions: questions, passages: passages);
 }
@@ -99,5 +104,6 @@ final practiceSetProvider = FutureProvider.autoDispose.family<PracticeSet, Pract
     request,
     // A fresh shuffle every time; `seed` only makes "Practise again" build a new set.
     random: Random(),
+    now: ref.read(clockProvider)(),
   ),
 );

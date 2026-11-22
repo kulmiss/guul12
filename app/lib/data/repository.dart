@@ -36,6 +36,9 @@ class Repository {
   final TokenStore tokens;
   final DateTime Function() _clock;
 
+  /// The repository's clock (tests replace it).
+  DateTime now() => _clock();
+
   static const _profileFields = {
     'grade',
     'stream',
@@ -254,10 +257,13 @@ class Repository {
       'answers': [for (final a in answers) a.toJson()],
     };
     await db.queueAttempt(clientUuid, payload, _clock());
-    await db.recordAnswers([
+    final results = [
       for (final a in answers)
         (questionId: a.questionId, chapterId: a.chapterId, correct: a.correctLocally),
-    ], finishedAt);
+    ];
+    await db.recordAnswers(results, finishedAt);
+    // Skipped questions count as wrong, so they come back for review too.
+    await db.applySrs(results, finishedAt);
   }
 
   /// Uploads attempts that were saved offline. Returns how many were uploaded.
@@ -480,6 +486,7 @@ class Repository {
       after = asInt(json['next_after']);
       if (!asBool(json['has_more'])) break;
     }
+    await db.seedSrsFromMistakes(_clock());
     await db.writeString(Keys.historyRestored, 'done');
     return restored;
   }

@@ -12,7 +12,8 @@ enum PracticeMode {
   timed('timed'),
   wrongOnly('wrong_only'),
   quickRevise('quick_revise'),
-  chapterQuiz('chapter_quiz');
+  chapterQuiz('chapter_quiz'),
+  review('review');
 
   const PracticeMode(this.wire);
 
@@ -35,20 +36,25 @@ class PracticeBuilder {
   static const mixedCount = 20;
   static const chapterMax = 30;
   static const reviseCount = 5;
+  static const reviewMax = 20;
 
   /// [pool]: questions from chapters saved on the phone.
   /// [wrong]: questions whose last answer was wrong. [answered]: questions answered at least once.
+  /// [due]: questions whose spaced-repetition review is due.
   List<Question> build({
     required PracticeMode mode,
     required List<Question> pool,
     Set<int> wrong = const {},
     Set<int> answered = const {},
+    Set<int> due = const {},
   }) {
     final unique = {for (final q in pool) q.id: q}.values.toList();
 
     switch (mode) {
       case PracticeMode.wrongOnly:
         return _take(unique.where((q) => wrong.contains(q.id)).toList(), mixedCount);
+      case PracticeMode.review:
+        return _take(unique.where((q) => due.contains(q.id)).toList(), reviewMax);
       case PracticeMode.quickRevise:
         return _take(unique, reviseCount);
       case PracticeMode.chapter:

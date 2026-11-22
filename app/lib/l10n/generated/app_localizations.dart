@@ -1501,6 +1501,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Chapter {id}'**
   String examUnknownChapter(int id);
+
+  /// Spaced repetition practice mode
+  ///
+  /// In en, this message translates to:
+  /// **'Review due questions'**
+  String get practiceModeReview;
+
+  /// Review mode with nothing due
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing to review today. Well done!'**
+  String get practiceNothingToReview;
+
+  /// Home card: spaced repetition
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 question to review today} other{{count} questions to review today}}'**
+  String homeReviewDue(int count);
+
+  /// Home card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Mistakes come back after 1, 3 and 7 days until you know them.'**
+  String get homeReviewBody;
+
+  /// Home: mistakes notebook
+  ///
+  /// In en, this message translates to:
+  /// **'My mistakes'**
+  String get homeMistakes;
+
+  /// Home: mistakes count
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 question to learn} other{{count} questions to learn}}'**
+  String homeMistakesBody(int count);
+
+  /// Mistakes notebook title
+  ///
+  /// In en, this message translates to:
+  /// **'My mistakes'**
+  String get mistakesTitle;
+
+  /// Empty notebook
+  ///
+  /// In en, this message translates to:
+  /// **'No mistakes yet. Questions you get wrong appear here.'**
+  String get mistakesEmpty;
+
+  /// Starts wrong-only practice
+  ///
+  /// In en, this message translates to:
+  /// **'Practise my mistakes'**
+  String get mistakesPractise;
+
+  /// SRS state
+  ///
+  /// In en, this message translates to:
+  /// **'Review today'**
+  String get mistakesReviewToday;
+
+  /// SRS state
+  ///
+  /// In en, this message translates to:
+  /// **'Next review: {date}'**
+  String mistakesNextReview(String date);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

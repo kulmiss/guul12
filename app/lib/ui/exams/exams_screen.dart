@@ -141,6 +141,8 @@ class _ExamsScreenState extends ConsumerState<ExamsScreen> {
       body: RefreshIndicator(
         onRefresh: _refresh,
         child: ListView(
+          // Pull to refresh must work even when the list is shorter than the screen.
+          physics: const AlwaysScrollableScrollPhysics(),
           padding: const EdgeInsets.only(bottom: 24),
           children: [
             ContentWidth(

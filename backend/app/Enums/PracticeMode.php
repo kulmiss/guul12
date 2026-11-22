@@ -13,6 +13,10 @@ enum PracticeMode: string
     case WrongOnly = 'wrong_only';
     case QuickRevise = 'quick_revise';
     case ChapterQuiz = 'chapter_quiz';
+    // Spaced repetition: questions due again after 1, 3 and 7 days.
+    case Review = 'review';
+    // Adaptive practice: weak chapters first, then new questions.
+    case Smart = 'smart';
 
     // Exams (no feedback until the end).
     case ExamFixed = 'exam_fixed';

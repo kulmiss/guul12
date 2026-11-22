@@ -850,4 +850,55 @@ class AppLocalizationsEn extends AppLocalizations {
   String examUnknownChapter(int id) {
     return 'Chapter $id';
   }
+
+  @override
+  String get practiceModeReview => 'Review due questions';
+
+  @override
+  String get practiceNothingToReview => 'Nothing to review today. Well done!';
+
+  @override
+  String homeReviewDue(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count questions to review today',
+      one: '1 question to review today',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeReviewBody => 'Mistakes come back after 1, 3 and 7 days until you know them.';
+
+  @override
+  String get homeMistakes => 'My mistakes';
+
+  @override
+  String homeMistakesBody(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count questions to learn',
+      one: '1 question to learn',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get mistakesTitle => 'My mistakes';
+
+  @override
+  String get mistakesEmpty => 'No mistakes yet. Questions you get wrong appear here.';
+
+  @override
+  String get mistakesPractise => 'Practise my mistakes';
+
+  @override
+  String get mistakesReviewToday => 'Review today';
+
+  @override
+  String mistakesNextReview(String date) {
+    return 'Next review: $date';
+  }
 }

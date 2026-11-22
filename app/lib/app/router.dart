@@ -9,6 +9,7 @@ import '../ui/exams/exam_screen.dart';
 import '../ui/exams/exams_screen.dart';
 import '../ui/practice/player_screen.dart';
 import '../ui/practice/practice_screen.dart';
+import '../ui/review/mistakes_screen.dart';
 import '../ui/screens/chapter_screen.dart';
 import '../ui/screens/home_screen.dart';
 import '../ui/screens/me_screen.dart';
@@ -98,6 +99,11 @@ final routerProvider = Provider<GoRouter>((ref) {
             ),
           ),
         ],
+      ),
+      GoRoute(
+        path: '/mistakes',
+        parentNavigatorKey: _rootKey,
+        builder: (_, _) => const MistakesScreen(),
       ),
       GoRoute(
         path: '/exam',

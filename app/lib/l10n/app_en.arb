@@ -1181,5 +1181,64 @@
         "type": "int"
       }
     }
+  },
+  "practiceModeReview": "Review due questions",
+  "@practiceModeReview": {
+    "description": "Spaced repetition practice mode"
+  },
+  "practiceNothingToReview": "Nothing to review today. Well done!",
+  "@practiceNothingToReview": {
+    "description": "Review mode with nothing due"
+  },
+  "homeReviewDue": "{count, plural, =1{1 question to review today} other{{count} questions to review today}}",
+  "@homeReviewDue": {
+    "description": "Home card: spaced repetition",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeReviewBody": "Mistakes come back after 1, 3 and 7 days until you know them.",
+  "@homeReviewBody": {
+    "description": "Home card subtitle"
+  },
+  "homeMistakes": "My mistakes",
+  "@homeMistakes": {
+    "description": "Home: mistakes notebook"
+  },
+  "homeMistakesBody": "{count, plural, =1{1 question to learn} other{{count} questions to learn}}",
+  "@homeMistakesBody": {
+    "description": "Home: mistakes count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mistakesTitle": "My mistakes",
+  "@mistakesTitle": {
+    "description": "Mistakes notebook title"
+  },
+  "mistakesEmpty": "No mistakes yet. Questions you get wrong appear here.",
+  "@mistakesEmpty": {
+    "description": "Empty notebook"
+  },
+  "mistakesPractise": "Practise my mistakes",
+  "@mistakesPractise": {
+    "description": "Starts wrong-only practice"
+  },
+  "mistakesReviewToday": "Review today",
+  "@mistakesReviewToday": {
+    "description": "SRS state"
+  },
+  "mistakesNextReview": "Next review: {date}",
+  "@mistakesNextReview": {
+    "description": "SRS state",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }

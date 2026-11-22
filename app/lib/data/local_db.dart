@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
 
+import '../domain/srs.dart';
 import 'models.dart';
 
 /// Everything the student needs offline lives here (SQLite on the phone).
@@ -11,7 +12,7 @@ class LocalDb {
 
   final Database _db;
 
-  static const _version = 2;
+  static const _version = 3;
 
   /// Opens the app database. Tests pass `databaseFactoryFfi` and [inMemoryDatabasePath].
   static Future<LocalDb> open({DatabaseFactory? factory, String? path}) async {
@@ -47,7 +48,18 @@ class LocalDb {
         'CREATE TABLE bookmarks (question_id INTEGER PRIMARY KEY, synced INTEGER NOT NULL)',
       );
     _createV2(batch);
+    _createV3(batch);
     await batch.commit(noResult: true);
+  }
+
+  /// Version 3: spaced repetition of mistakes (review after 1, 3, 7 days).
+  static void _createV3(Batch batch) {
+    batch
+      ..execute(
+        'CREATE TABLE srs (question_id INTEGER PRIMARY KEY, chapter_id INTEGER NOT NULL, '
+        'step INTEGER NOT NULL, due_at INTEGER NOT NULL)',
+      )
+      ..execute('CREATE INDEX srs_due ON srs (due_at)');
   }
 
   /// Version 2 (Phase 3): downloaded mock exams and finished exam results.
@@ -64,6 +76,7 @@ class LocalDb {
   static Future<void> _upgrade(Database db, int from, int to) async {
     final batch = db.batch();
     if (from < 2) _createV2(batch);
+    if (from < 3) _createV3(batch);
     await batch.commit(noResult: true);
   }
 
@@ -210,6 +223,81 @@ class LocalDb {
     });
     return added;
   }
+
+  // ---- spaced repetition ------------------------------------------------------------------------
+
+  /// Updates the review list after answers given at [at].
+  Future<void> applySrs(
+    List<({int questionId, int chapterId, bool correct})> answers,
+    DateTime at,
+  ) async {
+    await _db.transaction((txn) async {
+      for (final a in answers) {
+        final rows = await txn.query('srs', where: 'question_id = ?', whereArgs: [a.questionId]);
+        final current = rows.isEmpty ? null : _srsItem(rows.first);
+        final next = srsAfterAnswer(
+          item: current,
+          questionId: a.questionId,
+          chapterId: a.chapterId,
+          correct: a.correct,
+          now: at,
+        );
+        if (next == null) {
+          if (current != null) {
+            await txn.delete('srs', where: 'question_id = ?', whereArgs: [a.questionId]);
+          }
+        } else if (!identical(next, current)) {
+          await txn.insert('srs', {
+            'question_id': next.questionId,
+            'chapter_id': next.chapterId,
+            'step': next.step,
+            'due_at': next.dueAt.millisecondsSinceEpoch,
+          }, conflictAlgorithm: ConflictAlgorithm.replace);
+        }
+      }
+    });
+  }
+
+  /// Puts questions whose last answer was wrong on the review list (due at [at]) when they are
+  /// not there yet. Used after answers come back from the server on a new phone.
+  Future<int> seedSrsFromMistakes(DateTime at) async {
+    final rows = await _db.rawQuery(
+      'SELECT a.question_id AS question_id, a.chapter_id AS chapter_id FROM answers a '
+      'WHERE a.id = (SELECT b.id FROM answers b WHERE b.question_id = a.question_id ORDER BY b.answered_at DESC, b.id DESC LIMIT 1) '
+      'AND a.correct = 0 AND a.question_id NOT IN (SELECT question_id FROM srs)',
+    );
+    final batch = _db.batch();
+    for (final r in rows) {
+      batch.insert('srs', {
+        'question_id': r['question_id'],
+        'chapter_id': r['chapter_id'],
+        'step': 0,
+        'due_at': at.millisecondsSinceEpoch,
+      });
+    }
+    await batch.commit(noResult: true);
+    return rows.length;
+  }
+
+  Future<List<SrsItem>> srsItems() async =>
+      (await _db.query('srs', orderBy: 'due_at, question_id')).map(_srsItem).toList();
+
+  Future<Set<int>> dueQuestionIds(DateTime now) async {
+    final rows = await _db.query(
+      'srs',
+      columns: ['question_id'],
+      where: 'due_at <= ?',
+      whereArgs: [now.millisecondsSinceEpoch],
+    );
+    return rows.map((r) => r['question_id']! as int).toSet();
+  }
+
+  static SrsItem _srsItem(Map<String, Object?> r) => SrsItem(
+    questionId: r['question_id']! as int,
+    chapterId: r['chapter_id']! as int,
+    step: r['step']! as int,
+    dueAt: DateTime.fromMillisecondsSinceEpoch(r['due_at']! as int, isUtc: true),
+  );
 
   // ---- mock exams ------------------------------------------------------------------------------
 

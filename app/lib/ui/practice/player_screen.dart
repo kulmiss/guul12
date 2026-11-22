@@ -5,6 +5,7 @@ import 'package:uuid/uuid.dart';
 
 import '../../app/practice_set.dart';
 import '../../app/providers.dart';
+import '../../app/review_providers.dart';
 import '../../data/models.dart';
 import '../../data/repository.dart';
 import '../../domain/practice.dart';
@@ -54,6 +55,10 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
           ),
       ],
     );
+    // Mistakes and reviews changed.
+    ref
+      ..invalidate(mistakesProvider)
+      ..invalidate(reviewDueCountProvider);
     final synced = await repo.tryUploadAttempts(appVersion: ref.read(appVersionProvider));
     if (mounted) setState(() => _synced = synced);
   }
@@ -121,9 +126,11 @@ class _PlayerScreenState extends ConsumerState<PlayerScreen> {
                 ),
                 data: (set) => set.isEmpty
                     ? MessageView(
-                        message: _request.mode == PracticeMode.wrongOnly
-                            ? l.practiceNoWrongAnswers
-                            : l.practiceNoQuestions,
+                        message: switch (_request.mode) {
+                          PracticeMode.wrongOnly => l.practiceNoWrongAnswers,
+                          PracticeMode.review => l.practiceNothingToReview,
+                          _ => l.practiceNoQuestions,
+                        },
                         icon: Icons.school_outlined,
                       )
                     : PracticeRunner(
@@ -148,6 +155,7 @@ String practiceModeLabel(AppLocalizations l, PracticeMode mode) => switch (mode)
   PracticeMode.timed => l.practiceModeTimed,
   PracticeMode.wrongOnly => l.practiceModeWrongOnly,
   PracticeMode.quickRevise => l.practiceModeQuickRevise,
+  PracticeMode.review => l.practiceModeReview,
   PracticeMode.onboarding => l.onboardingHookTitle,
 };
 

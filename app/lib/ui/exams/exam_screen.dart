@@ -6,6 +6,7 @@ import 'package:material_ui/material_ui.dart';
 
 import '../../app/exam_providers.dart';
 import '../../app/providers.dart';
+import '../../app/review_providers.dart';
 import '../../data/models.dart';
 import '../../domain/exam.dart';
 import '../widgets/common.dart';
@@ -95,7 +96,9 @@ class _ExamScreenState extends ConsumerState<ExamScreen> with WidgetsBindingObse
         .submitExam(session, now: _now(), appVersion: ref.read(appVersionProvider));
     ref
       ..invalidate(examInProgressProvider)
-      ..invalidate(examResultsProvider);
+      ..invalidate(examResultsProvider)
+      ..invalidate(mistakesProvider)
+      ..invalidate(reviewDueCountProvider);
     if (timeUp) messenger.showSnackBar(SnackBar(content: Text(l.examTimeUp)));
     if (mounted) fireAndForget(router.pushReplacement('/exam/result/${record.clientUuid}'));
   }

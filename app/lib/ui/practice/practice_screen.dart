@@ -31,6 +31,7 @@ class PracticeScreen extends StatelessWidget {
       (PracticeMode.quick10, Icons.bolt),
       (PracticeMode.mixed, Icons.shuffle),
       (PracticeMode.timed, Icons.timer_outlined),
+      (PracticeMode.review, Icons.event_repeat),
       (PracticeMode.wrongOnly, Icons.replay),
       (PracticeMode.quickRevise, Icons.flash_on_outlined),
     ];

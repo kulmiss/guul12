@@ -129,6 +129,16 @@ class AttemptTest extends TestCase
             ->assertUnprocessable()->assertJsonValidationErrors(['answers.0.version', 'answers.0.time_ms', 'answers.0.response']);
     }
 
+    public function test_every_mode_the_app_sends_is_accepted(): void
+    {
+        $q = Question::factory()->withOptions()->create();
+        // Must match app/lib/domain/practice.dart (PracticeMode) and exam.dart (ExamKind).
+        foreach (['onboarding', 'quick10', 'chapter', 'unit', 'mixed', 'timed', 'wrong_only', 'quick_revise', 'chapter_quiz', 'review', 'smart', 'exam_random', 'exam_weak', 'exam_mistakes'] as $mode) {
+            $payload = [...$this->payload([['question_id' => $q->id, 'version' => 1, 'response' => 'B', 'time_ms' => 5000]]), 'mode' => $mode];
+            $this->postJson('/api/v1/attempts', $payload)->assertCreated();
+        }
+    }
+
     public function test_attempts_of_two_students_with_the_same_uuid_are_separate(): void
     {
         $question = Question::factory()->withOptions()->create();
