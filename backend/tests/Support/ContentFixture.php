@@ -19,6 +19,9 @@ final class ContentFixture
     /** @var array<string, array<string, mixed>> file => chapter data */
     public array $chapters = [];
 
+    /** @var array<string, array<string, mixed>> mock file name => mock data */
+    public array $mocks = [];
+
     public function __construct()
     {
         $this->root = sys_get_temp_dir().'/guul12-content-'.Str::random(10);
@@ -97,8 +100,50 @@ final class ContentFixture
         foreach ($this->chapters as $file => $data) {
             file_put_contents($this->root.'/grade12/'.$file, Yaml::dump($data, 10, 2));
         }
+        $mockDir = $this->root.'/grade12/mocks';
+        foreach (glob($mockDir.'/*.yaml') ?: [] as $old) {
+            unlink($old);
+        }
+        if ($this->mocks !== [] && ! is_dir($mockDir)) {
+            mkdir($mockDir);
+        }
+        foreach ($this->mocks as $name => $data) {
+            file_put_contents($mockDir.'/'.$name, Yaml::dump($data, 10, 2));
+        }
 
         return $this->root;
+    }
+
+    /**
+     * Adds single-choice questions g12-physics-2-1-q101, q102, … (after any added before)
+     * with the given answer letters.
+     *
+     * @param  list<string>  $letters
+     * @return list<string> their uids
+     */
+    public function addChoiceQuestions(array $letters, string $file = 'physics/u2-c1.yaml'): array
+    {
+        $uids = [];
+        $first = 101 + count(array_filter(
+            $this->chapters[$file]['questions'],
+            fn (array $q) => preg_match('/-q1\d\d$/', $q['uid']) === 1,
+        ));
+        foreach ($letters as $i => $letter) {
+            $n = $first + $i;
+            $uid = "g12-physics-2-1-q{$n}";
+            $this->chapters[$file]['questions'][] = [
+                'uid' => $uid, 'type' => 'single_choice', 'difficulty' => 2,
+                'stem' => "Extra question {$n}: what is {$n} + 1?",
+                'options' => array_combine(['A', 'B', 'C', 'D'], array_map(
+                    fn (string $l) => (string) ($l === $letter ? $n + 1 : $n + 10 + ord($l)),
+                    ['A', 'B', 'C', 'D'],
+                )),
+                'answer' => $letter, 'explanation' => "Adding one to {$n} gives ".($n + 1).'.',
+            ];
+            $uids[] = $uid;
+        }
+
+        return $uids;
     }
 
     /**

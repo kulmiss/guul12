@@ -2,6 +2,7 @@
 
 namespace App\Content;
 
+use App\Enums\Access;
 use App\Enums\QuestionType;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
@@ -14,6 +15,7 @@ use Symfony\Component\Yaml\Yaml;
  *   content/grade12/curriculum.yaml          subjects → units → chapters (+ file of each chapter)
  *   content/grade12/<subject>/<file>.yaml     one chapter: summary, exercises, flashcards, passages, questions
  *   content/grade12/<subject>/<file>.review.yaml   the independent second solve of that chapter
+ *   content/grade12/mocks/<name>.yaml         one fixed mock exam: a list of bank question uids
  */
 final class ContentValidator
 {
@@ -66,6 +68,7 @@ final class ContentValidator
         foreach ($files as $file) {
             $curriculum = $this->readCurriculum($file, dirname($file));
             if ($curriculum !== null) {
+                $curriculum = $this->readMocks(dirname($file), $curriculum);
                 $curricula[] = $curriculum;
                 foreach ($this->readReviews(dirname($file), $curriculum) as $uid => $list) {
                     $reviews[$uid] = $list;
@@ -732,6 +735,152 @@ final class ContentValidator
         $top = (int) reset($counts);
         if ($top / count($letters) > 0.4) {
             $this->errors[] = "{$at}: the right answer is '".array_key_first($counts)."' in {$top} of ".count($letters).' single-choice questions; mix the letters';
+        }
+    }
+
+    // ---- mocks ------------------------------------------------------------------------------
+
+    /** Mock exams use only the question types of the real paper. */
+    private const MOCK_TYPES = [QuestionType::SingleChoice, QuestionType::PassageChoice];
+
+    private function readMocks(string $dir, CurriculumDef $curriculum): CurriculumDef
+    {
+        $files = glob($dir.'/mocks/*.yaml') ?: [];
+        sort($files);
+        if ($files === []) {
+            return $curriculum;
+        }
+
+        /** @var array<string, array{subject: string, question: QuestionDef}> $bank */
+        $bank = [];
+        foreach ($curriculum->subjects as $s) {
+            foreach ($s->units as $u) {
+                foreach ($u->chapters as $c) {
+                    foreach ($c->questions as $q) {
+                        $bank[$q->uid] = ['subject' => $s->code, 'question' => $q];
+                    }
+                }
+            }
+        }
+        $subjects = array_map(fn (SubjectDef $s) => $s->code, $curriculum->subjects);
+
+        $mocks = [];
+        $numbers = [];
+        $usedBy = [];
+        foreach ($files as $file) {
+            $at = basename($dir).'/mocks/'.basename($file);
+            $data = $this->parse($file);
+            if ($data === null) {
+                continue;
+            }
+            $subject = $this->str($data, 'subject', $at, 32);
+            $number = $this->int($data, 'number', $at, 1, 99);
+            $uid = $this->str($data, 'uid', $at, 64);
+            $title = $this->str($data, 'title', $at, 191);
+            $minutes = $this->int($data, 'minutes', $at, 5, 300);
+            $access = Access::tryFrom(is_string($data['access'] ?? null) ? $data['access'] : '');
+            if ($access === null) {
+                $this->errors[] = "{$at}: access must be 'free' or 'premium'";
+            }
+            if ($subject === null || $number === null || $uid === null || $title === null || $minutes === null || $access === null) {
+                continue;
+            }
+            if (! in_array($subject, $subjects, true)) {
+                $this->errors[] = "{$at}: subject '{$subject}' is not in curriculum.yaml";
+
+                continue;
+            }
+            $expected = "g{$curriculum->grade}-mock-{$subject}-{$number}";
+            if ($uid !== $expected) {
+                $this->errors[] = "{$at}: uid must be '{$expected}'";
+
+                continue;
+            }
+            if (isset($numbers[$uid])) {
+                $this->errors[] = "{$at}: {$subject} mock {$number} is also in {$numbers[$uid]}";
+
+                continue;
+            }
+            $numbers[$uid] = $at;
+
+            $uids = [];
+            $questions = [];
+            foreach ($this->listOf($data['questions'] ?? null, "{$at}: questions") as $i => $qUid) {
+                $qat = "{$at}: questions[{$i}]";
+                if (! is_string($qUid) || ! isset($bank[$qUid])) {
+                    $this->errors[] = "{$qat}: unknown question '".(is_scalar($qUid) ? (string) $qUid : '?')."'";
+
+                    continue;
+                }
+                if ($bank[$qUid]['subject'] !== $subject) {
+                    $this->errors[] = "{$qat}: {$qUid} is not a {$subject} question";
+
+                    continue;
+                }
+                if (! in_array($bank[$qUid]['question']->type, self::MOCK_TYPES, true)) {
+                    $this->errors[] = "{$qat}: {$qUid} is not a choice question (mocks use only the real paper's types)";
+
+                    continue;
+                }
+                if (in_array($qUid, $uids, true)) {
+                    $this->errors[] = "{$qat}: {$qUid} is listed twice";
+
+                    continue;
+                }
+                if (isset($usedBy[$qUid])) {
+                    $this->errors[] = "{$qat}: {$qUid} is already in {$usedBy[$qUid]}";
+
+                    continue;
+                }
+                $usedBy[$qUid] = $at;
+                $uids[] = $qUid;
+                $questions[] = $bank[$qUid]['question'];
+            }
+            if (count($uids) < 10 || count($uids) > 200) {
+                $this->errors[] = "{$at}: a mock needs 10–200 questions (has ".count($uids).')';
+
+                continue;
+            }
+            $this->checkMockOrder($questions, $at);
+            $mocks[] = new MockDef($uid, $subject, $number, $title, $minutes, $access, $uids);
+        }
+
+        return new CurriculumDef($curriculum->grade, $curriculum->subjects, $mocks);
+    }
+
+    /**
+     * Questions of one passage sit together, and the key shows no pattern a student could learn:
+     * never the same letter 4 times in a row, never A, B, C, D, A… for 5 questions in a row.
+     *
+     * @param  list<QuestionDef>  $questions
+     */
+    private function checkMockOrder(array $questions, string $at): void
+    {
+        $seenPassages = [];
+        $previousPassage = null;
+        $same = 0;
+        $cycle = 0;
+        $previousLetter = null;
+        $next = ['A' => 'B', 'B' => 'C', 'C' => 'D', 'D' => 'A'];
+        foreach ($questions as $i => $q) {
+            if ($q->passageUid !== null && $q->passageUid !== $previousPassage) {
+                if (isset($seenPassages[$q->passageUid])) {
+                    $this->errors[] = "{$at}: questions on passage {$q->passageUid} must sit together";
+                }
+                $seenPassages[$q->passageUid] = true;
+            }
+            $previousPassage = $q->passageUid;
+
+            $letter = is_string($q->answerKey['correct'] ?? null) ? $q->answerKey['correct'] : null;
+            $same = $letter !== null && $letter === $previousLetter ? $same + 1 : 1;
+            $cycle = $letter !== null && $previousLetter !== null && ($next[$previousLetter] ?? null) === $letter ? $cycle + 1 : 1;
+            if ($same === 4) {
+                $this->errors[] = "{$at}: the key is '{$letter}' four times in a row (question ".($i + 1).')';
+            }
+            if ($cycle === 5) {
+                $this->errors[] = "{$at}: the key runs A, B, C, D in order (question ".($i + 1).')';
+            }
+            $previousLetter = $letter;
         }
     }
 

@@ -6,6 +6,7 @@ use App\Enums\QuestionStatus;
 use App\Enums\QuestionType;
 use App\Models\Chapter;
 use App\Models\Flashcard;
+use App\Models\Mock;
 use App\Models\Passage;
 use App\Models\Question;
 use App\Models\QuestionReview;
@@ -48,6 +49,7 @@ final class ContentImporter
                 foreach ($curriculum->subjects as $subjectDef) {
                     $this->importSubject($curriculum->grade, $subjectDef, $reviews, $report);
                 }
+                $this->importMocks($curriculum, $report);
             }
         });
 
@@ -212,6 +214,66 @@ final class ContentImporter
             $old->status = QuestionStatus::Retired;
             $old->save();
             $report->count('questions_retired');
+        }
+    }
+
+    /**
+     * Fixed mock exams. A mock keeps its questions in file order; a question that is hidden
+     * (not yet second-solved, or reported) is listed as a problem because the mock would be short.
+     */
+    private function importMocks(CurriculumDef $curriculum, ImportReport $report): void
+    {
+        $kept = [];
+        foreach ($curriculum->mocks as $def) {
+            $subject = Subject::query()->where('code', $def->subjectCode)->firstOrFail();
+            $mock = Mock::query()->firstOrNew(['uid' => $def->uid]);
+            $mock->fill([
+                'subject_id' => $subject->id,
+                'grade' => $curriculum->grade,
+                'number' => $def->number,
+                'title' => $def->title,
+                'minutes' => $def->minutes,
+                'access' => $def->access,
+                'is_active' => true,
+            ]);
+            $isNew = ! $mock->exists;
+            $fieldsChanged = $mock->isDirty();
+            if ($isNew || $fieldsChanged) {
+                $mock->save();
+            }
+
+            $questions = Question::query()->whereIn('uid', $def->questionUids)->get()->keyBy('uid');
+            $wanted = [];
+            foreach ($def->questionUids as $i => $uid) {
+                $question = $questions->get($uid);
+                if ($question === null) {
+                    throw new \RuntimeException("{$def->uid}: question {$uid} was not imported");
+                }
+                $wanted[$question->id] = ['sort' => $i + 1];
+                if (! $question->status->isVisibleToStudents()) {
+                    $report->problems[] = "{$def->uid}: {$uid} is hidden ({$question->status->value}), so the mock is short";
+                }
+            }
+            $current = [];
+            foreach (DB::table('mock_questions')->where('mock_id', $mock->id)->get(['question_id', 'sort']) as $row) {
+                $current[(int) $row->question_id] = ['sort' => (int) $row->sort];
+            }
+            ksort($current);
+            ksort($wanted);
+            $orderChanged = $current !== $wanted;
+            if ($orderChanged) {
+                $mock->questions()->sync($wanted);
+            }
+
+            $report->count($isNew ? 'mocks_created' : ($fieldsChanged || $orderChanged ? 'mocks_updated' : 'mocks_unchanged'));
+            $kept[] = $mock->id;
+        }
+
+        $gone = Mock::query()->where('grade', $curriculum->grade)->whereNotIn('id', $kept)->where('is_active', true)->get();
+        foreach ($gone as $mock) {
+            $mock->is_active = false;
+            $mock->save();
+            $report->count('mocks_hidden');
         }
     }
 

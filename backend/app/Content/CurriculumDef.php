@@ -10,9 +10,11 @@ final class CurriculumDef
 {
     /**
      * @param  list<SubjectDef>  $subjects
+     * @param  list<MockDef>  $mocks
      */
     public function __construct(
         public readonly int $grade,
         public readonly array $subjects,
+        public readonly array $mocks = [],
     ) {}
 }

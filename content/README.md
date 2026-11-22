@@ -85,3 +85,23 @@ So **after changing a chapter's summary, exercises or flashcards, run `npm run b
 `content:import` copies each PDF to the public disk under a name with its hash and sends the URL to the app
 (production needs `php artisan storage:link` and the right `APP_URL`).
 
+## Fixed mock exams
+
+`content/grade12/mocks/<subject>-<n>.yaml` lists bank questions in exam order:
+
+```yaml
+uid: g12-mock-physics-1      # g<grade>-mock-<subject>-<number>
+subject: physics
+number: 1
+title: Physics mock exam 1
+minutes: 75
+access: free                 # free | premium
+questions: [g12-physics-1-1-q003, …]
+```
+
+`python3 content/tools/make-mocks.py` writes them (about 50 choice questions each, every chapter covered,
+repeatable). `content:check` refuses a mock with an unknown or non-choice question, a question used twice or in
+two mocks of the same subject, a split reading passage, or a key with a pattern (same letter 4 times in a row,
+or A, B, C, D, A… 5 in a row). A hidden (not second-solved) question is reported on import because the mock
+would be short.
+
