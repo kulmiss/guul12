@@ -6,23 +6,27 @@ use App\Enums\QuestionStatus;
 use App\Models\Summary as SummaryModel;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Code;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
- * @extends resource<SummaryModel>
+ * @extends \App\Nova\Resources\Resource<SummaryModel>
  */
 class Summary extends Resource
 {
+    /** @var class-string<SummaryModel> */
     public static $model = SummaryModel::class;
 
     public static $title = 'id';
 
     public static string $ability = 'manage-content';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

@@ -3,44 +3,50 @@
 namespace App\Nova\Resources;
 
 use App\Models\AuditLog as AuditLogModel;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
  * Read-only log of staff actions.
  *
- * @extends resource<AuditLogModel>
+ * @extends \App\Nova\Resources\Resource<AuditLogModel>
  */
 class AuditLog extends Resource
 {
+    /** @var class-string<AuditLogModel> */
     public static $model = AuditLogModel::class;
 
     public static $title = 'action';
 
+    /** @var array<int, string> */
     public static $search = ['action'];
 
     public static string $ability = 'manage-settings';
 
-    public static function authorizedToCreate($request): bool
+    public static function authorizedToCreate(Request $request): bool
     {
         return false;
     }
 
-    public function authorizedToUpdate($request): bool
+    public function authorizedToUpdate(Request $request): bool
     {
         return false;
     }
 
-    public function authorizedToDelete($request): bool
+    public function authorizedToDelete(Request $request): bool
     {
         return false;
     }
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

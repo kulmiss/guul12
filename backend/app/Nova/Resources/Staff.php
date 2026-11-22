@@ -5,23 +5,28 @@ namespace App\Nova\Resources;
 use App\Enums\UserRole;
 use App\Models\User;
 use App\Services\StudentIdGenerator;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
  * Staff accounts (super admin only).
  *
- * @extends resource<User>
+ * @extends \App\Nova\Resources\Resource<User>
  */
 class Staff extends Resource
 {
+    /** @var class-string<User> */
     public static $model = User::class;
 
     public static $title = 'name';
 
+    /** @var array<int, string> */
     public static $search = ['name', 'email'];
 
     public static string $ability = 'manage-settings';
@@ -36,11 +41,12 @@ class Staff extends Resource
         return 'staff';
     }
 
-    public static function indexQuery(NovaRequest $request, $query)
+    public static function indexQuery(NovaRequest $request, Builder $query): Builder
     {
         return $query->where('role', '!=', UserRole::Student->value);
     }
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [
@@ -66,10 +72,10 @@ class Staff extends Resource
      *
      * @param  User  $model
      */
-    public static function fillForCreate(NovaRequest $request, $model): array
+    public static function fill(NovaRequest $request, $model): array
     {
         $model->student_id = app(StudentIdGenerator::class)->generate();
 
-        return parent::fillForCreate($request, $model);
+        return parent::fill($request, $model);
     }
 }

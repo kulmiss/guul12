@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Nova\NovaServiceProvider;
+use App\Providers\NovaServiceProvider;
 use Laravel\Nova\Nova;
 use Tests\TestCase;
 
@@ -16,13 +16,13 @@ class NovaIsOptionalTest extends TestCase
             return;
         }
 
-        $this->assertArrayNotHasKey('App\\Nova\\NovaServiceProvider', $this->app->getLoadedProviders());
+        $this->assertArrayNotHasKey(NovaServiceProvider::class, $this->app->getLoadedProviders());
         $this->get('/up')->assertOk();
     }
 
     public function test_every_nova_file_is_valid_php(): void
     {
-        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator(base_path('nova')));
+        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator(app_path('Nova')));
         $checked = 0;
 
         foreach ($files as $file) {

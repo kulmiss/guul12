@@ -8,6 +8,10 @@
 /.fleet
 /.idea
 /.nova
+# The owner's local copy of the licensed Nova package (composer path repository). Never commit.
+/nova
+# Nova's published assets are licensed too.
+/public/vendor/nova
 /.phpunit.cache
 /.vscode
 /.zed

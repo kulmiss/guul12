@@ -2,6 +2,8 @@
 
 namespace App\Nova\Resources;
 
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource as NovaResource;
 
@@ -17,37 +19,37 @@ abstract class Resource extends NovaResource
      */
     public static string $ability = 'manage-settings';
 
-    public static function authorizedToViewAny($request): bool
+    public static function authorizedToViewAny(Request $request): bool
     {
         return $request->user()?->can(static::$ability) ?? false;
     }
 
-    public function authorizedToView($request): bool
+    public function authorizedToView(Request $request): bool
     {
         return static::authorizedToViewAny($request);
     }
 
-    public static function authorizedToCreate($request): bool
+    public static function authorizedToCreate(Request $request): bool
     {
         return static::authorizedToViewAny($request);
     }
 
-    public function authorizedToUpdate($request): bool
+    public function authorizedToUpdate(Request $request): bool
     {
         return static::authorizedToViewAny($request);
     }
 
-    public function authorizedToDelete($request): bool
+    public function authorizedToDelete(Request $request): bool
     {
         return static::authorizedToViewAny($request);
     }
 
-    public function authorizedToReplicate($request): bool
+    public function authorizedToReplicate(Request $request): bool
     {
         return false;
     }
 
-    public static function indexQuery(NovaRequest $request, $query)
+    public static function indexQuery(NovaRequest $request, Builder $query): Builder
     {
         return $query;
     }

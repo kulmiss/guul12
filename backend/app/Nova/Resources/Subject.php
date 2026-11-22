@@ -4,26 +4,31 @@ namespace App\Nova\Resources;
 
 use App\Models\Subject as SubjectModel;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
- * @extends resource<SubjectModel>
+ * @extends \App\Nova\Resources\Resource<SubjectModel>
  */
 class Subject extends Resource
 {
+    /** @var class-string<SubjectModel> */
     public static $model = SubjectModel::class;
 
     public static $title = 'name';
 
+    /** @var array<int, string> */
     public static $search = ['name', 'code'];
 
     public static string $ability = 'manage-content';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

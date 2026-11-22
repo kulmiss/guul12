@@ -4,26 +4,32 @@ namespace App\Nova\Resources;
 
 use App\Models\AppSetting as AppSettingModel;
 use App\Services\Settings;
+use Illuminate\Database\Eloquent\Model;
 use Laravel\Nova\Fields\Code;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
  * App settings: prices (landing page only), free limits, exam date, AI cap, update prompts, maintenance.
  *
- * @extends resource<AppSettingModel>
+ * @extends \App\Nova\Resources\Resource<AppSettingModel>
  */
 class AppSetting extends Resource
 {
+    /** @var class-string<AppSettingModel> */
     public static $model = AppSettingModel::class;
 
     public static $title = 'key';
 
+    /** @var array<int, string> */
     public static $search = ['key'];
 
     public static string $ability = 'manage-settings';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         $keys = array_keys(Settings::defaults());
@@ -38,11 +44,13 @@ class AppSetting extends Resource
         ];
     }
 
+    /** @param  Model  $model */
     public static function afterSave(NovaRequest $request, $model): void
     {
         app(Settings::class)->flush();
     }
 
+    /** @param  Model  $model */
     public static function afterDelete(NovaRequest $request, $model): void
     {
         app(Settings::class)->flush();

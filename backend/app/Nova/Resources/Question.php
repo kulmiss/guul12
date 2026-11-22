@@ -7,6 +7,7 @@ use App\Enums\QuestionType;
 use App\Models\Question as QuestionModel;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Code;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -14,22 +15,26 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
  * Questions of all types. LaTeX goes between $…$ (inline) or $$…$$ (block).
  *
- * @extends resource<QuestionModel>
+ * @extends \App\Nova\Resources\Resource<QuestionModel>
  */
 class Question extends Resource
 {
+    /** @var class-string<QuestionModel> */
     public static $model = QuestionModel::class;
 
     public static $title = 'id';
 
+    /** @var array<int, string> */
     public static $search = ['id', 'stem'];
 
     public static string $ability = 'manage-content';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         $types = [];

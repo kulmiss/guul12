@@ -8,19 +8,20 @@ use App\Services\PremiumService;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Actions\ActionResponse;
+use Laravel\Nova\Actions\DestructiveAction;
 use Laravel\Nova\Fields\ActionFields;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
-class RevokePremium extends Action
+class RevokePremium extends DestructiveAction
 {
     public $name = 'Undo Premium';
 
     public $confirmText = 'Undo this Premium grant? The student goes back to free (progress is kept).';
 
     public $confirmButtonText = 'Undo';
-
-    public $destructive = true;
 
     /**
      * @param  Collection<int, PremiumGrant>  $models
@@ -38,6 +39,7 @@ class RevokePremium extends Action
         return Action::message('Premium undone.');
     }
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

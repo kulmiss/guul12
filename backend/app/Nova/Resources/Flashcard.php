@@ -5,26 +5,31 @@ namespace App\Nova\Resources;
 use App\Enums\QuestionStatus;
 use App\Models\Flashcard as FlashcardModel;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
- * @extends resource<FlashcardModel>
+ * @extends \App\Nova\Resources\Resource<FlashcardModel>
  */
 class Flashcard extends Resource
 {
+    /** @var class-string<FlashcardModel> */
     public static $model = FlashcardModel::class;
 
     public static $title = 'term';
 
+    /** @var array<int, string> */
     public static $search = ['term'];
 
     public static string $ability = 'manage-content';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

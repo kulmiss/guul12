@@ -1,7 +1,7 @@
 <?php
 
-use App\Nova\NovaServiceProvider;
 use App\Providers\AppServiceProvider;
+use App\Providers\NovaServiceProvider;
 use Laravel\Nova\Nova;
 
 return array_values(array_filter([

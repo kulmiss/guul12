@@ -6,6 +6,7 @@ use App\Enums\Access;
 use App\Models\Chapter as ChapterModel;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\HasOne;
 use Laravel\Nova\Fields\ID;
@@ -14,20 +15,24 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\URL;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
- * @extends resource<ChapterModel>
+ * @extends \App\Nova\Resources\Resource<ChapterModel>
  */
 class Chapter extends Resource
 {
+    /** @var class-string<ChapterModel> */
     public static $model = ChapterModel::class;
 
     public static $title = 'title';
 
+    /** @var array<int, string> */
     public static $search = ['title'];
 
     public static string $ability = 'manage-content';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

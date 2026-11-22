@@ -3,6 +3,7 @@
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
          colors="true"
+         defaultTestSuite="Unit,Feature"
 >
     <testsuites>
         <testsuite name="Unit">
@@ -10,6 +11,10 @@
         </testsuite>
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
+        </testsuite>
+        <!-- Needs the licensed Nova package. Run it with: php artisan test (testsuite Nova) -->
+        <testsuite name="Nova">
+            <directory>tests/Nova</directory>
         </testsuite>
     </testsuites>
     <source>

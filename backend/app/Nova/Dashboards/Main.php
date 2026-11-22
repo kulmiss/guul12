@@ -4,6 +4,7 @@ namespace App\Nova\Dashboards;
 
 use App\Nova\Metrics\NewStudents;
 use App\Nova\Metrics\PremiumActive;
+use Laravel\Nova\Card;
 use Laravel\Nova\Dashboards\Main as Dashboard;
 
 /**
@@ -11,6 +12,7 @@ use Laravel\Nova\Dashboards\Main as Dashboard;
  */
 class Main extends Dashboard
 {
+    /** @return array<int, Card> */
     public function cards(): array
     {
         return [

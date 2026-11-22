@@ -37,12 +37,14 @@ jobs:
           tools: composer:v2
 
       - name: Nova credentials (only when the secrets exist)
+        id: nova
         env:
           NOVA_USERNAME: ${{ secrets.NOVA_USERNAME }}
           NOVA_LICENSE_KEY: ${{ secrets.NOVA_LICENSE_KEY }}
         run: |
           if [ -n "$NOVA_USERNAME" ] && [ -n "$NOVA_LICENSE_KEY" ]; then
             composer config --global http-basic.nova.laravel.com "$NOVA_USERNAME" "$NOVA_LICENSE_KEY"
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
             echo "Nova credentials configured."
           else
             echo "No Nova secrets: running without Nova."
@@ -58,6 +60,14 @@ jobs:
 
       - name: Validate composer files
         run: composer validate --strict --no-check-publish
+
+      # The licensed package is never committed: CI adds it only when the owner's secrets exist.
+      - name: Install Nova (only when the secrets exist)
+        if: steps.nova.outputs.enabled == 'true'
+        run: |
+          composer config repositories.nova composer https://nova.laravel.com
+          composer require "laravel/nova:^5.7" --no-interaction --no-progress --prefer-dist
+          php artisan vendor:publish --tag=nova-assets --force
 
       - name: Security audit
         run: composer audit
@@ -75,6 +85,10 @@ jobs:
 
       - name: Tests
         run: php artisan test
+
+      - name: Nova admin tests (only when Nova is installed)
+        if: steps.nova.outputs.enabled == 'true'
+        run: php artisan test --testsuite=Nova
 
       - name: Content files pass the automatic checks
         run: php artisan content:check ../content

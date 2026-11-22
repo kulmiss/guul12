@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Nova;
+namespace App\Providers;
 
 use App\Models\User;
 use App\Nova\Dashboards\Main;
+use App\Nova\Resources;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Dashboard;
 use Laravel\Nova\Nova;

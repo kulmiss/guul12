@@ -28,7 +28,6 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\Nova\\": "nova/",
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"

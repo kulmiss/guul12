@@ -4,18 +4,21 @@ namespace App\Nova\Resources;
 
 use App\Models\QuestionOption as QuestionOptionModel;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 /**
- * @extends resource<QuestionOptionModel>
+ * @extends \App\Nova\Resources\Resource<QuestionOptionModel>
  */
 class QuestionOption extends Resource
 {
+    /** @var class-string<QuestionOptionModel> */
     public static $model = QuestionOptionModel::class;
 
     public static $title = 'key';
@@ -24,6 +27,7 @@ class QuestionOption extends Resource
 
     public static string $ability = 'manage-content';
 
+    /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
         return [

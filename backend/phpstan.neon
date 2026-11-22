@@ -1,5 +1,7 @@
 includes:
     - vendor/larastan/larastan/extension.neon
+    # Leaves out the Nova code when Laravel Nova is not installed (CI without the licence).
+    - phpstan-nova.php
 
 parameters:
     level: 8
@@ -9,7 +11,4 @@ parameters:
         - database
         - routes
         - tests
-    # Nova code is only analysed once Laravel Nova is installed (see docs/nova-setup.md).
-    excludePaths:
-        - nova (?)
     tmpDir: storage/framework/cache/phpstan
