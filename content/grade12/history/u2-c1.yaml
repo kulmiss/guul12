@@ -7,7 +7,7 @@ summary:
     - 'Resistance took many forms: the Maji Maji rising (1905–1907) in German East Africa; Samori Touré against the French in West Africa; the Herero and Nama against German rule in South West Africa (1904–1908); the Somali Dervish movement led by Sayyid Mohammed Abdullah Hassan (1899–1920); and Omar Mukhtar in Libya against Italy.'
     - 'Colonial economies focused on cash crops and mining for export, used taxes (such as hut tax) and forced labour, and built railways mainly from mines and plantations to ports.'
     - 'Pan-Africanism called for African unity and freedom; the Manchester Pan-African Congress (1945) included Kwame Nkrumah and Jomo Kenyatta. After the Second World War, nationalist movements grew.'
-    - 'Decolonisation: Ghana (1957) was the first colony in sub-Saharan Africa to win independence from Britain; 1960 is called the "Year of Africa" (seventeen countries became independent, including Somalia); Algeria won independence in 1962 after a long war. The Organisation of African Unity (OAU) was founded in Addis Ababa on 25 May 1963.'
+    - 'Decolonisation: Ghana (1957) was the first British colony in sub-Saharan Africa to win independence (Sudan, ruled jointly by Britain and Egypt, became independent in 1956); 1960 is called the "Year of Africa" (seventeen countries became independent, including Somalia); Algeria won independence in 1962 after a long war. The Organisation of African Unity (OAU) was founded in Addis Ababa on 25 May 1963.'
   formulas: []
 
 solved_exercises:
@@ -222,14 +222,14 @@ questions:
   - uid: g12-history-2-1-q017
     type: single_choice
     difficulty: 2
-    stem: 'Which country, formerly the Gold Coast, was the first in sub-Saharan Africa to gain independence from British colonial rule, in 1957?'
+    stem: 'Which country, formerly the Gold Coast, was the first British colony in sub-Saharan Africa to gain independence, in 1957?'
     options:
       A: 'Kenya'
       B: 'Ghana'
       C: 'Nigeria'
       D: 'Uganda'
     answer: B
-    explanation: 'Ghana became independent under Kwame Nkrumah on 6 March 1957.'
+    explanation: 'Ghana became independent under Kwame Nkrumah on 6 March 1957. (Sudan, ruled jointly by Britain and Egypt, had become independent in 1956.)'
 
   - uid: g12-history-2-1-q018
     type: numeric

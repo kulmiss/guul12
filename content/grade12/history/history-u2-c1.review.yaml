@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-2-1-q001: {hash: '2c1f4c9fc8ffaa5ecb8af635314f330c5af44309f805478d8c308af2aea177fc', answer: B}
+  g12-history-2-1-q002: {hash: 'b0e08b770454cabf5d0caa98ef4bc705b304671c53b10fb0f1b3a8638756db84', answer: A}
+  g12-history-2-1-q003: {hash: '0b6b7a058fb436963a6d5d467990d2382f66e3dfd174c6d513ee4b64180d8702', answer: 1896}
+  g12-history-2-1-q004: {hash: '27d19e1da129ae97fe1bc45fcdf5269b7312d1de5579ab9a385fe0a23660798d', answer: D}
+  g12-history-2-1-q005: {hash: 'b4dbcb412b6722211d9d92f0e153dcc0709bde69287e7a1d70f67de6e4c63b81', answer: C}
+  g12-history-2-1-q006: {hash: '197c01c4c4f2a8e94d8dad266f968fdb56b2fde0853c52435a9052903ddcc1ae', answer: A}
+  g12-history-2-1-q007: {hash: '210822a73de9997a6e54d446e695ac93740ee543d270e803e293b8d1231be769', answer: [A, B, C]}
+  g12-history-2-1-q008: {hash: 'd540da8ac6ac27b0373ad1456734b3b87ce23305675d23b0228342e3bae8d881', answer: C}
+  g12-history-2-1-q009: {hash: '7325ee3ed1c5bd9b38f26b5330939e9b36968363acd5dfb625afd900538b2a63', answer: D}
+  g12-history-2-1-q010: {hash: 'b6cf8665213144f086fdf1cd2dd2b3812de6be07fa368424e29a786b2d172664', answer: A}
+  g12-history-2-1-q011: {hash: '8b25380e70c9f45366ccca11470ae2f8191a4b224929c3a646dc0f4456617576', answer: B}
+  g12-history-2-1-q012: {hash: 'e070e7427ab7f4ece0354624ccbf8bfcf7bb6c2a2a7018437c0608c0024f1953', answer: C}
+  g12-history-2-1-q013: {hash: '538173c1e9200d9e427616e2b9c49dac5730ae253ed67927276af0fff1da37fa', answer: D}
+  g12-history-2-1-q014: {hash: '9c046b447c7f69763832b3a725587d31742f389c4d1a26242331c97b26572cfb', answer: false}
+  g12-history-2-1-q015: {hash: '6018e5741c65fd9c78f3b38924ffab65000fc7487e72dfbc11d1be3c13f3c169', answer: true}
+  g12-history-2-1-q016: {hash: '570e0646a62d0a9806deebaffcfbb1f43713b54e823933e7bf0257e55e54ae6a', answer: A}
+  g12-history-2-1-q017: {hash: 'c283607c8b0c9881099a6b9cbbd0232abafecf47b0967c4eb78ecacb51ef59fc', answer: B, note: 'Minor wording risk: Sudan became independent from Anglo-Egyptian (largely British) rule on 1 January 1956, before Ghana. The standard safe phrasing is "first sub-Saharan African colony to gain independence" or "first British colony in sub-Saharan (Black) Africa"; consider saying "first British colony in sub-Saharan Africa" or adding a short explanation that Sudan was a condominium. No other option is correct, so the key is not affected.'}
+  g12-history-2-1-q018: {hash: '250af43d59375b8bdc0d2fc09193a0e9c3b441ec6171acbddf646d978d5d0144', answer: 1963}
+  g12-history-2-1-q019: {hash: 'afc000cf38ba47ba7d102cc665ea4c158ece7f1d239d89d16e8d30abc26d3205', answer: D}
+  g12-history-2-1-q020: {hash: 'b2c67c78e50916990dd8fa95a87d75b0cf3776e0eb9dec811c48f75ebe2712b9', answer: A}
+  g12-history-2-1-q021: {hash: 'd1e181d3cc09bdac5f721e327d45ff90ab87156ad24014ae34aa2b9c6d1e8692', answer: 'Pan-Africanism'}
+  g12-history-2-1-q022: {hash: 'dea234835d5b1af972fbee3dccce0c5e94d3f82f8009a1d1b23e57526fd628a6', answer: 'occupation'}
+  g12-history-2-1-q023: {hash: '10d7c75d527c47af306a18dda8431642ea515f391c5d6bc4ae0b5e270a8146de', answer: true}
+  g12-history-2-1-q024: {hash: '4807ebd95416f37ec452424fd9b7dbecc66dccfe1bc21cefcba19b747d875330', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-history-2-1-q025: {hash: 'f3f40dfd7dd283697c677ba9d811cf9a3350085728a677f12fa183c2552196ee', answer: [C, B, A, D]}
+  g12-history-2-1-q026: {hash: 'dd639d6148427ad04b82c8564d497a77e8ee46fe64d26b9ca061dc7d2337de0a', answer: C}
+  g12-history-2-1-q027: {hash: 'f84d0035a21a726c8c200f6ec58fea6851532cb830adf16cdd35118eb6dbcd2f', answer: B}
+  g12-history-2-1-q028: {hash: '7a7cdef7b77eb3d35b99246f3e9006617b365f3cdbee298ae98667e489f1f95c', answer: D}
+  g12-history-2-1-q029: {hash: '1adb1fc534bc592773c209e38d4b7501874498523615fc54c237c1aaf34f20e7', answer: A}
+  g12-history-2-1-q030: {hash: 'f8cab97d96e0e16d9fef9353a08bb1b6c47a7fc45470b879c4d614ea236a1695', answer: C}
