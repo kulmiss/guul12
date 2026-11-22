@@ -1,0 +1,376 @@
+summary:
+  key_points:
+    - 'Variation is the raw material of evolution. It comes from mutation (the only source of completely new alleles) and from sexual reproduction: crossing over and independent assortment in meiosis, and random fertilisation.'
+    - 'A gene pool is all the alleles in a population. Evolution is a change in allele frequencies. Allele frequency $= \frac{\text{copies of the allele}}{\text{total copies of that gene}}$.'
+    - 'Mechanisms that change allele frequencies: natural selection, genetic drift (random changes, strongest in small populations, including the founder effect and bottlenecks), gene flow (movement of individuals between populations) and mutation.'
+    - 'Types of natural selection: stabilising (favours the average, e.g. human birth mass), directional (favours one extreme, e.g. dark peppered moths in polluted areas, antibiotic resistance), and disruptive (favours both extremes).'
+    - 'The sickle-cell allele stays common in malaria regions because carriers (heterozygotes) are more resistant to malaria – a heterozygote advantage.'
+    - 'A species is a group of organisms that can interbreed to produce fertile offspring. New species form (speciation) when populations become reproductively isolated, often by a geographical barrier (allopatric speciation). A horse and a donkey give a mule, which is sterile, so they are separate species.'
+    - 'Artificial selection: people choose which animals or plants breed, producing crop varieties and breeds of cattle, dogs and chickens.'
+    - 'Classification: Linnaeus introduced binomial names – Genus (capital letter) + species (small letter), written in italics, e.g. Homo sapiens. Ranks from largest to smallest: Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species. The three domains are Bacteria, Archaea and Eukarya; the five-kingdom system is Monera, Protista, Fungi, Plantae and Animalia.'
+  formulas:
+    - label: Allele frequency
+      latex: 'f(A) = \frac{\text{number of A alleles}}{\text{total number of alleles}}'
+    - label: Two alleles
+      latex: 'p + q = 1'
+
+solved_exercises:
+  - uid: g12-biology-4-2-se01
+    problem: 'A population of 50 diploid plants has 40 copies of allele R. What is the frequency of R and of the other allele r?'
+    steps:
+      - '50 diploid individuals carry $2 \times 50 = 100$ copies of the gene.'
+      - '$f(R) = \frac{40}{100} = 0.4$; $f(r) = 1 - 0.4 = 0.6$.'
+    answer: 'R = 0.4, r = 0.6'
+  - uid: g12-biology-4-2-se02
+    problem: 'Explain how a river that changes course could lead to two new species of mice.'
+    steps:
+      - 'The river splits one population into two; they can no longer interbreed, so gene flow stops.'
+      - 'Different mutations, selection and drift change each population. After a long time they cannot interbreed even if they meet again: they are separate species (allopatric speciation).'
+    answer: 'Geographical isolation → different changes → reproductive isolation'
+  - uid: g12-biology-4-2-se03
+    problem: 'Write the human scientific name correctly and name its genus.'
+    steps:
+      - 'Binomial names are Genus + species, genus with a capital, in italics.'
+      - 'Homo sapiens (written in italics); the genus is Homo.'
+    answer: 'Homo sapiens; genus Homo'
+
+flashcards:
+  - {uid: g12-biology-4-2-fc01, term: Gene pool, definition: 'All the alleles in a population.'}
+  - {uid: g12-biology-4-2-fc02, term: Genetic drift, definition: 'Random change in allele frequencies, strongest in small populations.'}
+  - {uid: g12-biology-4-2-fc03, term: Founder effect, definition: 'Low variety when a few individuals start a new population.'}
+  - {uid: g12-biology-4-2-fc04, term: Gene flow, definition: 'Movement of alleles between populations by migration.'}
+  - {uid: g12-biology-4-2-fc05, term: Directional selection, definition: 'Selection that favours one extreme of a trait.'}
+  - {uid: g12-biology-4-2-fc06, term: Species, definition: 'Organisms that can interbreed to produce fertile offspring.'}
+  - {uid: g12-biology-4-2-fc07, term: Allopatric speciation, definition: 'New species forming after geographical separation.'}
+  - {uid: g12-biology-4-2-fc08, term: Binomial nomenclature, definition: 'Two-part scientific name: Genus species.'}
+  - {uid: g12-biology-4-2-fc09, term: Three domains, definition: 'Bacteria, Archaea and Eukarya.'}
+
+questions:
+  - uid: g12-biology-4-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is the only source of completely new alleles?'
+    options:
+      A: 'Crossing over'
+      B: 'Mutation'
+      C: 'Independent assortment'
+      D: 'Random fertilisation'
+    answer: B
+    explanation: 'The others reshuffle existing alleles; only mutation changes the DNA sequence to make a new allele.'
+
+  - uid: g12-biology-4-2-q002
+    type: numeric
+    difficulty: 2
+    stem: 'A population of 50 diploid animals carries 30 copies of allele b. What is the frequency of allele b? (Give a decimal.)'
+    answer: {value: 0.3, tolerance: 0}
+    explanation: '50 animals × 2 = 100 copies of the gene; $\frac{30}{100} = 0.3$.'
+
+  - uid: g12-biology-4-2-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Random changes in allele frequencies that have the biggest effect in small populations are called:'
+    options:
+      A: 'Natural selection'
+      B: 'Gene flow'
+      C: 'Genetic drift'
+      D: 'Artificial selection'
+    answer: C
+    explanation: 'In small populations chance events can remove or fix alleles regardless of whether they are useful.'
+
+  - uid: g12-biology-4-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'A few birds are blown to a remote island and start a new population with less genetic variety than the mainland. This is called:'
+    options:
+      A: 'Gene flow'
+      B: 'Stabilising selection'
+      C: 'Hybrid sterility'
+      D: 'The founder effect'
+    answer: D
+    explanation: 'The new population carries only the alleles of its few founders.'
+
+  - uid: g12-biology-4-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Animals migrating between two populations and breeding there causes:'
+    options:
+      A: 'Gene flow, which makes the populations more alike'
+      B: 'Speciation'
+      C: 'Mutation'
+      D: 'Genetic drift only'
+    answer: A
+    explanation: 'Gene flow moves alleles between populations and works against them becoming separate species.'
+
+  - uid: g12-biology-4-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Babies of very low or very high birth mass have lower survival than babies of average mass. Which type of selection is this?'
+    options:
+      A: 'Directional'
+      B: 'Disruptive'
+      C: 'Stabilising'
+      D: 'Artificial'
+    answer: C
+    explanation: 'Stabilising selection favours the average and removes the extremes.'
+
+  - uid: g12-biology-4-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'In industrial areas of Britain, dark peppered moths became more common than pale ones after trees were blackened by soot. This is an example of:'
+    options:
+      A: 'Stabilising selection'
+      B: 'Directional selection'
+      C: 'Genetic drift'
+      D: 'Lamarckian inheritance'
+    answer: B
+    explanation: 'Dark moths were better hidden from birds, so selection shifted the population towards the dark form.'
+
+  - uid: g12-biology-4-2-q008
+    type: single_choice
+    difficulty: 3
+    stem: 'Why is the sickle-cell allele more common in places where malaria is common?'
+    options:
+      A: 'People with one copy are more resistant to malaria, so they survive and pass it on.'
+      B: 'Malaria causes the sickle-cell mutation.'
+      C: 'People with two copies are the healthiest.'
+      D: 'Mosquitoes prefer people without the allele.'
+    answer: A
+    explanation: 'Heterozygotes have mild symptoms and better malaria resistance — a heterozygote advantage.'
+
+  - uid: g12-biology-4-2-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is the best definition of a species?'
+    options:
+      A: 'Organisms that look exactly the same'
+      B: 'Organisms that live in the same place'
+      C: 'Organisms that eat the same food'
+      D: 'Organisms that can interbreed to produce fertile offspring'
+    answer: D
+    explanation: 'This is the biological species concept.'
+
+  - uid: g12-biology-4-2-q010
+    type: true_false
+    difficulty: 1
+    stem: 'Horses and donkeys belong to the same species because they can mate.'
+    answer: false
+    explanation: 'Their offspring, the mule, is sterile, so they are separate species.'
+
+  - uid: g12-biology-4-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'New species form after a population is split by a mountain range. This is called:'
+    options:
+      A: 'Allopatric speciation'
+      B: 'Sympatric speciation'
+      C: 'Gene flow'
+      D: 'Artificial selection'
+    answer: A
+    explanation: '"Allopatric" means "other homeland": the populations are physically separated.'
+
+  - uid: g12-biology-4-2-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Farmers choose the cows that give the most milk and breed only from them. This is:'
+    options:
+      A: 'Natural selection'
+      B: 'Genetic drift'
+      C: 'Artificial selection'
+      D: 'Speciation'
+    answer: C
+    explanation: 'People, not nature, decide which individuals reproduce.'
+
+  - uid: g12-biology-4-2-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which processes produce genetic variation during sexual reproduction? Choose all that apply.'
+    options:
+      A: 'Crossing over in meiosis'
+      B: 'Independent assortment of chromosomes'
+      C: 'Random fertilisation'
+      D: 'Binary fission'
+    answer: [A, B, C]
+    explanation: 'Binary fission is asexual and makes identical copies.'
+
+  - uid: g12-biology-4-2-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'Who developed the binomial system of naming organisms?'
+    options:
+      A: 'Charles Darwin'
+      B: 'Gregor Mendel'
+      C: 'Robert Hooke'
+      D: 'Carl Linnaeus'
+    answer: D
+    explanation: 'Linnaeus, an 18th-century Swedish botanist, gave each species a two-part Latin name.'
+
+  - uid: g12-biology-4-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Which rule for writing a scientific name, such as the one for humans, is correct?'
+    options:
+      A: 'Both parts start with a capital letter.'
+      B: 'The genus starts with a capital letter and the species part with a small letter.'
+      C: 'The species part is written first.'
+      D: 'Each country uses its own local-language name.'
+    answer: B
+    explanation: 'Genus first with a capital letter, species second in small letters, both in italics (or underlined when handwritten).'
+
+  - uid: g12-biology-4-2-q016
+    type: ordering
+    difficulty: 2
+    stem: 'Put these classification ranks in order from largest group to smallest.'
+    items:
+      A: 'Family'
+      B: 'Kingdom'
+      C: 'Species'
+      D: 'Class'
+    answer: [B, D, A, C]
+    explanation: 'Domain → Kingdom → Phylum → Class → Order → Family → Genus → Species.'
+
+  - uid: g12-biology-4-2-q017
+    type: numeric
+    difficulty: 1
+    stem: 'How many ranks are there in the classification hierarchy from domain down to species (counting both)?'
+    answer: {value: 8, tolerance: 0}
+    explanation: 'Domain, kingdom, phylum, class, order, family, genus, species.'
+
+  - uid: g12-biology-4-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'What are the three domains of life?'
+    options:
+      A: 'Plants, animals and fungi'
+      B: 'Monera, Protista and Fungi'
+      C: 'Bacteria, Archaea and Eukarya'
+      D: 'Vertebrates, invertebrates and plants'
+    answer: C
+    explanation: 'Carl Woese proposed the three domains based on molecular differences.'
+
+  - uid: g12-biology-4-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'In the five-kingdom system, bacteria belong to the kingdom:'
+    options:
+      A: 'Protista'
+      B: 'Fungi'
+      C: 'Plantae'
+      D: 'Monera'
+    answer: D
+    explanation: 'Monera contains the prokaryotes. Protista contains single-celled eukaryotes such as Amoeba.'
+
+  - uid: g12-biology-4-2-q020
+    type: true_false
+    difficulty: 2
+    stem: 'Two organisms in the same genus are more closely related than two organisms that only share the same order.'
+    answer: true
+    explanation: 'The smaller the shared group, the closer the relationship.'
+
+  - uid: g12-biology-4-2-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'All the alleles of all the genes in a population together make up its gene ________.'
+    answer: [pool]
+    explanation: 'Evolution changes the make-up of the gene pool.'
+
+  - uid: g12-biology-4-2-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The formation of new species is called ________.'
+    answer: [speciation]
+    explanation: 'It requires reproductive isolation between populations.'
+
+  - uid: g12-biology-4-2-q023
+    type: true_false
+    difficulty: 2
+    stem: 'Genetic drift always increases the frequency of helpful alleles.'
+    answer: false
+    explanation: 'Drift is random; it can remove helpful alleles and spread harmful ones, especially in small populations.'
+
+  - uid: g12-biology-4-2-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each example with the mechanism of evolution it shows.'
+    left:
+      L1: 'A storm kills most of a small population at random'
+      L2: 'Bulls from a ranch are moved to breed in another herd'
+      L3: 'Insects with resistance survive spraying and breed'
+    right:
+      R1: 'Gene flow'
+      R2: 'Natural selection'
+      R3: 'Genetic drift (bottleneck)'
+      R4: 'Lamarckian inheritance'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Random loss is drift; movement is gene flow; survival of the fittest is selection. Lamarckian inheritance does not happen.'
+
+  - uid: g12-biology-4-2-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'In a lake, some fish feed on the bottom and others near the surface, and medium-sized fish do poorly at both. Over time two forms appear. Which selection is this?'
+    options:
+      A: 'Disruptive selection'
+      B: 'Stabilising selection'
+      C: 'Directional selection'
+      D: 'Artificial selection'
+    answer: A
+    explanation: 'Both extremes are favoured and the middle is selected against, which can lead to speciation.'
+
+  - uid: g12-biology-4-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these would keep two populations of frogs as separate species even if they live in the same pond?'
+    options:
+      A: 'They eat the same insects.'
+      B: 'They mate in different seasons.'
+      C: 'They have the same colour.'
+      D: 'They live in the same water.'
+    answer: B
+    explanation: 'Different breeding times are a form of reproductive isolation.'
+
+  - uid: g12-biology-4-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'If the frequency of allele A in a population is 0.7, what is the frequency of its only other allele, a?'
+    options:
+      A: '0.7'
+      B: '1.7'
+      C: '0.49'
+      D: '0.3'
+    answer: D
+    explanation: 'With two alleles, $p + q = 1$, so $q = 1 - 0.7 = 0.3$.'
+
+  - uid: g12-biology-4-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Organisms in the kingdom Fungi:'
+    options:
+      A: 'Make their food by photosynthesis'
+      B: 'Are all prokaryotes'
+      C: 'Absorb food and have cell walls of chitin'
+      D: 'Have no cell walls'
+    answer: C
+    explanation: 'Fungi are eukaryotic heterotrophs that absorb nutrients.'
+
+  - uid: g12-biology-4-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is classification useful to biologists?'
+    options:
+      A: 'It helps identify organisms and shows how they are related.'
+      B: 'It makes all organisms the same.'
+      C: 'It changes the genes of organisms.'
+      D: 'It is only used for plants.'
+    answer: A
+    explanation: 'A shared naming system lets scientists everywhere talk about the same organism and its relatives.'
+
+  - uid: g12-biology-4-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Lions (Panthera leo) and leopards (Panthera pardus) share which rank?'
+    options:
+      A: 'Species'
+      B: 'Genus'
+      C: 'Only domain'
+      D: 'None'
+    answer: B
+    explanation: 'The first part of the name, Panthera, is the genus; the second parts differ, so they are different species.'

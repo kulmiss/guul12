@@ -82,14 +82,14 @@ questions:
   - uid: g12-biology-4-1-q004
     type: ordering
     difficulty: 2
-    stem: 'Put the steps of natural selection in order.'
+    stem: 'Put these events in order to show how natural selection spreads a new helpful variation.'
     items:
-      A: 'Individuals with helpful variations survive and reproduce more.'
-      B: 'Individuals in a population vary.'
-      C: 'The helpful variation becomes more common in later generations.'
-      D: 'More offspring are produced than can survive, so there is competition.'
+      A: 'Their offspring inherit the new variation.'
+      B: 'A new helpful variation arises by mutation in one individual.'
+      C: 'Over many generations the variation becomes common in the population.'
+      D: 'Individuals with the variation survive and reproduce more than others.'
     answer: [B, D, A, C]
-    explanation: 'Variation → struggle for existence → survival of the fittest → change over generations.'
+    explanation: 'A variation must first exist, then give a survival and breeding advantage, then be inherited, and over many generations it spreads.'
 
   - uid: g12-biology-4-1-q005
     type: single_choice
@@ -163,7 +163,7 @@ questions:
       C: 'Heart'
       D: 'Wisdom teeth'
     answer: [A, B, D]
-    explanation: 'These are reduced remains of structures that were more useful in ancestors. The heart is fully functional.'
+    explanation: 'These structures have reduced function compared with the same structures in our ancestors. The heart is fully functional.'
 
   - uid: g12-biology-4-1-q012
     type: single_choice

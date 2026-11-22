@@ -190,6 +190,7 @@ subjects:
       file: biology/u4-c1.yaml
     - number: 2
       title: Mechanisms of evolution and classification
+      file: biology/u4-c2.yaml
   - number: 5
     title: Human Body Systems
     chapters:
