@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-3-1-q001: {hash: 'ae35dea26a664727b1a1b652baa693a5d60517f1ed3343385aa02b81f015dfda', answer: B}
+  g12-economics-3-1-q002: {hash: 'de26b8e3f87d75b57b73fcc5aa2378bbb7003f26cc57206373ad56770f6c80e5', answer: A}
+  g12-economics-3-1-q003: {hash: 'acd2166178d4d9e5f661e7040869bfbbac0809573c01162aa7a9d71d8153f0de', answer: C}
+  g12-economics-3-1-q004: {hash: '56456e8aa88c5e4c65eded385e2db6a5185254760803e081b206922933dbd5a3', answer: D}
+  g12-economics-3-1-q005: {hash: 'c0b0e70be8608642ba7a3d284ec505734411db3f2057bb6ff5720a31b72f4679', answer: A}
+  g12-economics-3-1-q006: {hash: 'de5bb27ae360ff97521ce0accdb370a6dcb09724f94b05a980271a86a3292a05', answer: B}
+  g12-economics-3-1-q007: {hash: '866a489c1d32b76ec403e69f07f0de0a260aa043a20d3144ac3bcb50b5097b14', answer: C}
+  g12-economics-3-1-q008: {hash: '1341492843691abb4e3bf234efe56c137242a426732a0e9029cbc60075eaa7fd', answer: D}
+  g12-economics-3-1-q009: {hash: '4a3c3a2e9ae404d8d54ad18de86764ebe1faee48e2b81e178331a569348d5d45', answer: A}
+  g12-economics-3-1-q010: {hash: '3e96161d509bc5803d48a21a31646d2578441febfeaae3fc4d1b98f677e7fb33', answer: B}
+  g12-economics-3-1-q011: {hash: '5e7d246be3675ee61461a9797cd279b0e1455ca119c6ab5190e8c7defdbc14b1', answer: C}
+  g12-economics-3-1-q012: {hash: 'd1963b47b7ad7c7a141706dae1478a3ca4a8e6bb3895e9140587b72c93e6b2dd', answer: [A, B, C]}
+  g12-economics-3-1-q013: {hash: '0fe8ff1789f9f1123789b7e7f27213b9448e1adb4a9c4226c6a84531c790c71e', answer: true}
+  g12-economics-3-1-q014: {hash: 'b99f06826a21e1cb72bb426104776992ab3b8416bd79314c2a40d5d14f7662b0', answer: true}
+  g12-economics-3-1-q015: {hash: '2c3550dac695f1bfe60e4a1b650e79a2cb86d4d0644252c065550cba9714a2f6', answer: D}
+  g12-economics-3-1-q016: {hash: '1e1d3c1b50e7926e97e7640d044162a66a55fa792200a88ea466ac3a103169a8', answer: A}
+  g12-economics-3-1-q017: {hash: 'ca3b91bba37354c74e2a92f7fe71d5891dc0095be346d61f964b52b2f9f951cd', answer: C}
+  g12-economics-3-1-q018: {hash: 'a63c57f73715487fce322c790ddfb8fd29b0a90b3ddfc0782d5128889ba2e10d', answer: 15, note: 'The stem states the answer (15 March), so the question tests nothing. Ask instead: "On which day of March is World Consumer Rights Day?"'}
+  g12-economics-3-1-q019: {hash: '981392e54324cb102a1c52946ad64869353d4ae2835be081928555a87bfa9add', answer: 6, note: 'The stem lists all six rights, so the student only counts words; it tests nothing. Also "in this chapter" refers to text the student cannot see during a quiz, and Consumers International / UN guidelines commonly list 8 consumer rights (adding basic needs and a healthy environment), so a student who learned 8 may be confused. Rewrite or drop.'}
+  g12-economics-3-1-q020: {hash: '49eb95b316918ca91e15fcc229ef25cff725ae5d7d1da5051e5e230ea2527b6d', answer: riders, note: 'Accept "riders" and "rider" (and "free riders" in case the student retypes the first word).'}
+  g12-economics-3-1-q021: {hash: 'fb373443df20e05624da52aa186a673bc861ef1e750319bcee0d23f28923e0ad', answer: externality, note: 'Accept "externality" and "externalities"; also "external effect" is defensible.'}
+  g12-economics-3-1-q022: {hash: 'd29bc4e8341c28ba40e8c82eb46ef2845d2004a64cfe8c38ef69c50c56b292b0', answer: false}
+  g12-economics-3-1-q023: {hash: '45c7d327a52a27bfafca87f0679f1505450c27ff1407f716f815c0c4f543ad2e', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-economics-3-1-q024: {hash: '191c6651f01d9bda577773707110c5b8d23ed022aef5fc37d983475789c86508', answer: [B, C, A]}
+  g12-economics-3-1-q025: {hash: '830fac7d62211fdc1adc8b32f40e1fb0f897be22a8226b476aef380f47b228d1', answer: B}
+  g12-economics-3-1-q026: {hash: '4321fe88250536a077efcddbf8f132f36ba80e94d991d8890f8232ffadad46dc', answer: D}
+  g12-economics-3-1-q027: {hash: 'e4817cff354d8c1b95212c9c55269aef45bc3d6d5ab758429a683703f9caae7f', answer: A}
+  g12-economics-3-1-q028: {hash: 'a3be428d1eaf2eb5db3b0a3551b52a22ffe4cb082c48566dd03cbeeecbe9756f', answer: C}
+  g12-economics-3-1-q029: {hash: '24192202398f63c092ef64bd05ac89fe2ae0e82d5f70b528b1c30c042a3382cb', answer: D}
+  g12-economics-3-1-q030: {hash: '66e5f59a424a8daa4fa7a7b28dc1117f23d7d230e7280f39dbb57037d0f68ee7', answer: A}

@@ -6,7 +6,7 @@ summary:
     - 'Merit goods (education, health care) are under-consumed if left to the market; demerit goods (cigarettes, alcohol) are over-consumed because people underestimate their harm.'
     - 'Asymmetric information: one side of a deal knows more than the other, for example a seller of a used car who hides faults. Monopoly power lets a single seller charge higher prices and supply less.'
     - 'Government responses: taxes on harmful activities, subsidies for beneficial ones, regulation and standards, direct provision, information campaigns, and competition laws.'
-    - 'Consumer protection safeguards buyers against unsafe products, false advertising, cheating on weights and prices, and unfair contracts. Widely recognised consumer rights include the rights to safety, information, choice, to be heard, to redress (compensation) and to consumer education. World Consumer Rights Day is 15 March.'
+    - 'Consumer protection safeguards buyers against unsafe products, false advertising, cheating on weights and prices, and unfair contracts. Widely recognised consumer rights include the rights to safety, information, choice, to be heard, to redress (compensation) and to consumer education; the UN-based list used by Consumers International adds basic needs and a healthy environment, making eight. World Consumer Rights Day is 15 March.'
     - 'Ethiopia has laws on trade competition and consumer protection, enforced by a government authority, and consumers can complain about unfair practices.'
   formulas: []
 
@@ -239,16 +239,16 @@ questions:
   - uid: g12-economics-3-1-q018
     type: numeric
     difficulty: 1
-    stem: 'World Consumer Rights Day is on 15 March. Write the day of the month as a number.'
-    answer: {value: 15, tolerance: 0}
+    stem: 'World Consumer Rights Day is held every year in which month? Write the month as a number (January = 1).'
+    answer: {value: 3, tolerance: 0}
     explanation: 'It marks a 1962 speech by US President John F. Kennedy on consumer rights.'
 
   - uid: g12-economics-3-1-q019
     type: numeric
     difficulty: 2
-    stem: 'How many basic consumer rights are listed in this chapter: safety, information, choice, to be heard, redress and consumer education?'
-    answer: {value: 6, tolerance: 0}
-    explanation: 'There are six rights in the list.'
+    stem: 'A tannery makes 200 hides a month. Each hide causes 5 birr of pollution damage to farmers downstream, which the tannery does not pay. What is the total external cost per month, in birr?'
+    answer: {value: 1000, tolerance: 0}
+    explanation: '200 × 5 = 1,000 birr. This cost falls on third parties, so it is a negative externality.'
 
   - uid: g12-economics-3-1-q020
     type: fill_in
