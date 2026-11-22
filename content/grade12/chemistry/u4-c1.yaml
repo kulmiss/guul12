@@ -1,0 +1,377 @@
+summary:
+  key_points:
+    - 'A polymer is a very large molecule made by joining many small molecules called monomers. The number of monomer units in a chain is the degree of polymerisation, $n$.'
+    - 'Addition polymerisation: monomers with a C=C double bond join without losing any atoms. Examples: ethene → polyethene, chloroethene (vinyl chloride) → PVC, propene → polypropene, styrene → polystyrene, tetrafluoroethene → PTFE (Teflon).'
+    - 'Condensation polymerisation: monomers with two reactive groups join and a small molecule (usually water) is lost at each link. Examples: nylon (amide links, –CONH–), polyesters such as PET (ester links, –COO–), proteins (peptide links) and starch and cellulose (from glucose).'
+    - 'Natural polymers include starch, cellulose, proteins, natural rubber and DNA. Synthetic polymers include polyethene, PVC, nylon and polyester.'
+    - 'Thermoplastics (polyethene, PVC) soften when heated and can be remoulded. Thermosetting plastics (Bakelite, melamine) have cross-links between chains, so they do not soften and they char instead.'
+    - 'Vulcanisation: heating natural rubber with sulfur forms sulfur cross-links, making it harder and more elastic, as in car tyres.'
+    - 'Most synthetic plastics are not biodegradable, so they build up in the environment. Reducing use, reusing and recycling help.'
+  formulas:
+    - label: Molar mass of a polymer
+      latex: 'M_{polymer} = n \times M_{repeat\ unit}'
+    - label: Polyethene
+      latex: 'n\,\text{CH}_2{=}\text{CH}_2 \rightarrow (\text{–CH}_2\text{–CH}_2\text{–})_n'
+    - label: Condensation (amide link)
+      latex: '\text{–COOH} + \text{H}_2\text{N–} \rightarrow \text{–CONH–} + \text{H}_2\text{O}'
+
+solved_exercises:
+  - uid: g12-chemistry-4-1-se01
+    problem: 'A sample of polyethene has a molar mass of 56 000 g/mol. What is its degree of polymerisation? (C = 12, H = 1)'
+    steps:
+      - 'Repeat unit $\text{–CH}_2\text{–CH}_2\text{–}$ has $M = 28$ g/mol.'
+      - '$n = \frac{56\,000}{28} = 2000$.'
+    answer: '2 000'
+  - uid: g12-chemistry-4-1-se02
+    problem: 'Draw the repeat unit of PVC, made from chloroethene $\text{CH}_2{=}\text{CHCl}$.'
+    steps:
+      - 'The C=C double bond opens and each carbon bonds to a neighbouring unit.'
+      - 'Repeat unit: $(\text{–CH}_2\text{–CHCl–})_n$.'
+    answer: '$(\text{–CH}_2\text{–CHCl–})_n$'
+  - uid: g12-chemistry-4-1-se03
+    problem: 'Nylon-6,6 is made from hexane-1,6-diamine and hexanedioic acid. What type of polymerisation is this, and what small molecule is lost?'
+    steps:
+      - 'Each amine group reacts with an acid group to form an amide link, –CONH–.'
+      - 'A water molecule is released at each link, so it is condensation polymerisation.'
+    answer: 'Condensation; water'
+
+flashcards:
+  - {uid: g12-chemistry-4-1-fc01, term: Monomer, definition: 'Small molecule that joins with others to form a polymer.'}
+  - {uid: g12-chemistry-4-1-fc02, term: Polymer, definition: 'Very large molecule made of many repeating monomer units.'}
+  - {uid: g12-chemistry-4-1-fc03, term: Addition polymerisation, definition: 'Monomers with C=C join with no atoms lost.'}
+  - {uid: g12-chemistry-4-1-fc04, term: Condensation polymerisation, definition: 'Monomers join and a small molecule such as water is lost.'}
+  - {uid: g12-chemistry-4-1-fc05, term: Thermoplastic, definition: 'Plastic that softens on heating and can be remoulded.'}
+  - {uid: g12-chemistry-4-1-fc06, term: Thermosetting plastic, definition: 'Cross-linked plastic that does not soften on heating.'}
+  - {uid: g12-chemistry-4-1-fc07, term: Vulcanisation, definition: 'Heating rubber with sulfur to cross-link it.'}
+  - {uid: g12-chemistry-4-1-fc08, term: PTFE, definition: 'Polytetrafluoroethene (Teflon); non-stick coating.'}
+  - {uid: g12-chemistry-4-1-fc09, term: Biodegradable, definition: 'Can be broken down by microorganisms.'}
+
+questions:
+  - uid: g12-chemistry-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is a monomer?'
+    options:
+      A: 'A large molecule made of repeating units'
+      B: 'A small molecule that can join with others to form a polymer'
+      C: 'A type of catalyst'
+      D: 'A metal used in plastics'
+    answer: B
+    explanation: 'Monomers are the building blocks; polymers are the long chains made from them.'
+
+  - uid: g12-chemistry-4-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which monomer is used to make polyethene?'
+    options:
+      A: 'Ethene'
+      B: 'Ethane'
+      C: 'Ethanol'
+      D: 'Ethanoic acid'
+    answer: A
+    explanation: 'Ethene, $\text{CH}_2{=}\text{CH}_2$, has the C=C double bond needed for addition polymerisation.'
+
+  - uid: g12-chemistry-4-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'What feature must a monomer have to undergo addition polymerisation?'
+    options:
+      A: 'Two –OH groups'
+      B: 'A benzene ring'
+      C: 'A carbon–carbon double bond'
+      D: 'A metal atom'
+    answer: C
+    explanation: 'The C=C double bond opens up so that the monomers can link into a chain.'
+
+  - uid: g12-chemistry-4-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'In condensation polymerisation, what is usually given off each time two monomers join?'
+    options:
+      A: 'Hydrogen gas'
+      B: 'Oxygen gas'
+      C: 'Carbon dioxide'
+      D: 'A small molecule such as water'
+    answer: D
+    explanation: 'For example, an acid group and an amine group join and release $\text{H}_2\text{O}$.'
+
+  - uid: g12-chemistry-4-1-q005
+    type: numeric
+    difficulty: 2
+    stem: 'A polypropene sample has a molar mass of 42 000 g/mol. The repeat unit has a molar mass of 42 g/mol. What is the degree of polymerisation?'
+    answer: {value: 1000, tolerance: 0}
+    explanation: '$n = \frac{42\,000}{42} = 1000$.'
+
+  - uid: g12-chemistry-4-1-q006
+    type: numeric
+    difficulty: 2
+    stem: 'A polyethene chain has 1 500 repeat units ($\text{–CH}_2\text{–CH}_2\text{–}$). What is its molar mass, in g/mol? (C = 12, H = 1)'
+    answer: {value: 42000, tolerance: 0, unit: g/mol}
+    explanation: 'Each repeat unit is 28 g/mol: $1500 \times 28 = 42\,000$ g/mol.'
+
+  - uid: g12-chemistry-4-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Which polymer is used as a non-stick coating on frying pans?'
+    options:
+      A: 'PVC'
+      B: 'PTFE (Teflon)'
+      C: 'Nylon'
+      D: 'Polystyrene'
+    answer: B
+    explanation: 'PTFE is very unreactive and slippery, and it withstands cooking temperatures.'
+
+  - uid: g12-chemistry-4-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'PVC is made from which monomer?'
+    options:
+      A: 'Chloroethene, $\text{CH}_2{=}\text{CHCl}$'
+      B: 'Tetrafluoroethene'
+      C: 'Propene'
+      D: 'Styrene'
+    answer: A
+    explanation: 'Poly(vinyl chloride) is made from vinyl chloride, also called chloroethene.'
+
+  - uid: g12-chemistry-4-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which type of link joins the units in nylon?'
+    options:
+      A: 'Ester link, –COO–'
+      B: 'Ether link, –O–'
+      C: 'Amide link, –CONH–'
+      D: 'Carbon–carbon double bond'
+    answer: C
+    explanation: 'Nylons are polyamides, formed from amine and acid groups.'
+
+  - uid: g12-chemistry-4-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Polyesters such as PET (used in drinks bottles and clothing) contain which link?'
+    options:
+      A: 'Amide link'
+      B: 'Peptide link'
+      C: 'Glycosidic link'
+      D: 'Ester link, –COO–'
+    answer: D
+    explanation: 'Polyesters are made from a diol and a dicarboxylic acid, joined by ester links.'
+
+  - uid: g12-chemistry-4-1-q011
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are natural polymers? Choose all that apply.'
+    options:
+      A: 'Starch'
+      B: 'Cellulose'
+      C: 'Nylon'
+      D: 'Proteins'
+    answer: [A, B, D]
+    explanation: 'Starch, cellulose and proteins are made by living things. Nylon is synthetic.'
+
+  - uid: g12-chemistry-4-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which monomer makes up both starch and cellulose?'
+    options:
+      A: 'Glucose'
+      B: 'Amino acids'
+      C: 'Ethene'
+      D: 'Glycerol'
+    answer: A
+    explanation: 'Both are polymers of glucose; they differ in how the glucose units are linked.'
+
+  - uid: g12-chemistry-4-1-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'Proteins are polymers made from which monomers?'
+    options:
+      A: 'Glucose'
+      B: 'Fatty acids'
+      C: 'Amino acids'
+      D: 'Nucleotides only'
+    answer: C
+    explanation: 'Amino acids join by peptide (amide) links in a condensation reaction.'
+
+  - uid: g12-chemistry-4-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'A thermoplastic softens when heated and can be remoulded.'
+    answer: true
+    explanation: 'Thermoplastic chains are not cross-linked, so they can slide past each other when warm.'
+
+  - uid: g12-chemistry-4-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does a thermosetting plastic like Bakelite not soften when heated?'
+    options:
+      A: 'Its chains are joined by strong cross-links.'
+      B: 'It contains water.'
+      C: 'Its molecules are very small.'
+      D: 'It is a metal.'
+    answer: A
+    explanation: 'Cross-links lock the chains in place, so on strong heating it chars instead of melting.'
+
+  - uid: g12-chemistry-4-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'What is added to natural rubber during vulcanisation?'
+    options:
+      A: 'Chlorine'
+      B: 'Sulfur'
+      C: 'Water'
+      D: 'Sodium hydroxide'
+    answer: B
+    explanation: 'Sulfur forms cross-links between rubber chains, making the rubber harder and more durable.'
+
+  - uid: g12-chemistry-4-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Addition polymerisation produces a small molecule such as water as a by-product.'
+    answer: false
+    explanation: 'In addition polymerisation all the atoms of the monomers end up in the polymer.'
+
+  - uid: g12-chemistry-4-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Why are plastic bags a serious environmental problem?'
+    options:
+      A: 'They dissolve quickly in rivers.'
+      B: 'They are made from salt.'
+      C: 'They are very heavy.'
+      D: 'Most are not biodegradable, so they stay in the environment for a very long time.'
+    answer: D
+    explanation: 'Microorganisms cannot easily break down polyethene, so bags pile up, block drains and harm animals.'
+
+  - uid: g12-chemistry-4-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'Which repeat unit is formed from propene, $\text{CH}_2{=}\text{CH–CH}_3$?'
+    options:
+      A: '$(\text{–CH}_2\text{–CH}_2\text{–CH}_2\text{–})_n$'
+      B: '$(\text{–CH}_2\text{–CH}_2\text{–})_n$'
+      C: '$(\text{–CH}_2\text{–CH(CH}_3)\text{–})_n$'
+      D: '$(\text{–CH=CH–})_n$'
+    answer: C
+    explanation: 'Only the two double-bonded carbons form the chain; the $\text{CH}_3$ group hangs off as a side group.'
+
+  - uid: g12-chemistry-4-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which monomers are needed to make a polyester?'
+    options:
+      A: 'Two alkenes'
+      B: 'A diamine and a dicarboxylic acid'
+      C: 'A diol and a dicarboxylic acid'
+      D: 'Glucose and fructose'
+    answer: C
+    explanation: 'An –OH group and a –COOH group react to form an ester link and water.'
+
+  - uid: g12-chemistry-4-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The small molecules that join together to form a polymer are called ________.'
+    answer: [monomers, monomer]
+    explanation: 'For example, ethene molecules are the monomers of polyethene.'
+
+  - uid: g12-chemistry-4-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'Heating natural rubber with sulfur to make it harder and more elastic is called ________.'
+    answer: [vulcanisation, vulcanization, vulcanising, vulcanizing]
+    explanation: 'Vulcanised rubber is used for tyres.'
+
+  - uid: g12-chemistry-4-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Cellulose, found in plant cell walls, is a polymer.'
+    answer: true
+    explanation: 'Cellulose is a long chain of glucose units; cotton is almost pure cellulose.'
+
+  - uid: g12-chemistry-4-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each polymer with its monomer.'
+    left:
+      L1: 'Polyethene'
+      L2: 'PVC'
+      L3: 'Starch'
+    right:
+      R1: 'Glucose'
+      R2: 'Chloroethene'
+      R3: 'Ethene'
+      R4: 'Amino acids'
+    answer: {L1: R3, L2: R2, L3: R1}
+    explanation: 'Amino acids are the monomers of proteins.'
+
+  - uid: g12-chemistry-4-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put these polyethene chains in order of molar mass, smallest first.'
+    items:
+      A: '$n = 5000$'
+      B: '$n = 500$'
+      C: '$n = 50\,000$'
+      D: '$n = 1500$'
+    answer: [B, D, A, C]
+    explanation: 'Molar mass is $28n$, so it increases with the number of repeat units.'
+
+  - uid: g12-chemistry-4-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these plastics is a thermosetting plastic?'
+    options:
+      A: 'Polyethene'
+      B: 'PVC'
+      C: 'Polystyrene'
+      D: 'Melamine'
+    answer: D
+    explanation: 'Melamine (used for plates and worktops) is cross-linked. The others are thermoplastics.'
+
+  - uid: g12-chemistry-4-1-q027
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these is a good way to reduce plastic waste?'
+    options:
+      A: 'Burning plastics in open air'
+      B: 'Using reusable bags and recycling bottles'
+      C: 'Throwing plastics into rivers'
+      D: 'Burying plastics in farmland'
+    answer: B
+    explanation: 'Reduce, reuse and recycle. Open burning releases toxic gases.'
+
+  - uid: g12-chemistry-4-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can PTFE be used for chemical-resistant pipes and seals?'
+    options:
+      A: 'It is very unreactive because of its strong C–F bonds.'
+      B: 'It dissolves in acids.'
+      C: 'It is biodegradable.'
+      D: 'It is a good electrical conductor.'
+    answer: A
+    explanation: 'The carbon–fluorine bonds are very strong, so PTFE resists almost all chemicals.'
+
+  - uid: g12-chemistry-4-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'A protein is formed from 100 amino acid molecules joined in one chain. How many water molecules are released?'
+    options:
+      A: '100'
+      B: '101'
+      C: '50'
+      D: '99'
+    answer: D
+    explanation: 'Each peptide link releases one water molecule, and 100 units in a chain have 99 links.'
+
+  - uid: g12-chemistry-4-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Which polymer is commonly used for water pipes and electrical cable insulation?'
+    options:
+      A: 'PTFE'
+      B: 'PVC'
+      C: 'Starch'
+      D: 'Natural rubber'
+    answer: B
+    explanation: 'PVC is strong, cheap, waterproof and a good electrical insulator.'

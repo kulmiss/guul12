@@ -149,6 +149,7 @@ subjects:
     chapters:
     - number: 1
       title: Polymers and polymerization
+      file: chemistry/u4-c1.yaml
   - number: 5
     title: Introduction to Environmental Chemistry
     chapters:

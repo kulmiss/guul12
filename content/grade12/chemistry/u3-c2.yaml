@@ -130,9 +130,9 @@ questions:
   - uid: g12-chemistry-3-2-q008
     type: true_false
     difficulty: 1
-    stem: 'Firing clay in a kiln makes it hard and water-resistant.'
+    stem: 'Firing clay in a kiln makes it hard, so it no longer softens or falls apart in water.'
     answer: true
-    explanation: 'High temperature drives out water and fuses the clay particles together.'
+    explanation: 'High temperature drives out water and fuses the clay particles together. Unglazed pottery can still soak up some water; a glaze makes it waterproof.'
 
   - uid: g12-chemistry-3-2-q009
     type: single_choice
