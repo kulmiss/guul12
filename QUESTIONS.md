@@ -33,3 +33,4 @@
 | 29 | Golden (screenshot) tests use the real fonts and a pinned Flutter (3.50.1) in CI | Pixel comparisons stay stable |
 | 30 | Reminder time is saved in the profile now; the daily reminder notification (WorkManager, inexact) is built in Phase 4 | Phase 4 = engagement |
 | 31 | The router re-checks redirects only when "onboarded" or the minimum build changes | A test found that refreshing on every profile edit undid the "Save" screen close |
+| 32 | Answer letters inside a chapter file may follow a pattern (a reviewer noticed A, B, C, D runs). They are kept: the app always shuffles question order in practice, and fixed mocks mix chapters and will be checked so their answer keys show no runs | Re-lettering 2,400 checked questions would void their second solves for no student-visible gain |
