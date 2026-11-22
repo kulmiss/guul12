@@ -299,6 +299,7 @@ subjects:
     chapters:
     - number: 1
       title: Population Policies, Programs and the Environment
+      file: geography/u4-c1.yaml
   - number: 5
     title: Challenges of Economic Development
     chapters:

@@ -3,7 +3,7 @@ summary:
     - 'Natural resources are renewable (water, forests, pasture, soil – they can be replaced if used carefully) or non-renewable (oil, coal, minerals – they run out).'
     - 'Causes of conflict over resources: scarcity (made worse by drought and population growth), unequal distribution or access, unclear ownership, shared resources that cross borders (transboundary rivers), and competing uses, for example farming versus grazing.'
     - '"Tragedy of the commons" (Garrett Hardin, 1968): when a resource is open to everyone and no one manages it, each user takes as much as possible and the resource is overused.'
-    - 'The Nile is shared by eleven countries. Most of its water at Aswan comes from the Ethiopian highlands through the Abay (Blue Nile), Tekeze and Baro-Akobo rivers. The Grand Ethiopian Renaissance Dam (GERD), begun in 2011 on the Abay in the Benishangul-Gumuz Region, is a hydropower project discussed among Ethiopia, Sudan and Egypt.'
+    - 'The Nile is shared by eleven countries. Most of its water at Aswan comes from the Ethiopian highlands through the Abay (Blue Nile), Tekeze and Baro-Akobo rivers. The Grand Ethiopian Renaissance Dam (GERD) on the Abay in the Benishangul-Gumuz Region was begun in 2011 and officially opened in 2025; its filling and operation have been discussed among Ethiopia, Sudan and Egypt.'
     - 'The Nile Basin Initiative (1999) brings basin countries together to cooperate. The international principle of "equitable and reasonable use" says shared rivers should be used fairly without causing significant harm to others.'
     - 'Peaceful ways to manage conflict: dialogue, negotiation (the parties talk directly), mediation (a neutral third party helps), arbitration (a third party decides), and joint management with benefit sharing.'
     - 'Traditional institutions also resolve disputes: councils of elders, Somali xeer (customary law) and the Oromo Gadaa system use agreed rules for sharing wells and grazing land.'
@@ -80,7 +80,7 @@ questions:
   - uid: g12-geography-3-1-q004
     type: single_choice
     difficulty: 2
-    stem: 'On which river is the Grand Ethiopian Renaissance Dam (GERD) being built?'
+    stem: 'On which river is the Grand Ethiopian Renaissance Dam (GERD) built?'
     options:
       A: 'Awash'
       B: 'Omo'
@@ -235,7 +235,7 @@ questions:
       C: '11'
       D: '20'
     answer: C
-    explanation: 'Eleven countries share the basin, including Ethiopia, Sudan, South Sudan, Egypt, Uganda and Kenya.'
+    explanation: 'Eleven countries share the basin geographically, including Ethiopia, Sudan, South Sudan, Egypt, Uganda and Kenya.'
 
   - uid: g12-geography-3-1-q019
     type: single_choice
@@ -260,7 +260,7 @@ questions:
     type: fill_in
     difficulty: 2
     stem: 'A river that flows through more than one country is called a ________ river.'
-    answer: [transboundary, shared, international]
+    answer: [transboundary, trans-boundary, shared, international]
     explanation: 'The Nile, the Omo and the Juba-Shebelle system are examples.'
 
   - uid: g12-geography-3-1-q022
