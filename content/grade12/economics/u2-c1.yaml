@@ -1,0 +1,377 @@
+summary:
+  key_points:
+    - 'Aggregate demand (AD) is total planned spending on an economy''s output at each price level: $AD = C + I + G + (X - M)$. The AD curve slopes downward: at a lower price level, people can buy more real output.'
+    - 'AD shifts right when consumption, investment, government spending or net exports rise at every price level – for example after a tax cut, lower interest rates, more business confidence or more export demand. It shifts left when they fall.'
+    - 'Aggregate supply (AS) is the total output firms are willing to produce at each price level. In the short run AS slopes upward. Short-run AS shifts left when costs rise (higher wages, fuel or imported input prices, a drought) and right when costs fall or productivity rises.'
+    - 'Long-run aggregate supply (LRAS) is vertical at the full-employment (potential) level of output. It shifts right with more or better resources: more workers, more capital, better technology, education and infrastructure.'
+    - 'Equilibrium is where AD meets AS, giving the price level and real output.'
+    - 'Demand-pull inflation: AD rises faster than the economy can produce, so prices rise. Cost-push inflation: AS shifts left because costs rise, so prices rise while output falls.'
+    - 'Stagflation is a combination of rising prices (inflation) and falling output with rising unemployment, typically caused by a supply shock.'
+    - 'The multiplier: an increase in spending raises income by more than the first increase, because one person''s spending is another''s income. Multiplier $k = \frac{1}{1 - MPC}$, where MPC is the marginal propensity to consume.'
+  formulas:
+    - label: Aggregate demand
+      latex: 'AD = C + I + G + (X - M)'
+    - label: Multiplier
+      latex: 'k = \frac{1}{1 - MPC} = \frac{1}{MPS}'
+    - label: Change in income
+      latex: '\Delta Y = k \times \Delta \text{spending}'
+
+solved_exercises:
+  - uid: g12-economics-2-1-se01
+    problem: 'The MPC is 0.8. The government spends an extra 100 million birr on roads. By how much could national income rise?'
+    steps:
+      - '$k = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5$.'
+      - '$\Delta Y = 5 \times 100 = 500$ million birr.'
+    answer: '500 million birr'
+  - uid: g12-economics-2-1-se02
+    problem: 'World oil prices double. Show the effect using AD/AS.'
+    steps:
+      - 'Fuel is a cost for almost all firms, so short-run AS shifts left.'
+      - 'The price level rises and real output falls: cost-push inflation, possibly stagflation.'
+    answer: 'SRAS shifts left; prices up, output down'
+  - uid: g12-economics-2-1-se03
+    problem: 'Explain why building more roads and training more engineers shifts LRAS to the right.'
+    steps:
+      - 'They increase the quantity and quality of productive resources (capital and skilled labour).'
+      - 'So the economy can produce more at full employment: potential output rises.'
+    answer: 'More and better resources raise potential output.'
+
+flashcards:
+  - {uid: g12-economics-2-1-fc01, term: Aggregate demand, definition: 'Total planned spending: C + I + G + (X − M).'}
+  - {uid: g12-economics-2-1-fc02, term: Aggregate supply, definition: 'Total output firms will produce at each price level.'}
+  - {uid: g12-economics-2-1-fc03, term: LRAS, definition: 'Vertical long-run supply at potential (full-employment) output.'}
+  - {uid: g12-economics-2-1-fc04, term: Demand-pull inflation, definition: 'Prices rise because AD grows faster than output can.'}
+  - {uid: g12-economics-2-1-fc05, term: Cost-push inflation, definition: 'Prices rise because production costs increase (AS shifts left).'}
+  - {uid: g12-economics-2-1-fc06, term: Stagflation, definition: 'Inflation together with falling output and rising unemployment.'}
+  - {uid: g12-economics-2-1-fc07, term: MPC, definition: 'Fraction of extra income that is spent.'}
+  - {uid: g12-economics-2-1-fc08, term: Multiplier, definition: '$k = \frac{1}{1 - MPC}$.'}
+
+questions:
+  - uid: g12-economics-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which formula gives aggregate demand?'
+    options:
+      A: 'Wages + rent + interest + profit'
+      B: '$C + I + G + (X - M)$'
+      C: 'Saving + taxes + imports'
+      D: 'Output − costs'
+    answer: B
+    explanation: 'AD is total spending by households, firms, government and foreigners (net).'
+
+  - uid: g12-economics-2-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which change would shift the aggregate demand curve to the right?'
+    options:
+      A: 'A cut in income tax that increases consumer spending'
+      B: 'A fall in exports'
+      C: 'A rise in interest rates that reduces investment'
+      D: 'A cut in government spending'
+    answer: A
+    explanation: 'More consumption at every price level raises AD.'
+
+  - uid: g12-economics-2-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'A drought sharply reduces the harvest and raises food and input costs. What happens to short-run aggregate supply?'
+    options:
+      A: 'It shifts right.'
+      B: 'It does not change.'
+      C: 'It shifts left.'
+      D: 'It becomes vertical.'
+    answer: C
+    explanation: 'Less can be produced at each price level, so SRAS moves left.'
+
+  - uid: g12-economics-2-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Which factor shifts long-run aggregate supply (LRAS) to the right?'
+    options:
+      A: 'A temporary rise in consumer confidence'
+      B: 'A fall in exports'
+      C: 'Higher import prices'
+      D: 'Better education and new technology'
+    answer: D
+    explanation: 'They raise the economy''s productive capacity.'
+
+  - uid: g12-economics-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What shape is the long-run aggregate supply curve in the classical model?'
+    options:
+      A: 'Vertical at full-employment output'
+      B: 'Horizontal'
+      C: 'Downward sloping'
+      D: 'U-shaped'
+    answer: A
+    explanation: 'In the long run, output is set by resources and technology, not the price level.'
+
+  - uid: g12-economics-2-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Inflation caused by total spending growing faster than the economy can produce is called:'
+    options:
+      A: 'Cost-push inflation'
+      B: 'Demand-pull inflation'
+      C: 'Deflation'
+      D: 'Stagflation'
+    answer: B
+    explanation: '"Too much money chasing too few goods."'
+
+  - uid: g12-economics-2-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Inflation caused by rising wages, fuel prices or imported input prices is called:'
+    options:
+      A: 'Demand-pull inflation'
+      B: 'Disinflation'
+      C: 'Cost-push inflation'
+      D: 'Deflation'
+    answer: C
+    explanation: 'Higher costs shift SRAS left and push prices up.'
+
+  - uid: g12-economics-2-1-q008
+    type: single_choice
+    difficulty: 3
+    stem: 'An economy has rising prices and, at the same time, falling output and rising unemployment. This is called:'
+    options:
+      A: 'A boom'
+      B: 'Deflation'
+      C: 'Economic growth'
+      D: 'Stagflation'
+    answer: D
+    explanation: 'Stagflation usually follows a negative supply shock such as an oil price rise.'
+
+  - uid: g12-economics-2-1-q009
+    type: numeric
+    difficulty: 2
+    stem: 'The marginal propensity to consume (MPC) is 0.8. What is the value of the multiplier?'
+    answer: {value: 5, tolerance: 0}
+    explanation: '$k = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5$.'
+
+  - uid: g12-economics-2-1-q010
+    type: numeric
+    difficulty: 3
+    stem: 'The MPC is 0.75 and the government increases spending by 200 million birr. By how much does national income rise, in million birr?'
+    answer: {value: 800, tolerance: 0, unit: million birr}
+    explanation: '$k = \frac{1}{0.25} = 4$; $\Delta Y = 4 \times 200 = 800$.'
+
+  - uid: g12-economics-2-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does the aggregate demand curve slope downward?'
+    options:
+      A: 'At a lower price level, the same money buys more real output.'
+      B: 'Higher prices increase demand.'
+      C: 'Firms produce less when prices fall.'
+      D: 'Taxes rise as prices fall.'
+    answer: A
+    explanation: 'Lower prices raise real wealth and make exports cheaper, so more is demanded.'
+
+  - uid: g12-economics-2-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Where is macroeconomic equilibrium?'
+    options:
+      A: 'Where exports equal imports'
+      B: 'Where aggregate demand equals aggregate supply'
+      C: 'Where taxes equal spending'
+      D: 'Where unemployment is zero'
+    answer: B
+    explanation: 'The intersection of AD and AS gives the equilibrium price level and output.'
+
+  - uid: g12-economics-2-1-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which would shift short-run aggregate supply to the LEFT? Choose all that apply.'
+    options:
+      A: 'Higher wages without higher productivity'
+      B: 'A rise in fuel prices'
+      C: 'A poor harvest'
+      D: 'A fall in the cost of imported raw materials'
+    answer: [A, B, C]
+    explanation: 'Cheaper raw materials would shift SRAS to the right.'
+
+  - uid: g12-economics-2-1-q014
+    type: true_false
+    difficulty: 2
+    stem: 'A larger MPC gives a larger multiplier.'
+    answer: true
+    explanation: 'If people spend more of each extra birr, more income is passed on.'
+
+  - uid: g12-economics-2-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'An increase in aggregate demand, when the economy is already at full employment, mainly raises output rather than prices.'
+    answer: false
+    explanation: 'At full employment there is little spare capacity, so higher demand mainly raises prices.'
+
+  - uid: g12-economics-2-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'The marginal propensity to save (MPS) is 0.25. What is the multiplier?'
+    options:
+      A: '0.25'
+      B: '1.25'
+      C: '2'
+      D: '4'
+    answer: D
+    explanation: '$k = \frac{1}{MPS} = \frac{1}{0.25} = 4$.'
+
+  - uid: g12-economics-2-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the multiplier effect describe?'
+    options:
+      A: 'An initial change in spending causes a larger final change in national income.'
+      B: 'Prices doubling every year'
+      C: 'Taxes always equal spending.'
+      D: 'Imports always rising'
+    answer: A
+    explanation: 'Each round of spending becomes someone else''s income, which is partly spent again.'
+
+  - uid: g12-economics-2-1-q018
+    type: single_choice
+    difficulty: 3
+    stem: 'An economy is in recession with high unemployment. The government increases spending on infrastructure. In the AD/AS model, what is the most likely short-run result?'
+    options:
+      A: 'Output falls and prices fall.'
+      B: 'Output rises with only a small rise in prices.'
+      C: 'Nothing changes.'
+      D: 'LRAS shifts left.'
+    answer: B
+    explanation: 'With spare capacity, higher AD mainly raises output and employment.'
+
+  - uid: g12-economics-2-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'The fraction of extra income that households spend is called the marginal propensity to ________.'
+    answer: [consume]
+    explanation: 'The MPC is the share of each extra birr that is spent; the rest is saved, so MPC + MPS = 1.'
+
+  - uid: g12-economics-2-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'A situation of high inflation together with stagnant output and high unemployment is called ________.'
+    answer: [stagflation]
+    explanation: 'It combines "stagnation" and "inflation".'
+
+  - uid: g12-economics-2-1-q021
+    type: true_false
+    difficulty: 1
+    stem: 'A rise in exports increases aggregate demand.'
+    answer: true
+    explanation: 'Net exports (X − M) are part of AD.'
+
+  - uid: g12-economics-2-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each event with its effect in the AD/AS model.'
+    left:
+      L1: 'Business confidence rises and firms invest more'
+      L2: 'Oil prices rise sharply'
+      L3: 'A new dam doubles electricity supply in the long run'
+    right:
+      R1: 'SRAS shifts left'
+      R2: 'LRAS shifts right'
+      R3: 'AD shifts right'
+      R4: 'AD shifts left'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Investment is part of AD; fuel costs affect SRAS; more capacity shifts LRAS.'
+
+  - uid: g12-economics-2-1-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps of the multiplier process in order.'
+    items:
+      A: 'Those workers spend part of their wages in local shops.'
+      B: 'The government pays workers to build a road.'
+      C: 'Shopkeepers earn more and spend part of it too.'
+      D: 'Total income rises by more than the first spending.'
+    answer: [B, A, C, D]
+    explanation: 'Each round of spending becomes new income for others.'
+
+  - uid: g12-economics-2-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which would most likely shift AD to the LEFT?'
+    options:
+      A: 'Lower interest rates'
+      B: 'A tax cut'
+      C: 'More government spending'
+      D: 'A fall in consumer confidence'
+    answer: D
+    explanation: 'Worried households spend less, reducing consumption.'
+
+  - uid: g12-economics-2-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'If MPC = 0.6, what is MPS?'
+    options:
+      A: '0.6'
+      B: '1.6'
+      C: '0.4'
+      D: '0.06'
+    answer: C
+    explanation: 'MPC + MPS = 1, so MPS = 0.4.'
+
+  - uid: g12-economics-2-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Which policy best tackles cost-push inflation without reducing output?'
+    options:
+      A: 'Improving productivity and reducing production costs so that AS shifts right'
+      B: 'Raising taxes sharply'
+      C: 'Cutting all government spending'
+      D: 'Increasing import taxes on fuel'
+    answer: A
+    explanation: 'Shifting AS right lowers prices and raises output; cutting demand would lower output.'
+
+  - uid: g12-economics-2-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What is "potential output"?'
+    options:
+      A: 'Output when the economy is in deep recession'
+      B: 'The output an economy can produce when all resources are fully employed'
+      C: 'Exports only'
+      D: 'Output in one firm'
+    answer: B
+    explanation: 'It is shown by the position of the LRAS curve.'
+
+  - uid: g12-economics-2-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'In the AD/AS diagram, what is shown on the vertical axis?'
+    options:
+      A: 'Unemployment'
+      B: 'Real output'
+      C: 'The general price level'
+      D: 'Interest rate'
+    answer: C
+    explanation: 'Real output (real GDP) is on the horizontal axis.'
+
+  - uid: g12-economics-2-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'A fall in the value of the birr makes Ethiopian goods cheaper abroad. What is the likely effect on AD?'
+    options:
+      A: 'AD falls because exports fall.'
+      B: 'No effect'
+      C: 'LRAS shifts left.'
+      D: 'AD rises because exports increase.'
+    answer: D
+    explanation: 'Cheaper exports raise net exports, other things equal.'
+
+  - uid: g12-economics-2-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about demand-pull inflation is correct?'
+    options:
+      A: 'It is caused by aggregate demand rising faster than aggregate supply.'
+      B: 'It is caused only by rising oil prices.'
+      C: 'It always comes with falling output.'
+      D: 'It cannot happen in a growing economy.'
+    answer: A
+    explanation: 'Excess demand bids up prices.'

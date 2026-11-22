@@ -393,6 +393,7 @@ subjects:
     chapters:
     - number: 1
       title: Aggregate Demand and Aggregate Supply Analysis
+      file: economics/u2-c1.yaml
   - number: 3
     title: Market Failure and Consumer Protection
     chapters:

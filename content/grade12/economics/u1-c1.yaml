@@ -144,7 +144,7 @@ questions:
   - uid: g12-economics-1-1-q009
     type: single_choice
     difficulty: 2
-    stem: 'A graduate is between jobs for a few weeks while looking for a better position. This is:'
+    stem: 'A worker leaves one job and spends a few weeks searching for a better one. This is:'
     options:
       A: 'Frictional unemployment'
       B: 'Structural unemployment'
@@ -322,14 +322,14 @@ questions:
   - uid: g12-economics-1-1-q026
     type: single_choice
     difficulty: 3
-    stem: 'Ethiopian workers abroad send home more income than foreigners in Ethiopia send out. Which is then true?'
+    stem: 'Ethiopian residents earn more factor income (wages, profits, interest) from abroad than foreigners earn from producing in Ethiopia. Which is then true?'
     options:
       A: 'GNP is less than GDP.'
       B: 'GDP and GNP are always equal.'
       C: 'GNP is greater than GDP.'
       D: 'GDP becomes zero.'
     answer: C
-    explanation: 'Positive net factor income from abroad makes GNP larger than GDP.'
+    explanation: 'Positive net factor income from abroad makes GNP larger than GDP. (Remittances that migrants send to families count as transfers, not factor income.)'
 
   - uid: g12-economics-1-1-q027
     type: single_choice

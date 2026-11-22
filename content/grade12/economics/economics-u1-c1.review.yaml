@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-1-1-q001: {hash: 'a7041589aeeb6f1ee0c7d2af2a94a5245e7720a53e7ca2ac6ef62a64c6bfb2b9', answer: B}
+  g12-economics-1-1-q002: {hash: '9535d7858e895432e910cb6c725f44d9b58110f767dd35b268fa9658db6f04f9', answer: 900}
+  g12-economics-1-1-q003: {hash: 'cb924d7a5ac7de227c7673dc2d3fdebadbd9e82877b91a1dce027cd3276eaded', answer: C}
+  g12-economics-1-1-q004: {hash: '8ac5e087b14cace1f1931977a59e4e716591000deb3d8cbbd2089b4b1528806d', answer: A}
+  g12-economics-1-1-q005: {hash: 'd5d3f21040d2515f6b013909492154b53dd155337ffe149d6feb59603d5df19b', answer: D}
+  g12-economics-1-1-q006: {hash: '2d28476d746140dce7fa2460f80fc74cf2a976cb9d721e21a171e0e92e1f848b', answer: B}
+  g12-economics-1-1-q007: {hash: '62aa5dddc340f997a38b8ba62b1d27479d711da6a8c8a850c309133c2fe93db7', answer: [A, B, C]}
+  g12-economics-1-1-q008: {hash: '16a6d9aac723321d8d7f4853c1e9818a5c7eabf046673fe4d661541664f21782', answer: C}
+  g12-economics-1-1-q009: {hash: '0481a617d21e12e3a537b43648aff9534d17cbc0ce480d342a037649e9a47d8c', answer: A, note: 'Minor wording: a new graduate is usually entering the labour force, not "between jobs". Suggest "A worker who left one job is spending a few weeks looking for a better one" or "A new graduate spends a few weeks searching for a first job". Answer A is still clear.'}
+  g12-economics-1-1-q010: {hash: 'bf1b55fc356399fc7c9295fc9b69dddc7c96d168dae62658bc132b8881d36c23', answer: D}
+  g12-economics-1-1-q011: {hash: 'be91978b338008825abaf13f5aa07c7e2ae6f7f3a890a3c7f0206011241376aa', answer: 15}
+  g12-economics-1-1-q012: {hash: '9b3343a67475fc3ab1126804d2b80d44d56bbe0b2d3426f1a2602547a16a2fb0', answer: B}
+  g12-economics-1-1-q013: {hash: '0ff826dc65e694acfa49ad5d1ba8125079a5ff64001f993d6d067c712c44dbf9', answer: C}
+  g12-economics-1-1-q014: {hash: '04fa08830a02dcc5e5b0fc5e432749f1f6eec50672a715d7256697c97708f28d', answer: true}
+  g12-economics-1-1-q015: {hash: 'b7ab126b243a1ab34f8bc38e8b76ba53d29d1a00fb0173ce15394a00f7dd3635', answer: false}
+  g12-economics-1-1-q016: {hash: 'd82f7ea235faa6aaffb68416e173c718469fe4fbb5c4580998feec87a280280f', answer: D}
+  g12-economics-1-1-q017: {hash: 'da72f262113d805510764531a639668e39cf30033eee68cd897299d726ce5d89', answer: A}
+  g12-economics-1-1-q018: {hash: 'd61315e742fd344e6eae86eadd9b83a63a119d7a7cce391bf03bf3c86be7a742', answer: B}
+  g12-economics-1-1-q019: {hash: '5acb26c2c25e486b5b5f47b7d74b965e8e19fb3dd0ecfa35711ff92507338432', answer: product}
+  g12-economics-1-1-q020: {hash: '7341305586a9d14e1baa80386895eccae55026dbe4d7976eb891a9c4ca456e79', answer: added}
+  g12-economics-1-1-q021: {hash: '617a796ec1d4cf0c97073949bec0ffe5f1512d32433ff5a84f4bed47d01dc1e0', answer: true}
+  g12-economics-1-1-q022: {hash: '3b7c1ada3e3bbd564038e69a91f40746cbb01e5bc676d47e08350dd9467906e8', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-economics-1-1-q023: {hash: 'b8eb8d91d921b7022e26d02ded80f829d66dd48ac1f7e3f4cc72a0eeb2a52790', answer: [C, B, D, A]}
+  g12-economics-1-1-q024: {hash: 'd45d7c0112871264198b7f8eef3a7d558f828111136e7cb43c87a8fbf36b6009', answer: D}
+  g12-economics-1-1-q025: {hash: 'a9114e3a4d507f5686cf2076a01262ddf8a2f9a437f7b7e193200ae93130fa88', answer: A}
+  g12-economics-1-1-q026: {hash: 'e67306e49711e5e3d127c232006f84383f001c281d5dfbc35f84b678e86ea219', answer: C, note: 'Concept wording is debatable: money workers "send home" is remittances. In national accounts, remittances from migrants who live abroad are current transfers (secondary income), not factor income, so they do not raise GNP/GNI. What raises GNP above GDP is factor income EARNED abroad by residents. Suggest: "Ethiopian residents earn more factor income abroad than foreigners earn in Ethiopia." Answer C is the intended key.'}
+  g12-economics-1-1-q027: {hash: '2408cf414d6c970ee29cd0b50c95fa0587246ab3c342f4799034e223a2d79c3f', answer: C}
+  g12-economics-1-1-q028: {hash: '7669756b7b91f9ef0f4690211f15865c7ad4a62e72afe23dedbce7df9f0f5ea1', answer: A}
+  g12-economics-1-1-q029: {hash: '211d54d2421cf9dde82f91fee833612b2ec0790e14905f4e51a7b2e51192624d', answer: D}
+  g12-economics-1-1-q030: {hash: '46fe7a0c453a6bccfd0faf7384052844f69c217406ec8f86db1fdc6b38354b51', answer: B}
