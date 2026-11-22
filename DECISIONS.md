@@ -20,3 +20,7 @@ Big decisions. Small technical choices are in [QUESTIONS.md](QUESTIONS.md).
 | 14 | 2026-11-22 | Quality gate second solve: a **separate reviewer agent** that never sees keys or explanations solves every question from a keyless sheet; any disagreement keeps the question hidden until fixed. Plus automatic checks (`content:check`) in CI | Owner had no preference; most independent option |
 | 15 | 2026-11-22 | Summary PDFs are **free for everyone** (one per chapter; link only to the price-free landing page) | **Owner confirmed** (QUESTIONS #33) |
 | 16 | 2026-11-22 | Fixed mocks: **3 per subject × 50 choice questions, 75 minutes; mocks 1–2 free, mock 3 Premium** (Aptitude 2 until its bank grows) | **Owner confirmed** (QUESTIONS #34) |
+| 17 | 2026-11-22 | **Real Exam Mode has no pause**: the timer keeps running if the student leaves the app; normal practice still pauses | **Owner confirmed** |
+| 18 | 2026-11-22 | Extra exams: **random mock 1 per day free**; "My weak topics" and "My mistakes" exams are **Premium** | **Owner confirmed** |
+| 19 | 2026-11-22 | Result shows **"better than X% of Guul 12 students"** once 30+ students took that mock (no names, needs internet) | **Owner confirmed** |
+| 20 | 2026-11-22 | **Automatic study plan** from exam date, target score and weak chapters; student sets minutes per day; last 30 days = revision mode | **Owner confirmed** |
