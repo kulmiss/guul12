@@ -241,6 +241,7 @@ subjects:
     chapters:
     - number: 1
       title: Reading comprehension
+      file: english/u3-c1.yaml
   - number: 4
     title: Writing Skills
     chapters:

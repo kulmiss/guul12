@@ -1,0 +1,440 @@
+summary:
+  key_points:
+    - 'Skimming: reading quickly to get the general idea (the gist). Look at the title, the first and last paragraphs and the first sentence of each paragraph.'
+    - 'Scanning: looking quickly for one specific detail, such as a name, number or date, without reading every word.'
+    - 'The main idea is what the whole text or paragraph is mostly about. Supporting details are the facts, examples and reasons that explain it.'
+    - 'An inference is a conclusion you reach from clues in the text when the writer does not say it directly. A good inference must be supported by the text.'
+    - 'Reference words (it, they, this, which, such) point back to something already mentioned. Find exactly what they refer to.'
+    - 'The writer''s purpose may be to inform, to persuade, to entertain or to instruct. Tone is the writer''s attitude (for example hopeful, critical, neutral).'
+    - 'Answer exam questions from the passage, not from your own opinion. Check each option against the text and reject those that are not supported, even if they sound true.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-3-1-se01
+    problem: 'You need to find the year a dam was finished in a two-page article. Should you skim or scan? Explain.'
+    steps:
+      - 'You are looking for one specific detail (a year).'
+      - 'Scan: move your eyes quickly over the text looking for numbers.'
+    answer: 'Scan'
+  - uid: g12-english-3-1-se02
+    problem: '"The well was dry, so the women walked to the next village. It took them four hours." What does "It" refer to?'
+    steps:
+      - 'Look back for something that "took four hours".'
+      - '"It" refers to the walk to the next village.'
+    answer: 'The walk to the next village'
+  - uid: g12-english-3-1-se03
+    problem: '"Abdi looked at the empty plate, then at the clock, and sighed." What can you infer?'
+    steps:
+      - 'The text does not state his feelings, but an empty plate and a sigh are clues.'
+      - 'A reasonable inference: he is still hungry, or tired of waiting.'
+    answer: 'He is probably still hungry or impatient.'
+
+flashcards:
+  - {uid: g12-english-3-1-fc01, term: Skimming, definition: 'Fast reading for the general idea.'}
+  - {uid: g12-english-3-1-fc02, term: Scanning, definition: 'Fast searching for one specific detail.'}
+  - {uid: g12-english-3-1-fc03, term: Main idea, definition: 'What a text or paragraph is mostly about.'}
+  - {uid: g12-english-3-1-fc04, term: Inference, definition: 'A conclusion drawn from clues, not stated directly.'}
+  - {uid: g12-english-3-1-fc05, term: Reference word, definition: 'A word such as it or they that points back to something.'}
+  - {uid: g12-english-3-1-fc06, term: Writer's purpose, definition: 'To inform, persuade, entertain or instruct.'}
+  - {uid: g12-english-3-1-fc07, term: Tone, definition: 'The writer''s attitude towards the subject.'}
+
+passages:
+  - uid: g12-english-3-1-ps01
+    title: The Last Well
+    body: |
+      Ifrah was fourteen when the rains failed for the second year in a row. Her family lived in a small settlement east of Degehabur, where they kept forty camels and a few goats. In good years the camels grazed close to home and the children walked to school every morning. That year, however, the grass turned yellow by January, and the nearest water point dried up soon after.
+
+      Her father decided to move the herd south, towards a deep well that had never failed in living memory. The journey would take nine days. Ifrah expected to go with him, as she always had, but her mother had other plans. "The camels can find water," she said, "but you will not find another chance to sit the national exam."
+
+      So Ifrah stayed behind with her grandmother and two younger brothers. Each morning she rose before dawn to fetch water from a tanker that the district office sent twice a week. In the evenings she studied by the light of a small solar lamp that her uncle had bought in Jigjiga. Some nights the lamp faded before she had finished, and she would close her eyes and repeat the formulas from memory.
+
+      When her father returned in May, eleven of the camels had died on the way. He was thin and quiet. But when Ifrah showed him her mock-exam results, the best in her class, he smiled for the first time in months.
+  - uid: g12-english-3-1-ps02
+    title: Small Workers, Big Harvests
+    body: |
+      Most people think of bees only as makers of honey. Honey is valuable, but the greater gift of bees is pollination. When a bee visits a flower to collect nectar, grains of pollen stick to the fine hairs on its body. At the next flower, some of these grains rub off onto the female part of the flower, allowing it to form seeds and fruit.
+
+      Many of the crops that people eat depend partly or wholly on animal pollinators, and bees are the most important of these. Without them, harvests of fruits such as mango and avocado, and of seed crops such as sunflower, would fall sharply. Coffee plants can pollinate themselves, yet studies have found that coffee farms with many bees nearby often produce more and larger beans.
+
+      Unfortunately, bee numbers are falling in many parts of the world. The main causes are the loss of wild flowers as land is cleared, the careless use of pesticides, and diseases spread by parasites. Changes in climate can also cause flowers to open at times when bees are not active.
+
+      Farmers can help by spraying pesticides only when necessary and in the evening, when fewer bees are flying, and by leaving strips of wild flowers at the edges of their fields. Keeping hives near crops can benefit farmers twice: they gain honey to sell and better harvests from their fields.
+  - uid: g12-english-3-1-ps03
+    title: Should Phones Be Allowed in Class?
+    body: |
+      In many schools, mobile phones are banned during lessons. Teachers worry that students will chat with friends, play games or copy answers during tests. These concerns are real. Studies in several countries have found that students who use phones for non-school purposes during lessons tend to remember less of what was taught.
+
+      Yet a total ban may throw away a powerful learning tool. A single smartphone can hold a dictionary, a calculator, past exam papers and hundreds of video lessons. For students in rural areas, where libraries are small and textbooks are often shared, a phone may be the only way to reach such resources. Some apps even work without an internet connection, which matters where networks are weak.
+
+      The answer, therefore, is not to ban phones completely but to set clear rules for their use. Phones could stay in bags unless the teacher asks students to use them for a particular task, such as looking up a word or watching a short demonstration. Breaking the rule could mean losing the phone until the end of the day. Schools could also teach students how to judge whether information found online is reliable.
+
+      Phones, like books, are neither good nor bad in themselves. What matters is how they are used. With sensible rules, the same device that distracts a student can help that student learn.
+
+questions:
+  - uid: g12-english-3-1-q001
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 1
+    stem: 'Why did Ifrah''s father move the herd south?'
+    options:
+      A: 'To sell the camels in Jigjiga'
+      B: 'To reach a deep well that had always had water'
+      C: 'To take Ifrah to a new school'
+      D: 'Because the district office ordered it'
+    answer: B
+    explanation: 'Paragraph 2: he moved "towards a deep well that had never failed in living memory".'
+
+  - uid: g12-english-3-1-q002
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 2
+    stem: 'Why did Ifrah''s mother want her to stay at home?'
+    options:
+      A: 'She was too young to travel.'
+      B: 'She had to look after the goats.'
+      C: 'She needed to prepare for the national exam.'
+      D: 'She was ill.'
+    answer: C
+    explanation: '"You will not find another chance to sit the national exam."'
+
+  - uid: g12-english-3-1-q003
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 1
+    stem: 'How often did the water tanker come?'
+    options:
+      A: 'Every day'
+      B: 'Once a month'
+      C: 'Every nine days'
+      D: 'Twice a week'
+    answer: D
+    explanation: 'Paragraph 3: a tanker "that the district office sent twice a week".'
+
+  - uid: g12-english-3-1-q004
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 2
+    stem: 'In paragraph 3, "Some nights the lamp faded before she had finished." What had Ifrah not finished?'
+    options:
+      A: 'Her studying for the evening'
+      B: 'Fetching water'
+      C: 'The journey south'
+      D: 'Buying the lamp'
+    answer: A
+    explanation: 'The sentence is about studying in the evenings by lamp light.'
+
+  - uid: g12-english-3-1-q005
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 1
+    stem: 'How many camels died on the journey?'
+    options:
+      A: 'Forty'
+      B: 'Nine'
+      C: 'Eleven'
+      D: 'Two'
+    answer: C
+    explanation: 'Paragraph 4: "eleven of the camels had died on the way".'
+
+  - uid: g12-english-3-1-q006
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 3
+    stem: 'What can you infer about Ifrah''s father when he returned?'
+    options:
+      A: 'He was angry that Ifrah had not come with him.'
+      B: 'The hard journey had affected him, but his daughter''s success cheered him.'
+      C: 'He had sold all the camels.'
+      D: 'He did not care about her exam.'
+    answer: B
+    explanation: 'He was "thin and quiet", but he "smiled for the first time in months" at her results.'
+
+  - uid: g12-english-3-1-q007
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 2
+    stem: 'Which sentence best states the main idea of the story?'
+    options:
+      A: 'Camels can survive without water for many days.'
+      B: 'Solar lamps are cheap in Jigjiga.'
+      C: 'A family makes sacrifices during a drought so that a daughter can continue her education.'
+      D: 'District offices should send more tankers.'
+    answer: C
+    explanation: 'The story centres on the family''s choices during the drought and Ifrah''s studies.'
+
+  - uid: g12-english-3-1-q008
+    type: passage_choice
+    passage: g12-english-3-1-ps01
+    difficulty: 2
+    stem: 'In paragraph 1, which word signals a contrast between good years and that year?'
+    options:
+      A: 'however'
+      B: 'when'
+      C: 'and'
+      D: 'soon'
+    answer: A
+    explanation: '"That year, however, the grass turned yellow..." contrasts with "In good years...".'
+
+  - uid: g12-english-3-1-q009
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 2
+    stem: 'According to the passage, what is the greater gift of bees?'
+    options:
+      A: 'Honey'
+      B: 'Wax'
+      C: 'Pollination'
+      D: 'Killing pests'
+    answer: C
+    explanation: '"Honey is valuable, but the greater gift of bees is pollination."'
+
+  - uid: g12-english-3-1-q010
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 2
+    stem: 'How does pollen move from one flower to another?'
+    options:
+      A: 'It is carried by the wind only.'
+      B: 'It sticks to the hairs on a bee''s body and rubs off at the next flower.'
+      C: 'Farmers spray it on the crops.'
+      D: 'It falls into the nectar.'
+    answer: B
+    explanation: 'Paragraph 1 describes pollen sticking to the bee''s hairs and rubbing off.'
+
+  - uid: g12-english-3-1-q011
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 3
+    stem: 'What does the passage say about coffee?'
+    options:
+      A: 'Coffee cannot produce beans without bees.'
+      B: 'Bees damage coffee beans.'
+      C: 'Coffee does not need pollination at all.'
+      D: 'Coffee can pollinate itself, but farms with many bees nearby often produce more and larger beans.'
+    answer: D
+    explanation: 'Paragraph 2 states both points.'
+
+  - uid: g12-english-3-1-q012
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 2
+    stem: 'Which is NOT given as a cause of falling bee numbers?'
+    options:
+      A: 'Too much honey being harvested'
+      B: 'Loss of wild flowers'
+      C: 'Careless use of pesticides'
+      D: 'Diseases spread by parasites'
+    answer: A
+    explanation: 'Paragraph 3 lists flower loss, pesticides, parasites and climate change, but not honey harvesting.'
+
+  - uid: g12-english-3-1-q013
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 2
+    stem: 'Why does the writer advise spraying pesticides in the evening?'
+    options:
+      A: 'Pesticides work only in the dark.'
+      B: 'It is cooler for farmers.'
+      C: 'Fewer bees are flying then.'
+      D: 'Flowers close in the evening.'
+    answer: C
+    explanation: '"...in the evening, when fewer bees are flying".'
+
+  - uid: g12-english-3-1-q014
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 2
+    stem: 'In the last paragraph, why does keeping hives "benefit farmers twice"?'
+    options:
+      A: 'They can keep two kinds of bees.'
+      B: 'They get honey to sell and better harvests.'
+      C: 'They can spray twice as much pesticide.'
+      D: 'They pay half the price for land.'
+    answer: B
+    explanation: 'The two benefits are honey and better harvests.'
+
+  - uid: g12-english-3-1-q015
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 2
+    stem: 'What is the writer''s main purpose in this passage?'
+    options:
+      A: 'To entertain with a funny story about bees'
+      B: 'To sell honey'
+      C: 'To describe the life of a beekeeper'
+      D: 'To inform readers about the importance of bees and how to protect them'
+    answer: D
+    explanation: 'The passage explains pollination, the threats to bees and ways to help.'
+
+  - uid: g12-english-3-1-q016
+    type: passage_choice
+    passage: g12-english-3-1-ps02
+    difficulty: 3
+    stem: 'Which statement can be inferred from the passage?'
+    options:
+      A: 'Protecting bees can help food production.'
+      B: 'Bees are the only pollinators in the world.'
+      C: 'All pesticides should be banned immediately.'
+      D: 'Mango trees grow better without bees.'
+    answer: A
+    explanation: 'The passage links bees to harvests; it says bees are "the most important" pollinators, not the only ones, and does not call for a ban.'
+
+  - uid: g12-english-3-1-q017
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 2
+    stem: 'What does the writer finally recommend?'
+    options:
+      A: 'Banning phones completely'
+      B: 'Allowing phones at all times'
+      C: 'Allowing phones only under clear rules set by the teacher'
+      D: 'Giving every student a new phone'
+    answer: C
+    explanation: '"The answer ... is not to ban phones completely but to set clear rules for their use."'
+
+  - uid: g12-english-3-1-q018
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 2
+    stem: 'Why might phones be especially useful for rural students, according to the writer?'
+    options:
+      A: 'Rural students have more free time.'
+      B: 'Rural schools have small libraries and shared textbooks.'
+      C: 'Networks are always strong in rural areas.'
+      D: 'Rural teachers do not give homework.'
+    answer: B
+    explanation: 'Paragraph 2: "where libraries are small and textbooks are often shared".'
+
+  - uid: g12-english-3-1-q019
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 2
+    stem: 'Why does the writer mention apps that work without an internet connection?'
+    options:
+      A: 'Because networks are weak in some areas'
+      B: 'Because such apps are free'
+      C: 'Because the internet is banned in schools'
+      D: 'Because they are games'
+    answer: A
+    explanation: '"...which matters where networks are weak."'
+
+  - uid: g12-english-3-1-q020
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 2
+    stem: 'What does "These concerns" refer to in paragraph 1?'
+    options:
+      A: 'The benefits of phones'
+      B: 'The prices of phones'
+      C: 'The rules for phones'
+      D: 'Teachers'' worries about chatting, games and copying'
+    answer: D
+    explanation: 'The previous sentence lists the teachers'' worries.'
+
+  - uid: g12-english-3-1-q021
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 3
+    stem: 'How would you describe the writer''s overall tone?'
+    options:
+      A: 'Angry and one-sided'
+      B: 'Balanced and practical'
+      C: 'Humorous and light'
+      D: 'Sad and hopeless'
+    answer: B
+    explanation: 'The writer accepts the concerns as real but argues for a sensible middle way.'
+
+  - uid: g12-english-3-1-q022
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 2
+    stem: 'What punishment does the writer suggest for breaking the phone rule?'
+    options:
+      A: 'Leaving the school'
+      B: 'Paying a fine'
+      C: 'Losing the phone until the end of the day'
+      D: 'Writing an essay'
+    answer: C
+    explanation: 'Paragraph 3: "Breaking the rule could mean losing the phone until the end of the day."'
+
+  - uid: g12-english-3-1-q023
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 2
+    stem: 'Which word in paragraph 3 introduces the writer''s conclusion from the arguments before it?'
+    options:
+      A: 'Yet'
+      B: 'unless'
+      C: 'also'
+      D: 'therefore'
+    answer: D
+    explanation: '"The answer, therefore, is..." shows a conclusion.'
+
+  - uid: g12-english-3-1-q024
+    type: passage_choice
+    passage: g12-english-3-1-ps03
+    difficulty: 3
+    stem: 'What does the writer mean by "Phones, like books, are neither good nor bad in themselves"?'
+    options:
+      A: 'Phones are better than books.'
+      B: 'Books should also be banned.'
+      C: 'Their value depends on how people use them.'
+      D: 'Phones and books cost the same.'
+    answer: C
+    explanation: 'The next sentence explains: "What matters is how they are used."'
+
+  - uid: g12-english-3-1-q025
+    type: true_false
+    difficulty: 1
+    stem: 'Scanning means reading every word slowly and carefully.'
+    answer: false
+    explanation: 'Scanning is searching quickly for a specific detail.'
+
+  - uid: g12-english-3-1-q026
+    type: true_false
+    difficulty: 2
+    stem: 'A good inference must be supported by clues in the text.'
+    answer: true
+    explanation: 'Inferences come from evidence in the text, not from guessing.'
+
+  - uid: g12-english-3-1-q027
+    type: fill_in
+    difficulty: 1
+    stem: 'Reading quickly to get the general idea of a text is called ________.'
+    answer: [skimming, skim]
+    explanation: 'Skimming gives the gist; scanning finds details.'
+
+  - uid: g12-english-3-1-q028
+    type: fill_in
+    difficulty: 2
+    stem: 'A conclusion you reach from clues when the writer does not state something directly is called an ________.'
+    answer: [inference]
+    explanation: 'For example, inferring a character is sad from their actions.'
+
+  - uid: g12-english-3-1-q029
+    type: matching
+    difficulty: 2
+    stem: 'Match each text with the writer''s most likely purpose.'
+    left:
+      L1: 'A recipe for shiro wat'
+      L2: 'An advertisement for a new bank account'
+      L3: 'A news report about a flood'
+    right:
+      R1: 'To persuade'
+      R2: 'To inform'
+      R3: 'To instruct'
+      R4: 'To entertain with a joke'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Recipes give instructions, adverts persuade, news reports inform.'
+
+  - uid: g12-english-3-1-q030
+    type: ordering
+    difficulty: 2
+    stem: 'Put these steps for answering a reading exam in a sensible order.'
+    items:
+      A: 'Read the questions.'
+      B: 'Skim the passage for the general idea.'
+      C: 'Check your answers against the text.'
+      D: 'Scan the passage for the details each question needs.'
+    answer: [B, A, D, C]
+    explanation: 'Get the gist, see what is asked, find the evidence, then check.'

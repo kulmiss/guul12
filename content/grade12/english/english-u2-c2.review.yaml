@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-2-2-q001: {hash: 'dc09286d7be868a5c647dbf3e27c500043dbcc01b6a851e29f44c75035658ac0', answer: B}
+  g12-english-2-2-q002: {hash: '20338787ada0f78d1ea9f6b6bf9ad559652f50dbaf77a9ff5a45fc0c4ae0f2aa', answer: A}
+  g12-english-2-2-q003: {hash: 'a729eaa9ce7199faa29f94cfa5192241cfe95a562a5a57943c81c5b95a77023e', answer: C, note: 'Minor: the cue "(build/construct)" gives two words while the other items give one root word; "(construct)" alone would be clearer and consistent.'}
+  g12-english-2-2-q004: {hash: '49029c8840753f068f48fb8ade176916670c01e0832256f1a7e0b2d78229db5b', answer: D}
+  g12-english-2-2-q005: {hash: '4541e855a8d6fb9ab16bb358bd4a18bb3952850e539c42da71bc205a7caa7e77', answer: A}
+  g12-english-2-2-q006: {hash: 'f771fab1e73b890f9af5383cdf59345e4101963261b84cba744e9953383ff31f', answer: C}
+  g12-english-2-2-q007: {hash: 'dba41013e070f303a82bb4f56476021da916d08e0fa2ab825748631662181d3e', answer: B}
+  g12-english-2-2-q008: {hash: 'e92f7c3c9ccf97be16c28c8eba1bf1187d2bf5dfde52d78ee36f722b60352fc4', answer: true}
+  g12-english-2-2-q009: {hash: '84c700f830ae21135933a74fb7096ff1f368a495cff0b2d06ec3f0560002118e', answer: D}
+  g12-english-2-2-q010: {hash: 'c3eaabc55462fa821151fdbe9874932eb6ff7739db2eceaa55f67e749d1ac7ce', answer: A}
+  g12-english-2-2-q011: {hash: '72635041e9ecf56d83e3c9da565e3a73f71ac82ccfbba7b8dcd639d6d41b0e2c', answer: C}
+  g12-english-2-2-q012: {hash: '1581b188c5edcf3ab3489e257c0427565a2a8381af0e34958144bfaca854a33b', answer: B}
+  g12-english-2-2-q013: {hash: '9098d07ee5c6e5d20192e3462cd6bc4d188b406fabbbf8a0b477b61dfbf80a42', answer: D}
+  g12-english-2-2-q014: {hash: 'eea5dad29ed9f874a31f22f092ed6445a4b6a455a8ff2b898cf833acf7446bd0', answer: A}
+  g12-english-2-2-q015: {hash: 'ce8feb0c63a19647cfa3abf774a8d1ac6f3ab02796773c97a02b93601dc77855', answer: C}
+  g12-english-2-2-q016: {hash: '468a9db5b218d24141ada1b6aecad79095966a8174aa6a842bae4ea2229b4497', answer: B}
+  g12-english-2-2-q017: {hash: 'a01c40059721fbd7fab245344421f4879977cd4ccbd392d0fd3d152b0233724e', answer: [A, B, C]}
+  g12-english-2-2-q018: {hash: '79394d334621b86ef590d000ba60f407a0e1782d6de4839f6fcc2b6d816fb547', answer: irregular}
+  g12-english-2-2-q019: {hash: '6a6f946e62e6c0e29d428f17f9886549f1ed67a8487ae943e1e97c1b0ec984d2', answer: ability}
+  g12-english-2-2-q020: {hash: '7167190773255169f4613d27d8288994985976ea55b731c8f0d8cce01d95ed59', answer: true}
+  g12-english-2-2-q021: {hash: '1f42678c1843a2f97488639e7a9f18232df67ec178bae6f6f2356e8a7c4a07ec', answer: {L1: R2, L2: R1, L3: R3}}
+  g12-english-2-2-q022: {hash: '50e9d21a6cf618e72b1bc3cff856a6cbb265186261c8192b0feb502d47f741c3', answer: C}
+  g12-english-2-2-q023: {hash: 'be2a7eda0e79950b338d3d502d1e4d6710453e60aff8813572f1123363ed3f65', answer: D}
+  g12-english-2-2-q024: {hash: '8df267557bfea1a04ea26e1ce9fadb91524a11415a8658c30dcd6d8d6728df4b', answer: A}
+  g12-english-2-2-q025: {hash: '4024d25946f224e38e362761320f70bc355ecfcfcb36a2cc9825b7397f856972', answer: false}
+  g12-english-2-2-q026: {hash: 'fd12a6eaa359b547ef5da52f8abdb32696685a0a7269771d0b0bca86ed7d578a', answer: [B, C, A]}
+  g12-english-2-2-q027: {hash: '298be632b9cf7e5fcda068811823e45f5a09d420a20962472d2601ec66d7e3a0', answer: B}
+  g12-english-2-2-q028: {hash: '1598fb0940cd159823f604e8385d11620c77a7fc18575d29e768e62198b3d579', answer: D}
+  g12-english-2-2-q029: {hash: 'cbcb6f7b8f7cb726acab92b4225f1d2dd750f439fa973e4fb69b6a5f8cf1533b', answer: A, note: 'Two options defensible: "confused" (B) also has the standard dictionary sense "unclear, muddled, badly organised" (e.g. "a confused account"), so "The instructions were so confused that nobody could follow them" is acceptable English. Suggest making B clearly wrong, e.g. replace it with "confuse" or "confusedly", or reword the stem so only the -ing form fits.'}
+  g12-english-2-2-q030: {hash: '472e7d17cbe48252d43843f509beca8275350ce0b3fedd5b4eccd097bb0709c0', answer: C}

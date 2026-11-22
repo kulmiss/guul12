@@ -66,7 +66,7 @@ questions:
   - uid: g12-english-2-2-q003
     type: single_choice
     difficulty: 2
-    stem: 'Choose the correct form: "The ______ of the new hospital took three years." (build/construct)'
+    stem: 'Choose the correct form: "The ______ of the new hospital took three years." (construct)'
     options:
       A: 'construct'
       B: 'constructive'
@@ -359,11 +359,11 @@ questions:
     stem: 'Choose the correct form: "The instructions were so ______ that nobody could follow them." (confuse)'
     options:
       A: 'confusing'
-      B: 'confused'
+      B: 'confuse'
       C: 'confusion'
       D: 'confusingly'
     answer: A
-    explanation: '"-ing" adjectives describe the thing that causes the feeling; people feel "confused".'
+    explanation: 'After "so" an adjective is needed; "-ing" adjectives describe the thing that causes the feeling.'
 
   - uid: g12-english-2-2-q030
     type: single_choice
