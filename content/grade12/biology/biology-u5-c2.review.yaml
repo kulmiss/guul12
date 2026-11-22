@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-5-2-q001: {hash: '8f1753bd60cbb70be838a7ff40f42c51d0ee213d2b72b7d387b257add8eb8975', answer: B}
+  g12-biology-5-2-q002: {hash: 'd80ec992ff9358d8da65b0a90c9b037d77a666cb254c35f10da404ce69c788b5', answer: C}
+  g12-biology-5-2-q003: {hash: '3f2c80e549087ebe4306feeced1a6ba10aa05b716fca1332d95880bebea33b4f', answer: A}
+  g12-biology-5-2-q004: {hash: '0a5c3cece501acf8ceb065d01f718a948dfe83dcebe7d1646abf589124969559', answer: D}
+  g12-biology-5-2-q005: {hash: '67aebef05dd25bc193a7efb644725370b2e369d99996aa7de93003f75835bfaf', answer: B}
+  g12-biology-5-2-q006: {hash: 'db5b68b6b2bdace91c32f58a7aebb5dcefd3d303e41f706c2a8650a3b9b56738', answer: true}
+  g12-biology-5-2-q007: {hash: 'd7a80194ecb0d589de0ab049649f86840bbab47e09b0bc0e9acab453e1469820', answer: A}
+  g12-biology-5-2-q008: {hash: '29c18920c8f36a4c1c15d7a77df1e4308ce6e04bb9f728f7a44819bd42440e99', answer: C}
+  g12-biology-5-2-q009: {hash: '8746c8c99034968172a6dff100e5cc3b99f0fe42d07b68af0982b7e3f2a8bdd1', answer: D}
+  g12-biology-5-2-q010: {hash: '92ee1b03cf5e0a7c99d2681a7185eba6dd6eb9797327dc7870f3c20059dc2457', answer: A}
+  g12-biology-5-2-q011: {hash: 'ea0a208a06d8cd7bf3ad1a081eabe987c25ee1fb268d564875c7dfaba798b8dc', answer: B}
+  g12-biology-5-2-q012: {hash: 'e13e2c1f0a07e3ba5beb6f5368f26963d9aaa73b43663c62ce14e1cf1e94443b', answer: [A, B, D], note: 'Option D (less physical activity) is a behavioural response, not a physiological homeostatic one like A and B. It does reduce heat production, so I included it, but students taught only the physiological responses may leave it out. Consider rewording the stem (e.g. "responses, including behaviour") or replacing D.'}
+  g12-biology-5-2-q013: {hash: 'd6069975043c35b7aa48bfc0bab8d3e0b8de7e387af39a69e8ea191fa98ebf0d', answer: C}
+  g12-biology-5-2-q014: {hash: 'aef7f69cae38785d5cd96db57aaa4a663f0d85e91ea297754486f38f3034f5be', answer: B}
+  g12-biology-5-2-q015: {hash: '6a8449769dd59ead4d22efd32a5d7165304d251033a2cd9a42724aaf03e89d96', answer: D}
+  g12-biology-5-2-q016: {hash: '8cc73f357c5e2bf8724e2d459e6a71f1b24b63cbb65281706c42ce42e0edcaf0', answer: 37}
+  g12-biology-5-2-q017: {hash: '475c3fd4b1f6e78217f15c53accfc8ce051454410aa65aaa9433e805144fc9ca', answer: 1921, note: 'Pure date recall; low value for a Grade 12 exam and likely not in the Ethiopian syllabus. Insulin was also purified with Collip and Macleod (first patient treated 1922), so 1922 answers might appear.'}
+  g12-biology-5-2-q018: {hash: 'a0de9d363e7e010740a0445d96ad016696b63ad71c7938a4ee24f0bc0946afd3', answer: C}
+  g12-biology-5-2-q019: {hash: '9d1236335e5a9b0d48ffea3c70028482372e27e9aed620fed5d2cddc31a0fa61', answer: D}
+  g12-biology-5-2-q020: {hash: 'fca6aceb463ab205bb3274bdb7ffe381f3e6518e87b741c2a25a1b43c6269858', answer: true}
+  g12-biology-5-2-q021: {hash: 'cb5fc2a7d720401fea8ab7d0e830217985a41e5ecdf4530137ab8a365a258cbe', answer: 'homeostasis'}
+  g12-biology-5-2-q022: {hash: '5e6332285b8627a36d31bc34a3e2e2baabe94d359d8da7f8a4640700b02a7ba6', answer: 'glycogen'}
+  g12-biology-5-2-q023: {hash: '893cd5152207873c03767c5e510c7aa39175f7517a7461646af8602e78940e4b', answer: false}
+  g12-biology-5-2-q024: {hash: '4ce6933f274535210330eb887380b87c4a4906504415773b3682e8b63d128026', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-biology-5-2-q025: {hash: '4c1a4aadbfc0b2f716d8d059933b5a338656d501e2616e34bc5b0b23569ffa23', answer: [B, D, A, C]}
+  g12-biology-5-2-q026: {hash: '18c38107a56c9457c6cf5236cd91f49b5cf6b82fc6c0ca6a880b66c90258dd61', answer: A}
+  g12-biology-5-2-q027: {hash: '5ecba9eb58c023603e30a4d72f4f1674238f7e4eda4ae4431c9ebc5d91dfa43f', answer: B}
+  g12-biology-5-2-q028: {hash: '30a7c2557df5ea6c89788bd721a962e6f0d782386e7d82bff0d0f678fc78a05c', answer: C}
+  g12-biology-5-2-q029: {hash: '94dfac8575d3accfed3eef0a50b3faa5be436650a3bfca2a4188c2222299af31', answer: D}
+  g12-biology-5-2-q030: {hash: 'aab3f8255061de984d21ff5020e9bd13eb4d29aeb267cc13e66991253cae7ca2', answer: A}

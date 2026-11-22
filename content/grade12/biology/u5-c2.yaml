@@ -177,9 +177,9 @@ questions:
       A: 'Sweating'
       B: 'Vasodilation of skin blood vessels'
       C: 'Shivering'
-      D: 'Less physical activity'
-    answer: [A, B, D]
-    explanation: 'Sweat evaporation and wider skin vessels lose heat; resting reduces heat made. Shivering makes heat.'
+      D: 'Hairs on the skin standing up'
+    answer: [A, B]
+    explanation: 'Sweat evaporation and wider skin vessels lose heat. Shivering and raised hairs are responses to cold.'
 
   - uid: g12-biology-5-2-q013
     type: single_choice
@@ -227,9 +227,9 @@ questions:
   - uid: g12-biology-5-2-q017
     type: numeric
     difficulty: 1
-    stem: 'In which year did Banting and Best first extract insulin, opening the way to treating diabetes?'
-    answer: {value: 1921, tolerance: 0}
-    explanation: 'Insulin was first extracted in 1921 and used to treat a patient in early 1922.'
+    stem: 'Normal core body temperature is 37 °C. A patient with malaria has a temperature of 39.5 °C. By how many degrees Celsius is it above normal?'
+    answer: {value: 2.5, tolerance: 0, unit: °C}
+    explanation: '$39.5 - 37 = 2.5$ °C. A fever happens when the hypothalamus raises the set point during infection.'
 
   - uid: g12-biology-5-2-q018
     type: single_choice

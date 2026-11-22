@@ -202,6 +202,7 @@ subjects:
       file: biology/u5-c2.yaml
     - number: 3
       title: Circulation, respiration and excretion
+      file: biology/u5-c3.yaml
   - number: 6
     title: Climate Change
     chapters:
