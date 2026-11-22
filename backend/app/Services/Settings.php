@@ -30,7 +30,8 @@ class Settings
             'exam_date' => null,
 
             // Free limits.
-            'free_fixed_mocks' => 2,
+            // Fixed mocks are free or Premium per mock (content/<grade>/mocks/*.yaml, DECISIONS #16).
+            'free_random_exams_per_day' => 1,
             'premium_explain_more_per_day' => 20,
 
             // AI spending.
@@ -56,6 +57,9 @@ class Settings
             'quality_min_correct_percent' => 15,
             // Open reports on the same question version that send it to review.
             'report_threshold' => 3,
+
+            // "Better than X% of students" on a mock result, once this many students took it (DECISIONS #19).
+            'percentile_min_students' => 30,
         ];
     }
 
@@ -68,7 +72,7 @@ class Settings
     {
         return [
             'exam_date',
-            'free_fixed_mocks',
+            'free_random_exams_per_day',
             'premium_explain_more_per_day',
             'min_supported_build',
             'recommended_build',

@@ -24,7 +24,7 @@ class AttemptService
     ) {}
 
     /**
-     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, started_at: string, finished_at: string,
+     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, started_at: string, finished_at: string,
      *               answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>}  $data
      * @return array{attempt: Attempt, created: bool}
      */
@@ -64,7 +64,7 @@ class AttemptService
     }
 
     /**
-     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, started_at: string, finished_at: string,
+     * @param  array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, started_at: string, finished_at: string,
      *               answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>}  $data
      * @param  Collection<int, Question>  $questions
      */
@@ -76,6 +76,7 @@ class AttemptService
                 'client_uuid' => $data['client_uuid'],
                 'mode' => PracticeMode::from($data['mode']),
                 'chapter_id' => $data['chapter_id'] ?? null,
+                'mock_id' => $data['mock_id'] ?? null,
                 'started_at' => Carbon::parse($data['started_at']),
                 'finished_at' => Carbon::parse($data['finished_at']),
                 'total' => 0,

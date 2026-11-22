@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Enums\PracticeMode;
 use App\Http\Controllers\Controller;
+use App\Models\Attempt;
 use App\Models\AttemptAnswer;
 use App\Models\User;
 use App\Services\AttemptService;
+use App\Services\ExamResultService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -15,7 +17,7 @@ class AttemptController extends Controller
 {
     public const MAX_ANSWERS = 200;
 
-    public function store(Request $request, AttemptService $attempts): JsonResponse
+    public function store(Request $request, AttemptService $attempts, ExamResultService $results): JsonResponse
     {
         /** @var User $user */
         $user = $request->user();
@@ -24,6 +26,7 @@ class AttemptController extends Controller
             'client_uuid' => ['required', 'uuid'],
             'mode' => ['required', Rule::enum(PracticeMode::class)],
             'chapter_id' => ['nullable', 'integer', 'exists:chapters,id'],
+            'mock_id' => ['nullable', 'integer', 'exists:mocks,id', 'required_if:mode,'.PracticeMode::ExamFixed->value, 'prohibited_unless:mode,'.PracticeMode::ExamFixed->value],
             'started_at' => ['required', 'date'],
             'finished_at' => ['required', 'date', 'after_or_equal:started_at', 'before_or_equal:'.now()->addMinutes(10)->toIso8601String()],
             'answers' => ['required', 'array', 'min:1', 'max:'.self::MAX_ANSWERS],
@@ -33,21 +36,43 @@ class AttemptController extends Controller
             'answers.*.time_ms' => ['required', 'integer', 'min:0'],
         ]);
 
-        /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, started_at: string, finished_at: string,
+        /** @var array{client_uuid: string, mode: string, chapter_id?: int|null, mock_id?: int|null, started_at: string, finished_at: string,
          *        answers: list<array{question_id: int, version: int, response: mixed, time_ms: int}>} $data */
         $result = $attempts->submit($user, $data);
-        $attempt = $result['attempt'];
 
-        return response()->json([
-            'attempt' => [
-                'client_uuid' => $attempt->client_uuid,
-                'total' => $attempt->total,
-                'correct' => $attempt->correct,
-                'answers' => $attempt->answers->map(fn (AttemptAnswer $a): array => [
-                    'question_id' => $a->question_id,
-                    'is_correct' => $a->is_correct,
-                ])->values()->all(),
-            ],
-        ], $result['created'] ? 201 : 200);
+        return response()->json(['attempt' => $this->present($result['attempt'], $results)], $result['created'] ? 201 : 200);
+    }
+
+    /**
+     * An uploaded attempt again, e.g. to refresh "better than X%" after more students took the mock.
+     */
+    public function show(Request $request, string $clientUuid, ExamResultService $results): JsonResponse
+    {
+        /** @var User $user */
+        $user = $request->user();
+        $attempt = Attempt::query()->where('user_id', $user->id)->where('client_uuid', $clientUuid)->with('answers')->first();
+        abort_if($attempt === null, 404);
+
+        return response()->json(['attempt' => $this->present($attempt, $results)]);
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    private function present(Attempt $attempt, ExamResultService $results): array
+    {
+        return [
+            'client_uuid' => $attempt->client_uuid,
+            'mode' => $attempt->mode->value,
+            'mock_id' => $attempt->mock_id,
+            'total' => $attempt->total,
+            'correct' => $attempt->correct,
+            'answers' => $attempt->answers->map(fn (AttemptAnswer $a): array => [
+                'question_id' => $a->question_id,
+                'is_correct' => $a->is_correct,
+            ])->values()->all(),
+            // Exams only: right answers per chapter and the comparison with other students.
+            'exam' => $attempt->mode->isExam() ? $results->details($attempt) : null,
+        ];
     }
 }

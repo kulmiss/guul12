@@ -13,4 +13,15 @@ enum PracticeMode: string
     case WrongOnly = 'wrong_only';
     case QuickRevise = 'quick_revise';
     case ChapterQuiz = 'chapter_quiz';
+
+    // Exams (no feedback until the end).
+    case ExamFixed = 'exam_fixed';
+    case ExamRandom = 'exam_random';
+    case ExamWeak = 'exam_weak';
+    case ExamMistakes = 'exam_mistakes';
+
+    public function isExam(): bool
+    {
+        return in_array($this, [self::ExamFixed, self::ExamRandom, self::ExamWeak, self::ExamMistakes], true);
+    }
 }
