@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-aptitude-2-2-q010: {hash: 'bee92385f61ce6c28e99cf70986c285b6ab51b710bbe8604572fde4c3a8dfbcd', answer: 20}
+  g12-aptitude-2-2-q019: {hash: 'e12aa167fac3ee74caf50ca96005a7719e515e55ad58923b87fe1a3515902f2d', answer: false}
