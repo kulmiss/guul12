@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\ContentController;
 use App\Http\Controllers\Api\V1\HistoryController;
 use App\Http\Controllers\Api\V1\MeController;
 use App\Http\Controllers\Api\V1\MockController;
+use App\Http\Controllers\Api\V1\RandomExamController;
 use App\Http\Controllers\Api\V1\ReportController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
 
         Route::get('mocks', [MockController::class, 'index'])->name('mocks.index');
         Route::get('mocks/{mock}', [MockController::class, 'show'])->whereNumber('mock')->name('mocks.show');
+        Route::post('exams/random', RandomExamController::class)->name('exams.random');
 
         Route::post('attempts', [AttemptController::class, 'store'])->name('attempts.store');
         Route::get('attempts/{clientUuid}', [AttemptController::class, 'show'])->whereUuid('clientUuid')->name('attempts.show');
