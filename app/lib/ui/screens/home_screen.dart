@@ -3,11 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../../app/plan_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
 import '../../domain/ethiopian_calendar.dart';
 import '../../domain/practice.dart';
 import '../../l10n/generated/app_localizations.dart';
+import '../plan/plan_screen.dart';
 import '../practice/practice_screen.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
@@ -32,6 +34,7 @@ class HomeScreen extends ConsumerWidget {
     final today = ref.watch(clockProvider)();
     final maintenance = config?.maintenanceMessage;
     final due = ref.watch(reviewDueCountProvider).value ?? 0;
+    final plan = ref.watch(todayPlanProvider).value;
     final mistakes = ref.watch(mistakesProvider).value ?? const <int, List<Mistake>>{};
     final mistakeCount = mistakes.values.fold(0, (sum, list) => sum + list.length);
 
@@ -58,6 +61,27 @@ class HomeScreen extends ConsumerWidget {
                     child: Text(l.homeGreeting, style: Theme.of(context).textTheme.headlineSmall),
                   ),
                   _CountdownCard(examDate: config?.examDate, today: today),
+                  if (plan != null)
+                    Card(
+                      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        leading: CircleAvatar(
+                          child: Icon(plan.allDone ? Icons.task_alt : Icons.checklist),
+                        ),
+                        title: Text(l.planTitle, style: Theme.of(context).textTheme.titleMedium),
+                        subtitle: Text(
+                          plan.allDone
+                              ? l.planAllDone
+                              : plan.saved.tasks.isEmpty
+                              ? planStageText(l, plan.plan)
+                              : '${l.planSummary(plan.saved.tasks.length, plan.minutes)} · '
+                                    '${plan.saved.done.length}/${plan.saved.tasks.length}',
+                        ),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push('/home/plan'),
+                      ),
+                    ),
                   Card(
                     margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
                     child: ListTile(

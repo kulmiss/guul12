@@ -1334,5 +1334,131 @@
   "masteryStrong": "Strong",
   "@masteryStrong": {
     "description": "Mastery level"
+  },
+  "planTitle": "Today's plan",
+  "@planTitle": {
+    "description": "Study plan title"
+  },
+  "planSummary": "{count, plural, =1{1 task} other{{count} tasks}} · {minutes} min",
+  "@planSummary": {
+    "description": "Plan size",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "planAllDone": "All done for today. Great work!",
+  "@planAllDone": {
+    "description": "Every task ticked"
+  },
+  "planMinutesLabel": "Minutes a day",
+  "@planMinutesLabel": {
+    "description": "Daily study time picker"
+  },
+  "planMinutesValue": "{minutes} min",
+  "@planMinutesValue": {
+    "description": "Minutes",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "planTaskReview": "{count, plural, =1{Review 1 due question} other{Review {count} due questions}}",
+  "@planTaskReview": {
+    "description": "Plan task",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planTaskLearn": "Study {chapter}",
+  "@planTaskLearn": {
+    "description": "Plan task: a new chapter",
+    "placeholders": {
+      "chapter": {
+        "type": "String"
+      }
+    }
+  },
+  "planTaskPractise": "Practise {chapter}",
+  "@planTaskPractise": {
+    "description": "Plan task: a weak chapter",
+    "placeholders": {
+      "chapter": {
+        "type": "String"
+      }
+    }
+  },
+  "planTaskSmart": "Smart practice",
+  "@planTaskSmart": {
+    "description": "Plan task"
+  },
+  "planTaskMock": "Full mock exam",
+  "@planTaskMock": {
+    "description": "Plan task on mock days"
+  },
+  "planTaskDone": "Done",
+  "@planTaskDone": {
+    "description": "Checkbox label for a plan task"
+  },
+  "planStageNoDate": "No exam date yet. Learn a little every day.",
+  "@planStageNoDate": {
+    "description": "Plan stage"
+  },
+  "planStageLearn": "{days, plural, =1{Learning time. Revision starts tomorrow.} other{Learning time. Revision starts in {days} days.}}",
+  "@planStageLearn": {
+    "description": "Plan stage",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "planStageRevision": "Revision time: weak chapters first and a mock exam every week.",
+  "@planStageRevision": {
+    "description": "Plan stage: last 30 days"
+  },
+  "planStageLastDay": "The exam is tomorrow. Do a short review, then rest well.",
+  "@planStageLastDay": {
+    "description": "Plan stage"
+  },
+  "planStageExamDay": "Exam day. Good luck!",
+  "@planStageExamDay": {
+    "description": "Plan stage"
+  },
+  "planStageOver": "The exam date has passed.",
+  "@planStageOver": {
+    "description": "Plan stage"
+  },
+  "planPace": "{count, plural, =1{Study about 1 new chapter a week to finish before revision.} other{Study about {count} new chapters a week to finish before revision.}}",
+  "@planPace": {
+    "description": "Weekly pace",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planAtTarget": "{done} of {total} chapters at your target",
+  "@planAtTarget": {
+    "description": "Chapters whose score reached the target",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "planEmpty": "Nothing to plan yet. Open a subject in Study to begin.",
+  "@planEmpty": {
+    "description": "No chapters available"
   }
 }

@@ -7,6 +7,7 @@ import '../domain/practice.dart';
 import '../ui/exams/exam_result_screen.dart';
 import '../ui/exams/exam_screen.dart';
 import '../ui/exams/exams_screen.dart';
+import '../ui/plan/plan_screen.dart';
 import '../ui/practice/player_screen.dart';
 import '../ui/practice/practice_screen.dart';
 import '../ui/progress/progress_screen.dart';
@@ -122,7 +123,14 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state, shell) => AppShell(shell: shell),
         branches: [
           StatefulShellBranch(
-            routes: [GoRoute(path: '/home', builder: (_, _) => const HomeScreen())],
+            routes: [
+              GoRoute(
+                path: '/home',
+                builder: (_, _) => const HomeScreen(),
+                // Inside the Home tab, so a task can open a chapter in the Study tab.
+                routes: [GoRoute(path: 'plan', builder: (_, _) => const PlanScreen())],
+              ),
+            ],
           ),
           StatefulShellBranch(
             routes: [

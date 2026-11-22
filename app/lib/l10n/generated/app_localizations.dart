@@ -1669,6 +1669,126 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Strong'**
   String get masteryStrong;
+
+  /// Study plan title
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s plan'**
+  String get planTitle;
+
+  /// Plan size
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 task} other{{count} tasks}} · {minutes} min'**
+  String planSummary(int count, int minutes);
+
+  /// Every task ticked
+  ///
+  /// In en, this message translates to:
+  /// **'All done for today. Great work!'**
+  String get planAllDone;
+
+  /// Daily study time picker
+  ///
+  /// In en, this message translates to:
+  /// **'Minutes a day'**
+  String get planMinutesLabel;
+
+  /// Minutes
+  ///
+  /// In en, this message translates to:
+  /// **'{minutes} min'**
+  String planMinutesValue(int minutes);
+
+  /// Plan task
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{Review 1 due question} other{Review {count} due questions}}'**
+  String planTaskReview(int count);
+
+  /// Plan task: a new chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Study {chapter}'**
+  String planTaskLearn(String chapter);
+
+  /// Plan task: a weak chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Practise {chapter}'**
+  String planTaskPractise(String chapter);
+
+  /// Plan task
+  ///
+  /// In en, this message translates to:
+  /// **'Smart practice'**
+  String get planTaskSmart;
+
+  /// Plan task on mock days
+  ///
+  /// In en, this message translates to:
+  /// **'Full mock exam'**
+  String get planTaskMock;
+
+  /// Checkbox label for a plan task
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get planTaskDone;
+
+  /// Plan stage
+  ///
+  /// In en, this message translates to:
+  /// **'No exam date yet. Learn a little every day.'**
+  String get planStageNoDate;
+
+  /// Plan stage
+  ///
+  /// In en, this message translates to:
+  /// **'{days, plural, =1{Learning time. Revision starts tomorrow.} other{Learning time. Revision starts in {days} days.}}'**
+  String planStageLearn(int days);
+
+  /// Plan stage: last 30 days
+  ///
+  /// In en, this message translates to:
+  /// **'Revision time: weak chapters first and a mock exam every week.'**
+  String get planStageRevision;
+
+  /// Plan stage
+  ///
+  /// In en, this message translates to:
+  /// **'The exam is tomorrow. Do a short review, then rest well.'**
+  String get planStageLastDay;
+
+  /// Plan stage
+  ///
+  /// In en, this message translates to:
+  /// **'Exam day. Good luck!'**
+  String get planStageExamDay;
+
+  /// Plan stage
+  ///
+  /// In en, this message translates to:
+  /// **'The exam date has passed.'**
+  String get planStageOver;
+
+  /// Weekly pace
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{Study about 1 new chapter a week to finish before revision.} other{Study about {count} new chapters a week to finish before revision.}}'**
+  String planPace(int count);
+
+  /// Chapters whose score reached the target
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} chapters at your target'**
+  String planAtTarget(int done, int total);
+
+  /// No chapters available
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing to plan yet. Open a subject in Study to begin.'**
+  String get planEmpty;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

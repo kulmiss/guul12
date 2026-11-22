@@ -974,4 +974,104 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get masteryStrong => 'Strong';
+
+  @override
+  String get planTitle => 'Today\'s plan';
+
+  @override
+  String planSummary(int count, int minutes) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count tasks',
+      one: '1 task',
+    );
+    return '$_temp0 · $minutes min';
+  }
+
+  @override
+  String get planAllDone => 'All done for today. Great work!';
+
+  @override
+  String get planMinutesLabel => 'Minutes a day';
+
+  @override
+  String planMinutesValue(int minutes) {
+    return '$minutes min';
+  }
+
+  @override
+  String planTaskReview(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Review $count due questions',
+      one: 'Review 1 due question',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String planTaskLearn(String chapter) {
+    return 'Study $chapter';
+  }
+
+  @override
+  String planTaskPractise(String chapter) {
+    return 'Practise $chapter';
+  }
+
+  @override
+  String get planTaskSmart => 'Smart practice';
+
+  @override
+  String get planTaskMock => 'Full mock exam';
+
+  @override
+  String get planTaskDone => 'Done';
+
+  @override
+  String get planStageNoDate => 'No exam date yet. Learn a little every day.';
+
+  @override
+  String planStageLearn(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'Learning time. Revision starts in $days days.',
+      one: 'Learning time. Revision starts tomorrow.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planStageRevision => 'Revision time: weak chapters first and a mock exam every week.';
+
+  @override
+  String get planStageLastDay => 'The exam is tomorrow. Do a short review, then rest well.';
+
+  @override
+  String get planStageExamDay => 'Exam day. Good luck!';
+
+  @override
+  String get planStageOver => 'The exam date has passed.';
+
+  @override
+  String planPace(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Study about $count new chapters a week to finish before revision.',
+      one: 'Study about 1 new chapter a week to finish before revision.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String planAtTarget(int done, int total) {
+    return '$done of $total chapters at your target';
+  }
+
+  @override
+  String get planEmpty => 'Nothing to plan yet. Open a subject in Study to begin.';
 }

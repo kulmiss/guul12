@@ -3,6 +3,7 @@ import 'dart:math';
 
 import '../domain/exam.dart';
 import '../domain/exam_builder.dart';
+import '../domain/study_plan.dart';
 import 'api_client.dart';
 import 'local_db.dart';
 import 'models.dart';
@@ -20,7 +21,31 @@ abstract final class Keys {
   static const mocks = 'mocks';
   static const examInProgress = 'exam_in_progress';
   static const historyRestored = 'history_restored';
+  static const planMinutes = 'plan_minutes';
+  static const planToday = 'plan_today';
 }
+
+/// Today's plan as saved on the phone, so it does not change while the student works on it.
+class SavedPlan {
+  const SavedPlan({
+    required this.day,
+    required this.minutes,
+    required this.tasks,
+    required this.done,
+  });
+
+  /// Local date, `yyyy-mm-dd`.
+  final String day;
+  final int minutes;
+  final List<PlanTask> tasks;
+
+  /// Indexes of ticked tasks.
+  final Set<int> done;
+}
+
+/// `yyyy-mm-dd` of the local date.
+String planDay(DateTime t) =>
+    '${t.year.toString().padLeft(4, '0')}-${t.month.toString().padLeft(2, '0')}-${t.day.toString().padLeft(2, '0')}';
 
 /// Offline-first data access. Every read comes from the phone; the network only refreshes it.
 class Repository {
@@ -598,6 +623,55 @@ class Repository {
       // Offline or server busy: it stays queued and is retried by syncAll.
     }
   }
+
+  // ---- study plan ------------------------------------------------------------------------------
+
+  /// Minutes a day the student wants to study; one of [StudyPlanner.minutesChoices].
+  Future<int> planMinutes() async {
+    final value = await db.readInt(Keys.planMinutes, fallback: StudyPlanner.defaultMinutes);
+    return StudyPlanner.minutesChoices.contains(value) ? value : StudyPlanner.defaultMinutes;
+  }
+
+  /// Saves the minutes a day and drops today's saved plan, so it is built again.
+  Future<void> setPlanMinutes(int minutes) async {
+    if (!StudyPlanner.minutesChoices.contains(minutes)) {
+      throw ArgumentError.value(minutes, 'minutes', 'not one of the choices');
+    }
+    await db.writeString(Keys.planMinutes, '$minutes');
+    await db.writeJson(Keys.planToday, const {});
+  }
+
+  /// Today's saved plan, or null when none was saved today (or it cannot be read).
+  Future<SavedPlan?> savedPlan(DateTime today) async {
+    final json = await db.readJson(Keys.planToday);
+    if (json == null || json['day'] != planDay(today)) return null;
+    final minutes = json['minutes'];
+    final rawTasks = json['tasks'];
+    final rawDone = json['done'];
+    if (minutes is! int || rawTasks is! List || rawDone is! List) return null;
+    final tasks = <PlanTask>[];
+    for (final raw in rawTasks) {
+      final task = raw is Map ? PlanTask.fromJson(raw.cast<String, Object?>()) : null;
+      if (task == null) return null;
+      tasks.add(task);
+    }
+    return SavedPlan(
+      day: planDay(today),
+      minutes: minutes,
+      tasks: tasks,
+      done: {
+        for (final i in rawDone)
+          if (i is int && i >= 0 && i < tasks.length) i,
+      },
+    );
+  }
+
+  Future<void> savePlan(SavedPlan plan) => db.writeJson(Keys.planToday, {
+    'day': plan.day,
+    'minutes': plan.minutes,
+    'tasks': [for (final t in plan.tasks) t.toJson()],
+    'done': plan.done.toList()..sort(),
+  });
 }
 
 class AttemptAnswer {
