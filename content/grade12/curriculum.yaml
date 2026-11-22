@@ -178,6 +178,7 @@ subjects:
     chapters:
     - number: 1
       title: Photosynthesis
+      file: biology/u3-c1.yaml
     - number: 2
       title: Cellular respiration and energy flow
   - number: 4
