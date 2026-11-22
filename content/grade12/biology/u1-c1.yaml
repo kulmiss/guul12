@@ -6,7 +6,7 @@ summary:
     - 'Food preservation stops microorganisms from growing: drying and salting remove water (salt draws water out by osmosis), refrigeration slows growth, and pasteurisation heats milk briefly (about 72 °C for 15 seconds) to kill most harmful microbes.'
     - 'Nutrition: a balanced diet prevents deficiency diseases – kwashiorkor (protein), goitre (iodine), anaemia (iron), rickets (vitamin D), scurvy (vitamin C) and night blindness (vitamin A).'
     - 'DNA fingerprinting identifies people from their DNA; it is used in crime investigation and to settle questions of parentage.'
-    - 'Conservation protects biodiversity. Ethiopia has endemic animals found nowhere else, such as the Ethiopian wolf, the gelada and the Walia ibex, protected in parks like the Simien Mountains and Bale Mountains.'
+    - 'Conservation protects biodiversity. The Ethiopian highlands have endemic animals found naturally nowhere else, such as the Ethiopian wolf, the gelada and the Walia ibex, protected in parks like the Simien Mountains and Bale Mountains.'
     - 'New biotechnologies raise ethical questions about safety, fairness and the environment, which society must discuss.'
   formulas: []
 
@@ -200,7 +200,7 @@ questions:
   - uid: g12-biology-1-1-q014
     type: multiple_answers
     difficulty: 2
-    stem: 'Which of these animals are endemic to Ethiopia (found naturally nowhere else)? Choose all that apply.'
+    stem: 'Which of these animals are endemic to the Ethiopian highlands (found naturally only in that region)? Choose all that apply.'
     options:
       A: 'Ethiopian wolf'
       B: 'Gelada'
