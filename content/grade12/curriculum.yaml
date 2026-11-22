@@ -267,6 +267,7 @@ subjects:
       file: aptitude/u2-c1.yaml
     - number: 2
       title: Word problems and data interpretation
+      file: aptitude/u2-c2.yaml
   - number: 3
     title: Logical Reasoning
     chapters:
