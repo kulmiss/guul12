@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-3-2-q001: {hash: '8ff05efa80517d917fb065bc0005bdd34bdf3ac5ced244a4be30adb977edf98c', answer: A}
+  g12-mathematics-3-2-q002: {hash: '927419d5c35944616e161cac94f303f664fbe7f42d501bf1554dc27d325eb869', answer: B}
+  g12-mathematics-3-2-q003: {hash: 'b69d27f0728a2d4e96c0fa55b71851992e6697d3e1c82bd21366ad376911f669', answer: C}
+  g12-mathematics-3-2-q004: {hash: 'b1d6b6cea72488849ae7bdc54c21d834fe5a7c04e27beb98581f179c12ad46aa', answer: 5}
+  g12-mathematics-3-2-q005: {hash: 'f9885ec0814a7881a37c35d9e219ea26d5675e37198f2cb723f43227b1c6e170', answer: D}
+  g12-mathematics-3-2-q006: {hash: '0764455177ab3723d34845f950f9f1328b2309d932eed80ed5ad87d413b0d883', answer: 2}
+  g12-mathematics-3-2-q007: {hash: '01206a4629ba5d88016861138479103a4b8cc6f990a43fe8cb5feacb4ad3c25c', answer: A}
+  g12-mathematics-3-2-q008: {hash: '4d0e1e394f68c643e493fdd0b118f2c6893e8fbf97de0b82630244d72adb31ad', answer: true}
+  g12-mathematics-3-2-q009: {hash: '7207ffed8521bc807f31b2242f1758c6c464dd15f0e04410e405336d914f94ed', answer: 18}
+  g12-mathematics-3-2-q010: {hash: 'e166ec85c18177a11411e0fc8d69c76287c6c5dad53e2f020faf1416c5d6919b', answer: 6}
+  g12-mathematics-3-2-q011: {hash: '83d188c28cc6ba1af9ce9ef4d0dd53ea165a3e9ec2c8887a7e5715543cef4429', answer: B}
+  g12-mathematics-3-2-q012: {hash: 'fae566494a7fd89802cdca3d54e6e4a59012ad6d087c441db5a8e3c656857527', answer: C}
+  g12-mathematics-3-2-q013: {hash: '90dd3603ad826dc64ff268fa52b52184ceefeeff7b8e8dd9684abb7679ccfd19', answer: false}
+  g12-mathematics-3-2-q014: {hash: 'd48df5db19eb14fd0e686df0bfb895df0cb0e985ba888fedd378de5c9ed0deee', answer: [A, B, D]}
+  g12-mathematics-3-2-q015: {hash: 'b66e0aea9d1c1c693d00b0dee2b9d727bb984c6744084e7cfd1c00dbfadcd8d5', answer: 'standard deviation'}
+  g12-mathematics-3-2-q016: {hash: 'c9204739f1baef3788194ecf9bc2fca02fb7510d3b931079b9486be8e92826bb', answer: D}
+  g12-mathematics-3-2-q017: {hash: '5f1d9e6c30a992d4f8ba665ad2d2b53e44dfe08d4dd1f4e7528034a340fd7515', answer: A}
+  g12-mathematics-3-2-q018: {hash: '4489a3ece6a2d740f889884bc9823e46d2c4abefa317f9697e70112129627fa6', answer: 9}
+  g12-mathematics-3-2-q019: {hash: '26c5669d5f408dfdd57d8bb01264fb5db5cb79400197565e470736977632e3be', answer: B}
+  g12-mathematics-3-2-q020: {hash: '5df62c9b1a98d749e517d6fafaf391dc7db565dbf4a958edfc599d1f38ed0d76', answer: C}
+  g12-mathematics-3-2-q021: {hash: '07b130317bad0c2a1baeefd096346e3860e2180b668a9bfbceefd937f281266c', answer: D}
+  g12-mathematics-3-2-q022: {hash: 'b8502b2e2c6eea626ee34b10fcdd5109771581851ccfc573ffe629c4f3ed2030', answer: {L1: R4, L2: R1, L3: R3}}
+  g12-mathematics-3-2-q023: {hash: 'b2800ba384dda18f7219ead2da9dfe96edcc479c19a8c03e68cc925d1b44ab15', answer: [C, B, A, D]}
+  g12-mathematics-3-2-q024: {hash: '6cbf5910d65488424175c2e382a5d4fcc44a130a8c282c6c71ff17f2b4680fd0', answer: A}
+  g12-mathematics-3-2-q025: {hash: '56385d9de2ef00bb18f7014f067ff33233c9af36326aa83fabe947874ddd62b4', answer: B}
+  g12-mathematics-3-2-q026: {hash: '56ba404997dfcfe0a983fddd78461f7aeea4dfb3c195fa03275c49cec5907153', answer: true, note: 'Not true for every data set: with the chapter''s own "median of the upper half" method, for n = 2, 3, 4 or 5 the upper half contains the largest value, so Q3 and the IQR change (e.g. 1, 2, 3, 4, 5: Q3 = 4.5; change 5 to 100 and Q3 = 52). Intended answer is true; suggest "In a large data set, ..." or give a specific data set.'}
+  g12-mathematics-3-2-q027: {hash: 'fda3c71bbbc2de2ce67c4b6860b499b78dbfa154d8edbe0459320d1681b3d4be', answer: C}
+  g12-mathematics-3-2-q028: {hash: 'b3d87d3f4c22c26a48efdd79937df321a18be7d7a94b16bc705e5480c6a66b5f', answer: D}
+  g12-mathematics-3-2-q029: {hash: '3e0e9341ba26edb5521aa7c6b2ef2f519e0e96dec74b8e5cd6b8610e00151e49', answer: A}
+  g12-mathematics-3-2-q030: {hash: 'ad1514f2ee063b8b2655e54c1a5d56113347fa7e13e3b972a3738a309588d242', answer: B}

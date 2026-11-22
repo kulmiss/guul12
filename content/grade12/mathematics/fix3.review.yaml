@@ -1,0 +1,5 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-3-1-q016: {hash: '986e16f027b1b6a367a10ad36ebfc9762dcd24e0e4f9f9fb2a45570a8ae0a571', answer: C}
+  g12-mathematics-3-1-q026: {hash: '533b645054aef39140ae83b373bb154fd8b43dc32f8257d5bb745b680deea7b0', answer: true}
+  g12-mathematics-3-2-q026: {hash: '387da1183c603250e005dbd2d05f592f68e6f1a1f16fddea7a8459a98a4dcccd', answer: true}

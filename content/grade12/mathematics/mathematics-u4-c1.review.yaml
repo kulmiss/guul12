@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-4-1-q001: {hash: '6e1816052b0960f9964f179ae24abc90167cfd428bc454be21382c96f89448fe', answer: C}
+  g12-mathematics-4-1-q002: {hash: '73367db91174ec244e55dff2b1974a0a3b98c855c76e1d2ff863d3c1fd84dbbf', answer: A}
+  g12-mathematics-4-1-q003: {hash: 'b38008e6bdbc630feb5a854002709713014def0b887bfc5e5160c328abb6e1ea', answer: B}
+  g12-mathematics-4-1-q004: {hash: '97ac8974a0a56de1fcfd0b660e5f14bea404911570b4d6eb199aaea2a8c6bcd2', answer: true}
+  g12-mathematics-4-1-q005: {hash: 'd0f6e02f0fa5d26b10e35bbe4c30cc4ca579788927676e83414a3c2863f5bfc2', answer: D}
+  g12-mathematics-4-1-q006: {hash: '089a82f175a78bac96f7bfae13573ea60dbea0dd9cc65fe48a68a55307f15d7a', answer: 8}
+  g12-mathematics-4-1-q007: {hash: '48be3a3b02704b03e3fa60ff16d0d916b63aff79ebb3eeaca1b36498ae6c3015', answer: A}
+  g12-mathematics-4-1-q008: {hash: '193396e62d91591e72e96a9d1d646bdbe19c7832214a11e18b0b93aedd740de3', answer: C}
+  g12-mathematics-4-1-q009: {hash: 'd64c6fc71f73a205ecf95b11b72c541b96a5764aba150bbc9ae8717130c594e8', answer: B}
+  g12-mathematics-4-1-q010: {hash: '22700aaed277996a5e6db63f130a990cd451c7b1f2be67247abd6acac7e71f84', answer: D}
+  g12-mathematics-4-1-q011: {hash: '92c7075892e1b3de6bfd84217c48263c729a5287b6841c730b537b75589e4edc', answer: A}
+  g12-mathematics-4-1-q012: {hash: 'e473e4c64d3c8a5739a2747f55223bd3bfdcfe980733b985e16926aaaf9cbd7a', answer: C}
+  g12-mathematics-4-1-q013: {hash: '6e13711df4c11405e3c8d33e701cccc451c771f533e0c1c75dd724c47557659d', answer: [A, B]}
+  g12-mathematics-4-1-q014: {hash: 'd9e1f75b0f919451bc7073056e5eaa105453a71bae93014bf01ea42f48c562d4', answer: 'feasible'}
+  g12-mathematics-4-1-q015: {hash: '89886059c7495d4c13e945d331b0d2de59505ca96295d4f2a33903ac1ec1aa3f', answer: [A, B, C, D]}
+  g12-mathematics-4-1-q016: {hash: '6cd205210e41fb40a7b12ee0ece7b809ea924afeb7e1c2422db237bea2e65c1f', answer: 8}
+  g12-mathematics-4-1-q017: {hash: 'c1984d06f4340c1380fbcdbf655b76f0ba88ab27f7f9623525e77e25630cd4c2', answer: false}
+  g12-mathematics-4-1-q018: {hash: 'b6c2ef7b67880ea4803a2b2888219d651f0d7a2691767a8cc295b6d0b3c59d07', answer: B}
+  g12-mathematics-4-1-q019: {hash: '5887f8d9bd2232e5c6b51d483a3c95b7d52979203310f781a8b4d6c9e6d32545', answer: D}
+  g12-mathematics-4-1-q020: {hash: '0846ef86814a7b458ad363b1b897e9763c1534110879a4e7cfe4c2359e1d3c06', answer: 3}
+  g12-mathematics-4-1-q021: {hash: '7918f2a8212515bb22fb62ac2bc1d5ea3d3f67517217043d96d32b96ce3d157f', answer: A}
+  g12-mathematics-4-1-q022: {hash: '3b19c0b152e8dbd6234002238cf827615b06a9dcc3bb6b67baf6fda375a7e003', answer: {L1: R3, L2: R1, L3: R4}}
+  g12-mathematics-4-1-q023: {hash: '9850a0a2768fd0f9586e7015b236fc0e6a25a7523d4bea06a7d30e55ca8b7267', answer: C}
+  g12-mathematics-4-1-q024: {hash: '2f69eaec9d02f3ee387bb6fbdca3196557f7e9f025e68f3b29fdd7526de95423', answer: B}
+  g12-mathematics-4-1-q025: {hash: '130d08e0e70c503a925369d0109492e1844f074af4023ce43bc475c9e0a2a96b', answer: D}
+  g12-mathematics-4-1-q026: {hash: '8d46b72f3cb60b268e993cd8f6bb3973327bccc3c43634f62ab55c53c8fa9f17', answer: true}
+  g12-mathematics-4-1-q027: {hash: 'e0bcb3ea812f8fbca7906d2eae62a9ddbe51ee9d8155fda7762cd2059522b309', answer: A}
+  g12-mathematics-4-1-q028: {hash: 'e58bc5b2d7e27af98123ee24ae3cfc512a3386d1e6c7fbe8b92064bebce8e237', answer: C}
+  g12-mathematics-4-1-q029: {hash: 'b25f860a1caf107824b2c9405e4ccd4d128689a8c10411667022f0088a3cd3ba', answer: B}
+  g12-mathematics-4-1-q030: {hash: 'f0dc0d01cd93eb092d4fa0d017fcd8b228ab22ee0c12090d04a5cdec63e4c370', answer: D}

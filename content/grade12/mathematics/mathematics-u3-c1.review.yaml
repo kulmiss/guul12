@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-3-1-q001: {hash: '9f13e474141eb194419a51348f7ed548470833a4e2da37b7e38d66744643c109', answer: A}
+  g12-mathematics-3-1-q002: {hash: '73e4cfbed0c88ef1f228bf89756dafd47b1bcb5994802e9159888e0b757bc519', answer: B}
+  g12-mathematics-3-1-q003: {hash: '14e3a7cbde6f9d9423b7901a9cd914b42fc8aac27768890ce27c20fda3749beb', answer: C}
+  g12-mathematics-3-1-q004: {hash: '103b9fe9865fc9a91de132a154c8ae115ce49e0bc37ef48dbb5516e389a5d66e', answer: D}
+  g12-mathematics-3-1-q005: {hash: 'cbfda20c26d00742ece973aca8a8447a8ddbbebc4e9dcced3d5b8cf6b8475fc2', answer: A}
+  g12-mathematics-3-1-q006: {hash: '9d6e7d9bfa73b13b430b0732c8b505934621b7b2ee94eac3754d646e57bcf4df', answer: false}
+  g12-mathematics-3-1-q007: {hash: '44dc79ab7100f6f73e216353241d3b1a6cb555d07ea168d8519603a530238e26', answer: B}
+  g12-mathematics-3-1-q008: {hash: '9c80a79a1156cd922bf57520b8c7f6b2b38018014276e1c19b4b88a659e3036e', answer: C}
+  g12-mathematics-3-1-q009: {hash: '55f43a22f3c55c57e1f9cb8bff7efc35e8095c89d6e34468a75518a95a619232', answer: 90}
+  g12-mathematics-3-1-q010: {hash: 'e1884866bef6dc7785990443a71a427f0f662ddf1ca88c66bbb7f31587315e49', answer: 11}
+  g12-mathematics-3-1-q011: {hash: '93064b0d76eb43895282cee4f804bfb8647c8e85e753231896a5b00d2671e524', answer: D}
+  g12-mathematics-3-1-q012: {hash: '14cd8ae5d5c2866f5492e635cdd3e571b2ffefe847dbf07104e6a62918fe063b', answer: A}
+  g12-mathematics-3-1-q013: {hash: 'd9e2a981e6da03bf07e2a73efb43507045bcd0241c5647c553207b0e3bb91b77', answer: B}
+  g12-mathematics-3-1-q014: {hash: '59f567b426c3f0688c965ed585906c67e1f47a2ca40a26b863dbe59ded24d157', answer: [A, C]}
+  g12-mathematics-3-1-q015: {hash: '58981e954a5cc7fd6b845a9f2d74690675aa17f4ef36f2012966e7829c24b5cc', answer: 'population'}
+  g12-mathematics-3-1-q016: {hash: 'b6604f0614aea8f0c9611a6d7f57371c2cc152eda8021010afbbc74102299e94', answer: C, note: 'No key is given for the plot; 41, 43, 48 assumes the usual stem = tens digit. Consider adding "Key: 4 | 1 means 41" to the stem.'}
+  g12-mathematics-3-1-q017: {hash: '6dbb9881eb221879633a1ca209e82989ff9c24f5581c91544e01aa20493fb0fd', answer: true}
+  g12-mathematics-3-1-q018: {hash: '032931a5a792b195377acbf6c68c696ed0372207dbf111b07c22b589820f4507', answer: 10}
+  g12-mathematics-3-1-q019: {hash: 'de2e59c9337631b8d5116d0a576cad023e076535392391fe53fda749626d0409', answer: D}
+  g12-mathematics-3-1-q020: {hash: '538e785484bdca9f649e9a7d9c15207deba5a431d047afd20c9135b84de297dc', answer: 10}
+  g12-mathematics-3-1-q021: {hash: '859cdb5af2e05a6a227ad3ecc578e15aa3eb041675e9770121cbaf2298510564', answer: A}
+  g12-mathematics-3-1-q022: {hash: 'e95bc2ffb6076a61649bfc4e24c1f1cac7342cc3598a4873c7d80594ec77dcb6', answer: {L1: R2, L2: R4, L3: R1}}
+  g12-mathematics-3-1-q023: {hash: '33d8e1f0ac3192ce1b3892fe794872fcffe286e1b201a5cbcb7068b5b7157b78', answer: [A, B, C, D]}
+  g12-mathematics-3-1-q024: {hash: '7d77988d7dd72868dc588b30ce767bf4e839b588c0611388c616ba8eebf05fa6', answer: B}
+  g12-mathematics-3-1-q025: {hash: '0e358f849c8a0e5a0545d8f9ef432856862f91288d6b08cbd80130e36be162df', answer: C}
+  g12-mathematics-3-1-q026: {hash: 'b320c39938ecf616772d32c8577e4fa1778aeb0d6e3aeb21a6575daff1fc95c0', answer: true, note: 'Overstated wording: stratified sampling guarantees representation only of the strata chosen by the researcher, not of "every subgroup" of the population. Suggest "every stratum (chosen subgroup)".'}
+  g12-mathematics-3-1-q027: {hash: '557efa3e8b644def3f1f3022f124ffb7f089254182166af5816e5c5aef0c03d2', answer: D}
+  g12-mathematics-3-1-q028: {hash: '3bfa997194813e8f30141cf597a8b3710f4ab20427de63e7e766da713febfe60', answer: A}
+  g12-mathematics-3-1-q029: {hash: '378f33898c1f045cc7d9f13e878df265c664a9d609670c3692eb2d89f6a8d03e', answer: B}
+  g12-mathematics-3-1-q030: {hash: '462c8599b4d25c38d057665ae8c06234d77526591a468b88963758ebcb9521ef', answer: C}

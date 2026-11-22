@@ -1,0 +1,383 @@
+summary:
+  key_points:
+    - 'A percent is a number out of 100: $p\%$ of $A$ is $\frac{p}{100} \times A$.'
+    - 'Percent change $= \frac{\text{new} - \text{old}}{\text{old}} \times 100\%$. An increase of $p\%$ multiplies by $1 + \frac{p}{100}$; a decrease multiplies by $1 - \frac{p}{100}$.'
+    - 'Successive percent changes multiply: a 20% rise then a 20% fall gives $1.2 \times 0.8 = 0.96$, a 4% loss overall.'
+    - 'Simple interest is paid only on the principal: $I = Prt$. Compound interest is paid on the principal plus earlier interest: $A = P(1 + i)^n$.'
+    - 'If a yearly rate $r$ is compounded $m$ times a year, use $i = \frac{r}{m}$ per period and $n = m \times$ (years) periods.'
+    - 'Time value of money: money now is worth more than the same amount later, because it can earn interest. The present value of $A$ due in $n$ periods is $\frac{A}{(1 + i)^n}$.'
+    - 'Prices that include VAT at 15%: price with VAT $= 1.15 \times$ price before VAT.'
+  formulas:
+    - label: Simple interest
+      latex: 'I = Prt, \quad A = P(1 + rt)'
+    - label: Compound amount
+      latex: 'A = P(1 + i)^n'
+    - label: Present value
+      latex: 'PV = \frac{A}{(1 + i)^n}'
+    - label: Effective annual rate
+      latex: 'r_{\text{eff}} = \left(1 + \frac{r}{m}\right)^m - 1'
+    - label: Percent change
+      latex: '\frac{\text{new} - \text{old}}{\text{old}} \times 100\%'
+
+solved_exercises:
+  - uid: g12-mathematics-5-1-se01
+    problem: 'Find the compound amount of 5 000 birr at 8% per year compounded twice a year for 1 year.'
+    steps:
+      - 'Rate per half-year: $i = \frac{8\%}{2} = 4\% = 0.04$; number of periods $n = 2$.'
+      - '$A = 5000 \times 1.04^2 = 5000 \times 1.0816$.'
+      - '$A = 5408$ birr.'
+    answer: '5 408 birr'
+  - uid: g12-mathematics-5-1-se02
+    problem: 'A phone costs 6 900 birr including 15% VAT. What was the price before VAT, and how much is the VAT?'
+    steps:
+      - 'Price with VAT $= 1.15 \times$ price before VAT, so price before VAT $= \frac{6900}{1.15}$.'
+      - '$\frac{6900}{1.15} = 6000$ birr.'
+      - 'VAT $= 6900 - 6000 = 900$ birr.'
+    answer: '6 000 birr before VAT; VAT is 900 birr.'
+  - uid: g12-mathematics-5-1-se03
+    problem: 'How much should be deposited now at 10% compound interest per year to have 24 200 birr in 2 years?'
+    steps:
+      - '$PV = \frac{24\,200}{1.1^2} = \frac{24\,200}{1.21}$.'
+      - '$\frac{24\,200}{1.21} = 20\,000$.'
+    answer: '20 000 birr'
+
+flashcards:
+  - {uid: g12-mathematics-5-1-fc01, term: Principal, definition: 'The original amount of money saved or borrowed.'}
+  - {uid: g12-mathematics-5-1-fc02, term: Simple interest, definition: 'Interest on the principal only: $I = Prt$.'}
+  - {uid: g12-mathematics-5-1-fc03, term: Compound interest, definition: 'Interest is added to the balance, so later interest is paid on earlier interest.'}
+  - {uid: g12-mathematics-5-1-fc04, term: Compounding period, definition: 'How often interest is added: yearly, half-yearly, monthly…'}
+  - {uid: g12-mathematics-5-1-fc05, term: Present value, definition: 'What a future amount is worth today: $\frac{A}{(1+i)^n}$.'}
+  - {uid: g12-mathematics-5-1-fc06, term: Future value, definition: 'What money today will grow to: $P(1+i)^n$.'}
+  - {uid: g12-mathematics-5-1-fc07, term: Effective annual rate, definition: 'The yearly rate that gives the same growth as the compounded rate.'}
+  - {uid: g12-mathematics-5-1-fc08, term: Time value of money, definition: 'Money now is worth more than the same amount later because it can earn interest.'}
+  - {uid: g12-mathematics-5-1-fc09, term: Value added tax (VAT), definition: 'A tax added to the price of goods and services; in Ethiopia the standard rate is 15%.'}
+
+questions:
+  - uid: g12-mathematics-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is 15% of 600 birr?'
+    options:
+      A: '60 birr'
+      B: '90 birr'
+      C: '150 birr'
+      D: '40 birr'
+    answer: B
+    explanation: '$\frac{15}{100} \times 600 = 90$ birr.'
+
+  - uid: g12-mathematics-5-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'The price of a bag rises from 200 birr to 250 birr. What is the percent increase?'
+    options:
+      A: '50%'
+      B: '20%'
+      C: '5%'
+      D: '25%'
+    answer: D
+    explanation: '$\frac{250 - 200}{200} \times 100\% = \frac{50}{200} \times 100\% = 25\%$.'
+
+  - uid: g12-mathematics-5-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'A shirt costs 400 birr. It is sold at a 20% discount. What is the new price?'
+    options:
+      A: '320 birr'
+      B: '380 birr'
+      C: '80 birr'
+      D: '480 birr'
+    answer: A
+    explanation: 'A 20% discount leaves 80%: $0.8 \times 400 = 320$ birr.'
+
+  - uid: g12-mathematics-5-1-q004
+    type: numeric
+    difficulty: 1
+    stem: 'What is the simple interest, in birr, on 8 000 birr at 6% per year for 2 years?'
+    answer: {value: 960, tolerance: 0, unit: birr}
+    explanation: '$I = Prt = 8000 \times 0.06 \times 2 = 960$ birr.'
+
+  - uid: g12-mathematics-5-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: '10 000 birr is saved at 10% compound interest per year. What is the amount after 3 years?'
+    options:
+      A: '13 000 birr'
+      B: '12 100 birr'
+      C: '13 310 birr'
+      D: '13 100 birr'
+    answer: C
+    explanation: '$10\,000 \times 1.1^3 = 10\,000 \times 1.331 = 13\,310$ birr.'
+
+  - uid: g12-mathematics-5-1-q006
+    type: true_false
+    difficulty: 1
+    stem: 'With compound interest, the interest earned in earlier periods also earns interest.'
+    answer: true
+    explanation: 'Interest is added to the balance, so the next interest is calculated on a larger amount.'
+
+  - uid: g12-mathematics-5-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'What does 4 000 birr grow to in 2 years at 5% per year compounded yearly?'
+    options:
+      A: '4 400 birr'
+      B: '4 410 birr'
+      C: '4 200 birr'
+      D: '4 420 birr'
+    answer: B
+    explanation: '$4000 \times 1.05^2 = 4000 \times 1.1025 = 4410$ birr.'
+
+  - uid: g12-mathematics-5-1-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'Which formula gives the amount $A$ after $n$ periods when $P$ earns compound interest at rate $i$ per period?'
+    options:
+      A: '$A = P(1 + i)^n$'
+      B: '$A = P(1 + in)$'
+      C: '$A = P + i^n$'
+      D: '$A = Pin$'
+    answer: A
+    explanation: 'Each period multiplies the balance by $1 + i$, so after $n$ periods $A = P(1 + i)^n$. B is simple interest.'
+
+  - uid: g12-mathematics-5-1-q009
+    type: numeric
+    difficulty: 2
+    stem: 'How much, in birr, must be invested now at 10% compound interest per year to have 12 100 birr after 2 years?'
+    answer: {value: 10000, tolerance: 0, unit: birr}
+    explanation: '$PV = \frac{12\,100}{1.1^2} = \frac{12\,100}{1.21} = 10\,000$ birr.'
+
+  - uid: g12-mathematics-5-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'A bank pays 8% per year compounded twice a year. For a 3-year deposit, what are the rate per period and the number of periods?'
+    options:
+      A: '8% and 3 periods'
+      B: '8% and 6 periods'
+      C: '4% and 3 periods'
+      D: '4% and 6 periods'
+    answer: D
+    explanation: 'Twice a year: rate per period $\frac{8\%}{2} = 4\%$, and $2 \times 3 = 6$ periods.'
+
+  - uid: g12-mathematics-5-1-q011
+    type: single_choice
+    difficulty: 3
+    stem: 'What is the effective annual rate of 10% per year compounded twice a year?'
+    options:
+      A: '10%'
+      B: '20%'
+      C: '10.25%'
+      D: '5%'
+    answer: C
+    explanation: '$(1 + 0.05)^2 - 1 = 1.1025 - 1 = 0.1025 = 10.25\%$.'
+
+  - uid: g12-mathematics-5-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Two brothers share 1 200 birr in the ratio 2 : 3. How much does the smaller share get?'
+    options:
+      A: '480 birr'
+      B: '400 birr'
+      C: '720 birr'
+      D: '600 birr'
+    answer: A
+    explanation: 'There are $2 + 3 = 5$ parts, so one part is 240 birr. The smaller share is $2 \times 240 = 480$ birr.'
+
+  - uid: g12-mathematics-5-1-q013
+    type: numeric
+    difficulty: 2
+    stem: 'An item costs 1 150 birr including 15% VAT. What was its price, in birr, before VAT?'
+    answer: {value: 1000, tolerance: 0, unit: birr}
+    explanation: 'Price with VAT $= 1.15 \times$ price before VAT, so the price before VAT is $\frac{1150}{1.15} = 1000$ birr.'
+
+  - uid: g12-mathematics-5-1-q014
+    type: multiple_answers
+    difficulty: 3
+    stem: '1 000 birr is saved for 2 years. Which choices give MORE than 1 200 birr (the result of 10% simple interest)? Choose all that apply.'
+    options:
+      A: '10% per year compounded yearly'
+      B: '9% per year simple interest'
+      C: '10% per year compounded twice a year'
+      D: '12% per year simple interest'
+    answer: [A, C, D]
+    explanation: 'A: $1000 \times 1.1^2 = 1210$. B: $1000 + 180 = 1180$. C: $1000 \times 1.05^4 \approx 1215.51$. D: $1000 + 240 = 1240$. A, C and D are above 1 200.'
+
+  - uid: g12-mathematics-5-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'What a future amount of money is worth today is called its ________ value.'
+    answer: [present]
+    explanation: 'Present value $= \frac{A}{(1 + i)^n}$.'
+
+  - uid: g12-mathematics-5-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'A trader buys a radio for 800 birr and sells it for 1 000 birr. What is her profit as a percent of the cost?'
+    options:
+      A: '20%'
+      B: '25%'
+      C: '200%'
+      D: '80%'
+    answer: B
+    explanation: 'Profit $= 200$ birr; $\frac{200}{800} \times 100\% = 25\%$.'
+
+  - uid: g12-mathematics-5-1-q017
+    type: single_choice
+    difficulty: 1
+    stem: 'Why is 1 000 birr today worth more than 1 000 birr one year from now?'
+    options:
+      A: 'Because banks charge fees.'
+      B: 'Because money loses all its value in a year.'
+      C: 'Because money today can be invested and earn interest.'
+      D: 'It is not; they are worth the same.'
+    answer: C
+    explanation: 'This is the time value of money: money available now can grow by earning interest.'
+
+  - uid: g12-mathematics-5-1-q018
+    type: numeric
+    difficulty: 2
+    stem: 'At 10% simple interest per year, how many years does it take for money to double?'
+    answer: {value: 10, tolerance: 0, unit: years}
+    explanation: 'To double, the interest must equal the principal: $P \times 0.1 \times t = P$, so $t = 10$ years.'
+
+  - uid: g12-mathematics-5-1-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Prices rise by 10% in a year. An item cost 50 birr at the start of the year. What does it cost at the end?'
+    options:
+      A: '60 birr'
+      B: '50.10 birr'
+      C: '45 birr'
+      D: '55 birr'
+    answer: D
+    explanation: '$50 \times 1.10 = 55$ birr.'
+
+  - uid: g12-mathematics-5-1-q020
+    type: single_choice
+    difficulty: 1
+    stem: 'A loan charges 12% per year compounded monthly. What is the interest rate per month?'
+    options:
+      A: '1%'
+      B: '12%'
+      C: '0.12%'
+      D: '144%'
+    answer: A
+    explanation: '$\frac{12\%}{12} = 1\%$ per month.'
+
+  - uid: g12-mathematics-5-1-q021
+    type: single_choice
+    difficulty: 1
+    stem: 'Suppose 1 US dollar is worth 50 birr. How many birr do you get for 200 US dollars?'
+    options:
+      A: '4 birr'
+      B: '250 birr'
+      C: '10 000 birr'
+      D: '1 000 birr'
+    answer: C
+    explanation: '$200 \times 50 = 10\,000$ birr.'
+
+  - uid: g12-mathematics-5-1-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each quantity with its formula.'
+    left:
+      L1: 'Simple interest'
+      L2: 'Compound amount'
+      L3: 'Percent change'
+    right:
+      R1: '$P(1 + i)^n$'
+      R2: '$\frac{\text{new} - \text{old}}{\text{old}} \times 100\%$'
+      R3: '$Prt$'
+      R4: '$\frac{\text{old}}{\text{new}} \times 100\%$'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Simple interest is $Prt$; compound amount is $P(1 + i)^n$; percent change divides the change by the old value.'
+
+  - uid: g12-mathematics-5-1-q023
+    type: ordering
+    difficulty: 3
+    stem: '1 000 birr is saved for 2 years. Put these options in order of the final amount, from smallest to largest.'
+    items:
+      A: '10% simple interest per year'
+      B: '10% compound interest per year'
+      C: '8% simple interest per year'
+      D: '12% compound interest per year'
+    answer: [C, A, B, D]
+    explanation: 'C: 1 160. A: 1 200. B: $1000 \times 1.21 = 1210$. D: $1000 \times 1.2544 = 1254.40$.'
+
+  - uid: g12-mathematics-5-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'A 1 000-birr jacket is discounted by 25%, and then the new price is discounted by another 10%. What is the final price?'
+    options:
+      A: '650 birr'
+      B: '675 birr'
+      C: '700 birr'
+      D: '750 birr'
+    answer: B
+    explanation: '$1000 \times 0.75 = 750$, then $750 \times 0.9 = 675$ birr. The discounts multiply; they do not simply add to 35%.'
+
+  - uid: g12-mathematics-5-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'A price rises by 10% and then by another 10%. What is the total percent increase?'
+    options:
+      A: '20%'
+      B: '11%'
+      C: '100%'
+      D: '21%'
+    answer: D
+    explanation: '$1.1 \times 1.1 = 1.21$, a 21% increase in total.'
+
+  - uid: g12-mathematics-5-1-q026
+    type: true_false
+    difficulty: 2
+    stem: 'If a price rises by 20% and then falls by 20%, it returns to the original price.'
+    answer: false
+    explanation: '$1.2 \times 0.8 = 0.96$, so the final price is 4% below the original.'
+
+  - uid: g12-mathematics-5-1-q027
+    type: single_choice
+    difficulty: 1
+    stem: 'A salesperson earns 5% commission on sales. She sells goods worth 40 000 birr. What is her commission?'
+    options:
+      A: '2 000 birr'
+      B: '200 birr'
+      C: '8 000 birr'
+      D: '20 000 birr'
+    answer: A
+    explanation: '$0.05 \times 40\,000 = 2000$ birr.'
+
+  - uid: g12-mathematics-5-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the simple interest on a loan of 5 000 birr at 10% per year for 6 months?'
+    options:
+      A: '500 birr'
+      B: '3 000 birr'
+      C: '250 birr'
+      D: '50 birr'
+    answer: C
+    explanation: 'Six months is $\frac{1}{2}$ year: $5000 \times 0.10 \times \frac{1}{2} = 250$ birr.'
+
+  - uid: g12-mathematics-5-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: '1 000 birr is saved for 2 years at 6% per year. How much more does compound interest (yearly) give than simple interest?'
+    options:
+      A: '0 birr'
+      B: '6 birr'
+      C: '36 birr'
+      D: '3.60 birr'
+    answer: D
+    explanation: 'Compound: $1000 \times 1.06^2 = 1123.60$. Simple: $1000 + 120 = 1120$. The difference is 3.60 birr (interest on the first year''s interest: $60 \times 0.06$).'
+
+  - uid: g12-mathematics-5-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: '10 000 birr earns 10% compound interest per year. How much interest is earned in the second year alone?'
+    options:
+      A: '1 000 birr'
+      B: '1 100 birr'
+      C: '2 100 birr'
+      D: '1 210 birr'
+    answer: B
+    explanation: 'After year 1 the balance is 11 000 birr. Interest in year 2 is $0.1 \times 11\,000 = 1100$ birr.'

@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-2-3-q020: {hash: '4bacb9f06a74b041edeebbc13b517013ff22ba3a02f1ae1a71ae1a4ef5f3808f', answer: 'critical'}
+  g12-mathematics-2-4-q026: {hash: '62e09904fd1d76100c6a6a8a2d3e9334d13d6e729d09a18a0fe3a34e329af0de', answer: true}

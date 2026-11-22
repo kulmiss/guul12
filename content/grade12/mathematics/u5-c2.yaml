@@ -1,0 +1,386 @@
+summary:
+  key_points:
+    - 'An annuity is a series of equal payments at equal time intervals, such as monthly savings or loan repayments.'
+    - 'The future value of payments $R$ at the end of each of $n$ periods at rate $i$ is $R\frac{(1+i)^n - 1}{i}$; each payment earns interest for a different number of periods.'
+    - 'Buying on credit (instalments) usually costs more than paying cash; compare the total paid with the cash price.'
+    - 'Investing in shares can give dividends (a share of the profit) and a capital gain or loss when the share is sold.'
+    - 'Direct taxes are paid on income or profit (income tax). Indirect taxes are added to prices (VAT, excise tax, customs duty) and are paid by consumers.'
+    - 'A progressive income tax charges higher rates on higher income bands. Tax for each band is the rate times the part of income in that band.'
+    - 'Net pay = gross pay − deductions (income tax, pension contribution, other deductions).'
+    - 'Break-even: total revenue equals total cost. Number of units $= \frac{\text{fixed cost}}{\text{price} - \text{variable cost per unit}}$.'
+  formulas:
+    - label: Future value of an ordinary annuity
+      latex: 'FV = R\,\frac{(1+i)^n - 1}{i}'
+    - label: Present value of an ordinary annuity
+      latex: 'PV = R\,\frac{1 - (1+i)^{-n}}{i}'
+    - label: Straight-line depreciation per year
+      latex: '\frac{\text{cost} - \text{salvage value}}{\text{useful life}}'
+    - label: Break-even quantity
+      latex: 'q = \frac{F}{p - v}'
+    - label: Rate of return
+      latex: '\frac{\text{gain} + \text{income}}{\text{cost}} \times 100\%'
+
+solved_exercises:
+  - uid: g12-mathematics-5-2-se01
+    problem: 'Hamza deposits 2 000 birr at the end of each year for 3 years at 10% compound interest per year. How much does he have just after the third deposit?'
+    steps:
+      - 'The first deposit earns interest for 2 years: $2000 \times 1.1^2 = 2420$.'
+      - 'The second earns for 1 year: $2000 \times 1.1 = 2200$. The third earns nothing yet: 2000.'
+      - 'Total: $2420 + 2200 + 2000 = 6620$ birr. (Formula: $2000 \times \frac{1.1^3 - 1}{0.1} = 2000 \times 3.31 = 6620$.)'
+    answer: '6 620 birr'
+  - uid: g12-mathematics-5-2-se02
+    problem: 'Suppose income tax is 0% on the first 2 000 birr of monthly income, 10% on the next 3 000 birr and 20% on anything above 5 000 birr. Find the tax on 8 000 birr.'
+    steps:
+      - 'First 2 000 birr: 0.'
+      - 'Next 3 000 birr: $0.10 \times 3000 = 300$.'
+      - 'Above 5 000: $8000 - 5000 = 3000$ birr at 20% is 600.'
+      - 'Total tax: $0 + 300 + 600 = 900$ birr.'
+    answer: '900 birr'
+  - uid: g12-mathematics-5-2-se03
+    problem: 'A juice stand has fixed costs of 4 000 birr per month. Each cup sells for 25 birr and costs 15 birr to make. How many cups must it sell to break even?'
+    steps:
+      - 'Each cup contributes $25 - 15 = 10$ birr towards the fixed costs.'
+      - '$\frac{4000}{10} = 400$ cups.'
+    answer: '400 cups'
+
+flashcards:
+  - {uid: g12-mathematics-5-2-fc01, term: Annuity, definition: 'Equal payments made at equal time intervals.'}
+  - {uid: g12-mathematics-5-2-fc02, term: Instalment, definition: 'One of several regular payments made to pay for goods or repay a loan.'}
+  - {uid: g12-mathematics-5-2-fc03, term: Collateral, definition: 'Property a borrower pledges to the lender in case the loan is not repaid.'}
+  - {uid: g12-mathematics-5-2-fc04, term: Dividend, definition: 'Part of a company''s profit paid to its shareholders.'}
+  - {uid: g12-mathematics-5-2-fc05, term: Direct tax, definition: 'A tax on income or profit paid by the person who earns it, such as income tax.'}
+  - {uid: g12-mathematics-5-2-fc06, term: Indirect tax, definition: 'A tax added to the price of goods or services, such as VAT.'}
+  - {uid: g12-mathematics-5-2-fc07, term: Progressive tax, definition: 'A tax whose rate rises as income rises.'}
+  - {uid: g12-mathematics-5-2-fc08, term: Net pay, definition: 'Gross pay minus deductions such as tax and pension.'}
+  - {uid: g12-mathematics-5-2-fc09, term: Break-even point, definition: 'The level of sales at which revenue equals total cost.'}
+  - {uid: g12-mathematics-5-2-fc10, term: Depreciation, definition: 'The fall in value of an asset over time.'}
+
+questions:
+  - uid: g12-mathematics-5-2-q001
+    type: single_choice
+    difficulty: 2
+    stem: 'A student deposits 1 000 birr at the end of each year for 3 years at 10% compound interest per year. How much is in the account just after the third deposit?'
+    options:
+      A: '3 000 birr'
+      B: '3 300 birr'
+      C: '3 310 birr'
+      D: '3 641 birr'
+    answer: C
+    explanation: '$1000 \times 1.1^2 + 1000 \times 1.1 + 1000 = 1210 + 1100 + 1000 = 3310$ birr.'
+
+  - uid: g12-mathematics-5-2-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which formula gives the future value of payments $R$ made at the end of each of $n$ periods at interest rate $i$ per period?'
+    options:
+      A: '$R\,\frac{(1+i)^n - 1}{i}$'
+      B: '$R(1 + i)^n$'
+      C: '$nR(1 + i)$'
+      D: '$R\,\frac{1 - (1+i)^{-n}}{i}$'
+    answer: A
+    explanation: 'The payments grow to $R(1+i)^{n-1} + \dots + R(1+i) + R$, a geometric series with sum $R\frac{(1+i)^n - 1}{i}$. D is the present value.'
+
+  - uid: g12-mathematics-5-2-q003
+    type: numeric
+    difficulty: 2
+    stem: 'A loan of 10 000 birr is charged 10% simple interest per year for 2 years. The total is repaid in 24 equal monthly payments. How much is each payment, in birr?'
+    answer: {value: 500, tolerance: 0, unit: birr}
+    explanation: 'Interest $= 10\,000 \times 0.1 \times 2 = 2000$. Total $= 12\,000$ birr. Each payment $= \frac{12\,000}{24} = 500$ birr.'
+
+  - uid: g12-mathematics-5-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'Meron owns 200 shares in a company. The company pays a dividend of 15 birr per share. How much does she receive?'
+    options:
+      A: '215 birr'
+      B: '3 000 birr'
+      C: '1 500 birr'
+      D: '300 birr'
+    answer: B
+    explanation: '$200 \times 15 = 3000$ birr.'
+
+  - uid: g12-mathematics-5-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Suppose the first 2 000 birr of monthly income is tax-free and the rest is taxed at 10%. How much tax is paid on a monthly income of 5 000 birr?'
+    options:
+      A: '500 birr'
+      B: '200 birr'
+      C: '700 birr'
+      D: '300 birr'
+    answer: D
+    explanation: 'Taxable part: $5000 - 2000 = 3000$ birr. Tax: $0.10 \times 3000 = 300$ birr.'
+
+  - uid: g12-mathematics-5-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'A progressive tax takes a larger percentage of income from people with higher incomes.'
+    answer: true
+    explanation: 'Higher income bands are taxed at higher rates, so the share of income paid as tax rises with income.'
+
+  - uid: g12-mathematics-5-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'An employee''s gross salary is 8 000 birr. Income tax is 900 birr and the pension contribution is 7% of gross salary. What is the net pay?'
+    options:
+      A: '6 540 birr'
+      B: '7 100 birr'
+      C: '6 600 birr'
+      D: '7 440 birr'
+    answer: A
+    explanation: 'Pension: $0.07 \times 8000 = 560$ birr. Net pay: $8000 - 900 - 560 = 6540$ birr.'
+
+  - uid: g12-mathematics-5-2-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'An employee earns 10 000 birr a month and contributes 7% of it to a pension fund. How much is the contribution?'
+    options:
+      A: '70 birr'
+      B: '1 000 birr'
+      C: '700 birr'
+      D: '7 000 birr'
+    answer: C
+    explanation: '$0.07 \times 10\,000 = 700$ birr.'
+
+  - uid: g12-mathematics-5-2-q009
+    type: numeric
+    difficulty: 2
+    stem: 'An investor buys a share for 100 birr, receives a 10-birr dividend, and sells the share for 130 birr. What is the total rate of return, in percent?'
+    answer: {value: 40, tolerance: 0, unit: '%'}
+    explanation: 'Gain $= 30$ birr plus dividend 10 birr $= 40$ birr. $\frac{40}{100} \times 100\% = 40\%$.'
+
+  - uid: g12-mathematics-5-2-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these is a direct tax?'
+    options:
+      A: 'Value added tax (VAT)'
+      B: 'Personal income tax'
+      C: 'Excise tax on soft drinks'
+      D: 'Customs duty on imported cars'
+    answer: B
+    explanation: 'Income tax is paid directly by the person who earns the income. The others are added to prices, so they are indirect.'
+
+  - uid: g12-mathematics-5-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'Lensa saves 500 birr every month for one year in a box at home (no interest). How much has she saved?'
+    options:
+      A: '5 000 birr'
+      B: '5 500 birr'
+      C: '6 500 birr'
+      D: '6 000 birr'
+    answer: D
+    explanation: '$12 \times 500 = 6000$ birr.'
+
+  - uid: g12-mathematics-5-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A business borrows 20 000 birr at 10% compound interest per year and repays everything in one payment after 2 years. How much does it repay?'
+    options:
+      A: '24 200 birr'
+      B: '24 000 birr'
+      C: '22 000 birr'
+      D: '22 200 birr'
+    answer: A
+    explanation: '$20\,000 \times 1.1^2 = 20\,000 \times 1.21 = 24\,200$ birr.'
+
+  - uid: g12-mathematics-5-2-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'What is true about a loan repaid by equal monthly instalments?'
+    options:
+      A: 'The first payment is the largest.'
+      B: 'No interest is charged.'
+      C: 'The borrower pays the same amount every month.'
+      D: 'Only the interest is ever repaid.'
+    answer: C
+    explanation: 'Equal instalments mean the same payment each month, covering interest and part of the principal.'
+
+  - uid: g12-mathematics-5-2-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are indirect taxes? Choose all that apply.'
+    options:
+      A: 'Value added tax (VAT)'
+      B: 'Excise tax'
+      C: 'Personal income tax'
+      D: 'Customs duty'
+    answer: [A, B, D]
+    explanation: 'VAT, excise tax and customs duty are added to the price of goods and passed on to buyers. Income tax is direct.'
+
+  - uid: g12-mathematics-5-2-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'A series of equal payments made at equal time intervals is called an ________.'
+    answer: [annuity]
+    explanation: 'Regular equal savings or loan repayments form an annuity.'
+
+  - uid: g12-mathematics-5-2-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'A television costs 15 000 birr cash. On credit, the buyer pays 3 000 birr now and 12 monthly payments of 1 200 birr. How much more does credit cost?'
+    options:
+      A: '1 200 birr'
+      B: '2 400 birr'
+      C: '3 000 birr'
+      D: '14 400 birr'
+    answer: B
+    explanation: 'Credit total: $3000 + 12 \times 1200 = 3000 + 14\,400 = 17\,400$ birr. Extra cost: $17\,400 - 15\,000 = 2400$ birr.'
+
+  - uid: g12-mathematics-5-2-q018
+    type: numeric
+    difficulty: 2
+    stem: 'A television costs 15 000 birr cash, or 17 400 birr in total on credit. The extra cost of credit is what percent of the cash price?'
+    answer: {value: 16, tolerance: 0, unit: '%'}
+    explanation: 'Extra cost: 2 400 birr. $\frac{2400}{15\,000} \times 100\% = 16\%$.'
+
+  - uid: g12-mathematics-5-2-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'A family earns 6 000 birr a month and spends 25% of it on rent. How much is the rent?'
+    options:
+      A: '600 birr'
+      B: '2 500 birr'
+      C: '1 200 birr'
+      D: '1 500 birr'
+    answer: D
+    explanation: '$0.25 \times 6000 = 1500$ birr.'
+
+  - uid: g12-mathematics-5-2-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'A machine costs 50 000 birr and will be worth 10 000 birr after 8 years. Using straight-line depreciation, how much does it lose in value each year?'
+    options:
+      A: '5 000 birr'
+      B: '6 250 birr'
+      C: '1 250 birr'
+      D: '4 000 birr'
+    answer: A
+    explanation: '$\frac{50\,000 - 10\,000}{8} = \frac{40\,000}{8} = 5000$ birr per year.'
+
+  - uid: g12-mathematics-5-2-q021
+    type: single_choice
+    difficulty: 3
+    stem: 'At 10% compound interest per year, about how much is it worth today to receive 1 000 birr at the end of each of the next 2 years?'
+    options:
+      A: '2 000 birr'
+      B: '1 818 birr'
+      C: '1 736 birr'
+      D: '2 100 birr'
+    answer: C
+    explanation: '$\frac{1000}{1.1} + \frac{1000}{1.21} \approx 909.09 + 826.45 = 1735.54$, about 1 736 birr.'
+
+  - uid: g12-mathematics-5-2-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each term with its meaning.'
+    left:
+      L1: 'VAT'
+      L2: 'Dividend'
+      L3: 'Collateral'
+    right:
+      R1: 'Property pledged to a lender to secure a loan'
+      R2: 'The original amount borrowed'
+      R3: 'A tax added to the price of goods and services'
+      R4: 'Part of a company''s profit paid to shareholders'
+    answer: {L1: R3, L2: R4, L3: R1}
+    explanation: 'VAT is an indirect tax on sales; a dividend is a profit share; collateral secures a loan. The original amount borrowed is the principal.'
+
+  - uid: g12-mathematics-5-2-q023
+    type: ordering
+    difficulty: 3
+    stem: '10 000 birr is saved for 1 year. Put these options in order of the final amount, from smallest to largest.'
+    items:
+      A: '6% per year simple interest'
+      B: '5% per year compounded twice a year'
+      C: '7% per year simple interest'
+      D: '6% per year compounded twice a year'
+    answer: [B, A, D, C]
+    explanation: 'B: $10\,000 \times 1.025^2 = 10\,506.25$. A: 10 600. D: $10\,000 \times 1.03^2 = 10\,609$. C: 10 700.'
+
+  - uid: g12-mathematics-5-2-q024
+    type: single_choice
+    difficulty: 1
+    stem: 'How much interest does 4 000 birr earn in one year at 7% per year?'
+    options:
+      A: '28 birr'
+      B: '280 birr'
+      C: '2 800 birr'
+      D: '4 280 birr'
+    answer: B
+    explanation: '$0.07 \times 4000 = 280$ birr. (4 280 birr is the balance, not the interest.)'
+
+  - uid: g12-mathematics-5-2-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Suppose income tax is 0% on the first 2 000 birr, 15% on income from 2 000 to 4 000 birr, and 20% on income above 4 000 birr. What is the tax on 5 000 birr?'
+    options:
+      A: '1 000 birr'
+      B: '750 birr'
+      C: '600 birr'
+      D: '500 birr'
+    answer: D
+    explanation: 'Band 2 000–4 000: $0.15 \times 2000 = 300$. Above 4 000: $0.20 \times 1000 = 200$. Total $= 500$ birr.'
+
+  - uid: g12-mathematics-5-2-q026
+    type: true_false
+    difficulty: 1
+    stem: 'VAT is finally paid by the consumer as part of the price of goods.'
+    answer: true
+    explanation: 'Sellers add VAT to their prices, so the buyer of the final product carries the tax.'
+
+  - uid: g12-mathematics-5-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'A small business has fixed costs of 6 000 birr. It sells each item for 50 birr, and each item costs 30 birr to make. How many items must it sell to break even?'
+    options:
+      A: '300'
+      B: '120'
+      C: '200'
+      D: '75'
+    answer: A
+    explanation: 'Each item contributes $50 - 30 = 20$ birr. $\frac{6000}{20} = 300$ items.'
+
+  - uid: g12-mathematics-5-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'A shop has revenue of 80 000 birr and total costs of 65 000 birr. What is its profit as a percent of revenue?'
+    options:
+      A: '15%'
+      B: '23%'
+      C: '18.75%'
+      D: '81.25%'
+    answer: C
+    explanation: 'Profit $= 15\,000$ birr. $\frac{15\,000}{80\,000} \times 100\% = 18.75\%$.'
+
+  - uid: g12-mathematics-5-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'Daniel borrows 6 000 birr and repays 6 900 birr after 1.5 years, with simple interest. What is the interest rate per year?'
+    options:
+      A: '15%'
+      B: '10%'
+      C: '9%'
+      D: '12%'
+    answer: B
+    explanation: 'Interest $= 900$ birr. $r = \frac{I}{Pt} = \frac{900}{6000 \times 1.5} = \frac{900}{9000} = 10\%$.'
+
+  - uid: g12-mathematics-5-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Ayana wants to buy a 7 500-birr laptop in 10 months by saving the same amount each month (no interest). How much must she save each month?'
+    options:
+      A: '700 birr'
+      B: '1 000 birr'
+      C: '75 birr'
+      D: '750 birr'
+    answer: D
+    explanation: '$\frac{7500}{10} = 750$ birr per month.'
+
+  - uid: g12-mathematics-5-2-q016
+    type: true_false
+    difficulty: 2
+    stem: 'If two savings accounts pay the same yearly interest rate, the one that compounds more often gives slightly more money by the end of the year.'
+    answer: true
+    explanation: 'More frequent compounding adds interest to the balance sooner, so interest is earned on interest more often. For example 10% compounded twice a year gives 10.25% for the year.'

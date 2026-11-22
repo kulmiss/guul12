@@ -30,29 +30,37 @@ subjects:
       file: mathematics/u2-c2.yaml
     - number: 3
       title: Applications of derivatives
+      file: mathematics/u2-c3.yaml
     - number: 4
       title: Integration and area under a curve
+      file: mathematics/u2-c4.yaml
   - number: 3
     title: Statistics
     chapters:
     - number: 1
       title: Sampling and presenting data
+      file: mathematics/u3-c1.yaml
     - number: 2
       title: Measures of location and dispersion
+      file: mathematics/u3-c2.yaml
   - number: 4
     title: Introduction to Linear Programming
     chapters:
     - number: 1
       title: Linear inequalities and their graphs
+      file: mathematics/u4-c1.yaml
     - number: 2
       title: Solving linear programming problems
+      file: mathematics/u4-c2.yaml
   - number: 5
     title: Mathematical Application in Business
     chapters:
     - number: 1
       title: Percent, interest and the time value of money
+      file: mathematics/u5-c1.yaml
     - number: 2
       title: Saving, borrowing, investment and taxation
+      file: mathematics/u5-c2.yaml
 - code: physics
   textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-Physics-STB-2023-web.pdf
   units:

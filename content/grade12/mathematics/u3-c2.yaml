@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Measures of location (centre): mean (sum divided by count), median (middle value of the ordered data) and mode (most frequent value).'
+    - 'For $n$ ordered values the median is the $\frac{n+1}{2}$th value; with an even $n$ it is the mean of the two middle values.'
+    - 'Measures of dispersion (spread): range, interquartile range ($Q_3 - Q_1$), variance and standard deviation.'
+    - 'The mean is pulled by extreme values (outliers); the median and the interquartile range are hardly affected.'
+    - 'For grouped data, use class midpoints: $\bar{x} = \frac{\sum f x}{\sum f}$. The modal class has the highest frequency.'
+    - 'Adding a constant to every value shifts the mean by that constant but does not change the spread. Multiplying every value by $k$ multiplies the mean and the standard deviation by $k$ (and the variance by $k^2$).'
+    - 'The deviations from the mean always add up to 0.'
+    - 'The coefficient of variation $\frac{\sigma}{\bar{x}} \times 100\%$ compares spread between data sets with different means.'
+  formulas:
+    - label: Mean
+      latex: '\bar{x} = \frac{\sum x}{n}'
+    - label: Mean of grouped data
+      latex: '\bar{x} = \frac{\sum f x}{\sum f}'
+    - label: Variance (population)
+      latex: '\sigma^2 = \frac{\sum (x - \bar{x})^2}{n}'
+    - label: Standard deviation
+      latex: '\sigma = \sqrt{\frac{\sum (x - \bar{x})^2}{n}}'
+    - label: Interquartile range
+      latex: 'IQR = Q_3 - Q_1'
+    - label: Coefficient of variation
+      latex: 'CV = \frac{\sigma}{\bar{x}} \times 100\%'
+
+solved_exercises:
+  - uid: g12-mathematics-3-2-se01
+    problem: 'Find the mean, median and mode of 3, 8, 5, 3, 6.'
+    steps:
+      - 'Mean: $\frac{3 + 8 + 5 + 3 + 6}{5} = \frac{25}{5} = 5$.'
+      - 'Ordered: 3, 3, 5, 6, 8. The middle (3rd) value is 5, so the median is 5.'
+      - '3 appears twice, more than any other value, so the mode is 3.'
+    answer: 'Mean 5, median 5, mode 3.'
+  - uid: g12-mathematics-3-2-se02
+    problem: 'Find the standard deviation of 1, 3, 5, 7, 9.'
+    steps:
+      - 'Mean: $\frac{25}{5} = 5$.'
+      - 'Deviations: $-4, -2, 0, 2, 4$. Squares: 16, 4, 0, 4, 16, with sum 40.'
+      - 'Variance: $\frac{40}{5} = 8$. Standard deviation: $\sqrt{8} = 2\sqrt{2}$.'
+    answer: '$\sigma = 2\sqrt{2} \approx 2.83$'
+  - uid: g12-mathematics-3-2-se03
+    problem: 'Classes 0–10, 10–20, 20–30 have frequencies 4, 10 and 6. Estimate the mean.'
+    steps:
+      - 'Midpoints: 5, 15, 25.'
+      - '$\sum f x = 4 \times 5 + 10 \times 15 + 6 \times 25 = 20 + 150 + 150 = 320$.'
+      - '$\sum f = 20$, so $\bar{x} = \frac{320}{20} = 16$.'
+    answer: '16'
+
+flashcards:
+  - {uid: g12-mathematics-3-2-fc01, term: Mean, definition: 'The sum of the values divided by the number of values.'}
+  - {uid: g12-mathematics-3-2-fc02, term: Median, definition: 'The middle value when the data are in order.'}
+  - {uid: g12-mathematics-3-2-fc03, term: Mode, definition: 'The value that occurs most often.'}
+  - {uid: g12-mathematics-3-2-fc04, term: Range, definition: 'Largest value minus smallest value.'}
+  - {uid: g12-mathematics-3-2-fc05, term: Quartiles, definition: '$Q_1$, $Q_2$ (median) and $Q_3$ split ordered data into four equal parts.'}
+  - {uid: g12-mathematics-3-2-fc06, term: Interquartile range, definition: '$Q_3 - Q_1$: the spread of the middle half of the data.'}
+  - {uid: g12-mathematics-3-2-fc07, term: Variance, definition: 'The mean of the squared deviations from the mean.'}
+  - {uid: g12-mathematics-3-2-fc08, term: Standard deviation, definition: 'The square root of the variance; spread in the same units as the data.'}
+  - {uid: g12-mathematics-3-2-fc09, term: Outlier, definition: 'A value far from the rest of the data; it pulls the mean.'}
+  - {uid: g12-mathematics-3-2-fc10, term: Coefficient of variation, definition: '$\frac{\sigma}{\bar{x}} \times 100\%$, spread relative to the mean.'}
+
+questions:
+  - uid: g12-mathematics-3-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the mean of 2, 4, 6, 8, 10?'
+    options:
+      A: '6'
+      B: '5'
+      C: '30'
+      D: '8'
+    answer: A
+    explanation: '$\frac{2 + 4 + 6 + 8 + 10}{5} = \frac{30}{5} = 6$.'
+
+  - uid: g12-mathematics-3-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the median of 3, 7, 1, 9, 5?'
+    options:
+      A: '1'
+      B: '5'
+      C: '7'
+      D: '9'
+    answer: B
+    explanation: 'In order: 1, 3, 5, 7, 9. The middle value is 5.'
+
+  - uid: g12-mathematics-3-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the mode of 2, 3, 3, 5, 7, 3, 5?'
+    options:
+      A: '5'
+      B: '2'
+      C: '3'
+      D: '4'
+    answer: C
+    explanation: '3 appears three times, more than any other value.'
+
+  - uid: g12-mathematics-3-2-q004
+    type: numeric
+    difficulty: 1
+    stem: 'What is the median of 4, 8, 6, 2?'
+    answer: {value: 5, tolerance: 0}
+    explanation: 'In order: 2, 4, 6, 8. With an even number of values, the median is the mean of the two middle values: $\frac{4 + 6}{2} = 5$.'
+
+  - uid: g12-mathematics-3-2-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the range of 12, 5, 9, 20, 15?'
+    options:
+      A: '20'
+      B: '8'
+      C: '12'
+      D: '15'
+    answer: D
+    explanation: 'Range $= 20 - 5 = 15$.'
+
+  - uid: g12-mathematics-3-2-q006
+    type: numeric
+    difficulty: 3
+    stem: 'Find the (population) standard deviation of 2, 4, 4, 4, 5, 5, 7, 9.'
+    answer: {value: 2, tolerance: 0}
+    explanation: 'Mean $= \frac{40}{8} = 5$. Squared deviations: 9, 1, 1, 1, 0, 0, 4, 16, with sum 32. Variance $= \frac{32}{8} = 4$, so $\sigma = 2$.'
+
+  - uid: g12-mathematics-3-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Every value in a data set is increased by 5. What happens to the mean and the standard deviation?'
+    options:
+      A: 'The mean goes up by 5; the standard deviation does not change.'
+      B: 'Both go up by 5.'
+      C: 'The mean does not change; the standard deviation goes up by 5.'
+      D: 'Both are multiplied by 5.'
+    answer: A
+    explanation: 'Shifting all values moves the centre by 5, but the distances between values (the spread) stay the same.'
+
+  - uid: g12-mathematics-3-2-q008
+    type: true_false
+    difficulty: 2
+    stem: 'If every value in a data set is multiplied by 3, the standard deviation is also multiplied by 3.'
+    answer: true
+    explanation: 'Every deviation from the mean is multiplied by 3, so the standard deviation is multiplied by 3 (and the variance by 9).'
+
+  - uid: g12-mathematics-3-2-q009
+    type: numeric
+    difficulty: 2
+    stem: 'Grouped data have class midpoints 5, 15 and 25 with frequencies 2, 3 and 5. Estimate the mean.'
+    answer: {value: 18, tolerance: 0}
+    explanation: '$\frac{2 \times 5 + 3 \times 15 + 5 \times 25}{10} = \frac{10 + 45 + 125}{10} = 18$.'
+
+  - uid: g12-mathematics-3-2-q010
+    type: numeric
+    difficulty: 2
+    stem: 'For the data 3, 5, 7, 8, 9, 11, 13, the lower quartile is the median of the values below the median, and the upper quartile is the median of the values above it. What is the interquartile range?'
+    answer: {value: 6, tolerance: 0}
+    explanation: 'The median is 8. Lower half 3, 5, 7 gives $Q_1 = 5$; upper half 9, 11, 13 gives $Q_3 = 11$. $IQR = 11 - 5 = 6$.'
+
+  - uid: g12-mathematics-3-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'Which measure is most affected by one very large value (an outlier)?'
+    options:
+      A: 'The median'
+      B: 'The mean'
+      C: 'The mode'
+      D: 'The interquartile range'
+    answer: B
+    explanation: 'The mean uses every value, so a very large value pulls it strongly. The median and IQR depend only on positions.'
+
+  - uid: g12-mathematics-3-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'The mean of five numbers is 12. Four of them are 10, 11, 13 and 14. What is the fifth number?'
+    options:
+      A: '10'
+      B: '14'
+      C: '12'
+      D: '48'
+    answer: C
+    explanation: 'The total must be $5 \times 12 = 60$. The four add to 48, so the fifth is $60 - 48 = 12$.'
+
+  - uid: g12-mathematics-3-2-q013
+    type: true_false
+    difficulty: 1
+    stem: 'The median of a data set is always equal to its mean.'
+    answer: false
+    explanation: 'For 1, 2, 9 the median is 2 but the mean is 4. They are equal only for symmetric data.'
+
+  - uid: g12-mathematics-3-2-q014
+    type: multiple_answers
+    difficulty: 1
+    stem: 'Which of these are measures of dispersion (spread)? Choose all that apply.'
+    options:
+      A: 'Range'
+      B: 'Variance'
+      C: 'Mode'
+      D: 'Standard deviation'
+    answer: [A, B, D]
+    explanation: 'Range, variance and standard deviation describe spread. The mode is a measure of location.'
+
+  - uid: g12-mathematics-3-2-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The square root of the variance is called the ________.'
+    answer: [standard deviation]
+    explanation: 'The standard deviation $\sigma = \sqrt{\sigma^2}$ measures spread in the same units as the data.'
+
+  - uid: g12-mathematics-3-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'A data set has mean 20 and standard deviation 4. What is its coefficient of variation?'
+    options:
+      A: '5%'
+      B: '80%'
+      C: '16%'
+      D: '20%'
+    answer: D
+    explanation: '$CV = \frac{4}{20} \times 100\% = 20\%$.'
+
+  - uid: g12-mathematics-3-2-q017
+    type: single_choice
+    difficulty: 1
+    stem: 'Which data set has a standard deviation of 0?'
+    options:
+      A: '7, 7, 7, 7'
+      B: '0, 1, 2, 3'
+      C: '−1, 0, 1'
+      D: '5, 6, 5, 6'
+    answer: A
+    explanation: 'When all values are equal, every deviation from the mean is 0, so the standard deviation is 0.'
+
+  - uid: g12-mathematics-3-2-q018
+    type: numeric
+    difficulty: 2
+    stem: 'The mean of 10 values is 8. A new value, 19, is added. What is the new mean?'
+    answer: {value: 9, tolerance: 0}
+    explanation: 'Old total $= 80$. New total $= 80 + 19 = 99$ for 11 values, so the mean is $\frac{99}{11} = 9$.'
+
+  - uid: g12-mathematics-3-2-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Classes 0–9, 10–19 and 20–29 have frequencies 3, 8 and 5. What is the modal class?'
+    options:
+      A: '0–9'
+      B: '10–19'
+      C: '20–29'
+      D: 'There is no modal class.'
+    answer: B
+    explanation: 'The modal class is the class with the highest frequency, 8.'
+
+  - uid: g12-mathematics-3-2-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which formula gives the (population) variance of $n$ values with mean $\bar{x}$?'
+    options:
+      A: '$\frac{\sum (x - \bar{x})}{n}$'
+      B: '$\sqrt{\frac{\sum x}{n}}$'
+      C: '$\frac{\sum (x - \bar{x})^2}{n}$'
+      D: '$\frac{\sum x^2}{n}$'
+    answer: C
+    explanation: 'The variance is the mean of the squared deviations. Option A is always 0.'
+
+  - uid: g12-mathematics-3-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'For the data 6, 6, 7, 8, 13, which statement is true?'
+    options:
+      A: 'mean = median = mode'
+      B: 'mode > median > mean'
+      C: 'median > mean > mode'
+      D: 'mean > median > mode'
+    answer: D
+    explanation: 'Mean $= \frac{40}{5} = 8$, median $= 7$, mode $= 6$. So mean > median > mode.'
+
+  - uid: g12-mathematics-3-2-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each description with its measure.'
+    left:
+      L1: 'The middle value of the ordered data'
+      L2: 'The value that occurs most often'
+      L3: 'The sum of the values divided by how many there are'
+    right:
+      R1: 'Mode'
+      R2: 'Range'
+      R3: 'Mean'
+      R4: 'Median'
+    answer: {L1: R4, L2: R1, L3: R3}
+    explanation: 'Median: middle value. Mode: most frequent. Mean: sum divided by count. The range is largest minus smallest.'
+
+  - uid: g12-mathematics-3-2-q023
+    type: ordering
+    difficulty: 2
+    stem: 'For the data 4, 4, 5, 7, 15, put these values in order from smallest to largest.'
+    items:
+      A: 'The mean'
+      B: 'The median'
+      C: 'The mode'
+      D: 'The range'
+    answer: [C, B, A, D]
+    explanation: 'Mode $= 4$, median $= 5$, mean $= \frac{35}{5} = 7$, range $= 15 - 4 = 11$.'
+
+  - uid: g12-mathematics-3-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'For any data set, what is the sum of the deviations from the mean, $\sum (x - \bar{x})$?'
+    options:
+      A: '0'
+      B: 'The variance'
+      C: 'The mean'
+      D: 'It depends on the data.'
+    answer: A
+    explanation: '$\sum (x - \bar{x}) = \sum x - n\bar{x} = \sum x - \sum x = 0$.'
+
+  - uid: g12-mathematics-3-2-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Five students scored 50, 60, 70, 80 and 90. What is the (population) standard deviation?'
+    options:
+      A: '10'
+      B: '$10\sqrt{2}$'
+      C: '200'
+      D: '20'
+    answer: B
+    explanation: 'Mean 70. Squared deviations: 400, 100, 0, 100, 400, with sum 1000. Variance $= 200$, so $\sigma = \sqrt{200} = 10\sqrt{2}$.'
+
+  - uid: g12-mathematics-3-2-q026
+    type: true_false
+    difficulty: 2
+    stem: 'For the data 2, 4, 5, 6, 8, 9, 10, 12, 15 (quartiles taken as the medians of the lower and upper halves, leaving out the median), changing the 15 to 150 does not change the interquartile range.'
+    answer: true
+    explanation: 'The median is 8. The lower half 2, 4, 5, 6 gives $Q_1 = 4.5$ and the upper half 9, 10, 12, 15 gives $Q_3 = 11$. With 150 instead of 15 the upper half is 9, 10, 12, 150 and its median is still 11, so the IQR stays 6.5. The IQR resists extreme values.'
+
+  - uid: g12-mathematics-3-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'The mean of $x$, $x + 2$ and $x + 4$ is 10. What is $x$?'
+    options:
+      A: '10'
+      B: '6'
+      C: '8'
+      D: '12'
+    answer: C
+    explanation: '$\frac{3x + 6}{3} = x + 2 = 10$, so $x = 8$.'
+
+  - uid: g12-mathematics-3-2-q028
+    type: single_choice
+    difficulty: 3
+    stem: 'A distribution has a long tail of very high values (it is positively skewed). Which is usually true?'
+    options:
+      A: 'The mean is less than the median.'
+      B: 'The mean equals the mode.'
+      C: 'The median is greater than the mean.'
+      D: 'The mean is greater than the median.'
+    answer: D
+    explanation: 'The few very high values pull the mean up, so it is usually larger than the median.'
+
+  - uid: g12-mathematics-3-2-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'The standard deviation of a data set is 3. What is its variance?'
+    options:
+      A: '9'
+      B: '$\sqrt{3}$'
+      C: '6'
+      D: '1.5'
+    answer: A
+    explanation: 'Variance is the square of the standard deviation: $3^2 = 9$.'
+
+  - uid: g12-mathematics-3-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'A data set has 25 values in order. Which position holds the median?'
+    options:
+      A: 'The 12th'
+      B: 'The 13th'
+      C: 'The 12.5th'
+      D: 'The 14th'
+    answer: B
+    explanation: 'The median is in position $\frac{n + 1}{2} = \frac{26}{2} = 13$.'

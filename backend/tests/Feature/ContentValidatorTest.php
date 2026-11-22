@@ -128,6 +128,9 @@ class ContentValidatorTest extends TestCase
         $this->editQuestion(0, ['options' => ['A' => 'Same', 'B' => 'same ', 'C' => 'Other']]);
         $this->assertError('two items say the same thing');
 
+        $this->editQuestion(0, ['options' => ['A' => '$F(b) - F(a)$', 'B' => '$f(b) - f(a)$', 'C' => 'Other'], 'answer' => 'A']);
+        $this->assertSame([], $this->errors(), 'letter case inside maths matters');
+
         $this->editQuestion(0, ['options' => ['A' => 'x', 'B' => 'y', 'C' => 'z'], 'answer' => 'D']);
         $this->assertError('answer must be one of the option letters');
 

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-4-2-q001: {hash: 'fe4f2cea04279933753c52fa719191c027c42801fcc3fd8869802f8fa18ed62f', answer: B}
+  g12-mathematics-4-2-q002: {hash: '48d025a8ba60d723350eedae360bdacecd5864315194e0de57eba054fd074266', answer: D}
+  g12-mathematics-4-2-q003: {hash: 'fdccc6be8a0a00ea2ec81771a1e31aa1d156e4db2e7c31485ab59bba8562c26b', answer: 9}
+  g12-mathematics-4-2-q004: {hash: 'dfa1737587c50911a7a1f470ccf687e97dfa7830ee999723006a2ceeac8bf06d', answer: A}
+  g12-mathematics-4-2-q005: {hash: '6bbc6fa66e48d62bf36deed4e2a4f4446d496505ed4d2d65ace06b2f1e0e7f61', answer: C}
+  g12-mathematics-4-2-q006: {hash: '91828f7ff94d109230c90706a89e0a224e7d8fff5797de0da55e10113424e684', answer: true}
+  g12-mathematics-4-2-q007: {hash: '3135f85c74249e1c31434774474a473530b238a8174bd5f08a30b62d04e07f65', answer: B}
+  g12-mathematics-4-2-q008: {hash: '41f1de5de706b2a391be648022654cb56d67d2614d46c6880e0056fdecf12c29', answer: 1600}
+  g12-mathematics-4-2-q009: {hash: '638ef0d68eb639dba848bad0c7053ddd772fe987a51baec90358b3ee3be3cd72', answer: 4}
+  g12-mathematics-4-2-q010: {hash: '15e58e07bf026220df42c8eebd27e45879d4001b450067642277b5ddb652ed06', answer: A}
+  g12-mathematics-4-2-q011: {hash: 'adc5bd1db7e9810ada353ea3cc94ec5dfc758b52d7739551725bad991f74639f', answer: D}
+  g12-mathematics-4-2-q012: {hash: '7fb5177d3b117c4deff1592a2046dd8eabf2f01c545278a1cc909441a600ff6c', answer: C}
+  g12-mathematics-4-2-q013: {hash: 'a5436adfe8f0e19226d8bdae65fc637b72a9375838e82e5b6c462ba1ff282226', answer: [A, B, D]}
+  g12-mathematics-4-2-q014: {hash: '82c03aa60747e363c99c3af85245d7b3894b3cb6e8f06b613beb5d28ef8ab3a5', answer: 'objective'}
+  g12-mathematics-4-2-q015: {hash: '2035b4714d297bcb381434235613644ab7ef5d0d8f62bbb68239c86986c55bd3', answer: B}
+  g12-mathematics-4-2-q016: {hash: 'f060d55971fac6398b9a0fc1ba6dec5620aa6bfc99843817a2edc0ea427c2178', answer: 26}
+  g12-mathematics-4-2-q017: {hash: '5912e05f55638fc6eb9b51b263ca5749463ad8cebfed753591009ee3d3e075a0', answer: [A, B, C, D, E], note: 'Steps B (objective) and C (constraints) are often taught in either order; some textbooks write the constraints before the objective. Consider accepting [A, C, B, D, E] too, or rewording so the order of B and C is forced.'}
+  g12-mathematics-4-2-q018: {hash: '3deb39aa0579f6ad65299fa371b895a2d2871b3ff620cd468fab3d462607b5a8', answer: A}
+  g12-mathematics-4-2-q019: {hash: '7a3d07571ec7bf97bf5d1abffc8ffb1fc6333aea4f9b5343d70e97a73b89f2f0', answer: D}
+  g12-mathematics-4-2-q020: {hash: '4abab908ea55fd731bbb461cf6b0120e9ba98de1f351ba75f905f6ee4dbc1d61', answer: false}
+  g12-mathematics-4-2-q021: {hash: '850ffa612b29d1eb4ca76ad4379c67cc55d863bbab758ecb3e3ad51d5342ae20', answer: C}
+  g12-mathematics-4-2-q022: {hash: '33832f1dff3e1b4ab6127c5af9ecf64c47b36c99322014cdf88841eb56940678', answer: {L1: R2, L2: R4, L3: R1}}
+  g12-mathematics-4-2-q023: {hash: '6ff237e9148dad7c2543ca0e5a5c3164c06e4b15f4145327973c4dfa3c1be0fc', answer: B, note: 'Value 12 is unique and correct, but it is reached at two corners, (3, 1) and (0, 2) (whole edge). Fine as asked; just make sure the explanation does not name a single optimal corner.'}
+  g12-mathematics-4-2-q024: {hash: '96602556bae49d7fc1be007e509cda699d0a071a0e11893ac3661791c5d9c6f3', answer: A}
+  g12-mathematics-4-2-q025: {hash: '9cc48e6d24fac1dd847c06e6f0b7d5f4e9b44488ddedd53313961b44a88acbab', answer: D}
+  g12-mathematics-4-2-q026: {hash: 'dc18b4016a3fba2a13b20b3d68ac803ff6413025641bdd63819319440b257fb0', answer: true}
+  g12-mathematics-4-2-q027: {hash: '234d23a81dc9a99f56af0baa7d6be56a203db1555e3e371e10786bfba3e00a45', answer: C}
+  g12-mathematics-4-2-q028: {hash: '73b790b1cc0f51ea860ea795f7b2a8640a59a4d019d48bc11aaaae8cd58d3315', answer: 6}
+  g12-mathematics-4-2-q029: {hash: '26c55534bc1410dea428fd4cc89bef7d126a8aa59543d4e439dfeda80fc71582', answer: B}
+  g12-mathematics-4-2-q030: {hash: '46ef3cc19f649b806c2fe18cc19ee77490b22ca2b02ea63b889827683a6d786b', answer: A}
