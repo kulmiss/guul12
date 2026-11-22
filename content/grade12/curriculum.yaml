@@ -125,6 +125,7 @@ subjects:
       file: chemistry/u1-c2.yaml
     - number: 3
       title: Buffers, salt hydrolysis, indicators and titration
+      file: chemistry/u1-c3.yaml
   - number: 2
     title: Electrochemistry
     chapters:

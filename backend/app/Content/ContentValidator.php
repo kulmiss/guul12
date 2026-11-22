@@ -918,7 +918,10 @@ final class ContentValidator
         // Lower-case words but keep maths as written: $F(b)$ and $f(b)$ are different.
         $parts = preg_split('/(\$\$?[^$]*\$\$?)/', $text, -1, PREG_SPLIT_DELIM_CAPTURE) ?: [$text];
         $lower = implode('', array_map(fn (string $p) => str_starts_with($p, '$') ? $p : mb_strtolower($p), $parts));
-        $lower = preg_replace('/[^\p{L}\p{N}$\\\\^_{}+\-*\/=.<>]+/u', ' ', $lower) ?? $lower;
+        // Only quotes, light punctuation and a full stop that ends a word are ignored;
+        // signs and units (−, %, °, ×) change the meaning, so they are kept.
+        $lower = str_replace('−', '-', $lower);
+        $lower = preg_replace('/[,;:!?"\'“”‘’]+|\.(?=\s|$)/u', ' ', $lower) ?? $lower;
 
         return trim(preg_replace('/\s+/', ' ', $lower) ?? $lower);
     }

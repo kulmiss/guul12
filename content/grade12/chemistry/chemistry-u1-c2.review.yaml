@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-chemistry-1-2-q001: {hash: '5e14457ee1d5798e94d22ddc901e711b732fef178622eb2df16c0f797bf22140', answer: B}
+  g12-chemistry-1-2-q002: {hash: 'fc166b90b05d986ff1ae58609f0cbb56910f06153d2b5613aa629e2bd2c162c7', answer: A}
+  g12-chemistry-1-2-q003: {hash: '08673e55a091aa9f9476443b152264f7628c7ceb295d04c2d19d0cdfe189d736', answer: D}
+  g12-chemistry-1-2-q004: {hash: '87b5ab7d11be3fc7caa21520213c6363af5cb22cf0a6fc70a3bd6e440bc404d0', answer: C}
+  g12-chemistry-1-2-q005: {hash: 'ca87256ac620ccd4bcec023caded98d9cb9fb93fe63564a305f09dbda9c2eb34', answer: 12}
+  g12-chemistry-1-2-q006: {hash: '7946053ee53fa1c18094ea4ecda491d7b2bd3524eea2e2f1186c57b2a030d6bf', answer: A}
+  g12-chemistry-1-2-q007: {hash: '72513ea09ceeb7ecef118c9a1621fa72c0d58800aa5b506b0bc7a6782ae32b83', answer: D}
+  g12-chemistry-1-2-q008: {hash: '6cd2a097cba5694a792bd6541680d94ad8efeb61322fc42ab0eb2c70513721c7', answer: B}
+  g12-chemistry-1-2-q009: {hash: 'b80d90d5c89ed32cb53d852101229a622d98ecef5732e045b04d0382e1e9982a', answer: C}
+  g12-chemistry-1-2-q010: {hash: 'be307674fd738990dd5ca2e4fef5311a4002a2d7a227680c665d85f9636dbade', answer: 2}
+  g12-chemistry-1-2-q011: {hash: 'dfa0b355666c77164ded5e319b5048aabec9925c329990e5aae8833116f6115a', answer: D}
+  g12-chemistry-1-2-q012: {hash: '3e223c96faf23000ed6835535c30102273f5e936b86dc1d9e4652454c8e0a741', answer: true}
+  g12-chemistry-1-2-q013: {hash: 'edffe68ac4ca1e7428c708b4db0429fe2a7a236a606f409e7678f8a99dc82c03', answer: true}
+  g12-chemistry-1-2-q014: {hash: '51b66e81ba1bc093dc59ae04c0093ef63ded4a444074a40b288ce79b0cad5cf0', answer: A}
+  g12-chemistry-1-2-q015: {hash: '115609e0bdf1ada40e4b4428c3e3d6c065cdaa1e50fbb7bf539a732e2899bc2b', answer: C}
+  g12-chemistry-1-2-q016: {hash: '90b951508077d9b5d0060d00146afcea69d4307ef2cdfe47aeaaab07599fa3e2', answer: D}
+  g12-chemistry-1-2-q017: {hash: 'a9128793cc165943b27703d8a9acc9f92ab6347ea5fe697424911724573b8270', answer: B}
+  g12-chemistry-1-2-q018: {hash: 'a2ce97025523b2b961dd0c3a799a9a3d711c69ce67b1b750c91f24979dd4adc9', answer: [A, B, D]}
+  g12-chemistry-1-2-q019: {hash: 'd4ca2794d7607779d50de73ffb02188079b544afd08d2363fe2c47041b6aa258', answer: C}
+  g12-chemistry-1-2-q020: {hash: '4c903ef271c51bc73ead176ff0ccbbfcb2ea61370046fa405bdad67d7f643426', answer: D}
+  g12-chemistry-1-2-q021: {hash: 'fa82132efa6ccd0aaaa12aec3e5094043036e8290cb4b1f501bc288f8f793acd', answer: '14'}
+  g12-chemistry-1-2-q022: {hash: '3b7110b82701424507b44ac72e9f93e4385673e2d0637a8ff4b77cca57cb3e07', answer: 'pKa'}
+  g12-chemistry-1-2-q023: {hash: '5a1dc0ef0062493e3d1cb4fb10d123340af6d4feaab83e3af2e2a3d88aac3e39', answer: false}
+  g12-chemistry-1-2-q024: {hash: '34af52447ee502cf1911441359758a01c0c36e81f11a5b04a8a6ed1746633839', answer: {L1: R3, L2: R2, L3: R1}}
+  g12-chemistry-1-2-q025: {hash: 'c879d01a8d2099833b4e627661993c0d299297948ee7709e80eb2036d1b4fe4b', answer: [B, D, C, A]}
+  g12-chemistry-1-2-q026: {hash: 'ffe93f97f42882f536a8ebed1b6295c59ac6e75eafa27ad603c4cd4fd6e968dc', answer: A}
+  g12-chemistry-1-2-q027: {hash: '68a628c080b0490214e4e2556c391df0615eebebbbe71340921eea402cb08d21', answer: B}
+  g12-chemistry-1-2-q028: {hash: '2a4aa47c095928302e09d6484a95913b27a7742a29bae9668d75f3e13edecad8', answer: C}
+  g12-chemistry-1-2-q029: {hash: '905fc2b970932eb5b9cab943aeb3380cffd818a76b2b7ca1c5d697fc73ea0e20', answer: B}
+  g12-chemistry-1-2-q030: {hash: '686e7e4a23ad2a73a74cb4fd69fb005a1b1cc03e5c15edb553ff7ae032b80534', answer: A}
