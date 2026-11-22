@@ -1,0 +1,373 @@
+summary:
+  key_points:
+    - 'Evolution is the change in the inherited characteristics of populations over many generations.'
+    - 'Lamarck''s theory (early 1800s): organs used a lot grow stronger, unused ones weaken (use and disuse), and these acquired changes are passed on. For example, giraffes stretching their necks. This is rejected today, because changes acquired during life are not inherited through genes.'
+    - 'Darwin and Wallace''s theory of natural selection (Darwin''s book "On the Origin of Species", 1859): individuals vary; more offspring are born than can survive; those with helpful variations survive and reproduce more; their features become more common over generations.'
+    - 'Fossils show that life has changed over time. Ethiopia is famous for human-ancestor fossils: "Lucy" (Dinkinesh, Australopithecus afarensis, about 3.2 million years old, found at Hadar in Afar in 1974) and "Ardi" (Ardipithecus ramidus, about 4.4 million years old).'
+    - 'Radiometric dating finds the age of rocks and fossils from the decay of radioactive isotopes. Carbon-14 has a half-life of about 5 730 years and is used for remains up to about 50 000 years old.'
+    - 'Comparative anatomy: homologous structures (same basic bone plan, different jobs – human arm, bat wing, whale flipper) show common ancestry (divergent evolution). Analogous structures (same job, different origin – bird and insect wings) show convergent evolution. Vestigial structures, such as the human appendix and tailbone, are reduced remains of organs that were useful in ancestors.'
+    - 'Other evidence: similar early embryos in vertebrates, similar DNA and protein sequences (closer relatives share more), and the distribution of species, such as Darwin''s finches on the Galápagos Islands.'
+  formulas:
+    - label: Fraction remaining after n half-lives
+      latex: '\text{fraction left} = \left(\tfrac{1}{2}\right)^n'
+
+solved_exercises:
+  - uid: g12-biology-4-1-se01
+    problem: 'A bone contains one-eighth of the carbon-14 found in living bone. How old is it? (Half-life = 5 730 years)'
+    steps:
+      - '$\frac{1}{8} = \left(\frac{1}{2}\right)^3$, so 3 half-lives have passed.'
+      - 'Age $= 3 \times 5730 = 17\,190$ years.'
+    answer: 'About 17 190 years'
+  - uid: g12-biology-4-1-se02
+    problem: 'Explain, using natural selection, how bacteria become resistant to an antibiotic.'
+    steps:
+      - 'In a population, a few bacteria have a mutation that lets them survive the antibiotic.'
+      - 'The antibiotic kills the others; the resistant ones survive, reproduce and pass on the gene, so resistance spreads.'
+    answer: 'Resistant variants survive and reproduce.'
+  - uid: g12-biology-4-1-se03
+    problem: 'Are the wing of a bat and the wing of a butterfly homologous or analogous? Explain.'
+    steps:
+      - 'Both are used for flying, but the bat wing is built on a bony pentadactyl limb while the butterfly wing has no bones.'
+      - 'Same function, different structure and origin: they are analogous.'
+    answer: 'Analogous'
+
+flashcards:
+  - {uid: g12-biology-4-1-fc01, term: Evolution, definition: 'Change in inherited characteristics of populations over generations.'}
+  - {uid: g12-biology-4-1-fc02, term: Natural selection, definition: 'Individuals with helpful variations survive and reproduce more.'}
+  - {uid: g12-biology-4-1-fc03, term: Lamarckism, definition: 'Rejected idea that characteristics acquired during life are inherited.'}
+  - {uid: g12-biology-4-1-fc04, term: Fossil, definition: 'Preserved remains or traces of an organism from the past.'}
+  - {uid: g12-biology-4-1-fc05, term: Lucy (Dinkinesh), definition: 'Australopithecus afarensis fossil, about 3.2 million years old, found in Afar, Ethiopia (1974).'}
+  - {uid: g12-biology-4-1-fc06, term: Homologous structures, definition: 'Same basic structure, different functions; show common ancestry.'}
+  - {uid: g12-biology-4-1-fc07, term: Analogous structures, definition: 'Same function, different structure and origin.'}
+  - {uid: g12-biology-4-1-fc08, term: Vestigial structure, definition: 'Reduced organ with little or no use, e.g. the human appendix.'}
+  - {uid: g12-biology-4-1-fc09, term: Half-life, definition: 'Time for half of a radioactive isotope to decay.'}
+
+questions:
+  - uid: g12-biology-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Who proposed the theory of evolution by natural selection, together with Alfred Russel Wallace?'
+    options:
+      A: 'Jean-Baptiste Lamarck'
+      B: 'Charles Darwin'
+      C: 'Gregor Mendel'
+      D: 'Louis Pasteur'
+    answer: B
+    explanation: 'Darwin and Wallace presented the idea in 1858; Darwin published "On the Origin of Species" in 1859.'
+
+  - uid: g12-biology-4-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Lamarck explained the long neck of giraffes by saying that:'
+    options:
+      A: 'Giraffes with longer necks by chance survived better.'
+      B: 'Giraffes were created with long necks.'
+      C: 'Giraffes stretched their necks to reach leaves, and the longer necks were passed on.'
+      D: 'Mutations happened only in giraffes.'
+    answer: C
+    explanation: 'This is inheritance of acquired characteristics. Option A is Darwin''s explanation.'
+
+  - uid: g12-biology-4-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is Lamarck''s theory rejected today?'
+    options:
+      A: 'Changes acquired during an animal''s life are not passed on through its genes.'
+      B: 'Animals never change during their lives.'
+      C: 'Fossils do not exist.'
+      D: 'Darwin proved organisms never change.'
+    answer: A
+    explanation: 'For example, a person who builds big muscles does not have children born with big muscles.'
+
+  - uid: g12-biology-4-1-q004
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps of natural selection in order.'
+    items:
+      A: 'Individuals with helpful variations survive and reproduce more.'
+      B: 'Individuals in a population vary.'
+      C: 'The helpful variation becomes more common in later generations.'
+      D: 'More offspring are produced than can survive, so there is competition.'
+    answer: [B, D, A, C]
+    explanation: 'Variation → struggle for existence → survival of the fittest → change over generations.'
+
+  - uid: g12-biology-4-1-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'The famous fossil "Lucy" (Dinkinesh) was found in which region of Ethiopia?'
+    options:
+      A: 'Tigray'
+      B: 'Amhara'
+      C: 'Oromia'
+      D: 'Afar'
+    answer: D
+    explanation: 'Lucy was discovered at Hadar in the Afar Region in 1974.'
+
+  - uid: g12-biology-4-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'To which species does Lucy belong?'
+    options:
+      A: 'Australopithecus afarensis'
+      B: 'Homo sapiens'
+      C: 'Homo erectus'
+      D: 'Ardipithecus ramidus'
+    answer: A
+    explanation: 'The species name comes from the Afar region where it was found. Ardi is Ardipithecus ramidus.'
+
+  - uid: g12-biology-4-1-q007
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the Lucy fossil discovered?'
+    answer: {value: 1974, tolerance: 0}
+    explanation: 'Lucy was found in November 1974 at Hadar, Afar.'
+
+  - uid: g12-biology-4-1-q008
+    type: numeric
+    difficulty: 2
+    stem: 'Carbon-14 has a half-life of about 5 730 years. What percentage of the original carbon-14 remains in a sample after 11 460 years?'
+    answer: {value: 25, tolerance: 0, unit: '%'}
+    explanation: '11 460 years is 2 half-lives: $\left(\frac{1}{2}\right)^2 = \frac{1}{4} = 25\%$.'
+
+  - uid: g12-biology-4-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'The arm of a human, the wing of a bat and the flipper of a whale have the same basic bone pattern. These are:'
+    options:
+      A: 'Analogous structures'
+      B: 'Vestigial structures'
+      C: 'Homologous structures'
+      D: 'Acquired characteristics'
+    answer: C
+    explanation: 'Same structure, different functions: evidence of a shared ancestor.'
+
+  - uid: g12-biology-4-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'The wings of a bird and the wings of an insect both allow flight but have very different structures. They are:'
+    options:
+      A: 'Homologous structures'
+      B: 'Analogous structures'
+      C: 'Vestigial structures'
+      D: 'Fossils'
+    answer: B
+    explanation: 'Analogous structures evolve separately for the same job (convergent evolution).'
+
+  - uid: g12-biology-4-1-q011
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are vestigial structures in humans? Choose all that apply.'
+    options:
+      A: 'Appendix'
+      B: 'Tailbone (coccyx)'
+      C: 'Heart'
+      D: 'Wisdom teeth'
+    answer: [A, B, D]
+    explanation: 'These are reduced remains of structures that were more useful in ancestors. The heart is fully functional.'
+
+  - uid: g12-biology-4-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'What do homologous structures suggest about the organisms that have them?'
+    options:
+      A: 'They live in the same habitat.'
+      B: 'They eat the same food.'
+      C: 'They were created separately.'
+      D: 'They share a common ancestor.'
+    answer: D
+    explanation: 'The same bone plan modified for different uses points to descent from one ancestor (divergent evolution).'
+
+  - uid: g12-biology-4-1-q013
+    type: true_false
+    difficulty: 1
+    stem: 'Fossils found in deeper rock layers are usually older than those in layers above them.'
+    answer: true
+    explanation: 'Sedimentary layers build up over time, so lower layers were laid down first (unless the rocks were disturbed).'
+
+  - uid: g12-biology-4-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Humans and chimpanzees share a very high percentage of their DNA sequences. This is evidence from:'
+    options:
+      A: 'Molecular biology'
+      B: 'Vestigial organs'
+      C: 'The fossil record only'
+      D: 'Biogeography'
+    answer: A
+    explanation: 'The more similar the DNA or protein sequences, the more recently two species shared an ancestor.'
+
+  - uid: g12-biology-4-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Darwin noticed that finches on different Galápagos Islands had different beak shapes suited to their foods. What does this show?'
+    options:
+      A: 'Birds choose their beaks.'
+      B: 'Beaks grow longer by use.'
+      C: 'One ancestral species evolved into several species adapted to different conditions.'
+      D: 'All finches are the same species.'
+    answer: C
+    explanation: 'This is adaptive radiation: natural selection on each island favoured beaks suited to the local food.'
+
+  - uid: g12-biology-4-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'What is a fossil?'
+    options:
+      A: 'A living animal in a museum'
+      B: 'The preserved remains or traces of an organism that lived long ago'
+      C: 'A type of rock that forms from lava only'
+      D: 'A modern bone'
+    answer: B
+    explanation: 'Fossils include bones, shells, footprints and imprints preserved in rock.'
+
+  - uid: g12-biology-4-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Early embryos of fish, chickens and humans all have gill-like slits and a tail. This is evidence from:'
+    options:
+      A: 'Biogeography'
+      B: 'Radiometric dating'
+      C: 'Analogous structures'
+      D: 'Comparative embryology'
+    answer: D
+    explanation: 'Similar early development suggests a shared vertebrate ancestry.'
+
+  - uid: g12-biology-4-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'According to natural selection, individual organisms change their genes during their lives to fit their environment.'
+    answer: false
+    explanation: 'Individuals do not evolve; populations do. Variation arises randomly, and selection changes how common each variant is.'
+
+  - uid: g12-biology-4-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'A fossil has one-quarter of the carbon-14 of a living organism. About how old is it? (Half-life about 5 730 years)'
+    options:
+      A: 'About 11 460 years'
+      B: 'About 5 730 years'
+      C: 'About 22 920 years'
+      D: 'About 1 430 years'
+    answer: A
+    explanation: '$\frac{1}{4}$ means 2 half-lives: $2 \times 5730 = 11\,460$ years.'
+
+  - uid: g12-biology-4-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is carbon-14 dating not used for dinosaur fossils, which are over 66 million years old?'
+    options:
+      A: 'Dinosaurs had no carbon.'
+      B: 'Almost all the carbon-14 would have decayed long ago.'
+      C: 'Carbon-14 has a half-life of millions of years.'
+      D: 'Dinosaur bones are too large.'
+    answer: B
+    explanation: 'After about 50 000 years too little carbon-14 is left to measure; isotopes with longer half-lives are used for older rocks.'
+
+  - uid: g12-biology-4-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The process in which organisms with helpful variations survive and reproduce more is called natural ________.'
+    answer: [selection]
+    explanation: 'Darwin called it natural selection, in contrast to selection by breeders.'
+
+  - uid: g12-biology-4-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'Organs that are reduced and have little or no function, such as the human appendix, are called ________ organs.'
+    answer: [vestigial]
+    explanation: 'They are evidence that ancestors used these organs.'
+
+  - uid: g12-biology-4-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Ethiopia has produced some of the oldest known fossils of human ancestors.'
+    answer: true
+    explanation: 'Fossils such as Lucy (about 3.2 million years) and Ardi (about 4.4 million years) were found in the Afar region.'
+
+  - uid: g12-biology-4-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each scientist with the idea linked to them.'
+    left:
+      L1: 'Lamarck'
+      L2: 'Darwin'
+      L3: 'Pasteur'
+    right:
+      R1: 'Evolution by natural selection'
+      R2: 'Disproved spontaneous generation of microbes'
+      R3: 'Inheritance of acquired characteristics'
+      R4: 'Laws of heredity in pea plants'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'The laws of heredity in pea plants are Mendel''s work.'
+
+  - uid: g12-biology-4-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'How does the evolution of antibiotic-resistant bacteria support Darwin''s theory?'
+    options:
+      A: 'Bacteria decide to become resistant.'
+      B: 'The antibiotic creates resistance genes in every bacterium.'
+      C: 'Resistant bacteria have no genes.'
+      D: 'Bacteria that already carry resistance survive and reproduce, so resistance spreads.'
+    answer: D
+    explanation: 'The antibiotic is the selecting agent; it does not cause the mutation.'
+
+  - uid: g12-biology-4-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Dolphins (mammals) and sharks (fish) both have streamlined bodies and fins. This is an example of:'
+    options:
+      A: 'Convergent evolution'
+      B: 'Divergent evolution'
+      C: 'Lamarckian inheritance'
+      D: 'Vestigial structures'
+    answer: A
+    explanation: 'Unrelated animals in similar environments evolved similar shapes independently.'
+
+  - uid: g12-biology-4-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is the fossil record incomplete?'
+    options:
+      A: 'All organisms form fossils.'
+      B: 'Fossils form only in water.'
+      C: 'Fossils form only under special conditions, and many are destroyed or not yet found.'
+      D: 'Scientists do not look for fossils.'
+    answer: C
+    explanation: 'Soft-bodied organisms rarely fossilise, and erosion and rock movements destroy many fossils.'
+
+  - uid: g12-biology-4-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'In which year was Darwin''s book "On the Origin of Species" published?'
+    options:
+      A: '1809'
+      B: '1959'
+      C: '1900'
+      D: '1859'
+    answer: D
+    explanation: 'It was published in 1859.'
+
+  - uid: g12-biology-4-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the best definition of evolution?'
+    options:
+      A: 'Change in an individual during its life'
+      B: 'Change in the inherited characteristics of a population over many generations'
+      C: 'Growth of an organism from a baby to an adult'
+      D: 'Movement of animals to new places'
+    answer: B
+    explanation: 'Evolution happens to populations through changes in gene frequencies, not to individuals.'
+
+  - uid: g12-biology-4-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Pasteur''s swan-necked flask experiment showed that:'
+    options:
+      A: 'Microbes come from other microbes, not from non-living broth.'
+      B: 'Life arises spontaneously from broth.'
+      C: 'Broth needs sunlight to spoil.'
+      D: 'Air contains no microbes.'
+    answer: A
+    explanation: 'Broth in flasks whose curved necks trapped dust stayed clear, disproving spontaneous generation.'
