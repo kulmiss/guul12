@@ -63,7 +63,7 @@ class ContentPayload
             'video_youtube_id' => $chapter->video_youtube_id,
             'video_access' => $chapter->video_access->value,
             'has_summary_pdf' => $chapter->summary_pdf_path !== null,
-            // Free for everyone (QUESTIONS.md #33). The PDF links only to the price-free landing page.
+            // Free for everyone (DECISIONS.md #15). The PDF links only to the price-free landing page.
             'summary_pdf_url' => $chapter->summary_pdf_path === null ? null : Storage::disk('public')->url($chapter->summary_pdf_path),
             'sort' => $chapter->sort,
         ];

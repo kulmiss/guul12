@@ -3,7 +3,7 @@
 📍 Phase 2 of 5 · Step 6 of 6: all Grade 12 content, summary PDFs, fixed mocks, Phase 2 report → next: owner test of PR #2 (after PR #1), then Phase 3 (exams, adaptive practice, spaced repetition)
 📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left (past papers wait for the owner's PDFs)
 📊 Whole project: ▓▓▓▓▓░░░░░ 50% done · 50% left
-⚠️ Waiting for: owner test + merge of PR #1 and PR #2; answers to QUESTIONS.md #33–34; past-paper PDFs + permission letter
+⚠️ Waiting for: owner test + merge of PR #1 and PR #2; past-paper PDFs + permission letter
 
 | Phase | Weight | Status |
 |---|---|---|
