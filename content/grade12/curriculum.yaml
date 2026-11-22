@@ -99,6 +99,7 @@ subjects:
     chapters:
     - number: 1
       title: Magnets, magnetic fields and magnetic forces
+      file: physics/u4-c1.yaml
     - number: 2
       title: Electromagnetic induction and transformers
   - number: 5

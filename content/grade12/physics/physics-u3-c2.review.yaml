@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-3-2-q001: {hash: '704ff40abe503b7a336ddf3c8bd4b3d83d5445626ed4d1ecbdaa8a7a1caba873', answer: C}
+  g12-physics-3-2-q002: {hash: '0d7b2acd65186a76ca632999ee6ebb29f9a4c2197bca42e4e2640ac8bd0ba85f', answer: A}
+  g12-physics-3-2-q003: {hash: 'b8f374af78fd6f38ae50566cd7b59121ffca7e071882e945bc277bd19f11448f', answer: 10}
+  g12-physics-3-2-q004: {hash: 'ef9babe907551a783a2c94907e979f5d5e075e377e71544d18c48ace2014bac1', answer: B}
+  g12-physics-3-2-q005: {hash: '9f83e7556ec9fab17bbe73959cac7b5fdc22c0c091156b64364f02afa8dfbc1b', answer: D}
+  g12-physics-3-2-q006: {hash: 'b3de116dc8ffc88f78e58b8ea1f39c6aa1043c533cf3095cc546fa87d8cbf251', answer: true}
+  g12-physics-3-2-q007: {hash: '76c44f646f3398a80747939b0e56b7ec05dcbaa2408ed0c68e77786872ed9900', answer: A}
+  g12-physics-3-2-q008: {hash: '628e7b1966ac3e19e9abd33c024f7f582115f45f5f280e8d401be1223b56031a', answer: C}
+  g12-physics-3-2-q009: {hash: '63368b7a7b0ad168c93e8d9f65b20170d06811fa849f84239a929e0f398c9618', answer: 6}
+  g12-physics-3-2-q010: {hash: '85f3127e99c59f244f9eaff08c853dc2a65e9dcd938fba9603d79c7840e2a8c2', answer: B}
+  g12-physics-3-2-q011: {hash: '93717e062eb2f11ccdc176718f5e94513a1f839c57fa127590ca6f03a9a989fe', answer: D}
+  g12-physics-3-2-q012: {hash: '5b6b4b8304064f5e74ef8d687c5176ce7fca2b0784db118c578086fcdc8a53e4', answer: A}
+  g12-physics-3-2-q013: {hash: '1f1c852ab0df4e18b651f1d1872b9d81595f61b5e2e494a0e8efb7bf5b1e5883', answer: C}
+  g12-physics-3-2-q014: {hash: '6c63e641acf399441631ba35dd0620ec2727318a217f9cd6adad21bc4b738395', answer: [A, B, D]}
+  g12-physics-3-2-q015: {hash: '72dd8012d9be171d135ffc5abc0250b6c28d3e4edc6f765cdce2ff5990931714', answer: 'viscosity'}
+  g12-physics-3-2-q016: {hash: '83d1b8b11de5991e941f5c9c61d20f40f75e3cfc15df42a8c4a8f462ea6d00e6', answer: B}
+  g12-physics-3-2-q017: {hash: '0324424143392b69c8be34cb5e551c7f74f4b8ef090d633de7b6382fa2a31d7f', answer: true}
+  g12-physics-3-2-q018: {hash: 'b285aa8d86b31f2443a842253194f2710b82f90e6fe5bc0d8a468798c1306006', answer: D}
+  g12-physics-3-2-q019: {hash: 'e94a64c06b21675fc240535b8fd8afd123743d830442ed755e60f426185dd21e', answer: A}
+  g12-physics-3-2-q020: {hash: '8cf899c0c7adae8b19182ed634480a55cd9b66f864cafb6b1e1f9b9bf20f0137', answer: C}
+  g12-physics-3-2-q021: {hash: '926a7875856dd1da9319b88708dcaaa67e14f10dfc089752b773ee4201ecbab5', answer: B}
+  g12-physics-3-2-q022: {hash: '3740ab80c0862d0b83391b1246c077d38754bd7eaf0b13888d1abb3c1caa7cae', answer: {L1: R4, L2: R1, L3: R2}}
+  g12-physics-3-2-q023: {hash: '284f6942c1af776830cae432ed36a53a8636d31129ce6fde72ef894da376c12c', answer: [A, C, B, D]}
+  g12-physics-3-2-q024: {hash: '0e5a64adaa503c4ca1812e892386641a693b385f787666aae82de860bb677686', answer: D}
+  g12-physics-3-2-q025: {hash: '2574a2f4bd6d8e2f1651729f85718394597c6bbb7c4441550e246862287e1eca', answer: A}
+  g12-physics-3-2-q026: {hash: '1b5963f3d8c7940da2d0e6f0ae1d45bc90d7ab2a116bf86c973daf314151f2a5', answer: false}
+  g12-physics-3-2-q027: {hash: 'ead3a257276e8def0791b728d8f1bd9419d1c670a9b3fa6ce402f07e29ff0c10', answer: C}
+  g12-physics-3-2-q028: {hash: '6519a75bd0a2c9f14cb6281fa5737ca31735b53d83306b4276b48b353ac9de5a', answer: B}
+  g12-physics-3-2-q029: {hash: '0e082f008985acaa41756b4fb3b48a75844edc12c27eeb19a16c10acaa38f5e8', answer: D}
+  g12-physics-3-2-q030: {hash: '7f31fd8c769fc1dad642f415794e502f4cc0c4e6a2d8ef0370f25bd9cfc99cbf', answer: A}

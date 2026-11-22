@@ -1,0 +1,384 @@
+summary:
+  key_points:
+    - 'Every magnet has a north and a south pole. Like poles repel and unlike poles attract. Cutting a magnet in two gives two smaller magnets, each with both poles.'
+    - 'Iron, nickel and cobalt are ferromagnetic: they contain small regions called domains. When the domains line up, the material becomes a magnet. Heating or hammering can mix the domains up again.'
+    - 'Magnetic field lines leave the north pole and enter the south pole outside a magnet. Lines close together mean a strong field. The SI unit of magnetic field $B$ is the tesla (T).'
+    - 'The Earth behaves like a large magnet. A compass needle''s north pole points to geographic north, so a magnetic south pole lies near geographic north.'
+    - 'A current in a wire makes a magnetic field (Oersted). Around a long straight wire the field lines are circles; their direction follows the right-hand grip rule. $B = \frac{\mu_0 I}{2\pi r}$.'
+    - 'Inside a long solenoid the field is nearly uniform: $B = \mu_0 n I$, where $n$ is turns per metre. An iron core makes an electromagnet much stronger.'
+    - 'A charge moving in a field feels $F = qvB\sin\theta$. The force is at right angles to both $v$ and $B$, so it changes the direction of motion but never the speed: it does no work.'
+    - 'A current-carrying wire in a field feels $F = BIL\sin\theta$. This force drives electric motors. Parallel wires with currents in the same direction attract; opposite directions repel.'
+  formulas:
+    - label: Force on a moving charge
+      latex: 'F = qvB\sin\theta'
+    - label: Force on a current-carrying wire
+      latex: 'F = BIL\sin\theta'
+    - label: Field of a long straight wire
+      latex: 'B = \frac{\mu_0 I}{2\pi r}'
+    - label: Field inside a solenoid
+      latex: 'B = \mu_0 n I'
+    - label: Radius of circular path
+      latex: 'r = \frac{mv}{qB}'
+    - label: Permeability of free space
+      latex: '\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}'
+
+solved_exercises:
+  - uid: g12-physics-4-1-se01
+    problem: 'A 0.5 m wire carries 4 A at right angles to a 0.3 T magnetic field. Find the force on it.'
+    steps:
+      - 'At right angles, $\sin 90^\circ = 1$.'
+      - '$F = BIL = 0.3 \times 4 \times 0.5 = 0.6$ N.'
+    answer: '0.6 N'
+  - uid: g12-physics-4-1-se02
+    problem: 'A long straight wire carries 5 A. Find the magnetic field 0.01 m from it.'
+    steps:
+      - '$B = \frac{\mu_0 I}{2\pi r} = \frac{4\pi \times 10^{-7} \times 5}{2\pi \times 0.01}$.'
+      - '$= \frac{2 \times 10^{-7} \times 5}{0.01} = 1 \times 10^{-4}$ T.'
+    answer: '$1 \times 10^{-4}$ T (100 μT)'
+  - uid: g12-physics-4-1-se03
+    problem: 'A charge of $2\ \mu$C moves at 500 m/s at $30^\circ$ to a 0.4 T field. Find the magnetic force.'
+    steps:
+      - '$F = qvB\sin\theta = 2 \times 10^{-6} \times 500 \times 0.4 \times \sin 30^\circ$.'
+      - '$= 2 \times 10^{-6} \times 500 \times 0.4 \times 0.5 = 2 \times 10^{-4}$ N.'
+    answer: '$2 \times 10^{-4}$ N'
+
+flashcards:
+  - {uid: g12-physics-4-1-fc01, term: Magnetic pole, definition: 'End of a magnet where the field is strongest; north or south.'}
+  - {uid: g12-physics-4-1-fc02, term: Ferromagnetic material, definition: 'A material, like iron, nickel or cobalt, that can be strongly magnetised.'}
+  - {uid: g12-physics-4-1-fc03, term: Magnetic domain, definition: 'A tiny region in which the atomic magnets all point the same way.'}
+  - {uid: g12-physics-4-1-fc04, term: Tesla, definition: 'SI unit of magnetic field: 1 T = 1 N/(A·m).'}
+  - {uid: g12-physics-4-1-fc05, term: Right-hand grip rule, definition: 'Thumb along the current; curled fingers show the direction of the field lines.'}
+  - {uid: g12-physics-4-1-fc06, term: Solenoid, definition: 'A long coil of wire; inside it the field is nearly uniform.'}
+  - {uid: g12-physics-4-1-fc07, term: Electromagnet, definition: 'A solenoid with an iron core; its magnetism can be switched on and off.'}
+  - {uid: g12-physics-4-1-fc08, term: Magnetic force on a charge, definition: '$F = qvB\sin\theta$, at right angles to both $v$ and $B$.'}
+  - {uid: g12-physics-4-1-fc09, term: Motor effect, definition: 'Force on a current-carrying wire in a magnetic field: $F = BIL\sin\theta$.'}
+
+questions:
+  - uid: g12-physics-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What happens when the north pole of one magnet is brought near the north pole of another?'
+    options:
+      A: 'They attract.'
+      B: 'They repel.'
+      C: 'Nothing happens.'
+      D: 'Both magnets lose their magnetism.'
+    answer: B
+    explanation: 'Like poles repel and unlike poles attract.'
+
+  - uid: g12-physics-4-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Outside a bar magnet, magnetic field lines go:'
+    options:
+      A: 'From the north pole to the south pole'
+      B: 'From the south pole to the north pole'
+      C: 'Straight out from the middle'
+      D: 'Only around the north pole'
+    answer: A
+    explanation: 'By convention, field lines leave the north pole and enter the south pole outside the magnet.'
+
+  - uid: g12-physics-4-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the SI unit of magnetic field strength $B$?'
+    options:
+      A: 'Weber'
+      B: 'Henry'
+      C: 'Tesla'
+      D: 'Volt'
+    answer: C
+    explanation: 'The tesla, T, equal to 1 N/(A·m). The weber is the unit of magnetic flux.'
+
+  - uid: g12-physics-4-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'A bar magnet is cut in half across its middle. What do you get?'
+    options:
+      A: 'A separate north pole and a separate south pole'
+      B: 'Two pieces with no magnetism'
+      C: 'Two north poles only'
+      D: 'Two smaller magnets, each with a north and a south pole'
+    answer: D
+    explanation: 'Magnetic poles always come in pairs. Each piece becomes a complete magnet.'
+
+  - uid: g12-physics-4-1-q005
+    type: multiple_answers
+    difficulty: 1
+    stem: 'Which of these metals are ferromagnetic? Choose all that apply.'
+    options:
+      A: 'Iron'
+      B: 'Copper'
+      C: 'Nickel'
+      D: 'Cobalt'
+    answer: [A, C, D]
+    explanation: 'Iron, nickel and cobalt are ferromagnetic. Copper is not attracted by a magnet.'
+
+  - uid: g12-physics-4-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does a magnet become weaker when it is heated strongly or hammered many times?'
+    options:
+      A: 'Its domains are knocked out of line.'
+      B: 'It loses mass.'
+      C: 'Its poles change places.'
+      D: 'It gains electric charge.'
+    answer: A
+    explanation: 'Heat and shocks make the domains point in random directions, so their effects cancel.'
+
+  - uid: g12-physics-4-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'The north pole of a compass needle points towards geographic north. What kind of magnetic pole is near the Earth''s geographic North Pole?'
+    options:
+      A: 'A magnetic north pole'
+      B: 'A magnetic south pole'
+      C: 'There is no magnetic pole there.'
+      D: 'Both poles at once'
+    answer: B
+    explanation: 'Unlike poles attract, so the compass''s north pole is pulled towards a magnetic south pole.'
+
+  - uid: g12-physics-4-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'An electric current in a wire produces a magnetic field around it.'
+    answer: true
+    explanation: 'Oersted showed this when a current deflected a nearby compass needle.'
+
+  - uid: g12-physics-4-1-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'What shape are the magnetic field lines around a long straight current-carrying wire?'
+    options:
+      A: 'Straight lines along the wire'
+      B: 'Straight lines pointing away from the wire'
+      C: 'Circles centred on the wire'
+      D: 'Spirals going along the wire'
+    answer: C
+    explanation: 'The field lines are concentric circles in planes at right angles to the wire.'
+
+  - uid: g12-physics-4-1-q010
+    type: numeric
+    difficulty: 2
+    stem: 'A 0.5 m wire carries 5 A at right angles to a 0.2 T field. What force, in newtons, acts on it?'
+    answer: {value: 0.5, tolerance: 0, unit: N}
+    explanation: '$F = BIL = 0.2 \times 5 \times 0.5 = 0.5$ N.'
+
+  - uid: g12-physics-4-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'A 1 m wire carries 2 A in a 0.4 T field. The wire makes an angle of $30^\circ$ with the field. What is the force on it?'
+    options:
+      A: '0.8 N'
+      B: '0.2 N'
+      C: '0.6 N'
+      D: '0.4 N'
+    answer: D
+    explanation: '$F = BIL\sin 30^\circ = 0.4 \times 2 \times 1 \times 0.5 = 0.4$ N.'
+
+  - uid: g12-physics-4-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A wire carrying a current lies parallel to a magnetic field. What force does the field exert on it?'
+    options:
+      A: 'Zero'
+      B: 'The largest possible force'
+      C: 'Half the largest force'
+      D: 'A force along the wire'
+    answer: A
+    explanation: 'When the wire is parallel to the field, $\theta = 0$ and $\sin 0 = 0$, so $F = 0$.'
+
+  - uid: g12-physics-4-1-q013
+    type: true_false
+    difficulty: 2
+    stem: 'A magnetic field exerts a force on an electric charge that is at rest.'
+    answer: false
+    explanation: '$F = qvB\sin\theta$; if $v = 0$ the magnetic force is zero. Only moving charges feel it.'
+
+  - uid: g12-physics-4-1-q014
+    type: numeric
+    difficulty: 3
+    stem: 'A charge of $3\ \mu$C moves at 2 000 m/s at right angles to a 0.5 T field. What is the magnetic force on it, in millinewtons (mN)?'
+    answer: {value: 3, tolerance: 0, unit: mN}
+    explanation: '$F = qvB = 3 \times 10^{-6} \times 2000 \times 0.5 = 3 \times 10^{-3}$ N $= 3$ mN.'
+
+  - uid: g12-physics-4-1-q015
+    type: single_choice
+    difficulty: 3
+    stem: 'A charged particle moves at right angles to a uniform magnetic field. What happens to its speed?'
+    options:
+      A: 'It increases steadily.'
+      B: 'It decreases steadily.'
+      C: 'It stays the same, because the force is always at right angles to the motion.'
+      D: 'It becomes zero.'
+    answer: C
+    explanation: 'The magnetic force is perpendicular to the velocity, so it does no work. The particle moves in a circle at constant speed.'
+
+  - uid: g12-physics-4-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'A long straight wire carries 10 A. What is the magnetic field 0.02 m from it? ($\mu_0 = 4\pi \times 10^{-7}$ T·m/A)'
+    options:
+      A: '$1 \times 10^{-2}$ T'
+      B: '$5 \times 10^{-4}$ T'
+      C: '$2 \times 10^{-5}$ T'
+      D: '$1 \times 10^{-4}$ T'
+    answer: D
+    explanation: '$B = \frac{\mu_0 I}{2\pi r} = \frac{2 \times 10^{-7} \times 10}{0.02} = 1 \times 10^{-4}$ T.'
+
+  - uid: g12-physics-4-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'You move twice as far from a long straight current-carrying wire. What happens to the magnetic field?'
+    options:
+      A: 'It doubles.'
+      B: 'It halves.'
+      C: 'It becomes four times smaller.'
+      D: 'It stays the same.'
+    answer: B
+    explanation: '$B = \frac{\mu_0 I}{2\pi r}$, so $B$ is inversely proportional to $r$.'
+
+  - uid: g12-physics-4-1-q018
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which changes make an electromagnet stronger? Choose all that apply.'
+    options:
+      A: 'Increasing the current'
+      B: 'Adding more turns of wire'
+      C: 'Putting a soft iron core inside the coil'
+      D: 'Using a thinner coil of the same number of turns and the same current'
+    answer: [A, B, C]
+    explanation: 'More current, more turns and an iron core all increase the field. The thickness of the coil, on its own, does not.'
+
+  - uid: g12-physics-4-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'The field inside a long solenoid is $B = \mu_0 n I$. What does $n$ stand for?'
+    options:
+      A: 'The total number of turns'
+      B: 'The number of turns per metre of length'
+      C: 'The number of layers of wire'
+      D: 'The number of magnets inside'
+    answer: B
+    explanation: '$n$ is the number of turns per unit length, $n = \frac{N}{L}$.'
+
+  - uid: g12-physics-4-1-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'A proton moves east through a magnetic field that points north. In which direction is the magnetic force on the proton?'
+    options:
+      A: 'Upward'
+      B: 'Downward'
+      C: 'West'
+      D: 'North'
+    answer: A
+    explanation: 'Using the right-hand rule ($\vec{F} = q\vec{v} \times \vec{B}$): east crossed with north points vertically up. A proton is positive, so the force is upward.'
+
+  - uid: g12-physics-4-1-q021
+    type: single_choice
+    difficulty: 3
+    stem: 'An electron moves east through a magnetic field that points north. In which direction is the magnetic force on it?'
+    options:
+      A: 'Upward'
+      B: 'East'
+      C: 'South'
+      D: 'Downward'
+    answer: D
+    explanation: 'For a positive charge the force would be upward. The electron is negative, so its force is the opposite: downward.'
+
+  - uid: g12-physics-4-1-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Two long parallel wires carry currents in the same direction. What do the wires do?'
+    options:
+      A: 'They repel each other.'
+      B: 'They twist around each other.'
+      C: 'They attract each other.'
+      D: 'They do not affect each other.'
+    answer: C
+    explanation: 'Each wire sits in the other''s magnetic field. With currents in the same direction the forces pull the wires together.'
+
+  - uid: g12-physics-4-1-q023
+    type: single_choice
+    difficulty: 3
+    stem: 'A charged particle moves in a circle in a magnetic field, with radius $r = \frac{mv}{qB}$. If its speed doubles, the radius:'
+    options:
+      A: 'Halves'
+      B: 'Stays the same'
+      C: 'Becomes four times larger'
+      D: 'Doubles'
+    answer: D
+    explanation: '$r$ is directly proportional to $v$, so doubling $v$ doubles $r$.'
+
+  - uid: g12-physics-4-1-q024
+    type: fill_in
+    difficulty: 1
+    stem: 'Small regions inside a ferromagnetic material, in which the atomic magnets all point the same way, are called magnetic ________.'
+    answer: [domains, domain]
+    explanation: 'When most domains line up, the material is magnetised.'
+
+  - uid: g12-physics-4-1-q025
+    type: fill_in
+    difficulty: 1
+    stem: 'A coil of wire with a soft iron core, which becomes magnetic only while a current flows, is called an ________.'
+    answer: [electromagnet]
+    explanation: 'Electromagnets are used in cranes, electric bells, relays and loudspeakers.'
+
+  - uid: g12-physics-4-1-q026
+    type: true_false
+    difficulty: 2
+    stem: 'A magnetic force on a moving charge can change the direction of its motion but cannot change its speed.'
+    answer: true
+    explanation: 'The force is always perpendicular to the velocity, so it does no work on the charge.'
+
+  - uid: g12-physics-4-1-q027
+    type: matching
+    difficulty: 2
+    stem: 'Match each formula with what it gives.'
+    left:
+      L1: '$F = qvB\sin\theta$'
+      L2: '$F = BIL\sin\theta$'
+      L3: '$B = \mu_0 n I$'
+    right:
+      R1: 'Force on a current-carrying wire'
+      R2: 'Field inside a long solenoid'
+      R3: 'Force on a moving charge'
+      R4: 'Pressure in a liquid'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '$qvB$ is for a single charge, $BIL$ is for a wire, and $\mu_0 n I$ is the solenoid field. Pressure in a liquid is $\rho g h$.'
+
+  - uid: g12-physics-4-1-q028
+    type: ordering
+    difficulty: 2
+    stem: 'A long straight wire carries a steady current. Put these points in order of magnetic field strength, strongest first, by their distance from the wire.'
+    items:
+      A: '4 cm'
+      B: '1 cm'
+      C: '8 cm'
+      D: '2 cm'
+    answer: [B, D, A, C]
+    explanation: '$B \propto \frac{1}{r}$, so the nearest point has the strongest field.'
+
+  - uid: g12-physics-4-1-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'Which device uses the force on a current-carrying coil in a magnetic field to produce rotation?'
+    options:
+      A: 'A transformer'
+      B: 'An electric motor'
+      C: 'A battery'
+      D: 'A light bulb'
+    answer: B
+    explanation: 'In a motor, forces $F = BIL$ on the two sides of the coil act in opposite directions and turn it.'
+
+  - uid: g12-physics-4-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Who first showed that an electric current can deflect a compass needle?'
+    options:
+      A: 'Hans Christian Oersted'
+      B: 'Isaac Newton'
+      C: 'Archimedes'
+      D: 'Daniel Bernoulli'
+    answer: A
+    explanation: 'In 1820 Oersted found that a current-carrying wire moves a nearby compass, linking electricity and magnetism.'
