@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-1-2-q001: {hash: '8f44db8fa2544f763deca177b8ffafa9b540b995723b8c4bdf3e338070fed10e', answer: B}
+  g12-mathematics-1-2-q002: {hash: 'fe92d45392280597b75f3a67c19907adbe75cd35ccd95ea4dd7a5439852b42e4', answer: A}
+  g12-mathematics-1-2-q003: {hash: 'f3c7d86e8f007fa8a7f82c80340ceb1b917bd2e16f8ca5f204c4972656b1390a', answer: 820}
+  g12-mathematics-1-2-q004: {hash: '36b8158fd96f1bd4420dcdecb54a31f209c84b4b3509659a1874c2ef718ea64a', answer: C}
+  g12-mathematics-1-2-q005: {hash: '4c75aaea689c8833aa740043120b2b75ddc7a3b0501bb1f6409b48d76516f44d', answer: D}
+  g12-mathematics-1-2-q006: {hash: '3066104e85d482f4e097882a3c9ffc4e801ec60c8955c030e3f49a1e9ffcd22d', answer: B}
+  g12-mathematics-1-2-q007: {hash: 'fcacd4d0acf22c346d0234e1ddd83ab13410cfdaaee937bba474ffc9ac5e2a6e', answer: A}
+  g12-mathematics-1-2-q008: {hash: 'a26153d76fedb2f521ee085bc5923daa9286cb34f38c47df668a7f139d9dbe50', answer: C}
+  g12-mathematics-1-2-q009: {hash: '5a540238f649215be80f36ceab76aa8e0dc622d7eb92471403e9f338b591837a', answer: true}
+  g12-mathematics-1-2-q010: {hash: '54698f0cdada3b7d04b385044fa6afef2f9ac1046f4153f948a8e881399db1c0', answer: false}
+  g12-mathematics-1-2-q011: {hash: '1b45a38055389314b616502a9db6533ea4ecbe0a6fdf5e71a46727ff5d8a2449', answer: D}
+  g12-mathematics-1-2-q012: {hash: 'f2c2bf5e7850b7e80b19898402fce23f652c947ab66999dff284dd3123346181', answer: 650}
+  g12-mathematics-1-2-q013: {hash: '4b6e077dec34e0438ee1d1c36ecfdb67c7ca7b9499af74ca9b4d437aefdb7b50', answer: B}
+  g12-mathematics-1-2-q014: {hash: '7926e2888aaa37490e561e602a2a3fa4c90298faeafbd7e8f15fc935b7260562', answer: 500}
+  g12-mathematics-1-2-q015: {hash: '54f707ba1193adcedffc7896d3d278553839eb639c7fd5054050b07a05e3f5c0', answer: A}
+  g12-mathematics-1-2-q016: {hash: '7f9e0d9ee05aa82013f9902e09b428294a52aec4af74d48fe8fd076560434ddd', answer: D}
+  g12-mathematics-1-2-q017: {hash: 'a87295ed2c26b51e8217d5544ffefd84798ac0a099cce055753d18d432b44c76', answer: B}
+  g12-mathematics-1-2-q018: {hash: '67eea1b994d64e63cdfb6499975fe576c4cc3d0838852b3932c7cee4035af046', answer: 65}
+  g12-mathematics-1-2-q019: {hash: '803fab44aec60e977b82eba39a91728f9c4d7e918a4d3280af1ea8baa489c48a', answer: C}
+  g12-mathematics-1-2-q020: {hash: '3abb8d12564cd255d8dfefe920010eb0583d47f41aa8e3bcebf36aabab25e9eb', answer: A}
+  g12-mathematics-1-2-q021: {hash: '4436060f6d09c3142a534a993bdf145e7858edd02a48d40706b14fbf2205dd97', answer: [A, B, C]}
+  g12-mathematics-1-2-q022: {hash: '4a6bc3d56c6a4ee0ae2f15694b3af10073f65f0aa626fa425e64a919833ccbcf', answer: 'sigma', note: 'Make sure the accepted answers include variants such as "capital sigma" and "summation sign/symbol", since a student may name it either way.'}
+  g12-mathematics-1-2-q023: {hash: '661cd747db8391f94cc3a789781a1bc598e208b2ac8df96109eb13512be0ac6c', answer: {L1: R2, L2: R1, L3: R4}}
+  g12-mathematics-1-2-q024: {hash: 'd77950cdcdbc8bad5c3f282b998e8b3870b9e4564f5cd2657c3f5d210053c46e', answer: D}
+  g12-mathematics-1-2-q025: {hash: 'b3630b0233a8e54c1a7682b567217c76b404c0152f2b57d9ab1de2de81575c49', answer: C}
+  g12-mathematics-1-2-q026: {hash: '88a7522f3b6620fa1b785fdf9ba479bf9f79e6ee04ca4c4098e6da02e834311f', answer: B}
+  g12-mathematics-1-2-q027: {hash: 'fc3a2d242d8fdaefec2ababa3188b6f2c798992d62c92adc28d7684044f0fd24', answer: [D, A, B, C]}
+  g12-mathematics-1-2-q028: {hash: 'dede3bb4d754d5aae6e550d76aefcbae60caa6951ee5b52f6d92e17323c7a1ba', answer: true}
+  g12-mathematics-1-2-q029: {hash: 'b1bad0b9bb4ba84325d5a1d78f7ee76dcb851b78b18e6fc4db8afe18df0e2b77', answer: A}
+  g12-mathematics-1-2-q030: {hash: 'c9e15b4b606446d48aa1e99bc7bc6eb7c57fc3d0188be378b6b89c23165f4757', answer: D, note: 'Minor wording: "doubles the amount every month" could be read as the total balance doubling. Clearer: "each month she saves twice as much as the month before".'}

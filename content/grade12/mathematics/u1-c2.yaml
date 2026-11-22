@@ -1,0 +1,380 @@
+summary:
+  key_points:
+    - 'Sigma notation writes a sum in short form: $\sum_{k=1}^{n} a_k = a_1 + a_2 + \dots + a_n$. $k$ is the index, 1 is the lower limit and $n$ the upper limit.'
+    - 'The number of terms in $\sum_{k=m}^{n} a_k$ is $n - m + 1$.'
+    - 'Sums can be split and constants taken out: $\sum (a_k + b_k) = \sum a_k + \sum b_k$ and $\sum c\,a_k = c \sum a_k$.'
+    - 'A sum of products is NOT the product of the sums: $\sum a_k b_k \neq \left(\sum a_k\right)\left(\sum b_k\right)$ in general.'
+    - 'The $n$th partial sum $S_n$ is the sum of the first $n$ terms. Then $a_n = S_n - S_{n-1}$ for $n \ge 2$.'
+    - 'Arithmetic series: add the first and last terms, multiply by the number of terms, divide by 2.'
+    - 'Geometric series with $r \neq 1$ use $S_n = \frac{a_1(1 - r^n)}{1 - r}$; if $r = 1$ then $S_n = n a_1$.'
+  formulas:
+    - label: Arithmetic series
+      latex: 'S_n = \frac{n}{2}\left(2a_1 + (n-1)d\right) = \frac{n(a_1 + a_n)}{2}'
+    - label: Geometric series (r ≠ 1)
+      latex: 'S_n = \frac{a_1(1 - r^n)}{1 - r}'
+    - label: Sum of the first n whole numbers
+      latex: '\sum_{k=1}^{n} k = \frac{n(n+1)}{2}'
+    - label: Sum of the first n squares
+      latex: '\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}'
+    - label: Sum of a constant
+      latex: '\sum_{k=1}^{n} c = cn'
+
+solved_exercises:
+  - uid: g12-mathematics-1-2-se01
+    problem: 'Find the sum of the first 15 terms of the arithmetic sequence $2, 5, 8, \dots$'
+    steps:
+      - '$a_1 = 2$, $d = 3$, $n = 15$.'
+      - '$S_{15} = \frac{15}{2}\left(2 \times 2 + 14 \times 3\right) = \frac{15}{2}(4 + 42) = \frac{15}{2} \times 46$.'
+      - '$\frac{15}{2} \times 46 = 15 \times 23 = 345$.'
+    answer: '$S_{15} = 345$'
+  - uid: g12-mathematics-1-2-se02
+    problem: 'Evaluate $\sum_{k=1}^{6} (2k^2 - 1)$.'
+    steps:
+      - 'Split the sum: $2\sum_{k=1}^{6} k^2 - \sum_{k=1}^{6} 1$.'
+      - '$\sum_{k=1}^{6} k^2 = \frac{6 \times 7 \times 13}{6} = 91$ and $\sum_{k=1}^{6} 1 = 6$.'
+      - '$2 \times 91 - 6 = 182 - 6 = 176$.'
+    answer: '176'
+  - uid: g12-mathematics-1-2-se03
+    problem: 'Find the sum $3 + 6 + 12 + \dots$ of the first 7 terms.'
+    steps:
+      - 'It is geometric: $a_1 = 3$, $r = 2$, $n = 7$.'
+      - '$S_7 = \frac{3(1 - 2^7)}{1 - 2} = \frac{3(1 - 128)}{-1} = 3 \times 127$.'
+      - '$3 \times 127 = 381$.'
+    answer: '$S_7 = 381$'
+
+flashcards:
+  - {uid: g12-mathematics-1-2-fc01, term: Sigma notation, definition: 'Short way to write a sum, using the Greek letter $\Sigma$.'}
+  - {uid: g12-mathematics-1-2-fc02, term: Index of summation, definition: 'The letter (often $k$) that runs from the lower limit to the upper limit.'}
+  - {uid: g12-mathematics-1-2-fc03, term: Series, definition: 'The sum of the terms of a sequence.'}
+  - {uid: g12-mathematics-1-2-fc04, term: Partial sum, definition: '$S_n$, the sum of the first $n$ terms of a sequence.'}
+  - {uid: g12-mathematics-1-2-fc05, term: Term from partial sums, definition: '$a_n = S_n - S_{n-1}$ for $n \ge 2$, and $a_1 = S_1$.'}
+  - {uid: g12-mathematics-1-2-fc06, term: Arithmetic series formula, definition: '$S_n = \frac{n(a_1 + a_n)}{2}$'}
+  - {uid: g12-mathematics-1-2-fc07, term: Geometric series formula, definition: '$S_n = \frac{a_1(1 - r^n)}{1 - r}$ when $r \neq 1$.'}
+  - {uid: g12-mathematics-1-2-fc08, term: Sum of first n odd numbers, definition: '$1 + 3 + 5 + \dots + (2n - 1) = n^2$'}
+  - {uid: g12-mathematics-1-2-fc09, term: Sum of first n whole numbers, definition: '$\frac{n(n+1)}{2}$'}
+  - {uid: g12-mathematics-1-2-fc10, term: Number of terms, definition: 'From $k = m$ to $k = n$ there are $n - m + 1$ terms.'}
+
+questions:
+  - uid: g12-mathematics-1-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\sum_{k=1}^{5} k$?'
+    options:
+      A: '10'
+      B: '15'
+      C: '25'
+      D: '20'
+    answer: B
+    explanation: '$1 + 2 + 3 + 4 + 5 = 15$. Or use $\frac{n(n+1)}{2} = \frac{5 \times 6}{2} = 15$.'
+
+  - uid: g12-mathematics-1-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\sum_{k=1}^{4} (2k + 1)$?'
+    options:
+      A: '24'
+      B: '20'
+      C: '16'
+      D: '28'
+    answer: A
+    explanation: 'The terms are 3, 5, 7 and 9. Their sum is 24.'
+
+  - uid: g12-mathematics-1-2-q003
+    type: numeric
+    difficulty: 2
+    stem: 'Find the sum of the first 20 terms of the arithmetic sequence $3, 7, 11, \dots$'
+    answer: {value: 820, tolerance: 0}
+    explanation: '$S_{20} = \frac{20}{2}\left(2 \times 3 + 19 \times 4\right) = 10(6 + 76) = 820$.'
+
+  - uid: g12-mathematics-1-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $1 + 2 + 3 + \dots + 100$?'
+    options:
+      A: '5 000'
+      B: '5 100'
+      C: '5 050'
+      D: '10 100'
+    answer: C
+    explanation: '$\frac{100 \times 101}{2} = 5050$.'
+
+  - uid: g12-mathematics-1-2-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\sum_{k=1}^{10} 3$?'
+    options:
+      A: '3'
+      B: '13'
+      C: '10'
+      D: '30'
+    answer: D
+    explanation: 'The term 3 is added 10 times: $\sum_{k=1}^{10} 3 = 3 \times 10 = 30$.'
+
+  - uid: g12-mathematics-1-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $2 + 6 + 18 + 54 + 162$?'
+    options:
+      A: '240'
+      B: '242'
+      C: '486'
+      D: '162'
+    answer: B
+    explanation: 'Geometric with $a_1 = 2$, $r = 3$, $n = 5$: $S_5 = \frac{2(3^5 - 1)}{3 - 1} = 3^5 - 1 = 242$. Adding directly also gives 242.'
+
+  - uid: g12-mathematics-1-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sigma notation is equal to $4 + 8 + 12 + \dots + 40$?'
+    options:
+      A: '$\sum_{k=1}^{10} 4k$'
+      B: '$\sum_{k=4}^{40} k$'
+      C: '$\sum_{k=1}^{40} 4k$'
+      D: '$\sum_{k=1}^{9} 4k$'
+    answer: A
+    explanation: 'The terms are $4 \times 1, 4 \times 2, \dots, 4 \times 10$, so $k$ runs from 1 to 10 and the term is $4k$.'
+
+  - uid: g12-mathematics-1-2-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\sum_{k=1}^{4} k^2$?'
+    options:
+      A: '16'
+      B: '20'
+      C: '30'
+      D: '100'
+    answer: C
+    explanation: '$1 + 4 + 9 + 16 = 30$. Check with $\frac{4 \times 5 \times 9}{6} = 30$.'
+
+  - uid: g12-mathematics-1-2-q009
+    type: true_false
+    difficulty: 1
+    stem: 'For any numbers, $\sum_{k=1}^{n} (a_k + b_k) = \sum_{k=1}^{n} a_k + \sum_{k=1}^{n} b_k$.'
+    answer: true
+    explanation: 'Addition can be done in any order, so the sum of $a_k + b_k$ can be split into two sums.'
+
+  - uid: g12-mathematics-1-2-q010
+    type: true_false
+    difficulty: 2
+    stem: 'For any numbers, $\sum_{k=1}^{n} a_k b_k = \left(\sum_{k=1}^{n} a_k\right)\left(\sum_{k=1}^{n} b_k\right)$.'
+    answer: false
+    explanation: 'Try $n = 2$ with all $a_k = b_k = 1$: the left side is $1 + 1 = 2$ but the right side is $2 \times 2 = 4$.'
+
+  - uid: g12-mathematics-1-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the sum of the first $n$ odd numbers, $\sum_{k=1}^{n} (2k - 1)$?'
+    options:
+      A: '$n(n + 1)$'
+      B: '$2n^2$'
+      C: '$n^2 - 1$'
+      D: '$n^2$'
+    answer: D
+    explanation: '$2\sum k - \sum 1 = 2 \cdot \frac{n(n+1)}{2} - n = n^2 + n - n = n^2$. Check: $1 + 3 + 5 = 9 = 3^2$.'
+
+  - uid: g12-mathematics-1-2-q012
+    type: numeric
+    difficulty: 2
+    stem: 'Find the sum of all even numbers from 2 to 50.'
+    answer: {value: 650, tolerance: 0}
+    explanation: '$2 + 4 + \dots + 50 = 2(1 + 2 + \dots + 25) = 2 \times \frac{25 \times 26}{2} = 650$.'
+
+  - uid: g12-mathematics-1-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Abebe pays 100 birr in the first month and 20 birr more every month after that. How much does he pay in total over 12 months?'
+    options:
+      A: '2 400 birr'
+      B: '2 520 birr'
+      C: '1 320 birr'
+      D: '3 840 birr'
+    answer: B
+    explanation: 'Arithmetic series with $a_1 = 100$, $d = 20$, $n = 12$: $S_{12} = \frac{12}{2}(200 + 11 \times 20) = 6 \times 420 = 2520$ birr.'
+
+  - uid: g12-mathematics-1-2-q014
+    type: numeric
+    difficulty: 1
+    stem: 'An arithmetic sequence has 10 terms. The first term is 5 and the last term is 95. What is the sum of all 10 terms?'
+    answer: {value: 500, tolerance: 0}
+    explanation: '$S_{10} = \frac{10(5 + 95)}{2} = \frac{10 \times 100}{2} = 500$.'
+
+  - uid: g12-mathematics-1-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16}$?'
+    options:
+      A: '$\frac{31}{16}$'
+      B: '$2$'
+      C: '$\frac{15}{8}$'
+      D: '$\frac{31}{32}$'
+    answer: A
+    explanation: 'Write all terms in sixteenths: $\frac{16 + 8 + 4 + 2 + 1}{16} = \frac{31}{16}$.'
+
+  - uid: g12-mathematics-1-2-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\sum_{k=3}^{6} k$?'
+    options:
+      A: '21'
+      B: '15'
+      C: '12'
+      D: '18'
+    answer: D
+    explanation: 'The index starts at 3: $3 + 4 + 5 + 6 = 18$.'
+
+  - uid: g12-mathematics-1-2-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\sum_{k=1}^{5} (-1)^k$?'
+    options:
+      A: '0'
+      B: '$-1$'
+      C: '1'
+      D: '$-5$'
+    answer: B
+    explanation: 'The terms are $-1, 1, -1, 1, -1$. The pairs cancel and one $-1$ is left.'
+
+  - uid: g12-mathematics-1-2-q018
+    type: numeric
+    difficulty: 2
+    stem: 'If $\sum_{k=1}^{10} a_k = 40$ and $\sum_{k=1}^{10} b_k = 15$, what is $\sum_{k=1}^{10} (2a_k - b_k)$?'
+    answer: {value: 65, tolerance: 0}
+    explanation: '$\sum (2a_k - b_k) = 2\sum a_k - \sum b_k = 2 \times 40 - 15 = 65$.'
+
+  - uid: g12-mathematics-1-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'How many terms of $1 + 3 + 5 + 7 + \dots$ must be added to get 144?'
+    options:
+      A: '72'
+      B: '14'
+      C: '12'
+      D: '11'
+    answer: C
+    explanation: 'The sum of the first $n$ odd numbers is $n^2$. So $n^2 = 144$ and $n = 12$.'
+
+  - uid: g12-mathematics-1-2-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'The partial sums of a sequence are $S_n = n^2 + 2n$. What is the 5th term $a_5$?'
+    options:
+      A: '11'
+      B: '35'
+      C: '9'
+      D: '24'
+    answer: A
+    explanation: '$a_5 = S_5 - S_4 = (25 + 10) - (16 + 8) = 35 - 24 = 11$.'
+
+  - uid: g12-mathematics-1-2-q021
+    type: multiple_answers
+    difficulty: 3
+    stem: 'Which of these are equal to 55? Choose all that apply.'
+    options:
+      A: '$\sum_{k=1}^{10} k$'
+      B: '$\sum_{k=1}^{5} k^2$'
+      C: '$\sum_{k=0}^{10} k$'
+      D: '$\sum_{k=1}^{11} k$'
+    answer: [A, B, C]
+    explanation: '$\sum_{k=1}^{10} k = 55$. $\sum_{k=1}^{5} k^2 = 1 + 4 + 9 + 16 + 25 = 55$. Starting at $k = 0$ only adds 0, so C is also 55. D is $55 + 11 = 66$.'
+
+  - uid: g12-mathematics-1-2-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'The Greek letter $\Sigma$ used to write sums is called ________.'
+    answer: [sigma, capital sigma, summation sign, summation symbol]
+    explanation: 'Capital sigma, $\Sigma$, stands for "sum".'
+
+  - uid: g12-mathematics-1-2-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each sum with its closed form.'
+    left:
+      L1: '$\sum_{k=1}^{n} 1$'
+      L2: '$\sum_{k=1}^{n} k$'
+      L3: '$\sum_{k=1}^{n} k^2$'
+    right:
+      R1: '$\frac{n(n+1)}{2}$'
+      R2: '$n$'
+      R3: '$n^2$'
+      R4: '$\frac{n(n+1)(2n+1)}{6}$'
+    answer: {L1: R2, L2: R1, L3: R4}
+    explanation: 'Adding 1 $n$ times gives $n$. The sum of the first $n$ whole numbers is $\frac{n(n+1)}{2}$, and the sum of the first $n$ squares is $\frac{n(n+1)(2n+1)}{6}$. $n^2$ is the sum of the first $n$ odd numbers.'
+
+  - uid: g12-mathematics-1-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'A geometric sequence has $a_1 = 7$ and common ratio $r = 1$. What is the sum of its first 6 terms?'
+    options:
+      A: '7'
+      B: '0'
+      C: 'It cannot be found'
+      D: '42'
+    answer: D
+    explanation: 'With $r = 1$ every term is 7, so $S_6 = 6 \times 7 = 42$. The formula with $1 - r$ in the denominator cannot be used when $r = 1$.'
+
+  - uid: g12-mathematics-1-2-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'A farmer plants 5 trees in the first row, 8 in the second, 11 in the third, and so on, for 11 rows. How many trees does he plant?'
+    options:
+      A: '200'
+      B: '385'
+      C: '220'
+      D: '165'
+    answer: C
+    explanation: '$a_1 = 5$, $d = 3$, $n = 11$: $S_{11} = \frac{11}{2}(10 + 10 \times 3) = \frac{11}{2} \times 40 = 220$.'
+
+  - uid: g12-mathematics-1-2-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'What is the sum of the first 6 terms of the geometric sequence $3, -6, 12, \dots$?'
+    options:
+      A: '189'
+      B: '$-63$'
+      C: '63'
+      D: '$-189$'
+    answer: B
+    explanation: '$a_1 = 3$, $r = -2$: $S_6 = \frac{3(1 - (-2)^6)}{1 - (-2)} = \frac{3(1 - 64)}{3} = -63$. Check: $3 - 6 + 12 - 24 + 48 - 96 = -63$.'
+
+  - uid: g12-mathematics-1-2-q027
+    type: ordering
+    difficulty: 3
+    stem: 'Put these sums in order from smallest to largest.'
+    items:
+      A: '$\sum_{k=1}^{4} k$'
+      B: '$\sum_{k=1}^{3} k^2$'
+      C: '$\sum_{k=1}^{4} 2^{k-1}$'
+      D: '$\sum_{k=1}^{2} 3k$'
+    answer: [D, A, B, C]
+    explanation: 'A $= 10$, B $= 1 + 4 + 9 = 14$, C $= 1 + 2 + 4 + 8 = 15$, D $= 3 + 6 = 9$. So the order is 9, 10, 14, 15.'
+
+  - uid: g12-mathematics-1-2-q028
+    type: true_false
+    difficulty: 1
+    stem: 'The sum of the first 10 terms of the arithmetic sequence $1, 3, 5, \dots$ is 100.'
+    answer: true
+    explanation: 'These are the first 10 odd numbers, and their sum is $10^2 = 100$.'
+
+  - uid: g12-mathematics-1-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'Which expression equals $\sum_{k=1}^{n} (3k - 2)$?'
+    options:
+      A: '$\frac{3n^2 - n}{2}$'
+      B: '$3n^2 - 2n$'
+      C: '$\frac{3n^2 + n}{2}$'
+      D: '$3n^2 - n$'
+    answer: A
+    explanation: '$3\sum k - 2\sum 1 = \frac{3n(n+1)}{2} - 2n = \frac{3n^2 + 3n - 4n}{2} = \frac{3n^2 - n}{2}$. Check with $n = 1$: the sum is 1 and $\frac{3 - 1}{2} = 1$.'
+
+  - uid: g12-mathematics-1-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Ayan saves 10 birr in the first month. Each month after that she saves twice as much as in the month before. How much has she saved in total after 6 months?'
+    options:
+      A: '320 birr'
+      B: '640 birr'
+      C: '310 birr'
+      D: '630 birr'
+    answer: D
+    explanation: 'Geometric series with $a_1 = 10$, $r = 2$, $n = 6$: $S_6 = 10(2^6 - 1) = 10 \times 63 = 630$ birr.'

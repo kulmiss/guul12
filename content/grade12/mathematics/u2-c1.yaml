@@ -1,0 +1,385 @@
+summary:
+  key_points:
+    - 'The limit $\lim_{x \to a} f(x) = L$ means $f(x)$ gets as close as we like to $L$ when $x$ is close enough to $a$ (but not equal to $a$).'
+    - 'A sequence converges to $L$ if $a_n$ gets closer and closer to $L$ as $n \to \infty$. Basic facts: $\lim \frac{1}{n} = 0$, and $\lim r^n = 0$ when $|r| < 1$.'
+    - 'Limit laws: the limit of a sum, difference, product or quotient (non-zero denominator) is the sum, difference, product or quotient of the limits.'
+    - 'For polynomials, find the limit by direct substitution.'
+    - 'If substitution gives $\frac{0}{0}$, simplify first: factor and cancel, or multiply by the conjugate of a square root.'
+    - 'At infinity, a rational function behaves like its leading terms: equal degrees give the ratio of leading coefficients; a bigger denominator degree gives 0.'
+    - 'The two-sided limit exists only if the left and right limits are equal.'
+    - '$f$ is continuous at $a$ when $f(a)$ is defined, $\lim_{x \to a} f(x)$ exists, and they are equal.'
+  formulas:
+    - label: Limit of a constant multiple
+      latex: '\lim_{x \to a} c f(x) = c \lim_{x \to a} f(x)'
+    - label: Difference of squares (useful for 0/0)
+      latex: 'x^2 - a^2 = (x - a)(x + a)'
+    - label: Difference of cubes
+      latex: 'x^3 - a^3 = (x - a)(x^2 + ax + a^2)'
+    - label: Equal degrees at infinity
+      latex: '\lim_{x \to \infty} \frac{a x^n + \dots}{b x^n + \dots} = \frac{a}{b}'
+    - label: Continuity at a
+      latex: '\lim_{x \to a} f(x) = f(a)'
+
+solved_exercises:
+  - uid: g12-mathematics-2-1-se01
+    problem: 'Find $\lim_{x \to 5} \frac{x^2 - 25}{x - 5}$.'
+    steps:
+      - 'Substitution gives $\frac{0}{0}$, so simplify.'
+      - '$\frac{x^2 - 25}{x - 5} = \frac{(x - 5)(x + 5)}{x - 5} = x + 5$ for $x \neq 5$.'
+      - '$\lim_{x \to 5} (x + 5) = 10$.'
+    answer: '10'
+  - uid: g12-mathematics-2-1-se02
+    problem: 'Find $\lim_{n \to \infty} \frac{4n^2 - n}{2n^2 + 7}$.'
+    steps:
+      - 'Divide top and bottom by $n^2$: $\frac{4 - \frac{1}{n}}{2 + \frac{7}{n^2}}$.'
+      - 'As $n \to \infty$, $\frac{1}{n} \to 0$ and $\frac{7}{n^2} \to 0$.'
+      - 'The limit is $\frac{4}{2} = 2$.'
+    answer: '2'
+  - uid: g12-mathematics-2-1-se03
+    problem: 'Find $\lim_{x \to 9} \frac{\sqrt{x} - 3}{x - 9}$.'
+    steps:
+      - 'Substitution gives $\frac{0}{0}$. Write $x - 9 = (\sqrt{x} - 3)(\sqrt{x} + 3)$.'
+      - 'So the fraction is $\frac{1}{\sqrt{x} + 3}$ for $x \neq 9$.'
+      - 'At $x = 9$: $\frac{1}{3 + 3} = \frac{1}{6}$.'
+    answer: '$\frac{1}{6}$'
+
+flashcards:
+  - {uid: g12-mathematics-2-1-fc01, term: Limit, definition: 'The value $f(x)$ approaches as $x$ approaches a number (or infinity).'}
+  - {uid: g12-mathematics-2-1-fc02, term: Convergent sequence, definition: 'A sequence whose terms approach one finite number.'}
+  - {uid: g12-mathematics-2-1-fc03, term: Indeterminate form 0/0, definition: 'Substitution gives $\frac{0}{0}$: simplify before finding the limit.'}
+  - {uid: g12-mathematics-2-1-fc04, term: One-sided limits, definition: 'The limit from the left ($x \to a^-$) and from the right ($x \to a^+$).'}
+  - {uid: g12-mathematics-2-1-fc05, term: When a limit exists, definition: 'Both one-sided limits exist and are equal.'}
+  - {uid: g12-mathematics-2-1-fc06, term: Continuous at a point, definition: '$f(a)$ is defined and $\lim_{x \to a} f(x) = f(a)$.'}
+  - {uid: g12-mathematics-2-1-fc07, term: Horizontal asymptote, definition: 'The line $y = L$ when $\lim_{x \to \pm\infty} f(x) = L$.'}
+  - {uid: g12-mathematics-2-1-fc08, term: Conjugate, definition: 'For $\sqrt{a} - b$ it is $\sqrt{a} + b$; multiplying them removes the root.'}
+  - {uid: g12-mathematics-2-1-fc09, term: Limit of 1/n, definition: '$\lim_{n \to \infty} \frac{1}{n} = 0$'}
+
+questions:
+  - uid: g12-mathematics-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\lim_{n \to \infty} \frac{1}{n}$?'
+    options:
+      A: '1'
+      B: '0'
+      C: '$\infty$'
+      D: 'It does not exist.'
+    answer: B
+    explanation: 'As $n$ grows, $\frac{1}{n}$ gets as close to 0 as we like: $\frac{1}{10}, \frac{1}{100}, \frac{1}{1000}, \dots$'
+
+  - uid: g12-mathematics-2-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\lim_{x \to 2} (3x + 1)$?'
+    options:
+      A: '7'
+      B: '6'
+      C: '5'
+      D: '9'
+    answer: A
+    explanation: '$3x + 1$ is a polynomial, so substitute: $3(2) + 1 = 7$.'
+
+  - uid: g12-mathematics-2-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\lim_{x \to 3} \frac{x^2 - 9}{x - 3}$?'
+    options:
+      A: '0'
+      B: '3'
+      C: '6'
+      D: 'It does not exist.'
+    answer: C
+    explanation: '$\frac{x^2 - 9}{x - 3} = \frac{(x - 3)(x + 3)}{x - 3} = x + 3$ for $x \neq 3$. The limit is $3 + 3 = 6$.'
+
+  - uid: g12-mathematics-2-1-q004
+    type: numeric
+    difficulty: 2
+    stem: 'Find $\lim_{x \to 1} \frac{x^2 + x - 2}{x - 1}$.'
+    answer: {value: 3, tolerance: 0}
+    explanation: '$x^2 + x - 2 = (x + 2)(x - 1)$, so the fraction equals $x + 2$ for $x \neq 1$. The limit is $1 + 2 = 3$.'
+
+  - uid: g12-mathematics-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\lim_{n \to \infty} \frac{2n + 1}{n + 3}$?'
+    options:
+      A: '$\frac{1}{3}$'
+      B: '1'
+      C: '$\infty$'
+      D: '2'
+    answer: D
+    explanation: 'Divide top and bottom by $n$: $\frac{2 + \frac{1}{n}}{1 + \frac{3}{n}} \to \frac{2}{1} = 2$.'
+
+  - uid: g12-mathematics-2-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\lim_{x \to \infty} \frac{3x^2 + 1}{x^2 - 5}$?'
+    options:
+      A: '3'
+      B: '$-\frac{1}{5}$'
+      C: '0'
+      D: '$\infty$'
+    answer: A
+    explanation: 'The degrees are equal, so the limit is the ratio of the leading coefficients: $\frac{3}{1} = 3$.'
+
+  - uid: g12-mathematics-2-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\lim_{x \to \infty} \frac{x + 1}{x^2 + 1}$?'
+    options:
+      A: '1'
+      B: '0'
+      C: '$\infty$'
+      D: '$\frac{1}{2}$'
+    answer: B
+    explanation: 'The denominator has the higher degree, so the fraction tends to 0. Dividing by $x^2$: $\frac{\frac{1}{x} + \frac{1}{x^2}}{1 + \frac{1}{x^2}} \to \frac{0}{1} = 0$.'
+
+  - uid: g12-mathematics-2-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'If $f$ is continuous at $x = a$, then $\lim_{x \to a} f(x) = f(a)$.'
+    answer: true
+    explanation: 'This equality is exactly what continuity at $a$ means.'
+
+  - uid: g12-mathematics-2-1-q009
+    type: true_false
+    difficulty: 1
+    stem: 'The sequence $a_n = (-1)^n$ converges.'
+    answer: false
+    explanation: 'The terms jump between $-1$ and $1$ forever, so they do not approach one number.'
+
+  - uid: g12-mathematics-2-1-q010
+    type: numeric
+    difficulty: 3
+    stem: 'Find $\lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x}$. (Give a decimal.)'
+    answer: {value: 0.25, tolerance: 0}
+    explanation: 'Multiply top and bottom by $\sqrt{x + 4} + 2$: the top becomes $(x + 4) - 4 = x$, so the fraction is $\frac{1}{\sqrt{x + 4} + 2}$. At $x = 0$ this is $\frac{1}{4} = 0.25$.'
+
+  - uid: g12-mathematics-2-1-q011
+    type: single_choice
+    difficulty: 3
+    stem: 'Let $f(x) = x^2 - 1$ for $x < 1$ and $f(x) = 2x$ for $x \ge 1$. What can you say about $\lim_{x \to 1} f(x)$?'
+    options:
+      A: 'It equals 0.'
+      B: 'It equals 2.'
+      C: 'It does not exist, because the left and right limits differ.'
+      D: 'It equals 1.'
+    answer: C
+    explanation: 'From the left: $1^2 - 1 = 0$. From the right: $2(1) = 2$. The one-sided limits are different, so the two-sided limit does not exist.'
+
+  - uid: g12-mathematics-2-1-q012
+    type: single_choice
+    difficulty: 3
+    stem: 'What is $\lim_{x \to -1} \frac{x^3 + 1}{x + 1}$?'
+    options:
+      A: '0'
+      B: '1'
+      C: '$-3$'
+      D: '3'
+    answer: D
+    explanation: '$x^3 + 1 = (x + 1)(x^2 - x + 1)$, so the fraction equals $x^2 - x + 1$. At $x = -1$: $1 + 1 + 1 = 3$.'
+
+  - uid: g12-mathematics-2-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these functions is continuous at $x = 2$?'
+    options:
+      A: '$f(x) = \frac{1}{x - 2}$'
+      B: '$f(x) = \frac{x^2 - 4}{x - 2}$'
+      C: '$f(x) = x^2 + 1$'
+      D: '$f(x) = \frac{|x - 2|}{x - 2}$'
+    answer: C
+    explanation: 'A polynomial is continuous everywhere. A, B and D are not defined at $x = 2$, so they cannot be continuous there.'
+
+  - uid: g12-mathematics-2-1-q014
+    type: multiple_answers
+    difficulty: 3
+    stem: 'Which of these sequences converge? Choose all that apply.'
+    options:
+      A: '$a_n = \frac{1}{n^2}$'
+      B: '$a_n = \frac{n}{n + 1}$'
+      C: '$a_n = (-1)^n$'
+      D: '$a_n = 2^n$'
+    answer: [A, B]
+    explanation: '$\frac{1}{n^2} \to 0$ and $\frac{n}{n + 1} \to 1$. $(-1)^n$ keeps jumping between $-1$ and 1, and $2^n$ grows without end.'
+
+  - uid: g12-mathematics-2-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'A function $f$ is called ________ at $x = a$ if $\lim_{x \to a} f(x) = f(a)$.'
+    answer: [continuous]
+    explanation: 'That is the definition of continuity at a point.'
+
+  - uid: g12-mathematics-2-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'What is $\lim_{x \to 4} \frac{x - 4}{\sqrt{x} - 2}$?'
+    options:
+      A: '4'
+      B: '2'
+      C: '0'
+      D: '$\frac{1}{4}$'
+    answer: A
+    explanation: '$x - 4 = (\sqrt{x} - 2)(\sqrt{x} + 2)$, so the fraction equals $\sqrt{x} + 2$. At $x = 4$: $2 + 2 = 4$.'
+
+  - uid: g12-mathematics-2-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'If $\lim_{x \to a} f(x) = 3$ and $\lim_{x \to a} g(x) = -2$, what is $\lim_{x \to a} \left(2f(x) - g(x)^2\right)$?'
+    options:
+      A: '10'
+      B: '2'
+      C: '8'
+      D: '$-2$'
+    answer: B
+    explanation: 'By the limit laws: $2 \times 3 - (-2)^2 = 6 - 4 = 2$.'
+
+  - uid: g12-mathematics-2-1-q018
+    type: numeric
+    difficulty: 3
+    stem: 'Find $\lim_{x \to 2} \frac{x^3 - 8}{x - 2}$.'
+    answer: {value: 12, tolerance: 0}
+    explanation: '$x^3 - 8 = (x - 2)(x^2 + 2x + 4)$, so the fraction equals $x^2 + 2x + 4$. At $x = 2$: $4 + 4 + 4 = 12$.'
+
+  - uid: g12-mathematics-2-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\lim_{n \to \infty} \frac{n^2 + 3n}{2n^2 - 1}$?'
+    options:
+      A: '$-3$'
+      B: '0'
+      C: '3'
+      D: '$\frac{1}{2}$'
+    answer: D
+    explanation: 'Equal degrees: the limit is the ratio of the leading coefficients, $\frac{1}{2}$.'
+
+  - uid: g12-mathematics-2-1-q020
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\lim_{x \to 0} \frac{x^2 + 5x}{x}$?'
+    options:
+      A: '0'
+      B: '1'
+      C: '5'
+      D: 'It does not exist.'
+    answer: C
+    explanation: '$\frac{x^2 + 5x}{x} = x + 5$ for $x \neq 0$, and $\lim_{x \to 0} (x + 5) = 5$.'
+
+  - uid: g12-mathematics-2-1-q021
+    type: single_choice
+    difficulty: 3
+    stem: 'Let $f(x) = x + k$ for $x \le 2$ and $f(x) = x^2$ for $x > 2$. For which value of $k$ is $f$ continuous at $x = 2$?'
+    options:
+      A: '2'
+      B: '4'
+      C: '0'
+      D: '$-2$'
+    answer: A
+    explanation: 'The two pieces must meet at $x = 2$: $2 + k = 2^2 = 4$, so $k = 2$.'
+
+  - uid: g12-mathematics-2-1-q022
+    type: true_false
+    difficulty: 2
+    stem: '$\lim_{x \to a} f(x)$ can exist even when $f(a)$ is not defined.'
+    answer: true
+    explanation: 'The limit depends only on values near $a$. For example $\frac{x^2 - 9}{x - 3}$ is not defined at 3, but its limit there is 6.'
+
+  - uid: g12-mathematics-2-1-q023
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\lim_{x \to \infty} \left(5 - \frac{1}{x}\right)$?'
+    options:
+      A: '4'
+      B: '5'
+      C: '$\infty$'
+      D: '0'
+    answer: B
+    explanation: '$\frac{1}{x} \to 0$ as $x \to \infty$, so the limit is $5 - 0 = 5$.'
+
+  - uid: g12-mathematics-2-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each limit with its value.'
+    left:
+      L1: '$\lim_{n \to \infty} \frac{3}{n}$'
+      L2: '$\lim_{n \to \infty} \frac{3n}{n + 1}$'
+      L3: '$\lim_{n \to \infty} \frac{n + 1}{n}$'
+    right:
+      R1: '1'
+      R2: '0'
+      R3: '3'
+      R4: '$\infty$'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: '$\frac{3}{n} \to 0$. $\frac{3n}{n + 1} \to \frac{3}{1} = 3$. $\frac{n + 1}{n} = 1 + \frac{1}{n} \to 1$. None of them goes to infinity.'
+
+  - uid: g12-mathematics-2-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the horizontal asymptote of $y = \frac{4x - 1}{2x + 3}$?'
+    options:
+      A: '$y = 4$'
+      B: '$y = -\frac{1}{3}$'
+      C: '$y = 0$'
+      D: '$y = 2$'
+    answer: D
+    explanation: 'As $x \to \pm\infty$ the function tends to the ratio of the leading coefficients, $\frac{4}{2} = 2$.'
+
+  - uid: g12-mathematics-2-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement is true about the sequence $a_n = \frac{n - 1}{n}$?'
+    options:
+      A: 'It is increasing and converges to 1.'
+      B: 'It is decreasing and converges to 0.'
+      C: 'It is increasing and diverges.'
+      D: 'It converges to $-1$.'
+    answer: A
+    explanation: '$a_n = 1 - \frac{1}{n}$: the terms are $0, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \dots$ They increase and get closer to 1.'
+
+  - uid: g12-mathematics-2-1-q027
+    type: ordering
+    difficulty: 3
+    stem: 'Put these limits in order of their values, from smallest to largest.'
+    items:
+      A: '$\lim_{x \to 2} (x + 1)$'
+      B: '$\lim_{x \to \infty} \frac{2x + 1}{x}$'
+      C: '$\lim_{x \to 3} \frac{x^2 - 9}{x - 3}$'
+      D: '$\lim_{n \to \infty} \frac{1}{n}$'
+    answer: [D, B, A, C]
+    explanation: 'A $= 3$, B $= 2$, C $= 6$, D $= 0$. From smallest: 0, 2, 3, 6.'
+
+  - uid: g12-mathematics-2-1-q028
+    type: single_choice
+    difficulty: 3
+    stem: 'What is $\lim_{h \to 0} \frac{(2 + h)^2 - 4}{h}$?'
+    options:
+      A: '2'
+      B: '4'
+      C: '0'
+      D: 'It does not exist.'
+    answer: B
+    explanation: '$(2 + h)^2 - 4 = 4h + h^2$, so the fraction is $4 + h$ for $h \neq 0$. The limit is 4.'
+
+  - uid: g12-mathematics-2-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'What happens to $f(x) = \frac{1}{x}$ as $x \to 0$?'
+    options:
+      A: 'The limit is 0.'
+      B: 'The limit is 1.'
+      C: 'The limit does not exist: $f(x) \to +\infty$ from the right and $-\infty$ from the left.'
+      D: 'The limit is $+\infty$ from both sides.'
+    answer: C
+    explanation: 'For small positive $x$, $\frac{1}{x}$ is a large positive number; for small negative $x$ it is a large negative number. The two sides do not agree.'
+
+  - uid: g12-mathematics-2-1-q030
+    type: single_choice
+    difficulty: 3
+    stem: 'What is $\lim_{x \to 1} \frac{x^2 - 3x + 2}{x^2 - 1}$?'
+    options:
+      A: '0'
+      B: '$\frac{1}{2}$'
+      C: 'It does not exist.'
+      D: '$-\frac{1}{2}$'
+    answer: D
+    explanation: '$\frac{(x - 1)(x - 2)}{(x - 1)(x + 1)} = \frac{x - 2}{x + 1}$ for $x \neq 1$. At $x = 1$: $\frac{-1}{2}$.'

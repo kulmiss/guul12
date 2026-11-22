@@ -12,17 +12,22 @@ subjects:
     chapters:
     - number: 1
       title: 'Sequences: arithmetic and geometric'
+      file: mathematics/u1-c1.yaml
     - number: 2
       title: Sigma notation and partial sums
+      file: mathematics/u1-c2.yaml
     - number: 3
       title: Infinite series and applications
+      file: mathematics/u1-c3.yaml
   - number: 2
     title: Introduction to Calculus
     chapters:
     - number: 1
       title: Limits
+      file: mathematics/u2-c1.yaml
     - number: 2
       title: Derivatives and rules of differentiation
+      file: mathematics/u2-c2.yaml
     - number: 3
       title: Applications of derivatives
     - number: 4
