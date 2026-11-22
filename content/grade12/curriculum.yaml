@@ -273,6 +273,7 @@ subjects:
     chapters:
     - number: 1
       title: Patterns, codes, directions and arrangements
+      file: aptitude/u3-c1.yaml
 - code: geography
   units:
   - number: 1

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-aptitude-2-2-q001: {hash: '3ea14b422a1ea905e74d2c12675596b998abca980d8961febfd16649142e053e', answer: B}
+  g12-aptitude-2-2-q002: {hash: 'b70dba7b39a604d6f7b139b7af45e7f5dc0e9a6da1f8e99b1b250eb132741f3f', answer: 25}
+  g12-aptitude-2-2-q003: {hash: '7a1c1ee224c5a6cabecbeb129acb4d053e17c06c9852d910356e54c544412117', answer: B}
+  g12-aptitude-2-2-q004: {hash: 'dcf37bfdc35f8a9fc553703b39a12cdb45688dd3661bae50ea9333d95e15732c', answer: C}
+  g12-aptitude-2-2-q005: {hash: '2d1bb6f2ae9e74b36ff5843226e230d08a039e265a1a7b7bf97c7c8dad244574', answer: A}
+  g12-aptitude-2-2-q006: {hash: 'f676c687ff7b133ca9d3e63254914ca3f68ea91641bcc6cda6e2a1f360864957', answer: D}
+  g12-aptitude-2-2-q007: {hash: 'fec77c0a2984455902445099f5bf5d3ff1b1314013a92a632c6786eb2f3ce45a', answer: B}
+  g12-aptitude-2-2-q008: {hash: 'ff0349f840d139184b18d3c3e48a3b66f8d06da952df1999489d75e778032356', answer: C}
+  g12-aptitude-2-2-q009: {hash: '210a725e7672984c9dc11767045767f4ca81677e97cd990180abc04f2535ddd4', answer: D}
+  g12-aptitude-2-2-q010: {hash: 'ea27b177d6f5f7ba147b49bd6b4fa68472410714900701b71c45f7e15d0d2f18', answer: 13.3, note: '20/150 = 13.33...% is a recurring decimal, not clean by hand. The rounding instruction makes it answerable, but the checker must accept 13.3 (and ideally 13.33). Consider changing the data so the share is a whole percentage.'}
+  g12-aptitude-2-2-q011: {hash: 'fc687ced127e626724ac4a18cf42c9a21f124ea08af389ad4d8e96d2216857c3', answer: A}
+  g12-aptitude-2-2-q012: {hash: '782a0e0b6375b5f73d77f6f2d7d376d2d23f023d2f69aa0ec58707436c3223dc', answer: D}
+  g12-aptitude-2-2-q013: {hash: '8d7aac744a34fe0684f167e3683cf38ea15b10f90bd6d77493097088b3b9f0b4', answer: C}
+  g12-aptitude-2-2-q014: {hash: '79582fe558ad9b0ffb2d250cd381d0e4534af6ee4addfbcf520d1c2314cde7c3', answer: A}
+  g12-aptitude-2-2-q015: {hash: 'fc43b1f494ef0b91ba892ee696e5d426ba672c79bf17b6751df71bf228d8f7fd', answer: B}
+  g12-aptitude-2-2-q016: {hash: 'ae93f42085a1fcc41a91db9c063d8c697f312dec8d426da4623e26a92a40c893', answer: C}
+  g12-aptitude-2-2-q017: {hash: '144077e2273abf09014811291c2436d199501179968997ee110a96adaa66afb3', answer: true}
+  g12-aptitude-2-2-q018: {hash: 'a2023c056c16871f60a427cab352fe06afb12da79b3daaebefc8d41077808348', answer: true}
+  g12-aptitude-2-2-q019: {hash: '168de3285a0ca91960ce80283bee1a4e7b97876cd44bcb7bec28e3036794b92f', answer: false, note: 'Answer is false under the usual school convention (profit % is on cost price). In business, profit margin is sometimes worked out on the selling price, so a careful student could argue for it. The explanation should state the cost-price convention.'}
+  g12-aptitude-2-2-q020: {hash: '29cf50743346bbd34a5befd613f4377e33b4cf63d3939cc8294683a00f15596b', answer: [A, B, D]}
+  g12-aptitude-2-2-q021: {hash: '7b58a94cf7e09b7eef944c1025d5ab77113f9b1f50a7d20202671497d0ae5795', answer: '100'}
+  g12-aptitude-2-2-q022: {hash: '2816d5572c23214fd48202dc0ebbcdd9b6656a765381d2e797bb9550e2cd9a63', answer: '900'}
+  g12-aptitude-2-2-q023: {hash: 'a71bf8c49593e10d6f78620eb6d62ca8ab35f8e4c934fde5fe535d6f1fd025a8', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-aptitude-2-2-q024: {hash: 'e446ef9d1c7db0c0546e626ce44db520ac4daaa719cfdf1547d5e2b846780bce', answer: [D, B, A, C]}
+  g12-aptitude-2-2-q025: {hash: 'e554ea1c851fe17827c1b830f1c34badb23d3e4ae6be8293baa1a47a697fdb61', answer: C}
+  g12-aptitude-2-2-q026: {hash: '665255d30e44fe206938cbe141db1ae034e361576a05dcf132e127e2a17ad514', answer: D}
+  g12-aptitude-2-2-q027: {hash: '25f0f048bf7e7d009053e8ba984c3944a9c325a15cf1ef4c0cfbe497aaad7469', answer: B}
+  g12-aptitude-2-2-q028: {hash: 'a7b56846317185b291e6ead9cd9e7bbe934d2e91db2d3a2c24d2f2a9b5182068', answer: A}
+  g12-aptitude-2-2-q029: {hash: '580329173979071a0b88baff6c41870a9b7006bb76cd68e447a83915369aff0d', answer: C}
+  g12-aptitude-2-2-q030: {hash: '2d2ebd06c61a4f99ace17bac19581927a376d523774c619906829105425f5b80', answer: A}

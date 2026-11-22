@@ -149,9 +149,9 @@ questions:
   - uid: g12-aptitude-2-2-q010
     type: numeric
     difficulty: 2
-    stem: 'Using the same sales (Mon 20, Tue 35, Wed 25, Thu 40, Fri 30), what percentage of the week''s total was sold on Monday? (Give a number rounded to one decimal place.)'
-    answer: {value: 13.3, tolerance: 0.05, unit: '%'}
-    explanation: '$\frac{20}{150} \times 100\% \approx 13.3\%$.'
+    stem: 'Using the same sales (Mon 20, Tue 35, Wed 25, Thu 40, Fri 30), what percentage of the week''s total was sold on Friday?'
+    answer: {value: 20, tolerance: 0, unit: '%'}
+    explanation: '$\frac{30}{150} \times 100\% = 20\%$.'
 
   - uid: g12-aptitude-2-2-q011
     type: single_choice
@@ -242,9 +242,9 @@ questions:
   - uid: g12-aptitude-2-2-q019
     type: true_false
     difficulty: 1
-    stem: 'Profit percentage is calculated by dividing the profit by the selling price.'
+    stem: 'In school mathematics, profit percentage is calculated by dividing the profit by the selling price.'
     answer: false
-    explanation: 'Profit percentage is calculated on the cost price.'
+    explanation: 'In school mathematics, profit percentage is calculated on the cost price: profit ÷ cost price × 100%.'
 
   - uid: g12-aptitude-2-2-q020
     type: multiple_answers
