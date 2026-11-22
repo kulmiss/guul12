@@ -7,6 +7,7 @@ import 'package:material_ui/material_ui.dart';
 import '../../app/providers.dart';
 import '../../data/api_client.dart';
 import '../../data/models.dart';
+import '../avatars.dart';
 import '../regions.dart';
 import '../widgets/common.dart';
 import 'profile_fields.dart';
@@ -74,6 +75,19 @@ class _MeScreenState extends ConsumerState<MeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
+                      Card(
+                        margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                        child: ListTile(
+                          leading: AvatarImage(
+                            style: profile.avatarStyle,
+                            seed: profile.avatarSeed,
+                          ),
+                          title: Text(profile.nickname ?? l.identityNone),
+                          subtitle: Text(l.identityTitle),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.push('/me/identity'),
+                        ),
+                      ),
                       _StudentIdCard(studentId: profile.studentId),
                       _PlanTile(profile: profile),
                       if (googleOn)

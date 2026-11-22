@@ -446,6 +446,9 @@ class Profile {
     required this.onboarded,
     required this.premiumActive,
     required this.premiumUntil,
+    this.nickname,
+    this.avatarStyle,
+    this.avatarSeed,
   });
 
   factory Profile.fromJson(Map<String, Object?> json) {
@@ -465,6 +468,9 @@ class Profile {
       onboarded: asBool(json['onboarded']),
       premiumActive: asBool(premium['active']),
       premiumUntil: until == null ? null : DateTime.parse(until),
+      nickname: asStringOrNull(json['nickname']),
+      avatarStyle: asStringOrNull(json['avatar_style']),
+      avatarSeed: asStringOrNull(json['avatar_seed']),
     );
   }
 
@@ -482,6 +488,11 @@ class Profile {
   final bool onboarded;
   final bool premiumActive;
   final DateTime? premiumUntil;
+
+  /// Shown on the leaderboard and in battles, with the built-in avatar. Nothing else is public.
+  final String? nickname;
+  final String? avatarStyle;
+  final String? avatarSeed;
 
   /// Streams only apply in Grades 11–12; earlier grades see every subject.
   String? get effectiveStream => (grade != null && grade! >= 11) ? stream : null;

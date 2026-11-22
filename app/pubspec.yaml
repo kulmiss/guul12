@@ -29,6 +29,7 @@ dependencies:
   cupertino_icons: ^2.0.0
   workmanager: ^0.10.10
   flutter_local_notifications: ^23.0.3
+  flutter_svg: ^2.5.0
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +46,9 @@ flutter:
 
   assets:
     - assets/hook/
+    - assets/avatars/notionists-neutral/
+    - assets/avatars/lorelei-neutral/
+    - assets/avatars/thumbs/
 
   fonts:
     - family: Nunito

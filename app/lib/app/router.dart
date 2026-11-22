@@ -14,6 +14,7 @@ import '../ui/progress/progress_screen.dart';
 import '../ui/review/mistakes_screen.dart';
 import '../ui/screens/chapter_screen.dart';
 import '../ui/screens/home_screen.dart';
+import '../ui/screens/identity_screen.dart';
 import '../ui/screens/me_screen.dart';
 import '../ui/screens/onboarding_screen.dart';
 import '../ui/screens/study_screens.dart';
@@ -167,7 +168,10 @@ final routerProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: '/me',
                 builder: (_, _) => const MeScreen(),
-                routes: [GoRoute(path: 'profile', builder: (_, _) => const EditProfileScreen())],
+                routes: [
+                  GoRoute(path: 'profile', builder: (_, _) => const EditProfileScreen()),
+                  GoRoute(path: 'identity', builder: (_, _) => const IdentityScreen()),
+                ],
               ),
             ],
           ),

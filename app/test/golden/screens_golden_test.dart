@@ -96,6 +96,10 @@ void main() {
       await tapOn(tester, find.byKey(const ValueKey('check')));
     },
     'me': (tester) async => tapOn(tester, find.text('Me')),
+    'identity': (tester) async {
+      await tapOn(tester, find.text('Me'));
+      await tapOn(tester, find.text('Choose a nickname'));
+    },
     'plan': (tester) async => tapOn(tester, find.text("Today's plan")),
     'exams': (tester) async {
       await tapOn(tester, find.text('Exams').last);

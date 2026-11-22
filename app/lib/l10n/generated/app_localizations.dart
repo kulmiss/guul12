@@ -1993,6 +1993,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Daily reminder'**
   String get reminderChannel;
+
+  /// Identity screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Nickname and avatar'**
+  String get identityTitle;
+
+  /// Privacy note
+  ///
+  /// In en, this message translates to:
+  /// **'Only your nickname and avatar are shown on the leaderboard and in battles. Your grade, region and other details are never shown.'**
+  String get identityWhy;
+
+  /// Field label
+  ///
+  /// In en, this message translates to:
+  /// **'Nickname'**
+  String get identityNickname;
+
+  /// Field help
+  ///
+  /// In en, this message translates to:
+  /// **'3 to 24 letters, numbers, spaces, dots, dashes or underscores. Don\'t use your real full name.'**
+  String get identityNicknameHelp;
+
+  /// Client-side validation
+  ///
+  /// In en, this message translates to:
+  /// **'Use 3 to 24 letters, numbers, spaces, dots, dashes or underscores.'**
+  String get identityNicknameInvalid;
+
+  /// Server refused the nickname
+  ///
+  /// In en, this message translates to:
+  /// **'Please choose another nickname.'**
+  String get identityNicknameRefused;
+
+  /// Section
+  ///
+  /// In en, this message translates to:
+  /// **'Avatar'**
+  String get identityAvatar;
+
+  /// Semantics label for an avatar choice
+  ///
+  /// In en, this message translates to:
+  /// **'Avatar {number}'**
+  String identityAvatarOption(int number);
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get identitySave;
+
+  /// Offline
+  ///
+  /// In en, this message translates to:
+  /// **'Saving your nickname needs the internet. Please try again when you are online.'**
+  String get identityNeedsInternet;
+
+  /// Snack bar
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get identitySaved;
+
+  /// Me screen when no nickname
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a nickname'**
+  String get identityNone;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

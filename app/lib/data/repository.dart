@@ -142,6 +142,9 @@ class Repository {
     'gender': null,
     'target_score': null,
     'reminder_time': null,
+    'nickname': null,
+    'avatar_style': null,
+    'avatar_seed': null,
     'onboarded': false,
     'premium': {'active': false, 'until': null},
   };
@@ -170,6 +173,24 @@ class Repository {
         if (!pending.containsKey(e.key) || pending[e.key] != e.value) e.key: e.value,
     };
     await db.writeJson(Keys.pendingProfile, remaining);
+  }
+
+  /// Nickname and avatar are saved online only: the server may refuse a nickname, and a refused
+  /// one must not wait in the offline queue. Throws [ApiException] (422 = choose another
+  /// nickname; offline = no internet).
+  Future<void> saveIdentity({
+    required String nickname,
+    required String avatarStyle,
+    required String avatarSeed,
+  }) async {
+    final json = await _authed(
+      () => api.patch('me', {
+        'nickname': nickname,
+        'avatar_style': avatarStyle,
+        'avatar_seed': avatarSeed,
+      }),
+    );
+    await db.writeJson(Keys.serverProfile, asMap(json['user']));
   }
 
   Future<void> refreshProfile() async {

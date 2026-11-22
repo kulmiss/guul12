@@ -1653,5 +1653,58 @@
   "reminderChannel": "Daily reminder",
   "@reminderChannel": {
     "description": "Android notification channel name"
+  },
+  "identityTitle": "Nickname and avatar",
+  "@identityTitle": {
+    "description": "Identity screen title"
+  },
+  "identityWhy": "Only your nickname and avatar are shown on the leaderboard and in battles. Your grade, region and other details are never shown.",
+  "@identityWhy": {
+    "description": "Privacy note"
+  },
+  "identityNickname": "Nickname",
+  "@identityNickname": {
+    "description": "Field label"
+  },
+  "identityNicknameHelp": "3 to 24 letters, numbers, spaces, dots, dashes or underscores. Don't use your real full name.",
+  "@identityNicknameHelp": {
+    "description": "Field help"
+  },
+  "identityNicknameInvalid": "Use 3 to 24 letters, numbers, spaces, dots, dashes or underscores.",
+  "@identityNicknameInvalid": {
+    "description": "Client-side validation"
+  },
+  "identityNicknameRefused": "Please choose another nickname.",
+  "@identityNicknameRefused": {
+    "description": "Server refused the nickname"
+  },
+  "identityAvatar": "Avatar",
+  "@identityAvatar": {
+    "description": "Section"
+  },
+  "identityAvatarOption": "Avatar {number}",
+  "@identityAvatarOption": {
+    "description": "Semantics label for an avatar choice",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "identitySave": "Save",
+  "@identitySave": {
+    "description": "Button"
+  },
+  "identityNeedsInternet": "Saving your nickname needs the internet. Please try again when you are online.",
+  "@identityNeedsInternet": {
+    "description": "Offline"
+  },
+  "identitySaved": "Saved",
+  "@identitySaved": {
+    "description": "Snack bar"
+  },
+  "identityNone": "Choose a nickname",
+  "@identityNone": {
+    "description": "Me screen when no nickname"
   }
 }

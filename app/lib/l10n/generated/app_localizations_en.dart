@@ -1219,4 +1219,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reminderChannel => 'Daily reminder';
+
+  @override
+  String get identityTitle => 'Nickname and avatar';
+
+  @override
+  String get identityWhy =>
+      'Only your nickname and avatar are shown on the leaderboard and in battles. Your grade, region and other details are never shown.';
+
+  @override
+  String get identityNickname => 'Nickname';
+
+  @override
+  String get identityNicknameHelp =>
+      '3 to 24 letters, numbers, spaces, dots, dashes or underscores. Don\'t use your real full name.';
+
+  @override
+  String get identityNicknameInvalid =>
+      'Use 3 to 24 letters, numbers, spaces, dots, dashes or underscores.';
+
+  @override
+  String get identityNicknameRefused => 'Please choose another nickname.';
+
+  @override
+  String get identityAvatar => 'Avatar';
+
+  @override
+  String identityAvatarOption(int number) {
+    return 'Avatar $number';
+  }
+
+  @override
+  String get identitySave => 'Save';
+
+  @override
+  String get identityNeedsInternet =>
+      'Saving your nickname needs the internet. Please try again when you are online.';
+
+  @override
+  String get identitySaved => 'Saved';
+
+  @override
+  String get identityNone => 'Choose a nickname';
 }

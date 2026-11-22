@@ -18,6 +18,10 @@ class FakeServer {
   int cursor = 10;
   final List<Map<String, Object?>> changes = [];
   final List<Map<String, Object?>> receivedAttempts = [];
+
+  /// Nicknames the server's word filter refuses (422).
+  final refusedNicknames = <String>{};
+
   final Map<String, Object?> profile = {
     'student_id': 'ST-7K3Q9',
     'signed_in': false,
@@ -248,7 +252,11 @@ class FakeServer {
       case ('GET', 'me'):
         return json({'user': profile});
       case ('PATCH', 'me'):
-        profile.addAll(body());
+        final changes = body();
+        if (refusedNicknames.contains(changes['nickname'])) {
+          return json({'message': 'Please choose another nickname.'}, 422);
+        }
+        profile.addAll(changes);
         return json({'user': profile});
       case ('GET', 'catalog'):
         return json(catalogJson());

@@ -29,6 +29,16 @@ class ProfileNotifier extends AsyncNotifier<Profile> {
     state = AsyncData(await repo.profile());
   }
 
+  Future<void> saveIdentity({
+    required String nickname,
+    required String avatarStyle,
+    required String avatarSeed,
+  }) async {
+    final repo = ref.read(repositoryProvider);
+    await repo.saveIdentity(nickname: nickname, avatarStyle: avatarStyle, avatarSeed: avatarSeed);
+    state = AsyncData(await repo.profile());
+  }
+
   Future<void> reload() async {
     state = AsyncData(await ref.read(repositoryProvider).profile());
   }
