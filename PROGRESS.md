@@ -1,14 +1,14 @@
 # PROGRESS
 
-📍 Phase 1 of 5 · Step 7 of 8: app core (onboarding, study, 9 question types, practice, offline sync, sign-in, student ID) → next: CI green + Phase 1 report
-📊 This phase: ▓▓▓▓▓▓▓▓▓░ 90% done · 10% left
-📊 Whole project: ▓▓▓░░░░░░░ 26% done · 74% left
-⚠️ Problems / questions: see Phase 1 report
+📍 Phase 1 of 5 · Step 8 of 8: CI green, release build, Phase 1 report → next: owner test of PR #1, then Phase 2 (content + quality gate)
+📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
+📊 Whole project: ▓▓▓░░░░░░░ 28% done · 72% left
+⚠️ Waiting for: owner test + merge of PR #1; answer on offline packs (DECISIONS #11); past-paper PDFs + permission letter
 
 | Phase | Weight | Status |
 |---|---|---|
 | 0 Research + plan | 4% | ✅ done |
-| 1 Backend core + app core | 24% | 🔄 in progress (backend + app core done; report next) |
+| 1 Backend core + app core | 24% | ✅ done — waiting for owner test (PR #1) |
 | 2 Content + quality gate + Grade 12 | 22% | not started |
 | 3 Exams + adaptive + SRS | 16% | not started |
 | 4 Engagement + ads + AI + Premium | 20% | not started |
@@ -25,4 +25,4 @@
 | 5 | App onboarding (grade → 5-question warm-up → profile) | ✅ |
 | 6 | App study browser, 9 question types, LaTeX, practice modes | ✅ |
 | 7 | App offline storage + sync, sign-in, student ID | ✅ 175 app tests |
-| 8 | App CI, golden tests, release build, Phase 1 report | 🔄 goldens + release build done; CI + report next |
+| 8 | App CI, golden tests, release build, Phase 1 report | ✅ CI green (backend, app, secrets) |
