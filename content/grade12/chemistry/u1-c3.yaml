@@ -151,7 +151,7 @@ questions:
     stem: 'What colour is phenolphthalein in a basic solution?'
     options:
       A: 'Colourless'
-      B: 'Red'
+      B: 'Blue'
       C: 'Yellow'
       D: 'Pink'
     answer: D

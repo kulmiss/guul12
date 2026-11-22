@@ -131,6 +131,7 @@ subjects:
     chapters:
     - number: 1
       title: Redox reactions and electrochemical cells
+      file: chemistry/u2-c1.yaml
     - number: 2
       title: Electrolysis and Faraday's laws
   - number: 3
