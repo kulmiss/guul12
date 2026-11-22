@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-3-1-q008: {hash: '9749e3e1c48665e56009401ce311164ff471ba3ac9513f34888257702c1ab8f3', answer: B}
+  g12-history-3-1-q026: {hash: 'ceb0ae8d5aa42944e5171ced28622a1f7fcd76e66edde64922d1383f2b716894', answer: A}
