@@ -296,7 +296,7 @@ questions:
     type: fill_in
     difficulty: 1
     stem: 'The warming of the Earth caused by gases that trap infrared radiation is called the ________ effect.'
-    answer: [greenhouse]
+    answer: [greenhouse, enhanced greenhouse]
     explanation: 'The natural effect keeps Earth warm; extra greenhouse gases make it stronger.'
 
   - uid: g12-chemistry-5-1-q024

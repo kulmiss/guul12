@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'Biology helps solve everyday problems in food, health, industry and the environment.'
+    - 'Agriculture: improved crop varieties, better livestock breeds (for example by artificial insemination), nitrogen-fixing bacteria (Rhizobium) as biofertilisers, plant tissue culture for many identical plants, and integrated pest management (IPM), which combines natural enemies, crop rotation and careful use of pesticides.'
+    - 'Medicine: vaccines train the immune system to recognise a disease (Edward Jenner, smallpox, 1796); antibiotics such as penicillin (Alexander Fleming, 1928) kill bacteria but NOT viruses. Genetically modified bacteria now make human insulin for people with diabetes.'
+    - 'Food preservation stops microorganisms from growing: drying and salting remove water (salt draws water out by osmosis), refrigeration slows growth, and pasteurisation heats milk briefly (about 72 °C for 15 seconds) to kill most harmful microbes.'
+    - 'Nutrition: a balanced diet prevents deficiency diseases – kwashiorkor (protein), goitre (iodine), anaemia (iron), rickets (vitamin D), scurvy (vitamin C) and night blindness (vitamin A).'
+    - 'DNA fingerprinting identifies people from their DNA; it is used in crime investigation and to settle questions of parentage.'
+    - 'Conservation protects biodiversity. Ethiopia has endemic animals found nowhere else, such as the Ethiopian wolf, the gelada and the Walia ibex, protected in parks like the Simien Mountains and Bale Mountains.'
+    - 'New biotechnologies raise ethical questions about safety, fairness and the environment, which society must discuss.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-biology-1-1-se01
+    problem: 'Explain why antibiotics should not be taken for a common cold.'
+    steps:
+      - 'The common cold is caused by viruses.'
+      - 'Antibiotics act on bacteria only, so they do not help; unnecessary use also helps bacteria become resistant.'
+    answer: 'Colds are viral; antibiotics only work on bacteria and misuse causes resistance.'
+  - uid: g12-biology-1-1-se02
+    problem: 'Why does salting meat stop it from going bad?'
+    steps:
+      - 'Salt makes the surroundings of microbes very concentrated.'
+      - 'Water leaves the microbes by osmosis, so they cannot grow and the meat does not rot.'
+    answer: 'Salt removes water from microbes by osmosis.'
+  - uid: g12-biology-1-1-se03
+    problem: 'A farmer''s teff yield rises from 12 to 18 quintals per hectare with an improved variety. Find the percentage increase.'
+    steps:
+      - 'Increase $= 18 - 12 = 6$ quintals.'
+      - 'Percentage $= \frac{6}{12} \times 100\% = 50\%$.'
+    answer: '50%'
+
+flashcards:
+  - {uid: g12-biology-1-1-fc01, term: Vaccine, definition: 'Preparation that trains the immune system to fight a disease.'}
+  - {uid: g12-biology-1-1-fc02, term: Antibiotic, definition: 'Drug that kills or stops the growth of bacteria; useless against viruses.'}
+  - {uid: g12-biology-1-1-fc03, term: Pasteurisation, definition: 'Brief heating of milk (about 72 °C, 15 s) to kill most harmful microbes.'}
+  - {uid: g12-biology-1-1-fc04, term: Biofertiliser, definition: 'Living organisms, e.g. Rhizobium, that add nutrients to soil.'}
+  - {uid: g12-biology-1-1-fc05, term: Integrated pest management, definition: 'Controlling pests by combining natural enemies, farming methods and limited pesticide use.'}
+  - {uid: g12-biology-1-1-fc06, term: Tissue culture, definition: 'Growing many identical plants from small pieces of tissue in a sterile medium.'}
+  - {uid: g12-biology-1-1-fc07, term: DNA fingerprinting, definition: 'Identifying a person from patterns in their DNA.'}
+  - {uid: g12-biology-1-1-fc08, term: Endemic species, definition: 'A species found naturally in only one place, e.g. the Ethiopian wolf.'}
+  - {uid: g12-biology-1-1-fc09, term: Kwashiorkor, definition: 'Disease caused by a lack of protein in the diet.'}
+
+questions:
+  - uid: g12-biology-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Antibiotics are effective against diseases caused by:'
+    options:
+      A: 'Viruses'
+      B: 'Bacteria'
+      C: 'Lack of vitamins'
+      D: 'Genetic disorders'
+    answer: B
+    explanation: 'Antibiotics attack features of bacterial cells; viruses do not have them.'
+
+  - uid: g12-biology-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Who discovered penicillin, the first widely used antibiotic?'
+    options:
+      A: 'Alexander Fleming'
+      B: 'Louis Pasteur'
+      C: 'Edward Jenner'
+      D: 'Gregor Mendel'
+    answer: A
+    explanation: 'Fleming noticed in 1928 that a Penicillium mould killed bacteria around it.'
+
+  - uid: g12-biology-1-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'How does a vaccine protect a person?'
+    options:
+      A: 'It kills all bacteria in the body.'
+      B: 'It provides vitamins.'
+      C: 'It trains the immune system to recognise a disease-causing organism.'
+      D: 'It replaces red blood cells.'
+    answer: C
+    explanation: 'The vaccine causes the body to make antibodies and memory cells, so a later infection is fought off quickly.'
+
+  - uid: g12-biology-1-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does pasteurisation make milk safer to drink?'
+    options:
+      A: 'It removes all the fat.'
+      B: 'It adds vitamins.'
+      C: 'It makes the milk sterile forever.'
+      D: 'Brief heating kills most harmful microorganisms.'
+    answer: D
+    explanation: 'Pasteurisation kills most pathogens but does not sterilise the milk, so it must still be kept cool.'
+
+  - uid: g12-biology-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Salting is used to preserve fish and meat. How does salt stop microbes growing?'
+    options:
+      A: 'It draws water out of the microbes by osmosis.'
+      B: 'It heats the food.'
+      C: 'It adds oxygen.'
+      D: 'It makes the food sweeter.'
+    answer: A
+    explanation: 'In a very salty environment, water leaves microbial cells, so they cannot grow.'
+
+  - uid: g12-biology-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which bacteria living in the root nodules of legumes such as beans and chickpeas add nitrogen to the soil?'
+    options:
+      A: 'Lactobacillus'
+      B: 'Rhizobium'
+      C: 'Streptococcus'
+      D: 'Salmonella'
+    answer: B
+    explanation: 'Rhizobium fixes nitrogen from the air into compounds plants can use, so it acts as a biofertiliser.'
+
+  - uid: g12-biology-1-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is an example of biological pest control?'
+    options:
+      A: 'Spraying a strong insecticide every week'
+      B: 'Burning the whole field'
+      C: 'Using ladybirds to eat aphids on crops'
+      D: 'Planting the same crop every year'
+    answer: C
+    explanation: 'Biological control uses a pest''s natural enemies. Planting the same crop every year usually makes pests worse.'
+
+  - uid: g12-biology-1-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Human insulin for people with diabetes can be made by genetically modified bacteria.'
+    answer: true
+    explanation: 'The human insulin gene is put into bacteria, which then produce large amounts of insulin.'
+
+  - uid: g12-biology-1-1-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'A lack of iodine in the diet causes:'
+    options:
+      A: 'Goitre'
+      B: 'Scurvy'
+      C: 'Rickets'
+      D: 'Night blindness'
+    answer: A
+    explanation: 'Iodine is needed to make thyroid hormones; without it the thyroid gland swells. Iodised salt prevents it.'
+
+  - uid: g12-biology-1-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Which disease is caused by a lack of vitamin C?'
+    options:
+      A: 'Rickets'
+      B: 'Goitre'
+      C: 'Anaemia'
+      D: 'Scurvy'
+    answer: D
+    explanation: 'Scurvy causes bleeding gums and slow wound healing. Fruits like oranges and lemons prevent it.'
+
+  - uid: g12-biology-1-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'A child has a swollen belly and thin limbs, and the diet contains very little protein. Which condition is most likely?'
+    options:
+      A: 'Scurvy'
+      B: 'Kwashiorkor'
+      C: 'Goitre'
+      D: 'Night blindness'
+    answer: B
+    explanation: 'Kwashiorkor is caused by protein deficiency; fluid builds up in the body, swelling the belly.'
+
+  - uid: g12-biology-1-1-q012
+    type: matching
+    difficulty: 2
+    stem: 'Match each deficiency with the disease it causes.'
+    left:
+      L1: 'Vitamin D'
+      L2: 'Iron'
+      L3: 'Vitamin A'
+    right:
+      R1: 'Anaemia'
+      R2: 'Night blindness'
+      R3: 'Rickets'
+      R4: 'Diabetes'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Diabetes is not a deficiency disease of the diet; it involves insulin.'
+
+  - uid: g12-biology-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What is DNA fingerprinting mainly used for?'
+    options:
+      A: 'Curing infections'
+      B: 'Preserving food'
+      C: 'Identifying individuals, for example in crime investigations'
+      D: 'Making fertilisers'
+    answer: C
+    explanation: 'Each person''s DNA pattern (except identical twins) is unique, so it can link a sample to a person.'
+
+  - uid: g12-biology-1-1-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these animals are endemic to Ethiopia (found naturally nowhere else)? Choose all that apply.'
+    options:
+      A: 'Ethiopian wolf'
+      B: 'Gelada'
+      C: 'Walia ibex'
+      D: 'African elephant'
+    answer: [A, B, C]
+    explanation: 'The Ethiopian wolf, gelada and Walia ibex live only in the Ethiopian highlands. Elephants live in many African countries.'
+
+  - uid: g12-biology-1-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Plant tissue culture is useful to farmers because it:'
+    options:
+      A: 'Quickly produces many identical, disease-free plants'
+      B: 'Makes plants grow without water'
+      C: 'Turns plants into animals'
+      D: 'Always increases genetic variation'
+    answer: A
+    explanation: 'Small pieces of a good plant are grown in sterile conditions to give many clones, used for crops like bananas and potatoes.'
+
+  - uid: g12-biology-1-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Artificial insemination is used in cattle breeding mainly to:'
+    options:
+      A: 'Make cows produce less milk'
+      B: 'Treat bacterial infections'
+      C: 'Remove all genetic variation'
+      D: 'Spread the genes of a high-quality bull to many cows'
+    answer: D
+    explanation: 'Semen from one excellent bull can improve the milk or meat yield of many herds.'
+
+  - uid: g12-biology-1-1-q017
+    type: true_false
+    difficulty: 1
+    stem: 'Antibiotics cure the common cold.'
+    answer: false
+    explanation: 'Colds are caused by viruses, which antibiotics cannot kill.'
+
+  - uid: g12-biology-1-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is taking antibiotics when they are not needed harmful?'
+    options:
+      A: 'It makes viruses stronger.'
+      B: 'It helps bacteria become resistant to the antibiotics.'
+      C: 'It causes goitre.'
+      D: 'It stops vaccines working.'
+    answer: B
+    explanation: 'Resistant bacteria survive and multiply, so the antibiotics stop working when they are really needed.'
+
+  - uid: g12-biology-1-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Integrated pest management (IPM) aims to:'
+    options:
+      A: 'Use as much pesticide as possible'
+      B: 'Remove all insects from farms'
+      C: 'Control pests by combining several methods and using pesticides only when needed'
+      D: 'Grow only one crop forever'
+    answer: C
+    explanation: 'IPM combines biological control, crop rotation, resistant varieties and careful pesticide use.'
+
+  - uid: g12-biology-1-1-q020
+    type: numeric
+    difficulty: 2
+    stem: 'A farmer''s wheat yield rises from 20 to 30 quintals per hectare after using an improved variety. What is the percentage increase?'
+    answer: {value: 50, tolerance: 0, unit: '%'}
+    explanation: 'Increase $= 10$; $\frac{10}{20} \times 100\% = 50\%$.'
+
+  - uid: g12-biology-1-1-q021
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did Alexander Fleming discover penicillin?'
+    answer: {value: 1928, tolerance: 0}
+    explanation: 'Fleming observed the antibacterial effect of Penicillium mould in 1928.'
+
+  - uid: g12-biology-1-1-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'Heating milk briefly to kill most harmful microorganisms is called ________.'
+    answer: [pasteurisation, pasteurization]
+    explanation: 'It is named after Louis Pasteur.'
+
+  - uid: g12-biology-1-1-q023
+    type: fill_in
+    difficulty: 2
+    stem: 'A species that lives naturally in only one country or region is called an ________ species.'
+    answer: [endemic]
+    explanation: 'Ethiopia has many endemic species because of its isolated highlands.'
+
+  - uid: g12-biology-1-1-q024
+    type: true_false
+    difficulty: 2
+    stem: 'Refrigeration preserves food mainly by slowing down the growth of microorganisms.'
+    answer: true
+    explanation: 'Low temperature slows microbial enzymes and reproduction; it does not kill most microbes.'
+
+  - uid: g12-biology-1-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put these medical discoveries in order, earliest first.'
+    items:
+      A: 'Penicillin discovered by Fleming'
+      B: 'Smallpox vaccine developed by Jenner'
+      C: 'Human insulin made by genetically modified bacteria'
+      D: 'Pasteurisation developed by Pasteur'
+    answer: [B, D, A, C]
+    explanation: 'Jenner (1796), Pasteur (1860s), Fleming (1928), genetically engineered insulin (early 1980s).'
+
+  - uid: g12-biology-1-1-q026
+    type: single_choice
+    difficulty: 1
+    stem: 'Why are bees important to farmers?'
+    options:
+      A: 'They pollinate many crops.'
+      B: 'They fix nitrogen.'
+      C: 'They eat weeds.'
+      D: 'They kill crop diseases.'
+    answer: A
+    explanation: 'Bees carry pollen between flowers, which many fruit and seed crops need; they also give honey and wax.'
+
+  - uid: g12-biology-1-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the main reason for creating national parks such as the Simien Mountains National Park?'
+    options:
+      A: 'To grow crops'
+      B: 'To build factories'
+      C: 'To hunt animals freely'
+      D: 'To protect habitats and conserve biodiversity'
+    answer: D
+    explanation: 'Protected areas keep habitats safe for rare and endemic species.'
+
+  - uid: g12-biology-1-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'A biotechnology company wants to plant a genetically modified crop. Which question is an ethical concern rather than a purely scientific one?'
+    options:
+      A: 'What is the chromosome number of the crop?'
+      B: 'Is it fair if poor farmers cannot afford the seeds each year?'
+      C: 'How tall does the plant grow?'
+      D: 'What colour are its flowers?'
+    answer: B
+    explanation: 'Ethics is about what is right and fair; the other questions can be answered by measurement.'
+
+  - uid: g12-biology-1-1-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'Which food is a good source of iron to help prevent anaemia?'
+    options:
+      A: 'Sugar'
+      B: 'Cooking oil'
+      C: 'Green leafy vegetables and meat'
+      D: 'Salt'
+    answer: C
+    explanation: 'Iron is found in meat, liver, beans and dark green vegetables. Teff is also rich in iron.'
+
+  - uid: g12-biology-1-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement best describes how biology contributes to society?'
+    options:
+      A: 'It helps improve food production, health care and conservation.'
+      B: 'It is useful only in hospitals.'
+      C: 'It has no link with industry.'
+      D: 'It only studies animals in zoos.'
+    answer: A
+    explanation: 'Biology is applied in agriculture, medicine, industry, forensics and environmental protection.'

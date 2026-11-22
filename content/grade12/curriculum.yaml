@@ -163,6 +163,7 @@ subjects:
     chapters:
     - number: 1
       title: Biology in everyday life and society
+      file: biology/u1-c1.yaml
   - number: 2
     title: Microorganisms
     chapters:
