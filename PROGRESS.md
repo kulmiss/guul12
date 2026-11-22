@@ -1,18 +1,29 @@
 # PROGRESS
 
-📍 Phase 1 of 5 · Step 8 of 8: CI green, release build, Phase 1 report → next: owner test of PR #1, then Phase 2 (content + quality gate)
-📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
-📊 Whole project: ▓▓▓░░░░░░░ 28% done · 72% left
-⚠️ Waiting for: owner test + merge of PR #1; past-paper PDFs + permission letter
+📍 Phase 2 of 5 · Step 6 of 6: all Grade 12 content, summary PDFs, fixed mocks, Phase 2 report → next: owner test of PR #2 (after PR #1), then Phase 3 (exams, adaptive practice, spaced repetition)
+📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left (past papers wait for the owner's PDFs)
+📊 Whole project: ▓▓▓▓▓░░░░░ 50% done · 50% left
+⚠️ Waiting for: owner test + merge of PR #1 and PR #2; answers to QUESTIONS.md #33–34; past-paper PDFs + permission letter
 
 | Phase | Weight | Status |
 |---|---|---|
 | 0 Research + plan | 4% | ✅ done |
 | 1 Backend core + app core | 24% | ✅ done — waiting for owner test (PR #1) |
-| 2 Content + quality gate + Grade 12 | 22% | not started |
+| 2 Content + quality gate + Grade 12 | 22% | ✅ done — waiting for owner test (PR #2) |
 | 3 Exams + adaptive + SRS | 16% | not started |
 | 4 Engagement + ads + AI + Premium | 20% | not started |
 | 5 Landing + ops + store + Nova | 14% | not started |
+
+## Phase 2 steps
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Content pipeline + quality gate (YAML, `content:check`, review sheets, independent second solve, Beta, re-scoring) | ✅ |
+| 2 | "Report a problem" in the app; report review in Nova (off) | ✅ |
+| 3 | Content: Mathematics, Physics, Chemistry, Biology (44 chapters) | ✅ |
+| 4 | Content: English, Aptitude, Geography, History, Economics (38 chapters) | ✅ 82 chapters, 2,460 questions, all Beta |
+| 5 | Summary PDFs (82) + fixed mocks (26) | ✅ |
+| 6 | CI green, Phase 2 report | ✅ |
 
 ## Phase 1 steps
 
