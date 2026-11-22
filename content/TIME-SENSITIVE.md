@@ -15,3 +15,6 @@ These questions state facts that may change. Check them once a year (and before 
 | g12-history-8-1-q011, q018 and summary | Abiy Ahmed has been Prime Minister since April 2018 | 2026-11 |
 | g12-history-8-1-q012, q028 | Ethiopia has 12 regional states and 2 city administrations (since August 2023) | 2026-11 |
 | g12-history-8-1-q025 | The Prosperity Party (formed December 2019) | 2026-11 |
+| g12-economics-5-1-q007, q021, q023 and summary | Ethiopia's standard VAT rate is 15% (VAT Proclamation No. 1341/2024) | 2026-11 |
+| g12-economics-5-1-q006 and summary | Ministry of Revenues runs federal domestic taxes; Ethiopian Customs Commission runs customs duties | 2026-11 |
+| g12-economics-6-1-q003, flashcard fc03 and summary | World Bank international poverty line \$3.00 a day (2021 PPP, June 2025) | 2026-11 |

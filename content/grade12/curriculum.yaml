@@ -411,11 +411,13 @@ subjects:
     chapters:
     - number: 1
       title: Tax Theory and Practice
+      file: economics/u5-c1.yaml
   - number: 6
     title: Poverty and Inequality
     chapters:
     - number: 1
       title: Poverty and Inequality
+      file: economics/u6-c1.yaml
   - number: 7
     title: Macroeconomic Reforms in Ethiopia
     chapters:

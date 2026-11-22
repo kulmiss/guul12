@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'A tax is a compulsory payment to the government that does not buy a specific service in return. Taxes finance public goods and services, redistribute income, discourage harmful goods and help manage the economy.'
+    - 'Adam Smith''s four classic principles (canons) of taxation: equity (people pay according to their ability), certainty (the amount and date are clear), convenience (easy time and way to pay) and economy (cheap to collect).'
+    - 'Direct taxes are paid by the person or firm on whom they are imposed, such as personal income tax and business profit tax. Indirect taxes are collected from sellers but passed on to buyers through prices, such as VAT, excise tax and customs duty.'
+    - 'A progressive tax takes a larger share of income as income rises; a proportional (flat) tax takes the same share; a regressive tax takes a larger share from people with lower incomes.'
+    - 'Tax incidence means who finally bears the burden of a tax. For an indirect tax, the burden is shared between buyers and sellers; buyers bear more when demand is inelastic.'
+    - 'In Ethiopia, federal domestic taxes are administered by the Ministry of Revenues, and customs duties by the Ethiopian Customs Commission. The standard VAT rate is 15% (kept by VAT Proclamation No. 1341/2024). Excise taxes apply to goods such as tobacco, alcohol and vehicles, and customs duties to imports. Each taxpayer has a Taxpayer Identification Number (TIN).'
+    - 'Tax evasion (illegally hiding income or not paying) is a crime; tax avoidance uses legal means to pay less. A narrow tax base, a large informal sector and weak administration limit revenue in many developing countries.'
+  formulas:
+    - {label: 'Tax amount', latex: '\text{Tax} = \text{Tax rate} \times \text{Tax base}'}
+    - {label: 'Average tax rate', latex: '\text{ATR} = \frac{\text{Total tax}}{\text{Total income}} \times 100\%'}
+
+solved_exercises:
+  - uid: g12-economics-5-1-se01
+    problem: 'A shirt costs 400 birr before VAT. With VAT at 15%, what does the buyer pay?'
+    steps:
+      - 'VAT = 0.15 × 400 = 60 birr.'
+      - 'Price paid = 400 + 60 = 460 birr.'
+    answer: '460 birr'
+  - uid: g12-economics-5-1-se02
+    problem: 'Almaz earns 10,000 birr and pays 1,500 birr tax. Hassan earns 20,000 birr and pays 4,000 birr tax. Is the tax progressive?'
+    steps:
+      - 'Almaz: 1,500 / 10,000 = 15%. Hassan: 4,000 / 20,000 = 20%.'
+      - 'The higher earner pays a larger share of income, so the tax is progressive.'
+    answer: 'Yes, progressive'
+  - uid: g12-economics-5-1-se03
+    problem: 'Why is VAT called an indirect tax?'
+    steps:
+      - 'The registered seller collects VAT and pays it to the government.'
+      - 'But the cost is passed on to the buyer in the price, so the person who bears it is not the one who pays it to the government.'
+    answer: 'Its burden is shifted to buyers through prices.'
+
+flashcards:
+  - {uid: g12-economics-5-1-fc01, term: Tax, definition: 'Compulsory payment to government with no direct service in return.'}
+  - {uid: g12-economics-5-1-fc02, term: Direct tax, definition: 'Tax on income or profit, paid by the person taxed.'}
+  - {uid: g12-economics-5-1-fc03, term: Indirect tax, definition: 'Tax on goods and services, passed on through prices.'}
+  - {uid: g12-economics-5-1-fc04, term: Progressive tax, definition: 'Takes a larger share of income as income rises.'}
+  - {uid: g12-economics-5-1-fc05, term: Regressive tax, definition: 'Takes a larger share of income from the poor.'}
+  - {uid: g12-economics-5-1-fc06, term: Tax incidence, definition: 'Who finally bears the burden of a tax.'}
+  - {uid: g12-economics-5-1-fc07, term: Tax evasion, definition: 'Illegally not paying tax that is owed.'}
+  - {uid: g12-economics-5-1-fc08, term: Tax avoidance, definition: 'Legally reducing the tax one pays.'}
+  - {uid: g12-economics-5-1-fc09, term: TIN, definition: 'Taxpayer Identification Number.'}
+
+questions:
+  - uid: g12-economics-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is the best definition of a tax?'
+    options:
+      A: 'A voluntary gift to the government'
+      B: 'A compulsory payment to the government with no specific service given in return'
+      C: 'A fee for a bus ticket'
+      D: 'A loan to the government'
+    answer: B
+    explanation: 'A fee buys a specific service; a tax does not.'
+
+  - uid: g12-economics-5-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is a direct tax?'
+    options:
+      A: 'Personal income tax'
+      B: 'Value added tax'
+      C: 'Excise tax on cigarettes'
+      D: 'Customs duty on imports'
+    answer: A
+    explanation: 'It is paid by the person whose income is taxed. The others are indirect taxes.'
+
+  - uid: g12-economics-5-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'A tax that takes a larger share of income from low earners than from high earners is:'
+    options:
+      A: 'Progressive'
+      B: 'Proportional'
+      C: 'Regressive'
+      D: 'Direct by definition'
+    answer: C
+    explanation: 'Regressive taxes hit the poor harder relative to income.'
+
+  - uid: g12-economics-5-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of Adam Smith''s principles says the amount, time and method of payment should be clear to the taxpayer?'
+    options:
+      A: 'Equity'
+      B: 'Economy'
+      C: 'Convenience'
+      D: 'Certainty'
+    answer: D
+    explanation: 'Taxpayers should know exactly what they owe and when.'
+
+  - uid: g12-economics-5-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'The principle that people should pay tax according to their ability to pay is called:'
+    options:
+      A: 'Equity'
+      B: 'Certainty'
+      C: 'Convenience'
+      D: 'Economy'
+    answer: A
+    explanation: 'Equity means fairness.'
+
+  - uid: g12-economics-5-1-q006
+    type: single_choice
+    difficulty: 1
+    stem: 'Which body administers federal domestic taxes, such as income tax and VAT, in Ethiopia?'
+    options:
+      A: 'The National Bank of Ethiopia'
+      B: 'The Ministry of Revenues'
+      C: 'The Ethiopian Statistics Service'
+      D: 'The Ethiopian Investment Commission'
+    answer: B
+    explanation: 'Customs duties on imports are handled by the Ethiopian Customs Commission.'
+
+  - uid: g12-economics-5-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'A phone costs 2,000 birr before VAT. With VAT at 15%, how much VAT is added?'
+    options:
+      A: '150 birr'
+      B: '200 birr'
+      C: '300 birr'
+      D: '2,300 birr'
+    answer: C
+    explanation: '0.15 × 2,000 = 300 birr. 2,300 birr is the total price, not the VAT.'
+
+  - uid: g12-economics-5-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is VAT called an indirect tax?'
+    options:
+      A: 'It is only paid by the government.'
+      B: 'It is a tax on income.'
+      C: 'It is never paid by anyone.'
+      D: 'Sellers pay it to the government but pass the cost to buyers through prices.'
+    answer: D
+    explanation: 'The person who bears the tax is not the one who pays it to the tax office.'
+
+  - uid: g12-economics-5-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What does "tax incidence" refer to?'
+    options:
+      A: 'Who finally bears the burden of a tax'
+      B: 'The date a tax law was passed'
+      C: 'The number of tax offices'
+      D: 'The name of the tax'
+    answer: A
+    explanation: 'The legal payer and the final bearer can be different.'
+
+  - uid: g12-economics-5-1-q010
+    type: single_choice
+    difficulty: 3
+    stem: 'A tax is put on a good with very inelastic demand. Who bears most of the burden?'
+    options:
+      A: 'Sellers'
+      B: 'Buyers'
+      C: 'The government'
+      D: 'Nobody'
+    answer: B
+    explanation: 'Buyers keep buying even when the price rises, so sellers can pass most of the tax on.'
+
+  - uid: g12-economics-5-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the main reason governments put high excise taxes on cigarettes and alcohol?'
+    options:
+      A: 'To make them cheaper'
+      B: 'To help tobacco firms'
+      C: 'To discourage harmful consumption and raise revenue'
+      D: 'Because they are merit goods'
+    answer: C
+    explanation: 'They are demerit goods; higher prices reduce use.'
+
+  - uid: g12-economics-5-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A trader hides part of her sales so that she pays less tax. This is:'
+    options:
+      A: 'Tax avoidance'
+      B: 'Tax incidence'
+      C: 'A tax refund'
+      D: 'Tax evasion'
+    answer: D
+    explanation: 'Hiding income is illegal, so it is evasion, not avoidance.'
+
+  - uid: g12-economics-5-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'A flat tax of 10% on all income is an example of a:'
+    options:
+      A: 'Proportional tax'
+      B: 'Progressive tax'
+      C: 'Regressive tax'
+      D: 'Customs duty'
+    answer: A
+    explanation: 'Everyone pays the same share of income.'
+
+  - uid: g12-economics-5-1-q014
+    type: single_choice
+    difficulty: 3
+    stem: 'Why is a standard-rate VAT on basic foods often considered regressive?'
+    options:
+      A: 'Only the rich buy food.'
+      B: 'Poor households spend a larger share of their income on food.'
+      C: 'VAT is a tax on profits.'
+      D: 'Food is exported.'
+    answer: B
+    explanation: 'The tax takes a bigger share of a poor family''s income. This is one reason many basic foods are exempt.'
+
+  - uid: g12-economics-5-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'The principle of "economy" in taxation means:'
+    options:
+      A: 'Taxes should be as high as possible.'
+      B: 'Only the economy ministry collects taxes.'
+      C: 'The cost of collecting a tax should be low compared with the revenue.'
+      D: 'Taxes should change every week.'
+    answer: C
+    explanation: 'A tax that costs almost as much to collect as it raises is wasteful.'
+
+  - uid: g12-economics-5-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which tax is charged on goods brought into a country?'
+    options:
+      A: 'Personal income tax'
+      B: 'Property tax'
+      C: 'Profit tax'
+      D: 'Customs duty'
+    answer: D
+    explanation: 'Customs duties are collected at the border on imports.'
+
+  - uid: g12-economics-5-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which problem most limits tax revenue in many developing countries?'
+    options:
+      A: 'A large informal sector and a narrow tax base'
+      B: 'Too many tax offices'
+      C: 'Too many people paying tax'
+      D: 'Very high incomes for everyone'
+    answer: A
+    explanation: 'Many small businesses and workers are outside the tax system.'
+
+  - uid: g12-economics-5-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main purpose of a Taxpayer Identification Number (TIN)?'
+    options:
+      A: 'To open a social media account'
+      B: 'To identify each taxpayer in the tax system'
+      C: 'To set the VAT rate'
+      D: 'To print money'
+    answer: B
+    explanation: 'It links a person''s or firm''s tax records together.'
+
+  - uid: g12-economics-5-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'Which of these is a way taxes help reduce income inequality?'
+    options:
+      A: 'Taxing the poor at higher rates'
+      B: 'Removing all income tax'
+      C: 'Using progressive income taxes to fund services for low-income people'
+      D: 'Taxing only food'
+    answer: C
+    explanation: 'Higher earners pay a larger share, and the revenue can support the poor.'
+
+  - uid: g12-economics-5-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Paying less tax by legally using an allowance in the tax law is:'
+    options:
+      A: 'Tax evasion'
+      B: 'A crime'
+      C: 'Smuggling'
+      D: 'Tax avoidance'
+    answer: D
+    explanation: 'Avoidance uses legal means; evasion breaks the law.'
+
+  - uid: g12-economics-5-1-q021
+    type: numeric
+    difficulty: 2
+    stem: 'A bag costs 800 birr before VAT. With VAT at 15%, what is the total price the buyer pays, in birr?'
+    answer: {value: 920, tolerance: 0}
+    explanation: 'VAT = 0.15 × 800 = 120, so the total is 800 + 120 = 920 birr.'
+
+  - uid: g12-economics-5-1-q022
+    type: numeric
+    difficulty: 2
+    stem: 'A worker earns 12,000 birr in a month and pays 1,800 birr in income tax. What is the average tax rate, in percent?'
+    answer: {value: 15, tolerance: 0}
+    explanation: '1,800 / 12,000 × 100% = 15%.'
+
+  - uid: g12-economics-5-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'The standard VAT rate in Ethiopia is 15%.'
+    answer: true
+    explanation: 'It was kept at 15% by VAT Proclamation No. 1341/2024.'
+
+  - uid: g12-economics-5-1-q024
+    type: true_false
+    difficulty: 2
+    stem: 'Under a progressive tax, a person with a higher income pays a smaller share of income in tax.'
+    answer: false
+    explanation: 'Under a progressive tax, the share rises with income.'
+
+  - uid: g12-economics-5-1-q025
+    type: true_false
+    difficulty: 2
+    stem: 'Tax evasion is illegal, but tax avoidance uses legal means.'
+    answer: true
+    explanation: 'This is the key difference between the two.'
+
+  - uid: g12-economics-5-1-q026
+    type: fill_in
+    difficulty: 2
+    stem: 'A tax that takes the same percentage of income from everyone is called a proportional or ________ tax.'
+    answer: [flat]
+    explanation: 'Everyone pays the same rate.'
+
+  - uid: g12-economics-5-1-q027
+    type: fill_in
+    difficulty: 2
+    stem: 'An indirect tax on specific goods such as tobacco and alcohol is called an ________ tax.'
+    answer: [excise]
+    explanation: 'Excise taxes target particular goods.'
+
+  - uid: g12-economics-5-1-q028
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are indirect taxes? Choose all that apply.'
+    options:
+      A: 'Value added tax'
+      B: 'Customs duty'
+      C: 'Excise tax'
+      D: 'Personal income tax'
+    answer: [A, B, C]
+    explanation: 'Personal income tax is a direct tax.'
+
+  - uid: g12-economics-5-1-q029
+    type: matching
+    difficulty: 2
+    stem: 'Match each of Adam Smith''s principles with its meaning.'
+    left:
+      L1: 'Equity'
+      L2: 'Convenience'
+      L3: 'Economy'
+    right:
+      R1: 'Tax is collected at a time and in a way that suits the taxpayer.'
+      R2: 'Tax is cheap to collect.'
+      R3: 'People pay according to their ability.'
+      R4: 'Tax rates rise every year.'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Rising tax rates every year is not one of Smith''s principles.'
+
+  - uid: g12-economics-5-1-q030
+    type: ordering
+    difficulty: 3
+    stem: 'Put the steps of VAT on a sale in order.'
+    items:
+      A: 'The seller pays the VAT collected to the tax authority.'
+      B: 'The registered seller adds VAT to the price.'
+      C: 'The buyer pays the price including VAT.'
+    answer: [B, C, A]
+    explanation: 'VAT is added, collected from the buyer, then handed to the government.'

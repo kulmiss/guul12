@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-5-1-q001: {hash: 'd05acfa9218fd2fba1f1fc3e127f029e58d6ecd538bde177d8212be73ecfafc9', answer: B}
+  g12-economics-5-1-q002: {hash: 'e1a604b6c7f12074aa01afbb33bdd56ab017c980fdf2ef6e29918939d9ef4794', answer: A}
+  g12-economics-5-1-q003: {hash: 'a68430eb9a42ca9f93e5a5665d5585bbc3b4d333fd28964e7976c70dc6287d48', answer: C}
+  g12-economics-5-1-q004: {hash: 'bb87bea8e53880d44e3ba7107400700b7f47b236dc80cae534f1162a84a6582c', answer: D}
+  g12-economics-5-1-q005: {hash: '4753cae332c02ee72e9a5cadbe8d19f14b0245c001af363f0507f8acc6b0d3c3', answer: A}
+  g12-economics-5-1-q006: {hash: 'bb5450d743ea1bdb893e90851079dc05ceab7008faf58f2002d3313d5b19be31', answer: B, note: 'Minor: the Ministry of Revenues runs federal domestic taxes, but customs duties are run by the Ethiopian Customs Commission. "Administers federal taxes" sounds too absolute. Better wording: "administers federal domestic taxes such as income tax and VAT".'}
+  g12-economics-5-1-q007: {hash: '1f661fff4a05feda90ec41a4e0af37856cabadf0bd52668e7c3e1b4210ccffa1', answer: C}
+  g12-economics-5-1-q008: {hash: '5d7630c1ad72eed88d1da14b9bdbc34b4b1cf150687fca20652964887ddc8ea8', answer: D}
+  g12-economics-5-1-q009: {hash: '7c9ffba18e1a86696499da0924a813af59194dcefee5ff7b11e1852bf476f916', answer: A}
+  g12-economics-5-1-q010: {hash: '8de48a5564ddbd60b57ebc8dd3ae682c3dad9356de7df3ab939e5f96710ed6db', answer: B}
+  g12-economics-5-1-q011: {hash: 'f10a0493cdd66ccc1406f1a7d0e22f2eafa556d0f385fa9ceed8caaee5d56302', answer: C}
+  g12-economics-5-1-q012: {hash: '2bcbcb715d701f672ee4ed89a353dbc748c3363a11942c917b266dff27e0897d', answer: D}
+  g12-economics-5-1-q013: {hash: 'b0462c81eeac825817b2fab3134e95a8410ab5a5157908253dbce1e5dfa45791', answer: A}
+  g12-economics-5-1-q014: {hash: 'd55e5c88ea9baf899cd5fbcc1e625c001317808ec9261c0ac6ff6adb67a25fb6', answer: B}
+  g12-economics-5-1-q015: {hash: '23fb7c0e23e62945ab52b9c3deca265ddc666a566dca004422e85751b37594ac', answer: C}
+  g12-economics-5-1-q016: {hash: 'f10f65b034c1c7afb365119d4838f324e6ea26e2500e21c866e1744fe8f69ab3', answer: D}
+  g12-economics-5-1-q017: {hash: 'f6bce9f9d94b27946ff99a1966955e0c127df0acc75aceb26d7fa82aa879255b', answer: A}
+  g12-economics-5-1-q018: {hash: '9027d0cebeea2684985bda97906860eced68d234384e9720d776b10d10356b20', answer: B}
+  g12-economics-5-1-q019: {hash: '03e138fe4701da08911c521f2616bf3d6156832604714c920bf2fb9ff3a9940d', answer: C}
+  g12-economics-5-1-q020: {hash: '90652e7de08e6b4d5ed67dbaf6b4e81f36af4ee742345812c15e35dbaa0ab45e', answer: D}
+  g12-economics-5-1-q021: {hash: 'f98a773e5632223aa01491f461093a399fc2d52cceebe2c705f7c17a03c6283a', answer: 920}
+  g12-economics-5-1-q022: {hash: '1e52f19d039d587969a7cab2a41afceb4c8836db7444f2b560009dcb82527fe0', answer: 15}
+  g12-economics-5-1-q023: {hash: '5304972722288ac5cf86e7ef43c26ca12c826d3457159ce837049c82a9e64da9', answer: true}
+  g12-economics-5-1-q024: {hash: '268c3762cbf8d89e8352ce60a3f09a888234cedf27901103923045ac72c3dde4', answer: false}
+  g12-economics-5-1-q025: {hash: '9864cb70ca47309a3a8da99589eb7d5a5e1f0de2af012a5e76a581486a3f7483', answer: true}
+  g12-economics-5-1-q026: {hash: 'a9f33b09a216ab4af973015c563cf7577e8f8d3cb8fd3e896006cbd1ccfcc92e', answer: 'flat'}
+  g12-economics-5-1-q027: {hash: '9a799a0358a96d7466453faeecca5309710f0d5391222c34d4878b0f9ad662a3', answer: 'excise'}
+  g12-economics-5-1-q028: {hash: '968b5912c9157ff90630141233c1c838591ec9a9e3e4bac0ce1a29c1970854ef', answer: [A, B, C]}
+  g12-economics-5-1-q029: {hash: '5ab956dc37ff18a1d78fa66c67c37b883fad363792b4d32e047cfd6a43eb14f8', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-economics-5-1-q030: {hash: '42d9e66b9bcd44905e3e5b035dced21fe4b1d4679c845c487236e67e9d62c05d', answer: [B, C, A]}
