@@ -96,6 +96,33 @@ void main() {
       await tapOn(tester, find.byKey(const ValueKey('check')));
     },
     'me': (tester) async => tapOn(tester, find.text('Me')),
+    'exams': (tester) async {
+      await tapOn(tester, find.text('Exams').last);
+      await tapOn(tester, find.widgetWithText(ChoiceChip, 'Physics'));
+    },
+    'exam': (tester) async {
+      await tapOn(tester, find.text('Exams').last);
+      await tapOn(tester, find.widgetWithText(ChoiceChip, 'Physics'));
+      await tapOn(tester, find.text('Physics mock exam 1'));
+      await tapOn(tester, find.text('Start exam'));
+      await tapOn(tester, find.text('Option C'));
+      await tapOn(tester, find.byTooltip('Flag for review'));
+    },
+    'exam_result': (tester) async {
+      await tapOn(tester, find.text('Exams').last);
+      await tapOn(tester, find.widgetWithText(ChoiceChip, 'Physics'));
+      await tapOn(tester, find.text('Physics mock exam 1'));
+      await tapOn(tester, find.text('Start exam'));
+      await tapOn(tester, find.text('Option A'));
+      await tapOn(tester, find.byTooltip('All questions'));
+      await tapOn(tester, find.bySemanticsLabel('4, Not answered'));
+      await tapOn(tester, find.text('Option D'));
+      await tapOn(tester, find.text('Submit exam'));
+      await tapOn(
+        tester,
+        find.descendant(of: find.byType(AlertDialog), matching: find.text('Submit exam')),
+      );
+    },
   };
 
   for (final (sizeName, size) in [('phone', phoneSize), ('tablet', tabletSize)]) {

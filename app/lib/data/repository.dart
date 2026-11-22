@@ -1,5 +1,8 @@
 import 'dart:async';
+import 'dart:math';
 
+import '../domain/exam.dart';
+import '../domain/exam_builder.dart';
 import 'api_client.dart';
 import 'local_db.dart';
 import 'models.dart';
@@ -14,6 +17,9 @@ abstract final class Keys {
   static const config = 'config';
   static const recentChapters = 'recent_chapters';
   static const pendingReports = 'pending_reports';
+  static const mocks = 'mocks';
+  static const examInProgress = 'exam_in_progress';
+  static const historyRestored = 'history_restored';
 }
 
 /// Offline-first data access. Every read comes from the phone; the network only refreshes it.
@@ -80,6 +86,8 @@ class Repository {
     );
     await tokens.writeToken(asString(json['token']));
     await db.writeJson(Keys.serverProfile, asMap(json['user']));
+    // The account may now be an older one with its own history: fetch it on the next sync.
+    await db.writeString(Keys.historyRestored, '');
     return profile();
   }
 
@@ -234,11 +242,13 @@ class Repository {
     required DateTime startedAt,
     required DateTime finishedAt,
     required List<AttemptAnswer> answers,
+    int? mockId,
   }) async {
     final payload = <String, Object?>{
       'client_uuid': clientUuid,
       'mode': mode,
       'chapter_id': chapterId,
+      'mock_id': ?mockId,
       'started_at': startedAt.toUtc().toIso8601String(),
       'finished_at': finishedAt.toUtc().toIso8601String(),
       'answers': [for (final a in answers) a.toJson()],
@@ -255,7 +265,8 @@ class Repository {
     var uploaded = 0;
     for (final (uuid, payload) in await db.pendingAttempts()) {
       try {
-        await _authed(() => api.post('attempts', payload));
+        final json = await _authed(() => api.post('attempts', payload));
+        await _keepExamDetails(uuid, json);
       } on ApiException catch (e) {
         // A rejected attempt (e.g. finish time in the future) would block the queue forever: drop it.
         if (e.isOffline || e.status >= 500 || e.status == 429) rethrow;
@@ -275,6 +286,202 @@ class Repository {
       // Stays queued; syncAll retries later.
     }
     return (await db.pendingAttempts()).isEmpty;
+  }
+
+  // ---- exams -----------------------------------------------------------------------------------
+
+  /// Fixed mocks as last downloaded (works offline).
+  Future<List<MockHeader>> mocks() async {
+    final json = await db.readJson(Keys.mocks);
+    return json == null
+        ? const []
+        : asList(json['mocks']).map((e) => MockHeader.fromJson(asMap(e))).toList();
+  }
+
+  Future<List<MockHeader>> refreshMocks() async {
+    final json = await _authed(() => api.get('mocks'));
+    await db.writeJson(Keys.mocks, json);
+    return asList(json['mocks']).map((e) => MockHeader.fromJson(asMap(e))).toList();
+  }
+
+  /// A fixed mock, from the phone if its questions have not changed; downloaded otherwise.
+  /// Throws [ApiException] (`premium_required`, offline).
+  Future<ExamPaper> mockPaper(MockHeader header) async {
+    final saved = await db.mock(header.id, header.contentHash);
+    final Map<String, Object?> json;
+    if (saved != null) {
+      json = saved;
+    } else {
+      json = await _authed(() => api.get('mocks/${header.id}'));
+      await db.saveMock(header.id, header.contentHash, json);
+    }
+    return ExamPaper(
+      kind: ExamKind.fixed,
+      mockId: header.id,
+      subjectId: header.subjectId,
+      title: header.title,
+      minutes: header.minutes,
+      questions: asList(json['questions']).map((e) => Question.fromJson(asMap(e))).toList(),
+      passages: {
+        for (final p in asList(json['passages']).map((e) => Passage.fromJson(asMap(e)))) p.id: p,
+      },
+    );
+  }
+
+  /// A random mock from the server. Throws [ApiException] (`daily_limit`, `no_questions`, offline).
+  Future<ExamPaper> randomPaper({required int subjectId, required String title}) async {
+    final json = await _authed(() => api.post('exams/random', {'subject_id': subjectId}));
+    final exam = asMap(json['exam']);
+    return ExamPaper(
+      kind: ExamKind.random,
+      subjectId: subjectId,
+      title: title,
+      minutes: asInt(exam['minutes']),
+      questions: asList(json['questions']).map((e) => Question.fromJson(asMap(e))).toList(),
+      passages: {
+        for (final p in asList(json['passages']).map((e) => Passage.fromJson(asMap(e)))) p.id: p,
+      },
+    );
+  }
+
+  /// "My weak topics" or "My mistakes" for one subject, built on the phone from saved chapters
+  /// and the student's own answers. Null when there is nothing to build from yet.
+  Future<ExamPaper?> personalPaper({
+    required ExamKind kind,
+    required int subjectId,
+    required String title,
+    Random? random,
+  }) async {
+    assert(kind == ExamKind.weak || kind == ExamKind.mistakes, 'only personal exams');
+    final catalog = await this.catalog();
+    final unitIds = catalog.units.where((u) => u.subjectId == subjectId).map((u) => u.id).toSet();
+    final chapterIds = catalog.chapters.where((c) => unitIds.contains(c.unitId)).map((c) => c.id);
+    final chapters = await db.chapters(chapterIds);
+    final pool = [for (final c in chapters) ...c.questions];
+    final r = random ?? Random();
+    final lastWrong = await db.lastAnswerWrong();
+    final questions = kind == ExamKind.mistakes
+        ? mistakesExamQuestions(pool: pool, lastWrong: lastWrong, random: r)
+        : weakExamQuestions(
+            pool: pool,
+            stats: await db.chapterStats(),
+            lastWrong: lastWrong,
+            answered: await db.answeredQuestionIds(),
+            random: r,
+          );
+    if (questions.isEmpty) return null;
+    final passageIds = questions.map((q) => q.passageId).whereType<int>().toSet();
+    return ExamPaper(
+      kind: kind,
+      subjectId: subjectId,
+      title: title,
+      minutes: examMinutesFor(questions.length),
+      questions: questions,
+      passages: {
+        for (final c in chapters)
+          for (final p in c.passages)
+            if (passageIds.contains(p.id)) p.id: p,
+      },
+    );
+  }
+
+  /// The exam being sat, saved after every change so closing the app loses nothing.
+  Future<void> saveExamProgress(ExamSession session) =>
+      db.writeJson(Keys.examInProgress, session.toJson());
+
+  Future<ExamSession?> examInProgress() async {
+    final json = await db.readJson(Keys.examInProgress);
+    if (json == null || json.isEmpty) return null;
+    return ExamSession.fromJson(json);
+  }
+
+  Future<void> clearExamProgress() => db.writeJson(Keys.examInProgress, const {});
+
+  /// Ends an exam: keeps the result on the phone, queues the attempt and tries to upload it.
+  /// [now] is the screen's clock (the same one the exam's timer uses).
+  Future<ExamRecord> submitExam(ExamSession session, {DateTime? now, String? appVersion}) async {
+    final outcome = session.finish(now ?? _clock());
+    final record = ExamRecord.fromOutcome(session, outcome);
+    await db.saveExamResult(record.clientUuid, record.finishedAt, record.toJson());
+    await saveAttempt(
+      clientUuid: session.clientUuid,
+      mode: session.paper.kind.wire,
+      chapterId: null,
+      mockId: session.paper.mockId,
+      startedAt: outcome.startedAt,
+      finishedAt: outcome.finishedAt,
+      answers: [
+        for (final i in outcome.items)
+          AttemptAnswer(
+            questionId: i.question.id,
+            chapterId: i.question.chapterId,
+            version: i.question.version,
+            response: i.response,
+            timeMs: i.timeMs,
+            correctLocally: i.correct,
+          ),
+      ],
+    );
+    await clearExamProgress();
+    await tryUploadAttempts(appVersion: appVersion);
+    return await examResult(record.clientUuid) ?? record;
+  }
+
+  Future<ExamRecord?> examResult(String clientUuid) async {
+    final json = await db.examResult(clientUuid);
+    return json == null ? null : ExamRecord.fromJson(json);
+  }
+
+  Future<List<ExamRecord>> examResults() async =>
+      (await db.examResults()).map(ExamRecord.fromJson).toList();
+
+  /// Asks the server again, e.g. for "better than X%" once more students took the mock.
+  Future<ExamRecord?> refreshExamResult(String clientUuid) async {
+    final json = await _authed(() => api.get('attempts/$clientUuid'));
+    await _keepExamDetails(clientUuid, json);
+    return examResult(clientUuid);
+  }
+
+  Future<void> _keepExamDetails(String clientUuid, Map<String, Object?> json) async {
+    final attempt = json['attempt'];
+    if (attempt is! Map) return;
+    final exam = attempt['exam'];
+    if (exam is! Map) return;
+    final record = await examResult(clientUuid);
+    if (record == null) return;
+    final updated = record.withServer(
+      betterThanPercent: asIntOrNull(exam['better_than_percent']),
+      students: asIntOrNull(exam['students']),
+    );
+    await db.saveExamResult(clientUuid, updated.finishedAt, updated.toJson());
+  }
+
+  // ---- answer history on a new phone ----------------------------------------------------------
+
+  /// Brings back the student's own answers from the server once per account on this phone
+  /// (new phone, or after Google sign-in joined another account). Answers the phone already
+  /// has are not added twice. Returns how many were added.
+  Future<int> restoreHistory() async {
+    if ((await db.readString(Keys.historyRestored) ?? '').isNotEmpty) return 0;
+    var after = 0;
+    var restored = 0;
+    while (true) {
+      final json = await _authed(() => api.get('history', query: {'after': '$after'}));
+      final answers = [
+        for (final a in asList(json['answers']).map(asMap))
+          (
+            questionId: asInt(a['question_id']),
+            chapterId: asInt(a['chapter_id']),
+            correct: asBool(a['correct']),
+            at: DateTime.parse(asString(a['answered_at'])),
+          ),
+      ];
+      restored += await db.restoreAnswers(answers);
+      after = asInt(json['next_after']);
+      if (!asBool(json['has_more'])) break;
+    }
+    await db.writeString(Keys.historyRestored, 'done');
+    return restored;
   }
 
   // ---- reports ---------------------------------------------------------------------------------
@@ -364,6 +571,7 @@ class Repository {
       await ensureSession(appVersion: appVersion);
       await uploadProfile();
       await refreshConfig();
+      await restoreHistory();
       await uploadAttempts();
       await uploadReports();
       await syncBookmarks();

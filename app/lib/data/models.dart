@@ -301,6 +301,8 @@ class Passage {
   final int id;
   final String title;
   final String body;
+
+  Map<String, Object?> toJson() => {'id': id, 'title': title, 'body': body};
 }
 
 class QuestionOption {
@@ -324,6 +326,8 @@ class QuestionOption {
   final String? side;
   final String body;
   final String? mediaUrl;
+
+  Map<String, Object?> toJson() => {'key': key, 'side': side, 'body': body, 'media_url': mediaUrl};
 }
 
 class Question {
@@ -372,6 +376,22 @@ class Question {
 
   List<QuestionOption> get leftOptions => options.where((o) => o.side == 'left').toList();
   List<QuestionOption> get rightOptions => options.where((o) => o.side == 'right').toList();
+
+  /// The same shape the API sends, so a saved exam can be read back with [Question.fromJson].
+  Map<String, Object?> toJson() => {
+    'id': id,
+    'chapter_id': chapterId,
+    'passage_id': passageId,
+    'type': type.wire,
+    'stem': stem,
+    'media_url': mediaUrl,
+    'difficulty': difficulty,
+    'is_beta': isBeta,
+    'answer_key': answerKey,
+    'explanation': explanation,
+    'version': version,
+    'options': [for (final o in options) o.toJson()],
+  };
 }
 
 class ChapterContent {
@@ -476,6 +496,8 @@ class AppConfig {
     required this.features,
     required this.premium,
     required this.showAds,
+    this.paperMaxScore = 100,
+    this.freeRandomExamsPerDay = 1,
   });
 
   factory AppConfig.fromJson(Map<String, Object?> json) {
@@ -490,6 +512,8 @@ class AppConfig {
       features: features,
       premium: asBool(json['premium']),
       showAds: asBool(json['show_ads']),
+      paperMaxScore: asIntOrNull(settings['paper_max_score']) ?? 100,
+      freeRandomExamsPerDay: asIntOrNull(settings['free_random_exams_per_day']) ?? 1,
     );
   }
 
@@ -511,6 +535,67 @@ class AppConfig {
   final bool premium;
   final bool showAds;
 
+  /// The real paper's top score (EAES has not confirmed the Aptitude scale; editable on the server).
+  final int paperMaxScore;
+  final int freeRandomExamsPerDay;
+
   /// Unknown switches default to on, matching the server defaults.
   bool feature(String key) => features[key] ?? true;
+}
+
+/// How a student is doing in one chapter, from their own answer history on the phone.
+class ChapterStat {
+  const ChapterStat({required this.chapterId, required this.answered, required this.correct});
+
+  final int chapterId;
+
+  /// Different questions answered at least once.
+  final int answered;
+
+  /// Of those, how many were right the last time.
+  final int correct;
+
+  double get accuracy => answered == 0 ? 0 : correct / answered;
+}
+
+/// A fixed mock exam in the list.
+class MockHeader {
+  const MockHeader({
+    required this.id,
+    required this.subjectId,
+    required this.grade,
+    required this.number,
+    required this.title,
+    required this.minutes,
+    required this.questionCount,
+    required this.isPremium,
+    required this.locked,
+    required this.contentHash,
+  });
+
+  factory MockHeader.fromJson(Map<String, Object?> json) => MockHeader(
+    id: asInt(json['id']),
+    subjectId: asInt(json['subject_id']),
+    grade: asInt(json['grade']),
+    number: asInt(json['number']),
+    title: asString(json['title']),
+    minutes: asInt(json['minutes']),
+    questionCount: asInt(json['question_count']),
+    isPremium: asString(json['access']) == 'premium',
+    locked: asBool(json['locked']),
+    contentHash: asString(json['content_hash']),
+  );
+
+  final int id;
+  final int subjectId;
+  final int grade;
+  final int number;
+  final String title;
+  final int minutes;
+  final int questionCount;
+  final bool isPremium;
+
+  /// Premium mock and the student has no Premium (decided by the server).
+  final bool locked;
+  final String contentHash;
 }

@@ -4,6 +4,9 @@ import 'package:material_ui/material_ui.dart';
 
 import '../data/models.dart';
 import '../domain/practice.dart';
+import '../ui/exams/exam_result_screen.dart';
+import '../ui/exams/exam_screen.dart';
+import '../ui/exams/exams_screen.dart';
 import '../ui/practice/player_screen.dart';
 import '../ui/practice/practice_screen.dart';
 import '../ui/screens/chapter_screen.dart';
@@ -96,6 +99,18 @@ final routerProvider = Provider<GoRouter>((ref) {
           ),
         ],
       ),
+      GoRoute(
+        path: '/exam',
+        parentNavigatorKey: _rootKey,
+        builder: (_, _) => const ExamScreen(),
+        routes: [
+          GoRoute(
+            path: 'result/:uuid',
+            parentNavigatorKey: _rootKey,
+            builder: (_, state) => ExamResultScreen(clientUuid: state.pathParameters['uuid'] ?? ''),
+          ),
+        ],
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, shell) => AppShell(shell: shell),
         branches: [
@@ -125,6 +140,9 @@ final routerProvider = Provider<GoRouter>((ref) {
                 ],
               ),
             ],
+          ),
+          StatefulShellBranch(
+            routes: [GoRoute(path: '/exams', builder: (_, _) => const ExamsScreen())],
           ),
           StatefulShellBranch(
             routes: [
@@ -157,6 +175,7 @@ class AppShell extends StatelessWidget {
     final items = [
       (Icons.home_outlined, Icons.home, l.navHome),
       (Icons.menu_book_outlined, Icons.menu_book, l.navStudy),
+      (Icons.assignment_outlined, Icons.assignment, l.navExams),
       (Icons.person_outline, Icons.person, l.navMe),
     ];
     if (isWide(context)) {

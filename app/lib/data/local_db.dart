@@ -11,7 +11,7 @@ class LocalDb {
 
   final Database _db;
 
-  static const _version = 1;
+  static const _version = 2;
 
   /// Opens the app database. Tests pass `databaseFactoryFfi` and [inMemoryDatabasePath].
   static Future<LocalDb> open({DatabaseFactory? factory, String? path}) async {
@@ -22,6 +22,7 @@ class LocalDb {
       options: OpenDatabaseOptions(
         version: _version,
         onCreate: _create,
+        onUpgrade: _upgrade,
         singleInstance: path != inMemoryDatabasePath,
       ),
     );
@@ -45,6 +46,24 @@ class LocalDb {
       ..execute(
         'CREATE TABLE bookmarks (question_id INTEGER PRIMARY KEY, synced INTEGER NOT NULL)',
       );
+    _createV2(batch);
+    await batch.commit(noResult: true);
+  }
+
+  /// Version 2 (Phase 3): downloaded mock exams and finished exam results.
+  static void _createV2(Batch batch) {
+    batch
+      ..execute(
+        'CREATE TABLE mocks (id INTEGER PRIMARY KEY, content_hash TEXT NOT NULL, json TEXT NOT NULL)',
+      )
+      ..execute(
+        'CREATE TABLE exam_results (client_uuid TEXT PRIMARY KEY, finished_at INTEGER NOT NULL, json TEXT NOT NULL)',
+      );
+  }
+
+  static Future<void> _upgrade(Database db, int from, int to) async {
+    final batch = db.batch();
+    if (from < 2) _createV2(batch);
     await batch.commit(noResult: true);
   }
 
@@ -147,6 +166,93 @@ class LocalDb {
   Future<Set<int>> answeredQuestionIds() async {
     final rows = await _db.rawQuery('SELECT DISTINCT question_id FROM answers');
     return rows.map((r) => r['question_id']! as int).toSet();
+  }
+
+  /// Per chapter: different questions answered, and how many were right the last time.
+  Future<List<ChapterStat>> chapterStats() async {
+    final rows = await _db.rawQuery(
+      'SELECT a.chapter_id AS chapter_id, COUNT(*) AS answered, SUM(a.correct) AS correct FROM answers a '
+      'WHERE a.id = (SELECT b.id FROM answers b WHERE b.question_id = a.question_id ORDER BY b.answered_at DESC, b.id DESC LIMIT 1) '
+      'GROUP BY a.chapter_id ORDER BY a.chapter_id',
+    );
+    return [
+      for (final r in rows)
+        ChapterStat(
+          chapterId: r['chapter_id']! as int,
+          answered: r['answered']! as int,
+          correct: (r['correct'] as int?) ?? 0,
+        ),
+    ];
+  }
+
+  /// Answers restored from the server, each with its own time. An answer the phone already
+  /// has (same question, same second) is skipped. Returns how many were added.
+  Future<int> restoreAnswers(
+    List<({int questionId, int chapterId, bool correct, DateTime at})> answers,
+  ) async {
+    var added = 0;
+    await _db.transaction((txn) async {
+      for (final a in answers) {
+        final second = a.at.millisecondsSinceEpoch ~/ 1000;
+        final existing = await txn.rawQuery(
+          'SELECT 1 FROM answers WHERE question_id = ? AND answered_at / 1000 = ? LIMIT 1',
+          [a.questionId, second],
+        );
+        if (existing.isNotEmpty) continue;
+        await txn.insert('answers', {
+          'question_id': a.questionId,
+          'chapter_id': a.chapterId,
+          'correct': a.correct ? 1 : 0,
+          'answered_at': a.at.millisecondsSinceEpoch,
+        });
+        added++;
+      }
+    });
+    return added;
+  }
+
+  // ---- mock exams ------------------------------------------------------------------------------
+
+  Future<void> saveMock(int id, String contentHash, Map<String, Object?> json) => _db.insert(
+    'mocks',
+    {'id': id, 'content_hash': contentHash, 'json': jsonEncode(json)},
+    conflictAlgorithm: ConflictAlgorithm.replace,
+  );
+
+  /// The saved mock, only if it still has [contentHash].
+  Future<Map<String, Object?>?> mock(int id, String contentHash) async {
+    final rows = await _db.query(
+      'mocks',
+      columns: ['json'],
+      where: 'id = ? AND content_hash = ?',
+      whereArgs: [id, contentHash],
+    );
+    return rows.isEmpty ? null : asMap(jsonDecode(rows.first['json']! as String));
+  }
+
+  // ---- exam results ----------------------------------------------------------------------------
+
+  Future<void> saveExamResult(String clientUuid, DateTime finishedAt, Map<String, Object?> json) =>
+      _db.insert('exam_results', {
+        'client_uuid': clientUuid,
+        'finished_at': finishedAt.millisecondsSinceEpoch,
+        'json': jsonEncode(json),
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
+
+  Future<Map<String, Object?>?> examResult(String clientUuid) async {
+    final rows = await _db.query(
+      'exam_results',
+      columns: ['json'],
+      where: 'client_uuid = ?',
+      whereArgs: [clientUuid],
+    );
+    return rows.isEmpty ? null : asMap(jsonDecode(rows.first['json']! as String));
+  }
+
+  /// Newest first.
+  Future<List<Map<String, Object?>>> examResults() async {
+    final rows = await _db.query('exam_results', columns: ['json'], orderBy: 'finished_at DESC');
+    return rows.map((r) => asMap(jsonDecode(r['json']! as String))).toList();
   }
 
   // ---- attempts waiting for upload --------------------------------------------------------------

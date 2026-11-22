@@ -1135,6 +1135,372 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Thank you! We will check this question.'**
   String get reportThanks;
+
+  /// Bottom navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Exams'**
+  String get navExams;
+
+  /// Exams tab title
+  ///
+  /// In en, this message translates to:
+  /// **'Exams'**
+  String get examsTitle;
+
+  /// Section: fixed mock exams of a subject
+  ///
+  /// In en, this message translates to:
+  /// **'Mock exams'**
+  String get examsMocks;
+
+  /// Section: random, weak-topic and mistakes exams
+  ///
+  /// In en, this message translates to:
+  /// **'More exams'**
+  String get examsMore;
+
+  /// Section: finished exams
+  ///
+  /// In en, this message translates to:
+  /// **'Your results'**
+  String get examsPast;
+
+  /// Mock list subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'{questions, plural, =1{1 question} other{{questions} questions}} · {minutes} min'**
+  String examsMockInfo(int questions, int minutes);
+
+  /// A random exam from the whole subject
+  ///
+  /// In en, this message translates to:
+  /// **'Random mock'**
+  String get examsRandom;
+
+  /// Random mock subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'50 questions from the whole subject. One free each day.'**
+  String get examsRandomBody;
+
+  /// Exam from the student's weakest chapters
+  ///
+  /// In en, this message translates to:
+  /// **'My weak topics'**
+  String get examsWeak;
+
+  /// Weak topics subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Questions from the chapters where you score lowest.'**
+  String get examsWeakBody;
+
+  /// Exam from questions answered wrong
+  ///
+  /// In en, this message translates to:
+  /// **'My mistakes'**
+  String get examsMistakes;
+
+  /// Mistakes subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Questions you got wrong before.'**
+  String get examsMistakesBody;
+
+  /// Empty mock list
+  ///
+  /// In en, this message translates to:
+  /// **'Mock exams appear here when you are online.'**
+  String get examsNoMocks;
+
+  /// Banner for an exam in progress
+  ///
+  /// In en, this message translates to:
+  /// **'Continue your exam'**
+  String get examsContinue;
+
+  /// Exam in progress subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'{title} · {time} left'**
+  String examsContinueBody(String title, String time);
+
+  /// Past result subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'{correct} / {total} · {date}'**
+  String examsResultLine(int correct, int total, String date);
+
+  /// Starting a second exam
+  ///
+  /// In en, this message translates to:
+  /// **'Finish or submit your current exam first.'**
+  String get examsFinishFirst;
+
+  /// Random mock daily limit reached
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s free random mock is used. A new one is ready tomorrow.'**
+  String get examsDailyLimit;
+
+  /// No data yet for a personal exam
+  ///
+  /// In en, this message translates to:
+  /// **'Practise some questions in this subject first.'**
+  String get examsNeedPractice;
+
+  /// Server has no questions
+  ///
+  /// In en, this message translates to:
+  /// **'There are no questions for this exam yet.'**
+  String get examsNoQuestions;
+
+  /// Exam download failed offline
+  ///
+  /// In en, this message translates to:
+  /// **'No internet. Connect and try again.'**
+  String get examsOffline;
+
+  /// Intro dialog heading
+  ///
+  /// In en, this message translates to:
+  /// **'Real Exam Mode'**
+  String get examIntroRules;
+
+  /// Rule 1
+  ///
+  /// In en, this message translates to:
+  /// **'The timer starts now and does not stop, even if you leave the app.'**
+  String get examIntroTimer;
+
+  /// Rule 2
+  ///
+  /// In en, this message translates to:
+  /// **'You see right and wrong answers only at the end.'**
+  String get examIntroNoFeedback;
+
+  /// Rule 3
+  ///
+  /// In en, this message translates to:
+  /// **'You can change answers and flag questions to check again.'**
+  String get examIntroChange;
+
+  /// Rule 4
+  ///
+  /// In en, this message translates to:
+  /// **'When the time is up, the exam is submitted for you.'**
+  String get examIntroAuto;
+
+  /// Intro dialog button
+  ///
+  /// In en, this message translates to:
+  /// **'Start exam'**
+  String get examStart;
+
+  /// Exam app bar
+  ///
+  /// In en, this message translates to:
+  /// **'Question {current} of {total}'**
+  String examQuestionOf(int current, int total);
+
+  /// Exam timer for screen readers
+  ///
+  /// In en, this message translates to:
+  /// **'Time left: {time}'**
+  String examTimeLeft(String time);
+
+  /// Exam flag button
+  ///
+  /// In en, this message translates to:
+  /// **'Flag for review'**
+  String get examFlag;
+
+  /// Exam flag button when flagged
+  ///
+  /// In en, this message translates to:
+  /// **'Remove flag'**
+  String get examUnflag;
+
+  /// Opens the question map
+  ///
+  /// In en, this message translates to:
+  /// **'All questions'**
+  String get examMap;
+
+  /// Removes the chosen answer
+  ///
+  /// In en, this message translates to:
+  /// **'Clear answer'**
+  String get examClear;
+
+  /// Exam navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Previous'**
+  String get examPrevious;
+
+  /// Exam submit button
+  ///
+  /// In en, this message translates to:
+  /// **'Submit exam'**
+  String get examSubmit;
+
+  /// Submit confirm title
+  ///
+  /// In en, this message translates to:
+  /// **'Submit the exam?'**
+  String get examSubmitTitle;
+
+  /// Submit confirm body
+  ///
+  /// In en, this message translates to:
+  /// **'Answered: {answered} of {total}\nNot answered: {unanswered}\nFlagged: {flagged}'**
+  String examSubmitBody(int answered, int total, int unanswered, int flagged);
+
+  /// Submit confirm: cancel
+  ///
+  /// In en, this message translates to:
+  /// **'Keep going'**
+  String get examKeepGoing;
+
+  /// Back button during an exam
+  ///
+  /// In en, this message translates to:
+  /// **'Leave the exam?'**
+  String get examLeaveTitle;
+
+  /// Back button during an exam
+  ///
+  /// In en, this message translates to:
+  /// **'The timer keeps running. You can come back from the Exams tab.'**
+  String get examLeaveBody;
+
+  /// Leave the exam
+  ///
+  /// In en, this message translates to:
+  /// **'Leave'**
+  String get examLeave;
+
+  /// Shown when the exam auto-submits
+  ///
+  /// In en, this message translates to:
+  /// **'Time is up. Your exam was submitted.'**
+  String get examTimeUp;
+
+  /// Question map legend
+  ///
+  /// In en, this message translates to:
+  /// **'Answered'**
+  String get examMapAnswered;
+
+  /// Question map legend
+  ///
+  /// In en, this message translates to:
+  /// **'Flagged'**
+  String get examMapFlagged;
+
+  /// Question map legend
+  ///
+  /// In en, this message translates to:
+  /// **'Not answered'**
+  String get examMapEmpty;
+
+  /// Result screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Exam result'**
+  String get examResultTitle;
+
+  /// Result percent
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% right'**
+  String examResultPercent(int percent);
+
+  /// Likely real score range
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated exam score: {low}–{high} out of {max}'**
+  String examResultEstimate(int low, int high, int max);
+
+  /// Note under the estimate
+  ///
+  /// In en, this message translates to:
+  /// **'An estimate from this practice, not a promise.'**
+  String get examResultEstimateNote;
+
+  /// Result time
+  ///
+  /// In en, this message translates to:
+  /// **'Time used: {time}'**
+  String examResultTime(String time);
+
+  /// Comparison with other students
+  ///
+  /// In en, this message translates to:
+  /// **'Better than {percent}% of Guul 12 students'**
+  String examResultBetterThan(int percent);
+
+  /// Comparison not available yet
+  ///
+  /// In en, this message translates to:
+  /// **'Not enough students have taken this mock yet. Check again later.'**
+  String get examResultNotEnough;
+
+  /// Comparison needs upload
+  ///
+  /// In en, this message translates to:
+  /// **'Saved on your phone. Connect to the internet to compare with other students.'**
+  String get examResultConnect;
+
+  /// Refresh comparison
+  ///
+  /// In en, this message translates to:
+  /// **'Check again'**
+  String get examResultRefresh;
+
+  /// Section title
+  ///
+  /// In en, this message translates to:
+  /// **'By chapter'**
+  String get examResultChapters;
+
+  /// Chapter score
+  ///
+  /// In en, this message translates to:
+  /// **'{correct} / {total}'**
+  String examResultChapterScore(int correct, int total);
+
+  /// Toggle the answer review
+  ///
+  /// In en, this message translates to:
+  /// **'Review answers'**
+  String get examResultReview;
+
+  /// Toggle the answer review
+  ///
+  /// In en, this message translates to:
+  /// **'Hide answers'**
+  String get examResultHideReview;
+
+  /// Button to practise the weakest chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Practise your weakest chapter'**
+  String get examResultPractiseWeakest;
+
+  /// Unknown result id
+  ///
+  /// In en, this message translates to:
+  /// **'This result is not on this phone.'**
+  String get examResultNotFound;
+
+  /// Chapter not in the catalog
+  ///
+  /// In en, this message translates to:
+  /// **'Chapter {id}'**
+  String examUnknownChapter(int id);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

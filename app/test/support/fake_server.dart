@@ -38,6 +38,66 @@ class FakeServer {
 
   /// Summary PDF URL per chapter id (none by default).
   final Map<int, String> summaryPdfUrls = {};
+
+  /// Exams. Mock 1 is free, mock 2 is Premium; both use [examQuestion]s.
+  bool premium = false;
+  int randomStatus = 201;
+  int mockDownloads = 0;
+  int historyRequests = 0;
+
+  /// "better_than_percent" and "students" sent back for exam attempts.
+  int? betterThanPercent;
+  int students = 0;
+
+  /// Answers returned by GET history (in pages of [historyPage]).
+  final List<Map<String, Object?>> history = [];
+  int historyPage = 1000;
+
+  static Map<String, Object?> examQuestion(
+    int id,
+    String key, {
+    int chapterId = 21,
+    int? passageId,
+  }) => {
+    'id': id,
+    'chapter_id': chapterId,
+    'passage_id': passageId,
+    'type': 'single_choice',
+    'stem': 'Exam question $id',
+    'media_url': null,
+    'difficulty': 2,
+    'is_beta': false,
+    'answer_key': {'correct': key},
+    'explanation': 'Because $key.',
+    'version': 1,
+    'options': [
+      for (final k in ['A', 'B', 'C', 'D'])
+        {'key': k, 'side': null, 'body': 'Option $k', 'media_url': null},
+    ],
+  };
+
+  /// Questions of mock 1: keys A, C, B, D; the last two from chapter 22.
+  List<Map<String, Object?>> mockQuestions = [
+    examQuestion(901, 'A'),
+    examQuestion(902, 'C'),
+    examQuestion(903, 'B', chapterId: 22),
+    examQuestion(904, 'D', chapterId: 22),
+  ];
+
+  String mockHash = 'h1';
+
+  Map<String, Object?> mockHeader(int id) => {
+    'id': id,
+    'subject_id': 1,
+    'grade': 12,
+    'number': id,
+    'title': 'Physics mock exam $id',
+    'minutes': id == 1 ? 6 : 75,
+    'question_count': id == 1 ? mockQuestions.length : 50,
+    'access': id == 1 ? 'free' : 'premium',
+    'locked': id != 1 && !premium,
+    'content_hash': id == 1 ? mockHash : 'h2',
+  };
   int Function(Map<String, Object?> body)? attemptStatus;
 
   /// Answer for POST auth/google: 200 signs in; 409 = account conflict.
@@ -174,7 +234,7 @@ class FakeServer {
           'server_time': '2026-11-22T10:00:00Z',
           'settings': {
             'exam_date': '2027-06-29',
-            'free_fixed_mocks': 2,
+            'free_random_exams_per_day': 1,
             'premium_explain_more_per_day': 20,
             'min_supported_build': minSupportedBuild,
             'recommended_build': 1,
@@ -205,7 +265,33 @@ class FakeServer {
         final b = body();
         final status = attemptStatus?.call(b) ?? 201;
         if (status < 300) receivedAttempts.add(b);
-        return json({'attempt': <String, Object?>{}}, status);
+        return json({'attempt': attemptJson(b)}, status);
+      case ('GET', 'mocks'):
+        return json({
+          'mocks': [mockHeader(1), mockHeader(2)],
+        });
+      case ('POST', 'exams/random'):
+        if (randomStatus == 429) return json({'code': 'daily_limit', 'message': 'Premium'}, 429);
+        return json({
+          'exam': {
+            'subject_id': body()['subject_id'],
+            'grade': 12,
+            'minutes': 3,
+            'question_count': 2,
+          },
+          'passages': <Object?>[],
+          'questions': [examQuestion(951, 'B'), examQuestion(952, 'D')],
+        }, randomStatus);
+      case ('GET', 'history'):
+        historyRequests++;
+        final after = int.parse(request.url.queryParameters['after'] ?? '0');
+        final rest = history.where((h) => (h['id']! as int) > after).toList();
+        final page = rest.take(historyPage).toList();
+        return json({
+          'answers': page,
+          'next_after': page.isEmpty ? after : page.last['id'],
+          'has_more': rest.length > page.length,
+        });
       case ('POST', 'auth/google'):
         if (googleStatus == 409) {
           return json({'code': 'account_conflict', 'message': 'conflict'}, 409);
@@ -215,6 +301,18 @@ class FakeServer {
         return json({'token': token, 'merged': false, 'user': profile});
       case ('GET', 'bookmarks'):
         return json({'question_ids': bookmarks.toList()});
+    }
+    if (request.method == 'GET' && RegExp(r'^mocks/\d+$').hasMatch(path)) {
+      final id = int.parse(path.split('/').last);
+      if (id != 1 && !premium) return json({'code': 'premium_required', 'message': 'Premium'}, 403);
+      mockDownloads++;
+      return json({'mock': mockHeader(id), 'passages': <Object?>[], 'questions': mockQuestions});
+    }
+    if (request.method == 'GET' && path.startsWith('attempts/')) {
+      final uuid = path.split('/').last;
+      final found = receivedAttempts.where((a) => a['client_uuid'] == uuid).toList();
+      if (found.isEmpty) return json({'message': 'not found'}, 404);
+      return json({'attempt': attemptJson(found.last)});
     }
     if (request.method == 'GET' && path.startsWith('chapters/')) {
       final id = int.parse(path.split('/').last);
@@ -233,6 +331,25 @@ class FakeServer {
     }
     return json({'message': 'not found'}, 404);
   });
+}
+
+extension on FakeServer {
+  Map<String, Object?> attemptJson(Map<String, Object?> body) {
+    final mode = body['mode'];
+    final isExam = mode is String && mode.startsWith('exam_');
+    return {
+      'client_uuid': body['client_uuid'],
+      'mode': mode,
+      'mock_id': body['mock_id'],
+      'exam': isExam
+          ? {
+              'chapters': <Object?>[],
+              'better_than_percent': mode == 'exam_fixed' ? betterThanPercent : null,
+              'students': mode == 'exam_fixed' ? students : null,
+            }
+          : null,
+    };
+  }
 }
 
 /// [noIsolate] keeps the database in the test's own isolate, which widget tests need

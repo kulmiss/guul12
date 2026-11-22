@@ -50,6 +50,7 @@ Future<(Repository, FakeServer)> pumpGuul(
   Speech? speech,
   GoogleAuth? googleAuth,
   Future<void> Function(Repository repo)? before,
+  DateTime Function()? clock,
 }) async {
   tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1;
@@ -62,7 +63,7 @@ Future<(Repository, FakeServer)> pumpGuul(
       retry: (_, _) => null,
       overrides: [
         repositoryProvider.overrideWithValue(repo),
-        clockProvider.overrideWithValue(() => testNow),
+        clockProvider.overrideWithValue(clock ?? () => testNow),
         appVersionProvider.overrideWithValue(appVersion),
         speechProvider.overrideWithValue(speech ?? const SilentSpeech()),
         googleAuthProvider.overrideWithValue(googleAuth ?? const DisabledGoogleAuth()),

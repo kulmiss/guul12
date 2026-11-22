@@ -844,5 +844,342 @@
   "reportThanks": "Thank you! We will check this question.",
   "@reportThanks": {
     "description": "Report a problem sheet."
+  },
+  "navExams": "Exams",
+  "@navExams": {
+    "description": "Bottom navigation"
+  },
+  "examsTitle": "Exams",
+  "@examsTitle": {
+    "description": "Exams tab title"
+  },
+  "examsMocks": "Mock exams",
+  "@examsMocks": {
+    "description": "Section: fixed mock exams of a subject"
+  },
+  "examsMore": "More exams",
+  "@examsMore": {
+    "description": "Section: random, weak-topic and mistakes exams"
+  },
+  "examsPast": "Your results",
+  "@examsPast": {
+    "description": "Section: finished exams"
+  },
+  "examsMockInfo": "{questions, plural, =1{1 question} other{{questions} questions}} · {minutes} min",
+  "@examsMockInfo": {
+    "description": "Mock list subtitle",
+    "placeholders": {
+      "questions": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "examsRandom": "Random mock",
+  "@examsRandom": {
+    "description": "A random exam from the whole subject"
+  },
+  "examsRandomBody": "50 questions from the whole subject. One free each day.",
+  "@examsRandomBody": {
+    "description": "Random mock subtitle"
+  },
+  "examsWeak": "My weak topics",
+  "@examsWeak": {
+    "description": "Exam from the student's weakest chapters"
+  },
+  "examsWeakBody": "Questions from the chapters where you score lowest.",
+  "@examsWeakBody": {
+    "description": "Weak topics subtitle"
+  },
+  "examsMistakes": "My mistakes",
+  "@examsMistakes": {
+    "description": "Exam from questions answered wrong"
+  },
+  "examsMistakesBody": "Questions you got wrong before.",
+  "@examsMistakesBody": {
+    "description": "Mistakes subtitle"
+  },
+  "examsNoMocks": "Mock exams appear here when you are online.",
+  "@examsNoMocks": {
+    "description": "Empty mock list"
+  },
+  "examsContinue": "Continue your exam",
+  "@examsContinue": {
+    "description": "Banner for an exam in progress"
+  },
+  "examsContinueBody": "{title} · {time} left",
+  "@examsContinueBody": {
+    "description": "Exam in progress subtitle",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "examsResultLine": "{correct} / {total} · {date}",
+  "@examsResultLine": {
+    "description": "Past result subtitle",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "examsFinishFirst": "Finish or submit your current exam first.",
+  "@examsFinishFirst": {
+    "description": "Starting a second exam"
+  },
+  "examsDailyLimit": "Today's free random mock is used. A new one is ready tomorrow.",
+  "@examsDailyLimit": {
+    "description": "Random mock daily limit reached"
+  },
+  "examsNeedPractice": "Practise some questions in this subject first.",
+  "@examsNeedPractice": {
+    "description": "No data yet for a personal exam"
+  },
+  "examsNoQuestions": "There are no questions for this exam yet.",
+  "@examsNoQuestions": {
+    "description": "Server has no questions"
+  },
+  "examsOffline": "No internet. Connect and try again.",
+  "@examsOffline": {
+    "description": "Exam download failed offline"
+  },
+  "examIntroRules": "Real Exam Mode",
+  "@examIntroRules": {
+    "description": "Intro dialog heading"
+  },
+  "examIntroTimer": "The timer starts now and does not stop, even if you leave the app.",
+  "@examIntroTimer": {
+    "description": "Rule 1"
+  },
+  "examIntroNoFeedback": "You see right and wrong answers only at the end.",
+  "@examIntroNoFeedback": {
+    "description": "Rule 2"
+  },
+  "examIntroChange": "You can change answers and flag questions to check again.",
+  "@examIntroChange": {
+    "description": "Rule 3"
+  },
+  "examIntroAuto": "When the time is up, the exam is submitted for you.",
+  "@examIntroAuto": {
+    "description": "Rule 4"
+  },
+  "examStart": "Start exam",
+  "@examStart": {
+    "description": "Intro dialog button"
+  },
+  "examQuestionOf": "Question {current} of {total}",
+  "@examQuestionOf": {
+    "description": "Exam app bar",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "examTimeLeft": "Time left: {time}",
+  "@examTimeLeft": {
+    "description": "Exam timer for screen readers",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "examFlag": "Flag for review",
+  "@examFlag": {
+    "description": "Exam flag button"
+  },
+  "examUnflag": "Remove flag",
+  "@examUnflag": {
+    "description": "Exam flag button when flagged"
+  },
+  "examMap": "All questions",
+  "@examMap": {
+    "description": "Opens the question map"
+  },
+  "examClear": "Clear answer",
+  "@examClear": {
+    "description": "Removes the chosen answer"
+  },
+  "examPrevious": "Previous",
+  "@examPrevious": {
+    "description": "Exam navigation"
+  },
+  "examSubmit": "Submit exam",
+  "@examSubmit": {
+    "description": "Exam submit button"
+  },
+  "examSubmitTitle": "Submit the exam?",
+  "@examSubmitTitle": {
+    "description": "Submit confirm title"
+  },
+  "examSubmitBody": "Answered: {answered} of {total}\nNot answered: {unanswered}\nFlagged: {flagged}",
+  "@examSubmitBody": {
+    "description": "Submit confirm body",
+    "placeholders": {
+      "answered": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "unanswered": {
+        "type": "int"
+      },
+      "flagged": {
+        "type": "int"
+      }
+    }
+  },
+  "examKeepGoing": "Keep going",
+  "@examKeepGoing": {
+    "description": "Submit confirm: cancel"
+  },
+  "examLeaveTitle": "Leave the exam?",
+  "@examLeaveTitle": {
+    "description": "Back button during an exam"
+  },
+  "examLeaveBody": "The timer keeps running. You can come back from the Exams tab.",
+  "@examLeaveBody": {
+    "description": "Back button during an exam"
+  },
+  "examLeave": "Leave",
+  "@examLeave": {
+    "description": "Leave the exam"
+  },
+  "examTimeUp": "Time is up. Your exam was submitted.",
+  "@examTimeUp": {
+    "description": "Shown when the exam auto-submits"
+  },
+  "examMapAnswered": "Answered",
+  "@examMapAnswered": {
+    "description": "Question map legend"
+  },
+  "examMapFlagged": "Flagged",
+  "@examMapFlagged": {
+    "description": "Question map legend"
+  },
+  "examMapEmpty": "Not answered",
+  "@examMapEmpty": {
+    "description": "Question map legend"
+  },
+  "examResultTitle": "Exam result",
+  "@examResultTitle": {
+    "description": "Result screen title"
+  },
+  "examResultPercent": "{percent}% right",
+  "@examResultPercent": {
+    "description": "Result percent",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultEstimate": "Estimated exam score: {low}–{high} out of {max}",
+  "@examResultEstimate": {
+    "description": "Likely real score range",
+    "placeholders": {
+      "low": {
+        "type": "int"
+      },
+      "high": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultEstimateNote": "An estimate from this practice, not a promise.",
+  "@examResultEstimateNote": {
+    "description": "Note under the estimate"
+  },
+  "examResultTime": "Time used: {time}",
+  "@examResultTime": {
+    "description": "Result time",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "examResultBetterThan": "Better than {percent}% of Guul 12 students",
+  "@examResultBetterThan": {
+    "description": "Comparison with other students",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultNotEnough": "Not enough students have taken this mock yet. Check again later.",
+  "@examResultNotEnough": {
+    "description": "Comparison not available yet"
+  },
+  "examResultConnect": "Saved on your phone. Connect to the internet to compare with other students.",
+  "@examResultConnect": {
+    "description": "Comparison needs upload"
+  },
+  "examResultRefresh": "Check again",
+  "@examResultRefresh": {
+    "description": "Refresh comparison"
+  },
+  "examResultChapters": "By chapter",
+  "@examResultChapters": {
+    "description": "Section title"
+  },
+  "examResultChapterScore": "{correct} / {total}",
+  "@examResultChapterScore": {
+    "description": "Chapter score",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultReview": "Review answers",
+  "@examResultReview": {
+    "description": "Toggle the answer review"
+  },
+  "examResultHideReview": "Hide answers",
+  "@examResultHideReview": {
+    "description": "Toggle the answer review"
+  },
+  "examResultPractiseWeakest": "Practise your weakest chapter",
+  "@examResultPractiseWeakest": {
+    "description": "Button to practise the weakest chapter"
+  },
+  "examResultNotFound": "This result is not on this phone.",
+  "@examResultNotFound": {
+    "description": "Unknown result id"
+  },
+  "examUnknownChapter": "Chapter {id}",
+  "@examUnknownChapter": {
+    "description": "Chapter not in the catalog",
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
   }
 }

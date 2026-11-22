@@ -635,4 +635,219 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reportThanks => 'Thank you! We will check this question.';
+
+  @override
+  String get navExams => 'Exams';
+
+  @override
+  String get examsTitle => 'Exams';
+
+  @override
+  String get examsMocks => 'Mock exams';
+
+  @override
+  String get examsMore => 'More exams';
+
+  @override
+  String get examsPast => 'Your results';
+
+  @override
+  String examsMockInfo(int questions, int minutes) {
+    String _temp0 = intl.Intl.pluralLogic(
+      questions,
+      locale: localeName,
+      other: '$questions questions',
+      one: '1 question',
+    );
+    return '$_temp0 · $minutes min';
+  }
+
+  @override
+  String get examsRandom => 'Random mock';
+
+  @override
+  String get examsRandomBody => '50 questions from the whole subject. One free each day.';
+
+  @override
+  String get examsWeak => 'My weak topics';
+
+  @override
+  String get examsWeakBody => 'Questions from the chapters where you score lowest.';
+
+  @override
+  String get examsMistakes => 'My mistakes';
+
+  @override
+  String get examsMistakesBody => 'Questions you got wrong before.';
+
+  @override
+  String get examsNoMocks => 'Mock exams appear here when you are online.';
+
+  @override
+  String get examsContinue => 'Continue your exam';
+
+  @override
+  String examsContinueBody(String title, String time) {
+    return '$title · $time left';
+  }
+
+  @override
+  String examsResultLine(int correct, int total, String date) {
+    return '$correct / $total · $date';
+  }
+
+  @override
+  String get examsFinishFirst => 'Finish or submit your current exam first.';
+
+  @override
+  String get examsDailyLimit => 'Today\'s free random mock is used. A new one is ready tomorrow.';
+
+  @override
+  String get examsNeedPractice => 'Practise some questions in this subject first.';
+
+  @override
+  String get examsNoQuestions => 'There are no questions for this exam yet.';
+
+  @override
+  String get examsOffline => 'No internet. Connect and try again.';
+
+  @override
+  String get examIntroRules => 'Real Exam Mode';
+
+  @override
+  String get examIntroTimer => 'The timer starts now and does not stop, even if you leave the app.';
+
+  @override
+  String get examIntroNoFeedback => 'You see right and wrong answers only at the end.';
+
+  @override
+  String get examIntroChange => 'You can change answers and flag questions to check again.';
+
+  @override
+  String get examIntroAuto => 'When the time is up, the exam is submitted for you.';
+
+  @override
+  String get examStart => 'Start exam';
+
+  @override
+  String examQuestionOf(int current, int total) {
+    return 'Question $current of $total';
+  }
+
+  @override
+  String examTimeLeft(String time) {
+    return 'Time left: $time';
+  }
+
+  @override
+  String get examFlag => 'Flag for review';
+
+  @override
+  String get examUnflag => 'Remove flag';
+
+  @override
+  String get examMap => 'All questions';
+
+  @override
+  String get examClear => 'Clear answer';
+
+  @override
+  String get examPrevious => 'Previous';
+
+  @override
+  String get examSubmit => 'Submit exam';
+
+  @override
+  String get examSubmitTitle => 'Submit the exam?';
+
+  @override
+  String examSubmitBody(int answered, int total, int unanswered, int flagged) {
+    return 'Answered: $answered of $total\nNot answered: $unanswered\nFlagged: $flagged';
+  }
+
+  @override
+  String get examKeepGoing => 'Keep going';
+
+  @override
+  String get examLeaveTitle => 'Leave the exam?';
+
+  @override
+  String get examLeaveBody => 'The timer keeps running. You can come back from the Exams tab.';
+
+  @override
+  String get examLeave => 'Leave';
+
+  @override
+  String get examTimeUp => 'Time is up. Your exam was submitted.';
+
+  @override
+  String get examMapAnswered => 'Answered';
+
+  @override
+  String get examMapFlagged => 'Flagged';
+
+  @override
+  String get examMapEmpty => 'Not answered';
+
+  @override
+  String get examResultTitle => 'Exam result';
+
+  @override
+  String examResultPercent(int percent) {
+    return '$percent% right';
+  }
+
+  @override
+  String examResultEstimate(int low, int high, int max) {
+    return 'Estimated exam score: $low–$high out of $max';
+  }
+
+  @override
+  String get examResultEstimateNote => 'An estimate from this practice, not a promise.';
+
+  @override
+  String examResultTime(String time) {
+    return 'Time used: $time';
+  }
+
+  @override
+  String examResultBetterThan(int percent) {
+    return 'Better than $percent% of Guul 12 students';
+  }
+
+  @override
+  String get examResultNotEnough =>
+      'Not enough students have taken this mock yet. Check again later.';
+
+  @override
+  String get examResultConnect =>
+      'Saved on your phone. Connect to the internet to compare with other students.';
+
+  @override
+  String get examResultRefresh => 'Check again';
+
+  @override
+  String get examResultChapters => 'By chapter';
+
+  @override
+  String examResultChapterScore(int correct, int total) {
+    return '$correct / $total';
+  }
+
+  @override
+  String get examResultReview => 'Review answers';
+
+  @override
+  String get examResultHideReview => 'Hide answers';
+
+  @override
+  String get examResultPractiseWeakest => 'Practise your weakest chapter';
+
+  @override
+  String get examResultNotFound => 'This result is not on this phone.';
+
+  @override
+  String examUnknownChapter(int id) {
+    return 'Chapter $id';
+  }
 }
