@@ -135,7 +135,7 @@ questions:
   - uid: g12-chemistry-2-2-q008
     type: true_false
     difficulty: 2
-    stem: 'When acidified water is electrolysed, the volume of hydrogen produced is twice the volume of oxygen.'
+    stem: 'When acidified water is electrolysed with inert electrodes, the volume of hydrogen produced is twice the volume of oxygen.'
     answer: true
     explanation: '$2\text{H}_2\text{O} \rightarrow 2\text{H}_2 + \text{O}_2$: 2 volumes of hydrogen to 1 of oxygen.'
 

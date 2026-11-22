@@ -140,6 +140,7 @@ subjects:
     chapters:
     - number: 1
       title: Industrial production of chemicals
+      file: chemistry/u3-c1.yaml
     - number: 2
       title: Manufacturing industries in Ethiopia
   - number: 4
