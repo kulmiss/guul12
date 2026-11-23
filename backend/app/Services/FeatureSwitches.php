@@ -31,6 +31,8 @@ class FeatureSwitches
             'google_sign_in' => true,
             'in_app_review' => true,
             'read_aloud' => true,
+            // WhatsApp/Telegram buttons on the app's Premium page (owner decision #40).
+            'premium_contact' => true,
         ];
     }
 

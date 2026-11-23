@@ -47,7 +47,8 @@ Point a free uptime monitor (for example UptimeRobot) at `https://guul12.kulmiss
 | Setting | Used for |
 |---|---|
 | `premium_price_term_birr`, `premium_price_year_birr` | prices on the landing page `/premium` |
-| `contact_whatsapp`, `contact_email` | how to pay on `/premium`; contact on the legal pages |
+| `contact_whatsapp`, `contact_email` | how to pay on `/premium`; contact on the legal pages; WhatsApp is also the app's Premium-page button |
+| `contact_telegram` | Telegram name (or t.me link) for the app's Premium-page button. Switch `premium_contact` off to hide both app buttons at once |
 | `play_store_url` | download button on the landing page (only real `https://play.google.com/` links) |
 | `exam_date` | countdown and study plan in the app |
 | `ai_monthly_cap_usd` | stops new AI explanations for the month at this amount |

@@ -2463,5 +2463,115 @@
         "type": "String"
       }
     }
+  },
+  "homeBecomePremium": "Become Premium",
+  "@homeBecomePremium": {
+    "description": "Home card for free students"
+  },
+  "homeBecomePremiumLine": "All mock exams, offline subjects, AI help and no ads",
+  "@homeBecomePremiumLine": {
+    "description": "Line on the Become Premium card"
+  },
+  "homePremiumOn": "Premium is on",
+  "@homePremiumOn": {
+    "description": "Home card for Premium students"
+  },
+  "homePremiumUntil": "Until {date}",
+  "@homePremiumUntil": {
+    "description": "Premium end date on Home",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumPageTitle": "Guul 12 Premium",
+  "@premiumPageTitle": {
+    "description": "Premium page title"
+  },
+  "premiumPageIntro": "Everything in the free app, plus:",
+  "@premiumPageIntro": {
+    "description": "Premium page intro"
+  },
+  "premiumBenefitMocks": "All mock exams",
+  "@premiumBenefitMocks": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitMocksBody": "Every subject's third full mock exam, plus the \"My weak topics\" and \"My mistakes\" exams.",
+  "@premiumBenefitMocksBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumBenefitOffline": "Whole subjects offline",
+  "@premiumBenefitOffline": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitOfflineBody": "Download a whole subject at once and study without internet.",
+  "@premiumBenefitOfflineBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumBenefitExplain": "Explain more (AI)",
+  "@premiumBenefitExplain": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitExplainBody": "Ask for a simpler, step-by-step explanation of a question.",
+  "@premiumBenefitExplainBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumBenefitNoAds": "No ads",
+  "@premiumBenefitNoAds": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitNoAdsBody": "Study without any ads.",
+  "@premiumBenefitNoAdsBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumActiveNote": "Your Premium is on. Thank you!",
+  "@premiumActiveNote": {
+    "description": "Premium page note for Premium students"
+  },
+  "premiumContactTitle": "How to get Premium",
+  "@premiumContactTitle": {
+    "description": "Premium page section (owner decision #40)"
+  },
+  "premiumContactStep1": "Message us on WhatsApp or Telegram.",
+  "@premiumContactStep1": {
+    "description": "Premium page step 1"
+  },
+  "premiumContactStep2": "Send us your student ID:",
+  "@premiumContactStep2": {
+    "description": "Premium page step 2"
+  },
+  "premiumContactStep3": "We turn on your Premium. Pull down on Home to see it.",
+  "@premiumContactStep3": {
+    "description": "Premium page step 3"
+  },
+  "premiumContactCopy": "Copy student ID",
+  "@premiumContactCopy": {
+    "description": "Copy button"
+  },
+  "premiumContactCopied": "Student ID copied",
+  "@premiumContactCopied": {
+    "description": "Snack bar after copying"
+  },
+  "premiumContactWhatsApp": "Message us on WhatsApp",
+  "@premiumContactWhatsApp": {
+    "description": "Button (owner decision #40)"
+  },
+  "premiumContactTelegram": "Message us on Telegram",
+  "@premiumContactTelegram": {
+    "description": "Button (owner decision #40)"
+  },
+  "premiumContactMessage": "Hello! I want Guul 12 Premium. My student ID: {id}",
+  "@premiumContactMessage": {
+    "description": "Pre-filled WhatsApp message",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumContactMessageNoId": "Hello! I want Guul 12 Premium.",
+  "@premiumContactMessageNoId": {
+    "description": "Pre-filled WhatsApp message when the student ID is not known yet"
   }
 }

@@ -143,6 +143,9 @@ class FakeServer {
   /// Logo files by path, e.g. /storage/branding/logo-light-….png.
   final Map<String, List<int>> logos = {};
 
+  /// The Premium page contacts in /config (null values = not set or switched off in Nova).
+  Map<String, Object?> contact = {'whatsapp': null, 'telegram': null};
+
   /// What /config says about ads (the server turns them off for Premium students).
   bool showAds = true;
 
@@ -364,6 +367,7 @@ class FakeServer {
           'premium': false,
           'show_ads': showAds,
           if (branding != null) 'branding': branding,
+          'contact': contact,
         });
       case ('POST', final p) when p.startsWith('questions/') && p.endsWith('/explain'):
         final id = int.parse(p.split('/')[1]);

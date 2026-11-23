@@ -36,3 +36,7 @@ PremiumNotice? premiumNotice({
   }
   return null;
 }
+
+/// True when the student's Premium is on right now (ads, Home and the Premium page use this).
+bool premiumNow({required bool active, required DateTime? until, required DateTime now}) =>
+    active && (until == null || until.isAfter(now));

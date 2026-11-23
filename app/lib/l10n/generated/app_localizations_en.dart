@@ -1790,4 +1790,86 @@ class AppLocalizationsEn extends AppLocalizations {
   String homeBadgeNext(String name) {
     return 'Next badge: $name';
   }
+
+  @override
+  String get homeBecomePremium => 'Become Premium';
+
+  @override
+  String get homeBecomePremiumLine => 'All mock exams, offline subjects, AI help and no ads';
+
+  @override
+  String get homePremiumOn => 'Premium is on';
+
+  @override
+  String homePremiumUntil(String date) {
+    return 'Until $date';
+  }
+
+  @override
+  String get premiumPageTitle => 'Guul 12 Premium';
+
+  @override
+  String get premiumPageIntro => 'Everything in the free app, plus:';
+
+  @override
+  String get premiumBenefitMocks => 'All mock exams';
+
+  @override
+  String get premiumBenefitMocksBody =>
+      'Every subject\'s third full mock exam, plus the \"My weak topics\" and \"My mistakes\" exams.';
+
+  @override
+  String get premiumBenefitOffline => 'Whole subjects offline';
+
+  @override
+  String get premiumBenefitOfflineBody =>
+      'Download a whole subject at once and study without internet.';
+
+  @override
+  String get premiumBenefitExplain => 'Explain more (AI)';
+
+  @override
+  String get premiumBenefitExplainBody =>
+      'Ask for a simpler, step-by-step explanation of a question.';
+
+  @override
+  String get premiumBenefitNoAds => 'No ads';
+
+  @override
+  String get premiumBenefitNoAdsBody => 'Study without any ads.';
+
+  @override
+  String get premiumActiveNote => 'Your Premium is on. Thank you!';
+
+  @override
+  String get premiumContactTitle => 'How to get Premium';
+
+  @override
+  String get premiumContactStep1 => 'Message us on WhatsApp or Telegram.';
+
+  @override
+  String get premiumContactStep2 => 'Send us your student ID:';
+
+  @override
+  String get premiumContactStep3 => 'We turn on your Premium. Pull down on Home to see it.';
+
+  @override
+  String get premiumContactCopy => 'Copy student ID';
+
+  @override
+  String get premiumContactCopied => 'Student ID copied';
+
+  @override
+  String get premiumContactWhatsApp => 'Message us on WhatsApp';
+
+  @override
+  String get premiumContactTelegram => 'Message us on Telegram';
+
+  @override
+  String premiumContactMessage(String id) {
+    return 'Hello! I want Guul 12 Premium. My student ID: $id';
+  }
+
+  @override
+  String get premiumContactMessageNoId => 'Hello! I want Guul 12 Premium.';
 }

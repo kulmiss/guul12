@@ -29,6 +29,8 @@ class Settings
             // Landing page only (never sent to the app): how to pay and where to download.
             // null = not set yet; the page then says "coming soon" instead of a wrong number.
             'contact_whatsapp' => null,
+            // Telegram user or channel name (or a t.me link) for the app's Premium page.
+            'contact_telegram' => null,
             'contact_email' => null,
             'play_store_url' => null,
 

@@ -512,6 +512,8 @@ class AppConfig {
     this.paperMaxScore = 100,
     this.freeRandomExamsPerDay = 1,
     this.branding = Branding.sunrise,
+    this.contactWhatsapp,
+    this.contactTelegram,
   });
 
   factory AppConfig.fromJson(Map<String, Object?> json) {
@@ -529,6 +531,8 @@ class AppConfig {
       paperMaxScore: asIntOrNull(settings['paper_max_score']) ?? 100,
       freeRandomExamsPerDay: asIntOrNull(settings['free_random_exams_per_day']) ?? 1,
       branding: Branding.fromJsonOrSunrise(json['branding']),
+      contactWhatsapp: _contact(json['contact'], 'whatsapp', RegExp(r'^\d{9,15}$')),
+      contactTelegram: _contact(json['contact'], 'telegram', RegExp(r'^[A-Za-z0-9_]{5,32}$')),
     );
   }
 
@@ -556,6 +560,17 @@ class AppConfig {
 
   /// Colours, fonts, roundness and logo from Nova (Sunrise when none or broken).
   final Branding branding;
+
+  /// WhatsApp number (digits only) and Telegram name for the Premium page (owner decision #40).
+  /// Null when not set, switched off in Nova, sent by an older server, or not in the safe shape.
+  final String? contactWhatsapp;
+  final String? contactTelegram;
+
+  static String? _contact(Object? block, String key, RegExp shape) {
+    if (block is! Map) return null;
+    final value = block[key];
+    return value is String && shape.hasMatch(value) ? value : null;
+  }
 
   /// Unknown switches default to on, matching the server defaults.
   bool feature(String key) => features[key] ?? true;

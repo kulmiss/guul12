@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../domain/premium_notice.dart';
 import '../services/ads.dart';
 import 'providers.dart';
 
@@ -11,9 +12,11 @@ final adsAllowedProvider = Provider<bool>((ref) {
   final config = ref.watch(configProvider).value;
   final profile = ref.watch(profileProvider).value;
   if (config == null || profile == null) return false;
-  final until = profile.premiumUntil;
-  final now = ref.watch(clockProvider)();
-  final premium = profile.premiumActive && (until == null || until.isAfter(now));
+  final premium = premiumNow(
+    active: profile.premiumActive,
+    until: profile.premiumUntil,
+    now: ref.watch(clockProvider)(),
+  );
   return config.showAds && !premium;
 });
 

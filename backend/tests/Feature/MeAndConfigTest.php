@@ -85,16 +85,50 @@ class MeAndConfigTest extends TestCase
         $this->assertNull($user->google_sub);
     }
 
-    public function test_config_never_contains_prices_or_payment_info(): void
+    public function test_config_never_contains_prices(): void
     {
+        app(Settings::class)->set('contact_whatsapp', '+251 91 234 5678');
         $response = $this->getJson('/api/v1/config')->assertOk();
         $body = strtolower((string) $response->getContent());
 
         $this->assertStringNotContainsString('price', $body);
         $this->assertStringNotContainsString('birr', $body);
-        $this->assertStringNotContainsString('whatsapp', $body);
         $this->assertStringNotContainsString('payment', $body);
         $response->assertJsonPath('premium', false)->assertJsonPath('show_ads', true);
+    }
+
+    /** Owner decision #40: the app's Premium page shows WhatsApp and Telegram contact buttons. */
+    public function test_config_gives_the_premium_contacts_cleaned(): void
+    {
+        $this->getJson('/api/v1/config')
+            ->assertJsonPath('contact.whatsapp', null)
+            ->assertJsonPath('contact.telegram', null);
+
+        app(Settings::class)->set('contact_whatsapp', '+251 91 234 5678');
+        app(Settings::class)->set('contact_telegram', '@Guul12_Help');
+        $this->getJson('/api/v1/config')
+            ->assertJsonPath('contact.whatsapp', '251912345678')
+            ->assertJsonPath('contact.telegram', 'Guul12_Help');
+
+        app(Settings::class)->set('contact_telegram', 'https://t.me/guul12help');
+        $this->getJson('/api/v1/config')->assertJsonPath('contact.telegram', 'guul12help');
+
+        foreach (['abc', 'bad name!', 'https://evil.example/x', str_repeat('a', 33)] as $bad) {
+            app(Settings::class)->set('contact_telegram', $bad);
+            $this->getJson('/api/v1/config')->assertJsonPath('contact.telegram', null);
+        }
+    }
+
+    public function test_premium_contact_switch_hides_the_contacts(): void
+    {
+        app(Settings::class)->set('contact_whatsapp', '+251 91 234 5678');
+        app(Settings::class)->set('contact_telegram', 'Guul12_Help');
+        app(FeatureSwitches::class)->set('premium_contact', false);
+
+        $this->getJson('/api/v1/config')
+            ->assertJsonPath('contact.whatsapp', null)
+            ->assertJsonPath('contact.telegram', null)
+            ->assertJsonPath('features.premium_contact', false);
     }
 
     public function test_config_reflects_settings_and_switches(): void

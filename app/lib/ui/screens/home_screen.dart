@@ -216,6 +216,17 @@ class HomeScreen extends ConsumerWidget {
                             : _subjectOf(catalog, recentHeaders.first),
                       ),
                     ),
+                    if (profile != null)
+                      appear(
+                        _PremiumCard(
+                          isPremium: premiumNow(
+                            active: profile.premiumActive,
+                            until: profile.premiumUntil,
+                            now: now,
+                          ),
+                          until: profile.premiumUntil,
+                        ),
+                      ),
                     appear(SectionTitle(l.homeForYou)),
                     appear(_TileGrid(tiles: tiles)),
                     if (weakest != null && weakChapter != null)
@@ -704,6 +715,68 @@ class _Tile extends StatelessWidget {
               ),
               const SizedBox(height: 2),
               Text(data.line, style: theme.textTheme.bodySmall?.copyWith(color: accent.onSoft)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Free students: "Become Premium" (opens the benefits page). Premium students: that it is on, and
+/// until when. Never a price (owner decision #40).
+class _PremiumCard extends StatelessWidget {
+  const _PremiumCard({required this.isPremium, required this.until});
+
+  final bool isPremium;
+  final DateTime? until;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[1];
+    final date = until;
+    final background = isPremium ? accent.soft : accent.strong;
+    final foreground = isPremium ? accent.onSoft : accent.onStrong;
+    return Card(
+      key: ValueKey(isPremium ? 'home-premium-on' : 'home-become-premium'),
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      color: background,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => context.push('/home/premium'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Icon(Icons.workspace_premium_rounded, color: foreground, size: 36),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      isPremium ? l.homePremiumOn : l.homeBecomePremium,
+                      style: theme.textTheme.titleMedium?.copyWith(
+                        color: foreground,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    if (!isPremium)
+                      Text(
+                        l.homeBecomePremiumLine,
+                        style: theme.textTheme.bodyMedium?.copyWith(color: foreground),
+                      )
+                    else if (date != null)
+                      Text(
+                        l.homePremiumUntil(DateFormat.yMMMd(l.localeName).format(date.toLocal())),
+                        style: theme.textTheme.bodyMedium?.copyWith(color: foreground),
+                      ),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right_rounded, color: foreground),
             ],
           ),
         ),

@@ -1,28 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:url_launcher_platform_interface/link.dart';
-import 'package:url_launcher_platform_interface/url_launcher_platform_interface.dart';
 
 import '../support/app_harness.dart';
+import '../support/fake_launcher.dart';
 import '../support/fake_server.dart';
-
-/// Records the links the app opens instead of opening them.
-class _FakeLauncher extends UrlLauncherPlatform with MockPlatformInterfaceMixin {
-  final List<String> opened = [];
-
-  @override
-  LinkDelegate? get linkDelegate => null;
-
-  @override
-  Future<bool> canLaunch(String url) async => true;
-
-  @override
-  Future<bool> launchUrl(String url, LaunchOptions options) async {
-    opened.add(url);
-    return true;
-  }
-}
 
 FakeServer onboardedServer() => FakeServer()..let(onboardedProfile);
 
@@ -197,10 +178,7 @@ void main() {
   });
 
   testWidgets('the chapter summary PDF opens only when the chapter has one', (tester) async {
-    final launcher = _FakeLauncher();
-    final original = UrlLauncherPlatform.instance;
-    UrlLauncherPlatform.instance = launcher;
-    addTearDown(() => UrlLauncherPlatform.instance = original);
+    final launcher = fakeLauncher();
     const url = 'https://guul12.kulmiss.com/storage/summaries/g12-physics-2-1-0123456789ab.pdf';
     final server = onboardedServer()..summaryPdfUrls[21] = url;
     await pumpGuul(tester, server: server);

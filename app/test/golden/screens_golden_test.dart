@@ -73,6 +73,7 @@ FakeServer richServer() {
   final s = FakeServer();
   onboardedProfile(s);
   s.profile.addAll({'nickname': 'Ayan', 'avatar_style': 'thumbs', 'avatar_seed': 'a06'});
+  s.contact = {'whatsapp': '251912345678', 'telegram': 'Guul12_Help'};
   s.battles.addAll([
     {'id': 1, 'friend': false, 'opponent': 'Hodan'},
     {'id': 2, 'friend': true, 'opponent': null},
@@ -126,6 +127,7 @@ void main() {
       await tapOn(tester, find.byKey(const ValueKey('check')));
     },
     'me': (tester) async => tapOn(tester, find.text('Me')),
+    'premium': (tester) async => tapOn(tester, find.text('Become Premium')),
     'leaderboard': (tester) async {
       await tapOn(tester, find.text('Progress').last);
       await tapOn(tester, find.text('See the weekly leaderboard'));

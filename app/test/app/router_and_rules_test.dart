@@ -119,30 +119,55 @@ void main() {
     expect(find.byType(NavigationBar), findsNothing);
   });
 
-  group('Google Play rules: no price, no buying, no payment links in the app', () {
-    final banned = RegExp(
-      r'\b(birr|br\.?|etb|price|prices|buy|purchase|upgrade|subscribe|pay|payment|whatsapp|telebirr|cbe ?birr|t\.me|wa\.me)\b',
+  group('Google Play rules: no price or buying anywhere; contacts only on the Premium page', () {
+    // Never in the app: prices, money words, buying or paying.
+    final money = RegExp(
+      r'\b(birr|br\.?|etb|price|prices|buy|purchase|upgrade|subscribe|pay|payment|telebirr|cbe ?birr)\b',
       caseSensitive: false,
     );
+    // WhatsApp/Telegram contact: only the Premium page's contact texts and its screen file
+    // (owner decision #40, DECISIONS.md).
+    final contact = RegExp(r'(\bwhatsapp\b|\btelegram\b|t\.me|wa\.me)', caseSensitive: false);
+    bool contactAllowedKey(String key) => key.startsWith('premiumContact');
+    const contactAllowedFile = 'lib/ui/premium/premium_screen.dart';
+    const contactJsonKeys = {'whatsapp', 'telegram'};
 
     test('UI texts', () {
       final arb = jsonDecode(File('lib/l10n/app_en.arb').readAsStringSync()) as Map;
       final texts = arb.entries.where((e) => !'${e.key}'.startsWith('@'));
       expect(texts.length, greaterThan(100));
+      var contactTexts = 0;
       for (final e in texts) {
-        expect(banned.hasMatch('${e.value}'), isFalse, reason: '${e.key}: "${e.value}"');
+        final key = '${e.key}';
+        final value = '${e.value}';
+        expect(money.hasMatch(value), isFalse, reason: '$key: "$value"');
+        if (contact.hasMatch(value)) {
+          expect(contactAllowedKey(key), isTrue, reason: '$key: "$value"');
+          contactTexts++;
+        }
       }
+      expect(contactTexts, 3, reason: 'step 1 and the two buttons');
     });
 
     test('code', () {
+      var contactLinks = 0;
       for (final file in Directory('lib').listSync(recursive: true).whereType<File>()) {
         if (!file.path.endsWith('.dart') || file.path.contains('/generated/')) continue;
         final code = file.readAsStringSync();
         // Strings only (comments may explain the rule itself).
         for (final m in RegExp(r"'([^'\n]*)'").allMatches(code)) {
-          expect(banned.hasMatch(m.group(1)!), isFalse, reason: '${file.path}: ${m.group(0)}');
+          final text = m.group(1)!;
+          expect(money.hasMatch(text), isFalse, reason: '${file.path}: ${m.group(0)}');
+          if (contact.hasMatch(text)) {
+            // The config reader may name the two JSON keys it reads, nothing more.
+            final jsonKey = file.path == 'lib/data/models.dart' && contactJsonKeys.contains(text);
+            if (jsonKey) continue;
+            expect(file.path, contactAllowedFile, reason: m.group(0));
+            contactLinks++;
+          }
         }
       }
+      expect(contactLinks, 4, reason: 'the wa.me and t.me links and the two button keys');
     });
 
     test('Android manifest has no exact-alarm or location/contacts/camera permissions', () {

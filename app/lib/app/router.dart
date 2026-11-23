@@ -10,6 +10,7 @@ import '../ui/exams/exams_screen.dart';
 import '../ui/plan/plan_screen.dart';
 import '../ui/practice/player_screen.dart';
 import '../ui/practice/practice_screen.dart';
+import '../ui/premium/premium_screen.dart';
 import '../ui/progress/progress_screen.dart';
 import '../ui/review/mistakes_screen.dart';
 import '../ui/screens/chapter_screen.dart';
@@ -137,6 +138,7 @@ final routerProvider = Provider<GoRouter>((ref) {
                 routes: [
                   GoRoute(path: 'plan', builder: (_, _) => const PlanScreen()),
                   GoRoute(path: 'battles', builder: (_, _) => const BattlesScreen()),
+                  GoRoute(path: 'premium', builder: (_, _) => const PremiumScreen()),
                 ],
               ),
             ],

@@ -2923,6 +2923,156 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Next badge: {name}'**
   String homeBadgeNext(String name);
+
+  /// Home card for free students
+  ///
+  /// In en, this message translates to:
+  /// **'Become Premium'**
+  String get homeBecomePremium;
+
+  /// Line on the Become Premium card
+  ///
+  /// In en, this message translates to:
+  /// **'All mock exams, offline subjects, AI help and no ads'**
+  String get homeBecomePremiumLine;
+
+  /// Home card for Premium students
+  ///
+  /// In en, this message translates to:
+  /// **'Premium is on'**
+  String get homePremiumOn;
+
+  /// Premium end date on Home
+  ///
+  /// In en, this message translates to:
+  /// **'Until {date}'**
+  String homePremiumUntil(String date);
+
+  /// Premium page title
+  ///
+  /// In en, this message translates to:
+  /// **'Guul 12 Premium'**
+  String get premiumPageTitle;
+
+  /// Premium page intro
+  ///
+  /// In en, this message translates to:
+  /// **'Everything in the free app, plus:'**
+  String get premiumPageIntro;
+
+  /// Premium benefit
+  ///
+  /// In en, this message translates to:
+  /// **'All mock exams'**
+  String get premiumBenefitMocks;
+
+  /// Premium benefit text
+  ///
+  /// In en, this message translates to:
+  /// **'Every subject\'s third full mock exam, plus the \"My weak topics\" and \"My mistakes\" exams.'**
+  String get premiumBenefitMocksBody;
+
+  /// Premium benefit
+  ///
+  /// In en, this message translates to:
+  /// **'Whole subjects offline'**
+  String get premiumBenefitOffline;
+
+  /// Premium benefit text
+  ///
+  /// In en, this message translates to:
+  /// **'Download a whole subject at once and study without internet.'**
+  String get premiumBenefitOfflineBody;
+
+  /// Premium benefit
+  ///
+  /// In en, this message translates to:
+  /// **'Explain more (AI)'**
+  String get premiumBenefitExplain;
+
+  /// Premium benefit text
+  ///
+  /// In en, this message translates to:
+  /// **'Ask for a simpler, step-by-step explanation of a question.'**
+  String get premiumBenefitExplainBody;
+
+  /// Premium benefit
+  ///
+  /// In en, this message translates to:
+  /// **'No ads'**
+  String get premiumBenefitNoAds;
+
+  /// Premium benefit text
+  ///
+  /// In en, this message translates to:
+  /// **'Study without any ads.'**
+  String get premiumBenefitNoAdsBody;
+
+  /// Premium page note for Premium students
+  ///
+  /// In en, this message translates to:
+  /// **'Your Premium is on. Thank you!'**
+  String get premiumActiveNote;
+
+  /// Premium page section (owner decision #40)
+  ///
+  /// In en, this message translates to:
+  /// **'How to get Premium'**
+  String get premiumContactTitle;
+
+  /// Premium page step 1
+  ///
+  /// In en, this message translates to:
+  /// **'Message us on WhatsApp or Telegram.'**
+  String get premiumContactStep1;
+
+  /// Premium page step 2
+  ///
+  /// In en, this message translates to:
+  /// **'Send us your student ID:'**
+  String get premiumContactStep2;
+
+  /// Premium page step 3
+  ///
+  /// In en, this message translates to:
+  /// **'We turn on your Premium. Pull down on Home to see it.'**
+  String get premiumContactStep3;
+
+  /// Copy button
+  ///
+  /// In en, this message translates to:
+  /// **'Copy student ID'**
+  String get premiumContactCopy;
+
+  /// Snack bar after copying
+  ///
+  /// In en, this message translates to:
+  /// **'Student ID copied'**
+  String get premiumContactCopied;
+
+  /// Button (owner decision #40)
+  ///
+  /// In en, this message translates to:
+  /// **'Message us on WhatsApp'**
+  String get premiumContactWhatsApp;
+
+  /// Button (owner decision #40)
+  ///
+  /// In en, this message translates to:
+  /// **'Message us on Telegram'**
+  String get premiumContactTelegram;
+
+  /// Pre-filled WhatsApp message
+  ///
+  /// In en, this message translates to:
+  /// **'Hello! I want Guul 12 Premium. My student ID: {id}'**
+  String premiumContactMessage(String id);
+
+  /// Pre-filled WhatsApp message when the student ID is not known yet
+  ///
+  /// In en, this message translates to:
+  /// **'Hello! I want Guul 12 Premium.'**
+  String get premiumContactMessageNoId;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
