@@ -5,6 +5,7 @@ namespace App\Nova\Resources;
 use App\Enums\QuestionType;
 use App\Models\Question as QuestionModel;
 use App\Nova\Fields\Show;
+use App\Support\QuestionPreview;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Code;
@@ -90,6 +91,11 @@ class Question extends Resource
             Number::make('Answered', 'times_answered')->exceptOnForms()->sortable(),
             Text::make('Right', fn (QuestionModel $q): string => Show::percent($q->times_correct, $q->times_answered))->exceptOnForms(),
             Number::make('Reports', 'reports_count')->exceptOnForms()->sortable(),
+            Panel::make('Preview', [
+                Text::make('Preview', fn (QuestionModel $q): string => QuestionPreview::html($q->loadMissing('options', 'passage')))
+                    ->asHtml()->onlyOnDetail()
+                    ->help('What students see. The right answer is marked in green.'),
+            ]),
             HasMany::make('Options', 'options', QuestionOption::class),
         ];
     }

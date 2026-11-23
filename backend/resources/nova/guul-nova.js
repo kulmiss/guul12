@@ -40,3 +40,25 @@ Nova.booting((app) => {
     },
   })
 })
+
+// Maths in question previews: <span class="guul-tex" data-display="0|1">tex</span> from App\Support\MathText.
+// KaTeX is loaded by Nova before this script. Bad TeX shows in red instead of breaking the page.
+;(() => {
+  const draw = () => {
+    if (!window.katex) return
+    document.querySelectorAll('.guul-tex:not([data-done])').forEach((el) => {
+      el.setAttribute('data-done', '1')
+      window.katex.render(el.textContent, el, { displayMode: el.dataset.display === '1', throwOnError: false })
+    })
+  }
+  // Nova changes the page often: look at most once per frame.
+  let queued = false
+  const queue = () => {
+    if (queued) return
+    queued = true
+    window.requestAnimationFrame(() => { queued = false; draw() })
+  }
+  new MutationObserver(queue).observe(document.documentElement, { childList: true, subtree: true })
+  document.addEventListener('DOMContentLoaded', draw)
+  window.addEventListener('load', draw)
+})()

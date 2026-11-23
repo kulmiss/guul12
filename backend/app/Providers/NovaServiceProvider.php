@@ -25,8 +25,12 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
         Nova::footer(fn (): string => 'Guul 12 admin');
         Nova::mainMenu(fn (Request $request): array => NovaMenu::sections($request));
-        // Our plain-JavaScript additions (find-student card and more), see resources/nova/guul-nova.js.
+        // KaTeX draws the maths in question previews. Served from our own site (public/katex), no CDN.
+        Nova::remoteStyle(asset('katex/katex.min.css?v=0.19.1'));
+        Nova::remoteScript(asset('katex/katex.min.js?v=0.19.1'));
+        // Our plain-JavaScript additions (find-student card, maths drawing and more), see resources/nova/guul-nova.js.
         Nova::script('guul-nova', resource_path('nova/guul-nova.js'));
+        Nova::style('guul-nova', resource_path('nova/guul-nova.css'));
     }
 
     protected function routes(): void

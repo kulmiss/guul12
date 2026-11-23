@@ -1,0 +1,28 @@
+/*
+ * Guul 12 additions to Nova's look. Uses Nova's own colour variables, so it follows light and dark mode.
+ * Question preview markup comes from App\Support\QuestionPreview.
+ */
+.guul-preview { max-width: 36rem; line-height: 1.5; }
+.guul-preview .gp-passage { margin-bottom: .75rem; padding: .75rem; border-radius: .375rem; font-size: .875rem; background: rgb(var(--colors-gray-50)); }
+.guul-preview .gp-title, .guul-preview .gp-label, .guul-preview .gp-key { font-weight: 700; }
+.guul-preview .gp-title { margin-bottom: .25rem; }
+.guul-preview .gp-stem { margin-bottom: .75rem; font-size: 1rem; }
+.guul-preview .gp-list, .guul-preview .gp-order { margin: 0 0 .25rem; }
+.guul-preview .gp-list { list-style: none; padding: 0; }
+.guul-preview .gp-order { list-style: decimal; padding-left: 1.5rem; }
+.guul-preview .gp-order li { margin-bottom: .25rem; }
+.guul-preview .gp-label { display: block; margin-bottom: .25rem; font-size: .875rem; }
+.guul-preview .gp-option .gp-label, .guul-preview .gp-explanation .gp-label { display: inline; }
+.guul-preview .gp-option { display: flex; align-items: flex-start; gap: .5rem; margin-bottom: .25rem; padding: .5rem; border: 1px solid rgb(var(--colors-gray-200)); border-radius: .375rem; font-size: .875rem; }
+.guul-preview .gp-right { border: 2px solid rgb(var(--colors-green-600)); background: rgb(var(--colors-green-50)); }
+.guul-preview .gp-body { flex: 1 1 0%; }
+.guul-preview .gp-tick { font-weight: 700; color: rgb(var(--colors-green-700)); }
+.guul-preview .gp-muted { color: rgb(var(--colors-gray-500)); }
+.guul-preview .gp-image { display: block; max-width: 20rem; margin: .5rem 0; border-radius: .375rem; background: #fff; }
+.guul-preview .gp-explanation { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid rgb(var(--colors-gray-200)); font-size: .875rem; }
+
+.dark .guul-preview .gp-passage { background: rgb(var(--colors-gray-900)); }
+.dark .guul-preview .gp-option, .dark .guul-preview .gp-explanation { border-color: rgb(var(--colors-gray-700)); }
+.dark .guul-preview .gp-right { border-color: rgb(var(--colors-green-500)); background: rgb(var(--colors-green-950)); }
+.dark .guul-preview .gp-tick { color: rgb(var(--colors-green-400)); }
+.dark .guul-preview .gp-muted { color: rgb(var(--colors-gray-400)); }
