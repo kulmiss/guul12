@@ -1,6 +1,6 @@
 # PROGRESS
 
-📍 App polish · Step 4 of 4: easy warm-up, welcome slides, lively Home → next: owner test + merges (PR #1 → #7)
+📍 App polish · Step 6 of 6: Become Premium page (WhatsApp/Telegram, decision #40) → next: owner test + merges (PR #1 → #7)
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
 ⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5 → #6 → #7; referral reward (QUESTIONS #40); confirm prices, WhatsApp, email, icon; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
@@ -25,6 +25,7 @@
 | 3 | Lively Home dashboard | ✅ |
 | 4 | Tests, goldens, PR | ✅ |
 | 5 | Home extras: this week, weakest chapter, next badge | ✅ |
+| 6 | Become Premium card on Home + Premium benefits page with WhatsApp/Telegram (decision #40, no prices) | ✅ |
 
 ## Nova upgrade steps (PR #6)
 
