@@ -88,6 +88,54 @@ class User extends Authenticatable
     }
 
     /**
+     * Grants that are not undone and not over yet (for lists that show Premium for many students).
+     *
+     * @return HasMany<PremiumGrant, $this>
+     */
+    public function currentPremiumGrants(): HasMany
+    {
+        return $this->hasMany(PremiumGrant::class)->whereNull('revoked_at')->where('ends_at', '>', Carbon::now());
+    }
+
+    /**
+     * @return HasMany<QuestionReport, $this>
+     */
+    public function questionReports(): HasMany
+    {
+        return $this->hasMany(QuestionReport::class);
+    }
+
+    /**
+     * Reports other students made about this student's nickname.
+     *
+     * @return HasMany<NicknameReport, $this>
+     */
+    public function nicknameReportsAbout(): HasMany
+    {
+        return $this->hasMany(NicknameReport::class, 'reported_user_id');
+    }
+
+    /**
+     * Friends this student invited.
+     *
+     * @return HasMany<Referral, $this>
+     */
+    public function referralsMade(): HasMany
+    {
+        return $this->hasMany(Referral::class, 'inviter_id');
+    }
+
+    /**
+     * Activity log rows about this account.
+     *
+     * @return HasMany<AuditLog, $this>
+     */
+    public function auditLogs(): HasMany
+    {
+        return $this->hasMany(AuditLog::class, 'subject_id')->where('subject_type', 'User');
+    }
+
+    /**
      * @return HasMany<PaymentRequest, $this>
      */
     public function paymentRequests(): HasMany

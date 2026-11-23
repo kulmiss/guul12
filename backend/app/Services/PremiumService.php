@@ -39,11 +39,26 @@ class PremiumService
             ->whereNull('revoked_at')
             ->where('ends_at', '>', $at)
             ->orderBy('starts_at')
-            ->get(['starts_at', 'ends_at']);
+            ->get(['starts_at', 'ends_at', 'revoked_at']);
+
+        return self::untilFromGrants($grants, $at);
+    }
+
+    /**
+     * The same as activeUntil() for grants that are already loaded (lists in Nova load them for a whole
+     * page at once). Revoked grants are ignored.
+     *
+     * @param  iterable<PremiumGrant>  $grants
+     */
+    public static function untilFromGrants(iterable $grants, Carbon $at): ?Carbon
+    {
+        $sorted = collect($grants)
+            ->filter(fn (PremiumGrant $g): bool => $g->revoked_at === null && $g->ends_at->greaterThan($at))
+            ->sortBy(fn (PremiumGrant $g): int => $g->starts_at->getTimestamp());
 
         $until = null;
 
-        foreach ($grants as $grant) {
+        foreach ($sorted as $grant) {
             $coversStart = $until === null ? $grant->starts_at->lessThanOrEqualTo($at) : $grant->starts_at->lessThanOrEqualTo($until);
 
             if (! $coversStart) {

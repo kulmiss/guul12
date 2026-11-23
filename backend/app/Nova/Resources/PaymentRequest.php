@@ -9,6 +9,7 @@ use App\Models\PaymentRequest as PaymentRequestModel;
 use App\Models\User;
 use App\Nova\Actions\ApprovePaymentRequest;
 use App\Nova\Actions\RejectPaymentRequest;
+use App\Nova\Fields\Show;
 use App\Rules\NewPaymentReference;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -26,6 +27,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
+use Laravel\Nova\Query\Search\SearchableRelation;
 
 /**
  * Payments made outside the app that wait for a check (DECISIONS #32).
@@ -40,8 +42,11 @@ class PaymentRequest extends Resource
 
     public static $title = 'payment_ref';
 
-    /** @var array<int, string> */
-    public static $search = ['payment_ref'];
+    /** @return list<string|SearchableRelation> */
+    public static function searchableColumns(): array
+    {
+        return ['payment_ref', new SearchableRelation('student', 'student_id')];
+    }
 
     public static string $ability = 'manage-premium';
 
@@ -148,12 +153,10 @@ class PaymentRequest extends Resource
                 PaymentRequestStatus::Approved->value => 'Premium given',
                 PaymentRequestStatus::Rejected->value => 'Rejected',
             ]),
-            DateTime::make('Added', 'created_at')
-                ->displayUsing(fn ($value): string => $value?->diffForHumans() ?? '—')
-                ->sortable()->exceptOnForms(),
+            ...Show::when('Added', 'created_at'),
             Text::make('Added by', fn (PaymentRequestModel $r): string => $r->creator->name ?? '—')->exceptOnForms()->hideFromIndex(),
             Text::make('Decided by', fn (PaymentRequestModel $r): string => $r->decider->name ?? '—')->exceptOnForms(),
-            DateTime::make('Decided at', 'decided_at')->exceptOnForms()->hideFromIndex(),
+            DateTime::make('Decided at', 'decided_at')->onlyOnDetail()->displayUsing(fn ($v): string => Show::full($v)),
             Text::make('Reject reason', 'reject_reason')->exceptOnForms()->hideFromIndex(),
             BelongsTo::make('Premium grant', 'premiumGrant', PremiumGrant::class)->exceptOnForms()->hideFromIndex()->nullable(),
         ];

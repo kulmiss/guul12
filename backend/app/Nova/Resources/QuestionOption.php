@@ -27,6 +27,9 @@ class QuestionOption extends Resource
 
     public static string $ability = 'manage-content';
 
+    /** @var list<string> */
+    public static $with = ['question'];
+
     /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {

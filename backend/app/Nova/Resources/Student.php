@@ -3,18 +3,22 @@
 namespace App\Nova\Resources;
 
 use App\Enums\UserRole;
+use App\Models\Attempt;
+use App\Models\AttemptAnswer;
+use App\Models\Referral;
 use App\Models\User;
 use App\Nova\Actions\GrantPremium;
 use App\Nova\Actions\LeaderboardBlock;
 use App\Nova\Actions\ResetNickname;
+use App\Nova\Fields\Show;
 use App\Services\PremiumService;
 use App\Services\StudentIdGenerator;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
@@ -36,9 +40,12 @@ class Student extends Resource
     public static $title = 'student_id';
 
     /** @var array<int, string> */
-    public static $search = ['student_id', 'nickname'];
+    public static $search = ['student_id', 'nickname', 'email'];
 
     public static string $ability = 'view-students';
+
+    /** @var list<string> */
+    public static $with = ['currentPremiumGrants'];
 
     public static function label(): string
     {
@@ -88,26 +95,65 @@ class Student extends Resource
     /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
+        $until = fn (User $user): ?Carbon => PremiumService::untilFromGrants($user->currentPremiumGrants, Carbon::now());
+
         return [
-            ID::make()->sortable(),
-            Text::make('Student ID', 'student_id')->sortable()->copyable(),
-            Badge::make('Plan', fn (User $user): string => app(PremiumService::class)->isPremium($user) ? 'Premium' : 'Free')
-                ->map(['Free' => 'info', 'Premium' => 'success'])->withIcons()->exceptOnForms(),
-            Text::make('Premium until', fn (User $user): string => app(PremiumService::class)->activeUntil($user)?->format('Y-m-d') ?? '—')
-                ->exceptOnForms(),
-            Boolean::make('Signed in', fn (User $user): bool => $user->google_sub !== null),
-            Number::make('Grade')->sortable(),
-            Text::make('Stream'),
-            Boolean::make('Retaker', 'is_retaker')->hideFromIndex(),
-            Text::make('Region')->hideFromIndex(),
-            Text::make('City')->hideFromIndex(),
-            Text::make('Nickname')->hideFromIndex(),
-            Boolean::make('Leaderboard blocked', fn (User $user): bool => $user->leaderboard_blocked_at !== null)->onlyOnDetail(),
-            DateTime::make('Joined', 'created_at')->sortable()->exceptOnForms(),
-            DateTime::make('Last active', 'last_active_at')->sortable()->exceptOnForms(),
+            new Panel('Profile', [
+                ID::make()->hideFromIndex(),
+                Text::make('Student ID', 'student_id')->sortable()->copyable(),
+                Text::make('Nickname')->sortable()->help('Shown to other students on the leaderboard and in battles.'),
+                Boolean::make('Signed in', fn (User $user): bool => $user->google_sub !== null)
+                    ->help('Signed in with Google, so progress moves to a new phone.'),
+                Number::make('Grade')->sortable(),
+                Text::make('Stream')->displayUsing(fn (?string $v): string => $v !== null ? ucfirst($v) : '—')->sortable(),
+                Text::make('Region')->displayUsing(fn (?string $v): string => $v !== null ? ucfirst(str_replace('_', ' ', $v)) : '—')->sortable(),
+                Text::make('City')->hideFromIndex(),
+                Text::make('Gender', fn (User $user): string => $user->gender !== null ? ucfirst($user->gender->value) : 'Not given')->hideFromIndex(),
+                Boolean::make('Retaker', 'is_retaker')->hideFromIndex(),
+                Number::make('Target score', 'target_score')->hideFromIndex(),
+                Boolean::make('Leaderboard blocked', fn (User $user): bool => $user->leaderboard_blocked_at !== null)->onlyOnDetail(),
+                ...Show::when('Joined', 'created_at'),
+                ...Show::when('Last active', 'last_active_at'),
+            ]),
+            new Panel('Premium', [
+                Badge::make('Plan', fn (User $user): string => $until($user) !== null ? 'Premium' : 'Free')
+                    ->map(['Free' => 'info', 'Premium' => 'success'])->withIcons(),
+                Text::make('Premium until', fn (User $user): string => $until($user)?->setTimezone(Show::TIMEZONE)->format('j M Y') ?? '—'),
+            ]),
+            new Panel('Progress', [
+                Number::make('Answers', fn (User $user): int => self::answers($user))->onlyOnDetail(),
+                Text::make('Right answers', fn (User $user): string => Show::percent(self::answers($user, true), self::answers($user)))->onlyOnDetail(),
+                Number::make('Exams finished', fn (User $user): int => Attempt::query()->where('user_id', $user->id)->where('mode', 'like', 'exam%')->count())->onlyOnDetail(),
+            ]),
+            new Panel('Referrals', [
+                Text::make('Invite code', fn (User $user): string => (string) (User::query()->whereKey($user->id)->value('referral_code') ?? '—'))->onlyOnDetail(),
+                Text::make('Friends invited', fn (User $user): string => self::referralSummary($user))->onlyOnDetail(),
+            ]),
+            new Panel('Reports', [
+                Number::make('Reports sent', fn (User $user): int => $user->questionReports()->count())->onlyOnDetail()
+                    ->help('"Report a problem" messages this student sent about questions.'),
+                Number::make('Nickname reports about them', fn (User $user): int => $user->nicknameReportsAbout()->count())->onlyOnDetail(),
+            ]),
             HasMany::make('Premium grants', 'premiumGrants', PremiumGrant::class),
             HasMany::make('Payment requests', 'paymentRequests', PaymentRequest::class),
+            HasMany::make('Activity', 'auditLogs', AuditLog::class),
         ];
+    }
+
+    private static function answers(User $user, bool $onlyRight = false): int
+    {
+        return AttemptAnswer::query()
+            ->whereIn('attempt_id', Attempt::query()->where('user_id', $user->id)->select('id'))
+            ->when($onlyRight, fn ($q) => $q->where('is_correct', true))
+            ->count();
+    }
+
+    private static function referralSummary(User $user): string
+    {
+        $valid = $user->referralsMade()->where('status', Referral::VALID)->count();
+        $all = $user->referralsMade()->count();
+
+        return $all === 0 ? 'None' : "{$all} invited, {$valid} counted";
     }
 
     /** @return array<int, Action> */

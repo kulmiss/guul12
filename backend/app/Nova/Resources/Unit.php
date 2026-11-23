@@ -3,6 +3,7 @@
 namespace App\Nova\Resources;
 
 use App\Models\Unit as UnitModel;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Field;
@@ -29,6 +30,14 @@ class Unit extends Resource
 
     public static string $ability = 'manage-content';
 
+    /** @var list<string> */
+    public static $with = ['subject'];
+
+    public static function indexQuery(NovaRequest $request, Builder $query): Builder
+    {
+        return $query->withCount('chapters');
+    }
+
     /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
@@ -43,6 +52,7 @@ class Unit extends Resource
             Number::make('Number')->rules('required', 'integer', 'min:1')->sortable(),
             Text::make('Title')->rules('required', 'max:191'),
             Number::make('Sort')->rules('required', 'integer', 'min:0')->hideFromIndex(),
+            Number::make('Chapters', 'chapters_count')->resolveUsing(fn (mixed $count): int => (int) $count)->onlyOnIndex()->sortable(),
             Boolean::make('Active', 'is_active'),
             HasMany::make('Chapters', 'chapters', Chapter::class),
         ];

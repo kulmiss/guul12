@@ -8,6 +8,7 @@ use App\Models\NicknameReport as NicknameReportModel;
 use App\Nova\Actions\DismissNicknameReport;
 use App\Nova\Actions\LeaderboardBlock;
 use App\Nova\Actions\ResetNickname;
+use App\Nova\Fields\Show;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Laravel\Nova\Actions\Action;
@@ -75,7 +76,7 @@ class NicknameReport extends Resource
     {
         return [
             ID::make()->hideFromIndex(),
-            DateTime::make('Reported', 'created_at')->displayUsing(fn ($value): string => $value?->diffForHumans() ?? '—')->sortable()->exceptOnForms(),
+            ...Show::when('Reported', 'created_at'),
             Text::make('Nickname')->sortable(),
             Text::make('Now called', fn (NicknameReportModel $r): string => $r->reportedUser->nickname ?? '— (removed)')
                 ->help('The nickname today. It may differ from the reported one.'),
@@ -97,7 +98,7 @@ class NicknameReport extends Resource
             ]),
             Text::make('Reported by', fn (NicknameReportModel $r): string => $r->reporter->student_id)->onlyOnDetail(),
             Text::make('Checked by', fn (NicknameReportModel $r): string => $r->resolver->name ?? '—')->onlyOnDetail(),
-            DateTime::make('Checked at', 'resolved_at')->onlyOnDetail(),
+            DateTime::make('Checked at', 'resolved_at')->onlyOnDetail()->displayUsing(fn ($v): string => Show::full($v)),
         ];
     }
 

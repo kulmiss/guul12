@@ -27,6 +27,9 @@ class SolvedExercise extends Resource
 
     public static string $ability = 'manage-content';
 
+    /** @var list<string> */
+    public static $with = ['chapter'];
+
     /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {

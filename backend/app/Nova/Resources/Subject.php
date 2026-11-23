@@ -3,6 +3,7 @@
 namespace App\Nova\Resources;
 
 use App\Models\Subject as SubjectModel;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\HasMany;
@@ -28,6 +29,11 @@ class Subject extends Resource
 
     public static string $ability = 'manage-content';
 
+    public static function indexQuery(NovaRequest $request, Builder $query): Builder
+    {
+        return $query->withCount('units');
+    }
+
     /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
@@ -44,6 +50,7 @@ class Subject extends Resource
             Boolean::make('Exam subject', 'is_exam_subject'),
             Text::make('Icon')->nullable()->hideFromIndex(),
             Number::make('Sort')->rules('required', 'integer', 'min:0'),
+            Number::make('Units', 'units_count')->resolveUsing(fn (mixed $count): int => (int) $count)->onlyOnIndex()->sortable(),
             Boolean::make('Active', 'is_active'),
             HasMany::make('Units', 'units', Unit::class),
         ];

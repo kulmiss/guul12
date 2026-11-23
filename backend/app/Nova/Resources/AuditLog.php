@@ -3,13 +3,11 @@
 namespace App\Nova\Resources;
 
 use App\Models\AuditLog as AuditLogModel;
+use App\Nova\Fields\Show;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Code;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
@@ -27,7 +25,15 @@ class AuditLog extends Resource
     public static $title = 'action';
 
     /** @var array<int, string> */
-    public static $search = ['action'];
+    public static $search = ['action', 'subject_type'];
+
+    /** @var list<string> */
+    public static $with = ['actor'];
+
+    public static function label(): string
+    {
+        return 'Activity log';
+    }
 
     public static string $ability = 'manage-settings';
 
@@ -50,13 +56,12 @@ class AuditLog extends Resource
     public function fields(NovaRequest $request): array
     {
         return [
-            ID::make()->sortable(),
-            DateTime::make('When', 'created_at')->sortable(),
-            BelongsTo::make('Who', 'actor', Staff::class)->nullable(),
-            Text::make('Action')->sortable(),
-            Text::make('Subject', 'subject_type'),
-            Number::make('Subject ID', 'subject_id'),
-            Code::make('Data')->json()->onlyOnDetail(),
+            ID::make()->hideFromIndex(),
+            ...Show::when('When', 'created_at'),
+            Text::make('Who', fn (AuditLogModel $log): string => $log->actor->name ?? ($log->actor_id === null ? 'System' : 'Deleted staff member')),
+            Text::make('Action')->sortable()->help('What happened, for example premium.granted or nickname.reset.'),
+            Text::make('About', fn (AuditLogModel $log): string => $log->subject_type !== null ? $log->subject_type.' #'.$log->subject_id : '—'),
+            Code::make('Details', 'data')->json()->onlyOnDetail(),
             Text::make('IP')->onlyOnDetail(),
         ];
     }

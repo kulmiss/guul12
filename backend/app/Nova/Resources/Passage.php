@@ -3,9 +3,11 @@
 namespace App\Nova\Resources;
 
 use App\Models\Passage as PassageModel;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -26,6 +28,11 @@ class Passage extends Resource
 
     public static string $ability = 'manage-content';
 
+    public static function indexQuery(NovaRequest $request, Builder $query): Builder
+    {
+        return $query->withCount('questions');
+    }
+
     /** @return array<int, Field|Panel> */
     public function fields(NovaRequest $request): array
     {
@@ -34,6 +41,7 @@ class Passage extends Resource
             Text::make('Title')->rules('required', 'max:191'),
             Textarea::make('Body')->rules('required')->alwaysShow(),
             Text::make('Source')->nullable(),
+            Number::make('Questions', 'questions_count')->resolveUsing(fn (mixed $count): int => (int) $count)->onlyOnIndex()->sortable(),
             HasMany::make('Questions', 'questions', Question::class),
         ];
     }

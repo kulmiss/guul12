@@ -4,15 +4,19 @@ namespace App\Nova\Resources;
 
 use App\Models\PremiumGrant as PremiumGrantModel;
 use App\Nova\Actions\RevokePremium;
+use App\Nova\Fields\Show;
 use Illuminate\Http\Request;
 use Laravel\Nova\Actions\Action;
+use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
+use Laravel\Nova\Query\Search\SearchableRelation;
 
 /**
  * Read-only history of Premium grants. Grants are made with the "Give Premium" action on a student.
@@ -26,10 +30,16 @@ class PremiumGrant extends Resource
 
     public static $title = 'id';
 
-    /** @var array<int, string> */
-    public static $search = ['payment_ref'];
-
     public static string $ability = 'manage-premium';
+
+    /** @var list<string> */
+    public static $with = ['user', 'grantedBy'];
+
+    /** @return list<string|SearchableRelation> */
+    public static function searchableColumns(): array
+    {
+        return ['payment_ref', new SearchableRelation('user', 'student_id')];
+    }
 
     public static function authorizedToCreate(Request $request): bool
     {
@@ -50,14 +60,20 @@ class PremiumGrant extends Resource
     public function fields(NovaRequest $request): array
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->hideFromIndex(),
             BelongsTo::make('Student', 'user', Student::class),
-            Text::make('Plan', fn (PremiumGrantModel $grant): string => $grant->plan->value),
-            DateTime::make('Starts', 'starts_at')->sortable(),
-            DateTime::make('Ends', 'ends_at')->sortable(),
+            Badge::make('Plan', fn (PremiumGrantModel $grant): string => $grant->plan->value)
+                ->map(['term' => 'success', 'year' => 'success', 'referral' => 'info'])
+                ->labels(['term' => 'Term', 'year' => 'Year', 'referral' => 'Referral reward']),
+            Badge::make('State', fn (PremiumGrantModel $g): string => $g->revoked_at !== null ? 'undone' : ($g->ends_at->isPast() ? 'expired' : ($g->starts_at->isFuture() ? 'next' : 'active')))
+                ->map(['active' => 'success', 'next' => 'info', 'expired' => 'warning', 'undone' => 'danger'])
+                ->labels(['active' => 'Active', 'next' => 'Starts later', 'expired' => 'Expired', 'undone' => 'Undone']),
+            Date::make('Starts', 'starts_at')->sortable()->displayUsing(fn ($v): string => $v?->setTimezone(Show::TIMEZONE)->format('j M Y') ?? '—'),
+            Date::make('Ends', 'ends_at')->sortable()->displayUsing(fn ($v): string => $v?->setTimezone(Show::TIMEZONE)->format('j M Y') ?? '—'),
             Text::make('Payment reference', 'payment_ref')->copyable(),
-            BelongsTo::make('Given by', 'grantedBy', Staff::class)->nullable(),
-            DateTime::make('Undone at', 'revoked_at'),
+            Text::make('Given by', fn (PremiumGrantModel $g): string => $g->grantedBy->name ?? '— (automatic)'),
+            ...Show::when('Given', 'created_at'),
+            DateTime::make('Undone at', 'revoked_at')->onlyOnDetail()->displayUsing(fn ($v): string => Show::full($v)),
             Text::make('Note')->hideFromIndex(),
         ];
     }

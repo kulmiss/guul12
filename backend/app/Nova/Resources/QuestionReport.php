@@ -6,6 +6,7 @@ use App\Enums\ReportReason;
 use App\Enums\ReportStatus;
 use App\Models\QuestionReport as QuestionReportModel;
 use App\Nova\Actions\ResolveReports;
+use App\Nova\Fields\Show;
 use Illuminate\Http\Request;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
@@ -17,6 +18,7 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
+use Laravel\Nova\Query\Search\SearchableRelation;
 
 /**
  * "Report a problem" from students. Content checkers accept (the question is wrong: fix the
@@ -31,10 +33,16 @@ class QuestionReport extends Resource
 
     public static $title = 'id';
 
-    /** @var array<int, string> */
-    public static $search = ['note'];
-
     public static string $ability = 'manage-content';
+
+    /** @var list<string> */
+    public static $with = ['question'];
+
+    /** @return list<string|SearchableRelation> */
+    public static function searchableColumns(): array
+    {
+        return ['note', new SearchableRelation('question', 'stem')];
+    }
 
     public static function authorizedToCreate(Request $request): bool
     {
@@ -50,8 +58,8 @@ class QuestionReport extends Resource
     public function fields(NovaRequest $request): array
     {
         return [
-            ID::make()->sortable(),
-            DateTime::make('When', 'created_at')->sortable(),
+            ID::make()->hideFromIndex(),
+            ...Show::when('When', 'created_at'),
             BelongsTo::make('Question', 'question', Question::class),
             Number::make('Version', 'question_version'),
             Text::make('Reason', fn (QuestionReportModel $r) => match ($r->reason) {
@@ -65,8 +73,12 @@ class QuestionReport extends Resource
                 ReportStatus::Open->value => 'warning',
                 ReportStatus::Accepted->value => 'success',
                 ReportStatus::Rejected->value => 'info',
+            ])->labels([
+                ReportStatus::Open->value => 'Open',
+                ReportStatus::Accepted->value => 'Question was wrong',
+                ReportStatus::Rejected->value => 'Question was right',
             ]),
-            DateTime::make('Resolved', 'resolved_at')->onlyOnDetail(),
+            DateTime::make('Resolved', 'resolved_at')->onlyOnDetail()->displayUsing(fn ($v): string => Show::full($v)),
         ];
     }
 
