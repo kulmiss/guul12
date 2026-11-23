@@ -344,11 +344,10 @@ class FakeServer {
       case ('POST', final p) when p.startsWith('questions/') && p.endsWith('/explain'):
         final id = int.parse(p.split('/')[1]);
         explainRequests.add(id);
-        if (explainError != null)
-          return json({
-            'code': explainError,
-            'message': 'No',
-          }, explainError == 'explain_limit' ? 429 : 503);
+        final error = explainError;
+        if (error != null) {
+          return json({'code': error, 'message': 'No'}, error == 'explain_limit' ? 429 : 503);
+        }
         return json({
           'explanation': {
             'id': 70 + id % 10,
