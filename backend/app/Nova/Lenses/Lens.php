@@ -14,12 +14,12 @@ use Laravel\Nova\Lenses\Lens as NovaLens;
  */
 abstract class Lens extends NovaLens
 {
-    /** The address part, e.g. "new-today". */
-    public const KEY = '';
+    /** The address part, e.g. "new-today" (a page name, nothing secret). */
+    public const SLUG = '';
 
     public function uriKey(): string
     {
-        return static::KEY;
+        return static::SLUG;
     }
 
     /** @param  Closure(Builder): mixed  $defaultOrder */

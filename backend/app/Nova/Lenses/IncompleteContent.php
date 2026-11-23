@@ -20,7 +20,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
  */
 class IncompleteContent extends Lens
 {
-    public const KEY = 'incomplete-content';
+    public const SLUG = 'incomplete-content';
 
     public const MIN_QUESTIONS = 30;
 

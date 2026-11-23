@@ -15,7 +15,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 /** Most answers since Monday (the leaderboard week). */
 class MostActiveThisWeek extends StudentLens
 {
-    public const KEY = 'most-active-this-week';
+    public const SLUG = 'most-active-this-week';
 
     public $name = 'Most active this week';
 

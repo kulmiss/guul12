@@ -8,7 +8,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
 /** Reports nobody has answered yet, oldest first. */
 class OpenReports extends ReportLens
 {
-    public const KEY = 'open-reports';
+    public const SLUG = 'open-reports';
 
     public $name = 'Open';
 

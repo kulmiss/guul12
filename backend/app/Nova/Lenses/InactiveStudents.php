@@ -12,7 +12,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 /** Not seen for 14 days or more (or never, when they joined over 14 days ago). */
 class InactiveStudents extends StudentLens
 {
-    public const KEY = 'inactive-14-days';
+    public const SLUG = 'inactive-14-days';
 
     public $name = 'Inactive 14+ days';
 

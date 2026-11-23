@@ -9,7 +9,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
 /** Highest share of right answers first, among questions with enough answers to tell (the same rule as the dashboard). */
 class EasiestQuestions extends QuestionLens
 {
-    public const KEY = 'easiest-questions';
+    public const SLUG = 'easiest-questions';
 
     public $name = 'Easiest';
 

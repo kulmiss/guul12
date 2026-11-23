@@ -12,7 +12,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
  */
 class ReadyToPublish extends QuestionLens
 {
-    public const KEY = 'ready-to-publish';
+    public const SLUG = 'ready-to-publish';
 
     public $name = 'Beta ready to publish';
 

@@ -9,7 +9,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
 /** Premium given today (Addis Ababa day), to check the day's work. */
 class GivenToday extends GrantLens
 {
-    public const KEY = 'given-today';
+    public const SLUG = 'given-today';
 
     public $name = 'Given today';
 

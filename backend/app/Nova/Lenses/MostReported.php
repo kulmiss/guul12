@@ -8,7 +8,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
 /** Questions students reported most (all reports, open or closed). */
 class MostReported extends QuestionLens
 {
-    public const KEY = 'most-reported';
+    public const SLUG = 'most-reported';
 
     public $name = 'Most reported';
 

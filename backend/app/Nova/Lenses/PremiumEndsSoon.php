@@ -15,7 +15,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 /** Premium ends in the next 7 days and nothing follows it: a good moment to remind them. */
 class PremiumEndsSoon extends StudentLens
 {
-    public const KEY = 'premium-ends-in-7-days';
+    public const SLUG = 'premium-ends-in-7-days';
 
     public $name = 'Premium ends in 7 days';
 

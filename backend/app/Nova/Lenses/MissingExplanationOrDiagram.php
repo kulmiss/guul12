@@ -11,7 +11,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
  */
 class MissingExplanationOrDiagram extends QuestionLens
 {
-    public const KEY = 'missing-explanation-or-diagram';
+    public const SLUG = 'missing-explanation-or-diagram';
 
     public $name = 'Missing explanation or diagram';
 

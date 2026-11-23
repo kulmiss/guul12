@@ -15,7 +15,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 /** Chapters without a lesson video yet. */
 class NoVideoYet extends Lens
 {
-    public const KEY = 'no-video-yet';
+    public const SLUG = 'no-video-yet';
 
     public $name = 'No video yet';
 

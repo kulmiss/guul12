@@ -8,7 +8,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
 /** Premium that staff took back ("Undo Premium"), newest first. */
 class UndoneGrants extends GrantLens
 {
-    public const KEY = 'undone-grants';
+    public const SLUG = 'undone-grants';
 
     public $name = 'Undone changes';
 

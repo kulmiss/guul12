@@ -9,7 +9,7 @@ use Laravel\Nova\Http\Requests\LensRequest;
 /** Open reports waiting more than 48 hours: answer these first. */
 class OpenFor48Hours extends ReportLens
 {
-    public const KEY = 'open-48-hours';
+    public const SLUG = 'open-48-hours';
 
     public $name = 'Older than 48 h';
 

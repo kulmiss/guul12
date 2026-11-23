@@ -13,7 +13,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 /** Joined today (Addis Ababa day). */
 class NewToday extends StudentLens
 {
-    public const KEY = 'new-today';
+    public const SLUG = 'new-today';
 
     public $name = 'New today';
 
