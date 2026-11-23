@@ -1,9 +1,9 @@
 # PROGRESS
 
-📍 Phase 4 of 5 · Step 9 of 9: engagement, leaderboard, daily challenge, battles, referral, reminders, ads, Explain more, Premium flow, Phase 4 report → next: Phase 5 (landing page, ops, store pack, release)
-📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
-📊 Whole project: ▓▓▓▓▓▓▓▓▓░ 86% done · 14% left
-⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4; referral reward choice (QUESTIONS #40); AdMob IDs, Anthropic API key, Nova secrets
+📍 Phase 5 of 5 · Step 4 of 8: landing page, account deletion, ops (backups + watchdog), app icon + store pack → next: release build check
+📊 This phase: ▓▓▓▓▓░░░░░ 50% done · 50% left
+📊 Whole project: ▓▓▓▓▓▓▓▓▓░ 93% done · 7% left
+⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5; referral reward (QUESTIONS #40); nickname reporting (QUESTIONS #45); prices, WhatsApp, email, Play link; AdMob IDs, Anthropic API key, Nova secrets
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -12,7 +12,20 @@
 | 2 Content + quality gate + Grade 12 | 22% | ✅ done — waiting for owner test (PR #2) |
 | 3 Exams + adaptive + SRS | 16% | ✅ done — waiting for owner test (PR #3) |
 | 4 Engagement + ads + AI + Premium | 20% | ✅ done — waiting for owner test (PR #4) |
-| 5 Landing + ops + store + Nova | 14% | not started |
+| 5 Landing + ops + store + Nova | 14% | in progress (PR #5) |
+
+## Phase 5 steps
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Landing page in Laravel (en + so/am drafts), price-free /app, privacy, terms, delete-account | ✅ Lighthouse 100/100/100/100 |
+| 2 | Account deletion in the app and the API (Play requirement) | ✅ |
+| 3 | Ops: daily backups, watchdog + /health, Telegram alerts | ✅ |
+| 4 | App icon + store pack (listings, Data safety, app content, feature graphic) | ✅ CI "Store pack" green |
+| 5 | Release build check + version docs | ⏳ |
+| 6 | Nova switch-on checks + dashboard | ⏳ |
+| 7 | CI for landing (Lighthouse) | ⏳ |
+| 8 | Phase 5 report + final summary | ⏳ |
 
 ## Phase 4 steps
 
