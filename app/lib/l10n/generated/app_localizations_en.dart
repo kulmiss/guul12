@@ -1744,4 +1744,50 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeTileMoreLine => 'Pick a mode';
+
+  @override
+  String get homeWeekTitle => 'This week';
+
+  @override
+  String homeWeekCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Goal reached on $count days this week',
+      one: 'Goal reached on 1 day this week',
+      zero: 'Reach the daily goal to fill a day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String homeWeekDayReached(String day) {
+    return '$day: goal reached';
+  }
+
+  @override
+  String homeWeekDayCount(String day, int count, int goal) {
+    return '$day: $count of $goal questions';
+  }
+
+  @override
+  String get homeWeakTitle => 'Your weakest chapter';
+
+  @override
+  String homeWeakLine(String subject, int percent) {
+    return '$subject · $percent% right so far';
+  }
+
+  @override
+  String homeWeakPercent(int percent) {
+    return '$percent% right so far';
+  }
+
+  @override
+  String get homeWeakAction => 'Practise it';
+
+  @override
+  String homeBadgeNext(String name) {
+    return 'Next badge: $name';
+  }
 }

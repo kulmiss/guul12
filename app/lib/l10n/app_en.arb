@@ -2388,5 +2388,80 @@
   "homeTileMoreLine": "Pick a mode",
   "@homeTileMoreLine": {
     "description": "More practice tile line"
+  },
+  "homeWeekTitle": "This week",
+  "@homeWeekTitle": {
+    "description": "Home card: the 7 days of this week"
+  },
+  "homeWeekCount": "{count, plural, =0{Reach the daily goal to fill a day} =1{Goal reached on 1 day this week} other{Goal reached on {count} days this week}}",
+  "@homeWeekCount": {
+    "description": "Line on the week card",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeekDayReached": "{day}: goal reached",
+  "@homeWeekDayReached": {
+    "description": "Screen-reader label of a filled day",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "homeWeekDayCount": "{day}: {count} of {goal} questions",
+  "@homeWeekDayCount": {
+    "description": "Screen-reader label of a day not filled",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeakTitle": "Your weakest chapter",
+  "@homeWeakTitle": {
+    "description": "Home card title"
+  },
+  "homeWeakLine": "{subject} · {percent}% right so far",
+  "@homeWeakLine": {
+    "description": "Home weak-chapter card line",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeakPercent": "{percent}% right so far",
+  "@homeWeakPercent": {
+    "description": "Home weak-chapter card line when the subject is unknown",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeakAction": "Practise it",
+  "@homeWeakAction": {
+    "description": "Button on the weak-chapter card"
+  },
+  "homeBadgeNext": "Next badge: {name}",
+  "@homeBadgeNext": {
+    "description": "Home next-badge card title",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   }
 }

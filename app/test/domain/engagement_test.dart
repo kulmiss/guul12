@@ -129,4 +129,84 @@ void main() {
       expect(Achievement.values.map((a) => a.id).toSet(), hasLength(Achievement.values.length));
     });
   });
+
+  group('this week (Monday to Sunday)', () {
+    test('seven days from Monday; today and the days after it are marked', () {
+      final week = weekDays(answers: const [], now: now); // Wednesday
+      expect(week, hasLength(7));
+      expect(week.first.day, DateTime(2026, 11, 23)); // Monday
+      expect(week.last.day, DateTime(2026, 11, 29)); // Sunday
+      expect([for (final d in week) d.isToday], [false, false, true, false, false, false, false]);
+      expect([for (final d in week) d.isFuture], [false, false, false, true, true, true, true]);
+    });
+
+    test('a day is filled once it reaches the goal; other weeks do not count', () {
+      final week = weekDays(
+        answers: [
+          ...day(ago(2), 10), // Monday: goal reached
+          ...day(ago(1), 9), // Tuesday: one short
+          ...day(ago(0), 12), // Wednesday (today): reached
+          ...day(ago(3), 30), // last Sunday: another week
+        ],
+        now: now,
+      );
+      expect([for (final d in week) d.answered], [10, 9, 12, 0, 0, 0, 0]);
+      expect([for (final d in week) d.reached], [true, false, true, false, false, false, false]);
+      expect(week.where((d) => d.reached), hasLength(2));
+    });
+
+    test('answers just before midnight count for their own day', () {
+      final late = [
+        for (var i = 0; i < 10; i++) (at: DateTime(2026, 11, 24, 23, 50, i), correct: true),
+      ];
+      final week = weekDays(answers: late, now: now);
+      expect(week[1].reached, isTrue); // Tuesday
+      expect(week[2].answered, 0); // not Wednesday
+    });
+
+    test('on Sunday night the week is still Monday to Sunday', () {
+      final week = weekDays(answers: const [], now: DateTime(2026, 11, 29, 23, 59));
+      expect(week.first.day, DateTime(2026, 11, 23));
+      expect(week.last.isToday, isTrue);
+      expect(week.where((d) => d.isFuture), isEmpty);
+    });
+  });
+
+  group('next badge', () {
+    test('nothing yet: the first badge in the list', () {
+      expect(nextAchievement(Engagement.empty, strongChapters: 0), Achievement.firstSteps);
+    });
+
+    test('the unearned badge closest to done wins', () {
+      // 60 answers: first steps earned; hundred at 60 %. Best streak 2 of 3: 67 %.
+      final e = run([...day(ago(1), 10), ...day(ago(0), 50)]);
+      expect(e.bestStreak, 2);
+      expect(nextAchievement(e, strongChapters: 0), Achievement.streak3);
+      // One strong chapter is a whole badge (100 %), so it comes first.
+      expect(nextAchievement(e, strongChapters: 1), isNot(Achievement.strongChapter));
+      expect(Achievement.strongChapter.earned(e, strongChapters: 1), isTrue);
+    });
+
+    test('a tie keeps the order of the badge list', () {
+      // 5 answers: first steps 50 %, nothing else started.
+      final e = run(day(ago(0), 5));
+      expect(nextAchievement(e, strongChapters: 0), Achievement.firstSteps);
+    });
+
+    test('every badge earned: no next badge', () {
+      const e = Engagement(
+        todayAnswered: 0,
+        streak: 30,
+        bestStreak: 30,
+        xp: 0,
+        weekXp: 0,
+        totalAnswered: 1000,
+        totalCorrect: 1000,
+        activeDays: 30,
+        exams: 1,
+        bestExamPercent: 80,
+      );
+      expect(nextAchievement(e, strongChapters: 10), isNull);
+    });
+  });
 }

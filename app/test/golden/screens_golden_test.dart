@@ -234,6 +234,48 @@ void main() {
     }
   }
 
+  // A busy student: the daily goal reached on Friday, Saturday and Sunday (today), with some
+  // wrong answers in chapter 21, so Home shows a 3-day streak, filled days and a weak chapter.
+  for (final (part, scroll) in [('top', 0.0), ('bottom', -2000.0)]) {
+    for (final dark in [false, true]) {
+      final file = 'home_active_${part}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        await pumpGuul(
+          tester,
+          server: richServer(),
+          before: (repo) async {
+            await prepared(repo);
+            await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+            for (final (i, daysAgo) in [2, 1, 0].indexed) {
+              final at = testNow.subtract(Duration(days: daysAgo));
+              await repo.saveAttempt(
+                clientUuid: '00000000-0000-4000-8000-00000000ac0$i',
+                mode: 'quick10',
+                chapterId: 21,
+                startedAt: at,
+                finishedAt: at,
+                answers: [
+                  for (var q = 0; q < 10; q++)
+                    AttemptAnswer(
+                      questionId: 2101 + q,
+                      chapterId: 21,
+                      version: 1,
+                      response: 'A',
+                      timeMs: 6000,
+                      correctLocally: q < 4,
+                    ),
+                ],
+              );
+            }
+          },
+        );
+        await tester.drag(find.byType(ListView).first, Offset(0, scroll));
+        await settle(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
+  }
+
   // First run: welcome slides, the easy warm-up and its result, then the grade question.
   Future<void> nextSlide(WidgetTester tester) =>
       tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));

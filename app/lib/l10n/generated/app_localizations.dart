@@ -2869,6 +2869,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Pick a mode'**
   String get homeTileMoreLine;
+
+  /// Home card: the 7 days of this week
+  ///
+  /// In en, this message translates to:
+  /// **'This week'**
+  String get homeWeekTitle;
+
+  /// Line on the week card
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =0{Reach the daily goal to fill a day} =1{Goal reached on 1 day this week} other{Goal reached on {count} days this week}}'**
+  String homeWeekCount(int count);
+
+  /// Screen-reader label of a filled day
+  ///
+  /// In en, this message translates to:
+  /// **'{day}: goal reached'**
+  String homeWeekDayReached(String day);
+
+  /// Screen-reader label of a day not filled
+  ///
+  /// In en, this message translates to:
+  /// **'{day}: {count} of {goal} questions'**
+  String homeWeekDayCount(String day, int count, int goal);
+
+  /// Home card title
+  ///
+  /// In en, this message translates to:
+  /// **'Your weakest chapter'**
+  String get homeWeakTitle;
+
+  /// Home weak-chapter card line
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} · {percent}% right so far'**
+  String homeWeakLine(String subject, int percent);
+
+  /// Home weak-chapter card line when the subject is unknown
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% right so far'**
+  String homeWeakPercent(int percent);
+
+  /// Button on the weak-chapter card
+  ///
+  /// In en, this message translates to:
+  /// **'Practise it'**
+  String get homeWeakAction;
+
+  /// Home next-badge card title
+  ///
+  /// In en, this message translates to:
+  /// **'Next badge: {name}'**
+  String homeBadgeNext(String name);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

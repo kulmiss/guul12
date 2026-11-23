@@ -72,3 +72,10 @@ List<ChapterMastery> weakTopics(List<ChapterMastery> all, {int max = 3}) {
     });
   return started.take(max).toList();
 }
+
+/// Chapters that still need work: started and only at "learning", weakest first. Used by Home
+/// ("Your weakest chapter") and the Progress tab, so both always agree.
+List<ChapterMastery> learningTopics(Iterable<ChapterMastery> all, {int max = 3}) => weakTopics(
+  all.toList(),
+  max: all.length,
+).where((m) => m.level == MasteryLevel.learning).take(max).toList();

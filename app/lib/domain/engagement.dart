@@ -179,3 +179,56 @@ enum Achievement {
   bool earned(Engagement e, {required int strongChapters}) =>
       progress(e, strongChapters: strongChapters) >= goal;
 }
+
+/// One day of this week on the Home "This week" strip.
+class WeekDay {
+  const WeekDay({
+    required this.day,
+    required this.answered,
+    required this.isToday,
+    required this.isFuture,
+  });
+
+  /// Midnight (local time) of the day.
+  final DateTime day;
+  final int answered;
+  final bool isToday;
+  final bool isFuture;
+
+  bool get reached => answered >= EngagementRules.dailyGoal;
+}
+
+/// Monday to Sunday of the week that holds [now], with the answers given on each day.
+List<WeekDay> weekDays({required List<AnswerEvent> answers, required DateTime now}) {
+  final today = _day(now);
+  // Calendar days (not 24-hour steps), so a clock change can never shift a day.
+  final mondayOffset = now.weekday - DateTime.monday;
+  final days = [
+    for (var i = 0; i < 7; i++) DateTime(today.year, today.month, today.day - mondayOffset + i),
+  ];
+  final counts = {for (final d in days) d: 0};
+  for (final a in answers) {
+    final d = _day(a.at);
+    if (counts.containsKey(d)) counts[d] = counts[d]! + 1;
+  }
+  return [
+    for (final d in days)
+      WeekDay(day: d, answered: counts[d]!, isToday: d == today, isFuture: d.isAfter(today)),
+  ];
+}
+
+/// The badge not earned yet that is closest to done (largest share of its goal); on a tie, the
+/// one first in the list. Null when every badge is earned.
+Achievement? nextAchievement(Engagement e, {required int strongChapters}) {
+  Achievement? best;
+  var bestShare = -1.0;
+  for (final a in Achievement.values) {
+    if (a.earned(e, strongChapters: strongChapters)) continue;
+    final share = a.progress(e, strongChapters: strongChapters) / a.goal;
+    if (share > bestShare) {
+      best = a;
+      bestShare = share;
+    }
+  }
+  return best;
+}

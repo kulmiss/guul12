@@ -147,4 +147,20 @@ void main() {
       expect(PracticeBuilder().build(mode: PracticeMode.smart, pool: const []), isEmpty);
     });
   });
+
+  test('learning topics: only "learning" chapters, weakest first, at most 3', () {
+    ChapterMastery m(int id, int answered, int correct) =>
+        ChapterMastery(chapterId: id, totalQuestions: 30, answered: answered, correct: correct);
+    final all = [
+      m(1, 10, 7), // good (70 %)
+      m(2, 4, 1), // learning (25 %)
+      m(3, 6, 0), // learning (0 %)
+      m(4, 0, 0), // not started
+      m(5, 5, 2), // learning (40 %)
+      m(6, 8, 3), // learning (37.5 %)
+    ];
+    expect([for (final t in learningTopics(all)) t.chapterId], [3, 2, 6]);
+    expect([for (final t in learningTopics(all, max: 1)) t.chapterId], [3]);
+    expect(learningTopics([m(1, 10, 7)]), isEmpty);
+  });
 }

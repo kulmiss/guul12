@@ -24,6 +24,7 @@
 | 2 | 3 welcome slides with original drawings, before the warm-up | ✅ |
 | 3 | Lively Home dashboard | ✅ |
 | 4 | Tests, goldens, PR | ✅ |
+| 5 | Home extras: this week, weakest chapter, next badge | ✅ |
 
 ## Nova upgrade steps (PR #6)
 

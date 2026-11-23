@@ -64,10 +64,7 @@ class ProgressScreen extends ConsumerWidget {
     final answered = mastery.values.fold(0, (sum, m) => sum + m.answered);
     final correct = mastery.values.fold(0, (sum, m) => sum + m.correct);
     // Only chapters still at "learning" count as weak here; the smart mix also uses "good" ones.
-    final weak = weakTopics(
-      mastery.values.toList(),
-      max: mastery.length,
-    ).where((m) => m.level == MasteryLevel.learning).take(3).toList();
+    final weak = learningTopics(mastery.values);
 
     String chapterName(int id) {
       final c = catalog.chapter(id);

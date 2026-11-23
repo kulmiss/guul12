@@ -7,18 +7,21 @@ import '../../app/challenge_providers.dart';
 import '../../app/engagement_providers.dart';
 import '../../app/plan_providers.dart';
 import '../../app/premium_providers.dart';
+import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
 import '../../data/branding.dart';
 import '../../data/models.dart';
 import '../../domain/engagement.dart';
 import '../../domain/ethiopian_calendar.dart';
+import '../../domain/mastery.dart';
 import '../../domain/practice.dart';
 import '../../domain/premium_notice.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../avatars.dart';
 import '../plan/plan_screen.dart';
 import '../practice/practice_screen.dart';
+import '../progress/badges.dart';
 import '../widgets/accents.dart';
 import '../widgets/brand_logo.dart';
 import '../widgets/common.dart';
@@ -62,7 +65,11 @@ class HomeScreen extends ConsumerWidget {
     final maintenance = config?.maintenanceMessage;
     final due = ref.watch(reviewDueCountProvider).value ?? 0;
     final plan = ref.watch(todayPlanProvider).value;
-    final engagement = ref.watch(engagementProvider).value?.engagement ?? Engagement.empty;
+    final engagementView = ref.watch(engagementProvider).value;
+    final engagement = engagementView?.engagement ?? Engagement.empty;
+    final mastery = ref.watch(masteryProvider).value ?? const <int, ChapterMastery>{};
+    final weakest = learningTopics(mastery.values, max: 1).firstOrNull;
+    final weakChapter = weakest == null ? null : catalog?.chapter(weakest.chapterId);
     final premiumNote = ref.watch(premiumNoticeProvider).value;
     final challengeOn = config?.feature('daily_challenge') ?? false;
     final battlesOn = config?.feature('battles') ?? false;
@@ -199,6 +206,8 @@ class HomeScreen extends ConsumerWidget {
                         avatarSeed: profile?.avatarSeed,
                       ),
                     ),
+                    if (engagementView != null && engagementView.week.isNotEmpty)
+                      appear(_WeekCard(week: engagementView.week)),
                     appear(
                       _ContinueCard(
                         chapter: recentHeaders.firstOrNull,
@@ -209,6 +218,16 @@ class HomeScreen extends ConsumerWidget {
                     ),
                     appear(SectionTitle(l.homeForYou)),
                     appear(_TileGrid(tiles: tiles)),
+                    if (weakest != null && weakChapter != null)
+                      appear(
+                        _WeakCard(
+                          mastery: weakest,
+                          chapter: weakChapter,
+                          subject: catalog == null ? null : _subjectOf(catalog, weakChapter),
+                        ),
+                      ),
+                    if (engagementView?.next case final next?)
+                      appear(_NextBadgeCard(achievement: next, view: engagementView!)),
                     if (subjects.isNotEmpty) ...[
                       appear(
                         _SectionHeader(
@@ -685,6 +704,238 @@ class _Tile extends StatelessWidget {
               ),
               const SizedBox(height: 2),
               Text(data.line, style: theme.textTheme.bodySmall?.copyWith(color: accent.onSoft)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Monday to Sunday: a day fills up (green tick) once it reaches the daily goal.
+class _WeekCard extends StatelessWidget {
+  const _WeekCard({required this.week});
+
+  final List<WeekDay> week;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final green = accents(context)[2];
+    final reached = week.where((d) => d.reached).length;
+    return Card(
+      key: const ValueKey('home-week'),
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              l.homeWeekTitle,
+              style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                for (final d in week)
+                  Semantics(
+                    container: true, // one spoken item per day
+                    label: d.reached
+                        ? l.homeWeekDayReached(DateFormat.EEEE(l.localeName).format(d.day))
+                        : l.homeWeekDayCount(
+                            DateFormat.EEEE(l.localeName).format(d.day),
+                            d.answered,
+                            EngagementRules.dailyGoal,
+                          ),
+                    child: ExcludeSemantics(
+                      child: Column(
+                        children: [
+                          Text(
+                            DateFormat.E(l.localeName).format(d.day),
+                            style: theme.textTheme.labelSmall?.copyWith(
+                              fontWeight: d.isToday ? FontWeight.w900 : FontWeight.w500,
+                              color: d.isToday ? scheme.primary : scheme.onSurfaceVariant,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Container(
+                            width: 32,
+                            height: 32,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: d.reached
+                                  ? green.strong
+                                  : d.isFuture
+                                  ? scheme.surfaceContainerHigh
+                                  : Colors.transparent,
+                              border: d.reached || d.isFuture
+                                  ? null
+                                  : Border.all(
+                                      color: d.isToday ? scheme.primary : scheme.outlineVariant,
+                                      width: d.isToday ? 2.5 : 1.5,
+                                    ),
+                            ),
+                            child: d.reached
+                                ? Icon(Icons.check_rounded, size: 20, color: green.onStrong)
+                                : null,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Text(l.homeWeekCount(reached), style: theme.textTheme.bodySmall),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The weakest chapter the student started (same rule as the Progress tab), one tap to practise.
+class _WeakCard extends StatelessWidget {
+  const _WeakCard({required this.mastery, required this.chapter, required this.subject});
+
+  final ChapterMastery mastery;
+  final ChapterHeader chapter;
+  final Subject? subject;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[1];
+    final percent = (100 * mastery.accuracy).round();
+    return Card(
+      key: const ValueKey('home-weak'),
+      margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(color: accent.soft, shape: BoxShape.circle),
+                  child: Icon(Icons.fitness_center_rounded, color: accent.onSoft),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        l.homeWeakTitle,
+                        style: theme.textTheme.labelLarge?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                      Text(
+                        l.studyChapter(chapter.number, chapter.title),
+                        style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+                      ),
+                      Text(
+                        subject == null
+                            ? l.homeWeakPercent(percent)
+                            : l.homeWeakLine(subject!.name, percent),
+                        style: theme.textTheme.bodySmall,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Align(
+              alignment: AlignmentDirectional.centerEnd,
+              child: FilledButton.tonalIcon(
+                icon: const Icon(Icons.play_arrow_rounded),
+                label: Text(l.homeWeakAction),
+                onPressed: () => context.push(
+                  PracticeScreen.playPath(PracticeMode.chapter, chapterId: chapter.id),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The badge closest to done, with how far the student is. Opens the Progress tab.
+class _NextBadgeCard extends StatelessWidget {
+  const _NextBadgeCard({required this.achievement, required this.view});
+
+  final Achievement achievement;
+  final EngagementView view;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[0];
+    final progress = view.progress(achievement);
+    return Card(
+      key: const ValueKey('home-badge'),
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => context.go('/progress'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Container(
+                width: 44,
+                height: 44,
+                decoration: BoxDecoration(color: accent.strong, shape: BoxShape.circle),
+                child: Icon(achievementIcon(achievement), color: accent.onStrong),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l.homeBadgeNext(achievementName(l, achievement)),
+                      style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w800),
+                    ),
+                    Text(achievementGoal(l, achievement), style: theme.textTheme.bodySmall),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: LinearProgressIndicator(
+                              value: progress / achievement.goal,
+                              minHeight: 8,
+                              semanticsLabel: achievementName(l, achievement),
+                              semanticsValue: '${(100 * progress / achievement.goal).round()}%',
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          l.badgeProgress(progress, achievement.goal),
+                          style: theme.textTheme.labelMedium,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
