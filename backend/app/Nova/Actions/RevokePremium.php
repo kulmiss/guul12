@@ -4,6 +4,7 @@ namespace App\Nova\Actions;
 
 use App\Models\PremiumGrant;
 use App\Models\User;
+use App\Nova\Actions\Concerns\NeedsConfirmWord;
 use App\Services\PremiumService;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Actions\Action;
@@ -17,6 +18,8 @@ use Laravel\Nova\Panel;
 
 class RevokePremium extends DestructiveAction
 {
+    use NeedsConfirmWord;
+
     public $name = 'Undo Premium';
 
     public $confirmText = 'Undo this Premium grant? The student goes back to free (progress is kept).';
@@ -44,6 +47,7 @@ class RevokePremium extends DestructiveAction
     {
         return [
             Text::make('Reason')->rules('required', 'max:255'),
+            $this->confirmWordField(),
         ];
     }
 }

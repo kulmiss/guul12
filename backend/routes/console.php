@@ -17,3 +17,6 @@ Schedule::command('guul:watchdog')->everyTenMinutes()->withoutOverlapping();
 
 // Nova dashboard numbers, worked out ahead of time so the dashboard never runs slow queries.
 Schedule::command('guul:stats')->everyTenMinutes()->withoutOverlapping();
+// Background work (big Nova changes, backups started from Nova): no separate worker to run, the
+// scheduler starts one every minute that stops when the queue is empty.
+Schedule::command('queue:work --stop-when-empty --max-time=50 --tries=1')->everyMinute()->withoutOverlapping();

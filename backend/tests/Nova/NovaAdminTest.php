@@ -97,13 +97,19 @@ class NovaAdminTest extends TestCase
             ->assertJsonFragment(['name' => 'Signed in', 'value' => false])
             ->assertJsonFragment(['name' => 'Plan', 'value' => 'Premium']);
 
-        // Undo Premium is a destructive action and needs a reason.
+        // Undo Premium is a destructive action: it needs a reason and the word CONFIRM.
         $this->actingAs($helper)->postJson('/nova-api/premium-grants/action?action=undo-premium', [
             'resources' => (string) $grant->id,
         ])->assertUnprocessable();
         $this->actingAs($helper)->postJson('/nova-api/premium-grants/action?action=undo-premium', [
             'resources' => (string) $grant->id,
             'reason' => 'Payment bounced',
+        ])->assertUnprocessable();
+        $this->assertNull($grant->refresh()->revoked_at);
+        $this->actingAs($helper)->postJson('/nova-api/premium-grants/action?action=undo-premium', [
+            'resources' => (string) $grant->id,
+            'reason' => 'Payment bounced',
+            'confirm' => 'CONFIRM',
         ])->assertOk();
         $this->assertNotNull($grant->refresh()->revoked_at);
         $this->assertFalse(app(PremiumService::class)->isPremium($student->refresh()));

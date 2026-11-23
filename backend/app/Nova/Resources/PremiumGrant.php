@@ -54,8 +54,8 @@ class PremiumGrant extends Resource
             ID::make()->hideFromIndex(),
             BelongsTo::make('Student', 'user', Student::class),
             Badge::make('Plan', fn (PremiumGrantModel $grant): string => $grant->plan->value)
-                ->map(['term' => 'success', 'year' => 'success', 'referral' => 'info'])
-                ->labels(['term' => 'Term', 'year' => 'Year', 'referral' => 'Referral reward']),
+                ->map(['term' => 'success', 'year' => 'success', 'referral' => 'info', 'extra' => 'info'])
+                ->labels(['term' => 'Term', 'year' => 'Year', 'referral' => 'Referral reward', 'extra' => 'Extra days']),
             Badge::make('State', fn (PremiumGrantModel $g): string => $g->revoked_at !== null ? 'undone' : ($g->ends_at->isPast() ? 'expired' : ($g->starts_at->isFuture() ? 'next' : 'active')))
                 ->map(['active' => 'success', 'next' => 'info', 'expired' => 'warning', 'undone' => 'danger'])
                 ->labels(['active' => 'Active', 'next' => 'Starts later', 'expired' => 'Expired', 'undone' => 'Undone']),

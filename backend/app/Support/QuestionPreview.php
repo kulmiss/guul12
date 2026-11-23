@@ -45,6 +45,30 @@ final class QuestionPreview
         return '<div class="guul-preview">'.implode('', $parts).'</div>';
     }
 
+    /** The options as one line of plain text: "A) 3 | B) 4". Empty for types without options. */
+    public static function optionsText(Question $question): string
+    {
+        return implode(' | ', $question->options->sortBy('sort')->map(
+            fn (QuestionOption $o): string => $o->key.') '.$o->body)->values()->all());
+    }
+
+    /** The right answer as plain text, for a teacher to check: "B", "A, C", "2.5 ± 0.01 s", "L1 → R2, …". */
+    public static function answerText(Question $question): string
+    {
+        $key = $question->answer_key;
+        $byKey = $question->options->keyBy(fn (QuestionOption $o): string => strtoupper($o->key));
+        $body = fn (mixed $k): string => (string) ($byKey->get(strtoupper((string) $k))->body ?? $k);
+
+        return match ($question->type) {
+            QuestionType::Numeric => self::numeric($key),
+            QuestionType::FillIn => implode(' · ', array_map('strval', (array) ($key['accepted'] ?? []))),
+            QuestionType::Matching => implode(', ', array_map(fn (mixed $l, mixed $r): string => $body($l).' → '.$body($r),
+                array_keys((array) ($key['pairs'] ?? [])), array_values((array) ($key['pairs'] ?? [])))),
+            QuestionType::Ordering => implode(' → ', array_map($body, (array) ($key['order'] ?? []))),
+            default => implode(', ', array_map('strval', (array) ($key['correct'] ?? []))),
+        };
+    }
+
     /**
      * @param  Collection<int, QuestionOption>  $options
      * @param  array<string, mixed>  $key

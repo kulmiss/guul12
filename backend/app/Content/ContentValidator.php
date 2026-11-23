@@ -344,6 +344,46 @@ final class ContentValidator
     // ---- questions --------------------------------------------------------------------------
 
     /**
+     * Questions typed for a Nova bulk import, checked with the same rules as the content files.
+     * Questions with a passage are refused (passages live in the content files); any uid typed is
+     * replaced, because imported questions have none.
+     *
+     * @param  array<mixed>  $items
+     * @return array{questions: list<QuestionDef>, errors: list<string>}
+     */
+    public function importableQuestions(array $items): array
+    {
+        $this->errors = [];
+        $this->warnings = [];
+        $this->uids = [];
+        $this->stems = [];
+        $questions = [];
+        foreach (array_values($items) as $i => $item) {
+            $at = 'question '.($i + 1);
+            if (! is_array($item)) {
+                $this->errors[] = "{$at}: must be a map";
+
+                continue;
+            }
+            if (array_key_exists('passage', $item)) {
+                $this->errors[] = "{$at}: questions with a passage come from the content files";
+
+                continue;
+            }
+            $item['uid'] = 'nova-import-'.($i + 1);
+            $def = $this->readQuestion($item, $at, 'nova-import', []);
+            if ($def !== null) {
+                $questions[] = $def;
+            }
+        }
+
+        // The placeholder uid is ours, not the staff member's: keep it out of the messages.
+        $errors = array_map(fn (string $e): string => (string) preg_replace('/ \(nova-import-\d+\)/', '', $e), $this->errors);
+
+        return ['questions' => $questions, 'errors' => array_values(array_unique($errors))];
+    }
+
+    /**
      * @param  list<string>  $passageUids
      */
     private function readQuestion(mixed $q, string $at, string $code, array $passageUids): ?QuestionDef

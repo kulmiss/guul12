@@ -79,6 +79,7 @@ class PremiumService
             PremiumPlan::Term => $this->settings->int('premium_term_days'),
             PremiumPlan::Year => $this->settings->int('premium_year_days'),
             PremiumPlan::Referral => $this->settings->int('referral_premium_days'),
+            PremiumPlan::Extra => throw new \InvalidArgumentException('Extra days are given with extend().'),
         };
     }
 
@@ -86,6 +87,7 @@ class PremiumService
      * Gives Premium. If the student already has Premium, the new period starts when the current one ends.
      *
      * @throws AuthorizationException
+     * @throws \InvalidArgumentException for staff, Extra days (use extend()) or a missing payment reference
      */
     public function grant(User $student, PremiumPlan $plan, ?User $actor, ?string $paymentRef = null, ?string $note = null): PremiumGrant
     {
@@ -98,6 +100,10 @@ class PremiumService
         }
 
         $paymentRef = $paymentRef !== null ? trim($paymentRef) : null;
+
+        if ($plan === PremiumPlan::Extra) {
+            throw new \InvalidArgumentException('Extra days are given with extend().');
+        }
 
         if ($plan !== PremiumPlan::Referral && ($paymentRef === null || $paymentRef === '')) {
             throw new \InvalidArgumentException('A payment reference is required for paid plans.');
@@ -155,5 +161,100 @@ class PremiumService
                 'reason' => $reason,
             ]);
         });
+    }
+
+    /** Most days staff can add at once. */
+    public const MAX_EXTRA_DAYS = 365;
+
+    /**
+     * Adds days by hand (compensation, a prize). Starts when the current Premium ends, or now.
+     *
+     * @throws AuthorizationException
+     * @throws \InvalidArgumentException when the days are out of range or the user is staff
+     */
+    public function extend(User $student, int $days, User $actor, string $reason): PremiumGrant
+    {
+        self::mustManagePremium($actor);
+        if ($student->isStaff()) {
+            throw new \InvalidArgumentException('Premium can only be given to students.');
+        }
+        if ($days < 1 || $days > self::MAX_EXTRA_DAYS) {
+            throw new \InvalidArgumentException('Give between 1 and '.self::MAX_EXTRA_DAYS.' days.');
+        }
+
+        return DB::transaction(function () use ($student, $days, $actor, $reason): PremiumGrant {
+            $now = Carbon::now();
+            $before = $this->activeUntil($student, $now);
+            $start = $before ?? $now;
+            $grant = PremiumGrant::query()->create([
+                'user_id' => $student->id,
+                'plan' => PremiumPlan::Extra,
+                'starts_at' => $start,
+                'ends_at' => $start->copy()->addDays($days),
+                'granted_by' => $actor->id,
+                'note' => trim($reason),
+            ]);
+            AuditLog::change($actor, 'premium.extended', $student,
+                ['premium_until' => $before?->toIso8601String()],
+                ['premium_until' => $grant->ends_at->toIso8601String()],
+                ['days' => $days, 'reason' => trim($reason)]);
+
+            return $grant;
+        });
+    }
+
+    /**
+     * Stops Premium now (a refund, a rule broken): the running grant ends today, later ones are undone.
+     * Returns how many grants changed.
+     *
+     * @throws AuthorizationException
+     */
+    public function endNow(User $student, User $actor, string $reason): int
+    {
+        self::mustManagePremium($actor);
+
+        return DB::transaction(function () use ($student, $actor, $reason): int {
+            $now = Carbon::now();
+            $before = $this->activeUntil($student, $now);
+            $grants = PremiumGrant::query()->where('user_id', $student->id)->whereNull('revoked_at')
+                ->where('ends_at', '>', $now)->lockForUpdate()->get();
+            foreach ($grants as $grant) {
+                $grant->starts_at->lessThanOrEqualTo($now)
+                    ? $grant->forceFill(['ends_at' => $now])->save()
+                    : $grant->forceFill(['revoked_at' => $now, 'revoked_by' => $actor->id])->save();
+            }
+            if ($grants->isNotEmpty()) {
+                AuditLog::change($actor, 'premium.ended', $student,
+                    ['premium_until' => $before?->toIso8601String()], ['premium_until' => null], ['reason' => trim($reason)]);
+            }
+
+            return $grants->count();
+        });
+    }
+
+    /**
+     * Undoes the newest grant that is not undone yet (it was given by mistake). Null when none is left.
+     *
+     * @throws AuthorizationException
+     */
+    public function undoLatest(User $student, User $actor, string $reason): ?PremiumGrant
+    {
+        self::mustManagePremium($actor);
+        $grant = PremiumGrant::query()->where('user_id', $student->id)->whereNull('revoked_at')
+            ->latest('created_at')->latest('id')->first();
+        if ($grant === null) {
+            return null;
+        }
+        $this->revoke($grant, $actor, $reason);
+
+        return $grant;
+    }
+
+    /** @throws AuthorizationException */
+    private static function mustManagePremium(User $actor): void
+    {
+        if (! $actor->hasRole(UserRole::SuperAdmin, UserRole::PaymentsHelper)) {
+            throw new AuthorizationException('Only payment helpers can change Premium.');
+        }
     }
 }

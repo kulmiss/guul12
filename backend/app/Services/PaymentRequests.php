@@ -28,7 +28,7 @@ class PaymentRequests
         if ($student->isStaff()) {
             throw new PaymentRequestProblem('not_a_student', 'Premium can only be given to students.');
         }
-        if ($plan === PremiumPlan::Referral) {
+        if (! in_array($plan, [PremiumPlan::Term, PremiumPlan::Year], true)) {
             throw new PaymentRequestProblem('paid_plan_only', 'Choose Term or Year.');
         }
         $ref = trim($paymentRef);

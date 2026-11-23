@@ -7,9 +7,13 @@ use App\Models\Attempt;
 use App\Models\AttemptAnswer;
 use App\Models\Referral;
 use App\Models\User;
+use App\Nova\Actions\EndPremium;
+use App\Nova\Actions\ExportStudents;
+use App\Nova\Actions\ExtendPremium;
 use App\Nova\Actions\GrantPremium;
 use App\Nova\Actions\LeaderboardBlock;
 use App\Nova\Actions\ResetNickname;
+use App\Nova\Actions\UndoLastPremium;
 use App\Nova\Fields\Show;
 use App\Nova\Filters\FilterSets;
 use App\Nova\Lenses;
@@ -167,9 +171,13 @@ class Student extends Resource
             GrantPremium::make()
                 ->canSee(fn ($request): bool => $request->user()?->can('manage-premium') ?? false)
                 ->canRun(fn ($request): bool => $request->user()?->can('manage-premium') ?? false),
+            new ExtendPremium,
+            new EndPremium,
+            new UndoLastPremium,
             new ResetNickname,
             new LeaderboardBlock(true),
             new LeaderboardBlock(false),
+            new ExportStudents,
         ];
     }
 

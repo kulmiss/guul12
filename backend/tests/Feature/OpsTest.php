@@ -162,6 +162,7 @@ class OpsTest extends TestCase
             ->expectsOutputToContain('guul:backup')
             ->expectsOutputToContain('guul:watchdog')
             ->expectsOutputToContain('guul:stats')
+            ->expectsOutputToContain('queue:work --stop-when-empty')
             ->assertSuccessful();
     }
 }

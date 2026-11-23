@@ -2,11 +2,13 @@
 
 namespace App\Providers;
 
+use App\Contracts\StaffNotifier;
 use App\Models\User;
 use App\Nova\Dashboards\Content;
 use App\Nova\Dashboards\Main;
 use App\Nova\Dashboards\Payments;
 use App\Nova\NovaMenu;
+use App\Nova\NovaStaffNotifier;
 use App\Nova\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -19,6 +21,13 @@ use Laravel\Nova\NovaApplicationServiceProvider;
  */
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
+    public function register(): void
+    {
+        parent::register();
+        // Staff messages become Nova bell notifications.
+        $this->app->singleton(StaffNotifier::class, NovaStaffNotifier::class);
+    }
+
     public function boot(): void
     {
         parent::boot();

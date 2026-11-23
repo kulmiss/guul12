@@ -49,6 +49,22 @@ class AuditLog extends Model
     }
 
     /**
+     * A change, with the values before and after (only the keys that changed are kept).
+     *
+     * @param  array<string, mixed>  $old
+     * @param  array<string, mixed>  $new
+     * @param  array<string, mixed>  $extra  e.g. the reason
+     */
+    public static function change(?User $actor, string $action, ?Model $subject, array $old, array $new, array $extra = []): self
+    {
+        $keys = array_values(array_filter(array_unique([...array_keys($old), ...array_keys($new)]),
+            fn (string $key): bool => ($old[$key] ?? null) !== ($new[$key] ?? null)));
+        $pick = fn (array $values): array => array_combine($keys, array_map(fn (string $k): mixed => $values[$k] ?? null, $keys));
+
+        return self::write($actor, $action, $subject, ['old' => $pick($old), 'new' => $pick($new), ...$extra]);
+    }
+
+    /**
      * @return BelongsTo<User, $this>
      */
     public function actor(): BelongsTo

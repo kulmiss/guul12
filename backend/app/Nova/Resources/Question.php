@@ -4,10 +4,16 @@ namespace App\Nova\Resources;
 
 use App\Enums\QuestionType;
 use App\Models\Question as QuestionModel;
+use App\Nova\Actions\BulkImportQuestions;
+use App\Nova\Actions\ChangeQuestions;
+use App\Nova\Actions\ChangeQuestionsCarefully;
+use App\Nova\Actions\DuplicateQuestion;
+use App\Nova\Actions\ExportQuestionsForTeacher;
 use App\Nova\Fields\Show;
 use App\Nova\Filters\FilterSets;
 use App\Nova\Lenses;
 use App\Support\QuestionPreview;
+use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Code;
@@ -121,5 +127,21 @@ class Question extends Resource
     public function lenses(NovaRequest $request): array
     {
         return [new Lenses\MostReported, new Lenses\HardestQuestions, new Lenses\EasiestQuestions, new Lenses\ReadyToPublish, new Lenses\MissingExplanationOrDiagram];
+    }
+
+    /** @return array<int, Action> */
+    public function actions(NovaRequest $request): array
+    {
+        return [
+            new ChangeQuestions('publish'),
+            new ChangeQuestions('beta'),
+            new ChangeQuestionsCarefully('draft'),
+            new ChangeQuestionsCarefully('fixed'),
+            new ChangeQuestions('difficulty'),
+            new ChangeQuestions('chapter'),
+            new DuplicateQuestion,
+            new ExportQuestionsForTeacher,
+            new BulkImportQuestions,
+        ];
     }
 }

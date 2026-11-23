@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Contracts\StaffNotifier;
 use App\Enums\UserRole;
 use App\Models\User;
 use App\Services\Ai\AnthropicProvider;
@@ -9,6 +10,7 @@ use App\Services\Ai\ExplanationProvider;
 use App\Services\Auth\GoogleIdTokenVerifier;
 use App\Services\Auth\JwksGoogleIdTokenVerifier;
 use App\Services\Ops\BackupService;
+use App\Services\Ops\LogStaffNotifier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -20,6 +22,8 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
+        // Nova's service provider swaps this for bell notifications when Nova is installed.
+        $this->app->singletonIf(StaffNotifier::class, LogStaffNotifier::class);
         $this->app->bind(GoogleIdTokenVerifier::class, function (): GoogleIdTokenVerifier {
             /** @var list<string> $audiences */
             $audiences = config('services.google.client_ids', []);

@@ -13,6 +13,7 @@ Add one cron line on the server (it runs backups, the watchdog and the quality g
 | `guul:backup` | every night 02:30 | Gzipped database backup in `storage/app/backups`, newest 14 kept |
 | `guul:watchdog` | every 10 minutes | Checks the server; alerts staff only when something changes |
 | `quality:promote` | every night 03:15 | Beta questions with enough clean answers become Published |
+| `queue:work --stop-when-empty` | every minute | Background work started from Nova (big question changes, "Run backup now"); stops when there is nothing to do |
 
 ## Backups
 
