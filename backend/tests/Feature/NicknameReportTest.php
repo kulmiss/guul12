@@ -177,7 +177,10 @@ class NicknameReportTest extends TestCase
         $this->assertNull($bad->refresh()->nickname);
         $this->assertSame(2, NicknameReport::query()->where('status', NicknameReportStatus::Reset->value)->whereNotNull('resolved_at')->where('resolved_by', $checker->id)->count());
         $log = AuditLog::query()->where('action', 'nickname.reset')->sole();
-        $this->assertSame(['old' => 'Badname', 'new' => null, 'reports' => 2], $log->data);
+        // MySQL stores JSON keys in its own order, so compare sorted.
+        $data = (array) $log->data;
+        ksort($data);
+        $this->assertSame(['new' => null, 'old' => 'Badname', 'reports' => 2], $data);
 
         Sanctum::actingAs($bad);
         $this->patchJson('/api/v1/me', ['nickname' => 'badname'])->assertStatus(422)->assertJsonValidationErrors('nickname');
