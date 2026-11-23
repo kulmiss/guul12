@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Models\User;
+use App\Nova\Dashboards\Content;
 use App\Nova\Dashboards\Main;
+use App\Nova\Dashboards\Payments;
 use App\Nova\NovaMenu;
 use App\Nova\Resources;
 use Illuminate\Http\Request;
@@ -23,6 +25,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
         Nova::footer(fn (): string => 'Guul 12 admin');
         Nova::mainMenu(fn (Request $request): array => NovaMenu::sections($request));
+        // Our plain-JavaScript additions (find-student card and more), see resources/nova/guul-nova.js.
+        Nova::script('guul-nova', resource_path('nova/guul-nova.js'));
     }
 
     protected function routes(): void
@@ -46,7 +50,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function dashboards(): array
     {
-        return [new Main];
+        return [new Main, new Payments, new Content];
     }
 
     protected function resources(): void

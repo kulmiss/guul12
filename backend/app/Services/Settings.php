@@ -77,6 +77,10 @@ class Settings
             'referral_premium_days' => 7,
             'referral_max_per_month' => 4,
             'referral_enter_days' => 7,
+
+            // Start of the current school term (YYYY-MM-DD) for the "This term" range on the Nova
+            // dashboard. Empty = the most recent 11 September or 1 February.
+            'term_starts_on' => null,
         ];
     }
 

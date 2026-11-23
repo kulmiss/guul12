@@ -43,9 +43,15 @@ class NovaMenuTest extends TestCase
 
     public function test_each_role_sees_only_its_sections(): void
     {
-        $this->assertSame(['Main', 'Students & Premium', 'Content', 'Community', 'Settings', 'System'], $this->sectionsFor(UserRole::SuperAdmin));
-        $this->assertSame(['Main', 'Students & Premium'], $this->sectionsFor(UserRole::PaymentsHelper));
-        $this->assertSame(['Main', 'Content', 'Community'], $this->sectionsFor(UserRole::ContentChecker));
+        $this->assertSame(['Dashboards', 'Students & Premium', 'Content', 'Community', 'Settings', 'System'], $this->sectionsFor(UserRole::SuperAdmin));
+        $this->assertSame(['Dashboards', 'Students & Premium'], $this->sectionsFor(UserRole::PaymentsHelper));
+        $this->assertSame(['Dashboards', 'Content', 'Community'], $this->sectionsFor(UserRole::ContentChecker));
+
+        // Each role sees the Overview and its own dashboard only.
+        $dashboards = fn (UserRole $role): array => array_column($this->menuFor(User::factory()->staff($role)->create())[0]['items'], 'name');
+        $this->assertSame(['Overview', 'Payments', 'Content'], $dashboards(UserRole::SuperAdmin));
+        $this->assertSame(['Overview', 'Payments'], $dashboards(UserRole::PaymentsHelper));
+        $this->assertSame(['Overview', 'Content'], $dashboards(UserRole::ContentChecker));
     }
 
     public function test_open_reports_show_a_badge_and_none_when_zero(): void

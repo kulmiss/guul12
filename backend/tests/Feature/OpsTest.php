@@ -161,6 +161,7 @@ class OpsTest extends TestCase
         $this->cmd('schedule:list')
             ->expectsOutputToContain('guul:backup')
             ->expectsOutputToContain('guul:watchdog')
+            ->expectsOutputToContain('guul:stats')
             ->assertSuccessful();
     }
 }

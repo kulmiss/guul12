@@ -9,7 +9,9 @@ use App\Models\NicknameReport;
 use App\Models\PaymentRequest;
 use App\Models\QuestionReport;
 use App\Models\User;
+use App\Nova\Dashboards\Content;
 use App\Nova\Dashboards\Main;
+use App\Nova\Dashboards\Payments;
 use Illuminate\Http\Request;
 use Laravel\Nova\Menu\MenuItem;
 use Laravel\Nova\Menu\MenuSection;
@@ -24,7 +26,11 @@ class NovaMenu
     public static function sections(Request $request): array
     {
         return [
-            MenuSection::dashboard(Main::class)->icon('chart-bar'),
+            MenuSection::make('Dashboards', [
+                MenuItem::dashboard(Main::class),
+                MenuItem::dashboard(Payments::class)->canSee(self::allowedTo('manage-premium')),
+                MenuItem::dashboard(Content::class)->canSee(self::allowedTo('manage-content')),
+            ])->icon('chart-bar')->collapsable(),
 
             MenuSection::make('Students & Premium', [
                 MenuItem::resource(Resources\PaymentRequest::class)

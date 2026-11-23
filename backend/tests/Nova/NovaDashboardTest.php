@@ -37,14 +37,15 @@ class NovaDashboardTest extends TestCase
         parent::tearDown();
     }
 
-    /** @return list<string> */
-    private function cardsFor(UserRole $role): array
+    /** @return list<string|null> */
+    private function cardsFor(UserRole $role, string $dashboard = 'main'): array
     {
         $staff = User::factory()->staff($role)->create();
-        $cards = $this->actingAs($staff)->getJson('/nova-api/dashboards/cards/main')->assertOk()->json();
+        $cards = $this->actingAs($staff)->getJson("/nova-api/dashboards/cards/{$dashboard}")->assertOk()->json();
         $this->assertIsArray($cards);
 
-        return array_values(array_map(fn (array $card): string => (string) $card['uriKey'], $cards));
+        // The "Find student by ID" card is not a metric and has no address (null).
+        return array_values(array_map(fn (array $card): ?string => isset($card['uriKey']) ? (string) $card['uriKey'] : null, $cards));
     }
 
     /** The JSON of one dashboard metric, as the super admin sees it. */
@@ -66,13 +67,75 @@ class NovaDashboardTest extends TestCase
     public function test_each_role_sees_only_its_cards(): void
     {
         $everyone = ['new-students', 'active-students', 'answers-given'];
+        $charts = ['new-students-per-day', 'answering-students-per-day', 'answers-per-day', 'study-minutes-per-day',
+            'students-by-grade', 'students-by-stream', 'students-by-region', 'students-by-gender', 'top-students-week'];
 
         $this->assertSame(
-            [...$everyone, 'premium-active', 'open-reports', 'ai-spend', 'system-health'],
+            [...$everyone, 'premium-active', 'payments-waiting', 'open-reports', 'open-nickname-reports', 'battles-played', 'ai-spend', 'system-health', ...$charts],
             $this->cardsFor(UserRole::SuperAdmin),
         );
-        $this->assertSame([...$everyone, 'premium-active'], $this->cardsFor(UserRole::PaymentsHelper));
-        $this->assertSame([...$everyone, 'open-reports'], $this->cardsFor(UserRole::ContentChecker));
+        $this->assertSame([...$everyone, 'premium-active', 'payments-waiting', ...$charts], $this->cardsFor(UserRole::PaymentsHelper));
+        $this->assertSame([...$everyone, 'open-reports', 'open-nickname-reports', 'battles-played', ...$charts], $this->cardsFor(UserRole::ContentChecker));
+    }
+
+    public function test_role_dashboards(): void
+    {
+        $payments = ['payments-waiting', 'premium-expiring', null, 'premium-sold', 'premium-active', 'referrals-rewarded', 'premium-sold-per-week', 'premium-vs-free', 'latest-payments'];
+        $this->assertSame($payments, $this->cardsFor(UserRole::PaymentsHelper, 'payments'));
+        $this->assertSame($payments, $this->cardsFor(UserRole::SuperAdmin, 'payments'));
+        $content = ['open-reports', 'open-nickname-reports', 'beta-near-publishing', 'questions-published', 'questions-beta',
+            'questions-by-status', 'most-reported-questions', 'hardest-questions', 'weakest-chapters', 'latest-reports'];
+        $this->assertSame($content, $this->cardsFor(UserRole::ContentChecker, 'content'));
+
+        // Another role's dashboard lists no cards, and no card can be read by address (never an error 500).
+        $checker = User::factory()->staff(UserRole::ContentChecker)->create();
+        $helper = User::factory()->staff(UserRole::PaymentsHelper)->create();
+        $this->assertSame([], $this->cardsFor(UserRole::ContentChecker, 'payments'));
+        $this->assertSame([], $this->cardsFor(UserRole::PaymentsHelper, 'content'));
+        foreach (['payments' => 'premium-sold', 'main' => 'premium-sold'] as $dashboard => $metric) {
+            $this->assertContains($this->actingAs($checker)->getJson("/nova-api/dashboards/cards/{$dashboard}/metrics/{$metric}")->status(), [403, 404]);
+        }
+        $this->actingAs($helper)->getJson('/nova-api/dashboards/cards/payments/metrics/premium-sold')->assertOk();
+
+        // The "Find student by ID" card is drawn by our script, which Nova serves.
+        $cards = $this->actingAs($helper)->getJson('/nova-api/dashboards/cards/payments')->json();
+        $this->assertIsArray($cards);
+        $find = collect($cards)->firstWhere('component', 'guul-find-student');
+        $this->assertNotNull($find);
+        $this->actingAs($helper)->get('/nova-api/scripts/guul-nova')->assertOk()->assertSee("app.component('guul-find-student'", false);
+    }
+
+    public function test_cards_show_numbers_from_the_cache_with_the_period_before(): void
+    {
+        // Two students joined this week, one in the week before.
+        foreach (['2026-11-23 10:00', '2026-11-20 09:00', '2026-11-15 09:00'] as $when) {
+            User::factory()->create()->forceFill(['created_at' => Carbon::parse($when, 'Africa/Addis_Ababa')->utc()])->save();
+        }
+        $json = $this->metric('new-students', '?range=7');
+        $this->assertIsArray($json);
+        $this->assertSame([2, 1], [$json['value'], $json['previous']]);
+        $this->assertSame([['label' => 'Today', 'value' => 1], ['label' => '7 days', 'value' => 7], ['label' => '30 days', 'value' => 30],
+            ['label' => '90 days', 'value' => 90], ['label' => 'This term', 'value' => 'TERM'], ['label' => 'All time', 'value' => 'ALL']],
+            $this->cardRanges('new-students'));
+
+        // A trend card returns a point per day and the total.
+        $trend = $this->metric('new-students-per-day', '?range=7');
+        $this->assertIsArray($trend);
+        $this->assertSame(2, $trend['value']);
+        $this->assertCount(7, $trend['trend']);
+        $this->assertSame(1, $trend['trend']['Nov 23']);
+    }
+
+    /** @return list<array{label: string, value: int|string}> */
+    private function cardRanges(string $uriKey): array
+    {
+        $admin = User::factory()->staff(UserRole::SuperAdmin)->create();
+        $cards = $this->actingAs($admin)->getJson('/nova-api/dashboards/cards/main')->json();
+        $this->assertIsArray($cards);
+        $card = collect($cards)->firstWhere('uriKey', $uriKey);
+        $this->assertIsArray($card);
+
+        return array_values($card['ranges']);
     }
 
     public function test_helpers_cannot_read_admin_metrics_directly(): void
