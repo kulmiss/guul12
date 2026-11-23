@@ -857,3 +857,21 @@ class ReferralInfo {
   final int minAnswers;
   final int maxPerMonth;
 }
+
+/// An AI explanation ("Explain more", Premium).
+class AiExplanation {
+  const AiExplanation({required this.id, required this.body, required this.remainingToday});
+
+  factory AiExplanation.fromJson(Map<String, Object?> json) {
+    final e = asMap(json['explanation']);
+    return AiExplanation(
+      id: asInt(e['id']),
+      body: asString(e['body']),
+      remainingToday: asInt(json['remaining_today']),
+    );
+  }
+
+  final int id;
+  final String body;
+  final int remainingToday;
+}

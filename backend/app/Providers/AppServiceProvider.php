@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Enums\UserRole;
 use App\Models\User;
+use App\Services\Ai\AnthropicProvider;
+use App\Services\Ai\ExplanationProvider;
 use App\Services\Auth\GoogleIdTokenVerifier;
 use App\Services\Auth\JwksGoogleIdTokenVerifier;
 use Illuminate\Cache\RateLimiting\Limit;
@@ -23,6 +25,13 @@ class AppServiceProvider extends ServiceProvider
 
             return new JwksGoogleIdTokenVerifier($audiences);
         });
+
+        $this->app->bind(ExplanationProvider::class, fn (): ExplanationProvider => new AnthropicProvider(
+            is_string(config('services.anthropic.key')) ? (string) config('services.anthropic.key') : null,
+            (string) config('services.anthropic.model'),
+            (float) config('services.anthropic.price_in_per_mtok'),
+            (float) config('services.anthropic.price_out_per_mtok'),
+        ));
     }
 
     public function boot(): void

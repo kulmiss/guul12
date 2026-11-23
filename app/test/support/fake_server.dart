@@ -42,6 +42,11 @@ class FakeServer {
         .length;
   }
 
+  /// "Explain more": questions asked about, votes, and an error code to answer with (null = fine).
+  final explainRequests = <int>[];
+  final explainVotes = <(int, bool)>[];
+  String? explainError;
+
   /// What GET /referral returns.
   Map<String, Object?> referral = {
     'code': 'Q4WX7P',
@@ -336,6 +341,26 @@ class FakeServer {
           'premium': false,
           'show_ads': showAds,
         });
+      case ('POST', final p) when p.startsWith('questions/') && p.endsWith('/explain'):
+        final id = int.parse(p.split('/')[1]);
+        explainRequests.add(id);
+        if (explainError != null)
+          return json({
+            'code': explainError,
+            'message': 'No',
+          }, explainError == 'explain_limit' ? 429 : 503);
+        return json({
+          'explanation': {
+            'id': 70 + id % 10,
+            'question_id': id,
+            'body': r'Think of it as $2 + 2 = 4$: two pairs make four.',
+            'cached': false,
+          },
+          'remaining_today': 19,
+        });
+      case ('POST', final p) when p.startsWith('explanations/') && p.endsWith('/feedback'):
+        explainVotes.add((int.parse(p.split('/')[1]), body()['helpful'] == true));
+        return json({'ok': true});
       case ('GET', 'referral'):
         return json({'referral': referral});
       case ('POST', 'referral'):

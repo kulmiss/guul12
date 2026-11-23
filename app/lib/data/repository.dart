@@ -518,6 +518,14 @@ class Repository {
   /// (reward_limit when today's extra exams are used up).
   Future<void> claimAdReward() => _authed(() => api.post('rewards', {'kind': 'random_exam'}));
 
+  /// "Explain more" (Premium, online). Throws [ApiException]
+  /// (premium_required, explain_limit, ai_budget, ai_unavailable, feature_disabled).
+  Future<AiExplanation> explainMore(int questionId) async =>
+      AiExplanation.fromJson(await _authed(() => api.post('questions/$questionId/explain', {})));
+
+  Future<void> rateExplanation(int explanationId, {required bool helpful}) =>
+      _authed(() => api.post('explanations/$explanationId/feedback', {'helpful': helpful}));
+
   /// My invite code and invites (online only).
   Future<ReferralInfo> referral() async =>
       ReferralInfo.fromJson(asMap((await _authed(() => api.get('referral')))['referral']));

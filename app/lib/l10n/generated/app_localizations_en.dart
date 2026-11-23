@@ -1508,4 +1508,36 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get examsRewardLimit => 'That\'s all the extra exams for today. Come back tomorrow!';
+
+  @override
+  String get explainMore => 'Explain more';
+
+  @override
+  String get explainLocked => 'Explain more · 🔒 Premium';
+
+  @override
+  String get explainTitle => 'More explanation';
+
+  @override
+  String get explainAiNote =>
+      'Written by AI. It may contain mistakes. If something looks wrong, report the question.';
+
+  @override
+  String get explainHelpful => 'Helpful';
+
+  @override
+  String get explainNotHelpful => 'Not helpful';
+
+  @override
+  String get explainThanks => 'Thanks for telling us!';
+
+  @override
+  String get explainLimit => 'That\'s all the extra explanations for today. Come back tomorrow!';
+
+  @override
+  String get explainUnavailable =>
+      'Explain more is not available right now. Please try again later.';
+
+  @override
+  String get explainOffline => 'Explain more needs the internet.';
 }

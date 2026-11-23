@@ -2069,5 +2069,45 @@
   "examsRewardLimit": "That's all the extra exams for today. Come back tomorrow!",
   "@examsRewardLimit": {
     "description": "Snack bar"
+  },
+  "explainMore": "Explain more",
+  "@explainMore": {
+    "description": "Button"
+  },
+  "explainLocked": "Explain more · 🔒 Premium",
+  "@explainLocked": {
+    "description": "Locked label for free students"
+  },
+  "explainTitle": "More explanation",
+  "@explainTitle": {
+    "description": "Sheet title"
+  },
+  "explainAiNote": "Written by AI. It may contain mistakes. If something looks wrong, report the question.",
+  "@explainAiNote": {
+    "description": "Warning under AI text"
+  },
+  "explainHelpful": "Helpful",
+  "@explainHelpful": {
+    "description": "Button"
+  },
+  "explainNotHelpful": "Not helpful",
+  "@explainNotHelpful": {
+    "description": "Button"
+  },
+  "explainThanks": "Thanks for telling us!",
+  "@explainThanks": {
+    "description": "After voting"
+  },
+  "explainLimit": "That's all the extra explanations for today. Come back tomorrow!",
+  "@explainLimit": {
+    "description": "Daily limit"
+  },
+  "explainUnavailable": "Explain more is not available right now. Please try again later.",
+  "@explainUnavailable": {
+    "description": "AI down or budget used"
+  },
+  "explainOffline": "Explain more needs the internet.",
+  "@explainOffline": {
+    "description": "Offline"
   }
 }

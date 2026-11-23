@@ -2491,6 +2491,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'That\'s all the extra exams for today. Come back tomorrow!'**
   String get examsRewardLimit;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Explain more'**
+  String get explainMore;
+
+  /// Locked label for free students
+  ///
+  /// In en, this message translates to:
+  /// **'Explain more · 🔒 Premium'**
+  String get explainLocked;
+
+  /// Sheet title
+  ///
+  /// In en, this message translates to:
+  /// **'More explanation'**
+  String get explainTitle;
+
+  /// Warning under AI text
+  ///
+  /// In en, this message translates to:
+  /// **'Written by AI. It may contain mistakes. If something looks wrong, report the question.'**
+  String get explainAiNote;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Helpful'**
+  String get explainHelpful;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Not helpful'**
+  String get explainNotHelpful;
+
+  /// After voting
+  ///
+  /// In en, this message translates to:
+  /// **'Thanks for telling us!'**
+  String get explainThanks;
+
+  /// Daily limit
+  ///
+  /// In en, this message translates to:
+  /// **'That\'s all the extra explanations for today. Come back tomorrow!'**
+  String get explainLimit;
+
+  /// AI down or budget used
+  ///
+  /// In en, this message translates to:
+  /// **'Explain more is not available right now. Please try again later.'**
+  String get explainUnavailable;
+
+  /// Offline
+  ///
+  /// In en, this message translates to:
+  /// **'Explain more needs the internet.'**
+  String get explainOffline;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -9,6 +9,7 @@ import '../../data/models.dart';
 import '../../domain/practice.dart';
 import '../../domain/session.dart';
 import '../../l10n/generated/app_localizations.dart';
+import '../practice/explain_more.dart';
 import '../practice/practice_screen.dart';
 import '../widgets/common.dart';
 import '../widgets/math_text.dart';
@@ -106,6 +107,7 @@ class _MistakeCard extends StatelessWidget {
             Text(l.practiceExplanation, style: Theme.of(context).textTheme.labelLarge),
             MathText(q.explanation),
           ],
+          ExplainMoreButton(questionId: q.id),
         ],
       ),
     );

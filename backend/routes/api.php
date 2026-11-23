@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\BookmarkController;
 use App\Http\Controllers\Api\V1\ConfigController;
 use App\Http\Controllers\Api\V1\ContentController;
 use App\Http\Controllers\Api\V1\DailyChallengeController;
+use App\Http\Controllers\Api\V1\ExplainController;
 use App\Http\Controllers\Api\V1\HistoryController;
 use App\Http\Controllers\Api\V1\LeaderboardController;
 use App\Http\Controllers\Api\V1\MeController;
@@ -57,5 +58,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::delete('bookmarks/{question}', [BookmarkController::class, 'destroy'])->whereNumber('question')->name('bookmarks.destroy');
 
         Route::post('questions/{question}/reports', [ReportController::class, 'store'])->whereNumber('question')->name('questions.reports.store');
+        Route::post('questions/{question}/explain', [ExplainController::class, 'store'])->whereNumber('question')->name('questions.explain');
+        Route::post('explanations/{explanation}/feedback', [ExplainController::class, 'feedback'])->whereNumber('explanation')->name('explanations.feedback');
     });
 });

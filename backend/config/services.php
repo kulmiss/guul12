@@ -35,6 +35,15 @@ return [
         ],
     ],
 
+    // "Explain more" (DECISIONS #4). No key = the feature is switched off for everyone.
+    'anthropic' => [
+        'key' => env('ANTHROPIC_API_KEY'),
+        'model' => env('ANTHROPIC_MODEL', 'claude-haiku-5-5'),
+        // USD per million tokens (Claude Haiku 5.5, prompts up to 100K tokens, Oct 2026).
+        'price_in_per_mtok' => (float) env('ANTHROPIC_PRICE_IN', 0.10),
+        'price_out_per_mtok' => (float) env('ANTHROPIC_PRICE_OUT', 0.50),
+    ],
+
     'google' => [
         // OAuth client IDs whose ID tokens we accept (comma separated), e.g. the web client ID used by the Android app.
         'client_ids' => array_values(array_filter(array_map('trim', explode(',', (string) env('GOOGLE_CLIENT_IDS', ''))))),

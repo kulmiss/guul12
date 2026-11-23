@@ -10,6 +10,7 @@ import '../../services/speech.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/math_text.dart';
+import 'explain_more.dart';
 import 'question_input.dart';
 import 'report_sheet.dart';
 
@@ -363,6 +364,7 @@ class _FeedbackPanel extends StatelessWidget {
               const SizedBox(height: 4),
               MathText(question.explanation),
             ],
+            ExplainMoreButton(questionId: question.id),
           ],
         ),
       ),
