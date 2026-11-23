@@ -154,7 +154,7 @@ class QuestionChangesTest extends TestCase
                 $this->notes[] = $staff->id.': '.$message;
             }
 
-            public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null): void {}
+            public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null, ?User $except = null): void {}
         };
         $more = $this->question(QuestionStatus::Published, ['difficulty' => 2]);
         (new ApplyQuestionChanges('difficulty', [$more->id], ['difficulty' => 5], $this->checker->id))->handle(app(QuestionChanges::class), $notifier);

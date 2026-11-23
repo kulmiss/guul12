@@ -39,6 +39,16 @@ class Mock extends Resource
 
     public static $title = 'title';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return 'Grade '.$row->grade.' · '.$row->subject->name;
+    }
+
     /** @var array<int, string> */
     public static $search = ['title', 'uid'];
 

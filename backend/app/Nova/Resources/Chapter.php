@@ -37,6 +37,17 @@ class Chapter extends Resource
 
     public static $title = 'title';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+        $unit = $row->unit;
+
+        return 'Grade '.$unit->grade.' · '.$unit->subject->name.' · Unit '.$unit->number;
+    }
+
     public static string $ability = 'manage-content';
 
     /** @var list<string> */

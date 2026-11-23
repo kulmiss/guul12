@@ -36,6 +36,9 @@ class NicknameReport extends Resource
     /** @var class-string<NicknameReportModel> */
     public static $model = NicknameReportModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'nickname';
 
     /** @var array<int, string> */

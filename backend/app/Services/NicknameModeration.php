@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Contracts\StaffNotifier;
 use App\Enums\NicknameReportReason;
 use App\Enums\NicknameReportStatus;
 use App\Models\AuditLog;
@@ -58,6 +59,12 @@ class NicknameModeration
             ['reporter_id' => $reporter->id, 'reported_user_id' => $target->id, 'nickname' => (string) $target->nickname],
             ['reason' => $reason, 'note' => $note, 'status' => NicknameReportStatus::Open],
         );
+
+        $open = NicknameReport::query()->where('reported_user_id', $target->id)->where('status', NicknameReportStatus::Open->value)->count();
+        if ($report->wasRecentlyCreated && $open === 1) {
+            app(StaffNotifier::class)->notifyAll('moderate',
+                'New nickname report: "'.$target->nickname.'" ('.$reason->value.').', 'warning', '/resources/nickname-reports');
+        }
 
         return [$report, $report->wasRecentlyCreated];
     }

@@ -22,6 +22,9 @@ class Summary extends Resource
     /** @var class-string<SummaryModel> */
     public static $model = SummaryModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'id';
 
     public static string $ability = 'manage-content';

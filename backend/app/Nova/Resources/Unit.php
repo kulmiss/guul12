@@ -23,6 +23,9 @@ class Unit extends Resource
     /** @var class-string<UnitModel> */
     public static $model = UnitModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'title';
 
     /** @var array<int, string> */

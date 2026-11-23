@@ -26,9 +26,9 @@ final class NovaStaffNotifier implements StaffNotifier
         Log::info("[staff #{$staff->id}] {$message}");
     }
 
-    public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null): void
+    public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null, ?User $except = null): void
     {
-        User::query()->where('role', '!=', UserRole::Student->value)->orderBy('id')->get()
+        User::query()->where('role', '!=', UserRole::Student->value)->when($except !== null, fn ($q) => $q->whereKeyNot($except?->id))->orderBy('id')->get()
             ->filter(fn (User $staff): bool => $staff->can($ability))
             ->each(fn (User $staff) => $this->notify($staff, $message, $type, $url));
     }

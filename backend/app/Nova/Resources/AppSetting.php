@@ -24,6 +24,9 @@ class AppSetting extends Resource
     /** @var class-string<AppSettingModel> */
     public static $model = AppSettingModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'key';
 
     /** @var array<int, string> */

@@ -2,6 +2,7 @@
 
 namespace App\Services\Quality;
 
+use App\Contracts\StaffNotifier;
 use App\Enums\QuestionStatus;
 use App\Enums\ReportReason;
 use App\Enums\ReportStatus;
@@ -51,6 +52,12 @@ final class QualityGate
         } catch (UniqueConstraintViolationException) {
             // Two taps at once: the other request saved it.
             return [$this->existing($user, $question) ?? throw new \LogicException('report vanished'), false];
+        }
+
+        // The first open report on this question rings the content staff (not every student's report).
+        if (QuestionReport::query()->where('question_id', $question->id)->where('status', ReportStatus::Open->value)->count() === 1) {
+            app(StaffNotifier::class)->notifyAll('manage-content',
+                "New report on question #{$question->id}: ".str_replace('_', ' ', $reason->value).'.', 'warning', "/resources/questions/{$question->id}");
         }
 
         $open = QuestionReport::query()

@@ -44,6 +44,16 @@ class PaymentRequest extends Resource
 
     public static $title = 'payment_ref';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return $row->student->student_id.' · '.self::words($row->plan).' · '.self::words($row->status);
+    }
+
     /** @return list<string|SearchableRelation> */
     public static function searchableColumns(): array
     {

@@ -22,6 +22,9 @@ class Flashcard extends Resource
     /** @var class-string<FlashcardModel> */
     public static $model = FlashcardModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'term';
 
     /** @var array<int, string> */

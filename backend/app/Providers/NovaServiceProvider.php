@@ -8,9 +8,11 @@ use App\Nova\Branding\BrandingController;
 use App\Nova\Dashboards\Content;
 use App\Nova\Dashboards\Main;
 use App\Nova\Dashboards\Payments;
+use App\Nova\EmptyStates;
 use App\Nova\NovaMenu;
 use App\Nova\NovaStaffNotifier;
 use App\Nova\Resources;
+use App\Nova\Resources\ActionLog;
 use App\Services\Branding\Branding;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
@@ -34,6 +36,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot(): void
     {
         parent::boot();
+        // Nova's own action record: super admins only (App\Nova\Resources\ActionLog).
+        config(['nova.actions.resource' => ActionLog::class]);
 
         Nova::footer(fn (): string => 'Guul 12 admin');
         Nova::mainMenu(fn (Request $request): array => NovaMenu::sections($request));
@@ -55,6 +59,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             config(['nova.brand.colors' => $branding->novaColors(), 'nova.brand.logo' => $path]);
             // Nova reads these once per request before this runs: hand it the branded ones.
             Nova::provideToScript(['logo' => Nova::logo(), 'brandColors' => Nova::brandColors(), 'brandColorsCSS' => Nova::brandColorsCSS()]);
+            Nova::provideToScript(['guulEmptyHelp' => EmptyStates::all()]);
         });
     }
 

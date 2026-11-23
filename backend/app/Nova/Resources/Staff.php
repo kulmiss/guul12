@@ -26,6 +26,16 @@ class Staff extends Resource
 
     public static $title = 'name';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return self::words($row->role);
+    }
+
     /** @var array<int, string> */
     public static $search = ['name', 'email'];
 

@@ -30,6 +30,9 @@ class Battle extends Resource
     /** @var class-string<BattleModel> */
     public static $model = BattleModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'code';
 
     /** @var array<int, string> */

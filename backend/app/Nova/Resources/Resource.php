@@ -22,6 +22,14 @@ abstract class Resource extends NovaResource
      */
     public static string $ability = 'manage-settings';
 
+    /** "super_admin" → "Super admin": enum values read as plain words in search hits. */
+    protected static function words(\BackedEnum|string|null $value): string
+    {
+        $value = $value instanceof \BackedEnum ? (string) $value->value : (string) $value;
+
+        return ucfirst(str_replace('_', ' ', $value));
+    }
+
     public static function authorizedToViewAny(Request $request): bool
     {
         return $request->user()?->can(static::$ability) ?? false;

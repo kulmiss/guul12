@@ -21,6 +21,9 @@ class Passage extends Resource
     /** @var class-string<PassageModel> */
     public static $model = PassageModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'title';
 
     /** @var array<int, string> */

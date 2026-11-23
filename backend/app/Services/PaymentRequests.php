@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Contracts\StaffNotifier;
 use App\Enums\PaymentRequestStatus;
 use App\Enums\PremiumPlan;
 use App\Enums\UserRole;
@@ -52,6 +53,10 @@ class PaymentRequests
         AuditLog::write($staff, 'payment_request.created', $request, [
             'student_id' => $student->student_id, 'plan' => $plan->value, 'payment_ref' => $ref, 'amount_birr' => $amountBirr,
         ]);
+        // The person who typed it in already knows; everyone else who can approve gets a bell.
+        app(StaffNotifier::class)->notifyAll('manage-premium',
+            "Payment waiting for approval: {$student->student_id}, ".ucfirst($plan->value).", reference {$ref}.", 'info',
+            "/resources/payment-requests/{$request->id}", $staff);
 
         return $request;
     }

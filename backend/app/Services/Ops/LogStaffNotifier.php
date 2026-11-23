@@ -16,7 +16,7 @@ final class LogStaffNotifier implements StaffNotifier
         Log::info("[staff #{$staff->id}] {$message}");
     }
 
-    public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null): void
+    public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null, ?User $except = null): void
     {
         Log::info("[staff: {$ability}] {$message}");
     }

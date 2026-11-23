@@ -47,6 +47,16 @@ class Student extends Resource
 
     public static $title = 'student_id';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return 'Grade '.$row->grade.' · '.self::words($row->stream).' · '.($row->nickname ?? 'no nickname');
+    }
+
     /** @var array<int, string> */
     public static $search = ['student_id', 'nickname', 'email'];
 
@@ -71,14 +81,15 @@ class Student extends Resource
     }
 
     /**
-     * "st 7k3q9" finds "ST-7K3Q9".
+     * "st 7k3q9" finds "ST-7K3Q9". A word that only looks like an ID ("zebra") still finds
+     * nicknames too.
      */
     protected static function applySearch(Builder $query, string $search): Builder
     {
         $normalised = StudentIdGenerator::normalise($search);
 
         if (StudentIdGenerator::isValid($normalised)) {
-            return $query->where('student_id', $normalised);
+            return $query->where(fn (Builder $q): Builder => parent::applySearch($q, $search)->orWhere('student_id', $normalised));
         }
 
         return parent::applySearch($query, $search);

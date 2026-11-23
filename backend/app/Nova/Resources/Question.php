@@ -13,6 +13,7 @@ use App\Nova\Fields\Show;
 use App\Nova\Filters\FilterSets;
 use App\Nova\Lenses;
 use App\Support\QuestionPreview;
+use Illuminate\Support\Str;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
@@ -42,6 +43,24 @@ class Question extends Resource
     public static $model = QuestionModel::class;
 
     public static $title = 'id';
+
+    /** "#12 How many …" (cut to fit one line), so a search hit shows what the question is. */
+    public function title(): string
+    {
+        $row = $this->resource;
+
+        return $row === null ? (string) parent::title() : '#'.$row->id.' '.Str::limit(trim($row->stem), 70);
+    }
+
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return $row->chapter->title.' · '.self::words($row->status);
+    }
 
     public static string $ability = 'manage-content';
 

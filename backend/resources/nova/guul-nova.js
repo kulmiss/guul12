@@ -109,6 +109,29 @@ Nova.booting((app) => {
   document.addEventListener('inertia:navigate', restore)
 })()
 
+// Empty lists: one line under Nova's "No … matched" box saying what belongs there and how it gets
+// filled (App\Nova\EmptyStates). Text only (textContent), never HTML.
+;(() => {
+  const addHelp = () => {
+    const help = Nova.config('guulEmptyHelp') || {}
+    document.querySelectorAll('[dusk$="-empty-dialog"]:not([data-guul-help])').forEach((box) => {
+      box.setAttribute('data-guul-help', '1')
+      const list = (box.getAttribute('dusk') || '').replace(/-empty-dialog$/, '')
+      if (!Object.prototype.hasOwnProperty.call(help, list)) return
+      const line = document.createElement('p')
+      line.className = 'guul-empty-help'
+      line.textContent = help[list]
+      box.appendChild(line)
+    })
+  }
+  let queued = false
+  new MutationObserver(() => {
+    if (queued) return
+    queued = true
+    window.requestAnimationFrame(() => { queued = false; addHelp() })
+  }).observe(document.documentElement, { childList: true, subtree: true })
+})()
+
 // Settings → Branding (App\Nova\Branding\BrandingController). Colours are checked here as you type;
 // the server checks them again and refuses to save anything below WCAG AA (4.5:1).
 Nova.booting(() => {

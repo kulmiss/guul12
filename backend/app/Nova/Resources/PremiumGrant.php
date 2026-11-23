@@ -36,6 +36,16 @@ class PremiumGrant extends Resource
 
     public static $title = 'id';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return $row->user->student_id.' · '.self::words($row->plan).' · until '.$row->ends_at->format('j M Y');
+    }
+
     public static string $ability = 'manage-premium';
 
     /** @var list<string> */

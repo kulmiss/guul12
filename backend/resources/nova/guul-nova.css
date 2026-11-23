@@ -54,3 +54,20 @@
 .guul-phone-link { font-weight: 700; text-decoration: underline; }
 .dark .guul-palette, .dark .guul-contrast td, .dark .guul-history td { border-color: rgb(var(--colors-gray-700)); }
 .dark .guul-problems { background: rgb(var(--colors-red-950)); color: rgb(var(--colors-red-200)); }
+
+/* Activity log: Before / After table (App\Support\AuditLogDiff). */
+.guul-diff .gd-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.guul-diff .gd-table th, .guul-diff .gd-table td { padding: .375rem .5rem; text-align: left; vertical-align: top; border-bottom: 1px solid rgb(var(--colors-gray-200)); }
+.dark .guul-diff .gd-table th, .dark .guul-diff .gd-table td { border-bottom-color: rgb(var(--colors-gray-700)); }
+.guul-diff .gd-table th { font-weight: 700; }
+.guul-diff .gd-old, .guul-diff .gd-new { padding: 0 .25rem; border-radius: .25rem; word-break: break-word; }
+.guul-diff .gd-old { background: rgb(var(--colors-red-100)); color: rgb(var(--colors-red-800)); }
+.guul-diff .gd-new { background: rgb(var(--colors-green-100)); color: rgb(var(--colors-green-800)); text-decoration: none; }
+.dark .guul-diff .gd-old { background: rgb(var(--colors-red-900)); color: rgb(var(--colors-red-100)); }
+.dark .guul-diff .gd-new { background: rgb(var(--colors-green-900)); color: rgb(var(--colors-green-100)); }
+.guul-diff .gd-details { display: grid; grid-template-columns: max-content 1fr; gap: .25rem .75rem; margin-top: .75rem; font-size: .875rem; }
+.guul-diff .gd-details dt { font-weight: 700; }
+
+/* Empty lists: the help line under Nova's "No … matched" box (App\Nova\EmptyStates). */
+.guul-empty-help { max-width: 32rem; margin: .75rem auto 0; padding: 0 1rem; text-align: center; font-size: .875rem; color: rgb(var(--colors-gray-600)); }
+.dark .guul-empty-help { color: rgb(var(--colors-gray-300)); }

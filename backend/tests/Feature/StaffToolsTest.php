@@ -102,7 +102,7 @@ class StaffToolsTest extends TestCase
                 $this->notes[] = "{$staff->id} {$type}: {$message}";
             }
 
-            public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null): void
+            public function notifyAll(string $ability, string $message, string $type = 'info', ?string $url = null, ?User $except = null): void
             {
                 $this->notes[] = "all {$ability} {$type}: {$message}";
             }

@@ -24,6 +24,16 @@ class Subject extends Resource
 
     public static $title = 'name';
 
+    public function subtitle(): ?string
+    {
+        $row = $this->resource;
+        if ($row === null) {
+            return null;
+        }
+
+        return $row->code.' · '.($row->stream === null ? 'All streams' : self::words($row->stream));
+    }
+
     /** @var array<int, string> */
     public static $search = ['name', 'code'];
 

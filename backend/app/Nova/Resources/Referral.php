@@ -29,6 +29,9 @@ class Referral extends Resource
     /** @var class-string<ReferralModel> */
     public static $model = ReferralModel::class;
 
+    /** Kept out of the search box at the top: too noisy to be useful there. */
+    public static $globallySearchable = false;
+
     public static $title = 'id';
 
     public static string $ability = 'manage-premium';
