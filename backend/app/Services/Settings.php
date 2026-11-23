@@ -26,6 +26,12 @@ class Settings
             'premium_term_days' => 120,
             'premium_year_days' => 365,
 
+            // Landing page only (never sent to the app): how to pay and where to download.
+            // null = not set yet; the page then says "coming soon" instead of a wrong number.
+            'contact_whatsapp' => null,
+            'contact_email' => null,
+            'play_store_url' => null,
+
             // Exam date (Gregorian, Y-m-d). null = not announced yet.
             'exam_date' => null,
 
