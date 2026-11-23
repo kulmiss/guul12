@@ -191,8 +191,12 @@ void main() {
     expect(sent['finished_at'], testNow.add(const Duration(minutes: 6)).toUtc().toIso8601String());
   });
 
-  testWidgets('random mock: one free a day, then a clear message', (tester) async {
+  testWidgets('random mock: one free a day, then a clear message (no rewarded videos)', (
+    tester,
+  ) async {
+    // The rewarded-video offer is tested in ads_test.dart.
     final server = examServer()..randomStatus = 429;
+    server.features['rewarded_ads'] = false;
     await pumpGuul(tester, server: server);
     await openExams(tester);
 

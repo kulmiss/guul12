@@ -2,10 +2,12 @@ import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:guul12/app/ads_providers.dart';
 import 'package:guul12/app/app.dart';
 import 'package:guul12/app/providers.dart';
 import 'package:guul12/data/hook_questions.dart';
 import 'package:guul12/data/repository.dart';
+import 'package:guul12/services/ads.dart';
 import 'package:guul12/services/google_auth.dart';
 import 'package:guul12/services/reminders.dart';
 import 'package:guul12/services/sharing.dart';
@@ -52,6 +54,7 @@ Future<(Repository, FakeServer)> pumpGuul(
   Speech? speech,
   Reminders? reminders,
   Sharing? sharing,
+  Ads? ads,
   GoogleAuth? googleAuth,
   Future<void> Function(Repository repo)? before,
   DateTime Function()? clock,
@@ -72,6 +75,7 @@ Future<(Repository, FakeServer)> pumpGuul(
         speechProvider.overrideWithValue(speech ?? const SilentSpeech()),
         remindersProvider.overrideWithValue(reminders ?? const NoReminders()),
         sharingProvider.overrideWithValue(sharing ?? const NoSharing()),
+        adsProvider.overrideWithValue(ads ?? const NoAds()),
         googleAuthProvider.overrideWithValue(googleAuth ?? const DisabledGoogleAuth()),
         // The real asset loader uses platform channels; read the same file directly.
         hookQuestionsProvider.overrideWith(

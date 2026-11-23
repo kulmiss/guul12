@@ -42,7 +42,8 @@ class RandomExamController extends Controller
         if (! $premium->isPremium($user)) {
             $since = Carbon::now(self::TIMEZONE)->startOfDay()->utc();
             $today = DB::table('random_exam_draws')->where('user_id', $user->id)->where('created_at', '>=', $since)->count();
-            if ($today >= $settings->int('free_random_exams_per_day')) {
+            $unlocked = DB::table('ad_rewards')->where('user_id', $user->id)->where('kind', AdRewardController::RANDOM_EXAM)->where('created_at', '>=', $since)->count();
+            if ($today >= $settings->int('free_random_exams_per_day') + $unlocked) {
                 return response()->json(['code' => 'daily_limit', 'message' => 'Premium'], 429);
             }
         }

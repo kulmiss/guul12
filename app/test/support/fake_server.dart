@@ -127,6 +127,12 @@ class FakeServer {
   /// Exams. Mock 1 is free, mock 2 is Premium; both use [examQuestion]s.
   bool premium = false;
   int randomStatus = 201;
+
+  /// What /config says about ads (the server turns them off for Premium students).
+  bool showAds = true;
+
+  /// Extra random exams still unlockable today with a rewarded video.
+  int rewardsLeft = 2;
   int mockDownloads = 0;
   int historyRequests = 0;
 
@@ -328,7 +334,7 @@ class FakeServer {
           },
           'features': features,
           'premium': false,
-          'show_ads': true,
+          'show_ads': showAds,
         });
       case ('GET', 'referral'):
         return json({'referral': referral});
@@ -400,6 +406,11 @@ class FakeServer {
         return json({
           'mocks': [mockHeader(1), mockHeader(2)],
         });
+      case ('POST', 'rewards'):
+        if (rewardsLeft <= 0) return json({'code': 'reward_limit', 'message': 'No'}, 429);
+        rewardsLeft--;
+        randomStatus = 201;
+        return json({'kind': 'random_exam', 'remaining_today': rewardsLeft}, 201);
       case ('POST', 'exams/random'):
         if (randomStatus == 429) return json({'code': 'daily_limit', 'message': 'Premium'}, 429);
         return json({

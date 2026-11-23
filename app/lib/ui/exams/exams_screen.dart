@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:uuid/uuid.dart';
 
+import '../../app/ads_providers.dart';
 import '../../app/exam_providers.dart';
 import '../../app/providers.dart';
 import '../../data/api_client.dart';
@@ -40,6 +41,53 @@ class _ExamsScreenState extends ConsumerState<ExamsScreen> {
     }
   }
 
+  /// The free random exam of the day is used: offer a rewarded video for one more.
+  Future<void> _offerRewarded(Subject subject) async {
+    final l = context.l10n;
+    final messenger = ScaffoldMessenger.of(context);
+    final watch = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l.examsRewardTitle),
+        content: Text(l.examsRewardBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(l.examsRewardNotNow),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(l.examsRewardWatch),
+          ),
+        ],
+      ),
+    );
+    if (watch != true || !mounted) return;
+    final earned = await ref.read(adsProvider).showRewarded();
+    if (!mounted) return;
+    if (!earned) {
+      messenger.showSnackBar(SnackBar(content: Text(l.examsRewardNotFinished)));
+      return;
+    }
+    try {
+      await ref.read(repositoryProvider).claimAdReward();
+    } on ApiException catch (e) {
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text(
+            e.code == 'reward_limit'
+                ? l.examsRewardLimit
+                : e.isOffline
+                ? l.examsOffline
+                : l.commonError,
+          ),
+        ),
+      );
+      return;
+    }
+    if (mounted) await _start(subject, ExamKind.random);
+  }
+
   Future<void> _start(Subject subject, ExamKind kind, {MockHeader? mock}) async {
     if (_busy) return;
     final l = context.l10n;
@@ -60,6 +108,7 @@ class _ExamsScreenState extends ConsumerState<ExamsScreen> {
     setState(() => _busy = true);
     ExamPaper? paper;
     String? problem;
+    var dailyLimit = false;
     try {
       paper = switch (kind) {
         ExamKind.fixed => await repo.mockPaper(mock!),
@@ -73,6 +122,7 @@ class _ExamsScreenState extends ConsumerState<ExamsScreen> {
       if (paper == null) problem = l.examsNeedPractice;
       if (paper != null && paper.questions.isEmpty) problem = l.examsNoQuestions;
     } on ApiException catch (e) {
+      dailyLimit = e.code == 'daily_limit';
       problem = switch (e.code) {
         'daily_limit' => l.examsDailyLimit,
         'premium_required' => l.studyPremiumLocked,
@@ -83,6 +133,10 @@ class _ExamsScreenState extends ConsumerState<ExamsScreen> {
       if (mounted) setState(() => _busy = false);
     }
     if (!mounted) return;
+    if (dailyLimit && ref.read(rewardedAllowedProvider)) {
+      await _offerRewarded(subject);
+      return;
+    }
     if (problem != null || paper == null) {
       messenger.showSnackBar(SnackBar(content: Text(problem ?? l.commonError)));
       return;

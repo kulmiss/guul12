@@ -2045,5 +2045,29 @@
   "inviteOffline": "Invites need the internet.",
   "@inviteOffline": {
     "description": "Offline"
+  },
+  "examsRewardTitle": "One more random exam?",
+  "@examsRewardTitle": {
+    "description": "Dialog title"
+  },
+  "examsRewardBody": "You used today's free random exam. Watch a short video to unlock one more today.",
+  "@examsRewardBody": {
+    "description": "Dialog body"
+  },
+  "examsRewardWatch": "Watch video",
+  "@examsRewardWatch": {
+    "description": "Button"
+  },
+  "examsRewardNotNow": "Not now",
+  "@examsRewardNotNow": {
+    "description": "Button"
+  },
+  "examsRewardNotFinished": "The video was not finished, so nothing was unlocked.",
+  "@examsRewardNotFinished": {
+    "description": "Snack bar"
+  },
+  "examsRewardLimit": "That's all the extra exams for today. Come back tomorrow!",
+  "@examsRewardLimit": {
+    "description": "Snack bar"
   }
 }

@@ -1489,4 +1489,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get inviteOffline => 'Invites need the internet.';
+
+  @override
+  String get examsRewardTitle => 'One more random exam?';
+
+  @override
+  String get examsRewardBody =>
+      'You used today\'s free random exam. Watch a short video to unlock one more today.';
+
+  @override
+  String get examsRewardWatch => 'Watch video';
+
+  @override
+  String get examsRewardNotNow => 'Not now';
+
+  @override
+  String get examsRewardNotFinished => 'The video was not finished, so nothing was unlocked.';
+
+  @override
+  String get examsRewardLimit => 'That\'s all the extra exams for today. Come back tomorrow!';
 }

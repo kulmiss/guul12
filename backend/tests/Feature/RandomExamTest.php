@@ -11,6 +11,7 @@ use App\Models\Passage;
 use App\Models\Question;
 use App\Models\Unit;
 use App\Models\User;
+use App\Services\FeatureSwitches;
 use App\Services\PremiumService;
 use App\Services\RandomExamBuilder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -160,6 +161,39 @@ class RandomExamTest extends TestCase
         $this->draw()->assertCreated();
         $this->draw()->assertCreated();
         Carbon::setTestNow();
+    }
+
+    public function test_a_rewarded_video_unlocks_one_more_random_mock_up_to_two_a_day(): void
+    {
+        Carbon::setTestNow(Carbon::parse('2026-12-01 08:00:00', 'UTC'));
+        $this->draw()->assertCreated();
+        $this->draw()->assertStatus(429)->assertJsonPath('code', 'daily_limit');
+
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertCreated()->assertJsonPath('remaining_today', 1);
+        $this->draw()->assertCreated();
+        $this->draw()->assertStatus(429);
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertCreated()->assertJsonPath('remaining_today', 0);
+        $this->draw()->assertCreated();
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertStatus(429)->assertJsonPath('code', 'reward_limit');
+        $this->draw()->assertStatus(429);
+
+        // A new day starts from zero again.
+        Carbon::setTestNow(Carbon::parse('2026-12-02 08:00:00', 'UTC'));
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertCreated();
+        Carbon::setTestNow();
+    }
+
+    public function test_rewards_are_refused_when_switched_off_premium_or_unknown(): void
+    {
+        $this->postJson('/api/v1/rewards', ['kind' => 'gold'])->assertUnprocessable();
+        app(FeatureSwitches::class)->set('rewarded_ads', false);
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertForbidden();
+        app(FeatureSwitches::class)->set('rewarded_ads', true);
+        app(FeatureSwitches::class)->set('ads', false);
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertForbidden();
+        app(FeatureSwitches::class)->set('ads', true);
+        $this->makePremium();
+        $this->postJson('/api/v1/rewards', ['kind' => 'random_exam'])->assertForbidden();
     }
 
     public function test_the_other_streams_units_and_empty_subjects_are_left_out(): void

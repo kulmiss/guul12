@@ -2455,6 +2455,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Invites need the internet.'**
   String get inviteOffline;
+
+  /// Dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'One more random exam?'**
+  String get examsRewardTitle;
+
+  /// Dialog body
+  ///
+  /// In en, this message translates to:
+  /// **'You used today\'s free random exam. Watch a short video to unlock one more today.'**
+  String get examsRewardBody;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Watch video'**
+  String get examsRewardWatch;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Not now'**
+  String get examsRewardNotNow;
+
+  /// Snack bar
+  ///
+  /// In en, this message translates to:
+  /// **'The video was not finished, so nothing was unlocked.'**
+  String get examsRewardNotFinished;
+
+  /// Snack bar
+  ///
+  /// In en, this message translates to:
+  /// **'That\'s all the extra exams for today. Come back tomorrow!'**
+  String get examsRewardLimit;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

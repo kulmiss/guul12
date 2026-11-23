@@ -514,6 +514,10 @@ class Repository {
   Future<BattleWithQuestions> battle(int id) async =>
       BattleWithQuestions.fromJson(await _authed(() => api.get('battles/$id')));
 
+  /// After a watched rewarded video: one more random exam today. Throws [ApiException]
+  /// (reward_limit when today's extra exams are used up).
+  Future<void> claimAdReward() => _authed(() => api.post('rewards', {'kind': 'random_exam'}));
+
   /// My invite code and invites (online only).
   Future<ReferralInfo> referral() async =>
       ReferralInfo.fromJson(asMap((await _authed(() => api.get('referral')))['referral']));

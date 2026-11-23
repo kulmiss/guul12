@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\AdRewardController;
 use App\Http\Controllers\Api\V1\AttemptController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\BattleController;
@@ -36,6 +37,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::get('mocks', [MockController::class, 'index'])->name('mocks.index');
         Route::get('mocks/{mock}', [MockController::class, 'show'])->whereNumber('mock')->name('mocks.show');
         Route::post('exams/random', RandomExamController::class)->name('exams.random');
+        Route::post('rewards', AdRewardController::class)->name('rewards');
 
         Route::post('attempts', [AttemptController::class, 'store'])->name('attempts.store');
         Route::get('attempts/{clientUuid}', [AttemptController::class, 'show'])->whereUuid('clientUuid')->name('attempts.show');

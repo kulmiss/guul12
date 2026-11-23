@@ -32,6 +32,8 @@ class Settings
             // Free limits.
             // Fixed mocks are free or Premium per mock (content/<grade>/mocks/*.yaml, DECISIONS #16).
             'free_random_exams_per_day' => 1,
+            // Extra random exams a free student can unlock per day by watching a rewarded video.
+            'rewarded_random_exams_per_day' => 2,
             'premium_explain_more_per_day' => 20,
 
             // AI spending.
@@ -82,6 +84,7 @@ class Settings
         return [
             'exam_date',
             'free_random_exams_per_day',
+            'rewarded_random_exams_per_day',
             'premium_explain_more_per_day',
             'min_supported_build',
             'recommended_build',

@@ -35,6 +35,10 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        // The real AdMob app ID lives in key.properties (admobAppId=…), never in git.
+        // Without it, Google's public TEST app ID is used (test ads only, never pays).
+        manifestPlaceholders["admobAppId"] =
+            keyProperties.getProperty("admobAppId") ?: "ca-app-pub-3940256099942544~3347511713"
     }
 
     signingConfigs {

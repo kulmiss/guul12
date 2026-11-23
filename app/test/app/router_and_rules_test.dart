@@ -160,7 +160,7 @@ void main() {
       }
     });
 
-    test('Android manifest asks only for internet + notifications; foreground work removed', () {
+    test('Android manifest: internet, notifications, boot (reminder); foreground work and ad tracking removed', () {
       final manifest = File('android/app/src/main/AndroidManifest.xml').readAsStringSync();
       final permissions = RegExp(r'<uses-permission ([^>]*)/>').allMatches(manifest).map((m) {
         final name = RegExp(r'android:name="([^"]+)"').firstMatch(m.group(1)!)!.group(1)!;
@@ -171,7 +171,11 @@ void main() {
           for (final (name, removed) in permissions)
             if (!removed) name,
         ],
-        ['android.permission.INTERNET', 'android.permission.POST_NOTIFICATIONS'],
+        [
+          'android.permission.INTERNET',
+          'android.permission.POST_NOTIFICATIONS',
+          'android.permission.RECEIVE_BOOT_COMPLETED',
+        ],
       );
       expect(
         [
@@ -181,6 +185,9 @@ void main() {
         unorderedEquals([
           'android.permission.FOREGROUND_SERVICE',
           'android.permission.FOREGROUND_SERVICE_SHORT_SERVICE',
+          'android.permission.ACCESS_ADSERVICES_TOPICS',
+          'android.permission.ACCESS_ADSERVICES_ATTRIBUTION',
+          'android.permission.ACCESS_ADSERVICES_AD_ID',
         ]),
       );
       expect(

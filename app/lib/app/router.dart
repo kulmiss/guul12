@@ -22,6 +22,7 @@ import '../ui/social/battles_screen.dart';
 import '../ui/social/invite_screen.dart';
 import '../ui/social/leaderboard_screen.dart';
 import '../ui/widgets/common.dart';
+import 'ads_providers.dart';
 import 'practice_set.dart';
 import 'providers.dart';
 
@@ -235,23 +236,65 @@ class AppShell extends StatelessWidget {
               ],
             ),
             const VerticalDivider(width: 1),
-            Expanded(child: shell),
+            Expanded(
+              child: Column(
+                children: [
+                  Expanded(child: shell),
+                  const AdSlot(),
+                ],
+              ),
+            ),
           ],
         ),
       );
     }
     return Scaffold(
       body: shell,
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: shell.currentIndex,
-        onDestinationSelected: _go,
-        destinations: [
-          for (final (icon, selected, label) in items)
-            NavigationDestination(icon: Icon(icon), selectedIcon: Icon(selected), label: label),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const AdSlot(),
+          NavigationBar(
+            selectedIndex: shell.currentIndex,
+            onDestinationSelected: _go,
+            destinations: [
+              for (final (icon, selected, label) in items)
+                NavigationDestination(icon: Icon(icon), selectedIcon: Icon(selected), label: label),
+            ],
+          ),
         ],
       ),
     );
   }
+}
+
+/// The only place a banner can appear: above the tabs. Quizzes, exams, the daily challenge and
+/// battles open on the root navigator, outside this shell, so no ad is ever shown during them.
+class AdSlot extends ConsumerWidget {
+  const AdSlot({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) =>
+      ref.watch(adsAllowedProvider) ? const _StartedBanner() : const SizedBox.shrink();
+}
+
+class _StartedBanner extends ConsumerStatefulWidget {
+  const _StartedBanner();
+
+  @override
+  ConsumerState<_StartedBanner> createState() => _StartedBannerState();
+}
+
+class _StartedBannerState extends ConsumerState<_StartedBanner> {
+  @override
+  void initState() {
+    super.initState();
+    // The SDK starts only once ads are allowed (never for Premium students).
+    fireAndForget(ref.read(adsProvider).start());
+  }
+
+  @override
+  Widget build(BuildContext context) => ref.read(adsProvider).banner();
 }
 
 class _LoadingScreen extends ConsumerWidget {

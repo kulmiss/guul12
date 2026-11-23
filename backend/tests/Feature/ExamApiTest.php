@@ -244,7 +244,9 @@ class ExamApiTest extends TestCase
     {
         $this->getJson('/api/v1/config')->assertOk()
             ->assertJsonPath('settings.free_random_exams_per_day', 1)
+            ->assertJsonPath('settings.rewarded_random_exams_per_day', 2)
             ->assertJsonMissingPath('settings.percentile_min_students')
+            ->assertJsonMissingPath('settings.referral_premium_days')
             ->assertJsonMissingPath('settings.free_fixed_mocks');
     }
 }
