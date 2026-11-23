@@ -123,6 +123,9 @@ class FakeServer {
     'premium': {'active': false, 'until': null},
   };
   final Set<int> bookmarks = {};
+
+  /// How many times DELETE /me deleted the account.
+  var accountsDeleted = 0;
   final Map<int, int> chapterDownloads = {};
   final List<String> calls = [];
 
@@ -401,6 +404,30 @@ class FakeServer {
         return json({'battle': battleJson(b), 'questions': battleQuestions});
       case ('GET', 'leaderboard'):
         return json(leaderboard);
+      case ('DELETE', 'me'):
+        if (request.url.queryParameters['confirm'] != 'delete-my-account') {
+          return json({'code': 'confirm_required', 'message': 'No'}, 422);
+        }
+        accountsDeleted++;
+        // The account is gone: a new install session would get a brand-new student.
+        profile
+          ..clear()
+          ..addAll({
+            'student_id': 'ST-NEW01',
+            'signed_in': false,
+            'grade': null,
+            'stream': null,
+            'is_retaker': false,
+            'region': null,
+            'city': null,
+            'gender': null,
+            'target_score': null,
+            'reminder_time': null,
+            'onboarded': false,
+            'premium': {'active': false, 'until': null},
+          });
+        token = '';
+        return json({'deleted': true});
       case ('GET', 'me'):
         return json({'user': profile});
       case ('PATCH', 'me'):

@@ -11,6 +11,7 @@ use App\Services\NicknameFilter;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class MeController extends Controller
@@ -21,6 +22,30 @@ class MeController extends Controller
     public const AVATAR_STYLES = ['notionists-neutral', 'lorelei-neutral', 'thumbs'];
 
     public function __construct(private readonly MePresenter $me) {}
+
+    /**
+     * DELETE /v1/me?confirm=delete-my-account — deletes the student's account and all their data
+     * (profile, devices, answers, results, bookmarks, reports, battles, invites, Premium grants…;
+     * every table cascades on the user). Login tokens are removed too. Staff accounts are refused.
+     */
+    public function destroy(Request $request): JsonResponse
+    {
+        /** @var User $user */
+        $user = $request->user();
+        if ($request->query('confirm') !== 'delete-my-account') {
+            return response()->json(['code' => 'confirm_required', 'message' => 'Confirm the deletion.'], 422);
+        }
+        if ($user->isStaff()) {
+            return response()->json(['code' => 'staff_account', 'message' => 'Staff accounts are removed in Nova.'], 403);
+        }
+
+        DB::transaction(function () use ($user): void {
+            $user->tokens()->delete();
+            $user->delete();
+        });
+
+        return response()->json(['deleted' => true]);
+    }
 
     public function show(Request $request): JsonResponse
     {

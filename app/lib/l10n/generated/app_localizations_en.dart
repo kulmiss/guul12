@@ -1550,4 +1550,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String premiumEnded(String date) {
     return 'Your Premium ended on $date.';
   }
+
+  @override
+  String get meDelete => 'Delete my account';
+
+  @override
+  String get meDeleteTitle => 'Delete your account?';
+
+  @override
+  String get meDeleteBody =>
+      'This deletes your study profile, answers, results, bookmarks, nickname, battles and invites from our server, and resets the app on this phone. Any Premium time is lost. This cannot be undone.';
+
+  @override
+  String get meDeleteConfirm => 'Delete';
+
+  @override
+  String get meDeleteCancel => 'Cancel';
+
+  @override
+  String get meDeleteOffline => 'Deleting your account needs the internet.';
+
+  @override
+  String get meDeleteDone => 'Your account was deleted.';
 }

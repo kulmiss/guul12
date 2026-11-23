@@ -29,6 +29,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
 
         Route::get('me', [MeController::class, 'show'])->name('me.show');
         Route::patch('me', [MeController::class, 'update'])->name('me.update');
+        Route::delete('me', [MeController::class, 'destroy'])->name('me.destroy');
 
         Route::get('catalog', [ContentController::class, 'catalog'])->name('catalog');
         Route::get('chapters/{chapter}', [ContentController::class, 'chapter'])->whereNumber('chapter')->name('chapters.show');

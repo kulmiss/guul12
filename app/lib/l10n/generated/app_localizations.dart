@@ -2563,6 +2563,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your Premium ended on {date}.'**
   String premiumEnded(String date);
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Delete my account'**
+  String get meDelete;
+
+  /// Dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Delete your account?'**
+  String get meDeleteTitle;
+
+  /// Dialog body
+  ///
+  /// In en, this message translates to:
+  /// **'This deletes your study profile, answers, results, bookmarks, nickname, battles and invites from our server, and resets the app on this phone. Any Premium time is lost. This cannot be undone.'**
+  String get meDeleteBody;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get meDeleteConfirm;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get meDeleteCancel;
+
+  /// Offline
+  ///
+  /// In en, this message translates to:
+  /// **'Deleting your account needs the internet.'**
+  String get meDeleteOffline;
+
+  /// Snack bar
+  ///
+  /// In en, this message translates to:
+  /// **'Your account was deleted.'**
+  String get meDeleteDone;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

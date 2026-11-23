@@ -51,7 +51,8 @@ class ApiClient {
 
   Future<Map<String, Object?>> put(String path) => _send('PUT', path);
 
-  Future<Map<String, Object?>> delete(String path) => _send('DELETE', path);
+  Future<Map<String, Object?>> delete(String path, {Map<String, String>? query}) =>
+      _send('DELETE', path, query: query);
 
   Future<Map<String, Object?>> _send(
     String method,

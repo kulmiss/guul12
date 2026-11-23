@@ -21,6 +21,49 @@ class MeScreen extends ConsumerStatefulWidget {
 
 class _MeScreenState extends ConsumerState<MeScreen> {
   bool _signingIn = false;
+  bool _deleting = false;
+
+  /// Google Play requires a way to delete the account inside the app.
+  Future<void> _deleteAccount() async {
+    final l = context.l10n;
+    final messenger = ScaffoldMessenger.of(context);
+    final sure = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l.meDeleteTitle),
+        content: Text(l.meDeleteBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(l.meDeleteCancel),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(
+              backgroundColor: Theme.of(context).colorScheme.error,
+              foregroundColor: Theme.of(context).colorScheme.onError,
+            ),
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(l.meDeleteConfirm),
+          ),
+        ],
+      ),
+    );
+    if (sure != true || !mounted) return;
+    setState(() => _deleting = true);
+    try {
+      await ref.read(repositoryProvider).deleteAccount();
+      messenger.showSnackBar(SnackBar(content: Text(l.meDeleteDone)));
+      // Empty phone data: the profile is no longer onboarded, so the app goes back to Welcome.
+      ref.read(syncGenerationProvider.notifier).bump();
+      await ref.read(profileProvider.notifier).reload();
+    } on ApiException catch (e) {
+      messenger.showSnackBar(
+        SnackBar(content: Text(e.isOffline ? l.meDeleteOffline : l.commonError)),
+      );
+    } finally {
+      if (mounted) setState(() => _deleting = false);
+    }
+  }
 
   Future<void> _signIn() async {
     final l = context.l10n;
@@ -164,6 +207,17 @@ class _MeScreenState extends ConsumerState<MeScreen> {
                         ),
                       ),
                       const SizedBox(height: 24),
+                      Center(
+                        child: TextButton.icon(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Theme.of(context).colorScheme.error,
+                          ),
+                          icon: const Icon(Icons.delete_forever_outlined),
+                          label: Text(l.meDelete),
+                          onPressed: _deleting ? null : _deleteAccount,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
                       Center(
                         child: Text(
                           l.meVersion(version),

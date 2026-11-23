@@ -208,6 +208,14 @@ class Repository {
     await _saveServerProfile(asMap(json['user']));
   }
 
+  /// Deletes the account and all its data on the server (online only), then wipes this phone's
+  /// data and sign-in so the app starts fresh. Throws [ApiException] (offline, or refused).
+  Future<void> deleteAccount() async {
+    await _authed(() => api.delete('me', query: {'confirm': 'delete-my-account'}));
+    await db.clearAll();
+    await tokens.clearToken();
+  }
+
   Future<void> refreshProfile() async {
     final json = await _authed(() => api.get('me'));
     await _saveServerProfile(asMap(json['user']));

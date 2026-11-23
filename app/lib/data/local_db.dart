@@ -82,6 +82,18 @@ class LocalDb {
 
   Future<void> close() => _db.close();
 
+  /// Empties every table (used after the account was deleted): the app starts fresh.
+  Future<void> clearAll() async {
+    final tables = await _db.rawQuery(
+      "SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' AND name != 'android_metadata'",
+    );
+    await _db.transaction((txn) async {
+      for (final t in tables) {
+        await txn.delete(t['name']! as String);
+      }
+    });
+  }
+
   // ---- key/value -------------------------------------------------------------------------------
 
   Future<String?> readString(String key) async {
