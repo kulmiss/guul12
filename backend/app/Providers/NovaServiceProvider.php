@@ -55,6 +55,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             Resources\Student::class,
             Resources\Staff::class,
             Resources\PremiumGrant::class,
+            Resources\PaymentRequest::class,
             Resources\Subject::class,
             Resources\Unit::class,
             Resources\Chapter::class,

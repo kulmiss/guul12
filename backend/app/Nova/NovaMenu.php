@@ -3,8 +3,10 @@
 namespace App\Nova;
 
 use App\Enums\NicknameReportStatus;
+use App\Enums\PaymentRequestStatus;
 use App\Enums\ReportStatus;
 use App\Models\NicknameReport;
+use App\Models\PaymentRequest;
 use App\Models\QuestionReport;
 use App\Models\User;
 use App\Nova\Dashboards\Main;
@@ -25,6 +27,8 @@ class NovaMenu
             MenuSection::dashboard(Main::class)->icon('chart-bar'),
 
             MenuSection::make('Students & Premium', [
+                MenuItem::resource(Resources\PaymentRequest::class)
+                    ->withBadge(fn (): string|false => self::count(PaymentRequest::query()->where('status', PaymentRequestStatus::Waiting->value)->count()), 'warning'),
                 MenuItem::resource(Resources\Student::class),
                 MenuItem::resource(Resources\PremiumGrant::class),
             ])->icon('users')->collapsable()->canSee(self::allowedTo('manage-premium')),

@@ -106,6 +106,7 @@ class Student extends Resource
             DateTime::make('Joined', 'created_at')->sortable()->exceptOnForms(),
             DateTime::make('Last active', 'last_active_at')->sortable()->exceptOnForms(),
             HasMany::make('Premium grants', 'premiumGrants', PremiumGrant::class),
+            HasMany::make('Payment requests', 'paymentRequests', PaymentRequest::class),
         ];
     }
 
