@@ -11,6 +11,12 @@ description = "AdMob app or unit ID (must stay out of the public repo)"
 regex = '''ca-app-pub-\d{16}[~/]\d{10}'''
 keywords = ["ca-app-pub-"]
 
+# Google's public TEST publisher (documented sample IDs, never pays). Real IDs are still caught.
+[[rules.allowlists]]
+description = "Google AdMob test IDs"
+regexTarget = "match"
+regexes = ['''^ca-app-pub-3940256099942544[~/]\d{10}$''']
+
 [[rules]]
 id = "nova-licence-auth"
 description = "Nova licence in a composer auth file"
