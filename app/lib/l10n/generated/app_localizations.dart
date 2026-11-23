@@ -191,8 +191,56 @@ abstract class AppLocalizations {
   /// Title of the 30-second hook quiz
   ///
   /// In en, this message translates to:
-  /// **'Quick warm-up: 5 questions'**
+  /// **'Warm-up: 5 easy questions'**
   String get onboardingHookTitle;
+
+  /// Line under the warm-up title
+  ///
+  /// In en, this message translates to:
+  /// **'Just for fun. Tap an answer.'**
+  String get warmUpHint;
+
+  /// Warm-up progress
+  ///
+  /// In en, this message translates to:
+  /// **'Question {current} of {total}'**
+  String warmUpProgress(int current, int total);
+
+  /// Warm-up: right answer (1st, 4th question)
+  ///
+  /// In en, this message translates to:
+  /// **'Great job!'**
+  String get warmUpPraise1;
+
+  /// Warm-up: right answer (2nd, 5th question)
+  ///
+  /// In en, this message translates to:
+  /// **'You got it!'**
+  String get warmUpPraise2;
+
+  /// Warm-up: right answer (3rd question)
+  ///
+  /// In en, this message translates to:
+  /// **'Nice one!'**
+  String get warmUpPraise3;
+
+  /// Warm-up: wrong answer, kind
+  ///
+  /// In en, this message translates to:
+  /// **'Almost! The answer is {answer}.'**
+  String warmUpAlmost(String answer);
+
+  /// Warm-up: next question
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get warmUpNext;
+
+  /// Warm-up: after the last question
+  ///
+  /// In en, this message translates to:
+  /// **'See my result'**
+  String get warmUpSeeResult;
 
   /// Hook quiz result
   ///
@@ -200,11 +248,17 @@ abstract class AppLocalizations {
   /// **'You got {correct} of {total}!'**
   String onboardingHookResult(int correct, int total);
 
-  /// Text under hook quiz result
+  /// Under the warm-up result, 4 or 5 right
   ///
   /// In en, this message translates to:
-  /// **'Let\'s set up your plan so you can do even better.'**
-  String get onboardingHookResultBody;
+  /// **'Great start! Now let\'s set up your plan.'**
+  String get onboardingHookResultGreat;
+
+  /// Under the warm-up result, 0 to 3 right
+  ///
+  /// In en, this message translates to:
+  /// **'Good start! Guul 12 will help you get even better.'**
+  String get onboardingHookResultGood;
 
   /// Stream choice screen (Grades 11–12)
   ///
@@ -332,12 +386,6 @@ abstract class AppLocalizations {
   /// **'Me'**
   String get navMe;
 
-  /// Home screen greeting
-  ///
-  /// In en, this message translates to:
-  /// **'Welcome back'**
-  String get homeGreeting;
-
   /// Exam countdown
   ///
   /// In en, this message translates to:
@@ -361,12 +409,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Quick 10'**
   String get homeQuick10;
-
-  /// Subtitle for Quick 10
-  ///
-  /// In en, this message translates to:
-  /// **'10 mixed questions from what you have studied'**
-  String get homeQuick10Body;
 
   /// Card to open the study section
   ///
@@ -883,24 +925,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Every day at {time}'**
   String onboardingReminderAt(String time);
-
-  /// UI text.
-  ///
-  /// In en, this message translates to:
-  /// **'Pass the national exam with Guul 12'**
-  String get onboardingWelcomeTitle;
-
-  /// UI text.
-  ///
-  /// In en, this message translates to:
-  /// **'Short lessons, smart practice and mock exams. Works offline.'**
-  String get onboardingWelcomeBody;
-
-  /// UI text.
-  ///
-  /// In en, this message translates to:
-  /// **'Get started'**
-  String get onboardingStart;
 
   /// No description provided for @regionName.
   ///
@@ -1520,12 +1544,6 @@ abstract class AppLocalizations {
   /// **'{count, plural, =1{1 question to review today} other{{count} questions to review today}}'**
   String homeReviewDue(int count);
 
-  /// Home card subtitle
-  ///
-  /// In en, this message translates to:
-  /// **'Mistakes come back after 1, 3 and 7 days until you know them.'**
-  String get homeReviewBody;
-
   /// Home: mistakes notebook
   ///
   /// In en, this message translates to:
@@ -1573,12 +1591,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Smart practice'**
   String get practiceModeSmart;
-
-  /// Home smart practice subtitle
-  ///
-  /// In en, this message translates to:
-  /// **'10 questions picked for you: due reviews and your weak chapters first.'**
-  String get homeSmartBody;
 
   /// Bottom navigation
   ///
@@ -2204,12 +2216,6 @@ abstract class AppLocalizations {
   /// **'Daily challenge'**
   String get challengeTitle;
 
-  /// Home card before playing
-  ///
-  /// In en, this message translates to:
-  /// **'{count, plural, =1{1 question, the same for everyone in your grade today} other{{count} questions, the same for everyone in your grade today}}'**
-  String challengeBody(int count);
-
   /// Home card after playing
   ///
   /// In en, this message translates to:
@@ -2233,12 +2239,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Battles'**
   String get battleTitle;
-
-  /// Home card
-  ///
-  /// In en, this message translates to:
-  /// **'Answer the same 10 questions as another student. No chat, only nicknames.'**
-  String get battleHomeBody;
 
   /// Button: random opponent
   ///
@@ -2677,6 +2677,198 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your account was deleted.'**
   String get meDeleteDone;
+
+  /// Skip the welcome slides
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get walkSkip;
+
+  /// Next welcome slide
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get walkNext;
+
+  /// Button on the last welcome slide
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s start'**
+  String get walkStart;
+
+  /// Screen-reader label of the slide dots
+  ///
+  /// In en, this message translates to:
+  /// **'Page {page} of {total}'**
+  String walkPage(int page, int total);
+
+  /// Welcome slide 1 title
+  ///
+  /// In en, this message translates to:
+  /// **'Learn in short, clear lessons'**
+  String get walk1Title;
+
+  /// Welcome slide 1 text
+  ///
+  /// In en, this message translates to:
+  /// **'Every chapter has a short summary, solved examples and flashcards. They work offline too.'**
+  String get walk1Body;
+
+  /// Welcome slide 2 title
+  ///
+  /// In en, this message translates to:
+  /// **'Practise like the real exam'**
+  String get walk2Title;
+
+  /// Welcome slide 2 text
+  ///
+  /// In en, this message translates to:
+  /// **'Quick practice, a daily challenge and full mock exams with a timer show you where you stand.'**
+  String get walk2Body;
+
+  /// Welcome slide 3 title
+  ///
+  /// In en, this message translates to:
+  /// **'A little every day adds up'**
+  String get walk3Title;
+
+  /// Welcome slide 3 text
+  ///
+  /// In en, this message translates to:
+  /// **'Keep your streak, watch your progress grow and reach your target score.'**
+  String get walk3Body;
+
+  /// Home greeting by time of day
+  ///
+  /// In en, this message translates to:
+  /// **'{part, select, morning{Good morning!} afternoon{Good afternoon!} other{Good evening!}}'**
+  String homeGreeting(String part);
+
+  /// Home greeting with the nickname
+  ///
+  /// In en, this message translates to:
+  /// **'{part, select, morning{Good morning, {name}!} afternoon{Good afternoon, {name}!} other{Good evening, {name}!}}'**
+  String homeGreetingName(String part, String name);
+
+  /// Home: no answers yet today
+  ///
+  /// In en, this message translates to:
+  /// **'Ready to learn something new today?'**
+  String get homeMoodStart;
+
+  /// Home: some answers today
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 more question to reach today\'s goal} other{{count} more questions to reach today\'s goal}}'**
+  String homeMoodGoing(int count);
+
+  /// Home: goal reached
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s goal is done. Amazing!'**
+  String get homeMoodDone;
+
+  /// Under the goal ring
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s goal'**
+  String get homeGoalLabel;
+
+  /// Screen-reader label of the goal ring
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {goal} questions today'**
+  String homeGoalRing(int done, int goal);
+
+  /// Big card: last chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Continue where you left off'**
+  String get homeContinueTitle;
+
+  /// Big card: nothing studied yet
+  ///
+  /// In en, this message translates to:
+  /// **'Start your first lesson'**
+  String get homeStartTitle;
+
+  /// Big card text: nothing studied yet
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a subject and open a chapter. It takes about 5 minutes.'**
+  String get homeStartBody;
+
+  /// Home section title
+  ///
+  /// In en, this message translates to:
+  /// **'For you today'**
+  String get homeForYou;
+
+  /// Home section title
+  ///
+  /// In en, this message translates to:
+  /// **'Your subjects'**
+  String get homeSubjects;
+
+  /// Link to the Study tab
+  ///
+  /// In en, this message translates to:
+  /// **'See all'**
+  String get homeSeeAll;
+
+  /// Home tip card title
+  ///
+  /// In en, this message translates to:
+  /// **'Tip of the day'**
+  String get homeTipTitle;
+
+  /// Tip of the day (one per day, in turn)
+  ///
+  /// In en, this message translates to:
+  /// **'{n, select, 0{Study for 25 minutes, then rest for 5. Your brain remembers more.} 1{Got a question wrong? Read the explanation. Mistakes are how you learn.} 2{Explain a topic out loud as if you were the teacher.} 3{Sleep well before an exam. A rested brain thinks faster.} 4{Do a little every day. Ten questions a day is better than a hundred once a week.} 5{Read the whole question twice before you choose an answer.} 6{Start with the subject you like least while your mind is fresh.} 7{Write short notes in your own words after each chapter.} 8{In a mock exam, skip a hard question and come back to it later.} other{Drink water and take short walks. Your body helps your brain.}}'**
+  String homeTip(String n);
+
+  /// Challenge tile line
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions'**
+  String homeTileChallenge(int count);
+
+  /// Battles tile line
+  ///
+  /// In en, this message translates to:
+  /// **'Play another student'**
+  String get homeTileBattle;
+
+  /// Quick 10 tile line
+  ///
+  /// In en, this message translates to:
+  /// **'10 mixed questions'**
+  String get homeTileQuick;
+
+  /// Smart practice tile line
+  ///
+  /// In en, this message translates to:
+  /// **'Your weak spots'**
+  String get homeTileSmart;
+
+  /// Review tile title
+  ///
+  /// In en, this message translates to:
+  /// **'Review'**
+  String get homeTileReview;
+
+  /// Tile that opens all practice modes
+  ///
+  /// In en, this message translates to:
+  /// **'More practice'**
+  String get homeTileMore;
+
+  /// More practice tile line
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a mode'**
+  String get homeTileMoreLine;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

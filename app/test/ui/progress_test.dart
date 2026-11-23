@@ -89,7 +89,9 @@ void main() {
     await tapOn(tester, find.text('Done'));
 
     await tapOn(tester, find.text('Home'));
-    expect(find.text('No streak yet · 1 / 10 questions today'), findsOneWidget);
+    expect(find.text('No streak yet'), findsOneWidget);
+    expect(find.text('1/10'), findsOneWidget, reason: 'the goal ring');
+    expect(find.text("9 more questions to reach today's goal"), findsOneWidget);
     await tapOn(tester, find.text('Progress').last);
     expect(find.text('2 XP · 2 XP this week'), findsOneWidget);
     expect(firstSteps('1 / 10'), findsOneWidget);
@@ -120,7 +122,9 @@ void main() {
         ],
       ),
     );
-    expect(find.text('1-day streak · Daily goal reached'), findsOneWidget);
+    expect(find.text('1-day streak'), findsOneWidget);
+    expect(find.text("Today's goal is done. Amazing!"), findsOneWidget);
+    expect(find.text('1/10'), findsNothing, reason: 'a full ring shows a tick');
     await tapOn(tester, find.text('Progress').last);
     expect(find.text('76 XP · 76 XP this week'), findsOneWidget);
     expect(find.text('Best: 1 day'), findsOneWidget);

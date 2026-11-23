@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:guul12/ui/screens/home_screen.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../support/app_harness.dart';
@@ -39,7 +40,7 @@ void main() {
     await pumpGuul(tester, server: server);
 
     expect(
-      find.descendant(of: find.byType(AppBar), matching: find.text('Guul 12 Nile')),
+      find.descendant(of: find.byType(HomeScreen), matching: find.text('Guul 12 Nile')),
       findsOneWidget,
     );
   });

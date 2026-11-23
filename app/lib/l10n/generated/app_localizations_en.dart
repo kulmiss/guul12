@@ -60,7 +60,35 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get onboardingHookTitle => 'Quick warm-up: 5 questions';
+  String get onboardingHookTitle => 'Warm-up: 5 easy questions';
+
+  @override
+  String get warmUpHint => 'Just for fun. Tap an answer.';
+
+  @override
+  String warmUpProgress(int current, int total) {
+    return 'Question $current of $total';
+  }
+
+  @override
+  String get warmUpPraise1 => 'Great job!';
+
+  @override
+  String get warmUpPraise2 => 'You got it!';
+
+  @override
+  String get warmUpPraise3 => 'Nice one!';
+
+  @override
+  String warmUpAlmost(String answer) {
+    return 'Almost! The answer is $answer.';
+  }
+
+  @override
+  String get warmUpNext => 'Next';
+
+  @override
+  String get warmUpSeeResult => 'See my result';
 
   @override
   String onboardingHookResult(int correct, int total) {
@@ -68,7 +96,10 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get onboardingHookResultBody => 'Let\'s set up your plan so you can do even better.';
+  String get onboardingHookResultGreat => 'Great start! Now let\'s set up your plan.';
+
+  @override
+  String get onboardingHookResultGood => 'Good start! Guul 12 will help you get even better.';
 
   @override
   String get onboardingStreamTitle => 'Which stream are you in?';
@@ -137,9 +168,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navMe => 'Me';
 
   @override
-  String get homeGreeting => 'Welcome back';
-
-  @override
   String homeExamCountdown(int days) {
     String _temp0 = intl.Intl.pluralLogic(
       days,
@@ -161,9 +189,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeQuick10 => 'Quick 10';
-
-  @override
-  String get homeQuick10Body => '10 mixed questions from what you have studied';
 
   @override
   String get homeContinueStudying => 'Continue studying';
@@ -478,16 +503,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String onboardingReminderAt(String time) {
     return 'Every day at $time';
   }
-
-  @override
-  String get onboardingWelcomeTitle => 'Pass the national exam with Guul 12';
-
-  @override
-  String get onboardingWelcomeBody =>
-      'Short lessons, smart practice and mock exams. Works offline.';
-
-  @override
-  String get onboardingStart => 'Get started';
 
   @override
   String regionName(String code) {
@@ -869,9 +884,6 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get homeReviewBody => 'Mistakes come back after 1, 3 and 7 days until you know them.';
-
-  @override
   String get homeMistakes => 'My mistakes';
 
   @override
@@ -904,10 +916,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get practiceModeSmart => 'Smart practice';
-
-  @override
-  String get homeSmartBody =>
-      '10 questions picked for you: due reviews and your weak chapters first.';
 
   @override
   String get navProgress => 'Progress';
@@ -1342,17 +1350,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get challengeTitle => 'Daily challenge';
 
   @override
-  String challengeBody(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count questions, the same for everyone in your grade today',
-      one: '1 question, the same for everyone in your grade today',
-    );
-    return '$_temp0';
-  }
-
-  @override
   String challengeDone(int correct, int total) {
     return 'Today: $correct / $total right';
   }
@@ -1367,10 +1364,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get battleTitle => 'Battles';
-
-  @override
-  String get battleHomeBody =>
-      'Answer the same 10 questions as another student. No chat, only nicknames.';
 
   @override
   String get battleQuick => 'Quick battle';
@@ -1611,4 +1604,144 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get meDeleteDone => 'Your account was deleted.';
+
+  @override
+  String get walkSkip => 'Skip';
+
+  @override
+  String get walkNext => 'Next';
+
+  @override
+  String get walkStart => 'Let\'s start';
+
+  @override
+  String walkPage(int page, int total) {
+    return 'Page $page of $total';
+  }
+
+  @override
+  String get walk1Title => 'Learn in short, clear lessons';
+
+  @override
+  String get walk1Body =>
+      'Every chapter has a short summary, solved examples and flashcards. They work offline too.';
+
+  @override
+  String get walk2Title => 'Practise like the real exam';
+
+  @override
+  String get walk2Body =>
+      'Quick practice, a daily challenge and full mock exams with a timer show you where you stand.';
+
+  @override
+  String get walk3Title => 'A little every day adds up';
+
+  @override
+  String get walk3Body => 'Keep your streak, watch your progress grow and reach your target score.';
+
+  @override
+  String homeGreeting(String part) {
+    String _temp0 = intl.Intl.selectLogic(part, {
+      'morning': 'Good morning!',
+      'afternoon': 'Good afternoon!',
+      'other': 'Good evening!',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String homeGreetingName(String part, String name) {
+    String _temp0 = intl.Intl.selectLogic(part, {
+      'morning': 'Good morning, $name!',
+      'afternoon': 'Good afternoon, $name!',
+      'other': 'Good evening, $name!',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String get homeMoodStart => 'Ready to learn something new today?';
+
+  @override
+  String homeMoodGoing(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count more questions to reach today\'s goal',
+      one: '1 more question to reach today\'s goal',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeMoodDone => 'Today\'s goal is done. Amazing!';
+
+  @override
+  String get homeGoalLabel => 'Today\'s goal';
+
+  @override
+  String homeGoalRing(int done, int goal) {
+    return '$done of $goal questions today';
+  }
+
+  @override
+  String get homeContinueTitle => 'Continue where you left off';
+
+  @override
+  String get homeStartTitle => 'Start your first lesson';
+
+  @override
+  String get homeStartBody => 'Pick a subject and open a chapter. It takes about 5 minutes.';
+
+  @override
+  String get homeForYou => 'For you today';
+
+  @override
+  String get homeSubjects => 'Your subjects';
+
+  @override
+  String get homeSeeAll => 'See all';
+
+  @override
+  String get homeTipTitle => 'Tip of the day';
+
+  @override
+  String homeTip(String n) {
+    String _temp0 = intl.Intl.selectLogic(n, {
+      '0': 'Study for 25 minutes, then rest for 5. Your brain remembers more.',
+      '1': 'Got a question wrong? Read the explanation. Mistakes are how you learn.',
+      '2': 'Explain a topic out loud as if you were the teacher.',
+      '3': 'Sleep well before an exam. A rested brain thinks faster.',
+      '4': 'Do a little every day. Ten questions a day is better than a hundred once a week.',
+      '5': 'Read the whole question twice before you choose an answer.',
+      '6': 'Start with the subject you like least while your mind is fresh.',
+      '7': 'Write short notes in your own words after each chapter.',
+      '8': 'In a mock exam, skip a hard question and come back to it later.',
+      'other': 'Drink water and take short walks. Your body helps your brain.',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String homeTileChallenge(int count) {
+    return '$count questions';
+  }
+
+  @override
+  String get homeTileBattle => 'Play another student';
+
+  @override
+  String get homeTileQuick => '10 mixed questions';
+
+  @override
+  String get homeTileSmart => 'Your weak spots';
+
+  @override
+  String get homeTileReview => 'Review';
+
+  @override
+  String get homeTileMore => 'More practice';
+
+  @override
+  String get homeTileMoreLine => 'Pick a mode';
 }

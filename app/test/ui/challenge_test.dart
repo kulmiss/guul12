@@ -12,7 +12,7 @@ void main() {
     await pumpGuul(tester, server: server);
 
     expect(find.text('Daily challenge'), findsOneWidget);
-    expect(find.text('3 questions, the same for everyone in your grade today'), findsOneWidget);
+    expect(find.text('3 questions'), findsOneWidget);
     await tapOn(tester, find.text('Daily challenge'));
 
     expect(find.text('Question 1 of 3'), findsOneWidget);

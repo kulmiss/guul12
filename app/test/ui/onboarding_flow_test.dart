@@ -11,53 +11,85 @@ Future<void> tapContinue(WidgetTester tester) async {
   await settle(tester);
 }
 
-Future<void> checkAndNext(WidgetTester tester) async {
-  await tester.tap(find.byKey(const ValueKey('check')));
-  await settle(tester);
-  await tester.tap(find.byKey(const ValueKey('next')));
-  await settle(tester);
+/// The three welcome slides, swiped through with the Next button.
+Future<void> passWalkthrough(WidgetTester tester) async {
+  for (var i = 0; i < 3; i++) {
+    await tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+  }
 }
 
+/// Taps an answer in the warm-up, then Next.
+Future<void> warmUp(WidgetTester tester, String answer) async {
+  await tapText(tester, answer);
+  await tapOn(tester, find.byKey(const ValueKey('warmup-next')));
+}
+
+/// The right answers of the bundled warm-up, in order.
+const warmUpAnswers = ['12', 'Ice', 'Small', 'Addis Ababa', '10'];
+
 void main() {
-  testWidgets('Grade 12 onboarding: warm-up, stream, region, saved to the server', (tester) async {
+  testWidgets('walkthrough, easy warm-up, then Grade 12 profile saved to the server', (
+    tester,
+  ) async {
     final (repo, server) = await pumpGuul(tester);
 
-    expect(find.text('Pass the national exam with Guul 12'), findsOneWidget);
+    // Three welcome slides.
+    expect(find.text('Learn in short, clear lessons'), findsOneWidget);
+    expect(find.bySemanticsLabel('Page 1 of 3'), findsOneWidget);
+    await tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+    expect(find.text('Practise like the real exam'), findsOneWidget);
+    // The phone's Back button goes to the previous slide, not out of the app.
+    await tester.binding.handlePopRoute();
+    await settle(tester);
+    expect(find.text('Learn in short, clear lessons'), findsOneWidget);
+    await tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+    await tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+    expect(find.text('A little every day adds up'), findsOneWidget);
+    expect(find.text("Let's start"), findsOneWidget);
+    expect(find.text('Skip'), findsNothing, reason: 'nothing to skip on the last slide');
+    await tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+
+    // Warm-up: tap only, instant friendly feedback, 4 right and 1 wrong.
+    expect(find.text('Warm-up: 5 easy questions'), findsOneWidget);
+    expect(find.text('Question 1 of 5'), findsOneWidget);
+    expect(find.byType(TextField), findsNothing, reason: 'no typing in the warm-up');
+    expect(find.byKey(const ValueKey('warmup-next')), findsNothing, reason: 'answer first');
+    await tapText(tester, '12');
+    expect(find.text('Great job!'), findsOneWidget);
+    await tapOn(tester, find.byKey(const ValueKey('warmup-next')));
+    await warmUp(tester, 'Ice');
+    expect(find.text('Question 3 of 5'), findsOneWidget);
+    await tapText(tester, 'Tall'); // wrong on purpose
+    expect(find.text('Almost! The answer is Small.'), findsOneWidget);
+    await tapText(tester, 'Small'); // a second tap changes nothing
+    expect(find.text('Almost! The answer is Small.'), findsOneWidget);
+    expect(find.text('Report a problem'), findsNothing, reason: 'warm-up questions are local');
+    await tapOn(tester, find.byKey(const ValueKey('warmup-next')));
+    await warmUp(tester, 'Addis Ababa');
+    await tapText(tester, '10');
+    expect(find.text('See my result'), findsOneWidget);
+    await tapOn(tester, find.byKey(const ValueKey('warmup-next')));
+
+    expect(find.text('You got 4 of 5!'), findsOneWidget);
+    expect(find.text("Great start! Now let's set up your plan."), findsOneWidget);
+    expect(find.byIcon(Icons.star_rounded), findsNWidgets(4), reason: 'one star per right answer');
+    expect(find.byIcon(Icons.star_outline_rounded), findsOneWidget);
+    expect(find.textContaining('Step '), findsNothing, reason: 'the warm-up is not a setup step');
     await tapContinue(tester);
 
     expect(find.text('Which grade are you in?'), findsOneWidget);
+    expect(
+      find.text('Step 1 of 5'),
+      findsOneWidget,
+      reason: 'grade, place, gender, target, reminder',
+    );
     final continueButton = find.byKey(const ValueKey('onboarding-continue'));
     expect(tester.widget<FilledButton>(continueButton).onPressed, isNull);
     await tapText(tester, 'Grade 12');
     await tapContinue(tester);
 
-    // Warm-up: answer 4 right and 1 wrong.
-    expect(find.text('Quick warm-up: 5 questions'), findsOneWidget);
-    await tester.enterText(find.byType(TextField), '12'); // f'(2) for x^3
-    await checkAndNext(tester);
-    await tapText(tester, '2 s');
-    await checkAndNext(tester);
-    await tapText(tester, 'True'); // wrong on purpose: oxidation is LOSS of electrons
-    await tester.tap(find.byKey(const ValueKey('check')));
-    await settle(tester);
-    expect(find.text('Not quite'), findsOneWidget);
-    expect(find.text('Correct answer: False'), findsOneWidget);
-    expect(find.text('Report a problem'), findsNothing, reason: 'warm-up questions are local only');
-    await tester.tap(find.byKey(const ValueKey('next')));
-    await settle(tester);
-    await tapText(tester, '30');
-    await checkAndNext(tester);
-    await tapText(tester, '48');
-    await tester.tap(find.byKey(const ValueKey('check')));
-    await settle(tester);
-    expect(find.text('Correct!'), findsOneWidget);
-    await tester.tap(find.byKey(const ValueKey('next')));
-    await settle(tester);
-
-    expect(find.text('You got 4 of 5!'), findsOneWidget);
-    await tapContinue(tester);
-
     expect(find.text('Which stream are you in?'), findsOneWidget);
+    expect(find.text('Step 2 of 7'), findsOneWidget, reason: 'Grade 12 adds stream and retaker');
     await tapText(tester, 'Natural Science');
     await tapContinue(tester);
 
@@ -82,7 +114,7 @@ void main() {
 
     expect(find.text('When should we remind you to study?'), findsOneWidget);
     await tapContinue(tester); // "Start studying" without a reminder
-    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Good morning!'), findsOneWidget);
 
     expect(server.profile['grade'], 12);
     expect(server.profile['stream'], 'natural');
@@ -98,26 +130,43 @@ void main() {
     expect((await repo.profile()).onboarded, isTrue);
   });
 
+  testWidgets('Skip on the first slide goes straight to the warm-up; a low score is still kind', (
+    tester,
+  ) async {
+    await pumpGuul(tester);
+    await tapText(tester, 'Skip');
+    expect(find.text('Warm-up: 5 easy questions'), findsOneWidget);
+    for (final wrong in ['11', 'Steam', 'Tall', 'Jijiga', '9']) {
+      await warmUp(tester, wrong);
+    }
+    expect(find.text('You got 0 of 5!'), findsOneWidget);
+    expect(find.text('Good start! Guul 12 will help you get even better.'), findsOneWidget);
+  });
+
   testWidgets('Grade 9 skips stream and retaker questions; Back never replays the warm-up', (
     tester,
   ) async {
     final (_, server) = await pumpGuul(tester);
-    await tapContinue(tester);
-    await tapText(tester, 'Grade 9');
-    await tapContinue(tester);
-
-    for (final answer in ['5', '60 km/h', 'Atom', 'True', 'goes']) {
-      await tapText(tester, answer);
-      await checkAndNext(tester);
+    await passWalkthrough(tester);
+    for (final answer in warmUpAnswers) {
+      await warmUp(tester, answer);
     }
     expect(find.text('You got 5 of 5!'), findsOneWidget);
+    await tapContinue(tester);
+    await tapText(tester, 'Grade 9');
 
+    // Back from the grade question shows the result again, never the warm-up.
     await tester.tap(find.byType(BackButton));
     await settle(tester);
-    expect(find.text('Which grade are you in?'), findsOneWidget);
-    await tapContinue(tester);
     expect(find.text('You got 5 of 5!'), findsOneWidget);
+    await tester.tap(find.byType(BackButton));
+    await settle(tester);
+    expect(find.text('Learn in short, clear lessons'), findsOneWidget);
+    await passWalkthrough(tester);
+    expect(find.text('You got 5 of 5!'), findsOneWidget, reason: 'the warm-up is played once');
     await tapContinue(tester);
+    expect(find.text('Which grade are you in?'), findsOneWidget);
+    await tapContinue(tester); // Grade 9 is still chosen
 
     expect(find.text('Which stream are you in?'), findsNothing);
     expect(find.text('Where do you study?'), findsOneWidget);
@@ -136,7 +185,7 @@ void main() {
     await tapContinue(tester);
     await tapContinue(tester);
 
-    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Good morning!'), findsOneWidget);
     expect(server.profile['grade'], 9);
     expect(server.profile['stream'], isNull);
     expect(server.profile['gender'], 'female');
@@ -145,17 +194,12 @@ void main() {
 
   testWidgets('offline first launch still finishes onboarding; it syncs later', (tester) async {
     final (repo, server) = await pumpGuul(tester, server: FakeServer()..online = false);
+    await passWalkthrough(tester);
+    for (final answer in warmUpAnswers) {
+      await warmUp(tester, answer);
+    }
     await tapContinue(tester);
     await tapText(tester, 'Grade 10');
-    await tapContinue(tester);
-    for (final step in ['32', '#12', 'True', 'Chloroplast', '24 hours']) {
-      if (step.startsWith('#')) {
-        await tester.enterText(find.byType(TextField), step.substring(1));
-      } else {
-        await tapText(tester, step);
-      }
-      await checkAndNext(tester);
-    }
     await tapContinue(tester);
     await tester.tap(find.byType(DropdownButtonFormField<String>));
     await settle(tester);
@@ -164,7 +208,7 @@ void main() {
     for (var i = 0; i < 4; i++) {
       await tapContinue(tester);
     }
-    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Good morning!'), findsOneWidget);
     expect(
       find.text('You are offline. Your progress is saved and will sync later.'),
       findsOneWidget,
@@ -182,17 +226,12 @@ void main() {
   ) async {
     final server = FakeServer()..online = false;
     await pumpGuul(tester, server: server);
+    await passWalkthrough(tester);
+    for (final answer in warmUpAnswers) {
+      await warmUp(tester, answer);
+    }
     await tapContinue(tester);
     await tapText(tester, 'Grade 11');
-    await tapContinue(tester);
-    for (final step in ['#7', 'Joule', '6', 'True', 'quick']) {
-      if (step.startsWith('#')) {
-        await tester.enterText(find.byType(TextField), step.substring(1));
-      } else {
-        await tapText(tester, step);
-      }
-      await checkAndNext(tester);
-    }
     await tapContinue(tester);
     await tapText(tester, 'Social Science');
     await tapContinue(tester);
@@ -207,7 +246,7 @@ void main() {
     server.online = true;
     server.calls.clear();
     await tapContinue(tester);
-    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Good morning!'), findsOneWidget);
     expect(server.calls, contains('GET /api/v1/catalog'));
     expect(server.profile['stream'], 'social');
     expect(find.text('You are offline. Your progress is saved and will sync later.'), findsNothing);

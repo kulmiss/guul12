@@ -234,8 +234,57 @@ void main() {
     }
   }
 
+  // First run: welcome slides, the easy warm-up and its result, then the grade question.
+  Future<void> nextSlide(WidgetTester tester) =>
+      tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+  Future<void> warmUp(WidgetTester tester, String answer) async {
+    await tapOn(tester, find.text(answer));
+    await tapOn(tester, find.byKey(const ValueKey('warmup-next')));
+  }
+
+  final firstRun = <String, Scene>{
+    'walkthrough_1': (tester) async {},
+    'walkthrough_3': (tester) async {
+      await nextSlide(tester);
+      await nextSlide(tester);
+    },
+    'warmup_right': (tester) async {
+      await tapOn(tester, find.text('Skip'));
+      await tapOn(tester, find.text('12'));
+    },
+    'warmup_wrong': (tester) async {
+      await tapOn(tester, find.text('Skip'));
+      await warmUp(tester, '12');
+      await warmUp(tester, 'Ice');
+      await tapOn(tester, find.text('Tall'));
+    },
+    'warmup_result': (tester) async {
+      await tapOn(tester, find.text('Skip'));
+      for (final answer in ['12', 'Ice', 'Small', 'Addis Ababa', '9']) {
+        await warmUp(tester, answer);
+      }
+    },
+  };
+  for (final MapEntry(key: name, value: scene) in firstRun.entries) {
+    for (final dark in [false, true]) {
+      final file = '${name}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        await pumpGuul(
+          tester,
+          before: (repo) => repo.db.writeString('theme_mode', dark ? 'dark' : 'light'),
+        );
+        await scene(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
+  }
+
   testWidgets('onboarding_grade_phone_light.png', (tester) async {
     await pumpGuul(tester);
+    await tapOn(tester, find.text('Skip'));
+    for (final answer in ['12', 'Ice', 'Small', 'Addis Ababa', '10']) {
+      await warmUp(tester, answer);
+    }
     await tapOn(tester, find.byKey(const ValueKey('onboarding-continue')));
     await tapOn(tester, find.text('Grade 12'));
     await expectLater(

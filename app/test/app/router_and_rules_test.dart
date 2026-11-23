@@ -108,7 +108,7 @@ void main() {
 
   testWidgets('the bundled warm-up file loads through the asset bundle', (tester) async {
     final text = await tester.runAsync(() => rootBundle.loadString(hookQuestionsAsset));
-    expect(parseHookQuestions(text!).keys, containsAll([9, 10, 11, 12]));
+    expect(parseHookQuestions(text!), hasLength(5));
   });
 
   testWidgets('an old build shows only the update screen', (tester) async {

@@ -36,7 +36,7 @@ extension<T> on T {
 void main() {
   testWidgets('home shows the exam countdown in both calendars', (tester) async {
     await pumpGuul(tester, server: onboardedServer());
-    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Good morning!'), findsOneWidget);
     // 22 Nov 2026 → 29 Jun 2027 is 219 days; 29 Jun 2027 = Sene 22, 2019 E.C.
     expect(find.text('219 days to the exam'), findsOneWidget);
     expect(find.text('June 29, 2027 · Sene 22, 2019 E.C.'), findsOneWidget);
@@ -89,10 +89,16 @@ void main() {
     await tapOn(tester, find.text('Done'));
     expect(find.text('Chapter quiz · 1 question'), findsOneWidget);
 
-    // Back home: "Continue studying" shows the chapter, Quick 10 is now possible.
+    // Back home: the big "Continue" card shows the chapter, Quick 10 is now possible.
     await tapOn(tester, find.text('Home'));
-    expect(find.text('Continue studying'), findsOneWidget);
-    expect(find.text('1. Chapter 21'), findsOneWidget);
+    expect(find.text('Continue where you left off'), findsOneWidget);
+    expect(
+      find.descendant(
+        of: find.byKey(const ValueKey('home-continue')),
+        matching: find.text('1. Chapter 21'),
+      ),
+      findsOneWidget,
+    );
     expect(await repo.db.savedChapterIds(), {21});
   });
 
@@ -123,7 +129,7 @@ void main() {
     expect(server.receivedAttempts, isEmpty);
 
     await tapOn(tester, find.text('Done'));
-    await tapOn(tester, find.text('Practice'));
+    await tapOn(tester, find.text('More practice'));
     await tapOn(tester, find.text('Only my wrong answers'));
     expect(find.text('What is 2 + 2?'), findsOneWidget);
     await tapOn(tester, find.text('4'));
@@ -153,7 +159,7 @@ void main() {
     await tester.binding.handlePopRoute();
     await settle(tester);
     await tapOn(tester, find.text('Stop'));
-    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Good morning!'), findsOneWidget);
   });
 
   testWidgets('tablet uses a navigation rail', (tester) async {

@@ -1,9 +1,9 @@
 # PROGRESS
 
-📍 Nova upgrade · Step 10 of 10: polish, screenshots, report → next: owner test + merges (PR #1 → #6), then launch tasks
+📍 App polish · Step 4 of 4: easy warm-up, welcome slides, lively Home → next: owner test + merges (PR #1 → #7)
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
-⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5 → #6; referral reward (QUESTIONS #40); confirm prices, WhatsApp, email, icon; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
+⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5 → #6 → #7; referral reward (QUESTIONS #40); confirm prices, WhatsApp, email, icon; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -14,6 +14,16 @@
 | 4 Engagement + ads + AI + Premium | 20% | ✅ done — waiting for owner test (PR #4) |
 | 5 Landing + ops + store + Nova | 14% | ✅ done — waiting for owner test (PR #5) |
 | Nova upgrade (extra job) | — | ✅ done — waiting for owner test (PR #6) |
+| App polish 1 (owner feedback) | — | ✅ done — waiting for owner test (PR #7) |
+
+## App polish 1 steps (PR #7)
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Warm-up: 5 very easy tap-only questions, the same for all grades | ✅ |
+| 2 | 3 welcome slides with original drawings, before the warm-up | ✅ |
+| 3 | Lively Home dashboard | ✅ |
+| 4 | Tests, goldens, PR | ✅ |
 
 ## Nova upgrade steps (PR #6)
 

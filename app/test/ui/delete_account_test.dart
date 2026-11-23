@@ -58,7 +58,11 @@ void main() {
     expect(await repo.db.chapters(), isEmpty);
     expect(await repo.db.readJson(Keys.serverProfile), isNull);
     expect(await repo.tokens.readToken(), isNull);
-    expect(find.byKey(const ValueKey('onboarding-continue')), findsOneWidget, reason: 'Welcome');
+    expect(
+      find.byKey(const ValueKey('walkthrough-next')),
+      findsOneWidget,
+      reason: 'Welcome slides',
+    );
   });
 
   testWidgets('offline: a clear message and nothing is wiped', (tester) async {

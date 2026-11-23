@@ -3,15 +3,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../app/providers.dart';
-import '../../data/branding.dart';
 import '../../data/hook_questions.dart';
 import '../../data/models.dart';
-import '../practice/practice_runner.dart';
-import '../widgets/brand_logo.dart';
+import '../widgets/accents.dart';
 import '../widgets/common.dart';
 import 'profile_fields.dart';
+import 'walkthrough.dart';
+import 'warm_up.dart';
 
-final hookQuestionsProvider = FutureProvider<Map<int, List<Question>>>(
+final hookQuestionsProvider = FutureProvider<List<Question>>(
   (ref) async => parseHookQuestions(await rootBundle.loadString(hookQuestionsAsset)),
 );
 
@@ -28,12 +28,13 @@ enum OnboardingStep {
   reminder,
 }
 
-/// Which steps a student sees: stream only from Grade 11, retaker only in Grade 12.
+/// Which steps a student sees: the welcome slides and the easy warm-up first (the same for every
+/// grade), then the profile; stream only from Grade 11, retaker only in Grade 12.
 List<OnboardingStep> onboardingSteps(int? grade) => [
   OnboardingStep.welcome,
-  OnboardingStep.grade,
   OnboardingStep.hook,
   OnboardingStep.hookResult,
+  OnboardingStep.grade,
   if (grade != null && grade >= 11) OnboardingStep.stream,
   if (grade == 12) OnboardingStep.retaker,
   OnboardingStep.place,
@@ -63,6 +64,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   bool _saving = false;
 
   List<OnboardingStep> get _steps => onboardingSteps(_grade);
+  int get _setupStart => _steps.indexOf(OnboardingStep.grade);
   OnboardingStep get _step => _steps[_index];
 
   @override
@@ -72,9 +74,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   }
 
   bool get _canContinue => switch (_step) {
-    OnboardingStep.welcome || OnboardingStep.hookResult => true,
+    OnboardingStep.hookResult => true,
     OnboardingStep.grade => _grade != null,
-    OnboardingStep.hook => false,
+    OnboardingStep.welcome || OnboardingStep.hook => false, // they have their own buttons
     OnboardingStep.stream => _stream != null,
     OnboardingStep.retaker => _retaker != null,
     OnboardingStep.place => _region != null,
@@ -129,22 +131,27 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   Widget build(BuildContext context) {
     final l = context.l10n;
     final step = _step;
-    final showNav = step != OnboardingStep.hook;
+    final ownButtons = step == OnboardingStep.welcome || step == OnboardingStep.hook;
     return PopScope(
       canPop: _index == 0,
       onPopInvokedWithResult: (didPop, _) {
         if (!didPop) _back();
       },
       child: Scaffold(
-        appBar: AppBar(
-          leading: _index > 0 && step != OnboardingStep.hook ? BackButton(onPressed: _back) : null,
-          automaticallyImplyLeading: false,
-          title: step == OnboardingStep.welcome
-              ? null
-              : Text(l.onboardingStep(_index, _steps.length - 1)),
-        ),
+        appBar: ownButtons
+            ? null
+            : AppBar(
+                leading: _index > 0 ? BackButton(onPressed: _back) : null,
+                automaticallyImplyLeading: false,
+                // Only the setup questions are numbered (the grade question is step 1).
+                title: step == OnboardingStep.hookResult
+                    ? null
+                    : Text(l.onboardingStep(_index - _setupStart + 1, _steps.length - _setupStart)),
+              ),
         body: SafeArea(
-          child: step == OnboardingStep.hook
+          child: step == OnboardingStep.welcome
+              ? Walkthrough(onDone: () => fireAndForget(_continue()))
+              : step == OnboardingStep.hook
               ? _hook()
               : Column(
                   children: [
@@ -154,7 +161,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                         children: [ContentWidth(maxWidth: 560, child: _stepBody(step))],
                       ),
                     ),
-                    if (showNav)
+                    if (!ownButtons)
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
                         child: ContentWidth(
@@ -187,9 +194,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                                       ? () => fireAndForget(_continue())
                                       : null,
                                   child: Text(
-                                    step == OnboardingStep.welcome
-                                        ? l.onboardingStart
-                                        : _index == _steps.length - 1
+                                    _index == _steps.length - 1
                                         ? l.onboardingFinish
                                         : l.commonContinue,
                                     textAlign: TextAlign.center,
@@ -218,28 +223,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   Widget _stepBody(OnboardingStep step) {
     final l = context.l10n;
     switch (step) {
-      case OnboardingStep.welcome:
-        final brand = ref.watch(configProvider).value?.branding ?? Branding.sunrise;
-        return Column(
-          children: [
-            const SizedBox(height: 32),
-            const BrandLogo(),
-            const SizedBox(height: 16),
-            Text(
-              brandName(l, brand),
-              style: Theme.of(context).textTheme.displaySmall
-                  ?.copyWith(fontWeight: FontWeight.w900),
-            ),
-            const SizedBox(height: 12),
-            Text(
-              l.onboardingWelcomeTitle,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            const SizedBox(height: 8),
-            Text(l.onboardingWelcomeBody, textAlign: TextAlign.center),
-          ],
-        );
       case OnboardingStep.grade:
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -249,35 +232,16 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               values: const [9, 10, 11, 12],
               labelOf: l.onboardingGradeOption,
               selected: _grade,
-              onSelected: (g) => setState(() {
-                if (g != _grade) _hookScore = null;
-                _grade = g;
-              }),
+              onSelected: (g) => setState(() => _grade = g),
             ),
           ],
         );
+      case OnboardingStep.welcome:
       case OnboardingStep.hook:
-        return const SizedBox.shrink();
+        return const SizedBox.shrink(); // full-screen steps, built in build()
       case OnboardingStep.hookResult:
         final (correct, total) = _hookScore ?? (0, 0);
-        return Column(
-          children: [
-            const SizedBox(height: 24),
-            Icon(
-              Icons.emoji_events_outlined,
-              size: 64,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-            const SizedBox(height: 12),
-            Text(
-              l.onboardingHookResult(correct, total),
-              style: Theme.of(context).textTheme.headlineSmall,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 8),
-            Text(l.onboardingHookResultBody, textAlign: TextAlign.center),
-          ],
-        );
+        return _WarmUpResult(correct: correct, total: total);
       case OnboardingStep.stream:
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -351,40 +315,87 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
   Widget _hook() {
     final l = context.l10n;
-    final questions = ref.watch(hookQuestionsProvider);
-    return questions.when(
-      loading: () => const LoadingView(),
-      error: (_, _) => MessageView(message: l.commonError),
-      data: (all) {
-        final list = all[_grade] ?? const <Question>[];
-        if (list.isEmpty) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            if (mounted) setState(() => _hookScore = (0, 0));
-            if (mounted) fireAndForget(_continue());
-          });
-          return const SizedBox.shrink();
-        }
-        return Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-              child: Text(l.onboardingHookTitle, style: Theme.of(context).textTheme.titleMedium),
-            ),
-            Expanded(
-              child: PracticeRunner(
-                key: ValueKey('hook-$_grade'),
-                questions: list,
-                allowBookmarks: false,
-                allowReports: false,
-                onFinished: (session) {
-                  setState(() => _hookScore = (session.correctCount, session.total));
-                  fireAndForget(_continue());
-                },
-              ),
-            ),
-          ],
+    return ref
+        .watch(hookQuestionsProvider)
+        .when(
+          loading: () => const LoadingView(),
+          error: (_, _) => MessageView(message: l.commonError),
+          data: (list) {
+            if (list.isEmpty) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (!mounted) return;
+                setState(() => _hookScore = (0, 0));
+                fireAndForget(_continue());
+              });
+              return const SizedBox.shrink();
+            }
+            return WarmUpQuiz(
+              questions: list,
+              onFinished: (correct, total) {
+                setState(() => _hookScore = (correct, total));
+                fireAndForget(_continue());
+              },
+            );
+          },
         );
-      },
+  }
+}
+
+/// The warm-up score as a small celebration: a trophy and one star per right answer.
+class _WarmUpResult extends StatelessWidget {
+  const _WarmUpResult({required this.correct, required this.total});
+
+  final int correct;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[1];
+    return Column(
+      children: [
+        const SizedBox(height: 24),
+        Container(
+          width: 112,
+          height: 112,
+          decoration: BoxDecoration(color: accent.soft, shape: BoxShape.circle),
+          child: Center(
+            child: Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(color: accent.strong, shape: BoxShape.circle),
+              child: Icon(Icons.emoji_events_rounded, size: 44, color: accent.onStrong),
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        ExcludeSemantics(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (var i = 0; i < total; i++)
+                Icon(
+                  i < correct ? Icons.star_rounded : Icons.star_outline_rounded,
+                  size: 36,
+                  color: i < correct ? accent.strong : theme.colorScheme.outline,
+                ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          l.onboardingHookResult(correct, total),
+          style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 8),
+        Text(
+          correct * 5 >= total * 4 ? l.onboardingHookResultGreat : l.onboardingHookResultGood,
+          textAlign: TextAlign.center,
+          style: theme.textTheme.bodyLarge,
+        ),
+      ],
     );
   }
 }

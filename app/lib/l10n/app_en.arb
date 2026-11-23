@@ -68,9 +68,54 @@
       }
     }
   },
-  "onboardingHookTitle": "Quick warm-up: 5 questions",
+  "onboardingHookTitle": "Warm-up: 5 easy questions",
   "@onboardingHookTitle": {
     "description": "Title of the 30-second hook quiz"
+  },
+  "warmUpHint": "Just for fun. Tap an answer.",
+  "@warmUpHint": {
+    "description": "Line under the warm-up title"
+  },
+  "warmUpProgress": "Question {current} of {total}",
+  "@warmUpProgress": {
+    "description": "Warm-up progress",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "warmUpPraise1": "Great job!",
+  "@warmUpPraise1": {
+    "description": "Warm-up: right answer (1st, 4th question)"
+  },
+  "warmUpPraise2": "You got it!",
+  "@warmUpPraise2": {
+    "description": "Warm-up: right answer (2nd, 5th question)"
+  },
+  "warmUpPraise3": "Nice one!",
+  "@warmUpPraise3": {
+    "description": "Warm-up: right answer (3rd question)"
+  },
+  "warmUpAlmost": "Almost! The answer is {answer}.",
+  "@warmUpAlmost": {
+    "description": "Warm-up: wrong answer, kind",
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "warmUpNext": "Next",
+  "@warmUpNext": {
+    "description": "Warm-up: next question"
+  },
+  "warmUpSeeResult": "See my result",
+  "@warmUpSeeResult": {
+    "description": "Warm-up: after the last question"
   },
   "onboardingHookResult": "You got {correct} of {total}!",
   "@onboardingHookResult": {
@@ -84,9 +129,13 @@
       }
     }
   },
-  "onboardingHookResultBody": "Let's set up your plan so you can do even better.",
-  "@onboardingHookResultBody": {
-    "description": "Text under hook quiz result"
+  "onboardingHookResultGreat": "Great start! Now let's set up your plan.",
+  "@onboardingHookResultGreat": {
+    "description": "Under the warm-up result, 4 or 5 right"
+  },
+  "onboardingHookResultGood": "Good start! Guul 12 will help you get even better.",
+  "@onboardingHookResultGood": {
+    "description": "Under the warm-up result, 0 to 3 right"
   },
   "onboardingStreamTitle": "Which stream are you in?",
   "@onboardingStreamTitle": {
@@ -177,10 +226,6 @@
   "@navMe": {
     "description": "Bottom navigation"
   },
-  "homeGreeting": "Welcome back",
-  "@homeGreeting": {
-    "description": "Home screen greeting"
-  },
   "homeExamCountdown": "{days, plural, =0{Exam is today} =1{1 day to the exam} other{{days} days to the exam}}",
   "@homeExamCountdown": {
     "description": "Exam countdown",
@@ -209,10 +254,6 @@
   "homeQuick10": "Quick 10",
   "@homeQuick10": {
     "description": "Start a quick 10-question practice"
-  },
-  "homeQuick10Body": "10 mixed questions from what you have studied",
-  "@homeQuick10Body": {
-    "description": "Subtitle for Quick 10"
   },
   "homeContinueStudying": "Continue studying",
   "@homeContinueStudying": {
@@ -664,18 +705,6 @@
         "type": "String"
       }
     }
-  },
-  "onboardingWelcomeTitle": "Pass the national exam with Guul 12",
-  "@onboardingWelcomeTitle": {
-    "description": "UI text."
-  },
-  "onboardingWelcomeBody": "Short lessons, smart practice and mock exams. Works offline.",
-  "@onboardingWelcomeBody": {
-    "description": "UI text."
-  },
-  "onboardingStart": "Get started",
-  "@onboardingStart": {
-    "description": "UI text."
   },
   "regionName": "{code, select, somali{Somali} addis_ababa{Addis Ababa} afar{Afar} amhara{Amhara} benishangul_gumuz{Benishangul-Gumuz} central_ethiopia{Central Ethiopia} dire_dawa{Dire Dawa} gambela{Gambela} harari{Harari} oromia{Oromia} sidama{Sidama} south_ethiopia{South Ethiopia} south_west_ethiopia{South West Ethiopia} tigray{Tigray} other{Other}}",
   "@regionName": {
@@ -1199,10 +1228,6 @@
       }
     }
   },
-  "homeReviewBody": "Mistakes come back after 1, 3 and 7 days until you know them.",
-  "@homeReviewBody": {
-    "description": "Home card subtitle"
-  },
   "homeMistakes": "My mistakes",
   "@homeMistakes": {
     "description": "Home: mistakes notebook"
@@ -1244,10 +1269,6 @@
   "practiceModeSmart": "Smart practice",
   "@practiceModeSmart": {
     "description": "Adaptive practice mode"
-  },
-  "homeSmartBody": "10 questions picked for you: due reviews and your weak chapters first.",
-  "@homeSmartBody": {
-    "description": "Home smart practice subtitle"
   },
   "navProgress": "Progress",
   "@navProgress": {
@@ -1819,15 +1840,6 @@
   "@challengeTitle": {
     "description": "Title"
   },
-  "challengeBody": "{count, plural, =1{1 question, the same for everyone in your grade today} other{{count} questions, the same for everyone in your grade today}}",
-  "@challengeBody": {
-    "description": "Home card before playing",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "challengeDone": "Today: {correct} / {total} right",
   "@challengeDone": {
     "description": "Home card after playing",
@@ -1856,10 +1868,6 @@
   "battleTitle": "Battles",
   "@battleTitle": {
     "description": "Title"
-  },
-  "battleHomeBody": "Answer the same 10 questions as another student. No chat, only nicknames.",
-  "@battleHomeBody": {
-    "description": "Home card"
   },
   "battleQuick": "Quick battle",
   "@battleQuick": {
@@ -2208,5 +2216,177 @@
   "meDeleteDone": "Your account was deleted.",
   "@meDeleteDone": {
     "description": "Snack bar"
+  },
+  "walkSkip": "Skip",
+  "@walkSkip": {
+    "description": "Skip the welcome slides"
+  },
+  "walkNext": "Next",
+  "@walkNext": {
+    "description": "Next welcome slide"
+  },
+  "walkStart": "Let's start",
+  "@walkStart": {
+    "description": "Button on the last welcome slide"
+  },
+  "walkPage": "Page {page} of {total}",
+  "@walkPage": {
+    "description": "Screen-reader label of the slide dots",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "walk1Title": "Learn in short, clear lessons",
+  "@walk1Title": {
+    "description": "Welcome slide 1 title"
+  },
+  "walk1Body": "Every chapter has a short summary, solved examples and flashcards. They work offline too.",
+  "@walk1Body": {
+    "description": "Welcome slide 1 text"
+  },
+  "walk2Title": "Practise like the real exam",
+  "@walk2Title": {
+    "description": "Welcome slide 2 title"
+  },
+  "walk2Body": "Quick practice, a daily challenge and full mock exams with a timer show you where you stand.",
+  "@walk2Body": {
+    "description": "Welcome slide 2 text"
+  },
+  "walk3Title": "A little every day adds up",
+  "@walk3Title": {
+    "description": "Welcome slide 3 title"
+  },
+  "walk3Body": "Keep your streak, watch your progress grow and reach your target score.",
+  "@walk3Body": {
+    "description": "Welcome slide 3 text"
+  },
+  "homeGreeting": "{part, select, morning{Good morning!} afternoon{Good afternoon!} other{Good evening!}}",
+  "@homeGreeting": {
+    "description": "Home greeting by time of day",
+    "placeholders": {
+      "part": {
+        "type": "String"
+      }
+    }
+  },
+  "homeGreetingName": "{part, select, morning{Good morning, {name}!} afternoon{Good afternoon, {name}!} other{Good evening, {name}!}}",
+  "@homeGreetingName": {
+    "description": "Home greeting with the nickname",
+    "placeholders": {
+      "part": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeMoodStart": "Ready to learn something new today?",
+  "@homeMoodStart": {
+    "description": "Home: no answers yet today"
+  },
+  "homeMoodGoing": "{count, plural, =1{1 more question to reach today's goal} other{{count} more questions to reach today's goal}}",
+  "@homeMoodGoing": {
+    "description": "Home: some answers today",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeMoodDone": "Today's goal is done. Amazing!",
+  "@homeMoodDone": {
+    "description": "Home: goal reached"
+  },
+  "homeGoalLabel": "Today's goal",
+  "@homeGoalLabel": {
+    "description": "Under the goal ring"
+  },
+  "homeGoalRing": "{done} of {goal} questions today",
+  "@homeGoalRing": {
+    "description": "Screen-reader label of the goal ring",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "homeContinueTitle": "Continue where you left off",
+  "@homeContinueTitle": {
+    "description": "Big card: last chapter"
+  },
+  "homeStartTitle": "Start your first lesson",
+  "@homeStartTitle": {
+    "description": "Big card: nothing studied yet"
+  },
+  "homeStartBody": "Pick a subject and open a chapter. It takes about 5 minutes.",
+  "@homeStartBody": {
+    "description": "Big card text: nothing studied yet"
+  },
+  "homeForYou": "For you today",
+  "@homeForYou": {
+    "description": "Home section title"
+  },
+  "homeSubjects": "Your subjects",
+  "@homeSubjects": {
+    "description": "Home section title"
+  },
+  "homeSeeAll": "See all",
+  "@homeSeeAll": {
+    "description": "Link to the Study tab"
+  },
+  "homeTipTitle": "Tip of the day",
+  "@homeTipTitle": {
+    "description": "Home tip card title"
+  },
+  "homeTip": "{n, select, 0{Study for 25 minutes, then rest for 5. Your brain remembers more.} 1{Got a question wrong? Read the explanation. Mistakes are how you learn.} 2{Explain a topic out loud as if you were the teacher.} 3{Sleep well before an exam. A rested brain thinks faster.} 4{Do a little every day. Ten questions a day is better than a hundred once a week.} 5{Read the whole question twice before you choose an answer.} 6{Start with the subject you like least while your mind is fresh.} 7{Write short notes in your own words after each chapter.} 8{In a mock exam, skip a hard question and come back to it later.} other{Drink water and take short walks. Your body helps your brain.}}",
+  "@homeTip": {
+    "description": "Tip of the day (one per day, in turn)",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "homeTileChallenge": "{count} questions",
+  "@homeTileChallenge": {
+    "description": "Challenge tile line",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeTileBattle": "Play another student",
+  "@homeTileBattle": {
+    "description": "Battles tile line"
+  },
+  "homeTileQuick": "10 mixed questions",
+  "@homeTileQuick": {
+    "description": "Quick 10 tile line"
+  },
+  "homeTileSmart": "Your weak spots",
+  "@homeTileSmart": {
+    "description": "Smart practice tile line"
+  },
+  "homeTileReview": "Review",
+  "@homeTileReview": {
+    "description": "Review tile title"
+  },
+  "homeTileMore": "More practice",
+  "@homeTileMore": {
+    "description": "Tile that opens all practice modes"
+  },
+  "homeTileMoreLine": "Pick a mode",
+  "@homeTileMoreLine": {
+    "description": "More practice tile line"
   }
 }
