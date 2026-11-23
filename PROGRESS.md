@@ -1,9 +1,9 @@
 # PROGRESS
 
-📍 Phase 3 of 5 · Step 8 of 8: exams, adaptive practice, mistakes, spaced repetition, study plan, Phase 3 report → next: Phase 4 (engagement, ads, AI help, Premium)
+📍 Phase 4 of 5 · Step 9 of 9: engagement, leaderboard, daily challenge, battles, referral, reminders, ads, Explain more, Premium flow, Phase 4 report → next: Phase 5 (landing page, ops, store pack, release)
 📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
-📊 Whole project: ▓▓▓▓▓▓▓░░░ 66% done · 34% left
-⚠️ Waiting for: owner test + merge of PR #1, #2, #3 (in that order); `NOVA_USERNAME` / `NOVA_LICENSE_KEY` GitHub secrets for the Nova CI step
+📊 Whole project: ▓▓▓▓▓▓▓▓▓░ 86% done · 14% left
+⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4; referral reward choice (QUESTIONS #40); AdMob IDs, Anthropic API key, Nova secrets
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -11,8 +11,22 @@
 | 1 Backend core + app core | 24% | ✅ done — waiting for owner test (PR #1) |
 | 2 Content + quality gate + Grade 12 | 22% | ✅ done — waiting for owner test (PR #2) |
 | 3 Exams + adaptive + SRS | 16% | ✅ done — waiting for owner test (PR #3) |
-| 4 Engagement + ads + AI + Premium | 20% | not started |
+| 4 Engagement + ads + AI + Premium | 20% | ✅ done — waiting for owner test (PR #4) |
 | 5 Landing + ops + store + Nova | 14% | not started |
+
+## Phase 4 steps
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Streak, XP, badges (worked out on the phone) | ✅ |
+| 2 | Daily reminder (WorkManager, inexact, no exact alarms) | ✅ |
+| 3 | Nickname + built-in avatars, weekly leaderboard, daily challenge | ✅ |
+| 4 | Battles (quick battle, friend code; no chat) | ✅ |
+| 5 | Referral (reward is a setting; owner to confirm) | ✅ |
+| 6 | Ads: small banner above the tabs + rewarded video; teen, non-personalised | ✅ |
+| 7 | Explain more (Claude Haiku 5.5, Premium, off without a key) | ✅ |
+| 8 | Premium flow (neutral end notes, staff guide) | ✅ |
+| 9 | CI green, Phase 4 report | ✅ 216 backend + 345 app tests |
 
 ## Phase 3 steps
 
