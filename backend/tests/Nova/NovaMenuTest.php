@@ -54,6 +54,17 @@ class NovaMenuTest extends TestCase
         $this->assertSame(['Overview', 'Content'], $dashboards(UserRole::ContentChecker));
     }
 
+    public function test_activity_pages_sit_in_the_right_sections(): void
+    {
+        $items = [];
+        foreach ($this->menuFor(User::factory()->staff(UserRole::SuperAdmin)->create()) as $section) {
+            $items[(string) $section['name']] = array_column($section['items'], 'name');
+        }
+        $this->assertContains('Referrals', $items['Students & Premium']);
+        $this->assertContains('Mock exams', $items['Content']);
+        $this->assertContains('Battles', $items['Community']);
+    }
+
     public function test_open_reports_show_a_badge_and_none_when_zero(): void
     {
         $checker = User::factory()->staff(UserRole::ContentChecker)->create();

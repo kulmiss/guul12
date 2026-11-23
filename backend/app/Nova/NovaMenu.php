@@ -37,6 +37,7 @@ class NovaMenu
                     ->withBadge(fn (): string|false => self::count(PaymentRequest::query()->where('status', PaymentRequestStatus::Waiting->value)->count()), 'warning'),
                 MenuItem::resource(Resources\Student::class),
                 MenuItem::resource(Resources\PremiumGrant::class),
+                MenuItem::resource(Resources\Referral::class),
             ])->icon('users')->collapsable()->canSee(self::allowedTo('manage-premium')),
 
             MenuSection::make('Content', [
@@ -44,6 +45,7 @@ class NovaMenu
                     ->withBadge(fn (): string|false => self::count(QuestionReport::query()->where('status', ReportStatus::Open->value)->count()), 'warning'),
                 MenuItem::resource(Resources\Question::class),
                 MenuItem::resource(Resources\Chapter::class),
+                MenuItem::resource(Resources\Mock::class),
                 MenuItem::resource(Resources\Unit::class),
                 MenuItem::resource(Resources\Subject::class),
                 MenuItem::resource(Resources\Summary::class),
@@ -56,6 +58,7 @@ class NovaMenu
             MenuSection::make('Community', [
                 MenuItem::resource(Resources\NicknameReport::class)
                     ->withBadge(fn (): string|false => self::count(NicknameReport::query()->where('status', NicknameReportStatus::Open->value)->count()), 'warning'),
+                MenuItem::resource(Resources\Battle::class),
             ])->icon('user-group')->collapsable()->canSee(self::allowedTo('moderate')),
 
             MenuSection::make('Settings', [

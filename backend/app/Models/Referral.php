@@ -16,6 +16,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon $created_at
  * @property-read User $inviter
  * @property-read User $invitee
+ * @property-read PremiumGrant|null $premiumGrant
  */
 class Referral extends Model
 {
@@ -49,5 +50,15 @@ class Referral extends Model
     public function invitee(): BelongsTo
     {
         return $this->belongsTo(User::class, 'invitee_id');
+    }
+
+    /**
+     * The Premium days the inviter got for this referral, if any.
+     *
+     * @return BelongsTo<PremiumGrant, $this>
+     */
+    public function premiumGrant(): BelongsTo
+    {
+        return $this->belongsTo(PremiumGrant::class);
     }
 }

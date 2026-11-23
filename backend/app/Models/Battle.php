@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 
 /**
@@ -19,6 +20,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon $created_at
  * @property-read User $creator
  * @property-read User|null $opponent
+ * @property-read Subject|null $subject
  */
 class Battle extends Model
 {
@@ -50,6 +52,24 @@ class Battle extends Model
     public function opponent(): BelongsTo
     {
         return $this->belongsTo(User::class, 'opponent_id');
+    }
+
+    /**
+     * @return BelongsTo<Subject, $this>
+     */
+    public function subject(): BelongsTo
+    {
+        return $this->belongsTo(Subject::class);
+    }
+
+    /**
+     * The players' answers to this battle (one attempt each).
+     *
+     * @return HasMany<Attempt, $this>
+     */
+    public function attempts(): HasMany
+    {
+        return $this->hasMany(Attempt::class);
     }
 
     public function hasPlayer(User $user): bool

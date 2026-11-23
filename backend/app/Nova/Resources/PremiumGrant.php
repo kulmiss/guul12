@@ -5,7 +5,7 @@ namespace App\Nova\Resources;
 use App\Models\PremiumGrant as PremiumGrantModel;
 use App\Nova\Actions\RevokePremium;
 use App\Nova\Fields\Show;
-use Illuminate\Http\Request;
+use App\Nova\Resources\Concerns\ReadOnlyResource;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
@@ -25,6 +25,8 @@ use Laravel\Nova\Query\Search\SearchableRelation;
  */
 class PremiumGrant extends Resource
 {
+    use ReadOnlyResource;
+
     /** @var class-string<PremiumGrantModel> */
     public static $model = PremiumGrantModel::class;
 
@@ -39,21 +41,6 @@ class PremiumGrant extends Resource
     public static function searchableColumns(): array
     {
         return ['payment_ref', new SearchableRelation('user', 'student_id')];
-    }
-
-    public static function authorizedToCreate(Request $request): bool
-    {
-        return false;
-    }
-
-    public function authorizedToUpdate(Request $request): bool
-    {
-        return false;
-    }
-
-    public function authorizedToDelete(Request $request): bool
-    {
-        return false;
     }
 
     /** @return array<int, Field|Panel> */

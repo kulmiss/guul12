@@ -6,11 +6,15 @@ use App\Enums\PremiumPlan;
 use App\Enums\UserRole;
 use App\Models\AppSetting;
 use App\Models\AuditLog;
+use App\Models\Battle;
 use App\Models\Chapter;
+use App\Models\Mock;
 use App\Models\NicknameReport;
 use App\Models\PremiumGrant;
 use App\Models\Question;
 use App\Models\QuestionReport;
+use App\Models\Referral;
+use App\Models\Subject;
 use App\Models\User;
 use App\Services\PaymentRequests;
 use App\Services\PremiumService;
@@ -42,6 +46,9 @@ class NovaAccessMatrixTest extends TestCase
         $setting = AppSetting::query()->create(['key' => 'exam_date', 'value' => '2027-06-29']);
         $log = AuditLog::write(null, 'test.event');
         $report = NicknameReport::query()->create(['reporter_id' => User::factory()->create()->id, 'reported_user_id' => $student->id, 'nickname' => 'Someone', 'reason' => 'rude']);
+        $mock = Mock::query()->create(['uid' => 'm-1', 'subject_id' => Subject::factory()->create()->id, 'grade' => 12, 'number' => 1, 'title' => 'Mock 1', 'minutes' => 60]);
+        $battle = Battle::query()->create(['code' => 'ABC123', 'key' => 'g12-natural', 'is_random' => false, 'question_ids' => [1], 'creator_id' => $student->id, 'expires_at' => now()->addDay()]);
+        $referral = Referral::query()->create(['inviter_id' => $student->id, 'invitee_id' => User::factory()->create()->id, 'status' => Referral::PENDING]);
 
         $premium = [UserRole::SuperAdmin, UserRole::PaymentsHelper];
         $content = [UserRole::SuperAdmin, UserRole::ContentChecker];
@@ -54,6 +61,9 @@ class NovaAccessMatrixTest extends TestCase
             'questions' => [$question->id, $content],
             'chapters' => [$question->chapter_id, $content],
             'nickname-reports' => [$report->id, $content],
+            'mocks' => [$mock->id, $content],
+            'battles' => [$battle->id, $content],
+            'referrals' => [$referral->id, $premium],
             'app-settings' => [$setting->id, $admin],
             'audit-logs' => [$log->id, $admin],
             'staff' => [$helper->id, $admin],
