@@ -19,7 +19,7 @@ return [
         ['Mock exams', 'Real exam mode with a timer, a question map and your result by chapter.'],
         ['Your own study plan', 'Tell the app your minutes per day. It plans new chapters, weak topics and revision.'],
         ['Works offline', 'Chapters you open stay on your phone. Practise without data.'],
-        ['Private by design', 'Only a nickname and an avatar are ever shown. No chat, no contacts, no location.'],
+        ['Private by design', 'Only a nickname and an avatar are ever shown. No chat, no contacts, no phone location.'],
     ],
     'free_title' => 'Free to start',
     'free_body' => 'Most of the app is free. Some features need Premium.',

@@ -23,7 +23,7 @@
     </ul>
 
     <h2>What we never collect</h2>
-    <p>No contacts, no location, no photos, no camera, no microphone. There is no chat between students and no public profile.</p>
+    <p>No contacts, no phone location (GPS), no photos, no camera, no microphone. We only know the region and city you type in your study profile. There is no chat between students and no public profile.</p>
 
     <h2>Who else receives data</h2>
     <ul>

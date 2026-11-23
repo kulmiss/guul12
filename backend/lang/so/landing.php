@@ -19,7 +19,7 @@ return [
         ['Imtixaanno tijaabo ah', 'Hab imtixaan dhab ah oo saacad leh, khariidad su’aalaha iyo natiijadaada cutub kasta.'],
         ['Qorshahaaga waxbarasho', 'U sheeg abka daqiiqadahaaga maalinle. Wuxuu qorsheeyaa cutubyo cusub, mawduucyada aad ku liidato iyo dib u eegis.'],
         ['Internet la’aan ayuu shaqeeyaa', 'Cutubyada aad furto taleefankaaga ayay ku harayaan.'],
-        ['Asturnaan buuxda', 'Kaliya naanays iyo sawir-calaamad ayaa la muujiyaa. Sheeko la’aan, xiriirro la’aan, goob la’aan.'],
+        ['Asturnaan buuxda', 'Kaliya naanays iyo sawir-calaamad ayaa la muujiyaa. Sheeko la’aan, xiriirro la’aan, goobta taleefanka la’aan.'],
     ],
     'free_title' => 'Bilaash ku bilow',
     'free_body' => 'Inta badan abka waa bilaash. Qaar ka mid ah astaamaha waxay u baahan yihiin Premium.',

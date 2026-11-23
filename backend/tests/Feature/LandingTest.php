@@ -102,7 +102,8 @@ class LandingTest extends TestCase
     public function test_legal_pages_explain_data_and_deletion(): void
     {
         $this->get('/privacy')->assertOk()
-            ->assertSee('No contacts, no location, no photos')
+            ->assertSee('No contacts, no phone location (GPS), no photos')
+            ->assertSee('the region and city you type')
             ->assertSee('Anthropic')
             ->assertSee('Our contact email is coming soon.');
         $this->get('/delete-account')->assertOk()->assertSee('Delete my account');
