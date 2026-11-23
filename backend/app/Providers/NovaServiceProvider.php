@@ -4,7 +4,9 @@ namespace App\Providers;
 
 use App\Models\User;
 use App\Nova\Dashboards\Main;
+use App\Nova\NovaMenu;
 use App\Nova\Resources;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Dashboard;
 use Laravel\Nova\Nova;
@@ -20,6 +22,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         parent::boot();
 
         Nova::footer(fn (): string => 'Guul 12 admin');
+        Nova::mainMenu(fn (Request $request): array => NovaMenu::sections($request));
     }
 
     protected function routes(): void

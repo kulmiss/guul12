@@ -30,6 +30,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string|null $reminder_time
  * @property string|null $referral_code
  * @property string|null $nickname
+ * @property Carbon|null $leaderboard_blocked_at
  * @property string|null $avatar_style
  * @property string|null $avatar_seed
  * @property Carbon|null $onboarded_at
@@ -81,6 +82,7 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'onboarded_at' => 'datetime',
             'last_active_at' => 'datetime',
+            'leaderboard_blocked_at' => 'datetime',
             'password' => 'hashed',
         ];
     }

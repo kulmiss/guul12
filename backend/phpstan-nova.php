@@ -12,6 +12,7 @@ return [
             'analyse' => [
                 __DIR__.'/app/Nova',
                 __DIR__.'/app/Providers/NovaServiceProvider.php',
+                __DIR__.'/tests/Nova',
             ],
         ],
     ],
