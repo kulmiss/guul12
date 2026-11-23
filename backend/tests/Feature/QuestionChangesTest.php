@@ -54,7 +54,7 @@ class QuestionChangesTest extends TestCase
         $this->assertSame(QuestionStatus::Published, $beta->refresh()->status);
         $this->assertNotNull($beta->published_at);
         $log = AuditLog::query()->where('action', 'question.status')->firstOrFail();
-        $this->assertSame(['old' => ['status' => 'beta'], 'new' => ['status' => 'published']], $log->data);
+        $this->assertSameJson(['old' => ['status' => 'beta'], 'new' => ['status' => 'published']], $log->data);
 
         foreach ([QuestionStatus::Draft, QuestionStatus::Checked, QuestionStatus::Reported, QuestionStatus::Retired] as $status) {
             $q = $this->question($status);
@@ -96,7 +96,7 @@ class QuestionChangesTest extends TestCase
         $changed = ContentChange::query()->where('id', '>', $before)->pluck('chapter_id')->unique()->sort()->values()->all();
         $this->assertSame([$old, $new->id], $changed, 'phones refresh both the old and the new chapter');
         $log = AuditLog::query()->where('action', 'question.chapter')->firstOrFail();
-        $this->assertSame(['old' => ['chapter_id' => $old], 'new' => ['chapter_id' => $new->id]], $log->data);
+        $this->assertSameJson(['old' => ['chapter_id' => $old], 'new' => ['chapter_id' => $new->id]], $log->data);
     }
 
     public function test_duplicate_makes_a_draft_copy_with_options_and_no_history(): void
@@ -112,7 +112,7 @@ class QuestionChangesTest extends TestCase
         $this->assertSame($original->stem, $copy->stem);
         $this->assertEquals($original->answer_key, $copy->answer_key);
         $this->assertSame(['A', 'B', 'C', 'D'], QuestionOption::query()->where('question_id', $copy->id)->orderBy('sort')->pluck('key')->all());
-        $this->assertSame(['from' => $original->id], AuditLog::query()->where('action', 'question.duplicated')->firstOrFail()->data);
+        $this->assertSameJson(['from' => $original->id], AuditLog::query()->where('action', 'question.duplicated')->firstOrFail()->data);
     }
 
     public function test_mark_fixed_rescores_old_answers_quietly(): void
@@ -192,7 +192,7 @@ YAML;
         $this->assertSame(QuestionType::SingleChoice, $questions[0]->type);
         $this->assertSame(['correct' => 'B'], $questions[0]->answer_key);
         $this->assertSame(3, QuestionOption::query()->where('question_id', $questions[0]->id)->count());
-        $this->assertSame(['chapter_id' => $chapter->id, 'questions' => 2], AuditLog::query()->where('action', 'question.imported')->firstOrFail()->data);
+        $this->assertSameJson(['chapter_id' => $chapter->id, 'questions' => 2], AuditLog::query()->where('action', 'question.imported')->firstOrFail()->data);
     }
 
     public function test_bulk_import_is_all_or_nothing(): void

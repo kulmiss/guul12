@@ -60,7 +60,7 @@ class StaffContentChangesTest extends TestCase
         $this->withToken($token)->getJson('/api/v1/mocks')->assertOk()->assertJsonCount(0, 'mocks');
         $this->withToken($token)->getJson("/api/v1/mocks/{$mock->id}")->assertNotFound();
         $log = AuditLog::query()->where('action', 'mock.published')->firstOrFail();
-        $this->assertSame(['old' => ['shown' => true], 'new' => ['shown' => false]], $log->data);
+        $this->assertSameJson(['old' => ['shown' => true], 'new' => ['shown' => false]], $log->data);
 
         // The content import switches mocks on, but never undoes a staff "unpublish".
         $mock->forceFill(['is_active' => true])->save();
@@ -106,8 +106,7 @@ class StaffContentChangesTest extends TestCase
         $this->assertFalse($this->changes->setVideoAccess($chapter, Access::Premium, $this->checker), 'no change');
         $this->assertFalse($this->changes->setVideoAccess($noVideo, Access::Premium, $this->checker), 'no video');
         $this->assertSame('premium', $chapter->refresh()->video_access->value);
-        $this->assertSame(['old' => ['video_access' => 'free'], 'new' => ['video_access' => 'premium']],
-            AuditLog::query()->where('action', 'chapter.video_access')->firstOrFail()->data);
+        $this->assertSameJson(['old' => ['video_access' => 'free'], 'new' => ['video_access' => 'premium']], AuditLog::query()->where('action', 'chapter.video_access')->firstOrFail()->data);
         $this->assertTrue(ContentChange::query()->where('id', '>', $before)->where('chapter_id', $chapter->id)->exists());
 
         $cursor = ContentChange::latestCursor();

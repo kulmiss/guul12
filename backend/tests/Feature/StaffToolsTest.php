@@ -51,7 +51,7 @@ class StaffToolsTest extends TestCase
         $this->assertFalse(Cache::has('app_settings.all'));
         $this->assertFalse(Cache::has('feature_switches.all'));
         $this->assertSame($version + 1, (int) Cache::get(Leaderboard::VERSION_KEY));
-        $this->assertSame(['cleared' => $done], AuditLog::query()->where('action', 'ops.cache_refreshed')->firstOrFail()->data);
+        $this->assertSameJson(['cleared' => $done], AuditLog::query()->where('action', 'ops.cache_refreshed')->firstOrFail()->data);
     }
 
     public function test_telegram_test_says_when_it_is_not_set_up(): void
