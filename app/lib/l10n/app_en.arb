@@ -2109,5 +2109,23 @@
   "explainOffline": "Explain more needs the internet.",
   "@explainOffline": {
     "description": "Offline"
+  },
+  "premiumEnding": "Your Premium ends on {date}.",
+  "@premiumEnding": {
+    "description": "Neutral note, no instructions",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumEnded": "Your Premium ended on {date}.",
+  "@premiumEnded": {
+    "description": "Neutral note, no instructions",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }

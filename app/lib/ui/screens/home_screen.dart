@@ -6,12 +6,14 @@ import 'package:material_ui/material_ui.dart';
 import '../../app/challenge_providers.dart';
 import '../../app/engagement_providers.dart';
 import '../../app/plan_providers.dart';
+import '../../app/premium_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
 import '../../data/models.dart';
 import '../../domain/engagement.dart';
 import '../../domain/ethiopian_calendar.dart';
 import '../../domain/practice.dart';
+import '../../domain/premium_notice.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../plan/plan_screen.dart';
 import '../practice/practice_screen.dart';
@@ -40,6 +42,7 @@ class HomeScreen extends ConsumerWidget {
     final due = ref.watch(reviewDueCountProvider).value ?? 0;
     final plan = ref.watch(todayPlanProvider).value;
     final engagement = ref.watch(engagementProvider).value;
+    final premiumNote = ref.watch(premiumNoticeProvider).value;
     final challengeOn = config?.feature('daily_challenge') ?? false;
     final battlesOn = config?.feature('battles') ?? false;
     final challenge = challengeOn ? ref.watch(dailyChallengeProvider).value : null;
@@ -64,6 +67,18 @@ class HomeScreen extends ConsumerWidget {
                   if (!online) _Banner(icon: Icons.cloud_off, text: l.commonOffline),
                   if (maintenance != null && maintenance.isNotEmpty)
                     _Banner(icon: Icons.campaign_outlined, text: maintenance),
+                  if (premiumNote != null)
+                    _Banner(
+                      icon: Icons.workspace_premium_outlined,
+                      text: switch (premiumNote) {
+                        PremiumEnding(:final date) => l.premiumEnding(
+                          DateFormat.yMMMd(l.localeName).format(date.toLocal()),
+                        ),
+                        PremiumEnded(:final date) => l.premiumEnded(
+                          DateFormat.yMMMd(l.localeName).format(date.toLocal()),
+                        ),
+                      },
+                    ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                     child: Text(l.homeGreeting, style: Theme.of(context).textTheme.headlineSmall),

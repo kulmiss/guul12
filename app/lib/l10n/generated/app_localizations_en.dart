@@ -1540,4 +1540,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get explainOffline => 'Explain more needs the internet.';
+
+  @override
+  String premiumEnding(String date) {
+    return 'Your Premium ends on $date.';
+  }
+
+  @override
+  String premiumEnded(String date) {
+    return 'Your Premium ended on $date.';
+  }
 }

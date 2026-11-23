@@ -2551,6 +2551,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Explain more needs the internet.'**
   String get explainOffline;
+
+  /// Neutral note, no instructions
+  ///
+  /// In en, this message translates to:
+  /// **'Your Premium ends on {date}.'**
+  String premiumEnding(String date);
+
+  /// Neutral note, no instructions
+  ///
+  /// In en, this message translates to:
+  /// **'Your Premium ended on {date}.'**
+  String premiumEnded(String date);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

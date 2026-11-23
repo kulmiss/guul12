@@ -11,7 +11,10 @@ final adsAllowedProvider = Provider<bool>((ref) {
   final config = ref.watch(configProvider).value;
   final profile = ref.watch(profileProvider).value;
   if (config == null || profile == null) return false;
-  return config.showAds && !profile.premiumActive;
+  final until = profile.premiumUntil;
+  final now = ref.watch(clockProvider)();
+  final premium = profile.premiumActive && (until == null || until.isAfter(now));
+  return config.showAds && !premium;
 });
 
 final rewardedAllowedProvider = Provider<bool>((ref) {

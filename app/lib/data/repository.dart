@@ -23,6 +23,7 @@ abstract final class Keys {
   static const historyRestored = 'history_restored';
   static const planMinutes = 'plan_minutes';
   static const planToday = 'plan_today';
+  static const lastPremiumUntil = 'premium_last_until';
 }
 
 /// Today's plan as saved on the phone, so it does not change while the student works on it.
@@ -91,7 +92,7 @@ class Repository {
       'app_version': ?appVersion,
     }, auth: false);
     await tokens.writeToken(asString(json['token']));
-    await db.writeJson(Keys.serverProfile, asMap(json['user']));
+    await _saveServerProfile(asMap(json['user']));
   }
 
   /// Runs [call]; if the token was rejected (e.g. account merged elsewhere), registers again once and retries.
@@ -113,13 +114,27 @@ class Repository {
           api.post('auth/google', {'id_token': idToken, 'install_id': await tokens.installId()}),
     );
     await tokens.writeToken(asString(json['token']));
-    await db.writeJson(Keys.serverProfile, asMap(json['user']));
+    await _saveServerProfile(asMap(json['user']));
     // The account may now be an older one with its own history: fetch it on the next sync.
     await db.writeString(Keys.historyRestored, '');
     return profile();
   }
 
   // ---- profile ---------------------------------------------------------------------------------
+
+  /// Saves the server's profile, and remembers the last Premium end date seen (the server stops
+  /// sending it once Premium has ended; the phone uses it for "Your Premium ended on …").
+  Future<void> _saveServerProfile(Map<String, Object?> user) async {
+    await db.writeJson(Keys.serverProfile, user);
+    final until = asStringOrNull(asMap(user['premium'])['until']);
+    if (until != null) await db.writeString(Keys.lastPremiumUntil, until);
+  }
+
+  /// The last Premium end date this phone saw, or null.
+  Future<DateTime?> lastPremiumUntil() async {
+    final raw = await db.readString(Keys.lastPremiumUntil);
+    return raw == null ? null : DateTime.tryParse(raw);
+  }
 
   /// Server profile with any changes not yet uploaded applied on top.
   Future<Profile> profile() => profileFrom(db);
@@ -165,7 +180,7 @@ class Repository {
     // The server only accepts `onboarded: true`.
     if (body['onboarded'] != true) body.remove('onboarded');
     final json = await _authed(() => api.patch('me', body));
-    await db.writeJson(Keys.serverProfile, asMap(json['user']));
+    await _saveServerProfile(asMap(json['user']));
     // Only clear what was sent; newer local edits stay pending.
     final now = await db.readJson(Keys.pendingProfile) ?? const {};
     final remaining = {
@@ -190,12 +205,12 @@ class Repository {
         'avatar_seed': avatarSeed,
       }),
     );
-    await db.writeJson(Keys.serverProfile, asMap(json['user']));
+    await _saveServerProfile(asMap(json['user']));
   }
 
   Future<void> refreshProfile() async {
     final json = await _authed(() => api.get('me'));
-    await db.writeJson(Keys.serverProfile, asMap(json['user']));
+    await _saveServerProfile(asMap(json['user']));
   }
 
   // ---- config ----------------------------------------------------------------------------------
