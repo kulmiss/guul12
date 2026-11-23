@@ -12,7 +12,6 @@
 | 2 | Welcome | One plain screen | **3 swipe slides** with original drawings in the brand colours: short lessons, real-exam practice, a little every day. Skip, dots, "Let's start" |
 | 2b | Order | Welcome → grade → warm-up → profile | **Slides → warm-up → result → grade → profile.** Only setup questions are numbered ("Step 1 of 5") |
 | 3 | Home | Plain list of white cards | **Coloured top card** (Good morning + nickname + avatar, today's-goal ring, streak, exam countdown), big **Continue** card, **colourful tiles**, **subject shortcuts**, **tip of the day** (10 tips, a new one each day), gentle one-time animations |
-
 | 4 | Home extras (added later, your pick) | — | **This week**: Mon–Sun dots, filled with a green tick when the daily goal was reached. **Your weakest chapter**: name, subject, % right, "Practise it". **Next badge**: the badge closest to done, with a progress bar |
 
 **Kept from before:**
@@ -48,7 +47,7 @@ Files are in `app/test/golden/goldens/` on the PR branch.
 | flutter analyze / dart format | 0 issues / clean |
 | Warm-up answers | Solved a second time in the test, by answer text, not letter |
 | gitleaks | Clean |
-| CI (GitHub Actions) | **Green** at eaf31fd and ebd74cd (extras): App (analyze, 378 tests, goldens, release APK + app bundle, 8-permission check) and Secrets scan |
+| CI (GitHub Actions) | **Green** at eaf31fd and ebd74cd (extras): App (analyze, all tests and goldens, release APK + app bundle, 8-permission check) and Secrets scan |
 
 ## 4. What I could NOT test
 
