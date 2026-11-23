@@ -154,6 +154,8 @@ class BattleService
             'me' => ['nickname' => $me->nickname, 'avatar_style' => $me->avatar_style, 'avatar_seed' => $me->avatar_seed, 'result' => $mine],
             'opponent' => $other === null ? null : [
                 'nickname' => $other->nickname,
+                // Private reference for "Report nickname" (never the student's ID).
+                'ref' => app(NicknameModeration::class)->refFor($other),
                 'avatar_style' => $other->avatar_style,
                 'avatar_seed' => $other->avatar_seed,
                 'result' => $theirs,

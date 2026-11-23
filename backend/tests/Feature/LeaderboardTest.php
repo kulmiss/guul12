@@ -98,10 +98,15 @@ class LeaderboardTest extends TestCase
 
         $json = $this->getJson('/api/v1/leaderboard')->assertOk()->json();
         $this->assertCount(1, $json['top']);
+        // Exactly these fields; 'ref' is an encrypted reference for "Report nickname" (never an ID).
+        $row = $json['top'][0];
+        $this->assertIsString($row['ref']);
+        unset($row['ref']);
         $this->assertSame(
             ['rank' => 1, 'nickname' => 'Hodan', 'avatar_style' => 'thumbs', 'avatar_seed' => 'a01', 'xp' => 50, 'is_me' => false],
-            $json['top'][0],
+            $row,
         );
+        $this->assertSame(['rank', 'nickname', 'avatar_style', 'avatar_seed', 'xp', 'is_me', 'ref'], array_keys($json['top'][0]));
         $this->assertSame(['has_nickname' => false, 'xp' => 50, 'rank' => null], $json['me']);
         $this->assertStringNotContainsString('somali', json_encode($json) ?: '');
         $this->assertNotContains('Idle', array_column($json['top'], 'nickname'));

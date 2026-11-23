@@ -43,9 +43,9 @@ class NovaMenuTest extends TestCase
 
     public function test_each_role_sees_only_its_sections(): void
     {
-        $this->assertSame(['Main', 'Students & Premium', 'Content', 'Settings', 'System'], $this->sectionsFor(UserRole::SuperAdmin));
+        $this->assertSame(['Main', 'Students & Premium', 'Content', 'Community', 'Settings', 'System'], $this->sectionsFor(UserRole::SuperAdmin));
         $this->assertSame(['Main', 'Students & Premium'], $this->sectionsFor(UserRole::PaymentsHelper));
-        $this->assertSame(['Main', 'Content'], $this->sectionsFor(UserRole::ContentChecker));
+        $this->assertSame(['Main', 'Content', 'Community'], $this->sectionsFor(UserRole::ContentChecker));
     }
 
     public function test_open_reports_show_a_badge_and_none_when_zero(): void

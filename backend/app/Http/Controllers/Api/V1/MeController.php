@@ -8,6 +8,7 @@ use App\Http\Presenters\MePresenter;
 use App\Models\Subject;
 use App\Models\User;
 use App\Services\NicknameFilter;
+use App\Services\NicknameModeration;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -55,7 +56,7 @@ class MeController extends Controller
         return response()->json(['user' => $this->me->present($user)]);
     }
 
-    public function update(Request $request, NicknameFilter $nicknames): JsonResponse
+    public function update(Request $request, NicknameFilter $nicknames, NicknameModeration $moderation): JsonResponse
     {
         /** @var User $user */
         $user = $request->user();
@@ -79,7 +80,8 @@ class MeController extends Controller
         if (isset($data['nickname']) && is_string($data['nickname'])) {
             $data['nickname'] = trim((string) preg_replace('/\s+/u', ' ', $data['nickname']));
 
-            if (! $nicknames->isAllowed($data['nickname'])) {
+            // Rude words, or a nickname staff removed before (in any spelling).
+            if (! $nicknames->isAllowed($data['nickname']) || $moderation->wasRemoved($data['nickname'])) {
                 return response()->json([
                     'message' => 'Please choose another nickname.',
                     'errors' => ['nickname' => ['Please choose another nickname.']],

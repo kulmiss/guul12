@@ -563,6 +563,19 @@ class Repository {
   Future<DailyChallengeInfo> dailyChallenge() async =>
       DailyChallengeInfo.fromJson(await _authed(() => api.get('challenge')));
 
+  /// "Report nickname" from a leaderboard or battle row (online only). Throws [ApiException]
+  /// (report_limit, own_nickname, no_nickname, unknown_student, or offline).
+  Future<void> reportNickname(String ref, {required String reason, String? note}) async {
+    final text = note?.trim();
+    await _authed(
+      () => api.post('nickname-reports', {
+        'ref': ref,
+        'reason': reason,
+        if (text != null && text.isNotEmpty) 'note': text,
+      }),
+    );
+  }
+
   /// This week's leaderboard (online only). Offline work is uploaded first so the student's own
   /// points are up to date.
   Future<WeeklyLeaderboard> leaderboard({String? appVersion}) async {

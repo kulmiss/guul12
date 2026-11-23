@@ -93,6 +93,7 @@ FakeServer richServer() {
           'avatar_seed': 'a0${i + 2}',
           'xp': xp,
           'is_me': i == 4,
+          'ref': i == 4 ? null : 'ref-$nick',
         },
     ],
     'me': {'has_nickname': true, 'xp': 610, 'rank': 5},

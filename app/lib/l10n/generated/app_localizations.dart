@@ -2126,6 +2126,78 @@ abstract class AppLocalizations {
   /// **'See the weekly leaderboard'**
   String get leaderboardOpen;
 
+  /// Menu item and tooltip on another student's leaderboard or battle row
+  ///
+  /// In en, this message translates to:
+  /// **'Report nickname'**
+  String get nicknameReportAction;
+
+  /// Title of the report sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Report \"{nickname}\"'**
+  String nicknameReportTitle(String nickname);
+
+  /// Explains what happens
+  ///
+  /// In en, this message translates to:
+  /// **'Staff will check this nickname. The student is not told who reported it.'**
+  String get nicknameReportIntro;
+
+  /// Reason
+  ///
+  /// In en, this message translates to:
+  /// **'Rude or hurtful'**
+  String get nicknameReportRude;
+
+  /// Reason
+  ///
+  /// In en, this message translates to:
+  /// **'Pretends to be someone else'**
+  String get nicknameReportImpersonation;
+
+  /// Reason
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get nicknameReportOther;
+
+  /// Optional note field
+  ///
+  /// In en, this message translates to:
+  /// **'Anything else? (optional)'**
+  String get nicknameReportNote;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Send report'**
+  String get nicknameReportSend;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get nicknameReportCancel;
+
+  /// Shown after sending
+  ///
+  /// In en, this message translates to:
+  /// **'Thanks. Staff will check this nickname.'**
+  String get nicknameReportThanks;
+
+  /// Offline error
+  ///
+  /// In en, this message translates to:
+  /// **'You need the internet to send this report.'**
+  String get nicknameReportOffline;
+
+  /// Daily limit reached
+  ///
+  /// In en, this message translates to:
+  /// **'You have sent many reports today. Please try again tomorrow.'**
+  String get nicknameReportLimit;
+
   /// Title
   ///
   /// In en, this message translates to:

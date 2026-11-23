@@ -2,7 +2,9 @@
 
 namespace App\Nova;
 
+use App\Enums\NicknameReportStatus;
 use App\Enums\ReportStatus;
+use App\Models\NicknameReport;
 use App\Models\QuestionReport;
 use App\Models\User;
 use App\Nova\Dashboards\Main;
@@ -40,6 +42,11 @@ class NovaMenu
                 MenuItem::resource(Resources\Passage::class),
                 MenuItem::resource(Resources\QuestionOption::class),
             ])->icon('book-open')->collapsable()->canSee(self::allowedTo('manage-content')),
+
+            MenuSection::make('Community', [
+                MenuItem::resource(Resources\NicknameReport::class)
+                    ->withBadge(fn (): string|false => self::count(NicknameReport::query()->where('status', NicknameReportStatus::Open->value)->count()), 'warning'),
+            ])->icon('user-group')->collapsable()->canSee(self::allowedTo('moderate')),
 
             MenuSection::make('Settings', [
                 MenuItem::resource(Resources\AppSetting::class),

@@ -29,6 +29,9 @@ class Leaderboard
 
     private const CACHE_SECONDS = 60;
 
+    /** Raised when staff block, unblock or reset a nickname, so the cached standings start over at once. */
+    public const VERSION_KEY = 'leaderboard.version';
+
     /** Monday 00:00 in Addis Ababa, as a UTC time. */
     public static function weekStart(Carbon $now): Carbon
     {
@@ -46,13 +49,14 @@ class Leaderboard
 
         /** @var list<array{user_id: int, xp: int}> $rows */
         $rows = Cache::remember(
-            'leaderboard.'.$start->format('Y-m-d').'.'.intdiv($now->getTimestamp(), self::CACHE_SECONDS),
+            'leaderboard.'.(int) Cache::get(self::VERSION_KEY, 0).'.'.$start->format('Y-m-d').'.'.intdiv($now->getTimestamp(), self::CACHE_SECONDS),
             self::CACHE_SECONDS,
             function () use ($start, $now): array {
                 return $this->weekAttempts($start, $now)
                     ->join('users', 'users.id', '=', 'attempts.user_id')
                     ->where('users.role', UserRole::Student->value)
                     ->whereNotNull('users.nickname')
+                    ->whereNull('users.leaderboard_blocked_at')
                     ->groupBy('attempts.user_id')
                     ->selectRaw('attempts.user_id as user_id, '.self::xpSql().' as xp', self::examModes())
                     ->orderByDesc('xp')

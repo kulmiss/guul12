@@ -1762,6 +1762,59 @@
   "@leaderboardOpen": {
     "description": "Progress entry"
   },
+  "nicknameReportAction": "Report nickname",
+  "@nicknameReportAction": {
+    "description": "Menu item and tooltip on another student's leaderboard or battle row"
+  },
+  "nicknameReportTitle": "Report \"{nickname}\"",
+  "@nicknameReportTitle": {
+    "description": "Title of the report sheet",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "nicknameReportIntro": "Staff will check this nickname. The student is not told who reported it.",
+  "@nicknameReportIntro": {
+    "description": "Explains what happens"
+  },
+  "nicknameReportRude": "Rude or hurtful",
+  "@nicknameReportRude": {
+    "description": "Reason"
+  },
+  "nicknameReportImpersonation": "Pretends to be someone else",
+  "@nicknameReportImpersonation": {
+    "description": "Reason"
+  },
+  "nicknameReportOther": "Other",
+  "@nicknameReportOther": {
+    "description": "Reason"
+  },
+  "nicknameReportNote": "Anything else? (optional)",
+  "@nicknameReportNote": {
+    "description": "Optional note field"
+  },
+  "nicknameReportSend": "Send report",
+  "@nicknameReportSend": {
+    "description": "Button"
+  },
+  "nicknameReportCancel": "Cancel",
+  "@nicknameReportCancel": {
+    "description": "Button"
+  },
+  "nicknameReportThanks": "Thanks. Staff will check this nickname.",
+  "@nicknameReportThanks": {
+    "description": "Shown after sending"
+  },
+  "nicknameReportOffline": "You need the internet to send this report.",
+  "@nicknameReportOffline": {
+    "description": "Offline error"
+  },
+  "nicknameReportLimit": "You have sent many reports today. Please try again tomorrow.",
+  "@nicknameReportLimit": {
+    "description": "Daily limit reached"
+  },
   "challengeTitle": "Daily challenge",
   "@challengeTitle": {
     "description": "Title"

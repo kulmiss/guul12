@@ -61,6 +61,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             Resources\Question::class,
             Resources\QuestionOption::class,
             Resources\QuestionReport::class,
+            Resources\NicknameReport::class,
             Resources\Summary::class,
             Resources\SolvedExercise::class,
             Resources\Flashcard::class,

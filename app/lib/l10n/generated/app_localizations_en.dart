@@ -1300,6 +1300,45 @@ class AppLocalizationsEn extends AppLocalizations {
   String get leaderboardOpen => 'See the weekly leaderboard';
 
   @override
+  String get nicknameReportAction => 'Report nickname';
+
+  @override
+  String nicknameReportTitle(String nickname) {
+    return 'Report \"$nickname\"';
+  }
+
+  @override
+  String get nicknameReportIntro =>
+      'Staff will check this nickname. The student is not told who reported it.';
+
+  @override
+  String get nicknameReportRude => 'Rude or hurtful';
+
+  @override
+  String get nicknameReportImpersonation => 'Pretends to be someone else';
+
+  @override
+  String get nicknameReportOther => 'Other';
+
+  @override
+  String get nicknameReportNote => 'Anything else? (optional)';
+
+  @override
+  String get nicknameReportSend => 'Send report';
+
+  @override
+  String get nicknameReportCancel => 'Cancel';
+
+  @override
+  String get nicknameReportThanks => 'Thanks. Staff will check this nickname.';
+
+  @override
+  String get nicknameReportOffline => 'You need the internet to send this report.';
+
+  @override
+  String get nicknameReportLimit => 'You have sent many reports today. Please try again tomorrow.';
+
+  @override
   String get challengeTitle => 'Daily challenge';
 
   @override

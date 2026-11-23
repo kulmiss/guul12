@@ -91,6 +91,7 @@ class FakeServer {
           ? null
           : {
               'nickname': opponent,
+              'ref': 'ref-$opponent',
               'avatar_style': 'thumbs',
               'avatar_seed': 'a04',
               'result': {'correct': 1, 'total': 3, 'time_ms': 40000},
@@ -202,6 +203,11 @@ class FakeServer {
   /// Answer for POST auth/google: 200 signs in; 409 = account conflict.
   int googleStatus = 200;
   int minSupportedBuild = 1;
+
+  /// Nickname reports received by POST nickname-reports, and the status/code to answer with.
+  final List<Map<String, Object?>> receivedNicknameReports = [];
+  int nicknameReportStatus = 201;
+  String? nicknameReportCode;
 
   /// Reports received by POST questions/{id}/reports, and the status to answer with.
   final List<Map<String, Object?>> receivedReports = [];
@@ -510,6 +516,13 @@ class FakeServer {
       final id = int.parse(path.split('/').last);
       chapterDownloads[id] = (chapterDownloads[id] ?? 0) + 1;
       return json(chapterJson(id));
+    }
+    if (request.method == 'POST' && path == 'nickname-reports') {
+      if (nicknameReportStatus < 300) receivedNicknameReports.add(body());
+      return json({
+        'code': ?nicknameReportCode,
+        'report': <String, Object?>{},
+      }, nicknameReportStatus);
     }
     if (request.method == 'POST' && RegExp(r'^questions/\d+/reports$').hasMatch(path)) {
       final id = int.parse(path.split('/')[1]);

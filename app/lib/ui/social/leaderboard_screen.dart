@@ -8,6 +8,7 @@ import '../../data/api_client.dart';
 import '../../data/models.dart';
 import '../avatars.dart';
 import '../widgets/common.dart';
+import 'report_nickname.dart';
 
 final leaderboardProvider = FutureProvider.autoDispose<WeeklyLeaderboard>((ref) {
   final repo = ref.watch(repositoryProvider);
@@ -126,7 +127,16 @@ class _Row extends StatelessWidget {
         ),
       ),
       title: Text(row.isMe ? '${row.nickname} · ${l.leaderboardYou}' : row.nickname),
-      trailing: Text(l.engagementXp(row.xp), style: theme.textTheme.titleSmall),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(l.engagementXp(row.xp), style: theme.textTheme.titleSmall),
+          if (!row.isMe && row.reportRef != null)
+            ReportNicknameButton(reportRef: row.reportRef!, nickname: row.nickname)
+          else
+            const SizedBox(width: 48),
+        ],
+      ),
     );
   }
 }

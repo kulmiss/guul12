@@ -7,6 +7,8 @@ use App\Enums\UserRole;
 use App\Models\Attempt;
 use App\Models\Battle;
 use App\Models\Chapter;
+use App\Models\NicknameReport;
+use App\Models\PaymentRequest;
 use App\Models\Question;
 use App\Models\Referral;
 use App\Models\User;
@@ -44,6 +46,10 @@ class AccountDeletionTest extends TestCase
         Referral::query()->create(['inviter_id' => $other->id, 'invitee_id' => $me->id, 'status' => Referral::PENDING]);
         $helper = User::factory()->staff(UserRole::PaymentsHelper)->create();
         app(PremiumService::class)->grant($me, PremiumPlan::Term, $helper, 'TX-1');
+        PaymentRequest::query()->create(['user_id' => $me->id, 'plan' => PremiumPlan::Year, 'payment_ref' => 'TX-2', 'created_by' => $helper->id]);
+        // Reports in both directions: by the student and about the student.
+        NicknameReport::query()->create(['reporter_id' => $me->id, 'reported_user_id' => $other->id, 'nickname' => 'Other', 'reason' => 'rude']);
+        NicknameReport::query()->create(['reporter_id' => $other->id, 'reported_user_id' => $me->id, 'nickname' => 'Me', 'reason' => 'rude']);
 
         $this->withToken($token)->deleteJson('/api/v1/me')->assertUnprocessable()->assertJsonPath('code', 'confirm_required');
         $this->withToken($token)->deleteJson('/api/v1/me?confirm=delete-my-account')->assertOk()->assertJsonPath('deleted', true);
@@ -52,7 +58,7 @@ class AccountDeletionTest extends TestCase
         // No row anywhere still points at the deleted student.
         foreach (Schema::getTables() as $table) {
             $name = $table['name'];
-            foreach (['user_id', 'creator_id', 'opponent_id', 'invitee_id', 'tokenable_id'] as $column) {
+            foreach (['user_id', 'creator_id', 'opponent_id', 'invitee_id', 'tokenable_id', 'reporter_id', 'reported_user_id'] as $column) {
                 if (Schema::hasColumn($name, $column)) {
                     $query = DB::table($name)->where($column, $me->id);
                     if ($column === 'tokenable_id') {

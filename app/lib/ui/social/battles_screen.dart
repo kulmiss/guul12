@@ -11,6 +11,7 @@ import '../../l10n/generated/app_localizations.dart';
 import '../avatars.dart';
 import '../practice/practice_screen.dart';
 import '../widgets/common.dart';
+import 'report_nickname.dart';
 
 String battleStatusText(AppLocalizations l, BattleInfo b) => switch (b.status) {
   BattleStatus.waiting => l.battleWaitingOpponent,
@@ -231,15 +232,23 @@ class _BattleTile extends StatelessWidget {
                 if (battle.code != null) '${l.battleCodeLabel}: ${battle.code}',
               ].join(' · '),
       ),
-      trailing: battle.status == BattleStatus.yourTurn
-          ? FilledButton(onPressed: () => onPlay(battle.id), child: Text(l.battlePlayNow))
-          : Icon(switch (battle.status) {
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (battle.status == BattleStatus.yourTurn)
+            FilledButton(onPressed: () => onPlay(battle.id), child: Text(l.battlePlayNow))
+          else
+            Icon(switch (battle.status) {
               BattleStatus.won => Icons.emoji_events,
               BattleStatus.lost => Icons.sentiment_neutral,
               BattleStatus.draw => Icons.handshake_outlined,
               BattleStatus.expired => Icons.timer_off_outlined,
               _ => Icons.hourglass_empty,
             }, color: battle.status == BattleStatus.won ? theme.colorScheme.secondary : null),
+          if (other?.reportRef != null && other?.nickname != null)
+            ReportNicknameButton(reportRef: other!.reportRef!, nickname: other.nickname!),
+        ],
+      ),
     );
   }
 }

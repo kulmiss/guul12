@@ -620,6 +620,7 @@ class LeaderboardEntry {
     required this.avatarSeed,
     required this.xp,
     required this.isMe,
+    this.reportRef,
   });
 
   factory LeaderboardEntry.fromJson(Map<String, Object?> json) => LeaderboardEntry(
@@ -629,6 +630,7 @@ class LeaderboardEntry {
     avatarSeed: asStringOrNull(json['avatar_seed']),
     xp: asInt(json['xp']),
     isMe: asBool(json['is_me']),
+    reportRef: asStringOrNull(json['ref']),
   );
 
   final int rank;
@@ -637,6 +639,9 @@ class LeaderboardEntry {
   final String? avatarSeed;
   final int xp;
   final bool isMe;
+
+  /// Private server reference used by "Report nickname" (null on my own row).
+  final String? reportRef;
 }
 
 class WeeklyLeaderboard {
@@ -777,6 +782,7 @@ class BattlePlayer {
     required this.correct,
     required this.total,
     required this.timeMs,
+    this.reportRef,
   });
 
   factory BattlePlayer.fromJson(Map<String, Object?> json) {
@@ -784,6 +790,7 @@ class BattlePlayer {
     final r = result is Map ? asMap(result) : null;
     return BattlePlayer(
       nickname: asStringOrNull(json['nickname']),
+      reportRef: asStringOrNull(json['ref']),
       avatarStyle: asStringOrNull(json['avatar_style']),
       avatarSeed: asStringOrNull(json['avatar_seed']),
       correct: r == null ? null : asInt(r['correct']),
@@ -795,6 +802,9 @@ class BattlePlayer {
   final String? nickname;
   final String? avatarStyle;
   final String? avatarSeed;
+
+  /// Private server reference used by "Report nickname" (only for the opponent).
+  final String? reportRef;
 
   /// Null until this player has played.
   final int? correct;

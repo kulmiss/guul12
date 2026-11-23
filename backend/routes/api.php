@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\V1\HistoryController;
 use App\Http\Controllers\Api\V1\LeaderboardController;
 use App\Http\Controllers\Api\V1\MeController;
 use App\Http\Controllers\Api\V1\MockController;
+use App\Http\Controllers\Api\V1\NicknameReportController;
 use App\Http\Controllers\Api\V1\RandomExamController;
 use App\Http\Controllers\Api\V1\ReferralController;
 use App\Http\Controllers\Api\V1\ReportController;
@@ -58,6 +59,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::put('bookmarks/{question}', [BookmarkController::class, 'store'])->whereNumber('question')->name('bookmarks.store');
         Route::delete('bookmarks/{question}', [BookmarkController::class, 'destroy'])->whereNumber('question')->name('bookmarks.destroy');
 
+        Route::post('nickname-reports', [NicknameReportController::class, 'store'])->name('nickname-reports.store');
         Route::post('questions/{question}/reports', [ReportController::class, 'store'])->whereNumber('question')->name('questions.reports.store');
         Route::post('questions/{question}/explain', [ExplainController::class, 'store'])->whereNumber('question')->name('questions.explain');
         Route::post('explanations/{explanation}/feedback', [ExplainController::class, 'feedback'])->whereNumber('explanation')->name('explanations.feedback');

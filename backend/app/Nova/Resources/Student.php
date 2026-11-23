@@ -5,6 +5,8 @@ namespace App\Nova\Resources;
 use App\Enums\UserRole;
 use App\Models\User;
 use App\Nova\Actions\GrantPremium;
+use App\Nova\Actions\LeaderboardBlock;
+use App\Nova\Actions\ResetNickname;
 use App\Services\PremiumService;
 use App\Services\StudentIdGenerator;
 use Illuminate\Contracts\Database\Eloquent\Builder;
@@ -100,6 +102,7 @@ class Student extends Resource
             Text::make('Region')->hideFromIndex(),
             Text::make('City')->hideFromIndex(),
             Text::make('Nickname')->hideFromIndex(),
+            Boolean::make('Leaderboard blocked', fn (User $user): bool => $user->leaderboard_blocked_at !== null)->onlyOnDetail(),
             DateTime::make('Joined', 'created_at')->sortable()->exceptOnForms(),
             DateTime::make('Last active', 'last_active_at')->sortable()->exceptOnForms(),
             HasMany::make('Premium grants', 'premiumGrants', PremiumGrant::class),
@@ -113,6 +116,9 @@ class Student extends Resource
             GrantPremium::make()
                 ->canSee(fn ($request): bool => $request->user()?->can('manage-premium') ?? false)
                 ->canRun(fn ($request): bool => $request->user()?->can('manage-premium') ?? false),
+            new ResetNickname,
+            new LeaderboardBlock(true),
+            new LeaderboardBlock(false),
         ];
     }
 }
