@@ -1,9 +1,9 @@
 # PROGRESS
 
-📍 Phase 5 of 5 · Step 8 of 8: landing, deletion, ops, icon + store pack, release check, Nova dashboard, Lighthouse CI, report → next: owner test + merges, then launch tasks
-📊 This phase: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
+📍 Nova upgrade · Step 10 of 10: polish, screenshots, report → next: owner test + merges (PR #1 → #6), then launch tasks
+📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
-⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5; nickname reporting (QUESTIONS #45); referral reward (QUESTIONS #40); confirm prices, WhatsApp, email, icon; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova secrets
+⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5 → #6; referral reward (QUESTIONS #40); confirm prices, WhatsApp, email, icon; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -13,6 +13,22 @@
 | 3 Exams + adaptive + SRS | 16% | ✅ done — waiting for owner test (PR #3) |
 | 4 Engagement + ads + AI + Premium | 20% | ✅ done — waiting for owner test (PR #4) |
 | 5 Landing + ops + store + Nova | 14% | ✅ done — waiting for owner test (PR #5) |
+| Nova upgrade (extra job) | — | ✅ done — waiting for owner test (PR #6) |
+
+## Nova upgrade steps (PR #6)
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Inventory, plan, owner decisions (#31–35) | ✅ |
+| 2 | New tables + grouped menu with icons and badges | ✅ |
+| 3 | Nickname reports (app + API + Nova) | ✅ |
+| 4 | Payment requests queue (+ closed two role gaps) | ✅ |
+| 5 | Dashboards (cached, per role) | ✅ cards 2.4 ms; refresh 4.7 s at 20,000 students |
+| 6 | Clearer tables, question preview (maths + pictures), mock/battle/referral pages | ✅ no N+1 (tested) |
+| 7 | Filters + lenses, last filter remembered | ✅ |
+| 8 | Actions (confirm, CONFIRM word, old → new log, queued bulk, CSV by role) | ✅ |
+| 9 | Branding page (Nova + landing + app) | ✅ Lighthouse 99–100 |
+| 10 | Bell notifications, global search, Before → After log, empty states, dark mode, screenshots, report | ✅ 321 backend + 86 Nova + 365 app tests, 60 goldens |
 
 ## Phase 5 steps
 
