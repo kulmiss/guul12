@@ -6,8 +6,9 @@ Without Nova, the backend, its tests and CI still run: `bootstrap/providers.php`
 `app/Nova` (see `backend/phpstan-nova.php`).
 
 **Status (2026-11-23): Nova 5.7.6 is installed on the owner's PC, so the Nova code is ON.**
-It is tested with that copy: Larastan level 8 on `app/Nova` and the `Nova` test suite (4 tests: who gets in,
-which role sees what, find a student by ID + Give/Undo Premium, create staff).
+It is tested with that copy: Larastan level 8 on `app/Nova` and the `Nova` test suite (11 tests: who gets in,
+which role sees what, find a student by ID + Give/Undo Premium, create staff, and every dashboard card: who sees it
+and that its number is right, on SQLite and MySQL).
 
 ## Where things are
 
@@ -75,4 +76,18 @@ Register the production domain `guul12.kulmiss.com` on the licence.
 | Staff accounts and roles | `app/Nova/Resources/Staff.php` |
 | Content: subjects, units, chapters, questions, options, summaries, solved exercises, flashcards, passages, reports | `app/Nova/Resources/*.php` |
 | Settings, feature switches, audit log | `app/Nova/Resources/AppSetting.php`, `FeatureSwitch.php`, `AuditLog.php` |
-| Dashboard (new students, Premium now) | `app/Nova/Dashboards/Main.php`, `app/Nova/Metrics/*` |
+| Dashboard | `app/Nova/Dashboards/Main.php`, `app/Nova/Metrics/*` |
+
+### Dashboard cards
+
+| Card | Who sees it | What it shows |
+|---|---|---|
+| New students | all staff | Accounts created (today / 7 / 30 days / month) |
+| Active students | all staff | Students who used the app in the range |
+| Answers given | all staff | Answers that reached the server in the range |
+| Premium students now | super admin, payments helper | Students with Premium today |
+| Open question reports | super admin, content checker | Reports nobody has checked yet |
+| AI spend ("Explain more") | super admin | This month's spending against `ai_monthly_cap_usd` |
+| System health | super admin | The watchdog checks, live: database, storage, backup age, disk, AI budget |
+
+A card a role cannot see also cannot be opened by its address.
