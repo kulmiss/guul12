@@ -160,7 +160,7 @@ void main() {
       }
     });
 
-    test('Android manifest: internet, notifications, boot (reminder); foreground work and ad tracking removed', () {
+    test('Android manifest: internet, notifications, boot (reminder); foreground work, ad tracking and biometrics removed', () {
       final manifest = File('android/app/src/main/AndroidManifest.xml').readAsStringSync();
       final permissions = RegExp(r'<uses-permission ([^>]*)/>').allMatches(manifest).map((m) {
         final name = RegExp(r'android:name="([^"]+)"').firstMatch(m.group(1)!)!.group(1)!;
@@ -188,6 +188,8 @@ void main() {
           'android.permission.ACCESS_ADSERVICES_TOPICS',
           'android.permission.ACCESS_ADSERVICES_ATTRIBUTION',
           'android.permission.ACCESS_ADSERVICES_AD_ID',
+          'android.permission.USE_BIOMETRIC',
+          'android.permission.USE_FINGERPRINT',
         ]),
       );
       expect(

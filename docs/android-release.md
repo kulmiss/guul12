@@ -46,9 +46,43 @@ Use Play App Signing in the Play Console, so Google keeps the app signing key an
 ## Rules the build keeps
 
 - Permissions we ask for: internet and notifications (daily reminder). No location, contacts, camera, microphone,
-  exact alarms or foreground services (a test checks the manifest). Libraries add normal permissions
+  exact alarms, foreground services or biometrics (a test checks the manifest). Libraries add normal permissions
   (network state, wake lock, boot, vibrate, ad ID for AdMob); declare the ad ID use in the Play Console.
+  `tool/check_apk.py` checks the final list in the built APK (8 permissions, nothing else).
 - Ads: small banners above the tabs and rewarded videos only, never during a quiz or exam, teen treatment,
   max rating G, non-personalised; Premium students never start the ad SDK.
 - No price, buy button or payment link anywhere in the app (a test checks every UI text and string in the code).
 - Backups of app data are off, so the sign-in token never leaves the phone.
+
+## Version numbers
+
+`pubspec.yaml` has `version: 1.0.0+1`: the part before `+` is what students see, the number after `+`
+is the **version code**. Google Play refuses an upload whose version code is not higher than every code
+uploaded before (on any track, even a build that was uploaded but never released).
+
+| Release | Change in `pubspec.yaml` |
+|---|---|
+| First upload | `1.0.0+1` (as it is) |
+| Bug fix | `1.0.1+2` |
+| New features | `1.1.0+3` |
+
+Always raise the number after `+` by one, and commit the change before you build.
+
+## Check before every upload
+
+Build an APK with the **same** `--dart-define` values and `key.properties` as the AAB, then:
+
+```bash
+cd app
+flutter build apk --release --dart-define=...   # same values as the appbundle
+python3 tool/check_apk.py build/app/outputs/flutter-apk/app-release.apk --store
+```
+
+It checks: package `com.kulmiss.guul12`, version = `pubspec.yaml`, target SDK 36 or higher (Google Play's
+rule for new apps and updates), the exact permission list, not debuggable, label "Guul 12" with an adaptive icon,
+and with `--store`: signed with your upload key (not the debug key) and **no Google test AdMob IDs** inside.
+CI runs the same check (without `--store`) on every pull request.
+
+Then upload `build/app/outputs/bundle/release/app-release.aab` to the Play Console (internal testing first).
+After building, `build/` can be deleted to free space.
+

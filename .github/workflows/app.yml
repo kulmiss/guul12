@@ -94,6 +94,12 @@ jobs:
           flutter build apk --release --split-per-abi
           flutter build appbundle --release
 
+      - name: Release checks (version, target SDK, exact permissions, adaptive icon)
+        run: |
+          for apk in build/app/outputs/flutter-apk/app-*-release.apk; do
+            python3 tool/check_apk.py "$apk"
+          done
+
       - name: Sizes
         run: |
           ls -l build/app/outputs/flutter-apk/*.apk build/app/outputs/bundle/release/*.aab \
