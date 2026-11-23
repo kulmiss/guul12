@@ -4,14 +4,18 @@ namespace App\Nova\Resources;
 
 use App\Enums\Access;
 use App\Models\Mock as MockModel;
+use App\Nova\Actions\CheckMock;
+use App\Nova\Actions\PreviewMockAsStudent;
+use App\Nova\Actions\PublishMock;
+use App\Nova\Actions\UnpublishMock;
 use App\Nova\Fields\Show;
 use App\Nova\Filters\FilterSets;
 use App\Nova\Resources\Concerns\ReadOnlyResource;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -74,7 +78,13 @@ class Mock extends Resource
             Badge::make('Access', fn (MockModel $mock): string => $mock->access->value)
                 ->map([Access::Free->value => 'info', Access::Premium->value => 'warning'])
                 ->labels([Access::Free->value => 'Free', Access::Premium->value => 'Premium']),
-            Boolean::make('Active', 'is_active')->sortable()->help('Inactive mocks are hidden in the app.'),
+            Badge::make('Shown to students', fn (MockModel $m): string => match (true) {
+                $m->unpublished_at !== null => 'unpublished',
+                ! $m->is_active => 'not_in_content',
+                default => 'shown',
+            })->map(['shown' => 'success', 'unpublished' => 'warning', 'not_in_content' => 'danger'])
+                ->labels(['shown' => 'Shown', 'unpublished' => 'Unpublished by staff', 'not_in_content' => 'Not in the content files'])
+                ->help('"Unpublish" hides a mock until staff publish it again; the content import does not undo it.'),
             ...Show::when('Updated', 'updated_at'),
             BelongsToMany::make('Questions', 'questions', Question::class)
                 ->fields(fn (): array => [Number::make('Order', 'sort')]),
@@ -85,5 +95,11 @@ class Mock extends Resource
     public function filters(NovaRequest $request): array
     {
         return FilterSets::mocks();
+    }
+
+    /** @return array<int, Action> */
+    public function actions(NovaRequest $request): array
+    {
+        return [new PublishMock, new UnpublishMock, new CheckMock, new PreviewMockAsStudent];
     }
 }

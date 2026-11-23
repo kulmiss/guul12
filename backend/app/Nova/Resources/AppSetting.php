@@ -3,8 +3,10 @@
 namespace App\Nova\Resources;
 
 use App\Models\AppSetting as AppSettingModel;
+use App\Nova\Actions\StaffTool;
 use App\Services\Settings;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
@@ -54,5 +56,11 @@ class AppSetting extends Resource
     public static function afterDelete(NovaRequest $request, $model): void
     {
         app(Settings::class)->flush();
+    }
+
+    /** @return array<int, Action> */
+    public function actions(NovaRequest $request): array
+    {
+        return [new StaffTool('refresh'), new StaffTool('telegram'), new StaffTool('email'), new StaffTool('backup')];
     }
 }

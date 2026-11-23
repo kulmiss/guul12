@@ -4,9 +4,12 @@ namespace App\Nova\Resources;
 
 use App\Enums\Access;
 use App\Models\Chapter as ChapterModel;
+use App\Nova\Actions\RebuildOfflinePack;
+use App\Nova\Actions\SetVideoAccess;
 use App\Nova\Filters\FilterSets;
 use App\Nova\Lenses;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
@@ -96,5 +99,11 @@ class Chapter extends Resource
     public function lenses(NovaRequest $request): array
     {
         return [new Lenses\IncompleteContent, new Lenses\NoVideoYet];
+    }
+
+    /** @return array<int, Action> */
+    public function actions(NovaRequest $request): array
+    {
+        return [new SetVideoAccess(Access::Free), new SetVideoAccess(Access::Premium), new RebuildOfflinePack];
     }
 }

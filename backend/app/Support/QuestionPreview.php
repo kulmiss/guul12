@@ -14,7 +14,8 @@ use Illuminate\Support\Collection;
  */
 final class QuestionPreview
 {
-    public static function html(Question $question): string
+    /** $withAnswers false = what a student sees before answering: no right answer, no explanation. */
+    public static function html(Question $question, bool $withAnswers = true): string
     {
         $parts = [];
 
@@ -31,6 +32,11 @@ final class QuestionPreview
         }
 
         $options = $question->options->sortBy('sort')->values();
+        if (! $withAnswers) {
+            $parts[] = self::studentView($options);
+
+            return '<div class="guul-preview">'.implode('', $parts).'</div>';
+        }
         $parts[] = match ($question->type) {
             QuestionType::Matching => self::matching($options, $question->answer_key),
             QuestionType::Ordering => self::ordering($options, $question->answer_key),
@@ -43,6 +49,26 @@ final class QuestionPreview
             .'<span class="gp-label">Explanation: </span>'.MathText::html($question->explanation).'</div>';
 
         return '<div class="guul-preview">'.implode('', $parts).'</div>';
+    }
+
+    /**
+     * Options as a student sees them (matching: both lists; typed answers: an empty box).
+     *
+     * @param  Collection<int, QuestionOption>  $options
+     */
+    private static function studentView(Collection $options): string
+    {
+        if ($options->isEmpty()) {
+            return '<div class="gp-option gp-muted">The student types the answer.</div>';
+        }
+        $rows = '';
+        foreach ($options as $option) {
+            $rows .= '<li class="gp-option"><span class="gp-key">'.self::e($option->key).'</span>'
+                .'<span class="gp-body">'.MathText::html($option->body)
+                .($option->media_path !== null ? self::image($option->media_path, 'Picture for option '.$option->key) : '').'</span></li>';
+        }
+
+        return '<ul class="gp-list">'.$rows.'</ul>';
     }
 
     /** The options as one line of plain text: "A) 3 | B) 4". Empty for types without options. */

@@ -5,6 +5,7 @@ namespace App\Nova\Resources;
 use App\Enums\ReportReason;
 use App\Enums\ReportStatus;
 use App\Models\QuestionReport as QuestionReportModel;
+use App\Nova\Actions\OpenReportedItem;
 use App\Nova\Actions\ResolveReports;
 use App\Nova\Fields\Show;
 use App\Nova\Filters\FilterSets;
@@ -89,7 +90,7 @@ class QuestionReport extends Resource
     /** @return array<int, Action> */
     public function actions(NovaRequest $request): array
     {
-        return [new ResolveReports(true), new ResolveReports(false)];
+        return [new ResolveReports(true), new ResolveReports(false), new OpenReportedItem];
     }
 
     /** @return array<int, Filter> */

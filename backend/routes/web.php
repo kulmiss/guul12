@@ -2,9 +2,13 @@
 
 use App\Http\Controllers\HealthController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\Staff\PreviewController;
 use Illuminate\Support\Facades\Route;
 
 // Public website (Blade, prices live from the admin settings).
+// Staff only (checked in the controller): a mock as students see it, opened from Nova.
+Route::get('/staff/preview/mocks/{mock}', [PreviewController::class, 'mock'])->name('staff.preview.mock');
+
 Route::get('/', [LandingController::class, 'home'])->name('landing.home');
 Route::get('/app', [LandingController::class, 'app'])->name('landing.app');
 Route::get('/premium', [LandingController::class, 'premium'])->name('landing.premium');

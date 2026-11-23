@@ -7,6 +7,7 @@ use App\Enums\NicknameReportStatus;
 use App\Models\NicknameReport as NicknameReportModel;
 use App\Nova\Actions\DismissNicknameReport;
 use App\Nova\Actions\LeaderboardBlock;
+use App\Nova\Actions\OpenReportedItem;
 use App\Nova\Actions\ResetNickname;
 use App\Nova\Fields\Show;
 use App\Nova\Filters\FilterSets;
@@ -109,7 +110,7 @@ class NicknameReport extends Resource
     /** @return array<int, Action> */
     public function actions(NovaRequest $request): array
     {
-        return [new ResetNickname, new DismissNicknameReport, new LeaderboardBlock(true)];
+        return [new ResetNickname, new DismissNicknameReport, new LeaderboardBlock(true), new OpenReportedItem(student: true)];
     }
 
     /** @return array<int, Filter> */

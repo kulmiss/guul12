@@ -33,7 +33,7 @@ class MockController extends Controller
         $user = $request->user();
         $isPremium = $this->premium->isPremium($user);
 
-        $mocks = Mock::query()->where('is_active', true)
+        $mocks = Mock::query()->openToStudents()
             ->with(['questions' => fn ($q) => $q->visibleToStudents()])
             ->orderBy('subject_id')->orderBy('grade')->orderBy('number')
             ->get();
@@ -45,7 +45,7 @@ class MockController extends Controller
 
     public function show(Request $request, Mock $mock): JsonResponse
     {
-        abort_unless($mock->is_active, 404);
+        abort_unless($mock->isOpenToStudents(), 404);
         /** @var User $user */
         $user = $request->user();
         $isPremium = $this->premium->isPremium($user);
