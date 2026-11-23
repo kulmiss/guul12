@@ -4,12 +4,14 @@ namespace App\Nova\Resources;
 
 use App\Models\Referral as ReferralModel;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
 use App\Nova\Resources\Concerns\ReadOnlyResource;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use Laravel\Nova\Query\Search\SearchableRelation;
@@ -55,5 +57,11 @@ class Referral extends Resource
             DateTime::make('Counted at', 'valid_at')->onlyOnDetail()->displayUsing(fn (mixed $v): string => Show::full($v)),
             BelongsTo::make('Premium grant', 'premiumGrant', PremiumGrant::class)->nullable()->hideFromIndex(),
         ];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::referrals();
     }
 }

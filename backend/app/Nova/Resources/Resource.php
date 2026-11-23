@@ -5,6 +5,7 @@ namespace App\Nova\Resources;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Laravel\Nova\Actions\ActionCollection;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource as NovaResource;
@@ -89,6 +90,25 @@ abstract class Resource extends NovaResource
     public function resolveActions(NovaRequest $request): ActionCollection
     {
         return static::authorizedToViewAny($request) ? parent::resolveActions($request) : ActionCollection::make();
+    }
+
+    /*
+     * Nova serves the filter and card lists of a resource without checking who asks (its lens list is
+     * checked). Filters name staff members and subjects, so a role outside the job is refused here too.
+     */
+
+    public function availableFilters(NovaRequest $request): Collection
+    {
+        $this->authorizeToViewAny($request);
+
+        return parent::availableFilters($request);
+    }
+
+    public function availableCards(NovaRequest $request): Collection
+    {
+        $this->authorizeToViewAny($request);
+
+        return parent::availableCards($request);
     }
 
     public static function indexQuery(NovaRequest $request, Builder $query): Builder

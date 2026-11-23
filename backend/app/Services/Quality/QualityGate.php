@@ -10,6 +10,7 @@ use App\Models\Question;
 use App\Models\QuestionReport;
 use App\Models\User;
 use App\Services\Settings;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Facades\DB;
 
@@ -77,25 +78,15 @@ final class QualityGate
      */
     public function promote(): array
     {
-        $minAnswers = max(1, $this->settings->int('beta_min_answers'));
         $minPercent = $this->settings->int('quality_min_correct_percent');
         $published = 0;
         $review = 0;
 
-        Question::query()
-            ->whereIn('status', [QuestionStatus::Beta->value, QuestionStatus::Fixed->value])
-            ->where('times_answered', '>=', $minAnswers)
+        $this->candidates()
             ->orderBy('id')
             ->chunkById(500, function ($questions) use ($minPercent, &$published, &$review): void {
                 foreach ($questions as $question) {
                     /** @var Question $question */
-                    $openReports = QuestionReport::query()
-                        ->where('question_id', $question->id)
-                        ->where('status', ReportStatus::Open->value)
-                        ->exists();
-                    if ($openReports) {
-                        continue;
-                    }
                     $percent = 100 * $question->times_correct / max(1, $question->times_answered);
                     if ($percent < $minPercent) {
                         $question->status = QuestionStatus::Reported;
@@ -112,6 +103,30 @@ final class QualityGate
             });
 
         return ['published' => $published, 'sent_to_review' => $review];
+    }
+
+    /**
+     * Beta or fixed questions with enough answers and no open report: promote() decides each one.
+     *
+     * @return Builder<Question>
+     */
+    public function candidates(): Builder
+    {
+        return Question::query()
+            ->whereIn('status', [QuestionStatus::Beta->value, QuestionStatus::Fixed->value])
+            ->where('times_answered', '>=', max(1, $this->settings->int('beta_min_answers')))
+            ->whereDoesntHave('reports', fn (Builder $q) => $q->where('status', ReportStatus::Open->value));
+    }
+
+    /**
+     * The candidates promote() will publish (enough of the answers are right). Shown as a Nova lens.
+     *
+     * @return Builder<Question>
+     */
+    public function readyToPublish(): Builder
+    {
+        return $this->candidates()
+            ->whereRaw('times_correct * 100 >= ? * times_answered', [$this->settings->int('quality_min_correct_percent')]);
     }
 
     /**

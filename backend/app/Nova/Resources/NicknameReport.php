@@ -9,6 +9,8 @@ use App\Nova\Actions\DismissNicknameReport;
 use App\Nova\Actions\LeaderboardBlock;
 use App\Nova\Actions\ResetNickname;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
+use App\Nova\Lenses;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Laravel\Nova\Actions\Action;
@@ -17,7 +19,9 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Lenses\Lens;
 use Laravel\Nova\Panel;
 
 /**
@@ -106,5 +110,17 @@ class NicknameReport extends Resource
     public function actions(NovaRequest $request): array
     {
         return [new ResetNickname, new DismissNicknameReport, new LeaderboardBlock(true)];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::nicknameReports();
+    }
+
+    /** @return array<int, Lens> */
+    public function lenses(NovaRequest $request): array
+    {
+        return [new Lenses\OpenReports, new Lenses\OpenFor48Hours];
     }
 }

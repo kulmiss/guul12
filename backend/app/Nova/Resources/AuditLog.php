@@ -4,11 +4,13 @@ namespace App\Nova\Resources;
 
 use App\Models\AuditLog as AuditLogModel;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 
@@ -64,5 +66,11 @@ class AuditLog extends Resource
             Code::make('Details', 'data')->json()->onlyOnDetail(),
             Text::make('IP')->onlyOnDetail(),
         ];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::auditLogs();
     }
 }

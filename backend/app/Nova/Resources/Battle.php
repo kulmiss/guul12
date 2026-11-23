@@ -4,6 +4,7 @@ namespace App\Nova\Resources;
 
 use App\Models\Battle as BattleModel;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
 use App\Nova\Resources\Concerns\ReadOnlyResource;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\Badge;
@@ -12,6 +13,7 @@ use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 
@@ -85,5 +87,11 @@ class Battle extends Resource
             ...Show::when('Started', 'created_at'),
             DateTime::make('Expires', 'expires_at')->onlyOnDetail()->displayUsing(fn (mixed $v): string => Show::full($v)),
         ];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::battles();
     }
 }

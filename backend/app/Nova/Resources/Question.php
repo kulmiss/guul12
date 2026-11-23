@@ -5,6 +5,8 @@ namespace App\Nova\Resources;
 use App\Enums\QuestionType;
 use App\Models\Question as QuestionModel;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
+use App\Nova\Lenses;
 use App\Support\QuestionPreview;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
@@ -16,7 +18,9 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Lenses\Lens;
 use Laravel\Nova\Panel;
 use Laravel\Nova\Query\Search\SearchableJson;
 use Laravel\Nova\Query\Search\SearchableRelation;
@@ -105,5 +109,17 @@ class Question extends Resource
         $plain = trim((string) preg_replace('/\s+/u', ' ', $text));
 
         return mb_strlen($plain) > 70 ? mb_substr($plain, 0, 69).'…' : $plain;
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::questions();
+    }
+
+    /** @return array<int, Lens> */
+    public function lenses(NovaRequest $request): array
+    {
+        return [new Lenses\MostReported, new Lenses\HardestQuestions, new Lenses\EasiestQuestions, new Lenses\ReadyToPublish, new Lenses\MissingExplanationOrDiagram];
     }
 }

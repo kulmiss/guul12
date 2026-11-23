@@ -5,6 +5,8 @@ namespace App\Nova\Resources;
 use App\Models\PremiumGrant as PremiumGrantModel;
 use App\Nova\Actions\RevokePremium;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
+use App\Nova\Lenses;
 use App\Nova\Resources\Concerns\ReadOnlyResource;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
@@ -14,7 +16,9 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Lenses\Lens;
 use Laravel\Nova\Panel;
 use Laravel\Nova\Query\Search\SearchableRelation;
 
@@ -69,5 +73,17 @@ class PremiumGrant extends Resource
     public function actions(NovaRequest $request): array
     {
         return [RevokePremium::make()];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::premiumGrants();
+    }
+
+    /** @return array<int, Lens> */
+    public function lenses(NovaRequest $request): array
+    {
+        return [new Lenses\GivenToday, new Lenses\UndoneGrants];
     }
 }

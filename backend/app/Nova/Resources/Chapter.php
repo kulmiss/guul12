@@ -4,6 +4,8 @@ namespace App\Nova\Resources;
 
 use App\Enums\Access;
 use App\Models\Chapter as ChapterModel;
+use App\Nova\Filters\FilterSets;
+use App\Nova\Lenses;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\BelongsTo;
@@ -16,7 +18,9 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\URL;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Lenses\Lens;
 use Laravel\Nova\Panel;
 use Laravel\Nova\Query\Search\SearchableRelation;
 
@@ -80,5 +84,17 @@ class Chapter extends Resource
             HasMany::make('Flashcards', 'flashcards', Flashcard::class),
             HasMany::make('Questions', 'questions', Question::class),
         ];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::chapters();
+    }
+
+    /** @return array<int, Lens> */
+    public function lenses(NovaRequest $request): array
+    {
+        return [new Lenses\IncompleteContent, new Lenses\NoVideoYet];
     }
 }

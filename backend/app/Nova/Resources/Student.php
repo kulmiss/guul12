@@ -11,6 +11,8 @@ use App\Nova\Actions\GrantPremium;
 use App\Nova\Actions\LeaderboardBlock;
 use App\Nova\Actions\ResetNickname;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
+use App\Nova\Lenses;
 use App\Services\PremiumService;
 use App\Services\StudentIdGenerator;
 use Illuminate\Contracts\Database\Eloquent\Builder;
@@ -24,7 +26,9 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Lenses\Lens;
 use Laravel\Nova\Panel;
 
 /**
@@ -167,5 +171,17 @@ class Student extends Resource
             new LeaderboardBlock(true),
             new LeaderboardBlock(false),
         ];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::students();
+    }
+
+    /** @return array<int, Lens> */
+    public function lenses(NovaRequest $request): array
+    {
+        return [new Lenses\PremiumEndsSoon, new Lenses\MostActiveThisWeek, new Lenses\InactiveStudents, new Lenses\NewToday];
     }
 }

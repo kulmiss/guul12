@@ -110,6 +110,16 @@ class Question extends Model
     }
 
     /**
+     * "Report a problem" messages from students.
+     *
+     * @return HasMany<QuestionReport, $this>
+     */
+    public function reports(): HasMany
+    {
+        return $this->hasMany(QuestionReport::class);
+    }
+
+    /**
      * @param  Builder<self>  $query
      * @return Builder<self>
      */

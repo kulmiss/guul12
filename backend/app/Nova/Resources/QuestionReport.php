@@ -7,6 +7,8 @@ use App\Enums\ReportStatus;
 use App\Models\QuestionReport as QuestionReportModel;
 use App\Nova\Actions\ResolveReports;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
+use App\Nova\Lenses;
 use Illuminate\Http\Request;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Badge;
@@ -16,7 +18,9 @@ use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Lenses\Lens;
 use Laravel\Nova\Panel;
 use Laravel\Nova\Query\Search\SearchableRelation;
 
@@ -86,5 +90,17 @@ class QuestionReport extends Resource
     public function actions(NovaRequest $request): array
     {
         return [new ResolveReports(true), new ResolveReports(false)];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::questionReports();
+    }
+
+    /** @return array<int, Lens> */
+    public function lenses(NovaRequest $request): array
+    {
+        return [new Lenses\OpenReports, new Lenses\OpenFor48Hours];
     }
 }

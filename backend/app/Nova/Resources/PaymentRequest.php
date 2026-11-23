@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Nova\Actions\ApprovePaymentRequest;
 use App\Nova\Actions\RejectPaymentRequest;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
 use App\Rules\NewPaymentReference;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -25,6 +26,7 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use Laravel\Nova\Query\Search\SearchableRelation;
@@ -166,5 +168,11 @@ class PaymentRequest extends Resource
     public function actions(NovaRequest $request): array
     {
         return [new ApprovePaymentRequest, new RejectPaymentRequest];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::paymentRequests();
     }
 }

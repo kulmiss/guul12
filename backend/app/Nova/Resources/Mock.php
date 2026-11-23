@@ -5,6 +5,7 @@ namespace App\Nova\Resources;
 use App\Enums\Access;
 use App\Models\Mock as MockModel;
 use App\Nova\Fields\Show;
+use App\Nova\Filters\FilterSets;
 use App\Nova\Resources\Concerns\ReadOnlyResource;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\Badge;
@@ -15,6 +16,7 @@ use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 
@@ -77,5 +79,11 @@ class Mock extends Resource
             BelongsToMany::make('Questions', 'questions', Question::class)
                 ->fields(fn (): array => [Number::make('Order', 'sort')]),
         ];
+    }
+
+    /** @return array<int, Filter> */
+    public function filters(NovaRequest $request): array
+    {
+        return FilterSets::mocks();
     }
 }

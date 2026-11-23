@@ -62,3 +62,49 @@ Nova.booting((app) => {
   document.addEventListener('DOMContentLoaded', draw)
   window.addEventListener('load', draw)
 })()
+
+// Each staff member's last filter on each list is remembered in this browser and brought back when
+// they open the list again. "Reset filters" forgets it. Nothing is sent to the server.
+;(() => {
+  const base = () => String(Nova.config('base') || '/nova').replace(/\/$/, '')
+  const storageKey = (list) => 'guul.filters.' + Nova.config('userId') + '.' + list
+  const listOnScreen = () => {
+    const match = window.location.pathname.slice(base().length).match(/^\/resources\/([a-z0-9-]+)\/?$/)
+    return match ? match[1] : null
+  }
+  const store = (list, value) => {
+    try {
+      value ? window.localStorage.setItem(storageKey(list), value) : window.localStorage.removeItem(storageKey(list))
+    } catch (e) {
+      // Private mode or storage switched off: filters are simply not remembered.
+    }
+  }
+  const saved = (list) => {
+    try {
+      return window.localStorage.getItem(storageKey(list))
+    } catch (e) {
+      return null
+    }
+  }
+
+  Nova.$on('filter-changed', (args) => {
+    const list = listOnScreen()
+    if (list) store(list, Array.isArray(args) ? args[0] : args)
+  })
+  Nova.$on('filter-reset', () => {
+    const list = listOnScreen()
+    if (list) store(list, null)
+  })
+
+  const restore = () => {
+    const list = listOnScreen()
+    if (!list) return
+    const params = new URLSearchParams(window.location.search)
+    if (params.has(list + '_filter')) return
+    const value = saved(list)
+    if (!value) return
+    params.set(list + '_filter', value)
+    Nova.visit('/resources/' + list + '?' + params.toString(), { replace: true })
+  }
+  document.addEventListener('inertia:navigate', restore)
+})()
