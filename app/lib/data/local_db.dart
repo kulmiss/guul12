@@ -104,6 +104,8 @@ class LocalDb {
   Future<void> writeString(String key, String value) =>
       _db.insert('kv', {'key': key, 'value': value}, conflictAlgorithm: ConflictAlgorithm.replace);
 
+  Future<void> deleteKey(String key) => _db.delete('kv', where: 'key = ?', whereArgs: [key]);
+
   Future<Map<String, Object?>?> readJson(String key) async {
     final raw = await readString(key);
     return raw == null ? null : asMap(jsonDecode(raw));

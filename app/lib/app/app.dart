@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../data/branding.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../ui/theme.dart';
 import 'providers.dart';
@@ -58,11 +59,13 @@ class _GuulAppState extends ConsumerState<GuulApp> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     final mode = ref.watch(themeModeProvider).value ?? ThemeMode.system;
+    // Nova branding, kept on the phone with the config; Sunrise until the first sync.
+    final brand = ref.watch(configProvider).value?.branding ?? Branding.sunrise;
     return MaterialApp.router(
       onGenerateTitle: (context) => AppLocalizations.of(context).appName,
       debugShowCheckedModeBanner: false,
-      theme: sunriseTheme(Brightness.light),
-      darkTheme: sunriseTheme(Brightness.dark),
+      theme: brandTheme(brand, Brightness.light),
+      darkTheme: brandTheme(brand, Brightness.dark),
       themeMode: mode,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

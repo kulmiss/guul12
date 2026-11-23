@@ -3,7 +3,7 @@
 @php($prefix = $locale === 'en' ? '' : '/'.$locale)
 
 @section('header')
-    <a class="brand" href="{{ $prefix === '' ? '/' : $prefix }}">Guul 12</a>
+    @include('landing._brand', ['href' => $prefix === '' ? '/' : $prefix])
     <nav>
         <a href="{{ $prefix }}/premium">{{ __('landing.nav_premium') }}</a>
         <a href="/privacy">{{ __('landing.nav_privacy') }}</a>

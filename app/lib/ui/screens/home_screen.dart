@@ -9,6 +9,7 @@ import '../../app/plan_providers.dart';
 import '../../app/premium_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
+import '../../data/branding.dart';
 import '../../data/models.dart';
 import '../../domain/engagement.dart';
 import '../../domain/ethiopian_calendar.dart';
@@ -17,7 +18,7 @@ import '../../domain/premium_notice.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../plan/plan_screen.dart';
 import '../practice/practice_screen.dart';
-import '../theme.dart';
+import '../widgets/brand_logo.dart';
 import '../widgets/common.dart';
 
 /// "Sene 23, 2018" style text for an Ethiopian date.
@@ -52,7 +53,9 @@ class HomeScreen extends ConsumerWidget {
     final recentHeaders = [for (final id in recent) ?catalog?.chapter(id)];
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.appName)),
+      appBar: AppBar(
+        title: Text(brandName(l, ref.watch(configProvider).value?.branding ?? Branding.sunrise)),
+      ),
       body: RefreshIndicator(
         onRefresh: () => runSync(ref),
         child: ListView(
@@ -280,7 +283,6 @@ class _CountdownCard extends StatelessWidget {
               date == null || days! < 0 ? l.homeExamDateUnknown : l.homeExamCountdown(days),
               style: theme.textTheme.headlineSmall?.copyWith(
                 color: theme.colorScheme.onPrimary,
-                fontFamily: 'Nunito',
                 fontWeight: FontWeight.w900,
               ),
             ),
@@ -291,7 +293,7 @@ class _CountdownCard extends StatelessWidget {
                   DateFormat.yMMMMd(l.localeName).format(date),
                   formatEthiopian(l, date),
                 ),
-                style: theme.textTheme.bodyMedium?.copyWith(color: SunriseColors.cream),
+                style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onPrimary),
               ),
             ],
           ],

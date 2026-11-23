@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:http/http.dart' as http;
 
@@ -99,6 +100,27 @@ class ApiClient {
       code: json['code'] is String ? json['code']! as String : null,
       message: json['message'] is String ? json['message']! as String : null,
     );
+  }
+
+  /// A PNG picture from this same server over https (the branding logo), or null when it cannot be
+  /// had: offline, another server, not a PNG, or bigger than [maxBytes]. Never throws.
+  Future<Uint8List?> downloadPng(String url, {int maxBytes = 600 * 1024}) async {
+    final uri = Uri.tryParse(url);
+    final base = Uri.parse(baseUrl);
+    if (uri == null || uri.scheme != 'https' || uri.host != base.host) return null;
+    try {
+      final response = await _client.get(uri, headers: {'Accept': 'image/png'}).timeout(timeout);
+      final bytes = response.bodyBytes;
+      const pngSignature = [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A];
+      final sizeOk = bytes.length >= pngSignature.length && bytes.length <= maxBytes;
+      if (response.statusCode != 200 || !sizeOk) return null;
+      for (var i = 0; i < pngSignature.length; i++) {
+        if (bytes[i] != pngSignature[i]) return null;
+      }
+      return bytes;
+    } on Object {
+      return null;
+    }
   }
 
   void close() => _client.close();

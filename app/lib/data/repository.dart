@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:math';
+import 'dart:typed_data';
 
 import '../domain/exam.dart';
 import '../domain/exam_builder.dart';
@@ -16,6 +18,8 @@ abstract final class Keys {
   static const serverProfile = 'profile_server';
   static const pendingProfile = 'profile_pending';
   static const config = 'config';
+  static const logoLight = 'brand_logo_light';
+  static const logoDark = 'brand_logo_dark';
   static const recentChapters = 'recent_chapters';
   static const pendingReports = 'pending_reports';
   static const mocks = 'mocks';
@@ -231,7 +235,33 @@ class Repository {
   Future<AppConfig> refreshConfig() async {
     final json = await _authed(() => api.get('config'));
     await db.writeJson(Keys.config, json);
-    return AppConfig.fromJson(json);
+    final config = AppConfig.fromJson(json);
+    await _refreshLogo(Keys.logoLight, config.branding.logoLightUrl);
+    await _refreshLogo(Keys.logoDark, config.branding.logoDarkUrl);
+    return config;
+  }
+
+  /// Keeps the branding logo on the phone (downloaded once per new address). Without internet
+  /// or with a bad file the old one, or the built-in icon, stays.
+  Future<void> _refreshLogo(String key, String? url) async {
+    final saved = await db.readString('${key}_url');
+    if (url == null) {
+      await db.deleteKey(key);
+      await db.deleteKey('${key}_url');
+      return;
+    }
+    if (url == saved) return;
+    final bytes = await api.downloadPng(url);
+    if (bytes == null) return;
+    await db.writeString(key, base64Encode(bytes));
+    await db.writeString('${key}_url', url);
+  }
+
+  /// The logo picture for light or dark mode (dark falls back to light), or null for the icon.
+  Future<Uint8List?> brandLogo({required bool dark}) async {
+    final raw =
+        (dark ? await db.readString(Keys.logoDark) : null) ?? await db.readString(Keys.logoLight);
+    return raw == null ? null : base64Decode(raw);
   }
 
   // ---- content ---------------------------------------------------------------------------------

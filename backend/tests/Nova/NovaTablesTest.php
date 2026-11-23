@@ -51,6 +51,8 @@ class NovaTablesTest extends TestCase
     private function assertNoNPlusOne(string $uri, \Closure $make): void
     {
         $make(3);
+        // One request first: caches (settings, branding) are filled once, as in normal use.
+        $this->queriesFor($uri);
         $few = $this->queriesFor($uri);
         $make(20);
         $many = $this->queriesFor($uri);

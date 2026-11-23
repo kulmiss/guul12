@@ -125,6 +125,8 @@ class ActivityResourcesNovaTest extends TestCase
         foreach ($makers as $uri => $make) {
             $make();
             $make();
+            // One request first: caches (settings, branding) are filled once, as in normal use.
+            $this->queries($admin, "/nova-api/{$uri}");
             $few = $this->queries($admin, "/nova-api/{$uri}");
             for ($i = 0; $i < 12; $i++) {
                 $make();

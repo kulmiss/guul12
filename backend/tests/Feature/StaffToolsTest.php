@@ -47,7 +47,7 @@ class StaffToolsTest extends TestCase
 
         $done = app(StaffTools::class)->refreshCaches($this->admin);
 
-        $this->assertSame(['settings', 'feature switches', 'leaderboard'], $done);
+        $this->assertSame(['settings', 'feature switches', 'leaderboard', 'branding'], $done);
         $this->assertFalse(Cache::has('app_settings.all'));
         $this->assertFalse(Cache::has('feature_switches.all'));
         $this->assertSame($version + 1, (int) Cache::get(Leaderboard::VERSION_KEY));

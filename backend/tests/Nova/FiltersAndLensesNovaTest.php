@@ -413,6 +413,8 @@ class FiltersAndLensesNovaTest extends TestCase
                 }
             };
             $make(2);
+            // One request first: caches (settings, branding) are filled once, as in normal use.
+            $count("/nova-api/{$uri}");
             $few = $count("/nova-api/{$uri}");
             $make(10);
             $many = $count("/nova-api/{$uri}");

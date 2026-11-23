@@ -137,6 +137,12 @@ class FakeServer {
   bool premium = false;
   int randomStatus = 201;
 
+  /// The "branding" block of /config (null = an older server that sends none).
+  Map<String, Object?>? branding;
+
+  /// Logo files by path, e.g. /storage/branding/logo-light-….png.
+  final Map<String, List<int>> logos = {};
+
   /// What /config says about ads (the server turns them off for Premium students).
   bool showAds = true;
 
@@ -320,6 +326,14 @@ class FakeServer {
     calls.add('${request.method} ${request.url.path}');
     if (!online) throw const SocketException('offline');
 
+    // Branding logos are plain files on the server (no API, no token).
+    if (request.url.path.startsWith('/storage/branding/')) {
+      final file = logos[request.url.path];
+      return file == null
+          ? http.Response('', 404)
+          : http.Response.bytes(file, 200, headers: {'content-type': 'image/png'});
+    }
+
     final path = request.url.path.replaceFirst('/api/v1/', '');
     final auth = request.headers['Authorization'];
     Map<String, Object?> body() => request.body.isEmpty ? {} : asMap(jsonDecode(request.body));
@@ -349,6 +363,7 @@ class FakeServer {
           'features': features,
           'premium': false,
           'show_ads': showAds,
+          if (branding != null) 'branding': branding,
         });
       case ('POST', final p) when p.startsWith('questions/') && p.endsWith('/explain'):
         final id = int.parse(p.split('/')[1]);

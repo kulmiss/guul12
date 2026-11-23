@@ -1,5 +1,7 @@
 import 'package:material_ui/material_ui.dart';
 
+import '../data/branding.dart';
+
 /// Design direction A · Sunrise (owner decision #2).
 abstract final class SunriseColors {
   static const teal = Color(0xFF0E5E6F);
@@ -75,10 +77,47 @@ extension FeedbackColorsX on BuildContext {
   FeedbackColors get feedback => Theme.of(this).extension<FeedbackColors>()!;
 }
 
-ThemeData sunriseTheme(Brightness brightness) {
-  final isDark = brightness == Brightness.dark;
+/// The built-in look (also the fallback when no branding was received).
+ThemeData sunriseTheme(Brightness brightness) => brandTheme(Branding.sunrise, brightness);
 
-  final scheme = isDark
+/// The app theme for a branding from Nova. Sunrise keeps its hand-tuned colours; another branding
+/// keeps its exact brand colours and gets the in-between shades from them.
+ThemeData brandTheme(Branding brand, Brightness brightness) {
+  final isDark = brightness == Brightness.dark;
+  final scheme = brand.isSunriseLook ? _sunriseScheme(isDark) : _brandScheme(brand, isDark);
+  return _themeFrom(scheme, brand, isDark);
+}
+
+ColorScheme _brandScheme(Branding brand, bool isDark) {
+  final seeded = ColorScheme.fromSeed(
+    seedColor: isDark ? brand.primaryDark : brand.primary,
+    brightness: isDark ? Brightness.dark : Brightness.light,
+  );
+  return isDark
+      ? seeded.copyWith(
+          primary: brand.primaryDark,
+          onPrimary: SunriseColors.night,
+          secondary: brand.accentDark,
+          onSecondary: SunriseColors.night,
+          surface: SunriseColors.night,
+          onSurface: const Color(0xFFE6EEF0),
+          onSurfaceVariant: const Color(0xFFAEC0C5),
+          surfaceContainer: SunriseColors.nightCard,
+        )
+      : seeded.copyWith(
+          primary: brand.primary,
+          onPrimary: brand.onPrimary,
+          secondary: brand.accent,
+          onSecondary: brand.onAccent,
+          surface: brand.background,
+          onSurface: brand.text,
+          surfaceContainerLowest: Colors.white,
+          surfaceContainer: Colors.white,
+        );
+}
+
+ColorScheme _sunriseScheme(bool isDark) {
+  return isDark
       ? const ColorScheme(
           brightness: Brightness.dark,
           primary: SunriseColors.tealDark,
@@ -125,9 +164,15 @@ ThemeData sunriseTheme(Brightness brightness) {
           outline: Color(0xFF8A9A9F),
           outlineVariant: Color(0xFFEADFCD),
         );
+}
 
-  const heading = 'Nunito';
-  const body = 'NotoSans';
+ThemeData _themeFrom(ColorScheme scheme, Branding brand, bool isDark) {
+  final heading = brand.headingFont;
+  final body = brand.bodyFont;
+  final card = BorderRadius.circular(brand.cardRadius);
+  final button = BorderRadius.circular(brand.buttonRadius);
+  // Text fields stay calm even with pill-shaped buttons.
+  final field = BorderRadius.circular(brand.buttonRadius > 16 ? 16 : brand.buttonRadius);
 
   final base = ThemeData(useMaterial3: true, colorScheme: scheme, fontFamily: body);
   final text = base.textTheme.copyWith(
@@ -179,27 +224,27 @@ ThemeData sunriseTheme(Brightness brightness) {
       color: scheme.surfaceContainer,
       elevation: 0,
       margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+      shape: RoundedRectangleBorder(borderRadius: card),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
         minimumSize: const Size(64, 52),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        textStyle: const TextStyle(fontFamily: body, fontWeight: FontWeight.w700, fontSize: 16),
+        shape: RoundedRectangleBorder(borderRadius: button),
+        textStyle: TextStyle(fontFamily: body, fontWeight: FontWeight.w700, fontSize: 16),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         minimumSize: const Size(64, 52),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        shape: RoundedRectangleBorder(borderRadius: button),
         side: BorderSide(color: scheme.outline),
-        textStyle: const TextStyle(fontFamily: body, fontWeight: FontWeight.w700, fontSize: 16),
+        textStyle: TextStyle(fontFamily: body, fontWeight: FontWeight.w700, fontSize: 16),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: scheme.surfaceContainer,
-      border: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
+      border: OutlineInputBorder(borderRadius: field),
     ),
     navigationBarTheme: NavigationBarThemeData(
       backgroundColor: scheme.surfaceContainer,

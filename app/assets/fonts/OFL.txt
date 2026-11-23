@@ -2,6 +2,10 @@ Nunito: Copyright 2014 The Nunito Project Authors (https://github.com/googlefont
 Noto Sans: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
 (The Noto Sans files here are subset to Latin, Greek and common symbols to keep the app small.
 The OFL allows this; Noto Sans has no Reserved Font Name.)
+Inter and Poppins (for Nova branding) are under the same licence: see OFL-Inter.txt and
+OFL-Poppins.txt. The Inter, Poppins, Nunito Regular/Medium/Bold and Noto Sans ExtraBold/Black files
+are subset to Latin letters, punctuation and a few symbols; none of these fonts has a Reserved Font
+Name. Source: Google Fonts through the @expo-google-fonts npm packages (0.4.x).
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

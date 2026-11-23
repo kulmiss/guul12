@@ -5,6 +5,7 @@ namespace App\Services\Ops;
 use App\Mail\StaffTestEmail;
 use App\Models\AuditLog;
 use App\Models\User;
+use App\Services\Branding\Branding;
 use App\Services\FeatureSwitches;
 use App\Services\Leaderboard;
 use App\Services\Settings;
@@ -20,6 +21,7 @@ final class StaffTools
         private readonly Settings $settings,
         private readonly FeatureSwitches $switches,
         private readonly StaffAlert $alert,
+        private readonly Branding $branding,
     ) {}
 
     /**
@@ -33,7 +35,8 @@ final class StaffTools
         $this->settings->flush();
         $this->switches->flush();
         Cache::forever(Leaderboard::VERSION_KEY, (int) Cache::get(Leaderboard::VERSION_KEY, 0) + 1);
-        $done = ['settings', 'feature switches', 'leaderboard'];
+        $this->branding->forgetCache();
+        $done = ['settings', 'feature switches', 'leaderboard', 'branding'];
         AuditLog::write($actor, 'ops.cache_refreshed', null, ['cleared' => $done]);
 
         return $done;

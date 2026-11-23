@@ -3,9 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../app/providers.dart';
+import '../../data/branding.dart';
 import '../../data/hook_questions.dart';
 import '../../data/models.dart';
 import '../practice/practice_runner.dart';
+import '../widgets/brand_logo.dart';
 import '../widgets/common.dart';
 import 'profile_fields.dart';
 
@@ -217,15 +219,16 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     final l = context.l10n;
     switch (step) {
       case OnboardingStep.welcome:
+        final brand = ref.watch(configProvider).value?.branding ?? Branding.sunrise;
         return Column(
           children: [
             const SizedBox(height: 32),
-            Icon(Icons.school, size: 72, color: Theme.of(context).colorScheme.primary),
+            const BrandLogo(),
             const SizedBox(height: 16),
             Text(
-              l.appName,
+              brandName(l, brand),
               style: Theme.of(context).textTheme.displaySmall
-                  ?.copyWith(fontFamily: 'Nunito', fontWeight: FontWeight.w900),
+                  ?.copyWith(fontWeight: FontWeight.w900),
             ),
             const SizedBox(height: 12),
             Text(

@@ -26,3 +26,31 @@
 .dark .guul-preview .gp-right { border-color: rgb(var(--colors-green-500)); background: rgb(var(--colors-green-950)); }
 .dark .guul-preview .gp-tick { color: rgb(var(--colors-green-400)); }
 .dark .guul-preview .gp-muted { color: rgb(var(--colors-gray-400)); }
+
+/* Branding page (Settings → Branding). Fonts are the same files the landing page uses. */
+@font-face { font-family: 'Nunito'; font-weight: 400 900; font-display: swap; src: url('/fonts/nunito-latin-800.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans'; font-weight: 400 900; font-display: swap; src: url('/fonts/noto-sans-latin-400.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 400 900; font-display: swap; src: url('/fonts/inter-latin-400.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins'; font-weight: 400 900; font-display: swap; src: url('/fonts/poppins-latin-400.woff2') format('woff2'); }
+.guul-branding-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; }
+@media (max-width: 1024px) { .guul-branding-grid { grid-template-columns: minmax(0, 1fr); } }
+.guul-palette { display: inline-flex; align-items: center; gap: .25rem; padding: .4rem .7rem; border: 2px solid rgb(var(--colors-gray-200)); border-radius: .5rem; font-size: .875rem; font-weight: 700; }
+.guul-palette.is-active { border-color: rgb(var(--colors-primary-500)); }
+.guul-swatch { display: inline-block; width: 1rem; height: 1rem; border-radius: 9999px; border: 1px solid rgb(0 0 0 / .15); }
+.guul-contrast, .guul-history { width: 100%; font-size: .8125rem; border-collapse: collapse; }
+.guul-contrast td, .guul-history td { padding: .25rem .25rem; border-top: 1px solid rgb(var(--colors-gray-200)); }
+.guul-contrast .is-ok { color: rgb(var(--colors-green-700)); font-weight: 700; white-space: nowrap; }
+.guul-contrast .is-bad { color: rgb(var(--colors-red-700)); font-weight: 700; white-space: nowrap; }
+.guul-problems { margin-bottom: 1rem; padding: .75rem 1rem; border-radius: .5rem; background: rgb(var(--colors-red-50)); color: rgb(var(--colors-red-800)); font-size: .875rem; }
+.guul-logo-thumb { height: 32px; width: auto; padding: 2px; border-radius: .25rem; background: #fff; }
+.guul-logo-thumb.is-dark { background: #0F1C20; }
+.guul-phone { width: 15rem; padding: .75rem; border-radius: 1.5rem; border: 6px solid #1f2937; display: flex; flex-direction: column; gap: .6rem; font-size: 14px; }
+.guul-phone-bar { display: flex; align-items: center; gap: .4rem; font-weight: 800; font-size: 18px; }
+.guul-phone-logo { height: 22px; width: auto; }
+.guul-phone-card { padding: .9rem; }
+.guul-phone-option { padding: .55rem .7rem; border: 1px solid; }
+.guul-phone-chip { align-self: flex-start; padding: .15rem .6rem; border-radius: 9999px; font-size: 12px; font-weight: 700; }
+.guul-phone-button { padding: .65rem; font-weight: 700; border: 0; }
+.guul-phone-link { font-weight: 700; text-decoration: underline; }
+.dark .guul-palette, .dark .guul-contrast td, .dark .guul-history td { border-color: rgb(var(--colors-gray-700)); }
+.dark .guul-problems { background: rgb(var(--colors-red-950)); color: rgb(var(--colors-red-200)); }

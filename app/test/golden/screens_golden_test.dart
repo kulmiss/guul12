@@ -10,6 +10,7 @@ import 'package:guul12/data/repository.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../support/app_harness.dart';
+import '../support/branding_fixtures.dart';
 import '../support/fake_server.dart';
 
 /// Real fonts, so the pictures look like the phone (tests use a box font by default).
@@ -22,12 +23,13 @@ Future<void> loadFonts() async {
     await loader.load();
   }
 
-  await load('Nunito', ['assets/fonts/Nunito-ExtraBold.ttf', 'assets/fonts/Nunito-Black.ttf']);
-  await load('NotoSans', [
-    'assets/fonts/NotoSans-Regular.ttf',
-    'assets/fonts/NotoSans-Medium.ttf',
-    'assets/fonts/NotoSans-Bold.ttf',
-  ]);
+  // The four branding fonts, every weight the app uses.
+  for (final family in ['Nunito', 'NotoSans', 'Inter', 'Poppins']) {
+    await load(family, [
+      for (final weight in ['Regular', 'Medium', 'Bold', 'ExtraBold', 'Black'])
+        'assets/fonts/$family-$weight.ttf',
+    ]);
+  }
   await load('MaterialIcons', [
     '${_flutterRoot()}/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf',
   ]);
@@ -239,6 +241,42 @@ void main() {
     await expectLater(
       find.byType(MaterialApp),
       matchesGoldenFile('goldens/onboarding_grade_phone_light.png'),
+    );
+  });
+
+  // A second branding from Nova (Nile palette, Poppins + Inter, round corners, a logo).
+  for (final dark in [false, true]) {
+    final file = 'home_nile_phone_${dark ? 'dark' : 'light'}.png';
+    testWidgets(file, (tester) async {
+      final server = richServer()
+        ..branding = nileBranding()
+        ..logos[nileLogoPath] = tinyPng;
+      await pumpGuul(
+        tester,
+        server: server,
+        before: (repo) async {
+          await prepared(repo);
+          await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+        },
+      );
+      await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+    });
+  }
+
+  testWidgets('welcome_nile_phone_light.png', (tester) async {
+    final server = FakeServer()
+      ..branding = nileBranding()
+      ..logos[nileLogoPath] = tinyPng;
+    await pumpGuul(tester, server: server);
+    // Pictures are drawn only after they are decoded, which needs real (not fake) async time.
+    final logo = find.byKey(const ValueKey('brand-logo'));
+    await tester.runAsync(
+      () => precacheImage(tester.widget<Image>(logo).image, tester.element(logo)),
+    );
+    await tester.pumpAndSettle();
+    await expectLater(
+      find.byType(MaterialApp),
+      matchesGoldenFile('goldens/welcome_nile_phone_light.png'),
     );
   });
 }

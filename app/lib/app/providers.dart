@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
@@ -56,6 +57,12 @@ final catalogProvider = FutureProvider<Catalog>((ref) async {
 final configProvider = FutureProvider<AppConfig>((ref) async {
   ref.watch(syncGenerationProvider);
   return ref.watch(repositoryProvider).config();
+});
+
+/// The branding logo on the phone (light or dark mode), or null for the built-in icon.
+final brandLogoProvider = FutureProvider.family<Uint8List?, bool>((ref, dark) async {
+  ref.watch(syncGenerationProvider);
+  return ref.watch(repositoryProvider).brandLogo(dark: dark);
 });
 
 final savedChaptersProvider = FutureProvider<Set<int>>((ref) async {

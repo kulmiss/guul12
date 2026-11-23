@@ -4,7 +4,7 @@
 @section('title', __('landing.app_title'))
 
 @section('header')
-    <span class="brand">Guul 12</span>
+    @include('landing._brand')
 @endsection
 
 @section('content')

@@ -259,11 +259,8 @@ class _StudentIdCard extends StatelessWidget {
                   Expanded(
                     child: SelectableText(
                       id,
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        fontFamily: 'Nunito',
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 1.5,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall
+                          ?.copyWith(fontWeight: FontWeight.w900, letterSpacing: 1.5),
                     ),
                   ),
                   TextButton.icon(

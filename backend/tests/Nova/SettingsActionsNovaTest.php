@@ -40,7 +40,7 @@ class SettingsActionsNovaTest extends TestCase
         Config::set('guul.telegram.bot_token', '');
 
         $this->tool('refresh-app-and-landing-data', $admin)->assertOk()
-            ->assertJsonFragment(['message' => 'Refreshed: settings, feature switches, leaderboard. The app and the landing page show changes now.']);
+            ->assertJsonFragment(['message' => 'Refreshed: settings, feature switches, leaderboard, branding. The app and the landing page show changes now.']);
         $this->tool('send-test-telegram', $admin)->assertOk()
             ->assertJsonFragment(['danger' => 'Telegram is not set up (TELEGRAM_BOT_TOKEN and TELEGRAM_OPS_CHAT_ID in .env). The test went to the log only.']);
         Config::set('mail.default', 'smtp');

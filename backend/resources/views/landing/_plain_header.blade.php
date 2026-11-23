@@ -1,4 +1,4 @@
-<span class="brand">Guul 12</span>
+@include('landing._brand')
 <nav>
     <a href="/app">App</a>
     <a href="/privacy">Privacy</a>

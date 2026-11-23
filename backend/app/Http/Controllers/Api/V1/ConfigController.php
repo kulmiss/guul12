@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Services\Branding\Branding;
 use App\Services\ExplainService;
 use App\Services\FeatureSwitches;
 use App\Services\PremiumService;
@@ -17,7 +18,7 @@ use Illuminate\Support\Carbon;
  */
 class ConfigController extends Controller
 {
-    public function __invoke(Request $request, Settings $settings, FeatureSwitches $switches, PremiumService $premium, ExplainService $explain): JsonResponse
+    public function __invoke(Request $request, Settings $settings, FeatureSwitches $switches, PremiumService $premium, ExplainService $explain, Branding $branding): JsonResponse
     {
         $user = $request->user('sanctum');
         $isPremium = $user instanceof User && $premium->isPremium($user);
@@ -30,6 +31,8 @@ class ConfigController extends Controller
             'premium' => $isPremium,
             // Ads are never initialised for Premium students.
             'show_ads' => ! $isPremium && $switches->enabled('ads'),
+            // Colours, fonts, roundness and logo; the app keeps the last one and falls back to Sunrise.
+            'branding' => $branding->forApp(),
         ]);
     }
 }

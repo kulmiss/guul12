@@ -5,7 +5,7 @@
 @section('title', __('landing.premium_title').' – Guul 12')
 
 @section('header')
-    <a class="brand" href="{{ $prefix === '' ? '/' : $prefix }}">Guul 12</a>
+    @include('landing._brand', ['href' => $prefix === '' ? '/' : $prefix])
     <nav>
         <a href="{{ $prefix === '' ? '/' : $prefix }}">{{ __('landing.nav_home') }}</a>
         <a href="/privacy">{{ __('landing.nav_privacy') }}</a>

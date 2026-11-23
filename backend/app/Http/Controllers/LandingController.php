@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Branding\Branding;
 use App\Services\Settings;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
@@ -17,7 +18,7 @@ class LandingController extends Controller
     /** Languages besides English. Their texts are drafts for native review. */
     public const DRAFT_LOCALES = ['so', 'am'];
 
-    public function __construct(private readonly Settings $settings) {}
+    public function __construct(private readonly Settings $settings, private readonly Branding $branding) {}
 
     public function home(?string $locale = null): View
     {
@@ -112,6 +113,7 @@ class LandingController extends Controller
             'year' => now()->year,
             // Same page in every language, for the language links and hreflang.
             'alternates' => self::alternates($page),
+            'brand' => $this->branding->forLanding(),
         ];
     }
 

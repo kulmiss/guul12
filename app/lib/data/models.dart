@@ -1,6 +1,8 @@
 /// Data shapes received from the API (`/api/v1`) and stored offline.
 library;
 
+import 'branding.dart';
+
 /// Reads a JSON value as a map, or throws [FormatException].
 Map<String, Object?> asMap(Object? value, [String what = 'object']) {
   if (value is Map<String, Object?>) return value;
@@ -509,6 +511,7 @@ class AppConfig {
     required this.showAds,
     this.paperMaxScore = 100,
     this.freeRandomExamsPerDay = 1,
+    this.branding = Branding.sunrise,
   });
 
   factory AppConfig.fromJson(Map<String, Object?> json) {
@@ -525,6 +528,7 @@ class AppConfig {
       showAds: asBool(json['show_ads']),
       paperMaxScore: asIntOrNull(settings['paper_max_score']) ?? 100,
       freeRandomExamsPerDay: asIntOrNull(settings['free_random_exams_per_day']) ?? 1,
+      branding: Branding.fromJsonOrSunrise(json['branding']),
     );
   }
 
@@ -549,6 +553,9 @@ class AppConfig {
   /// The real paper's top score (EAES has not confirmed the Aptitude scale; editable on the server).
   final int paperMaxScore;
   final int freeRandomExamsPerDay;
+
+  /// Colours, fonts, roundness and logo from Nova (Sunrise when none or broken).
+  final Branding branding;
 
   /// Unknown switches default to on, matching the server defaults.
   bool feature(String key) => features[key] ?? true;

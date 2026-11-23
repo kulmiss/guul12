@@ -15,6 +15,10 @@ Add one cron line on the server (it runs backups, the watchdog and the quality g
 | `quality:promote` | every night 03:15 | Beta questions with enough clean answers become Published |
 | `queue:work --stop-when-empty` | every minute | Background work started from Nova (big question changes, "Run backup now"); stops when there is nothing to do |
 
+## Branding logos
+
+Logos uploaded in Nova → Settings → Branding are stored in `storage/app/public/branding` and served from `/storage/branding/…`. Run once on the server: `php artisan storage:link`.
+
 ## Backups
 
 - Files: `backend/storage/app/backups/guul12-<UTC time>.sql.gz` (MySQL) — readable only by the server user.
