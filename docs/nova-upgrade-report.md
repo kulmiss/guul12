@@ -86,7 +86,7 @@ What the browser check proved (0 console errors on every page):
 | App tests | **365 passed**, **60 goldens** (incl. 2 brandings: Sunrise + Nile, light + dark) |
 | Larastan / Pint / flutter analyze | 0 errors, 0 warnings (Larastan with and without Nova) |
 | gitleaks | Clean on every push (run after each commit, before the push) |
-| CI (GitHub Actions) | Backend, App, Content, Landing, Store pack, Secrets scan: green up to step 9; see the PR for the last run |
+| CI (GitHub Actions) | All 6 checks green (Backend incl. MySQL 8, App, Content, Landing, Store pack, Secrets scan) at 5723ba8 |
 | Dashboard load time | Opening a card: **2.4 ms** on average, **89 ms** for all 37 cards (cached). Cache refresh: **4.7 s** with 20,000 students and 400,000 answers (every 10 min, in the background). Whole Overview page in real Chrome on the local test server: **2.4–2.5 s** |
 | Lighthouse (landing) | 99–100 on all 10 pages, with Sunrise and with Nile + logo |
 
@@ -131,7 +131,7 @@ Nova itself:
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on your tasks
 ⚠️ Problems / questions: none open. Referral reward (QUESTIONS #40) still needs your answer.
 
-**My open tasks for you:**
+**Your open tasks:**
 - Nova setup on the server (licence);
 - Google sign-in keys;
 - AdMob IDs;
