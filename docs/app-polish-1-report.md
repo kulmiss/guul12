@@ -63,7 +63,7 @@ Files are in `app/test/golden/goldens/` on the PR branch.
 | Warm-up answers | Solved a second time in the test, by answer text, not letter |
 | Backend | **323 passed** (SQLite + MariaDB), Pint clean, Larastan 0 errors; with Nova: 86 passed, Larastan 0 |
 | gitleaks | Clean |
-| CI (GitHub Actions) | **Green** at eaf31fd ebd74cd (extras) and c79a556 (Become Premium): App (analyze, all tests and goldens, release APK + app bundle, 8-permission check) and Secrets scan |
+| CI (GitHub Actions) | **Green** at eaf31fd, ebd74cd (extras) and c79a556 (Become Premium): App (analyze, all tests and goldens, release APK + app bundle, 8-permission check), Backend (PHP 8.2, PHP 8.3, MySQL 8) and Secrets scan |
 
 ## 4. What I could NOT test
 
@@ -78,7 +78,7 @@ Files are in `app/test/golden/goldens/` on the PR branch.
 📍 App polish 1 · Step 6 of 6: Become Premium done → next: your test + merges (#1 → #7)
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on your tasks
-⚠️ None. Ready for the other things you want changed.
+⚠️ Google Play may object to the WhatsApp/Telegram buttons (your decision #40; Nova switch `premium_contact` turns them off). Ready for the other things you want changed.
 
 **Your open tasks:**
 - Nova on the server (licence);
