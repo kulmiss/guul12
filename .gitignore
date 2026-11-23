@@ -31,3 +31,8 @@ Thumbs.db
 
 # Node tools
 node_modules/
+
+# Database dumps and backups hold student data: never commit them.
+*.sql
+*.sql.gz
+*.sqlite.gz

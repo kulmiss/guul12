@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HealthController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,6 @@ Route::get('/terms', [LandingController::class, 'legal'])->defaults('page', 'ter
 Route::get('/delete-account', [LandingController::class, 'legal'])->defaults('page', 'delete')->name('landing.delete');
 
 Route::get('/sitemap.xml', [LandingController::class, 'sitemap']);
+
+// For an outside uptime monitor (database check; no details).
+Route::get('/health', HealthController::class)->name('health');

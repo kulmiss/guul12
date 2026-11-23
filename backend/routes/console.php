@@ -10,3 +10,7 @@ Artisan::command('inspire', function () {
 
 // Quality gate: Beta questions with enough clean answers become Published (03:15 Addis Ababa time).
 Schedule::command('quality:promote')->dailyAt('00:15')->withoutOverlapping();
+
+// Database backup every night (02:30 Addis Ababa) and a server check every 10 minutes.
+Schedule::command('guul:backup')->dailyAt('23:30')->withoutOverlapping();
+Schedule::command('guul:watchdog')->everyTenMinutes()->withoutOverlapping();

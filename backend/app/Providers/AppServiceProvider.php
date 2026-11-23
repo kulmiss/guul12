@@ -8,6 +8,7 @@ use App\Services\Ai\AnthropicProvider;
 use App\Services\Ai\ExplanationProvider;
 use App\Services\Auth\GoogleIdTokenVerifier;
 use App\Services\Auth\JwksGoogleIdTokenVerifier;
+use App\Services\Ops\BackupService;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -25,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
 
             return new JwksGoogleIdTokenVerifier($audiences);
         });
+
+        // Reads storage/app/backups settings from config/guul.php each time (tests change them).
+        $this->app->bind(BackupService::class, fn (): BackupService => BackupService::fromConfig());
 
         $this->app->bind(ExplanationProvider::class, fn (): ExplanationProvider => new AnthropicProvider(
             is_string(config('services.anthropic.key')) ? (string) config('services.anthropic.key') : null,
