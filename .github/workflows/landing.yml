@@ -6,6 +6,12 @@ on:
       - 'backend/resources/views/landing/**'
       - 'backend/lang/**'
       - 'backend/app/Http/Controllers/LandingController.php'
+      - 'backend/app/Services/LandingStats.php'
+      - 'backend/app/Services/Branding/**'
+      - 'backend/app/Support/**'
+      - 'backend/app/Models/LandingReview.php'
+      - 'backend/database/**'
+      - 'content/**'
       - 'backend/routes/web.php'
       - 'backend/public/**'
       - 'tools/lighthouse/**'
@@ -16,6 +22,12 @@ on:
       - 'backend/resources/views/landing/**'
       - 'backend/lang/**'
       - 'backend/app/Http/Controllers/LandingController.php'
+      - 'backend/app/Services/LandingStats.php'
+      - 'backend/app/Services/Branding/**'
+      - 'backend/app/Support/**'
+      - 'backend/app/Models/LandingReview.php'
+      - 'backend/database/**'
+      - 'content/**'
       - 'backend/routes/web.php'
       - 'backend/public/**'
       - 'tools/lighthouse/**'
@@ -51,6 +63,9 @@ jobs:
           php artisan key:generate --force
           touch database/database.sqlite
           php artisan migrate --force
+          # The real content, so the pages are checked with every section shown (numbers, subjects).
+          php artisan db:seed --force
+          php artisan content:import ../content
           php artisan config:cache
           php artisan route:cache
           php artisan view:cache

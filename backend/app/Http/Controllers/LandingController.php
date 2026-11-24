@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Api\V1\ConfigController;
+use App\Models\LandingReview;
 use App\Services\Branding\Branding;
+use App\Services\LandingStats;
 use App\Services\Settings;
+use Carbon\CarbonImmutable;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
@@ -18,20 +22,30 @@ class LandingController extends Controller
     /** Languages besides English. Their texts are drafts for native review. */
     public const DRAFT_LOCALES = ['so', 'am'];
 
-    public function __construct(private readonly Settings $settings, private readonly Branding $branding) {}
+    /** App pictures (public/img/landing/<name>.webp, from app/tool/landing_images.sh), in page order. */
+    public const SCREENS = ['home', 'chapter', 'question', 'exam', 'result', 'progress', 'plan', 'leaderboard', 'chapter_dark'];
+
+    /** Exam dates are counted in Ethiopian time. */
+    private const TIMEZONE = 'Africa/Addis_Ababa';
+
+    public function __construct(
+        private readonly Settings $settings,
+        private readonly Branding $branding,
+        private readonly LandingStats $stats,
+    ) {}
 
     public function home(?string $locale = null): View
     {
         $this->useLocale($locale);
 
-        return view('landing.home', $this->shared($locale, 'home'));
+        return view('landing.home', $this->shared($locale, 'home') + $this->marketing());
     }
 
     public function app(?string $locale = null): View
     {
         $this->useLocale($locale);
 
-        return view('landing.app', $this->shared($locale, 'app'));
+        return view('landing.app', $this->shared($locale, 'app') + $this->marketing());
     }
 
     public function premium(?string $locale = null): View
@@ -44,6 +58,7 @@ class LandingController extends Controller
             'termDays' => $this->settings->int('premium_term_days'),
             'yearDays' => $this->settings->int('premium_year_days'),
             'whatsapp' => self::whatsappDigits($this->settings->get('contact_whatsapp')),
+            'telegram' => ConfigController::telegramName($this->settings->get('contact_telegram')),
             'email' => self::cleanEmail($this->settings->get('contact_email')),
         ]);
     }
@@ -91,6 +106,42 @@ class LandingController extends Controller
     public static function cleanEmail(mixed $value): ?string
     {
         return is_string($value) && filter_var(trim($value), FILTER_VALIDATE_EMAIL) !== false ? trim($value) : null;
+    }
+
+    /**
+     * Days from today until the exam date in the settings; null when not set, not a date, or past.
+     */
+    public static function daysUntilExam(mixed $examDate, CarbonImmutable $now): ?int
+    {
+        if (! is_string($examDate) || preg_match('/^\d{4}-\d{2}-\d{2}$/', $examDate) !== 1) {
+            return null;
+        }
+        $exam = CarbonImmutable::createFromFormat('!Y-m-d', $examDate, self::TIMEZONE);
+        if ($exam === null || $exam->format('Y-m-d') !== $examDate) {
+            return null;
+        }
+        $days = (int) $now->setTimezone(self::TIMEZONE)->startOfDay()->diffInDays($exam, false);
+
+        return $days > 0 ? $days : null;
+    }
+
+    /**
+     * What the home and /app pages show besides the shared parts.
+     *
+     * @return array<string, mixed>
+     */
+    private function marketing(): array
+    {
+        $examDate = $this->settings->get('exam_date');
+        $days = self::daysUntilExam($examDate, CarbonImmutable::now());
+
+        return [
+            'stats' => $this->stats->get(),
+            'reviews' => LandingReview::query()->shown()->get(),
+            'examDays' => $days,
+            'examYear' => $days === null ? null : substr((string) $examDate, 0, 4),
+            'screens' => self::SCREENS,
+        ];
     }
 
     private function useLocale(?string $locale): void

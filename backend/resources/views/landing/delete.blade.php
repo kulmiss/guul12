@@ -8,6 +8,7 @@
 @endsection
 
 @section('content')
+    <article class="wrap narrow doc">
     <h1>Delete your account</h1>
     <h2>In the app</h2>
     <ol>
@@ -25,4 +26,5 @@
 
     <h2>What we keep</h2>
     <p>If you had Premium, our staff log keeps the student ID, plan, dates and payment reference of each Premium change, for accounting. Nothing else is kept.</p>
+    </article>
 @endsection

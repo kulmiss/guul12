@@ -223,6 +223,12 @@ class FakeServer {
   int reportStatus = 201;
   String? reportCode;
 
+  /// Real lesson content for the landing-page pictures (chapter id → title, and the body of
+  /// GET chapters/{id}: summary, solved exercises, flashcards, passages, questions).
+  final Map<int, String> chapterTitles = {};
+  final Map<int, Map<String, Object?>> chapterBodies = {};
+  String unitTitle = 'Two-dimensional motion';
+
   Map<String, Object?> catalogJson() => {
     'cursor': cursor,
     'subjects': [
@@ -261,7 +267,7 @@ class FakeServer {
         'grade': 12,
         'stream': null,
         'number': 2,
-        'title': 'Two-dimensional motion',
+        'title': unitTitle,
         'sort': 2,
       },
     ],
@@ -272,7 +278,7 @@ class FakeServer {
     'id': id,
     'unit_id': 11,
     'number': id - 20,
-    'title': 'Chapter $id',
+    'title': chapterTitles[id] ?? 'Chapter $id',
     'textbook_url': null,
     'video_youtube_id': null,
     'video_access': 'free',
@@ -281,7 +287,13 @@ class FakeServer {
     'sort': id,
   };
 
-  Map<String, Object?> chapterJson(int id) => {
+  Map<String, Object?> chapterJson(int id) {
+    final body = chapterBodies[id];
+    if (body == null) return _sampleChapterJson(id);
+    return {'cursor': 10, 'chapter': chapterHeader(id), ...body};
+  }
+
+  Map<String, Object?> _sampleChapterJson(int id) => {
     'cursor': 10,
     'chapter': chapterHeader(id),
     'summary': {

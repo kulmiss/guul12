@@ -57,6 +57,27 @@ class BrandingTest extends TestCase
         $this->assertEqualsWithDelta(4.48, Contrast::ratio('#777777', '#FFFFFF'), 0.01, 'the classic just-too-light grey');
         $this->assertSame('#FFFFFF', Contrast::bestOn('#0E5E6F', '#1C2B30'));
         $this->assertSame('#1C2B30', Contrast::bestOn('#F28C28', '#1C2B30'));
+        // Lighter until readable on a dark colour; white when nothing lighter is enough.
+        $light = Contrast::lighterOn('#F28C28', '#09404B');
+        $this->assertGreaterThanOrEqual(4.5, Contrast::ratio($light, '#09404B'));
+        $this->assertSame('#FFC27A', Contrast::lighterOn('#FFC27A', '#000000'), 'already readable: unchanged');
+        $this->assertSame('#FFFFFF', Contrast::lighterOn('#F28C28', '#EEEEEE'));
+    }
+
+    public function test_every_palette_gives_the_website_readable_colour_pairs(): void
+    {
+        foreach (array_keys(Branding::palettes()) as $key) {
+            $this->branding->save([...Branding::sunrise(), 'palette' => $key, ...Branding::palettes()[$key]['colors']], $this->admin);
+            $css = $this->branding->cssVariables();
+            preg_match_all('/--([a-z-]+): (#[0-9A-F]{6});/', $css, $m);
+            $v = array_combine($m[1], $m[2]);
+            // Every text/background pair the website uses.
+            foreach ([['ink', 'cream'], ['teal', 'cream'], ['orange', 'cream'], ['on-teal', 'teal'], ['on-accent', 'accent'],
+                ['on-deep', 'deep'], ['on-deep', 'deep-light'], ['highlight', 'deep'], ['highlight', 'deep-light'],
+                ['teal', 'tint'], ['ink', 'accent-tint']] as [$fg, $bg]) {
+                $this->assertGreaterThanOrEqual(4.5, Contrast::ratio($v[$fg], $v[$bg]), "{$key}: {$fg} on {$bg}");
+            }
+        }
     }
 
     public function test_every_palette_passes_the_checks(): void

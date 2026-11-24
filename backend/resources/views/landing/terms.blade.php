@@ -8,6 +8,7 @@
 @endsection
 
 @section('content')
+    <article class="wrap narrow doc">
     <h1>Terms of use</h1>
     <ol>
         <li>Guul 12 helps you practise for the Ethiopian Grade 12 national exam. It is an independent study app and not an official Ministry of Education or exam-service app. We cannot promise any exam result.</li>
@@ -23,4 +24,5 @@
         <p>Questions: <a href="mailto:{{ $email }}">{{ $email }}</a></p>
     @endif
     <p class="note">Last updated: 23 November 2026.</p>
+    </article>
 @endsection

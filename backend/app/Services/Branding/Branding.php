@@ -170,6 +170,7 @@ final class Branding
             'Text on the accent colour' => [Contrast::bestOn($l['accent'], $l['text']), $l['accent']],
             'Main colour on the dark background' => [$d['primary'], self::NIGHT],
             'Accent colour on the dark background' => [$d['accent'], self::NIGHT],
+            'Website: text on the dark bands' => [Contrast::bestOn(self::deepColours($l['primary'])[1], $l['text']), self::deepColours($l['primary'])[1]],
         ];
         $rows = [];
         foreach ($pairs as $label => [$fg, $bg]) {
@@ -307,6 +308,16 @@ final class Branding
         ];
     }
 
+    /**
+     * The website's dark bands: the main colour 35% and 20% darker (gradient ends).
+     *
+     * @return array{0: string, 1: string}
+     */
+    private static function deepColours(string $primary): array
+    {
+        return [Contrast::mix($primary, '#000000', 0.35), Contrast::mix($primary, '#000000', 0.2)];
+    }
+
     /** CSS custom properties for the landing page. */
     public function cssVariables(): string
     {
@@ -314,12 +325,25 @@ final class Branding
         $l = self::strings($b['light']);
         $radius = self::ROUNDNESS[(string) $b['roundness']];
 
+        // Dark bands (hero, app pictures, footer) are the main colour made darker; their text and the
+        // highlight colour on them are picked so every pair stays readable (WCAG AA) for any palette.
+        [$deep, $deepLight] = self::deepColours($l['primary']);
+        $onDeep = Contrast::bestOn($deepLight, $l['text']);
+
         return implode(' ', [
             "--teal: {$l['primary']};",
             '--orange: '.Contrast::readableOn($l['accent'], $l['background']).';',
             "--cream: {$l['background']};",
             "--ink: {$l['text']};",
             '--on-teal: '.Contrast::bestOn($l['primary'], $l['text']).';',
+            "--accent: {$l['accent']};",
+            '--on-accent: '.Contrast::bestOn($l['accent'], $l['text']).';',
+            "--deep: {$deep};",
+            "--deep-light: {$deepLight};",
+            "--on-deep: {$onDeep};",
+            '--highlight: '.Contrast::lighterOn($l['accent'], $deepLight).';',
+            '--tint: '.Contrast::mix($l['primary'], '#FFFFFF', 0.88).';',
+            '--accent-tint: '.Contrast::mix($l['accent'], '#FFFFFF', 0.82).';',
             "--radius-card: {$radius['card']}px;",
             "--radius-button: {$radius['button']}px;",
             "--font-heading: '".self::FONTS[(string) $b['heading_font']][2]."';",

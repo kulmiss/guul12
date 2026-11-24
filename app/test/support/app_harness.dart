@@ -58,9 +58,11 @@ Future<(Repository, FakeServer)> pumpGuul(
   GoogleAuth? googleAuth,
   Future<void> Function(Repository repo)? before,
   DateTime Function()? clock,
+  double pixelRatio = 1,
 }) async {
-  tester.view.physicalSize = size;
-  tester.view.devicePixelRatio = 1;
+  // [size] is in logical pixels; a pixel ratio of 2 draws a sharper picture of the same screen.
+  tester.view.physicalSize = size * pixelRatio;
+  tester.view.devicePixelRatio = pixelRatio;
   addTearDown(tester.view.reset);
 
   final (repo, s, _) = await makeRepository(server: server, noIsolate: true);

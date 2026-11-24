@@ -35,6 +35,7 @@ final class EmptyStates
             'subjects' => 'Subjects come from the setup command ("php artisan db:seed") and the content import.',
             'summaries' => 'Chapter summaries come from the content files with each chapter.',
             'units' => 'Units come from the content files. Run the content import, or check the filter.',
+            'website-reviews' => 'No reviews yet, so the website hides "What students say". Add only real words from a student who agreed.',
         ];
     }
 }

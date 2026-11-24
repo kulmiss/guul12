@@ -50,6 +50,19 @@ final class Contrast
         return '#000000';
     }
 
+    /** The colour made lighter, step by step, until it reaches $needed contrast on a dark background. */
+    public static function lighterOn(string $color, string $background, float $needed = self::AA_TEXT): string
+    {
+        for ($step = 0; $step <= 20; $step++) {
+            $candidate = self::mix($color, '#FFFFFF', $step / 20);
+            if (self::ratio($candidate, $background) >= $needed) {
+                return $candidate;
+            }
+        }
+
+        return '#FFFFFF';
+    }
+
     /** @return array{0: int, 1: int, 2: int} */
     public static function rgb(string $color): array
     {

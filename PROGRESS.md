@@ -1,9 +1,9 @@
 # PROGRESS
 
-📍 App polish · Step 6 of 6: Become Premium page (WhatsApp/Telegram, decision #40) → next: owner test + merges (PR #1 → #7)
+📍 Landing redesign · Step 5 of 5: Bold website on every page (real app pictures, live numbers, real-only reviews) → next: owner review + merge (PR landing-top → develop)
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
-⚠️ Waiting for: owner test + merge of PR #1 → #2 → #3 → #4 → #5 → #6 → #7; referral reward (QUESTIONS #40); confirm prices, WhatsApp, email, icon; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
+⚠️ Waiting for: owner review + merge of the landing PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -14,7 +14,18 @@
 | 4 Engagement + ads + AI + Premium | 20% | ✅ done — waiting for owner test (PR #4) |
 | 5 Landing + ops + store + Nova | 14% | ✅ done — waiting for owner test (PR #5) |
 | Nova upgrade (extra job) | — | ✅ done — waiting for owner test (PR #6) |
-| App polish 1 (owner feedback) | — | ✅ done — waiting for owner test (PR #7) |
+| App polish 1 (owner feedback) | — | ✅ merged (PR #7 → develop) |
+| Landing redesign (owner feedback) | — | ✅ done — waiting for owner review (landing PR) |
+
+## Landing redesign steps
+
+| # | Step | Status |
+|---|---|---|
+| 1 | 3 full mockups (Bold, Minimal, Playful); owner picked Bold | ✅ |
+| 2 | Real app pictures with real lessons (golden test, 2×, WebP) | ✅ |
+| 3 | Live numbers + subject cards, exam countdown, real-only reviews (Nova), brand-safe colours | ✅ |
+| 4 | Bold design on home, /app, /premium, legal pages; Somali + Amharic drafts | ✅ |
+| 5 | Tests, Lighthouse on full content, PR | ✅ |
 
 ## App polish 1 steps (PR #7)
 
