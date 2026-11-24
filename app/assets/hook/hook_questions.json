@@ -1,0 +1,180 @@
+{
+  "_note": "Very easy warm-up shown right after the welcome slides, the same for every grade (bundled, works offline). Tap only, three options each. Original questions; each answer solved twice by hand.",
+  "questions": [
+    {
+      "id": -1,
+      "chapter_id": 0,
+      "passage_id": null,
+      "type": "single_choice",
+      "stem": "What is 7 + 5?",
+      "media_url": null,
+      "difficulty": 1,
+      "is_beta": false,
+      "answer_key": {
+        "correct": "B"
+      },
+      "explanation": "7 + 5 = 12.",
+      "version": 1,
+      "options": [
+        {
+          "key": "A",
+          "side": null,
+          "body": "11",
+          "media_url": null
+        },
+        {
+          "key": "B",
+          "side": null,
+          "body": "12",
+          "media_url": null
+        },
+        {
+          "key": "C",
+          "side": null,
+          "body": "13",
+          "media_url": null
+        }
+      ]
+    },
+    {
+      "id": -2,
+      "chapter_id": 0,
+      "passage_id": null,
+      "type": "single_choice",
+      "stem": "When water gets very cold, it turns into …",
+      "media_url": null,
+      "difficulty": 1,
+      "is_beta": false,
+      "answer_key": {
+        "correct": "A"
+      },
+      "explanation": "Water freezes into ice at 0 °C.",
+      "version": 1,
+      "options": [
+        {
+          "key": "A",
+          "side": null,
+          "body": "Ice",
+          "media_url": null
+        },
+        {
+          "key": "B",
+          "side": null,
+          "body": "Steam",
+          "media_url": null
+        },
+        {
+          "key": "C",
+          "side": null,
+          "body": "Sand",
+          "media_url": null
+        }
+      ]
+    },
+    {
+      "id": -3,
+      "chapter_id": 0,
+      "passage_id": null,
+      "type": "single_choice",
+      "stem": "What is the opposite of \"big\"?",
+      "media_url": null,
+      "difficulty": 1,
+      "is_beta": false,
+      "answer_key": {
+        "correct": "C"
+      },
+      "explanation": "Big and small are opposites.",
+      "version": 1,
+      "options": [
+        {
+          "key": "A",
+          "side": null,
+          "body": "Tall",
+          "media_url": null
+        },
+        {
+          "key": "B",
+          "side": null,
+          "body": "Fast",
+          "media_url": null
+        },
+        {
+          "key": "C",
+          "side": null,
+          "body": "Small",
+          "media_url": null
+        }
+      ]
+    },
+    {
+      "id": -4,
+      "chapter_id": 0,
+      "passage_id": null,
+      "type": "single_choice",
+      "stem": "What is the capital city of Ethiopia?",
+      "media_url": null,
+      "difficulty": 1,
+      "is_beta": false,
+      "answer_key": {
+        "correct": "B"
+      },
+      "explanation": "Addis Ababa is the capital of Ethiopia.",
+      "version": 1,
+      "options": [
+        {
+          "key": "A",
+          "side": null,
+          "body": "Jijiga",
+          "media_url": null
+        },
+        {
+          "key": "B",
+          "side": null,
+          "body": "Addis Ababa",
+          "media_url": null
+        },
+        {
+          "key": "C",
+          "side": null,
+          "body": "Dire Dawa",
+          "media_url": null
+        }
+      ]
+    },
+    {
+      "id": -5,
+      "chapter_id": 0,
+      "passage_id": null,
+      "type": "single_choice",
+      "stem": "What comes next? 2, 4, 6, 8, …",
+      "media_url": null,
+      "difficulty": 1,
+      "is_beta": false,
+      "answer_key": {
+        "correct": "C"
+      },
+      "explanation": "Each number is 2 more than the one before, so 8 + 2 = 10.",
+      "version": 1,
+      "options": [
+        {
+          "key": "A",
+          "side": null,
+          "body": "9",
+          "media_url": null
+        },
+        {
+          "key": "B",
+          "side": null,
+          "body": "12",
+          "media_url": null
+        },
+        {
+          "key": "C",
+          "side": null,
+          "body": "10",
+          "media_url": null
+        }
+      ]
+    }
+  ]
+}

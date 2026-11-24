@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-1-1-q009: {hash: 'c11843229643228c262b084c14b146b2b76b274251f385bb9c37c24a691a66d1', answer: A}
+  g12-economics-1-1-q026: {hash: '9ebd05b018eb5171ab299a4d09aa9d9ea5204d099ebf1819e5d29ea6387875c6', answer: C}

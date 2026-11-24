@@ -1,0 +1,383 @@
+summary:
+  key_points:
+    - 'Medical physics: X-rays are absorbed more by bone than by soft tissue, so bones show clearly; a CT scan combines X-ray images from many angles into cross-sections.'
+    - 'MRI uses a strong magnetic field and radio waves; ultrasound uses high-frequency sound. Neither uses ionising radiation.'
+    - 'Radiotherapy kills cancer cells with high-energy radiation; nuclear medicine uses short-lived radioactive tracers to image organs. Staff limit exposure with shielding, distance and time.'
+    - 'Communication: radio waves and microwaves carry radio, TV and mobile phone signals; optical fibres carry light by total internal reflection.'
+    - 'Echo methods: radar (radio waves) and sonar (sound in water) find distance from $d = \frac{vt}{2}$, because the signal travels there and back.'
+    - 'Energy technology: hydroelectric dams such as the Grand Ethiopian Renaissance Dam turn the potential energy of water into electricity; solar cells turn light into electricity.'
+    - 'Electric power is sent at high voltage so that the current, and the energy lost as heat in the wires, is small.'
+  formulas:
+    - label: Echo distance
+      latex: 'd = \frac{vt}{2}'
+    - label: Wave equation
+      latex: 'c = f\lambda'
+    - label: Power lost in a transmission line
+      latex: 'P_{\text{loss}} = I^2 R'
+
+solved_exercises:
+  - uid: g12-physics-1-2-se01
+    problem: 'A ship''s sonar pulse returns from the sea floor after 2.4 s. Sound travels at 1 500 m/s in sea water. How deep is the sea?'
+    steps:
+      - 'The pulse goes down and back, so the one-way time is $\frac{2.4}{2} = 1.2$ s.'
+      - '$d = 1500 \times 1.2 = 1800$ m.'
+    answer: '1 800 m'
+  - uid: g12-physics-1-2-se02
+    problem: 'An FM radio station broadcasts at 90 MHz. What is the wavelength? ($c = 3 \times 10^8$ m/s)'
+    steps:
+      - '$\lambda = \frac{c}{f} = \frac{3 \times 10^8}{90 \times 10^6}$.'
+      - '$= \frac{300}{90} \approx 3.33$ m.'
+    answer: 'About 3.3 m'
+  - uid: g12-physics-1-2-se03
+    problem: 'Why is an X-ray image of a broken arm clear for bone but not for muscle?'
+    steps:
+      - 'Bone contains calcium, which absorbs X-rays strongly; muscle absorbs them weakly.'
+      - 'Fewer X-rays reach the detector behind bone, so bone appears white and muscle dark.'
+    answer: 'Bone absorbs X-rays much more than soft tissue.'
+
+flashcards:
+  - {uid: g12-physics-1-2-fc01, term: X-ray imaging, definition: 'Uses ionising electromagnetic radiation absorbed more by bone than soft tissue.'}
+  - {uid: g12-physics-1-2-fc02, term: CT scan, definition: 'X-ray images from many angles combined by computer into cross-sections.'}
+  - {uid: g12-physics-1-2-fc03, term: MRI, definition: 'Imaging with a strong magnetic field and radio waves; no ionising radiation.'}
+  - {uid: g12-physics-1-2-fc04, term: Ultrasound, definition: 'Sound above 20 kHz; its echoes from tissues form images.'}
+  - {uid: g12-physics-1-2-fc05, term: Radiotherapy, definition: 'Treating cancer with high-energy radiation.'}
+  - {uid: g12-physics-1-2-fc06, term: Total internal reflection, definition: 'Light is fully reflected inside a denser medium; used in optical fibres.'}
+  - {uid: g12-physics-1-2-fc07, term: Radar, definition: 'Locating objects by reflected radio waves (microwaves).'}
+  - {uid: g12-physics-1-2-fc08, term: Sonar, definition: 'Locating objects under water by reflected sound.'}
+  - {uid: g12-physics-1-2-fc09, term: Geostationary satellite, definition: 'Orbits once every 24 hours above the equator, so it stays over one place.'}
+  - {uid: g12-physics-1-2-fc10, term: Solar cell, definition: 'A device that converts light energy directly into electrical energy.'}
+
+questions:
+  - uid: g12-physics-1-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Why do bones show up clearly on an X-ray image?'
+    options:
+      A: 'Bones give off X-rays.'
+      B: 'X-rays pass through bone more easily than through muscle.'
+      C: 'Bone absorbs X-rays much more than soft tissue does.'
+      D: 'Bones reflect visible light.'
+    answer: C
+    explanation: 'Bone absorbs more X-rays, so fewer reach the detector behind it and bone appears white.'
+
+  - uid: g12-physics-1-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Magnetic resonance imaging (MRI) uses:'
+    options:
+      A: 'A strong magnetic field and radio waves'
+      B: 'X-rays from many angles'
+      C: 'High-frequency sound'
+      D: 'Radioactive tracers'
+    answer: A
+    explanation: 'MRI places the body in a strong magnetic field and uses radio waves; it does not use ionising radiation.'
+
+  - uid: g12-physics-1-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Light travels along a bent optical fibre because of:'
+    options:
+      A: 'Diffraction'
+      B: 'Dispersion'
+      C: 'Absorption'
+      D: 'Total internal reflection'
+    answer: D
+    explanation: 'Light hitting the inner surface at a large angle is completely reflected back into the fibre each time.'
+
+  - uid: g12-physics-1-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'Airport radar finds aircraft using reflected:'
+    options:
+      A: 'Sound waves'
+      B: 'Radio waves (microwaves)'
+      C: 'Gamma rays'
+      D: 'Visible light only'
+    answer: B
+    explanation: 'Radar sends out microwave pulses and times the echoes from the aircraft.'
+
+  - uid: g12-physics-1-2-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'Ships measure the depth of the sea with sonar. Sonar uses:'
+    options:
+      A: 'Sound waves'
+      B: 'X-rays'
+      C: 'Radio waves'
+      D: 'Magnetic fields'
+    answer: A
+    explanation: 'Sound travels well through water, so sonar times sound echoes from the sea floor.'
+
+  - uid: g12-physics-1-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'Ultrasound scanning uses ionising radiation.'
+    answer: false
+    explanation: 'Ultrasound is high-frequency sound, a mechanical wave. It does not ionise atoms, which is why it is used for pregnant women.'
+
+  - uid: g12-physics-1-2-q007
+    type: numeric
+    difficulty: 2
+    stem: 'A radar pulse returns from an aircraft after $2 \times 10^{-4}$ s. Taking $c = 3 \times 10^8$ m/s, how far away is the aircraft, in kilometres?'
+    answer: {value: 30, tolerance: 0, unit: km}
+    explanation: '$d = \frac{ct}{2} = \frac{3 \times 10^8 \times 2 \times 10^{-4}}{2} = 3 \times 10^4$ m $= 30$ km.'
+
+  - uid: g12-physics-1-2-q008
+    type: numeric
+    difficulty: 2
+    stem: 'A sonar pulse returns from the sea floor after 4 s. Sound travels at 1 500 m/s in water. How deep is the sea, in metres?'
+    answer: {value: 3000, tolerance: 0, unit: m}
+    explanation: 'One way takes 2 s, so $d = 1500 \times 2 = 3000$ m.'
+
+  - uid: g12-physics-1-2-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'What is radiotherapy?'
+    options:
+      A: 'Listening to the radio in hospital'
+      B: 'Imaging bones with sound'
+      C: 'Using high-energy radiation to destroy cancer cells'
+      D: 'Measuring body temperature with infrared'
+    answer: C
+    explanation: 'Radiotherapy aims carefully controlled ionising radiation at a tumour to kill its cells.'
+
+  - uid: g12-physics-1-2-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'A hydroelectric dam such as the Grand Ethiopian Renaissance Dam mainly converts:'
+    options:
+      A: 'Chemical energy into electrical energy'
+      B: 'Gravitational potential energy of water into electrical energy'
+      C: 'Nuclear energy into heat'
+      D: 'Light energy into electrical energy'
+    answer: B
+    explanation: 'Water stored high up falls through turbines: potential energy becomes kinetic energy and then electrical energy in generators.'
+
+  - uid: g12-physics-1-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'A solar panel converts:'
+    options:
+      A: 'Heat into sound'
+      B: 'Electrical energy into light'
+      C: 'Chemical energy into light'
+      D: 'Light energy into electrical energy'
+    answer: D
+    explanation: 'Solar (photovoltaic) cells produce an electric current when light falls on them.'
+
+  - uid: g12-physics-1-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A geostationary communication satellite stays above the same place on the equator. What is its orbital period?'
+    options:
+      A: '24 hours'
+      B: '90 minutes'
+      C: '12 hours'
+      D: '365 days'
+    answer: A
+    explanation: 'It goes round once while the Earth turns once, so it keeps pace with the ground below. (Strictly one turn of the Earth takes about 23 h 56 min, usually rounded to 24 hours.)'
+
+  - uid: g12-physics-1-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Lasers are used in eye surgery because laser light:'
+    options:
+      A: 'Is a sound wave'
+      B: 'Spreads out in all directions'
+      C: 'Is an intense, narrow beam that can be focused precisely'
+      D: 'Cannot carry energy'
+    answer: C
+    explanation: 'Laser light is concentrated and coherent, so its energy can be delivered to a very small, exact spot.'
+
+  - uid: g12-physics-1-2-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are electromagnetic waves? Choose all that apply.'
+    options:
+      A: 'Radio waves'
+      B: 'X-rays'
+      C: 'Ultrasound'
+      D: 'Microwaves'
+    answer: [A, B, D]
+    explanation: 'Radio waves, microwaves and X-rays are all parts of the electromagnetic spectrum. Ultrasound is a sound (mechanical) wave.'
+
+  - uid: g12-physics-1-2-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The test that records the electrical activity of the heart is called an ________ (write the full name or its letters).'
+    answer: [electrocardiogram, ECG, EKG, electrocardiograph, electrocardiogram (ECG)]
+    explanation: 'An electrocardiogram (ECG) records the small voltages produced by the heart muscle.'
+
+  - uid: g12-physics-1-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'How does a CT (computed tomography) scanner make its images?'
+    options:
+      A: 'By recording sound echoes'
+      B: 'By combining X-ray images taken from many angles into cross-sections'
+      C: 'By using only a magnet'
+      D: 'By photographing the skin with visible light'
+    answer: B
+    explanation: 'A computer combines many X-ray measurements around the body to build slice images.'
+
+  - uid: g12-physics-1-2-q017
+    type: true_false
+    difficulty: 1
+    stem: 'Radiographers stand behind shields because repeated exposure to X-rays can damage living cells.'
+    answer: true
+    explanation: 'X-rays are ionising and can damage cells; shielding, distance and short exposure times protect staff.'
+
+  - uid: g12-physics-1-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'In nuclear medicine, a patient is given a radioactive tracer to image an organ. Why is a tracer with a short half-life chosen?'
+    options:
+      A: 'So that it glows in the dark'
+      B: 'So that it stays in the body for years'
+      C: 'So that it is cheaper to make'
+      D: 'So that it gives enough radiation for the image but does not remain active in the body for long'
+    answer: D
+    explanation: 'A short half-life means the activity falls quickly after the scan, keeping the patient''s dose low.'
+
+  - uid: g12-physics-1-2-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Mobile phones send and receive signals using:'
+    options:
+      A: 'Microwaves (radio waves)'
+      B: 'Sound waves'
+      C: 'X-rays'
+      D: 'Gamma rays'
+    answer: A
+    explanation: 'Mobile networks use microwave-range radio waves between phones and masts.'
+
+  - uid: g12-physics-1-2-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Builders put steel bars inside concrete beams. Why?'
+    options:
+      A: 'Steel makes the beam lighter.'
+      B: 'Steel stops the beam from conducting heat.'
+      C: 'Concrete is weak when stretched, while steel is strong in tension.'
+      D: 'Steel makes the concrete set faster.'
+    answer: C
+    explanation: 'Concrete resists squeezing well but cracks when stretched. Steel carries the tension, so reinforced concrete is strong both ways.'
+
+  - uid: g12-physics-1-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'An FM station broadcasts at 100 MHz. What is the wavelength of its waves? ($c = 3 \times 10^8$ m/s)'
+    options:
+      A: '30 m'
+      B: '3 m'
+      C: '0.3 m'
+      D: '300 m'
+    answer: B
+    explanation: '$\lambda = \frac{c}{f} = \frac{3 \times 10^8}{1 \times 10^8} = 3$ m.'
+
+  - uid: g12-physics-1-2-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each medical method with what it uses.'
+    left:
+      L1: 'MRI'
+      L2: 'Ultrasound scan'
+      L3: 'X-ray image'
+    right:
+      R1: 'High-frequency sound'
+      R2: 'Ionising electromagnetic radiation'
+      R3: 'A strong magnetic field and radio waves'
+      R4: 'Infrared radiation from the skin'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'MRI: magnet and radio waves. Ultrasound: sound. X-ray: ionising radiation. Infrared is used by thermometers, not these scans.'
+
+  - uid: g12-physics-1-2-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Put these electromagnetic waves in order of increasing frequency.'
+    items:
+      A: 'Visible light'
+      B: 'Radio waves'
+      C: 'X-rays'
+      D: 'Microwaves'
+    answer: [B, D, A, C]
+    explanation: 'From lowest to highest frequency: radio, microwaves, (infrared), visible light, (ultraviolet), X-rays.'
+
+  - uid: g12-physics-1-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is electrical power sent over long distances at very high voltage?'
+    options:
+      A: 'To make the wires lighter'
+      B: 'To make the electricity travel faster'
+      C: 'To increase the current'
+      D: 'To make the current small and reduce energy lost as heat in the wires'
+    answer: D
+    explanation: 'For the same power $P = VI$, a higher voltage means a smaller current, and the heat loss $I^2R$ falls sharply.'
+
+  - uid: g12-physics-1-2-q025
+    type: single_choice
+    difficulty: 1
+    stem: 'A non-contact thermometer pointed at a person''s forehead measures:'
+    options:
+      A: 'Infrared radiation given off by the skin'
+      B: 'Sound from the body'
+      C: 'X-rays from the skin'
+      D: 'The magnetic field of the body'
+    answer: A
+    explanation: 'Warm objects give off infrared radiation; more radiation means a higher temperature.'
+
+  - uid: g12-physics-1-2-q026
+    type: true_false
+    difficulty: 1
+    stem: 'Optical fibres can carry more information than copper telephone wires of the same size.'
+    answer: true
+    explanation: 'Light has a very high frequency, so fibres can carry much more data and lose less signal over distance.'
+
+  - uid: g12-physics-1-2-q027
+    type: single_choice
+    difficulty: 1
+    stem: 'A heart pacemaker helps the heart by:'
+    options:
+      A: 'Taking X-ray pictures of it'
+      B: 'Pumping blood with a motor'
+      C: 'Sending small electrical pulses that make the heart beat regularly'
+      D: 'Cooling the heart'
+    answer: C
+    explanation: 'The pacemaker''s electrical pulses trigger the heart muscle to contract at a steady rate.'
+
+  - uid: g12-physics-1-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'A wind turbine, like those at Ashegoda in Tigray, converts:'
+    options:
+      A: 'Light energy into electrical energy'
+      B: 'Kinetic energy of moving air into electrical energy'
+      C: 'Chemical energy into heat'
+      D: 'Nuclear energy into electrical energy'
+    answer: B
+    explanation: 'Moving air turns the blades, and a generator turns this motion into electricity.'
+
+  - uid: g12-physics-1-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'How does a GPS receiver find its position?'
+    options:
+      A: 'By measuring the Earth''s magnetic field'
+      B: 'By listening for sound from satellites'
+      C: 'By photographing the stars'
+      D: 'By timing radio signals from several satellites to find its distance from each'
+    answer: D
+    explanation: 'Each signal''s travel time gives a distance (distance = speed of light × time). Distances to several satellites fix the position.'
+
+  - uid: g12-physics-1-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Workers in an X-ray department wear a small badge. What does it measure?'
+    options:
+      A: 'The radiation dose they receive'
+      B: 'Their body temperature'
+      C: 'Their heart rate'
+      D: 'The time they spend at work'
+    answer: A
+    explanation: 'A dosimeter badge records how much ionising radiation the wearer has been exposed to, so doses can be kept safe.'

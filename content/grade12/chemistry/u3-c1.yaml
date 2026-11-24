@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Industry chooses conditions to make a product quickly, with a good yield and at low cost. For reversible reactions, Le Chatelier''s principle and reaction rate often pull in opposite directions, so a compromise is used.'
+    - 'Haber process (ammonia): $\text{N}_2 + 3\text{H}_2 \rightleftharpoons 2\text{NH}_3$, $\Delta H = -92$ kJ/mol. Nitrogen comes from air and hydrogen from natural gas or water. Conditions: iron catalyst, about 450 °C and about 200 atm. Unreacted gases are recycled.'
+    - 'For Haber: high pressure favours ammonia (4 moles of gas → 2); low temperature favours ammonia (exothermic) but makes the reaction too slow, so a moderate temperature is chosen. A catalyst speeds the reaction but does not change the yield.'
+    - 'Contact process (sulfuric acid): S → $\text{SO}_2$; $2\text{SO}_2 + \text{O}_2 \rightleftharpoons 2\text{SO}_3$ with a vanadium(V) oxide ($\text{V}_2\text{O}_5$) catalyst at about 450 °C and 1–2 atm. $\text{SO}_3$ is absorbed in concentrated $\text{H}_2\text{SO}_4$ to form oleum ($\text{H}_2\text{S}_2\text{O}_7$), which is then diluted with water. $\text{SO}_3$ is not added straight to water because it forms a dangerous acid mist.'
+    - 'Ostwald process (nitric acid): ammonia is oxidised to NO over a platinum–rhodium catalyst, then NO → $\text{NO}_2$ → $\text{HNO}_3$.'
+    - 'Solvay process (sodium carbonate): brine, ammonia and carbon dioxide (from limestone) give a precipitate of $\text{NaHCO}_3$, which is heated to give $\text{Na}_2\text{CO}_3$. Ammonia is recovered and reused.'
+    - 'Nitrogen fertilisers include ammonium nitrate, ammonium sulfate and urea, $\text{CO(NH}_2)_2$. Their value depends on their percentage of nitrogen.'
+  formulas:
+    - label: Haber process
+      latex: '\text{N}_2 + 3\text{H}_2 \rightleftharpoons 2\text{NH}_3 \quad \Delta H = -92\ \text{kJ/mol}'
+    - label: Contact process key step
+      latex: '2\text{SO}_2 + \text{O}_2 \rightleftharpoons 2\text{SO}_3'
+    - label: Oleum
+      latex: '\text{SO}_3 + \text{H}_2\text{SO}_4 \rightarrow \text{H}_2\text{S}_2\text{O}_7'
+    - label: Percentage of an element
+      latex: '\%\,\text{N} = \frac{\text{mass of N in formula}}{M_r} \times 100\%'
+
+solved_exercises:
+  - uid: g12-chemistry-3-1-se01
+    problem: 'Calculate the percentage of nitrogen in urea, $\text{CO(NH}_2)_2$. (C = 12, O = 16, N = 14, H = 1)'
+    steps:
+      - '$M_r = 12 + 16 + 2(14 + 2) = 60$. Mass of N $= 2 \times 14 = 28$.'
+      - '$\%\text{N} = \frac{28}{60} \times 100\% \approx 46.7\%$.'
+    answer: 'About 46.7%'
+  - uid: g12-chemistry-3-1-se02
+    problem: 'Explain why the Haber process uses about 450 °C even though a lower temperature would give more ammonia at equilibrium.'
+    steps:
+      - 'The forward reaction is exothermic, so lower temperature shifts the equilibrium towards $\text{NH}_3$.'
+      - 'But at low temperature the rate is too slow, even with a catalyst. 450 °C is a compromise between yield and rate.'
+    answer: 'Compromise between yield and rate'
+  - uid: g12-chemistry-3-1-se03
+    problem: 'How many tonnes of ammonia can at most be made from 6 tonnes of hydrogen? (N = 14, H = 1)'
+    steps:
+      - 'From the equation, 3 mol $\text{H}_2$ (6 g) gives 2 mol $\text{NH}_3$ (34 g).'
+      - 'Scale up: 6 tonnes $\text{H}_2$ → 34 tonnes $\text{NH}_3$.'
+    answer: '34 tonnes'
+
+flashcards:
+  - {uid: g12-chemistry-3-1-fc01, term: Haber process, definition: 'Making ammonia from $\text{N}_2$ and $\text{H}_2$ over iron at about 450 °C and 200 atm.'}
+  - {uid: g12-chemistry-3-1-fc02, term: Contact process, definition: 'Making sulfuric acid; key step $2\text{SO}_2 + \text{O}_2 \rightleftharpoons 2\text{SO}_3$ over $\text{V}_2\text{O}_5$.'}
+  - {uid: g12-chemistry-3-1-fc03, term: Oleum, definition: '$\text{H}_2\text{S}_2\text{O}_7$, formed by dissolving $\text{SO}_3$ in concentrated $\text{H}_2\text{SO}_4$.'}
+  - {uid: g12-chemistry-3-1-fc04, term: Ostwald process, definition: 'Making nitric acid by oxidising ammonia over a Pt–Rh catalyst.'}
+  - {uid: g12-chemistry-3-1-fc05, term: Solvay process, definition: 'Making sodium carbonate from brine, ammonia and limestone.'}
+  - {uid: g12-chemistry-3-1-fc06, term: Compromise conditions, definition: 'Conditions that balance yield, rate and cost.'}
+  - {uid: g12-chemistry-3-1-fc07, term: Catalyst, definition: 'Speeds up a reaction without being used up; does not change the equilibrium yield.'}
+  - {uid: g12-chemistry-3-1-fc08, term: Urea, definition: '$\text{CO(NH}_2)_2$, a fertiliser with about 46.7% nitrogen.'}
+
+questions:
+  - uid: g12-chemistry-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which product is made by the Haber process?'
+    options:
+      A: 'Sulfuric acid'
+      B: 'Nitric acid'
+      C: 'Ammonia'
+      D: 'Sodium carbonate'
+    answer: C
+    explanation: 'The Haber process combines nitrogen and hydrogen to make ammonia.'
+
+  - uid: g12-chemistry-3-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which catalyst is used in the Haber process?'
+    options:
+      A: 'Iron'
+      B: 'Vanadium(V) oxide'
+      C: 'Platinum–rhodium'
+      D: 'Nickel'
+    answer: A
+    explanation: 'Finely divided iron is the catalyst. $\text{V}_2\text{O}_5$ is used in the Contact process and Pt–Rh in the Ostwald process.'
+
+  - uid: g12-chemistry-3-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does a high pressure increase the yield of ammonia in the Haber process?'
+    options:
+      A: 'The reaction is endothermic.'
+      B: 'Pressure makes the catalyst work better.'
+      C: 'Pressure increases the temperature.'
+      D: 'There are fewer moles of gas on the product side (2) than on the reactant side (4).'
+    answer: D
+    explanation: 'By Le Chatelier''s principle, raising pressure shifts the equilibrium to the side with fewer gas molecules.'
+
+  - uid: g12-chemistry-3-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'The Haber reaction is exothermic. What would a lower temperature do?'
+    options:
+      A: 'Increase the equilibrium yield but slow the reaction down'
+      B: 'Decrease the yield and speed up the reaction'
+      C: 'Have no effect'
+      D: 'Destroy the catalyst'
+    answer: A
+    explanation: 'Low temperature favours the exothermic forward reaction, but the rate becomes too slow, so about 450 °C is used.'
+
+  - uid: g12-chemistry-3-1-q005
+    type: true_false
+    difficulty: 1
+    stem: 'A catalyst increases the equilibrium yield of ammonia.'
+    answer: false
+    explanation: 'A catalyst speeds up the forward and reverse reactions equally; equilibrium is reached faster but its position does not change.'
+
+  - uid: g12-chemistry-3-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What happens to unreacted nitrogen and hydrogen in a Haber plant?'
+    options:
+      A: 'They are released into the air.'
+      B: 'They are recycled back over the catalyst.'
+      C: 'They are burned.'
+      D: 'They are turned into sulfuric acid.'
+    answer: B
+    explanation: 'Only about 15% converts per pass, so unreacted gases are recycled, giving a high overall conversion.'
+
+  - uid: g12-chemistry-3-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Which catalyst is used in the Contact process?'
+    options:
+      A: 'Iron'
+      B: 'Platinum'
+      C: 'Vanadium(V) oxide, $\text{V}_2\text{O}_5$'
+      D: 'Copper'
+    answer: C
+    explanation: '$\text{V}_2\text{O}_5$ catalyses $2\text{SO}_2 + \text{O}_2 \rightleftharpoons 2\text{SO}_3$.'
+
+  - uid: g12-chemistry-3-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'In the Contact process, why is sulfur trioxide not dissolved directly in water?'
+    options:
+      A: 'It does not react with water.'
+      B: 'It forms a solid.'
+      C: 'Water is too expensive.'
+      D: 'The reaction is very exothermic and forms a dangerous mist of acid.'
+    answer: D
+    explanation: 'Instead $\text{SO}_3$ is absorbed in concentrated $\text{H}_2\text{SO}_4$ to form oleum, which is then diluted safely.'
+
+  - uid: g12-chemistry-3-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the formula of oleum?'
+    options:
+      A: '$\text{H}_2\text{S}_2\text{O}_7$'
+      B: '$\text{H}_2\text{SO}_3$'
+      C: '$\text{SO}_3$'
+      D: '$\text{H}_2\text{S}$'
+    answer: A
+    explanation: '$\text{SO}_3 + \text{H}_2\text{SO}_4 \rightarrow \text{H}_2\text{S}_2\text{O}_7$; adding water then gives $2\text{H}_2\text{SO}_4$.'
+
+  - uid: g12-chemistry-3-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'The Contact process uses only 1–2 atm even though high pressure would favour $\text{SO}_3$. Why?'
+    options:
+      A: 'High pressure would stop the reaction.'
+      B: 'The conversion is already about 99% at low pressure, so extra pressure is not worth the cost.'
+      C: 'The catalyst only works at low pressure.'
+      D: 'There are more gas molecules on the product side.'
+    answer: B
+    explanation: 'The yield is already very high, so expensive high-pressure equipment is unnecessary.'
+
+  - uid: g12-chemistry-3-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'The Ostwald process is used to make:'
+    options:
+      A: 'Ammonia'
+      B: 'Sulfuric acid'
+      C: 'Nitric acid'
+      D: 'Chlorine'
+    answer: C
+    explanation: 'Ammonia is oxidised over a platinum–rhodium catalyst and the products give nitric acid.'
+
+  - uid: g12-chemistry-3-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which raw materials are used in the Solvay process?'
+    options:
+      A: 'Sulfur, air and water'
+      B: 'Nitrogen and hydrogen'
+      C: 'Iron ore and coke'
+      D: 'Brine, limestone and ammonia'
+    answer: D
+    explanation: 'Sodium chloride, calcium carbonate (for $\text{CO}_2$) and recycled ammonia make sodium carbonate.'
+
+  - uid: g12-chemistry-3-1-q013
+    type: numeric
+    difficulty: 2
+    stem: 'What is the percentage by mass of nitrogen in ammonium nitrate, $\text{NH}_4\text{NO}_3$? (N = 14, H = 1, O = 16)'
+    answer: {value: 35, tolerance: 0, unit: '%'}
+    explanation: '$M_r = 80$; mass of N $= 28$; $\frac{28}{80} \times 100\% = 35\%$.'
+
+  - uid: g12-chemistry-3-1-q014
+    type: numeric
+    difficulty: 2
+    stem: 'In the Haber process, how many moles of ammonia can form from 6 mol of hydrogen with enough nitrogen?'
+    answer: {value: 4, tolerance: 0, unit: mol}
+    explanation: '3 mol $\text{H}_2$ gives 2 mol $\text{NH}_3$, so 6 mol gives 4 mol.'
+
+  - uid: g12-chemistry-3-1-q015
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are used as nitrogen fertilisers? Choose all that apply.'
+    options:
+      A: 'Urea'
+      B: 'Ammonium nitrate'
+      C: 'Ammonium sulfate'
+      D: 'Sodium chloride'
+    answer: [A, B, C]
+    explanation: 'Urea and ammonium salts supply nitrogen to crops. Sodium chloride harms most soils.'
+
+  - uid: g12-chemistry-3-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'Where does the nitrogen for the Haber process come from?'
+    options:
+      A: 'The air'
+      B: 'Natural gas'
+      C: 'Sea water'
+      D: 'Limestone'
+    answer: A
+    explanation: 'Air is about 78% nitrogen. Hydrogen usually comes from natural gas (methane) or water.'
+
+  - uid: g12-chemistry-3-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'In the first step of the Contact process, sulfur is burned in air. What is formed?'
+    options:
+      A: 'Sulfur trioxide'
+      B: 'Hydrogen sulfide'
+      C: 'Sulfur dioxide'
+      D: 'Sulfuric acid'
+    answer: C
+    explanation: '$\text{S} + \text{O}_2 \rightarrow \text{SO}_2$. The $\text{SO}_2$ is then oxidised to $\text{SO}_3$ over the catalyst.'
+
+  - uid: g12-chemistry-3-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'In the Solvay process, the ammonia is recovered and used again.'
+    answer: true
+    explanation: 'Ammonia is regenerated by reacting ammonium chloride with calcium hydroxide, which keeps costs down.'
+
+  - uid: g12-chemistry-3-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'For $2\text{SO}_2 + \text{O}_2 \rightleftharpoons 2\text{SO}_3$, $\Delta H$ is negative. Which change would increase the equilibrium yield of $\text{SO}_3$?'
+    options:
+      A: 'Raising the temperature'
+      B: 'Removing oxygen'
+      C: 'Adding more catalyst'
+      D: 'Lowering the temperature'
+    answer: D
+    explanation: 'The forward reaction is exothermic, so lower temperature favours $\text{SO}_3$. A catalyst does not change the yield.'
+
+  - uid: g12-chemistry-3-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main use of the ammonia produced worldwide?'
+    options:
+      A: 'Making fertilisers'
+      B: 'Making glass'
+      C: 'Cooking fuel'
+      D: 'Making steel'
+    answer: A
+    explanation: 'Most ammonia is turned into fertilisers such as urea and ammonium nitrate.'
+
+  - uid: g12-chemistry-3-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'Conditions chosen in industry that balance a good yield with a fast enough rate and reasonable cost are called ________ conditions.'
+    answer: [compromise, optimum, optimal]
+    explanation: 'The Haber process temperature of about 450 °C is a compromise.'
+
+  - uid: g12-chemistry-3-1-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'The principle that says an equilibrium shifts to oppose a change made to it is called ________ principle.'
+    answer: [Le Chatelier's, Le Chatelier, Le Châtelier's, Le Châtelier, Le Chateliers]
+    explanation: 'It is used to predict the effect of pressure, temperature and concentration on yield.'
+
+  - uid: g12-chemistry-3-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'The Haber process reaction is reversible.'
+    answer: true
+    explanation: 'Ammonia decomposes back into nitrogen and hydrogen, so the reaction reaches equilibrium.'
+
+  - uid: g12-chemistry-3-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each process with its catalyst.'
+    left:
+      L1: 'Haber process'
+      L2: 'Contact process'
+      L3: 'Ostwald process'
+    right:
+      R1: 'Vanadium(V) oxide'
+      R2: 'Platinum–rhodium gauze'
+      R3: 'Iron'
+      R4: 'No catalyst is used'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Each of the three processes uses a catalyst to make it fast enough to be economic.'
+
+  - uid: g12-chemistry-3-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps of the Contact process in the correct order.'
+    items:
+      A: '$\text{SO}_2$ is oxidised to $\text{SO}_3$ over $\text{V}_2\text{O}_5$.'
+      B: 'Sulfur is burned in air to give $\text{SO}_2$.'
+      C: 'Oleum is diluted with water to give sulfuric acid.'
+      D: '$\text{SO}_3$ is absorbed in concentrated sulfuric acid to form oleum.'
+    answer: [B, A, D, C]
+    explanation: 'Burn sulfur, oxidise $\text{SO}_2$, absorb $\text{SO}_3$ as oleum, then dilute.'
+
+  - uid: g12-chemistry-3-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Which fertiliser contains the highest percentage of nitrogen by mass? (N = 14, H = 1, O = 16, S = 32, C = 12, K = 39)'
+    options:
+      A: 'Ammonium sulfate, $(\text{NH}_4)_2\text{SO}_4$'
+      B: 'Urea, $\text{CO(NH}_2)_2$'
+      C: 'Ammonium nitrate, $\text{NH}_4\text{NO}_3$'
+      D: 'Potassium nitrate, $\text{KNO}_3$'
+    answer: B
+    explanation: 'Urea: $\frac{28}{60} \approx 46.7\%$. Ammonium nitrate: $\frac{28}{80} = 35\%$. Ammonium sulfate: $\frac{28}{132} \approx 21\%$. Potassium nitrate: $\frac{14}{101} \approx 14\%$.'
+
+  - uid: g12-chemistry-3-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the Solvay process produce, mainly for making glass and soap?'
+    options:
+      A: 'Sodium hydroxide'
+      B: 'Sodium carbonate'
+      C: 'Calcium oxide'
+      D: 'Ammonia'
+    answer: B
+    explanation: 'Sodium carbonate (washing soda) is used in glass, soap and detergent making.'
+
+  - uid: g12-chemistry-3-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Sulfuric acid is used to make which of these?'
+    options:
+      A: 'Table salt'
+      B: 'Drinking water'
+      C: 'Phosphate fertilisers'
+      D: 'Oxygen gas'
+    answer: C
+    explanation: 'A large share of sulfuric acid is used to turn phosphate rock into soluble phosphate fertilisers. It is also used in car batteries and detergents.'
+
+  - uid: g12-chemistry-3-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'In the Haber process, the pressure is about 200 atm and not much higher. Why?'
+    options:
+      A: 'Higher pressure would lower the yield.'
+      B: 'The reaction does not depend on pressure.'
+      C: 'Higher pressure needs much stronger, more expensive equipment and more energy.'
+      D: 'The iron catalyst melts at high pressure.'
+    answer: C
+    explanation: 'Very high pressure raises the yield further but costs too much and is more dangerous.'
+
+  - uid: g12-chemistry-3-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about a catalyst in an industrial process is correct?'
+    options:
+      A: 'It lets the reaction reach equilibrium faster at a lower temperature.'
+      B: 'It increases the yield of product.'
+      C: 'It is used up in the reaction.'
+      D: 'It changes the value of $\Delta H$.'
+    answer: A
+    explanation: 'A catalyst gives a lower-energy pathway, so equilibrium is reached faster; yield and $\Delta H$ do not change.'

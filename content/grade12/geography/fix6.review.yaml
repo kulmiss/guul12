@@ -1,0 +1,4 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-6-1-q020: {hash: 'd332899b766d7c7f2c59e5d2a547fa2e5eead235e7239b2e554447cb44dd115d', answer: reuse}
+  g12-geography-6-1-q023: {hash: '39596133f3882912ce6e28b7b3bdcb686ec43b73ad081d704b7e4037b80d9677', answer: [B, A, C]}

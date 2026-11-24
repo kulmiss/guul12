@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'After liberation in 1941, Haile Selassie I rebuilt a centralised state: a modern army, ministries, provincial administration and a growing school system. The Anglo-Ethiopian agreements of 1942 and 1944 gradually reduced British influence.'
+    - 'A United Nations resolution (1950) federated Eritrea with Ethiopia; the federation began in 1952. In 1962 the Eritrean assembly voted to end the federation and Eritrea became a province, but armed opposition had already begun in 1961.'
+    - 'A revised constitution was introduced in 1955. In December 1960 an attempted coup led by the brothers Germame and Mengistu Neway failed but showed growing discontent.'
+    - 'Ethiopia played an international role: it sent the Kagnew Battalion to the UN force in Korea (1951–1953), served in the UN mission in the Congo, and hosted the founding of the OAU in Addis Ababa in 1963.'
+    - 'From the mid-1960s, a student movement demanded land reform under the slogan "Land to the Tiller". Rising prices, the Wollo famine (1972–1974) and army unrest led to the 1974 revolution. The Derg (military committee) deposed Haile Selassie on 12 September 1974.'
+    - 'The Derg, chaired from 1977 by Mengistu Haile Mariam, declared socialism. The rural land proclamation of March 1975 nationalised all rural land, and urban land and extra houses were nationalised in July 1975. The Zemecha campaign sent students to rural areas. Violent repression during the "Red Terror" (1977–1978) killed many people.'
+    - 'In 1977 war broke out in the Ogaden between Ethiopia and Somalia, whose army fought alongside the Western Somali Liberation Front. With Soviet and Cuban support, Ethiopia regained the territory by March 1978. The Workers'' Party of Ethiopia was founded in 1984, and the People''s Democratic Republic of Ethiopia was proclaimed under a new constitution in 1987.'
+    - 'The 1984–1985 famine, forced resettlement and villagisation, and wars with armed fronts weakened the regime. The EPRDF and the EPLF advanced in 1990–1991; Mengistu fled in May 1991 and EPRDF forces entered Addis Ababa on 28 May 1991.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-6-1-se01
+    problem: 'Give three causes of the 1974 Ethiopian revolution.'
+    steps:
+      - 'Land and tenancy problems (the "Land to the Tiller" demand) and rising prices, including fuel after 1973.'
+      - 'The Wollo famine, which the government was seen to hide, and grievances in the army over pay and conditions.'
+    answer: 'Land issues, inflation, the Wollo famine and army discontent'
+  - uid: g12-history-6-1-se02
+    problem: 'What did the rural land proclamation of March 1975 do?'
+    steps:
+      - 'It made all rural land public (state) property and abolished private ownership and tenancy.'
+      - 'Peasants were given use rights and organised into peasant associations.'
+    answer: 'Nationalised rural land and ended tenancy'
+  - uid: g12-history-6-1-se03
+    problem: 'Why did the Soviet Union and Cuba support Ethiopia in the Ogaden war of 1977–1978?'
+    steps:
+      - 'The Derg had declared a socialist government and moved away from the United States.'
+      - 'The Soviet Union switched its support from Somalia to Ethiopia and, with Cuba, sent advisers, weapons and troops.'
+    answer: 'Ethiopia had become a socialist ally.'
+
+flashcards:
+  - {uid: g12-history-6-1-fc01, term: Federation with Eritrea, definition: 'UN-backed federation that began in 1952 and ended in 1962.'}
+  - {uid: g12-history-6-1-fc02, term: 1960 coup attempt, definition: 'Failed attempt led by Germame and Mengistu Neway.'}
+  - {uid: g12-history-6-1-fc03, term: Kagnew Battalion, definition: 'Ethiopian unit that served with the UN in Korea.'}
+  - {uid: g12-history-6-1-fc04, term: Land to the Tiller, definition: 'Student slogan demanding land reform.'}
+  - {uid: g12-history-6-1-fc05, term: Derg, definition: 'Military committee that took power in 1974; formally dissolved in 1987, its leaders ruled until 1991.'}
+  - {uid: g12-history-6-1-fc06, term: Rural land proclamation, definition: 'March 1975 law that nationalised all rural land.'}
+  - {uid: g12-history-6-1-fc07, term: Zemecha, definition: 'Campaign that sent students to rural areas from 1974.'}
+  - {uid: g12-history-6-1-fc08, term: Red Terror, definition: 'Violent repression by the Derg, 1977–1978.'}
+  - {uid: g12-history-6-1-fc09, term: PDRE, definition: 'People''s Democratic Republic of Ethiopia, proclaimed in 1987.'}
+
+questions:
+  - uid: g12-history-6-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Who ruled Ethiopia from the liberation of 1941 until 1974?'
+    options:
+      A: 'Mengistu Haile Mariam'
+      B: 'Emperor Haile Selassie I'
+      C: 'Empress Zewditu'
+      D: 'Lij Iyasu'
+    answer: B
+    explanation: 'Haile Selassie returned in 1941 and ruled until he was deposed in 1974.'
+
+  - uid: g12-history-6-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which body decided in 1950 that Eritrea should be federated with Ethiopia?'
+    options:
+      A: 'The United Nations General Assembly'
+      B: 'The League of Nations'
+      C: 'The OAU'
+      D: 'The British parliament'
+    answer: A
+    explanation: 'UN Resolution 390(V) of 1950 created the federation, which began in 1952.'
+
+  - uid: g12-history-6-1-q003
+    type: numeric
+    difficulty: 2
+    stem: 'In which year did the federation between Ethiopia and Eritrea end, when Eritrea became a province?'
+    answer: {value: 1962, tolerance: 0}
+    explanation: 'The federation, begun in 1952, was ended in 1962.'
+
+  - uid: g12-history-6-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Who led the failed coup attempt of December 1960?'
+    options:
+      A: 'Ras Alula and Ras Makonnen'
+      B: 'Mengistu Haile Mariam'
+      C: 'The brothers Germame and Mengistu Neway'
+      D: 'Lij Iyasu'
+    answer: C
+    explanation: 'Mengistu Neway commanded the Imperial Bodyguard; his brother Germame was a reform-minded official.'
+
+  - uid: g12-history-6-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Ethiopian unit served with the United Nations forces in the Korean War?'
+    options:
+      A: 'The Imperial Bodyguard'
+      B: 'The Arbegnoch'
+      C: 'The Derg'
+      D: 'The Kagnew Battalion'
+    answer: D
+    explanation: 'Ethiopian troops served in Korea from 1951 to 1953.'
+
+  - uid: g12-history-6-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What did the student slogan "Land to the Tiller" demand?'
+    options:
+      A: 'More factories in cities'
+      B: 'That land should belong to the farmers who worked it'
+      C: 'An end to schools'
+      D: 'More land for the church'
+    answer: B
+    explanation: 'Students wanted to end tenancy and the power of large landlords.'
+
+  - uid: g12-history-6-1-q007
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which were causes of the 1974 revolution? Choose all that apply.'
+    options:
+      A: 'The Wollo famine'
+      B: 'Rising prices, including fuel'
+      C: 'Discontent in the army'
+      D: 'An Italian invasion'
+    answer: [A, B, C]
+    explanation: 'The Italian occupation had ended in 1941.'
+
+  - uid: g12-history-6-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'On which date did the Derg depose Emperor Haile Selassie?'
+    options:
+      A: '5 May 1941'
+      B: '25 May 1963'
+      C: '12 September 1974'
+      D: '28 May 1991'
+    answer: C
+    explanation: 'He was removed from power on 12 September 1974.'
+
+  - uid: g12-history-6-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What was the Derg?'
+    options:
+      A: 'The military committee that took power in Ethiopia in 1974'
+      B: 'A student union'
+      C: 'A political party founded in 1991'
+      D: 'The imperial parliament'
+    answer: A
+    explanation: '"Derg" means committee or council in Ge''ez/Amharic. It was formally dissolved when the PDRE was proclaimed in 1987, but its leaders ruled until 1991.'
+
+  - uid: g12-history-6-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What did the rural land proclamation of March 1975 do?'
+    options:
+      A: 'Returned land to the old landlords'
+      B: 'Sold land to foreign companies'
+      C: 'Gave all land to the church'
+      D: 'Made all rural land public property and abolished tenancy'
+    answer: D
+    explanation: 'Peasants received use rights through peasant associations.'
+
+  - uid: g12-history-6-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'What was the Zemecha (Development through Cooperation Campaign)?'
+    options:
+      A: 'A campaign that sent students and teachers to rural areas'
+      B: 'A military alliance'
+      C: 'A famine relief concert'
+      D: 'A football tournament'
+    answer: A
+    explanation: 'Students were sent to explain the land reform, teach literacy and organise peasants.'
+
+  - uid: g12-history-6-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'In 1977, the army of which neighbouring country fought Ethiopia in the Ogaden, alongside the Western Somali Liberation Front (WSLF)?'
+    options:
+      A: 'Sudan'
+      B: 'Kenya'
+      C: 'Somalia'
+      D: 'Egypt'
+    answer: C
+    explanation: 'The Somali army and the WSLF gained much of the Ogaden in 1977; Ethiopian forces regained it by March 1978.'
+
+  - uid: g12-history-6-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which two countries supported Ethiopia militarily in the Ogaden war of 1977–1978?'
+    options:
+      A: 'The USA and Britain'
+      B: 'The Soviet Union and Cuba'
+      C: 'Italy and France'
+      D: 'China and Japan'
+    answer: B
+    explanation: 'The USSR switched support from Somalia to Ethiopia, and Cuba sent troops.'
+
+  - uid: g12-history-6-1-q014
+    type: true_false
+    difficulty: 2
+    stem: 'The "Red Terror" of 1977–1978 was a period of violent repression in which many people were killed.'
+    answer: true
+    explanation: 'The Derg targeted opponents, especially from rival leftist groups, and many young people died.'
+
+  - uid: g12-history-6-1-q015
+    type: true_false
+    difficulty: 1
+    stem: 'The Organisation of African Unity was founded in Addis Ababa in 1963.'
+    answer: true
+    explanation: 'Haile Selassie hosted the founding conference on 25 May 1963.'
+
+  - uid: g12-history-6-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Who became chairman of the Derg in 1977 and President of the PDRE in 1987?'
+    options:
+      A: 'Germame Neway'
+      B: 'Tafari Benti'
+      C: 'Haile Selassie I'
+      D: 'Mengistu Haile Mariam'
+    answer: D
+    explanation: 'Mengistu became chairman of the Derg in February 1977, President of the PDRE in 1987, and fled in May 1991.'
+
+  - uid: g12-history-6-1-q017
+    type: numeric
+    difficulty: 2
+    stem: 'In which year was the People''s Democratic Republic of Ethiopia (PDRE) proclaimed under a new constitution?'
+    answer: {value: 1987, tolerance: 0}
+    explanation: 'The PDRE constitution was approved in 1987.'
+
+  - uid: g12-history-6-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Which party was founded by the Derg in 1984 as the ruling party?'
+    options:
+      A: 'The Workers'' Party of Ethiopia'
+      B: 'The EPRDF'
+      C: 'The Ethiopian People''s Revolutionary Party'
+      D: 'The Prosperity Party'
+    answer: A
+    explanation: 'The WPE was founded in September 1984.'
+
+  - uid: g12-history-6-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policies of the 1980s moved rural people into new settlements, often against their will?'
+    options:
+      A: 'Land to the Tiller'
+      B: 'Federation'
+      C: 'Resettlement and villagisation'
+      D: 'The Zemecha only'
+    answer: C
+    explanation: 'Resettlement moved people from the north to the south and west; villagisation grouped scattered homesteads.'
+
+  - uid: g12-history-6-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The military committee that took power in Ethiopia in 1974 is known as the ________.'
+    answer: [Derg, Dergue]
+    explanation: 'It ruled until 1991.'
+
+  - uid: g12-history-6-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete the student slogan that demanded land reform: "Land to the ________".'
+    answer: [Tiller]
+    explanation: 'The slogan "Land to the Tiller" became famous from the mid-1960s.'
+
+  - uid: g12-history-6-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'The Derg government fell in 1991.'
+    answer: true
+    explanation: 'Mengistu fled in May 1991 and EPRDF forces entered Addis Ababa on 28 May 1991.'
+
+  - uid: g12-history-6-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each event with its year.'
+    left:
+      L1: 'Start of the federation with Eritrea'
+      L2: 'Overthrow of Haile Selassie'
+      L3: 'Fall of the Derg'
+    right:
+      R1: '1974'
+      R2: '1991'
+      R3: '1952'
+      R4: '1936'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '1936 is the start of the Italian occupation.'
+
+  - uid: g12-history-6-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order.'
+    items:
+      A: 'Rural land proclamation'
+      B: 'Attempted coup by the Neway brothers'
+      C: 'Founding of the Workers'' Party of Ethiopia'
+      D: 'Founding of the OAU'
+    answer: [B, D, A, C]
+    explanation: '1960, 1963, 1975, 1984.'
+
+  - uid: g12-history-6-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Why did the Wollo famine of 1972–1974 weaken support for the imperial government?'
+    options:
+      A: 'The famine was blamed on Italy.'
+      B: 'It led to the founding of the OAU.'
+      C: 'It caused the Ogaden war.'
+      D: 'The government was seen to have hidden and failed to respond to the famine.'
+    answer: D
+    explanation: 'When the scale of the famine became public, it added to anger against the regime.'
+
+  - uid: g12-history-6-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year was a revised imperial constitution introduced?'
+    options:
+      A: '1955'
+      B: '1931'
+      C: '1974'
+      D: '1987'
+    answer: A
+    explanation: 'The 1955 constitution replaced that of 1931; 1987 is the PDRE constitution.'
+
+  - uid: g12-history-6-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which two armed movements took control of Addis Ababa and Asmara in May 1991?'
+    options:
+      A: 'The Arbegnoch and the Dervishes'
+      B: 'The EPRDF and the EPLF'
+      C: 'The Kagnew Battalion and the Imperial Bodyguard'
+      D: 'The WPE and the Derg'
+    answer: B
+    explanation: 'The EPRDF took Addis Ababa and the EPLF took Asmara in May 1991.'
+
+  - uid: g12-history-6-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which famine in the mid-1980s drew worldwide attention to Ethiopia?'
+    options:
+      A: 'The 1984–1985 famine'
+      B: 'The 1896 famine'
+      C: 'The 1941 famine'
+      D: 'The 1962 famine'
+    answer: A
+    explanation: 'Drought, war and policy problems combined; international relief efforts followed.'
+
+  - uid: g12-history-6-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which ideology did the Derg officially adopt?'
+    options:
+      A: 'Liberal democracy'
+      B: 'Fascism'
+      C: 'Monarchy'
+      D: 'Socialism (Marxism-Leninism)'
+    answer: D
+    explanation: 'The Derg declared "Ethiopian socialism" in December 1974 and later Marxism-Leninism.'
+
+  - uid: g12-history-6-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did armed opposition to Ethiopian rule begin in Eritrea?'
+    options:
+      A: '1941'
+      B: '1952'
+      C: '1961'
+      D: '1974'
+    answer: C
+    explanation: 'Armed struggle began in September 1961, before the federation was ended in 1962.'

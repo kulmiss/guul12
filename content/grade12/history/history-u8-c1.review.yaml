@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-history-8-1-q001: {hash: 'cbc4a96acfae46e286366a7458da2bb88114e93c61ebe3fdffe0650e9a8d4142', answer: B}
+  g12-history-8-1-q002: {hash: '93f7727293bfd572c0c1e812ea0beefee2fb538b5ec6ea84d13c9e25319f6a14', answer: 1993}
+  g12-history-8-1-q003: {hash: '512858b1112a40ffe329a1b5b322c9e661b86ae49bfcbdee2d7382ee78d1044a', answer: D}
+  g12-history-8-1-q004: {hash: '7862fb2180bab43ad9b71f216e22d61bcd2f6dcff2fe483662f4e12da0a5cc17', answer: A}
+  g12-history-8-1-q005: {hash: 'd08cdcbb83e8cab2f7d8250ae52a68dcfef8b61a7488e2d2bf5ca42231bcbfdc', answer: C}
+  g12-history-8-1-q006: {hash: '5e7f0f9002d2ef20a695952a17df42a20d85f840cced7e6f718558ad36d27be5', answer: D}
+  g12-history-8-1-q007: {hash: '90f826c82ded9b18fad29a69229103b53e16a86709a427fc6423b84de43456e8', answer: A}
+  g12-history-8-1-q008: {hash: '6b2b1127585b9fad5d015ab3cff489821de7cef5947150f7e2677336fee618bb', answer: B}
+  g12-history-8-1-q009: {hash: '3ae3312272a07c80713bb5b003785bd0eeda2fe3c0ca584ba2d6c5a8aeb9af60', answer: C}
+  g12-history-8-1-q010: {hash: '529b0c0b4c1ed2883889a4ed6007317de8afcfaa60ada45e5b975a81da38f07f', answer: D}
+  g12-history-8-1-q011: {hash: '0e82644eab622880030a2ea0efe8530509a4e849c666b1a77238c838a17fedf8', answer: A}
+  g12-history-8-1-q012: {hash: '91f1ff214cc3250c1f954b4c930a5e4fb69f4a228c8b75f99bd3a32b777357dd', answer: 12, note: 'Time-sensitive: "today" is 12 (Tigray, Afar, Amhara, Oromia, Somali, Benishangul-Gumuz, Gambela, Harari, Sidama 2020, South West Ethiopia Peoples 2021, South Ethiopia 2023, Central Ethiopia 2023). The number has changed three times since 2020 and the textbook says 9, so students may answer 9 or 10. Better to fix the date in the stem (e.g. "as of 2024") and make sure the key is 12.'}
+  g12-history-8-1-q013: {hash: '807c9e52d23f788d8e6bb49ac5a8a1f811caed939240802346d6d1baa39d19d5', answer: B}
+  g12-history-8-1-q014: {hash: '2cd4f755850e00ee6b83f6a6067e52b6ca7a98dc6f5503a110f7df51c715d515', answer: true}
+  g12-history-8-1-q015: {hash: '3abd91adf5c3a6fd6a0295c968e4eba1c9aed3dcc20c9dc19e6ad72114776ea6', answer: false}
+  g12-history-8-1-q016: {hash: 'e02a1c8be02a87ced120528e0b1a8dd19ccf55c854b8213edebd229b6b3168e8', answer: C}
+  g12-history-8-1-q017: {hash: 'f4968d1e234f0e95b088ef1791018f92bd03d136d3db913bf27ba562cfaccec6', answer: D}
+  g12-history-8-1-q018: {hash: '094a02f7f3da904f99b9ee6173f52baa481a088bfaaa4262679466e77d3437d2', answer: A}
+  g12-history-8-1-q019: {hash: '1b1fc583b5c0ebccc5ae8ba31782136413e7277380b77b3eb1ff081756a1487f', answer: [A, B, C]}
+  g12-history-8-1-q020: {hash: '149f43bff6d2a261e67c0ab39576a95f75eff3802e6f528f08d999dd9dc97cc8', answer: Federation}
+  g12-history-8-1-q021: {hash: 'ab6128d3c66206ec55cc51e83576b90d160de6eabcd4c7750d8b29a7a5268ec7', answer: Jijiga, note: 'Spelling variants: q007 of this sheet writes "Jigjiga", while "Jijiga" is the common official spelling. The fill-in key must accept both (and Jigjiga/Jijiga with any capitalisation), and the chapter should use one spelling consistently.'}
+  g12-history-8-1-q022: {hash: 'a25a079bdc2e1be8ffae61bf5617c1a93aa333fdf76f5407c0b93ba7e03bce97', answer: true}
+  g12-history-8-1-q023: {hash: 'f72c3f5e03ab44f802b4af9fd87b23e70ea23782e72bff1412e622c484cace19', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-history-8-1-q024: {hash: '449cb22c80361510b06e0987e83a36b39d3c3e95b87c65adbdef91cb1f68107a', answer: [B, D, A, C]}
+  g12-history-8-1-q025: {hash: '018ae93512946a6aac96bce0df50625baa6d09d8660ad5987f8fdabbce797d81', answer: B}
+  g12-history-8-1-q026: {hash: '584325eb600bcec890abcebbbdf2a3371f76a30cd5fa12485b3d09432143dfa5', answer: C}
+  g12-history-8-1-q027: {hash: 'cf5b89e764e4d6e459f23a6b0e77f722f7d6fa30332236c8cac1fb89a38346eb', answer: D}
+  g12-history-8-1-q028: {hash: 'ecac3d575f8bf7570169cb1a81265e57661305e20ec58d225b5e3c56fc4e797c', answer: A}
+  g12-history-8-1-q029: {hash: '270c5e3bd2a21e42e6e10b6fe079b39b667b2d5a2cf3a8207eb78e8cffc5810c', answer: B}
+  g12-history-8-1-q030: {hash: '0993a73edcfe8b5bdf9f48b04df934badc9a8ba474e1421ae57bc203ef892482', answer: C}

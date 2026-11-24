@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'Letter codes: number the alphabet A = 1, B = 2, …, Z = 26. A common code shifts every letter forward or back by the same number (CAT → DBU is a shift of +1). After Z, start again at A.'
+    - 'Letter series work like number series: look at the jumps between letters (A, C, E, G jumps by 2).'
+    - 'Directions: north is up, south is down, east is right, west is left. Turning right from north faces east; turning left from north faces west. Two right turns (or two left turns) make you face the opposite way.'
+    - 'For distance problems, draw a sketch and use the grid: moving 3 km north and then 4 km east puts you 5 km from the start in a straight line (3–4–5 right triangle).'
+    - 'Arrangements: draw the seats or positions first, place the facts that are certain, then test the remaining possibilities. Read words like "immediately left of" and "between" carefully.'
+    - 'Calendar and clock puzzles: days repeat every 7 days; a clock''s hands move 360° in 12 hours for the hour hand.'
+  formulas:
+    - label: Alphabet positions
+      latex: 'A = 1,\ B = 2,\ \ldots,\ Z = 26'
+    - label: Straight-line distance
+      latex: 'd = \sqrt{x^2 + y^2}'
+
+solved_exercises:
+  - uid: g12-aptitude-3-1-se01
+    problem: 'If CAT is coded as DBU, how is DOG coded?'
+    steps:
+      - 'Each letter moves forward one place: C → D, A → B, T → U.'
+      - 'D → E, O → P, G → H.'
+    answer: 'EPH'
+  - uid: g12-aptitude-3-1-se02
+    problem: 'Hamza faces north, turns right, then turns right again. Which way is he facing?'
+    steps:
+      - 'North → right → east.'
+      - 'East → right → south.'
+    answer: 'South'
+  - uid: g12-aptitude-3-1-se03
+    problem: 'Five students sit in a row. Ali is in the middle. Bona is at the left end. Chala is immediately right of Ali. Who could be in the second seat from the left?'
+    steps:
+      - 'Seats 1–5: Bona = 1, Ali = 3, Chala = 4.'
+      - 'Seats 2 and 5 are left for the other two students, so either of them could be in seat 2.'
+    answer: 'Either of the two remaining students'
+
+flashcards:
+  - {uid: g12-aptitude-3-1-fc01, term: Letter shift code, definition: 'Each letter moves the same number of places in the alphabet.'}
+  - {uid: g12-aptitude-3-1-fc02, term: Alphabet positions, definition: 'A = 1 … Z = 26; M = 13 is the middle.'}
+  - {uid: g12-aptitude-3-1-fc03, term: Right turn from north, definition: 'Faces east.'}
+  - {uid: g12-aptitude-3-1-fc04, term: Two right turns, definition: 'Face the opposite direction.'}
+  - {uid: g12-aptitude-3-1-fc05, term: 3–4–5 rule, definition: '3 north and 4 east is 5 units from the start.'}
+  - {uid: g12-aptitude-3-1-fc06, term: Arrangement method, definition: 'Draw positions, fix certain facts, test the rest.'}
+  - {uid: g12-aptitude-3-1-fc07, term: Day cycle, definition: 'Days of the week repeat every 7 days.'}
+
+questions:
+  - uid: g12-aptitude-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'If CAT is written as DBU, how is DOG written in the same code?'
+    options:
+      A: 'EPH'
+      B: 'CNF'
+      C: 'EOH'
+      D: 'DPH'
+    answer: A
+    explanation: 'Each letter moves forward by one: D→E, O→P, G→H.'
+
+  - uid: g12-aptitude-3-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'If BOOK is written as DQQM, how is PEN written in the same code?'
+    options:
+      A: 'QFO'
+      B: 'RGP'
+      C: 'OCM'
+      D: 'RFP'
+    answer: B
+    explanation: 'Each letter moves forward by two: P→R, E→G, N→P.'
+
+  - uid: g12-aptitude-3-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Find the next letter: A, C, E, G, ?'
+    options:
+      A: 'H'
+      B: 'J'
+      C: 'I'
+      D: 'K'
+    answer: C
+    explanation: 'Skip one letter each time: G → (H) → I.'
+
+  - uid: g12-aptitude-3-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Find the next letter group: AB, DE, GH, JK, ?'
+    options:
+      A: 'KL'
+      B: 'LM'
+      C: 'NO'
+      D: 'MN'
+    answer: D
+    explanation: 'Each pair starts 3 letters after the previous one: A, D, G, J, M → MN.'
+
+  - uid: g12-aptitude-3-1-q005
+    type: numeric
+    difficulty: 1
+    stem: 'If A = 1, B = 2, C = 3 and so on, what is the value of the letter M?'
+    answer: {value: 13, tolerance: 0}
+    explanation: 'M is the 13th letter of the alphabet.'
+
+  - uid: g12-aptitude-3-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'If A = 1, B = 2, … , Z = 26, which word has a total value of 20?'
+    options:
+      A: 'CAB'
+      B: 'BAD'
+      C: 'CAKE'
+      D: 'HELP'
+    answer: C
+    explanation: 'CAKE = 3 + 1 + 11 + 5 = 20. CAB = 6, BAD = 7 and HELP = 8 + 5 + 12 + 16 = 41.'
+
+  - uid: g12-aptitude-3-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Hawi faces north and turns right. Which direction is she facing now?'
+    options:
+      A: 'South'
+      B: 'East'
+      C: 'West'
+      D: 'North'
+    answer: B
+    explanation: 'A right turn from north points east.'
+
+  - uid: g12-aptitude-3-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Musa faces east. He turns left, then turns left again. Which direction is he facing?'
+    options:
+      A: 'West'
+      B: 'North'
+      C: 'South'
+      D: 'East'
+    answer: A
+    explanation: 'East → left → north → left → west. Two left turns face the opposite way.'
+
+  - uid: g12-aptitude-3-1-q009
+    type: single_choice
+    difficulty: 3
+    stem: 'A girl walks 3 km north, then 4 km east. How far is she from her starting point in a straight line?'
+    options:
+      A: '7 km'
+      B: '1 km'
+      C: '12 km'
+      D: '5 km'
+    answer: D
+    explanation: '$\sqrt{3^2 + 4^2} = \sqrt{25} = 5$ km.'
+
+  - uid: g12-aptitude-3-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'A man walks 5 km south, then 5 km north. Where is he?'
+    options:
+      A: 'Back at his starting point'
+      B: '10 km south of the start'
+      C: '5 km east of the start'
+      D: '10 km north of the start'
+    answer: A
+    explanation: 'Going 5 km south and then 5 km north cancels out.'
+
+  - uid: g12-aptitude-3-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'The sun rises in the east. In the morning, Abdi stands with the sun directly in front of him. Which direction is on his left?'
+    options:
+      A: 'South'
+      B: 'North'
+      C: 'West'
+      D: 'East'
+    answer: B
+    explanation: 'Facing east, north is on the left and south on the right.'
+
+  - uid: g12-aptitude-3-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Today is Tuesday. What day will it be 10 days from today?'
+    options:
+      A: 'Thursday'
+      B: 'Wednesday'
+      C: 'Friday'
+      D: 'Saturday'
+    answer: C
+    explanation: '10 days = 1 week + 3 days. Tuesday + 3 days = Friday.'
+
+  - uid: g12-aptitude-3-1-q013
+    type: numeric
+    difficulty: 2
+    stem: 'Five friends stand in a line. Amina is third from the left. Counting from the right, what is her position?'
+    answer: {value: 3, tolerance: 0}
+    explanation: 'In a line of 5, position from right $= 5 - 3 + 1 = 3$.'
+
+  - uid: g12-aptitude-3-1-q014
+    type: single_choice
+    difficulty: 3
+    stem: 'In a row of students, Ali is 7th from the left and 12th from the right. How many students are in the row?'
+    options:
+      A: '19'
+      B: '17'
+      C: '20'
+      D: '18'
+    answer: D
+    explanation: '$7 + 12 - 1 = 18$ (Ali is counted twice).'
+
+  - uid: g12-aptitude-3-1-q015
+    type: single_choice
+    difficulty: 3
+    stem: 'Four people sit in a row: P, Q, R and S. Q is at the right end. P is immediately left of Q. S is not at the left end. Who is at the left end?'
+    options:
+      A: 'P'
+      B: 'Q'
+      C: 'R'
+      D: 'S'
+    answer: C
+    explanation: 'Seats 1–4: Q = 4, P = 3. S cannot be 1, so S = 2 and R = 1.'
+
+  - uid: g12-aptitude-3-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'Using the same facts (Q at the right end, P immediately left of Q, S not at the left end), who sits between R and P?'
+    options:
+      A: 'Q'
+      B: 'S'
+      C: 'Nobody'
+      D: 'P'
+    answer: B
+    explanation: 'The order is R, S, P, Q, so S is between R and P.'
+
+  - uid: g12-aptitude-3-1-q017
+    type: true_false
+    difficulty: 1
+    stem: 'If you face west and turn around completely (180°), you will face east.'
+    answer: true
+    explanation: 'West and east are opposite directions.'
+
+  - uid: g12-aptitude-3-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'In the code where each letter moves back one place (B → A), the word "IBN" decodes to "HAM".'
+    answer: true
+    explanation: 'I → H, B → A, N → M.'
+
+  - uid: g12-aptitude-3-1-q019
+    type: true_false
+    difficulty: 2
+    stem: 'If today is Monday, then 14 days from today is also a Monday.'
+    answer: true
+    explanation: '14 days is exactly 2 weeks.'
+
+  - uid: g12-aptitude-3-1-q020
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Starting by facing north, which sequences of turns leave you facing south? Choose all that apply.'
+    options:
+      A: 'Right, right'
+      B: 'Left, left'
+      C: 'Right, left'
+      D: 'Left, right, right, right'
+    answer: [A, B, D]
+    explanation: 'A and B are two quarter turns the same way. D: left, then three rights = two rights net. C cancels out and faces north.'
+
+  - uid: g12-aptitude-3-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'Find the next letter: Z, Y, X, W, ________'
+    answer: [V]
+    explanation: 'The alphabet backwards.'
+
+  - uid: g12-aptitude-3-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'If SUN is written as TVO, write MOON in the same code.'
+    answer: [NPPO]
+    explanation: 'Each letter moves forward one: M→N, O→P, O→P, N→O.'
+
+  - uid: g12-aptitude-3-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'A person faces north. Match each instruction with the direction they will face afterwards.'
+    left:
+      L1: 'Turn right once'
+      L2: 'Turn left once'
+      L3: 'Turn right twice'
+    right:
+      R1: 'West'
+      R2: 'South'
+      R3: 'East'
+      R4: 'North'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'North is reached again only after four turns in the same direction (or two that cancel).'
+
+  - uid: g12-aptitude-3-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Four runners finished a race. Hana finished before Sara. Lidya finished after Sara. Abdi finished first. Put Abdi, Hana, Sara and Lidya in finishing order.'
+    items:
+      A: 'Hana'
+      B: 'Sara'
+      C: 'Lidya'
+      D: 'Abdi'
+    answer: [D, A, B, C]
+    explanation: 'Abdi is first; Hana is before Sara, and Sara is before Lidya.'
+
+  - uid: g12-aptitude-3-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Find the next figure count: a pattern has 1 dot, then 3 dots, then 6 dots, then 10 dots. How many dots come next?'
+    options:
+      A: '14'
+      B: '16'
+      C: '12'
+      D: '15'
+    answer: D
+    explanation: 'Add 2, 3, 4, then 5: $10 + 5 = 15$ (triangular numbers).'
+
+  - uid: g12-aptitude-3-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'A clock shows 3:00. What is the angle between the hour hand and the minute hand?'
+    options:
+      A: '90°'
+      B: '45°'
+      C: '30°'
+      D: '180°'
+    answer: A
+    explanation: 'Each hour mark is 30°; from 12 to 3 is $3 \times 30 = 90°$.'
+
+  - uid: g12-aptitude-3-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'Daud''s house is 2 km east of the school. The market is 2 km north of Daud''s house. In which direction is the market from the school?'
+    options:
+      A: 'South-west'
+      B: 'North-west'
+      C: 'North-east'
+      D: 'South-east'
+    answer: C
+    explanation: 'The market is both east and north of the school: north-east.'
+
+  - uid: g12-aptitude-3-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'In a certain code, 1 = A, 2 = B, 3 = C, and so on. What word does 2-5-5 spell?'
+    options:
+      A: 'BED'
+      B: 'BEE'
+      C: 'BEG'
+      D: 'BAD'
+    answer: B
+    explanation: '2 = B, 5 = E, 5 = E.'
+
+  - uid: g12-aptitude-3-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which comes next: 2A, 4B, 6C, 8D, ?'
+    options:
+      A: '9E'
+      B: '10D'
+      C: '12E'
+      D: '10E'
+    answer: D
+    explanation: 'Numbers go up by 2 and letters by one: 10E.'
+
+  - uid: g12-aptitude-3-1-q030
+    type: single_choice
+    difficulty: 3
+    stem: 'If the day before yesterday was Friday, what day will it be tomorrow?'
+    options:
+      A: 'Sunday'
+      B: 'Saturday'
+      C: 'Monday'
+      D: 'Tuesday'
+    answer: C
+    explanation: 'Day before yesterday = Friday, so yesterday = Saturday, today = Sunday, tomorrow = Monday.'

@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'After 1945 the world split into two blocs in the Cold War: the United States and its allies (capitalist democracies) against the Soviet Union and its allies (communist one-party states). They competed in weapons, ideas, space and influence, but did not fight each other directly.'
+    - 'Key moments: the Truman Doctrine (1947) and Marshall Plan (1948) to support Western Europe; the Berlin Blockade (1948–1949); NATO (1949) and the Warsaw Pact (1955); the Korean War (1950–1953); the Berlin Wall (1961–1989); the Cuban Missile Crisis (October 1962); the Vietnam War, which ended with the fall of Saigon in 1975.'
+    - 'The space race: the USSR launched Sputnik, the first artificial satellite, in 1957; the US Apollo 11 mission landed people on the Moon in 1969.'
+    - 'Decolonisation spread across Asia and Africa: India and Pakistan became independent in 1947, and the Chinese Communist Party under Mao Zedong took power in 1949.'
+    - 'Many new states refused to join either bloc. After the Bandung Conference (1955), the Non-Aligned Movement was founded in Belgrade in 1961 by leaders including Tito, Nehru, Nasser and Sukarno.'
+    - 'The United Nations (1945) and the Universal Declaration of Human Rights (10 December 1948) set new international standards. Western European states began economic integration with the European Economic Community (Treaty of Rome, 1957), which grew into the European Union.'
+    - 'The Cold War ended as Mikhail Gorbachev introduced glasnost (openness) and perestroika (restructuring); the Berlin Wall fell on 9 November 1989, Germany reunified in 1990 and the Soviet Union dissolved in December 1991.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-5-1-se01
+    problem: 'Why is the conflict between the USA and the USSR called a "cold" war?'
+    steps:
+      - 'The two superpowers never fought each other directly in a full war.'
+      - 'They competed through an arms race, propaganda, the space race and "proxy wars" such as Korea and Vietnam.'
+    answer: 'No direct war between the superpowers'
+  - uid: g12-history-5-1-se02
+    problem: 'What was the purpose of the Non-Aligned Movement?'
+    steps:
+      - 'Newly independent countries did not want to be controlled by either the US or Soviet bloc.'
+      - 'They cooperated to stay independent, support decolonisation and reduce Cold War tensions.'
+    answer: 'To stay out of both Cold War blocs'
+  - uid: g12-history-5-1-se03
+    problem: 'Put in order: Sputnik, NATO founded, fall of the Berlin Wall, Cuban Missile Crisis.'
+    steps:
+      - 'NATO 1949, Sputnik 1957, Cuban Missile Crisis 1962, Berlin Wall falls 1989.'
+      - 'So the order is NATO → Sputnik → Cuba → Berlin Wall.'
+    answer: 'NATO, Sputnik, Cuban Missile Crisis, Berlin Wall'
+
+flashcards:
+  - {uid: g12-history-5-1-fc01, term: Cold War, definition: 'Rivalry between the USA and USSR blocs, about 1947–1991, without direct war.'}
+  - {uid: g12-history-5-1-fc02, term: Marshall Plan, definition: 'US economic aid to rebuild Western Europe (1948).'}
+  - {uid: g12-history-5-1-fc03, term: NATO, definition: 'Western military alliance founded in 1949.'}
+  - {uid: g12-history-5-1-fc04, term: Warsaw Pact, definition: 'Soviet-led military alliance founded in 1955.'}
+  - {uid: g12-history-5-1-fc05, term: Cuban Missile Crisis, definition: 'October 1962 crisis over Soviet missiles in Cuba.'}
+  - {uid: g12-history-5-1-fc06, term: Non-Aligned Movement, definition: 'Group of states that joined neither Cold War bloc (founded 1961).'}
+  - {uid: g12-history-5-1-fc07, term: Glasnost, definition: 'Gorbachev''s policy of openness.'}
+  - {uid: g12-history-5-1-fc08, term: Perestroika, definition: 'Gorbachev''s policy of economic restructuring.'}
+  - {uid: g12-history-5-1-fc09, term: UDHR, definition: 'Universal Declaration of Human Rights, adopted 10 December 1948.'}
+
+questions:
+  - uid: g12-history-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which two superpowers led the opposing sides in the Cold War?'
+    options:
+      A: 'Britain and France'
+      B: 'The United States and the Soviet Union'
+      C: 'China and Japan'
+      D: 'Germany and Italy'
+    answer: B
+    explanation: 'The USA led the Western bloc and the USSR the Eastern bloc.'
+
+  - uid: g12-history-5-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is it called the "Cold" War?'
+    options:
+      A: 'The superpowers never fought each other directly in a full-scale war.'
+      B: 'It was fought only in winter.'
+      C: 'It was fought only in the Arctic.'
+      D: 'No weapons were made.'
+    answer: A
+    explanation: 'They competed in other ways and through proxy wars.'
+
+  - uid: g12-history-5-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'What was the Marshall Plan?'
+    options:
+      A: 'A Soviet military alliance'
+      B: 'A plan to divide Africa'
+      C: 'US economic aid to help rebuild Western Europe'
+      D: 'A treaty ending the Korean War'
+    answer: C
+    explanation: 'Announced in 1947 and started in 1948, it aimed to strengthen Western Europe against communism.'
+
+  - uid: g12-history-5-1-q004
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was NATO founded?'
+    answer: {value: 1949, tolerance: 0}
+    explanation: 'NATO was created in April 1949.'
+
+  - uid: g12-history-5-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which alliance did the Soviet Union form with Eastern European states in 1955?'
+    options:
+      A: 'NATO'
+      B: 'The European Union'
+      C: 'The Non-Aligned Movement'
+      D: 'The Warsaw Pact'
+    answer: D
+    explanation: 'The Warsaw Pact was the Eastern bloc''s answer to NATO.'
+
+  - uid: g12-history-5-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'The Cuban Missile Crisis of October 1962 was caused by:'
+    options:
+      A: 'Soviet nuclear missiles being placed in Cuba'
+      B: 'A US invasion of Moscow'
+      C: 'The fall of the Berlin Wall'
+      D: 'The launch of Sputnik'
+    answer: A
+    explanation: 'The two superpowers came close to nuclear war before the USSR agreed to remove the missiles.'
+
+  - uid: g12-history-5-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country launched Sputnik, the first artificial satellite, in 1957?'
+    options:
+      A: 'The United States'
+      B: 'Britain'
+      C: 'The Soviet Union'
+      D: 'China'
+    answer: C
+    explanation: 'Sputnik''s launch started the space race.'
+
+  - uid: g12-history-5-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did Apollo 11 land the first people on the Moon?'
+    options:
+      A: '1957'
+      B: '1961'
+      C: '1975'
+      D: '1969'
+    answer: D
+    explanation: 'Neil Armstrong and Buzz Aldrin walked on the Moon in July 1969.'
+
+  - uid: g12-history-5-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'On which date did the Berlin Wall fall?'
+    options:
+      A: '9 November 1989'
+      B: '1 September 1939'
+      C: '25 May 1963'
+      D: '24 October 1945'
+    answer: A
+    explanation: 'East Germany opened its border, and crowds began breaking down the wall.'
+
+  - uid: g12-history-5-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did the Soviet Union dissolve?'
+    options:
+      A: '1985'
+      B: '1989'
+      C: '1991'
+      D: '1995'
+    answer: C
+    explanation: 'The USSR formally ended in December 1991.'
+
+  - uid: g12-history-5-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Soviet leader introduced glasnost and perestroika?'
+    options:
+      A: 'Joseph Stalin'
+      B: 'Mikhail Gorbachev'
+      C: 'Nikita Khrushchev'
+      D: 'Vladimir Lenin'
+    answer: B
+    explanation: 'Gorbachev led the USSR from 1985 to 1991.'
+
+  - uid: g12-history-5-1-q012
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which leaders are associated with founding the Non-Aligned Movement? Choose all that apply.'
+    options:
+      A: 'Tito of Yugoslavia'
+      B: 'Nehru of India'
+      C: 'Nasser of Egypt'
+      D: 'Harry Truman of the USA'
+    answer: [A, B, C]
+    explanation: 'Truman led the USA, a Cold War bloc leader.'
+
+  - uid: g12-history-5-1-q013
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did India become independent?'
+    answer: {value: 1947, tolerance: 0}
+    explanation: 'India and Pakistan became independent in August 1947.'
+
+  - uid: g12-history-5-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Who led the Communist Party to power in China in 1949?'
+    options:
+      A: 'Chiang Kai-shek'
+      B: 'Deng Xiaoping'
+      C: 'Sun Yat-sen'
+      D: 'Mao Zedong'
+    answer: D
+    explanation: 'Mao proclaimed the People''s Republic of China on 1 October 1949.'
+
+  - uid: g12-history-5-1-q015
+    type: true_false
+    difficulty: 1
+    stem: 'The Universal Declaration of Human Rights was adopted by the United Nations in 1948.'
+    answer: true
+    explanation: 'It was adopted on 10 December 1948, now Human Rights Day.'
+
+  - uid: g12-history-5-1-q016
+    type: true_false
+    difficulty: 2
+    stem: 'The Korean War (1950–1953) was a direct war between US and Soviet armies.'
+    answer: false
+    explanation: 'It was a proxy war: US-led UN forces fought North Korea and China; Soviet troops did not fight openly.'
+
+  - uid: g12-history-5-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which treaty of 1957 created the European Economic Community, which later grew into the European Union?'
+    options:
+      A: 'The Treaty of Rome'
+      B: 'The Treaty of Versailles'
+      C: 'The Treaty of Addis Ababa'
+      D: 'The Warsaw Treaty'
+    answer: A
+    explanation: 'Six countries signed the Treaty of Rome in 1957.'
+
+  - uid: g12-history-5-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Which conference in 1955 brought Asian and African leaders together and led towards non-alignment?'
+    options:
+      A: 'The Berlin Conference'
+      B: 'The Bandung Conference'
+      C: 'The Yalta Conference'
+      D: 'The Potsdam Conference'
+    answer: B
+    explanation: 'It was held in Bandung, Indonesia.'
+
+  - uid: g12-history-5-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'What is a "proxy war"?'
+    options:
+      A: 'A war fought only with nuclear weapons'
+      B: 'A war fought only at sea'
+      C: 'A conflict in which superpowers support opposing sides instead of fighting each other directly'
+      D: 'A war between two cities'
+    answer: C
+    explanation: 'Korea, Vietnam and Angola are examples from the Cold War.'
+
+  - uid: g12-history-5-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'Gorbachev''s policy of "openness", allowing more free speech, was called ________.'
+    answer: [glasnost]
+    explanation: 'Perestroika was his policy of restructuring the economy.'
+
+  - uid: g12-history-5-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'The wall that divided East and West Berlin from 1961 to 1989 is called the Berlin ________.'
+    answer: [Wall]
+    explanation: 'It became the main symbol of the Cold War division of Europe.'
+
+  - uid: g12-history-5-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'The Vietnam War ended with the fall of Saigon in 1975.'
+    answer: true
+    explanation: 'North Vietnamese forces took Saigon in April 1975, and Vietnam was reunified.'
+
+  - uid: g12-history-5-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each event with its year.'
+    left:
+      L1: 'Launch of Sputnik'
+      L2: 'Cuban Missile Crisis'
+      L3: 'Fall of the Berlin Wall'
+    right:
+      R1: '1962'
+      R2: '1989'
+      R3: '1957'
+      R4: '1945'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '1945 is the end of the Second World War.'
+
+  - uid: g12-history-5-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order.'
+    items:
+      A: 'Dissolution of the Soviet Union'
+      B: 'Founding of NATO'
+      C: 'Apollo 11 Moon landing'
+      D: 'Founding of the Warsaw Pact'
+    answer: [B, D, C, A]
+    explanation: '1949, 1955, 1969, 1991.'
+
+  - uid: g12-history-5-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement describes the arms race?'
+    options:
+      A: 'Countries agreeing to destroy all weapons'
+      B: 'A sports competition'
+      C: 'A trade agreement'
+      D: 'The superpowers competing to build more and better weapons, including nuclear weapons'
+    answer: D
+    explanation: 'Both sides built huge nuclear arsenals.'
+
+  - uid: g12-history-5-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year was Germany reunified?'
+    options:
+      A: '1990'
+      B: '1945'
+      C: '1961'
+      D: '2000'
+    answer: A
+    explanation: 'East and West Germany reunified on 3 October 1990.'
+
+  - uid: g12-history-5-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What was the Truman Doctrine (1947)?'
+    options:
+      A: 'A Soviet plan to spread communism'
+      B: 'A US promise to support countries resisting communist pressure'
+      C: 'A treaty ending the Second World War'
+      D: 'A plan to unite Africa'
+    answer: B
+    explanation: 'It began the US policy of "containment".'
+
+  - uid: g12-history-5-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which city was blockaded by the Soviet Union in 1948–1949, leading to a Western airlift?'
+    options:
+      A: 'Moscow'
+      B: 'Paris'
+      C: 'West Berlin'
+      D: 'Warsaw'
+    answer: C
+    explanation: 'The Western powers flew supplies into West Berlin until the blockade was lifted.'
+
+  - uid: g12-history-5-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'How did the Cold War affect Africa?'
+    options:
+      A: 'It had no effect on Africa.'
+      B: 'African countries all joined the Warsaw Pact.'
+      C: 'All African countries joined NATO.'
+      D: 'The superpowers competed for influence by giving aid and weapons to African governments and movements.'
+    answer: D
+    explanation: 'For example, both blocs were involved in conflicts in Angola and the Horn of Africa.'
+
+  - uid: g12-history-5-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Where was the Non-Aligned Movement formally founded in 1961?'
+    options:
+      A: 'Belgrade'
+      B: 'Bandung'
+      C: 'Addis Ababa'
+      D: 'New York'
+    answer: A
+    explanation: 'The first summit was held in Belgrade, Yugoslavia.'

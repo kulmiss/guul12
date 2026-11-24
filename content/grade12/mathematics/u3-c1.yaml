@@ -1,0 +1,379 @@
+summary:
+  key_points:
+    - 'Qualitative (categorical) data are labels such as colour or region; quantitative data are numbers.'
+    - 'Quantitative data are discrete (counted: number of goats) or continuous (measured: height, time, mass).'
+    - 'The population is the whole group studied; a sample is the part we actually collect data from. A census studies the whole population.'
+    - 'Sampling methods: simple random (everyone has an equal chance), systematic (every $k$th member), stratified (sample from each subgroup in proportion), cluster (choose whole groups at random), convenience (whoever is easy to reach, often biased).'
+    - 'Bias makes a sample unrepresentative: for example convenience samples or leading questions.'
+    - 'Grouped data: the class 20–29 of whole numbers has boundaries 19.5 and 29.5, width 10 and midpoint 24.5.'
+    - 'Histograms (bars touch) show continuous grouped data; an ogive shows cumulative frequency; a pie chart shows parts of a whole.'
+    - 'In a pie chart, the angle of a category is $\frac{\text{frequency}}{\text{total}} \times 360°$.'
+  formulas:
+    - label: Pie chart angle
+      latex: '\theta = \frac{f}{n} \times 360^\circ'
+    - label: Relative frequency
+      latex: '\text{relative frequency} = \frac{f}{n}'
+    - label: Class midpoint
+      latex: 'x = \frac{\text{lower limit} + \text{upper limit}}{2}'
+    - label: Proportional stratified sample from a stratum
+      latex: 'n_i = \frac{N_i}{N} \times n'
+
+solved_exercises:
+  - uid: g12-mathematics-3-1-se01
+    problem: 'A school has 300 Grade 11 and 500 Grade 12 students. A stratified sample of 40 students is taken. How many come from each grade?'
+    steps:
+      - 'Total students: $300 + 500 = 800$.'
+      - 'Grade 11: $\frac{300}{800} \times 40 = 15$.'
+      - 'Grade 12: $\frac{500}{800} \times 40 = 25$.'
+    answer: '15 from Grade 11 and 25 from Grade 12.'
+  - uid: g12-mathematics-3-1-se02
+    problem: 'In a survey of 60 families, 15 use solar power. What angle represents solar power in a pie chart?'
+    steps:
+      - 'Fraction: $\frac{15}{60} = \frac{1}{4}$.'
+      - 'Angle: $\frac{1}{4} \times 360° = 90°$.'
+    answer: '$90°$'
+  - uid: g12-mathematics-3-1-se03
+    problem: 'Marks are grouped as 0–9 (3 students), 10–19 (8), 20–29 (12), 30–39 (7). Find the cumulative frequencies.'
+    steps:
+      - 'Up to 9.5: 3.'
+      - 'Up to 19.5: $3 + 8 = 11$.'
+      - 'Up to 29.5: $11 + 12 = 23$.'
+      - 'Up to 39.5: $23 + 7 = 30$, which is the total.'
+    answer: '3, 11, 23, 30'
+
+flashcards:
+  - {uid: g12-mathematics-3-1-fc01, term: Population, definition: 'The whole group about which information is wanted.'}
+  - {uid: g12-mathematics-3-1-fc02, term: Sample, definition: 'Part of the population from which data are collected.'}
+  - {uid: g12-mathematics-3-1-fc03, term: Discrete data, definition: 'Numbers that are counted, like the number of children.'}
+  - {uid: g12-mathematics-3-1-fc04, term: Continuous data, definition: 'Numbers that are measured and can take any value in a range, like height.'}
+  - {uid: g12-mathematics-3-1-fc05, term: Simple random sample, definition: 'Every member has the same chance of being chosen, for example by lottery.'}
+  - {uid: g12-mathematics-3-1-fc06, term: Systematic sample, definition: 'Choose every $k$th member from a list after a random start.'}
+  - {uid: g12-mathematics-3-1-fc07, term: Stratified sample, definition: 'Split the population into groups and sample each group in proportion.'}
+  - {uid: g12-mathematics-3-1-fc08, term: Cluster sample, definition: 'Choose whole groups at random and study everyone in them.'}
+  - {uid: g12-mathematics-3-1-fc09, term: Ogive, definition: 'A graph of cumulative frequency against upper class boundaries.'}
+  - {uid: g12-mathematics-3-1-fc10, term: Class boundaries, definition: 'The values halfway between classes, e.g. 19.5 and 29.5 for the class 20–29.'}
+
+questions:
+  - uid: g12-mathematics-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'The number of students in each class of a school is an example of which type of data?'
+    options:
+      A: 'Discrete quantitative'
+      B: 'Continuous quantitative'
+      C: 'Qualitative'
+      D: 'Ordinal qualitative'
+    answer: A
+    explanation: 'Students are counted in whole numbers, so the data are quantitative and discrete.'
+
+  - uid: g12-mathematics-3-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'The height of a student in centimetres is an example of which type of data?'
+    options:
+      A: 'Discrete'
+      B: 'Continuous'
+      C: 'Qualitative'
+      D: 'Categorical'
+    answer: B
+    explanation: 'Height is measured and can take any value in a range (such as 162.3 cm), so it is continuous.'
+
+  - uid: g12-mathematics-3-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'A survey records each student''s favourite colour. What type of data is this?'
+    options:
+      A: 'Continuous'
+      B: 'Discrete'
+      C: 'Qualitative'
+      D: 'Interval'
+    answer: C
+    explanation: 'Colours are categories, not numbers, so the data are qualitative (categorical).'
+
+  - uid: g12-mathematics-3-1-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'From a list of 1 000 names, a researcher picks a random start and then every 10th name. Which sampling method is this?'
+    options:
+      A: 'Stratified sampling'
+      B: 'Cluster sampling'
+      C: 'Convenience sampling'
+      D: 'Systematic sampling'
+    answer: D
+    explanation: 'Choosing every $k$th member of a list after a random start is systematic sampling.'
+
+  - uid: g12-mathematics-3-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'A survey divides a region''s population into urban and rural groups and takes a random sample from each group in proportion to its size. Which method is this?'
+    options:
+      A: 'Stratified sampling'
+      B: 'Systematic sampling'
+      C: 'Cluster sampling'
+      D: 'Simple random sampling'
+    answer: A
+    explanation: 'Splitting into subgroups (strata) and sampling each in proportion is stratified sampling.'
+
+  - uid: g12-mathematics-3-1-q006
+    type: true_false
+    difficulty: 1
+    stem: 'A sample is the whole group that a study wants to learn about.'
+    answer: false
+    explanation: 'The whole group is the population. A sample is only a part of it.'
+
+  - uid: g12-mathematics-3-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'A frequency table uses the classes 20–29, 30–39, 40–49 for whole-number marks. What is the class width?'
+    options:
+      A: '9'
+      B: '10'
+      C: '20'
+      D: '29'
+    answer: B
+    explanation: 'The width is the difference between the boundaries: $29.5 - 19.5 = 10$ (or between lower limits: $30 - 20 = 10$).'
+
+  - uid: g12-mathematics-3-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'For whole-number data, what are the class boundaries of the class 20–29?'
+    options:
+      A: '20 and 29'
+      B: '20 and 30'
+      C: '19.5 and 29.5'
+      D: '19 and 30'
+    answer: C
+    explanation: 'Boundaries lie halfway between classes: halfway between 19 and 20 is 19.5, and between 29 and 30 is 29.5.'
+
+  - uid: g12-mathematics-3-1-q009
+    type: numeric
+    difficulty: 1
+    stem: 'In a class of 120 students, 30 say football is their favourite sport. What angle, in degrees, should football get in a pie chart?'
+    answer: {value: 90, tolerance: 0, unit: °}
+    explanation: '$\frac{30}{120} \times 360° = \frac{1}{4} \times 360° = 90°$.'
+
+  - uid: g12-mathematics-3-1-q010
+    type: numeric
+    difficulty: 2
+    stem: 'A table shows the classes 0–9 (frequency 4), 10–19 (frequency 7) and 20–29 (frequency 9). What is the cumulative frequency up to 19.5?'
+    answer: {value: 11, tolerance: 0}
+    explanation: 'Add the frequencies of the classes up to 19.5: $4 + 7 = 11$.'
+
+  - uid: g12-mathematics-3-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the midpoint of the class 40–49?'
+    options:
+      A: '45'
+      B: '40'
+      C: '49'
+      D: '44.5'
+    answer: D
+    explanation: 'Midpoint $= \frac{40 + 49}{2} = 44.5$.'
+
+  - uid: g12-mathematics-3-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which graph shows cumulative frequency?'
+    options:
+      A: 'Ogive'
+      B: 'Pie chart'
+      C: 'Bar chart'
+      D: 'Pictogram'
+    answer: A
+    explanation: 'An ogive plots cumulative frequency against the upper class boundaries.'
+
+  - uid: g12-mathematics-3-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'To study shoppers in a town, a student interviews the first 50 people who enter one shop on a Monday morning. Which statement is best?'
+    options:
+      A: 'It is a simple random sample, so it is fair.'
+      B: 'It is a convenience sample and may be biased.'
+      C: 'It is a stratified sample of the town.'
+      D: 'It is a census of all shoppers.'
+    answer: B
+    explanation: 'People who are easy to reach were chosen, so this is convenience sampling. Monday-morning shoppers at one shop may not represent the town.'
+
+  - uid: g12-mathematics-3-1-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are continuous data? Choose all that apply.'
+    options:
+      A: 'The mass of a goat'
+      B: 'The number of eggs in a basket'
+      C: 'The time taken to run 100 m'
+      D: 'The number of rooms in a house'
+    answer: [A, C]
+    explanation: 'Mass and time are measured and can take any value in a range. Eggs and rooms are counted, so they are discrete.'
+
+  - uid: g12-mathematics-3-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The entire group of people or things that a study wants information about is called the ________.'
+    answer: [population]
+    explanation: 'This whole group is the population; a sample is part of it.'
+
+  - uid: g12-mathematics-3-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'In a stem-and-leaf plot with the key $4 \mid 1$ = 41, the row $4 \mid 1\;3\;8$ shows which data values?'
+    options:
+      A: '4, 1, 3, 8'
+      B: '14, 34, 84'
+      C: '41, 43, 48'
+      D: '1.4, 3.4, 8.4'
+    answer: C
+    explanation: 'The stem is the tens digit and each leaf is a units digit, so the row shows 41, 43 and 48.'
+
+  - uid: g12-mathematics-3-1-q017
+    type: true_false
+    difficulty: 1
+    stem: 'In a histogram of continuous grouped data, the bars touch each other.'
+    answer: true
+    explanation: 'Continuous classes have no gaps between them, so the bars of a histogram touch. Bar charts of categories have gaps.'
+
+  - uid: g12-mathematics-3-1-q018
+    type: numeric
+    difficulty: 2
+    stem: 'A school has 800 students: 200 in each of Grades 9, 10, 11 and 12. A stratified sample of 40 students is chosen in proportion to grade size. How many Grade 12 students are in the sample?'
+    answer: {value: 10, tolerance: 0}
+    explanation: '$\frac{200}{800} \times 40 = 10$.'
+
+  - uid: g12-mathematics-3-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A questionnaire asks: "Don''t you agree that the new market is too far away?" What problem does this question cause?'
+    options:
+      A: 'It makes the data continuous.'
+      B: 'It makes the sample too large.'
+      C: 'It turns the survey into a census.'
+      D: 'It is a leading question that can bias the answers.'
+    answer: D
+    explanation: 'The wording pushes people towards agreeing, which biases the responses.'
+
+  - uid: g12-mathematics-3-1-q020
+    type: numeric
+    difficulty: 2
+    stem: 'A pie chart shows the favourite fruits of 50 students. Banana has an angle of $72°$. How many students chose banana?'
+    answer: {value: 10, tolerance: 0}
+    explanation: '$\frac{72}{360} \times 50 = \frac{1}{5} \times 50 = 10$ students.'
+
+  - uid: g12-mathematics-3-1-q021
+    type: single_choice
+    difficulty: 1
+    stem: 'Why do researchers often use a sample instead of a census?'
+    options:
+      A: 'A sample is cheaper and faster to collect.'
+      B: 'A sample always gives exactly the same result as a census.'
+      C: 'A census cannot be analysed.'
+      D: 'A sample removes all errors.'
+    answer: A
+    explanation: 'Studying every member costs much more time and money. A good sample gives a close estimate, though not always the exact census value.'
+
+  - uid: g12-mathematics-3-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each description with its sampling method.'
+    left:
+      L1: 'Names are drawn from a box, so everyone has the same chance.'
+      L2: 'Every 20th household on a list is chosen after a random start.'
+      L3: 'A few villages are chosen at random and every household in them is surveyed.'
+    right:
+      R1: 'Cluster sampling'
+      R2: 'Simple random sampling'
+      R3: 'Stratified sampling'
+      R4: 'Systematic sampling'
+    answer: {L1: R2, L2: R4, L3: R1}
+    explanation: 'A lottery is simple random sampling; every $k$th is systematic; choosing whole groups is cluster sampling. Stratified sampling would sample from every subgroup.'
+
+  - uid: g12-mathematics-3-1-q023
+    type: ordering
+    difficulty: 1
+    stem: 'Put the stages of a statistical investigation in order.'
+    items:
+      A: 'Pose a clear question'
+      B: 'Collect the data'
+      C: 'Organise and present the data'
+      D: 'Analyse the data and draw conclusions'
+    answer: [A, B, C, D]
+    explanation: 'You decide what you want to know, gather data, organise it in tables or graphs, and then interpret it.'
+
+  - uid: g12-mathematics-3-1-q024
+    type: single_choice
+    difficulty: 1
+    stem: 'In a sample of 30 farmers, 6 grow teff. What is the relative frequency of teff growers?'
+    options:
+      A: '6'
+      B: '0.2'
+      C: '0.6'
+      D: '5'
+    answer: B
+    explanation: 'Relative frequency $= \frac{6}{30} = 0.2$.'
+
+  - uid: g12-mathematics-3-1-q025
+    type: single_choice
+    difficulty: 1
+    stem: 'For whole-number classes 10–19, 20–29, 30–39, what is the upper class boundary of 20–29?'
+    options:
+      A: '29'
+      B: '30'
+      C: '29.5'
+      D: '20.5'
+    answer: C
+    explanation: 'The upper boundary is halfway between 29 and 30, which is 29.5.'
+
+  - uid: g12-mathematics-3-1-q026
+    type: true_false
+    difficulty: 1
+    stem: 'Stratified sampling makes sure that every stratum (each subgroup the researcher divides the population into) is represented in the sample.'
+    answer: true
+    explanation: 'A sample is taken from each stratum, so no subgroup is left out.'
+
+  - uid: g12-mathematics-3-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is ordinal (ordered categorical) data?'
+    options:
+      A: 'Mass in kilograms'
+      B: 'Region of birth'
+      C: 'Number of brothers'
+      D: 'Satisfaction level: low, medium or high'
+    answer: D
+    explanation: 'Satisfaction levels are categories with a natural order. Region has no order; mass and number of brothers are quantitative.'
+
+  - uid: g12-mathematics-3-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'On an ogive for $n$ values, which measure is estimated by reading across from a cumulative frequency of $\frac{n}{2}$?'
+    options:
+      A: 'The median'
+      B: 'The mean'
+      C: 'The mode'
+      D: 'The range'
+    answer: A
+    explanation: 'Half of the values lie below the median, so cumulative frequency $\frac{n}{2}$ corresponds to the median.'
+
+  - uid: g12-mathematics-3-1-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'How is a frequency polygon drawn from a histogram?'
+    options:
+      A: 'By joining the corners of the bars'
+      B: 'By joining the midpoints of the tops of the bars with straight lines'
+      C: 'By joining the cumulative frequencies'
+      D: 'By drawing a circle divided into sectors'
+    answer: B
+    explanation: 'A frequency polygon joins the points (class midpoint, frequency), which are the midpoints of the tops of the bars.'
+
+  - uid: g12-mathematics-3-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Whole-number marks from 0 to 59 are grouped in classes of width 10, starting with 0–9. How many classes are there?'
+    options:
+      A: '5'
+      B: '10'
+      C: '6'
+      D: '59'
+    answer: C
+    explanation: 'The classes are 0–9, 10–19, 20–29, 30–39, 40–49 and 50–59: six classes.'

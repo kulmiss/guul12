@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'Poverty is a lack of the income and resources needed for a minimum standard of living. Absolute poverty means income below a fixed line needed for basic needs; relative poverty means having much less than most people in the same society.'
+    - 'The World Bank''s international (extreme) poverty line was updated in June 2025 to \$3.00 per person per day (in 2021 purchasing power parity prices), replacing \$2.15. Countries also set their own national poverty lines.'
+    - 'Poverty measures: the headcount ratio (share of people below the poverty line), the poverty gap (how far below the line the poor are, on average) and multidimensional measures that also count health, education and living conditions.'
+    - 'Inequality is the uneven distribution of income or wealth. The Lorenz curve plots the cumulative share of income against the cumulative share of people; the further it bows below the line of equality, the greater the inequality.'
+    - 'The Gini coefficient runs from 0 (perfect equality: everyone has the same income) to 1 (perfect inequality: one person has all income). It is sometimes shown from 0 to 100.'
+    - 'Causes of poverty include low productivity, unemployment, poor education and health, rapid population growth, drought and climate shocks, conflict, and weak access to land, credit and markets.'
+    - 'Policies to reduce poverty and inequality: economic growth that creates jobs, investment in education and health, progressive taxes, social protection (for example Ethiopia''s Productive Safety Net Programme, which supports food-insecure rural households in return for work on public projects), access to credit and rural development. Sustainable Development Goal 1 aims to end extreme poverty by 2030.'
+  formulas:
+    - {label: 'Headcount ratio', latex: 'H = \frac{\text{Number of poor}}{\text{Total population}} \times 100\%'}
+    - {label: 'Gini from Lorenz curve', latex: 'G = \frac{A}{A + B}'}
+
+solved_exercises:
+  - uid: g12-economics-6-1-se01
+    problem: 'A village has 2,000 people. 500 of them live below the poverty line. What is the headcount ratio?'
+    steps:
+      - 'H = 500 / 2,000 × 100%.'
+      - 'H = 25%.'
+    answer: '25%'
+  - uid: g12-economics-6-1-se02
+    problem: 'On a Lorenz curve diagram, the area between the line of equality and the Lorenz curve is A = 0.15, and the area below the Lorenz curve is B = 0.35. Find the Gini coefficient.'
+    steps:
+      - 'G = A / (A + B) = 0.15 / (0.15 + 0.35).'
+      - 'G = 0.15 / 0.50 = 0.3.'
+    answer: '0.3'
+  - uid: g12-economics-6-1-se03
+    problem: 'Explain the difference between absolute and relative poverty.'
+    steps:
+      - 'Absolute poverty compares income with a fixed line for basic needs, such as \$3.00 a day.'
+      - 'Relative poverty compares a person with others in the same society, so it can exist even in rich countries.'
+    answer: 'Fixed basic-needs line versus comparison with others'
+
+flashcards:
+  - {uid: g12-economics-6-1-fc01, term: Absolute poverty, definition: 'Income below a fixed line needed for basic needs.'}
+  - {uid: g12-economics-6-1-fc02, term: Relative poverty, definition: 'Having much less than most people in the same society.'}
+  - {uid: g12-economics-6-1-fc03, term: International poverty line, definition: '\$3.00 per person per day (2021 PPP), set by the World Bank in June 2025.'}
+  - {uid: g12-economics-6-1-fc04, term: Headcount ratio, definition: 'Share of the population below the poverty line.'}
+  - {uid: g12-economics-6-1-fc05, term: Poverty gap, definition: 'How far below the poverty line the poor are, on average.'}
+  - {uid: g12-economics-6-1-fc06, term: Lorenz curve, definition: 'Graph of cumulative income share against cumulative population share.'}
+  - {uid: g12-economics-6-1-fc07, term: Gini coefficient, definition: 'Inequality measure from 0 (equal) to 1 (totally unequal).'}
+  - {uid: g12-economics-6-1-fc08, term: PSNP, definition: 'Productive Safety Net Programme: Ethiopian support for food-insecure rural households.'}
+  - {uid: g12-economics-6-1-fc09, term: SDG 1, definition: 'End poverty in all its forms everywhere.'}
+
+questions:
+  - uid: g12-economics-6-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Absolute poverty means:'
+    options:
+      A: 'Having less than the richest person in the country'
+      B: 'Having income below a fixed line needed for basic needs'
+      C: 'Owning no car'
+      D: 'Earning the average income'
+    answer: B
+    explanation: 'The line is set by what is needed for food, shelter and other basic needs.'
+
+  - uid: g12-economics-6-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Relative poverty means:'
+    options:
+      A: 'Having much less income than most people in the same society'
+      B: 'Living on less than \$3.00 a day only'
+      C: 'Being poor because a relative is poor'
+      D: 'Having no income at all'
+    answer: A
+    explanation: 'It compares people with others in their own society.'
+
+  - uid: g12-economics-6-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'In June 2025 the World Bank set the international extreme poverty line at:'
+    options:
+      A: '\$1.00 per person per day'
+      B: '\$1.90 per person per day'
+      C: '\$3.00 per person per day'
+      D: '\$10.00 per person per day'
+    answer: C
+    explanation: 'It replaced the \$2.15 line and uses 2021 purchasing power parity prices.'
+
+  - uid: g12-economics-6-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'The headcount ratio measures:'
+    options:
+      A: 'The total income of a country'
+      B: 'The number of schools per person'
+      C: 'How unequal incomes are among the rich'
+      D: 'The share of the population living below the poverty line'
+    answer: D
+    explanation: 'It counts how many people are poor, as a percentage.'
+
+  - uid: g12-economics-6-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'A Gini coefficient of 0 means:'
+    options:
+      A: 'Everyone has exactly the same income.'
+      B: 'One person has all the income.'
+      C: 'Half the people are poor.'
+      D: 'Nobody has any income.'
+    answer: A
+    explanation: '0 is perfect equality; 1 is perfect inequality.'
+
+  - uid: g12-economics-6-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Country P has a Gini coefficient of 0.30 and country Q has 0.50. Which statement is correct?'
+    options:
+      A: 'P has more income inequality than Q.'
+      B: 'Q has more income inequality than P.'
+      C: 'Both have the same inequality.'
+      D: 'The Gini coefficient says nothing about inequality.'
+    answer: B
+    explanation: 'A higher Gini coefficient means greater inequality.'
+
+  - uid: g12-economics-6-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'On a Lorenz curve diagram, what does the straight diagonal line show?'
+    options:
+      A: 'Perfect inequality'
+      B: 'The poverty line'
+      C: 'Perfect equality of income'
+      D: 'Average income growth'
+    answer: C
+    explanation: 'On this line, each x% of people receive x% of income.'
+
+  - uid: g12-economics-6-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'If a country''s Lorenz curve moves further away from the line of equality, inequality has:'
+    options:
+      A: 'Fallen'
+      B: 'Stayed the same'
+      C: 'Disappeared'
+      D: 'Increased'
+    answer: D
+    explanation: 'A more bowed curve means income is more unequal.'
+
+  - uid: g12-economics-6-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the poverty gap measure?'
+    options:
+      A: 'How far, on average, the poor fall below the poverty line'
+      B: 'The number of rich people'
+      C: 'The difference between exports and imports'
+      D: 'The gap between two cities'
+    answer: A
+    explanation: 'It shows the depth of poverty, not only how many are poor.'
+
+  - uid: g12-economics-6-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What does Ethiopia''s Productive Safety Net Programme (PSNP) mainly do?'
+    options:
+      A: 'Gives loans to large factories'
+      B: 'Supports food-insecure rural households, often in return for work on public projects'
+      C: 'Builds airports'
+      D: 'Sets the exchange rate'
+    answer: B
+    explanation: 'Households receive food or cash, and able-bodied members work on projects such as soil and water conservation.'
+
+  - uid: g12-economics-6-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Sustainable Development Goal aims to end poverty in all its forms?'
+    options:
+      A: 'SDG 4'
+      B: 'SDG 13'
+      C: 'SDG 1'
+      D: 'SDG 17'
+    answer: C
+    explanation: 'SDG 1 is "No poverty", with a target year of 2030.'
+
+  - uid: g12-economics-6-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do multidimensional poverty measures add health, education and living conditions to income?'
+    options:
+      A: 'Income is never important.'
+      B: 'They are easier to calculate than income.'
+      C: 'Only rich countries use them.'
+      D: 'Poverty means more than low income; people can lack schooling, health care or clean water.'
+    answer: D
+    explanation: 'They give a fuller picture of deprivation.'
+
+  - uid: g12-economics-6-1-q013
+    type: single_choice
+    difficulty: 3
+    stem: 'A country''s income grows fast, but most of the gains go to the richest 10%. What is most likely?'
+    options:
+      A: 'Inequality rises and poverty falls only a little.'
+      B: 'Inequality falls sharply.'
+      C: 'Poverty disappears.'
+      D: 'The Gini coefficient becomes 0.'
+    answer: A
+    explanation: 'Growth reduces poverty most when its benefits are widely shared.'
+
+  - uid: g12-economics-6-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policy most directly reduces income inequality?'
+    options:
+      A: 'Cutting taxes only for the richest'
+      B: 'Progressive taxes that fund services for the poor'
+      C: 'Removing free primary schools'
+      D: 'Banning small businesses'
+    answer: B
+    explanation: 'Higher earners pay a larger share and the poor gain services.'
+
+  - uid: g12-economics-6-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'How does education help reduce poverty in the long run?'
+    options:
+      A: 'It lowers everyone''s wages.'
+      B: 'It removes the need to work.'
+      C: 'It raises skills and productivity, so people can earn more.'
+      D: 'It has no link with income.'
+    answer: C
+    explanation: 'Education is investment in human capital.'
+
+  - uid: g12-economics-6-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a common cause of rural poverty in drought-prone areas of Ethiopia?'
+    options:
+      A: 'Too much rainfall every year'
+      B: 'High wages in farming'
+      C: 'Too many banks in villages'
+      D: 'Repeated drought that destroys crops and livestock'
+    answer: D
+    explanation: 'Climate shocks hit households that depend on rain-fed farming and herding.'
+
+  - uid: g12-economics-6-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'How can microfinance help poor households?'
+    options:
+      A: 'By giving small loans and savings services to people without access to banks'
+      B: 'By raising taxes on the poor'
+      C: 'By closing small businesses'
+      D: 'By printing more money'
+    answer: A
+    explanation: 'Small loans let people start or grow small businesses.'
+
+  - uid: g12-economics-6-1-q018
+    type: single_choice
+    difficulty: 3
+    stem: 'Why can relative poverty exist even in a very rich country?'
+    options:
+      A: 'Rich countries have no poverty lines.'
+      B: 'It compares people with others in the same society, not with a fixed basic-needs line.'
+      C: 'Relative poverty only measures wealth abroad.'
+      D: 'Everyone in rich countries earns the same.'
+    answer: B
+    explanation: 'Someone can meet basic needs but still have far less than most people around them.'
+
+  - uid: g12-economics-6-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'On a Lorenz diagram, A is the area between the line of equality and the Lorenz curve, and B is the area under the Lorenz curve. The Gini coefficient is:'
+    options:
+      A: 'Area A × area B'
+      B: 'Area B ÷ area A'
+      C: 'Area A ÷ (area A + area B)'
+      D: 'Area A + area B'
+    answer: C
+    explanation: 'The Gini coefficient is the share of the whole triangle taken up by area A.'
+
+  - uid: g12-economics-6-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is NOT usually a cause of poverty?'
+    options:
+      A: 'Unemployment'
+      B: 'Conflict and displacement'
+      C: 'Poor health'
+      D: 'Wide access to good jobs and education'
+    answer: D
+    explanation: 'Access to jobs and education helps people escape poverty.'
+
+  - uid: g12-economics-6-1-q021
+    type: numeric
+    difficulty: 2
+    stem: 'A town has 8,000 people, and 2,000 of them live below the poverty line. What is the headcount ratio, in percent?'
+    answer: {value: 25, tolerance: 0}
+    explanation: '2,000 / 8,000 × 100% = 25%.'
+
+  - uid: g12-economics-6-1-q022
+    type: numeric
+    difficulty: 3
+    stem: 'On a Lorenz diagram, area A (between the line of equality and the Lorenz curve) is 0.2 and area B (under the Lorenz curve) is 0.3. What is the Gini coefficient? Give a decimal.'
+    answer: {value: 0.4, tolerance: 0}
+    explanation: 'G = 0.2 / (0.2 + 0.3) = 0.2 / 0.5 = 0.4.'
+
+  - uid: g12-economics-6-1-q023
+    type: true_false
+    difficulty: 2
+    stem: 'A Gini coefficient of 1 means perfect equality.'
+    answer: false
+    explanation: '1 means perfect inequality; 0 means perfect equality.'
+
+  - uid: g12-economics-6-1-q024
+    type: true_false
+    difficulty: 2
+    stem: 'Two countries can have the same headcount ratio but different depths of poverty.'
+    answer: true
+    explanation: 'The poverty gap shows how far below the line the poor are.'
+
+  - uid: g12-economics-6-1-q025
+    type: true_false
+    difficulty: 1
+    stem: 'Economic growth that creates many jobs usually helps reduce poverty.'
+    answer: true
+    explanation: 'Jobs give people income.'
+
+  - uid: g12-economics-6-1-q026
+    type: fill_in
+    difficulty: 2
+    stem: 'The curve that shows the cumulative share of income received by the cumulative share of people is the ________ curve.'
+    answer: [Lorenz]
+    explanation: 'It is named after the economist Max Lorenz.'
+
+  - uid: g12-economics-6-1-q027
+    type: fill_in
+    difficulty: 2
+    stem: 'The inequality measure that runs from 0 to 1 is the ________ coefficient.'
+    answer: [Gini]
+    explanation: 'It is named after the statistician Corrado Gini.'
+
+  - uid: g12-economics-6-1-q028
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which policies can help reduce poverty? Choose all that apply.'
+    options:
+      A: 'Investment in education and health'
+      B: 'Social protection such as safety net programmes'
+      C: 'Better access to credit for small farmers'
+      D: 'Removing all public health services'
+    answer: [A, B, C]
+    explanation: 'Removing health services would make poverty worse.'
+
+  - uid: g12-economics-6-1-q029
+    type: matching
+    difficulty: 2
+    stem: 'Match each measure with what it shows.'
+    left:
+      L1: 'Headcount ratio'
+      L2: 'Poverty gap'
+      L3: 'Gini coefficient'
+    right:
+      R1: 'How far the poor are below the poverty line'
+      R2: 'How unequally income is spread'
+      R3: 'The share of people who are poor'
+      R4: 'The rate of inflation'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Inflation is not a poverty or inequality measure.'
+
+  - uid: g12-economics-6-1-q030
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps for finding a headcount ratio in order.'
+    items:
+      A: 'Divide the number of poor by the total population and multiply by 100.'
+      B: 'Choose a poverty line.'
+      C: 'Count the people whose income is below the line.'
+    answer: [B, C, A]
+    explanation: 'First set the line, then count the poor, then calculate the share.'

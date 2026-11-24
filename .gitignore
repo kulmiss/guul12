@@ -1,0 +1,38 @@
+# Secrets — never commit (repo is public)
+.env
+.env.*
+!.env.example
+auth.json
+*.keystore
+*.jks
+key.properties
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+**/admob_ids*.json
+*.pem
+*.p12
+
+# Real data, receipts, backups
+backups/
+*.sql
+*.sql.gz
+*.zip
+private/
+receipts/
+past-papers/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Node tools
+node_modules/
+
+# Database dumps and backups hold student data: never commit them.
+*.sql
+*.sql.gz
+*.sqlite.gz

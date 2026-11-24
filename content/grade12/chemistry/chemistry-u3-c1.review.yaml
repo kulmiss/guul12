@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-chemistry-3-1-q001: {hash: '792411b5d921540a9084b3b52e76e9a7d571bf4fade5a5ff609a443646eb11cf', answer: C}
+  g12-chemistry-3-1-q002: {hash: '28ff280a7ace76780f0e239fd5a62fa16f0f459f7296a08fc3846abe703294c9', answer: A}
+  g12-chemistry-3-1-q003: {hash: 'b3606cf926114bff493510f8cbfcd0fde970907b60b7c1316b7965d798170ef1', answer: D}
+  g12-chemistry-3-1-q004: {hash: '989c3938763c6fa131c323af0e5354df139c44224d80b38c90ca7761322f9302', answer: A}
+  g12-chemistry-3-1-q005: {hash: '8cab37434a724ab01fdf409e9361ed1ddd32a0ea9c7d54e90bb98b4ac7d062c5', answer: false}
+  g12-chemistry-3-1-q006: {hash: '0e88cae70cc119e06c79d9b5619f04b0a26aafb98de9d468a9ab4277bcabef2d', answer: B}
+  g12-chemistry-3-1-q007: {hash: '384820a4e50437b73c316f5a6abaf7892ea9aab2ec7db6a5ac76ff81587e855a', answer: C}
+  g12-chemistry-3-1-q008: {hash: '614a44baf05da418ca325e511bd69b2b510eeb568dafaba2af3a34e7a699195d', answer: D}
+  g12-chemistry-3-1-q009: {hash: '8057a80ef9469e5ea75e20a04e7dc15731dbce2d33adfab047c070971768a4e6', answer: A}
+  g12-chemistry-3-1-q010: {hash: 'e2f0e408fb32689baa35bae66bfc60818702fa3c0677748144f23043ceaabaa7', answer: B}
+  g12-chemistry-3-1-q011: {hash: '52eeb6a968678f5e5602869addaa182f5b9f06d392c4fabc375468f051cda3f7', answer: C}
+  g12-chemistry-3-1-q012: {hash: '26618c9aa183ce5712bc26adbcc50d70c0a0b2e1b1c464deeac4b06920eeede3', answer: D}
+  g12-chemistry-3-1-q013: {hash: 'd883586fbf78b76777d2a3327b2d59c6f0619284df7855af350b7dca7507d520', answer: 35}
+  g12-chemistry-3-1-q014: {hash: '93b0bf05ccd929d6e97f3e570003a663b2b78488f2dc54e17b2702f85f59d44d', answer: 4}
+  g12-chemistry-3-1-q015: {hash: 'b08abd737b2ac131d34f1513de03588faa85a7adc5e27ade4a0c6c95cc97c1ba', answer: [A, B, C]}
+  g12-chemistry-3-1-q016: {hash: '944dac170713cbb7afe52f3326ca6eb5ca8bcf31fca35a066e61444dea6dff45', answer: A}
+  g12-chemistry-3-1-q017: {hash: '453278a19f856996b3f414fb273a2996b916009b834aa4553b9eaf643f4a237a', answer: C}
+  g12-chemistry-3-1-q018: {hash: '06c60448000c3f6b4425731eeba49993401c171797874a591507933c1fcbb5db', answer: true}
+  g12-chemistry-3-1-q019: {hash: '885a0db69ada4bf985bfb6eed2358d1ce4337019ede862b0dc0cb6ff367fbb42', answer: D}
+  g12-chemistry-3-1-q020: {hash: '8992ef19edf79916378de30521dd6c8c8019195cb60014541013ed319936c57a', answer: A}
+  g12-chemistry-3-1-q021: {hash: '26fb2ee835e0d304669d4ff18cd9d1c54d01e1c7c069324368031922da81eae5', answer: 'compromise', note: 'Optimum is also a common textbook term for this; the key should accept both compromise and optimum (optimal).'}
+  g12-chemistry-3-1-q022: {hash: '9d918a3111292b6ebaa30e25d9f0a38a53af18e565a7c91f7de155c60bcbc6f6', answer: 'Le Chatelier''s', note: 'Accept spelling variants: Le Chatelier, Le Chatelier''s, Le Châtelier''s.'}
+  g12-chemistry-3-1-q023: {hash: '3d23c25a6f3b15d012128ce4c2af39c9d9d85ab4036858be93af08293b48d5b4', answer: true}
+  g12-chemistry-3-1-q024: {hash: 'ab4b1a56d557050037076e17c49ca19b75fe565b533ad3657ba6359460e76cdd', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-chemistry-3-1-q025: {hash: 'a754f031525312b58e262a62fa8ec61cd1f331572cb3db74e12a8bc7798cc21c', answer: [B, A, D, C]}
+  g12-chemistry-3-1-q026: {hash: 'ae65b993edbf2d327b6f755ed2da1a07c506230ff71acf82835b9b3af92531e8', answer: B, note: 'Urea is 28/60 = 46.7% N, so B is right. But options A, C and D show their percentages and only B does not, which gives the answer away (B is the only one left to work out). Also K is not in the list of atomic masses even though KNO3 is an option. Suggest removing all the percentages from the options (or giving all of them) and adding K = 39.'}
+  g12-chemistry-3-1-q027: {hash: '61a5681e1d380b836d5b27558b8c14de418fe931ba145324b9fbbf0606e0e395', answer: B}
+  g12-chemistry-3-1-q028: {hash: 'e6f62921d0d649129318bd08203160412810bed453da36822f99c2a02956866a', answer: C}
+  g12-chemistry-3-1-q029: {hash: '7d4b49ff2a3b17f2e39d403e7fcbac8c65fbc83050485bef87e13964f5c56f37', answer: C}
+  g12-chemistry-3-1-q030: {hash: '8d5ccf883e3fdc30d2b66a4c9064e8c542c51c5b6d14526d0775ecbdda13ce2f', answer: A}

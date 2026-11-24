@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-5-1-q001: {hash: '488062e0376fba46183f62db426008f406dcd767cf459c716019043b4a4e8257', answer: B}
+  g12-physics-5-1-q002: {hash: '67da42f63818bc0985a58e17b615df0b2c0fd25c485b93eb8568e8c75c6fb7b8', answer: A}
+  g12-physics-5-1-q003: {hash: 'c8617034ff3ae959d123ea5f0c63a1243170d569b5fa1c2a6e3e67e3b5ffbd18', answer: C}
+  g12-physics-5-1-q004: {hash: '1697e8489eb93b12c3eac4244a16e10df81cf52ed85a3eb8677b2f59257d1c39', answer: D}
+  g12-physics-5-1-q005: {hash: 'c08fd5c256bf424efb5c7dbfd568cef6c9e6758829f7470484d902b397302238', answer: A}
+  g12-physics-5-1-q006: {hash: '86a03833ffb5c1b58de68070e602fe6a0c1901be92e8fc0cffe05a8813e12772', answer: true}
+  g12-physics-5-1-q007: {hash: 'fde879b844b45ed7719c3e55ee8d56a729dc1e3591c5a3c5f350174287ebcd4f', answer: C}
+  g12-physics-5-1-q008: {hash: '9734798f58daf889b7f5ba8874f724aa4291a33f0b3f18a3d1f1491368e9cff5', answer: B}
+  g12-physics-5-1-q009: {hash: 'd158a880c17d931ae2c27773bcc901303f1df67cc02fc571495679c7c970e03b', answer: 10}
+  g12-physics-5-1-q010: {hash: 'd03eef1adeec7167ea7c2e9dfd337656448cfc2936019b97b3c5b6ecfd15c498', answer: D}
+  g12-physics-5-1-q011: {hash: '1a14a90732e193300292e1c3a46ce7225ec0182bba60b619e42a6dbfaded43bd', answer: A}
+  g12-physics-5-1-q012: {hash: 'dd0abba4a484e0e3921a0ff50bd1fc858bfa591cad1869443ccdd78898e2e6ad', answer: C}
+  g12-physics-5-1-q013: {hash: 'e81618ea91ee44417cb13c5d397192795e37bad0f923aeb47aa281288e1a015c', answer: D}
+  g12-physics-5-1-q014: {hash: '44fd2e7251e0c25f680892b83b18e1571ca4cd343728325dc818c9a17c5e4b58', answer: [A, B, D]}
+  g12-physics-5-1-q015: {hash: 'b067bf2324afe1459aea91f4f24d6139bc41af633d9aef4ed6aa56df2198ee3b', answer: A}
+  g12-physics-5-1-q016: {hash: '4a37417f7e7a359726cafeb11c98f4855f410f99bf0ccb3889dac82a811deca8', answer: 50}
+  g12-physics-5-1-q017: {hash: 'c0f60478df6054b985021402e9109f8cc14105938aadfc348722136af245b2d4', answer: C}
+  g12-physics-5-1-q018: {hash: 'c1afae65ba25d88ca294f9cc170d70c9b2cda32faf2563a6293b3e3acc909e4b', answer: B}
+  g12-physics-5-1-q019: {hash: 'da1b7f9a40630a0d630255e2c419e02784c3c18facb308f7475ab44cb6547553', answer: true}
+  g12-physics-5-1-q020: {hash: '70840ca36b100ef66688b478ccb4ecf02d5d15c32689d6c9c7ad242195f73e79', answer: D}
+  g12-physics-5-1-q021: {hash: '05752b63f3917e8727ce9a24e71fcf59edaedb8fa22a8b724fad5beb06b6bfc2', answer: C}
+  g12-physics-5-1-q022: {hash: '4af002e5e083381c3198825c220ec4fc7822bc32fe12f7136e92cc0db2057a65', answer: doping}
+  g12-physics-5-1-q023: {hash: '3bd3f129690611661c2e382484876bbe4b1fa4206d81c5342061b6c15c06c066', answer: rectification}
+  g12-physics-5-1-q024: {hash: '4e85708b9c477148304d94aaf1fda5153cc2c353c51fee6fc4111171976d34b2', answer: false}
+  g12-physics-5-1-q025: {hash: 'e3780e884bf351f34416571b319d7f0cfd07e6d0e6ea8e020ebb049471421784', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-physics-5-1-q026: {hash: 'bca566e475ec8332026800ef8336c88872b6865ae90b1ace373616e7fed8139d', answer: [C, A, B, D], note: 'Order is fine for a textbook linear power supply, but real mobile-phone chargers are switch-mode supplies, not transformer + bridge + capacitor + Zener. Suggest saying "a simple low-voltage DC power supply" instead of "a mobile-phone charger".'}
+  g12-physics-5-1-q027: {hash: 'b4666eac30e8a9eb59d3c36bc0a21ddac3de6f7db265a586d7229bf0984ceba3', answer: A}
+  g12-physics-5-1-q028: {hash: 'aa24edfdaf120868d8eaad695a113b1c84053264877c516324a2b25e952638a9', answer: B}
+  g12-physics-5-1-q029: {hash: 'd3fbe5f4fd2915fad3c29e409c1fcc82625e3d1b8f5fa64f25109b5aca07f987', answer: D}
+  g12-physics-5-1-q030: {hash: 'ef4f84ee3a2ae03d8d8992d10a057242529b1d1938db96aaa3847c95abaf3ee4', answer: B}

@@ -1,0 +1,368 @@
+summary:
+  key_points:
+    - 'A linear programming (LP) problem asks for the largest or smallest value of a linear objective function, such as profit $P = 3x + 2y$, subject to linear constraints.'
+    - 'Steps: define the variables, write the objective function, write the constraints (including $x \ge 0$, $y \ge 0$), graph the feasible region, find its corner points, and evaluate the objective at each corner.'
+    - 'Corner point theorem: if the feasible region is bounded and not empty, the maximum and minimum of the objective occur at corner points.'
+    - 'If two corners give the same best value, every point on the edge between them is also optimal (multiple optimal solutions).'
+    - 'Iso-profit lines $ax + by = k$ are parallel. Sliding them away from the origin increases $k$ when $a, b > 0$; the last corner touched is optimal.'
+    - 'An unbounded region may have no maximum. An empty region means the problem has no solution.'
+  formulas:
+    - label: Objective function
+      latex: 'Z = ax + by'
+    - label: Slope of iso-profit lines
+      latex: 'm = -\frac{a}{b}'
+    - label: Corner of two constraints
+      latex: '\text{solve } \begin{cases} a_1x + b_1y = c_1 \\ a_2x + b_2y = c_2 \end{cases}'
+
+solved_exercises:
+  - uid: g12-mathematics-4-2-se01
+    problem: 'Maximise $P = 5x + 4y$ subject to $x + y \le 6$, $2x + y \le 8$, $x \ge 0$, $y \ge 0$.'
+    steps:
+      - 'Corners: $(0, 0)$, $(4, 0)$, $(0, 6)$, and the meeting point of $x + y = 6$ and $2x + y = 8$: subtracting gives $x = 2$, so $(2, 4)$.'
+      - '$P(0, 0) = 0$, $P(4, 0) = 20$, $P(0, 6) = 24$, $P(2, 4) = 10 + 16 = 26$.'
+      - 'The largest value is 26.'
+    answer: 'Maximum $P = 26$ at $(2, 4)$.'
+  - uid: g12-mathematics-4-2-se02
+    problem: 'A bakery makes bread ($x$ trays, profit 60 birr) and cakes ($y$ trays, profit 80 birr). Oven time: $x + 2y \le 10$ hours; flour: $x + y \le 7$ sacks. How many of each maximise profit?'
+    steps:
+      - 'Objective: $P = 60x + 80y$. Constraints: $x + 2y \le 10$, $x + y \le 7$, $x, y \ge 0$.'
+      - 'Corners: $(0, 0)$, $(7, 0)$, $(0, 5)$ and the meeting point: subtract the equations, $y = 3$, $x = 4$, so $(4, 3)$.'
+      - '$P$: 0, 420, 400, $240 + 240 = 480$.'
+    answer: '4 trays of bread and 3 trays of cake, profit 480 birr.'
+  - uid: g12-mathematics-4-2-se03
+    problem: 'Minimise $C = 3x + 2y$ subject to $x + y \ge 5$, $x \ge 1$, $y \ge 1$.'
+    steps:
+      - 'The region is unbounded, but $C$ grows as $x$ and $y$ grow, so the minimum is at a corner.'
+      - 'Corners: $x = 1$ with $x + y = 5$ gives $(1, 4)$; $y = 1$ with $x + y = 5$ gives $(4, 1)$.'
+      - '$C(1, 4) = 3 + 8 = 11$ and $C(4, 1) = 12 + 2 = 14$.'
+    answer: 'Minimum $C = 11$ at $(1, 4)$.'
+
+flashcards:
+  - {uid: g12-mathematics-4-2-fc01, term: Linear programming, definition: 'Finding the best (largest or smallest) value of a linear function under linear constraints.'}
+  - {uid: g12-mathematics-4-2-fc02, term: Objective function, definition: 'The function to be maximised or minimised, e.g. profit or cost.'}
+  - {uid: g12-mathematics-4-2-fc03, term: Decision variables, definition: 'The unknown amounts to choose, such as $x$ tables and $y$ chairs.'}
+  - {uid: g12-mathematics-4-2-fc04, term: Constraint, definition: 'A limit such as available money, time or material, written as an inequality.'}
+  - {uid: g12-mathematics-4-2-fc05, term: Corner point theorem, definition: 'On a bounded non-empty feasible region the optimum occurs at a corner point.'}
+  - {uid: g12-mathematics-4-2-fc06, term: Optimal solution, definition: 'A feasible point that gives the best value of the objective.'}
+  - {uid: g12-mathematics-4-2-fc07, term: Iso-profit line, definition: 'A line on which the objective has the same value everywhere.'}
+  - {uid: g12-mathematics-4-2-fc08, term: Multiple optimal solutions, definition: 'Two corners give the same best value, so the whole edge between them is optimal.'}
+
+questions:
+  - uid: g12-mathematics-4-2-q001
+    type: single_choice
+    difficulty: 2
+    stem: 'The feasible region $R$ has corners $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. What is the maximum of $P = 3x + 2y$ on $R$?'
+    options:
+      A: '11'
+      B: '12'
+      C: '4'
+      D: '13'
+    answer: B
+    explanation: 'Evaluate at the corners: 0, $12$, $9 + 2 = 11$, $4$. The largest is 12, at $(4, 0)$.'
+
+  - uid: g12-mathematics-4-2-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'The feasible region $R$ has corners $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. What is the maximum of $P = x + 4y$ on $R$?'
+    options:
+      A: '4'
+      B: '7'
+      C: '16'
+      D: '8'
+    answer: D
+    explanation: 'At the corners: 0, 4, $3 + 4 = 7$, $0 + 8 = 8$. The largest is 8, at $(0, 2)$.'
+
+  - uid: g12-mathematics-4-2-q003
+    type: numeric
+    difficulty: 2
+    stem: 'The feasible region has corners $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. What is the maximum of $P = 2x + 3y$?'
+    answer: {value: 9, tolerance: 0}
+    explanation: 'At the corners: 0, 8, $6 + 3 = 9$, 6. The maximum is 9, at $(3, 1)$.'
+
+  - uid: g12-mathematics-4-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'The feasible region is $x \ge 0$, $y \ge 0$, $x + y \le 4$, $x + 3y \le 6$. Which point is a corner of this region?'
+    options:
+      A: '$(3, 1)$'
+      B: '$(2, 2)$'
+      C: '$(0, 4)$'
+      D: '$(6, 0)$'
+    answer: A
+    explanation: 'Solving $x + y = 4$ and $x + 3y = 6$: subtracting gives $2y = 2$, so $y = 1$ and $x = 3$. $(2, 2)$ and $(0, 4)$ break $x + 3y \le 6$, and $(6, 0)$ breaks $x + y \le 4$.'
+
+  - uid: g12-mathematics-4-2-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'Where does the maximum of a linear objective function occur on a bounded, non-empty feasible region?'
+    options:
+      A: 'Always at the origin'
+      B: 'Always at the centre of the region'
+      C: 'At a corner point of the region'
+      D: 'Outside the region'
+    answer: C
+    explanation: 'By the corner point theorem the optimum of a linear function on such a region is found at a corner (vertex).'
+
+  - uid: g12-mathematics-4-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'If the feasible region is bounded and not empty, a linear objective function has its maximum at a corner point.'
+    answer: true
+    explanation: 'This is the corner point theorem, which justifies checking only the corners.'
+
+  - uid: g12-mathematics-4-2-q007
+    type: single_choice
+    difficulty: 3
+    stem: 'Minimise $C = 2x + y$ subject to $x + y \ge 4$, $x \ge 1$, $y \ge 0$. What is the minimum value?'
+    options:
+      A: '4'
+      B: '5'
+      C: '8'
+      D: '2'
+    answer: B
+    explanation: 'The corners are $(1, 3)$ and $(4, 0)$. $C(1, 3) = 2 + 3 = 5$ and $C(4, 0) = 8$. The minimum is 5.'
+
+  - uid: g12-mathematics-4-2-q008
+    type: numeric
+    difficulty: 3
+    stem: 'A workshop makes tables ($x$) with profit 300 birr each and chairs ($y$) with profit 100 birr each. Wood: $4x + y \le 20$; labour: $x + y \le 8$; $x, y \ge 0$. What is the maximum profit in birr?'
+    answer: {value: 1600, tolerance: 0, unit: birr}
+    explanation: 'Corners: $(0, 0)$, $(5, 0)$, $(0, 8)$ and the meeting point of $4x + y = 20$ and $x + y = 8$, which is $(4, 4)$. Profits: 0, 1 500, 800, $1200 + 400 = 1600$. The maximum is 1 600 birr.'
+
+  - uid: g12-mathematics-4-2-q009
+    type: numeric
+    difficulty: 3
+    stem: 'A workshop makes tables ($x$) with profit 300 birr and chairs ($y$) with profit 100 birr. Wood: $4x + y \le 20$; labour: $x + y \le 8$; $x, y \ge 0$. How many tables should it make for the largest profit?'
+    answer: {value: 4, tolerance: 0}
+    explanation: 'The profit at the corners is 0 at $(0, 0)$, 1 500 at $(5, 0)$, 800 at $(0, 8)$ and 1 600 at $(4, 4)$. The best plan is 4 tables and 4 chairs.'
+
+  - uid: g12-mathematics-4-2-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'In a linear programming problem, what is the objective function?'
+    options:
+      A: 'The function whose value is to be made as large or as small as possible'
+      B: 'The list of all constraints'
+      C: 'The boundary of the feasible region'
+      D: 'Any point inside the feasible region'
+    answer: A
+    explanation: 'The objective function (such as profit or cost) is what we maximise or minimise.'
+
+  - uid: g12-mathematics-4-2-q011
+    type: single_choice
+    difficulty: 3
+    stem: 'The feasible region has corners $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. Where is $P = x + y$ largest?'
+    options:
+      A: 'Only at $(4, 0)$'
+      B: 'Only at $(3, 1)$'
+      C: 'Only at $(0, 2)$'
+      D: 'At every point of the edge from $(4, 0)$ to $(3, 1)$'
+    answer: D
+    explanation: '$P(4, 0) = 4$ and $P(3, 1) = 4$, both the largest value. The edge between them lies on $x + y = 4$, so every point on it also gives 4: multiple optimal solutions.'
+
+  - uid: g12-mathematics-4-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the slope of the iso-profit lines of $P = 3x + 2y$?'
+    options:
+      A: '$\frac{3}{2}$'
+      B: '$-\frac{2}{3}$'
+      C: '$-\frac{3}{2}$'
+      D: '$\frac{2}{3}$'
+    answer: C
+    explanation: 'From $3x + 2y = k$: $y = -\frac{3}{2}x + \frac{k}{2}$, so the slope is $-\frac{3}{2}$ for every $k$.'
+
+  - uid: g12-mathematics-4-2-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which statements about linear programming are true? Choose all that apply.'
+    options:
+      A: 'The constraints are linear inequalities.'
+      B: 'The objective function is linear.'
+      C: 'The optimum can only be found strictly inside the feasible region.'
+      D: 'The variables are usually required to be non-negative.'
+    answer: [A, B, D]
+    explanation: 'LP uses linear constraints and a linear objective, and amounts are usually non-negative. The optimum is at a corner, on the boundary, not strictly inside.'
+
+  - uid: g12-mathematics-4-2-q014
+    type: fill_in
+    difficulty: 1
+    stem: 'In linear programming, the function to be maximised or minimised is called the ________ function.'
+    answer: [objective]
+    explanation: 'It is the objective function, for example profit or cost.'
+
+  - uid: g12-mathematics-4-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Maximise $P = x + y$ subject to $x \ge 0$, $y \ge 0$, $x + y \ge 2$. What is the result?'
+    options:
+      A: 'The maximum is 2.'
+      B: 'There is no maximum, because the region is unbounded and $P$ can grow forever.'
+      C: 'The maximum is 0.'
+      D: 'The problem has no feasible point.'
+    answer: B
+    explanation: 'Points such as $(100, 100)$ are feasible and give larger and larger $P$, so there is no largest value. (The minimum is 2.)'
+
+  - uid: g12-mathematics-4-2-q016
+    type: numeric
+    difficulty: 3
+    stem: 'Minimise $C = 5x + 4y$ subject to $x + y \ge 6$, $x \ge 2$, $y \ge 1$. What is the minimum value?'
+    answer: {value: 26, tolerance: 0}
+    explanation: 'Corners: $(2, 4)$ and $(5, 1)$. $C(2, 4) = 10 + 16 = 26$ and $C(5, 1) = 25 + 4 = 29$. The region extends away from the origin, where $C$ only grows, so the minimum is 26.'
+
+  - uid: g12-mathematics-4-2-q017
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps for solving a linear programming word problem in order.'
+    items:
+      A: 'Define the decision variables.'
+      B: 'Write the objective function and the constraints in terms of the variables.'
+      C: 'Graph the feasible region and find its corners.'
+      D: 'Evaluate the objective at each corner and choose the best.'
+    answer: [A, B, C, D]
+    explanation: 'Name the unknowns, express the goal and the limits, draw the region, then compare the corners.'
+
+  - uid: g12-mathematics-4-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'The feasible region has corners $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. At which corner is $C = x - y$ smallest?'
+    options:
+      A: '$(0, 2)$'
+      B: '$(0, 0)$'
+      C: '$(3, 1)$'
+      D: '$(4, 0)$'
+    answer: A
+    explanation: 'Values: $C(0, 0) = 0$, $C(4, 0) = 4$, $C(3, 1) = 2$, $C(0, 2) = -2$. The smallest is $-2$ at $(0, 2)$.'
+
+  - uid: g12-mathematics-4-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A shop must sell at least twice as many chairs ($y$) as tables ($x$). Which constraint is this?'
+    options:
+      A: '$x \ge 2y$'
+      B: '$2x + y \ge 0$'
+      C: '$y \le 2x$'
+      D: '$y \ge 2x$'
+    answer: D
+    explanation: 'The number of chairs must be at least two times the number of tables: $y \ge 2x$.'
+
+  - uid: g12-mathematics-4-2-q020
+    type: true_false
+    difficulty: 1
+    stem: 'Every point of a feasible region gives the same value of the objective function.'
+    answer: false
+    explanation: 'Different points usually give different values; that is why we look for the best one.'
+
+  - uid: g12-mathematics-4-2-q021
+    type: single_choice
+    difficulty: 1
+    stem: 'Each unit of product A earns 40 birr profit and each unit of product B earns 30 birr. With $x$ units of A and $y$ units of B, what is the profit function?'
+    options:
+      A: '$P = 30x + 40y$'
+      B: '$P = 70(x + y)$'
+      C: '$P = 40x + 30y$'
+      D: '$P = 40x - 30y$'
+    answer: C
+    explanation: 'Profit from A is $40x$ and from B is $30y$; the total is $40x + 30y$.'
+
+  - uid: g12-mathematics-4-2-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each linear programming term with its meaning.'
+    left:
+      L1: 'Objective function'
+      L2: 'Constraint'
+      L3: 'Feasible region'
+    right:
+      R1: 'All points that satisfy every constraint'
+      R2: 'The quantity to be maximised or minimised'
+      R3: 'The slope of a boundary line'
+      R4: 'A limit on resources written as an inequality'
+    answer: {L1: R2, L2: R4, L3: R1}
+    explanation: 'The objective is what we optimise; constraints describe limits; the feasible region is where all constraints hold.'
+
+  - uid: g12-mathematics-4-2-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'The feasible region has corners $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. What is the maximum of $P = 2x + 6y$?'
+    options:
+      A: '8'
+      B: '12'
+      C: '14'
+      D: '18'
+    answer: B
+    explanation: 'Values: 0, 8, $6 + 6 = 12$, $12$. The maximum 12 is reached at both $(3, 1)$ and $(0, 2)$.'
+
+  - uid: g12-mathematics-4-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'For $P = ax + by$ with $a > 0$ and $b > 0$, in which direction should the iso-profit line be moved to increase $P$?'
+    options:
+      A: 'Away from the origin'
+      B: 'Towards the origin'
+      C: 'Rotated clockwise'
+      D: 'It does not matter.'
+    answer: A
+    explanation: 'Larger values of $k$ in $ax + by = k$ give parallel lines further from the origin when $a$ and $b$ are positive.'
+
+  - uid: g12-mathematics-4-2-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'A feasible region has corners $(0, 0)$, $(6, 0)$, $(4, 3)$ and $(0, 5)$. What is the maximum of $P = 2x + 3y$?'
+    options:
+      A: '12'
+      B: '15'
+      C: '18'
+      D: '17'
+    answer: D
+    explanation: 'Values: 0, 12, $8 + 9 = 17$, 15. The maximum is 17 at $(4, 3)$.'
+
+  - uid: g12-mathematics-4-2-q026
+    type: true_false
+    difficulty: 1
+    stem: 'A linear programming problem can have no feasible solution at all.'
+    answer: true
+    explanation: 'If the constraints contradict each other (for example $x + y \le 2$ and $x + y \ge 5$), the feasible region is empty.'
+
+  - uid: g12-mathematics-4-2-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'A farmer plants $x$ hectares of maize (profit 3 000 birr per hectare) and $y$ hectares of teff (profit 4 000 birr per hectare). Land: $x + y \le 10$; labour: $2x + 4y \le 32$; $x, y \ge 0$. What is the maximum profit?'
+    options:
+      A: '30 000 birr'
+      B: '32 000 birr'
+      C: '36 000 birr'
+      D: '40 000 birr'
+    answer: C
+    explanation: 'Corners: $(0, 0)$, $(10, 0)$, $(0, 8)$ and the meeting point of $x + y = 10$ and $x + 2y = 16$, which is $(4, 6)$. Profits: 0, 30 000, 32 000, $12\,000 + 24\,000 = 36\,000$ birr.'
+
+  - uid: g12-mathematics-4-2-q028
+    type: numeric
+    difficulty: 3
+    stem: 'A farmer plants $x$ hectares of maize (profit 3 000 birr per hectare) and $y$ hectares of teff (profit 4 000 birr per hectare). Land: $x + y \le 10$; labour: $2x + 4y \le 32$; $x, y \ge 0$. How many hectares of teff give the largest profit?'
+    answer: {value: 6, tolerance: 0}
+    explanation: 'The best corner is $(4, 6)$ with profit 36 000 birr (others give 0, 30 000 and 32 000), so 6 hectares of teff.'
+
+  - uid: g12-mathematics-4-2-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'A feasible region has corners $(0, 0)$, $(2, 0)$ and $(0, 3)$. What is the maximum of $P = 4x + y$?'
+    options:
+      A: '3'
+      B: '8'
+      C: '11'
+      D: '0'
+    answer: B
+    explanation: 'Values: 0, 8, 3. The maximum is 8 at $(2, 0)$.'
+
+  - uid: g12-mathematics-4-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'The feasible region is $x \ge 0$, $y \ge 0$, $x + y \le 4$, $x + 3y \le 6$. Which point is NOT a corner of the region?'
+    options:
+      A: '$(2, 2)$'
+      B: '$(0, 0)$'
+      C: '$(4, 0)$'
+      D: '$(0, 2)$'
+    answer: A
+    explanation: 'The corners are $(0, 0)$, $(4, 0)$, $(3, 1)$ and $(0, 2)$. The point $(2, 2)$ is not even feasible: $2 + 6 = 8 > 6$.'

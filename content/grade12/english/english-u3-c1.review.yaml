@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-3-1-q001: {hash: '6d31f6d378c20011a58ac9e8ec3511a43282773a4aaaf4a247be10d831c6d37c', answer: B}
+  g12-english-3-1-q002: {hash: '8a97a28560bb10eeb907a48de6c7251c3d64ab60bc5d36b2eb354039b2ef4c94', answer: C}
+  g12-english-3-1-q003: {hash: 'bbb153f11c97a082e0e2b304b574086db44d735ab594103df4f58b822279445d', answer: D}
+  g12-english-3-1-q004: {hash: '08f3b2418b38583536c47ced8d7c9ea66e05366ed139a481a48d7a9b274c1289', answer: A}
+  g12-english-3-1-q005: {hash: '44fd9365b345edf59603cb900cde003ec14ea9cf652aa227e0369013bbae91ce', answer: C}
+  g12-english-3-1-q006: {hash: '528718e7a39c0d1e6a6e10152346b696f6d7a7bb3a6c46a42898ec4170e97377', answer: B}
+  g12-english-3-1-q007: {hash: 'a97c4d2424fc121858d78745f5c786dbf03ed2645f2578e691a0859e9c8df99f', answer: C, note: 'Minor: C is clearly the best option, but the word "sacrifices" is an interpretation. The father''s journey and the dead camels are caused by the drought, not by Ifrah''s education; the only sacrifice tied to her schooling is that she stays behind and the family splits. Acceptable as a main-idea answer, no other option is supported.'}
+  g12-english-3-1-q008: {hash: 'effb2c4dda92854b1919e80f980c9ad1cba286818101e82b84ffbc60370174f1', answer: A}
+  g12-english-3-1-q009: {hash: 'b41e4d969bbba32979e5515c0f50df4cd3dd3b708dd133fae2a57b76dc1fb60f', answer: C}
+  g12-english-3-1-q010: {hash: 'b5893d19ad1d09113cc02818520f076dfaab28db9eb310ef0ed60cae5fdf845c', answer: B}
+  g12-english-3-1-q011: {hash: '0cc062e16f0e93ea4ae3726c17ce14d6b38fb43f1d42e2b9762212ae6a942ac4', answer: D}
+  g12-english-3-1-q012: {hash: 'eabdd2250419e6f6347dc18065390cd300d58bcceb25de3e19c0fd17fa3d574f', answer: A}
+  g12-english-3-1-q013: {hash: 'f532ca9fd1674865f2497ba8237c0583b0efcb7d21ac09c1d2b43bc7caa5cac0', answer: C}
+  g12-english-3-1-q014: {hash: '752f329b89ec266b6c1d5a8eb93cd54f0fd34688bec4a010c6b093b1263a2505', answer: B}
+  g12-english-3-1-q015: {hash: '67a35c3540358b7f0c3049f60b3779612a0057c2e2f3156829b8949bf7205ac9', answer: D}
+  g12-english-3-1-q016: {hash: 'e3469853da16cf459431108041da0ceba46b8ff3376984b4b4a13a7303fdfa9d', answer: A}
+  g12-english-3-1-q017: {hash: 'c3160bd318dd7ce9f82091daaa01018cd129403e23f2bd604d843ccc7eb66e1f', answer: C, note: 'Minor wording: the passage says schools should "set clear rules" and phones are used when "the teacher asks"; it does not say the teacher sets the rules. Option C ("clear rules set by the teacher") slightly misattributes who sets them. Suggest "Allowing phones only under clear rules, for tasks the teacher chooses". Still the only defensible option.'}
+  g12-english-3-1-q018: {hash: '4027dafe3f0ab5d5caa8ac75346da67c28aac1d9991cd60509ee29ba4ad4537f', answer: B}
+  g12-english-3-1-q019: {hash: 'e15e5226da28808dd3190cbaf05ffc9a902c94c5b3397e3136b06072d142a59a', answer: A}
+  g12-english-3-1-q020: {hash: 'a1f847ba856cb250de5c80e857ead004f15fddbd8bca21a9acc0deb78520d031', answer: D}
+  g12-english-3-1-q021: {hash: '7e01cdb6da0d01fea0388c149558aa65821bb3b85148709d8c78e1d7e4481c18', answer: B}
+  g12-english-3-1-q022: {hash: '9e630b42c4207b9ff0d2974391b91bbfa98258ebb1b640da9200dea1338513d7', answer: C}
+  g12-english-3-1-q023: {hash: '6875d08cddf43cad5533e608e118e9146ee51cabbdb28a8f97a4c0d0fd4ea80e', answer: D}
+  g12-english-3-1-q024: {hash: '92126ab07e6e3a929f4fa19170a11b13ef5fb9c17fbf09a419ba1b76a158a973', answer: C}
+  g12-english-3-1-q025: {hash: '05b44dd89af8718a261567baa06d7df53db028be7c0f56d4bfd71c980f87b910', answer: false}
+  g12-english-3-1-q026: {hash: 'ca28149e92bd7a2c400d98518efce59d0456837c7865957316868cc86c561f4a', answer: true}
+  g12-english-3-1-q027: {hash: '8be81a47518c01b64dd9bbb208e18305b0d9bd021cf3f729a0d741fc238e627e', answer: skimming, note: 'Accept "skimming" and "skim reading"; the blank before "called" may also draw "skim".'}
+  g12-english-3-1-q028: {hash: '7d5dc9cbffef3b6139964a48e85c36fb4ce15370dba0921aaaddeceb4aa0cc46', answer: inference}
+  g12-english-3-1-q029: {hash: '21c35bca7113b023ff8ec1363c8c00dfac59a23928e9f517301a69dd03e88270', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-english-3-1-q030: {hash: '3eeb4e8fa021bb31a76b69ad3e0b332ba944bc1284df7ccadfa49bdc3625705d', answer: [B, A, D, C], note: 'AMBIGUOUS ORDER: many exam-skills guides advise reading the questions FIRST and then skimming the passage ([A, B, D, C]), while others advise skimming first ([B, A, D, C]). Both are widely taught, so the first two steps have two defensible orders. Fix: accept both orders, or reword (e.g. "Skim the passage first for the general idea" or make step A clearly follow B) so only one order is sensible. D before C is unambiguous.'}

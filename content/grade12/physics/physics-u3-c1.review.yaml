@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-physics-3-1-q001: {hash: 'f29c925568ab9ef2f37a7a3d3839195568c5b6882eeb40e79418618b71161bb7', answer: B}
+  g12-physics-3-1-q002: {hash: '1534331884393612ac5ae6602ba74e8be470215d4cbcfd8605f384325522a072', answer: D}
+  g12-physics-3-1-q003: {hash: 'a1eecb00ce964d5e12f2664fb42be7d3b2b9e3142a62b12e49f66cbe2867597c', answer: 2500}
+  g12-physics-3-1-q004: {hash: 'a569aed11010936f18799a31f979f23d3546a67a5bbf8db460a9ffe8839a432d', answer: A}
+  g12-physics-3-1-q005: {hash: '0ae41aa0c366ccc041224effc3efd2b9ce914d7bf93d943d90cf8b71b761cfd8', answer: C}
+  g12-physics-3-1-q006: {hash: '697de5eb7ca15305461773cbef956c4651519c7de378aa04d0c7d0cb58f50f67', answer: true}
+  g12-physics-3-1-q007: {hash: 'bd8c4c0badf742500945f8d89b26438e27f906d4dc77634ec97be33c33e5dfd3', answer: B}
+  g12-physics-3-1-q008: {hash: '275d7a4f53cc71afb9f49cefa65498d59f5ded5891741e6eea8e814fc02c7c3a', answer: A}
+  g12-physics-3-1-q009: {hash: 'a901ad49ed184cba3e9d90ea43e5f35c3a0486553ac60149d0d230d8a476e92f', answer: 20}
+  g12-physics-3-1-q010: {hash: 'a642bc19648fc68c516b7fc5b82b288bfe95529d5949b2fc20ce7537efafe436', answer: D}
+  g12-physics-3-1-q011: {hash: 'b25c4c81d1bc953a6214e7dca3f89b4d1ebff591ee45a70b27d7710aa1368a64', answer: C}
+  g12-physics-3-1-q012: {hash: '8cabd1b2d622675eefc2f36a61b765eb4141a9ef1fee47d3aac0d78bd7bd060a', answer: B}
+  g12-physics-3-1-q013: {hash: '4c09dbe926fe985141ca949b8dace534096541c7ec5e67dc50ffcff69bac57ae', answer: A}
+  g12-physics-3-1-q014: {hash: 'aa1b635e3ff25b1e3d04ce4b62528e6c41647857f4acf325aeaa91f8b2602a2d', answer: [A, B, D]}
+  g12-physics-3-1-q015: {hash: '6d7608012b80ba029d7d8a783ca9053108fd97fdf8229f34e8a6f7ff39ac8b97', answer: pascal}
+  g12-physics-3-1-q016: {hash: 'b2a16316dbd9e0f49a542e26f0702afc8f207b64999102bee342a6eac222025e', answer: D}
+  g12-physics-3-1-q017: {hash: '0dfdf3dd25296ff3fa25e7fd9aca4fcd5e2fc334e7546cd5cd429437a57ca5e4', answer: true}
+  g12-physics-3-1-q018: {hash: '04e33d4c4f253e03f2b9c179b158da37ded61da4b417bc20631f4c44811feae6', answer: C}
+  g12-physics-3-1-q019: {hash: 'f230de00a166f07f1f4a4eaa2e3bad71fe3a7c9083d8e687f1d411c8acb73499', answer: B}
+  g12-physics-3-1-q020: {hash: '63963ccc84e40c9aace9ae60286d466085fb19aad96a28e25cb0cbfd58d707b7', answer: A}
+  g12-physics-3-1-q021: {hash: '6a89f3c5b424d141f45903123a98756c55e38ace50033c26c4b6c35369485e89', answer: D}
+  g12-physics-3-1-q022: {hash: '43e3be8a0ec8a8e6ab68b2a83be8e0ddb4b5b59cbd2fb19ab96a84f912e0fa54', answer: {L1: R4, L2: R1, L3: R2}}
+  g12-physics-3-1-q023: {hash: 'd5f7c070f8aa1e0644ebfac238b2c59b39fea8cda39e915457ea8b6a4097e54a', answer: [C, A, D, B]}
+  g12-physics-3-1-q024: {hash: 'd0eb3ffceb12283a24a2295a9e3f1771304550517aee623374c230c0ad82a89b', answer: C, note: 'Wording is loose: "Compared with water" should say "compared with the pressure 0.1 m below the surface of water", and it should say pressure due to the liquid (gauge). If atmospheric pressure is included, the ratio is not 13.6.'}
+  g12-physics-3-1-q025: {hash: '08f9cf0620cb44538be7f3f1c9ff056e0fbd7e7c8c5e9c0df7176a97d3daf742', answer: B}
+  g12-physics-3-1-q026: {hash: '83aa2c8233e8a229028af44c8769494da6e8381eeb4b191d960126ad66c07950', answer: false}
+  g12-physics-3-1-q027: {hash: 'bf8ad69b816602fd7abdfa3ce7f406fb9853cea182120d2328dc55cad9ee2fb9', answer: A}
+  g12-physics-3-1-q028: {hash: 'd137063f7850f31b5012c39b72bf347aa0e7da7a8c6150477f0653f67b8878f4', answer: D}
+  g12-physics-3-1-q029: {hash: 'b93798ff855ce06ea33254060b2a47f7a27fc47b1f16affc636945ddaa03cb1e', answer: C}
+  g12-physics-3-1-q030: {hash: 'fc37bf9f9bbfe043d05d973baa5847253e8cedb00c79f2d43e96b9d268972058', answer: B}

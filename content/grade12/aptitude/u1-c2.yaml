@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Sentence completion: read the whole sentence, find the signal words, predict the kind of word needed, then choose. Contrast signals (but, although, however, despite) mean the missing word is opposite in sense; support signals (and, because, so, since) mean it agrees with the rest.'
+    - 'For two blanks, check that BOTH words fit. An option with one good word and one bad word is wrong.'
+    - 'Verbal logic (syllogisms): accept the statements as true, even if they seem strange, and decide only what must follow from them.'
+    - '"All A are B" does not mean "all B are A". "All doctors are graduates" does not tell us that all graduates are doctors.'
+    - '"Some A are B" means at least one; it does not tell us whether some A are not B.'
+    - 'If "No A are B", then also "No B are A".'
+    - 'Statement and assumption: an assumption is something the speaker takes for granted without saying it. Statement and conclusion: a conclusion must follow from the statement alone.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-aptitude-1-2-se01
+    problem: 'Complete: "Although the road was ______, the bus arrived on time." (smooth / blocked / new)'
+    steps:
+      - '"Although" signals a contrast with arriving on time.'
+      - 'Something that would normally make the bus late: "blocked".'
+    answer: 'blocked'
+  - uid: g12-aptitude-1-2-se02
+    problem: 'All engineers are good at maths. Hassan is an engineer. What follows?'
+    steps:
+      - 'Hassan belongs to the group "engineers".'
+      - 'Everyone in that group is good at maths, so Hassan is good at maths.'
+    answer: 'Hassan is good at maths.'
+  - uid: g12-aptitude-1-2-se03
+    problem: 'All cats are animals. Some animals are black. Must some cats be black?'
+    steps:
+      - 'The black animals could all be animals that are not cats.'
+      - 'So it does not follow that any cat is black.'
+    answer: 'No, it does not follow.'
+
+flashcards:
+  - {uid: g12-aptitude-1-2-fc01, term: Contrast signal, definition: 'but, although, however, despite: the blank is opposite in sense.'}
+  - {uid: g12-aptitude-1-2-fc02, term: Support signal, definition: 'and, because, so, since: the blank agrees with the rest.'}
+  - {uid: g12-aptitude-1-2-fc03, term: Syllogism, definition: 'Two statements followed by a conclusion that must follow from them.'}
+  - {uid: g12-aptitude-1-2-fc04, term: All A are B, definition: 'Does not mean all B are A.'}
+  - {uid: g12-aptitude-1-2-fc05, term: Some A are B, definition: 'At least one A is B; says nothing about the rest.'}
+  - {uid: g12-aptitude-1-2-fc06, term: No A are B, definition: 'Also means no B are A.'}
+  - {uid: g12-aptitude-1-2-fc07, term: Assumption, definition: 'Something taken for granted but not stated.'}
+
+questions:
+  - uid: g12-aptitude-1-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Complete: "The medicine was so ______ that the fever went away in a day."'
+    options:
+      A: 'useless'
+      B: 'effective'
+      C: 'weak'
+      D: 'expensive'
+    answer: B
+    explanation: 'The fever going away quickly supports a positive word.'
+
+  - uid: g12-aptitude-1-2-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "Although Fatuma is usually ______, she spoke confidently at the meeting."'
+    options:
+      A: 'shy'
+      B: 'confident'
+      C: 'loud'
+      D: 'talkative'
+    answer: A
+    explanation: '"Although" signals a contrast with speaking confidently.'
+
+  - uid: g12-aptitude-1-2-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "The farmers were ______ because the rains came early and the harvest was good."'
+    options:
+      A: 'worried'
+      B: 'angry'
+      C: 'pleased'
+      D: 'hungry'
+    answer: C
+    explanation: '"Because" introduces good news, so a positive feeling fits.'
+
+  - uid: g12-aptitude-1-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete both blanks: "The old bridge was ______, so engineers ______ it before the rainy season."'
+    options:
+      A: 'strong / destroyed'
+      B: 'new / painted'
+      C: 'safe / closed'
+      D: 'weak / repaired'
+    answer: D
+    explanation: '"So" shows a result: a weak bridge leads engineers to repair it. Each other pair has a word that does not fit.'
+
+  - uid: g12-aptitude-1-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "Despite the heavy traffic, we arrived ______."'
+    options:
+      A: 'on time'
+      B: 'late'
+      C: 'very late'
+      D: 'stuck'
+    answer: A
+    explanation: '"Despite" signals an unexpected result: arriving on time.'
+
+  - uid: g12-aptitude-1-2-q006
+    type: single_choice
+    difficulty: 3
+    stem: 'Complete both blanks: "Water is ______ in the dry season, ______ families store rainwater in tanks."'
+    options:
+      A: 'plentiful / but'
+      B: 'scarce / so'
+      C: 'cheap / although'
+      D: 'scarce / but'
+    answer: B
+    explanation: 'Water shortage leads to storing water: "scarce ... so". "Scarce ... but" gives the wrong link.'
+
+  - uid: g12-aptitude-1-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'All doctors in the town studied at university. Dr Hodan is a doctor in the town. Which conclusion must be true?'
+    options:
+      A: 'Dr Hodan studied at university.'
+      B: 'Everyone who studied at university is a doctor.'
+      C: 'Dr Hodan teaches at a university.'
+      D: 'No nurses studied at university.'
+    answer: A
+    explanation: 'She is in the group "doctors in the town", all of whom studied at university.'
+
+  - uid: g12-aptitude-1-2-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'All roses are flowers. (Roses exist.) Which statement MUST be true?'
+    options:
+      A: 'All flowers are roses.'
+      B: 'Some roses are not flowers.'
+      C: 'No flowers are roses.'
+      D: 'Some flowers are roses.'
+    answer: D
+    explanation: 'Since roses exist and all are flowers, at least some flowers are roses. "All flowers are roses" does not follow.'
+
+  - uid: g12-aptitude-1-2-q009
+    type: single_choice
+    difficulty: 3
+    stem: 'No fish are mammals. All whales are mammals. Which conclusion follows?'
+    options:
+      A: 'Some whales are fish.'
+      B: 'All mammals are whales.'
+      C: 'No whales are fish.'
+      D: 'Some fish are whales.'
+    answer: C
+    explanation: 'Every whale is a mammal, and no mammal is a fish, so no whale is a fish.'
+
+  - uid: g12-aptitude-1-2-q010
+    type: single_choice
+    difficulty: 3
+    stem: 'Some students are athletes. All athletes train daily. Which conclusion follows?'
+    options:
+      A: 'All students train daily.'
+      B: 'Some students train daily.'
+      C: 'No students train daily.'
+      D: 'All who train daily are students.'
+    answer: B
+    explanation: 'The students who are athletes train daily, so at least some students do.'
+
+  - uid: g12-aptitude-1-2-q011
+    type: true_false
+    difficulty: 2
+    stem: 'If "All teachers are graduates" is true, then "All graduates are teachers" must also be true.'
+    answer: false
+    explanation: 'An "all" statement cannot be reversed; there can be graduates who are not teachers.'
+
+  - uid: g12-aptitude-1-2-q012
+    type: true_false
+    difficulty: 2
+    stem: 'If "No cats are dogs" is true, then "No dogs are cats" must also be true.'
+    answer: true
+    explanation: 'A "no" statement can be reversed.'
+
+  - uid: g12-aptitude-1-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Statement: "Students who want to join the science club must register before Friday." Which assumption is made?'
+    options:
+      A: 'All students will join the club.'
+      B: 'Some students may want to join the science club.'
+      C: 'The club meets every Friday.'
+      D: 'Registration is free.'
+    answer: B
+    explanation: 'The notice only makes sense if some students might want to join. The other options are not needed.'
+
+  - uid: g12-aptitude-1-2-q014
+    type: single_choice
+    difficulty: 3
+    stem: 'Statement: "Every student in Class 12B passed the mock exam. Amina did not pass the mock exam." Which conclusion follows?'
+    options:
+      A: 'Amina is in Class 12B.'
+      B: 'The mock exam was easy.'
+      C: 'Amina is a weak student.'
+      D: 'Amina is not in Class 12B.'
+    answer: D
+    explanation: 'If she were in 12B she would have passed; she did not, so she is not in 12B.'
+
+  - uid: g12-aptitude-1-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "The lecture was so ______ that half the students fell asleep."'
+    options:
+      A: 'exciting'
+      B: 'boring'
+      C: 'short'
+      D: 'interesting'
+    answer: B
+    explanation: 'Falling asleep is the result of a dull lecture.'
+
+  - uid: g12-aptitude-1-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "Abdullahi is very ______; he always shares his food with others."'
+    options:
+      A: 'selfish'
+      B: 'rude'
+      C: 'generous'
+      D: 'greedy'
+    answer: C
+    explanation: 'The clause after the semicolon explains the missing word.'
+
+  - uid: g12-aptitude-1-2-q017
+    type: multiple_answers
+    difficulty: 3
+    stem: 'All squares are rectangles. All rectangles have four sides. (Squares exist.) Which conclusions MUST be true? Choose all that apply.'
+    options:
+      A: 'All squares have four sides.'
+      B: 'Some rectangles are squares.'
+      C: 'All shapes with four sides are squares.'
+      D: 'Some squares do not have four sides.'
+    answer: [A, B]
+    explanation: 'A follows by chaining; B follows because squares exist and are rectangles. C reverses an "all" statement; D contradicts A.'
+
+  - uid: g12-aptitude-1-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'If it rains, the match is cancelled. The match was NOT cancelled. What can you conclude?'
+    options:
+      A: 'It did not rain.'
+      B: 'It rained.'
+      C: 'The match was played indoors.'
+      D: 'Nothing can be concluded.'
+    answer: A
+    explanation: 'If rain always cancels the match, and the match was not cancelled, there was no rain.'
+
+  - uid: g12-aptitude-1-2-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'If it rains, the match is cancelled. The match was cancelled. Which statement is correct?'
+    options:
+      A: 'It certainly rained.'
+      B: 'It certainly did not rain.'
+      C: 'The match was played.'
+      D: 'It may or may not have rained; the match could have been cancelled for another reason.'
+    answer: D
+    explanation: 'Rain is one cause of cancellation, but not the only possible one.'
+
+  - uid: g12-aptitude-1-2-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'Complete with one word that shows contrast: "The test was hard, ________ most students passed."'
+    answer: [but, yet, though, although]
+    explanation: 'The second part is unexpected, so a contrast word is needed.'
+
+  - uid: g12-aptitude-1-2-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete with one word that shows a result: "It was getting dark, ________ we went home."'
+    answer: [so]
+    explanation: 'Going home is the result of it getting dark.'
+
+  - uid: g12-aptitude-1-2-q022
+    type: true_false
+    difficulty: 2
+    stem: '"Some birds cannot fly" is consistent with "All birds have feathers".'
+    answer: true
+    explanation: 'Both can be true at the same time (for example, ostriches have feathers but cannot fly).'
+
+  - uid: g12-aptitude-1-2-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each signal word with what it tells you about the blank.'
+    left:
+      L1: 'although'
+      L2: 'because'
+      L3: 'for example'
+    right:
+      R1: 'A reason follows'
+      R2: 'An example follows'
+      R3: 'A contrast follows'
+      R4: 'A time order follows'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Words such as "first" and "then" show time order; none of these three does.'
+
+  - uid: g12-aptitude-1-2-q024
+    type: ordering
+    difficulty: 3
+    stem: 'Put these statements in order to form a valid argument: start with the general rule and end with the conclusion.'
+    items:
+      A: 'Therefore, Ayan is good at problem solving.'
+      B: 'Ayan studies mathematics.'
+      C: 'All mathematics students are good at problem solving.'
+    answer: [C, B, A]
+    explanation: 'General rule, then the particular case, then the conclusion.'
+
+  - uid: g12-aptitude-1-2-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "The new road made travel to the market much ______, so prices of vegetables fell."'
+    options:
+      A: 'harder'
+      B: 'slower'
+      C: 'more dangerous'
+      D: 'easier'
+    answer: D
+    explanation: '"So prices fell" supports a positive change in travel.'
+
+  - uid: g12-aptitude-1-2-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'All members of the debate club are in Grade 12. Some Grade 12 students play football. Which conclusion MUST be true?'
+    options:
+      A: 'Some debate club members play football.'
+      B: 'All footballers are in the debate club.'
+      C: 'No debate club members play football.'
+      D: 'None of these conclusions must be true.'
+    answer: D
+    explanation: 'The footballers in Grade 12 might or might not be club members, so A and C are not certain; B does not follow.'
+
+  - uid: g12-aptitude-1-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete: "Hamza is ______ about the trip; he has packed his bag three days early."'
+    options:
+      A: 'excited'
+      B: 'bored'
+      C: 'uninterested'
+      D: 'forgetful'
+    answer: A
+    explanation: 'Packing early shows eagerness.'
+
+  - uid: g12-aptitude-1-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Statement: "Drink only boiled or treated water during the outbreak." Which assumption is made?'
+    options:
+      A: 'All water in the area is safe.'
+      B: 'Untreated water may carry disease.'
+      C: 'People do not drink water.'
+      D: 'Boiling water makes it taste better.'
+    answer: B
+    explanation: 'The advice only makes sense if untreated water could be harmful.'
+
+  - uid: g12-aptitude-1-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Complete both blanks: "The team trained ______, ______ they lost the final."'
+    options:
+      A: 'hard / so'
+      B: 'little / therefore'
+      C: 'hard / yet'
+      D: 'rarely / because'
+    answer: C
+    explanation: 'Losing after hard training is unexpected, so a contrast word ("yet") is needed.'
+
+  - uid: g12-aptitude-1-2-q030
+    type: single_choice
+    difficulty: 3
+    stem: 'Every book on the top shelf is a novel. This book is not a novel. Where is it?'
+    options:
+      A: 'On the top shelf'
+      B: 'Not on the top shelf'
+      C: 'It must be a dictionary.'
+      D: 'It cannot be found.'
+    answer: B
+    explanation: 'Every book on the top shelf is a novel; since this is not a novel, it is not on the top shelf.'

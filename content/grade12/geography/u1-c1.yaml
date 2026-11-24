@@ -1,0 +1,374 @@
+summary:
+  key_points:
+    - 'The Earth has layers: a thin crust (continental crust is thicker and less dense; oceanic crust is thinner and denser), the mantle, a liquid outer core and a solid inner core. The rigid lithosphere (crust + top of the mantle) is broken into plates that move over the softer asthenosphere.'
+    - 'Alfred Wegener proposed continental drift in 1912: the continents were once joined in a supercontinent called Pangaea. Evidence: the coastlines of South America and Africa fit together; the same fossils (such as Mesosaurus and Glossopteris) and rock types are found on continents now far apart; and old glacial deposits are found in places that are now hot.'
+    - 'Plates move a few centimetres a year. They are driven by convection currents in the mantle together with slab pull (the sinking edge of a plate pulling the rest, often thought to be the strongest force) and ridge push. Sea-floor spreading at mid-ocean ridges (shown by magnetic stripes in the rocks) explains how plates move apart.'
+    - 'Divergent boundaries: plates move apart, forming mid-ocean ridges and rift valleys. The East African Rift, including the Ethiopian Rift Valley and the Afar region, is an example.'
+    - 'Convergent boundaries: plates move together. Where oceanic crust sinks under another plate (subduction), deep ocean trenches and volcanoes form. Where two continents collide, fold mountains form (the Himalayas).'
+    - 'Transform boundaries: plates slide past each other, causing earthquakes (the San Andreas Fault in California).'
+    - 'Earthquakes start at the focus underground; the point on the surface above it is the epicentre. Seismographs record them. Volcanoes erupt magma as lava, ash and gases; in Afar, Erta Ale has a lava lake, and the Danakil Depression lies more than 100 m below sea level.'
+    - 'Folding bends rock layers into anticlines (up-folds) and synclines (down-folds). Faulting breaks rocks; a block that sinks between two faults forms a rift valley (graben), and a raised block is a horst.'
+  formulas:
+    - label: Plate movement
+      latex: '\text{distance} = \text{rate} \times \text{time}'
+
+solved_exercises:
+  - uid: g12-geography-1-1-se01
+    problem: 'A plate moves 2 cm per year. How far does it move in one million years, in kilometres?'
+    steps:
+      - '$2\ \text{cm} \times 1\,000\,000 = 2\,000\,000$ cm.'
+      - '$2\,000\,000\ \text{cm} = 20\,000\ \text{m} = 20$ km.'
+    answer: '20 km'
+  - uid: g12-geography-1-1-se02
+    problem: 'Explain why the Ethiopian Rift Valley has many lakes and volcanoes.'
+    steps:
+      - 'It lies on a divergent boundary where the African plate is splitting; land between faults has sunk, forming a long valley.'
+      - 'The thin, cracked crust lets magma rise, forming volcanoes and hot springs, and the low floor collects water in lakes such as Ziway, Langano and Hawassa.'
+    answer: 'Rifting causes sinking (lakes) and thin crust (volcanoes).'
+  - uid: g12-geography-1-1-se03
+    problem: 'Why are there fold mountains but few volcanoes where India meets Asia?'
+    steps:
+      - 'Both plates are continental, which is too light to sink deeply (little subduction).'
+      - 'The crust crumples upward into fold mountains (the Himalayas) instead of melting into magma.'
+    answer: 'Continental collision folds the crust instead of subducting it.'
+
+flashcards:
+  - {uid: g12-geography-1-1-fc01, term: Lithosphere, definition: 'Rigid outer layer: crust plus the top of the mantle.'}
+  - {uid: g12-geography-1-1-fc02, term: Asthenosphere, definition: 'Soft, partly molten mantle layer on which plates move.'}
+  - {uid: g12-geography-1-1-fc03, term: Pangaea, definition: 'Supercontinent that existed before the continents drifted apart.'}
+  - {uid: g12-geography-1-1-fc04, term: Divergent boundary, definition: 'Plates move apart; ridges and rift valleys form.'}
+  - {uid: g12-geography-1-1-fc05, term: Subduction, definition: 'A denser plate sinks beneath another at a convergent boundary.'}
+  - {uid: g12-geography-1-1-fc06, term: Transform boundary, definition: 'Plates slide past each other.'}
+  - {uid: g12-geography-1-1-fc07, term: Epicentre, definition: 'Point on the surface directly above an earthquake''s focus.'}
+  - {uid: g12-geography-1-1-fc08, term: Anticline, definition: 'Upward fold in rock layers.'}
+  - {uid: g12-geography-1-1-fc09, term: Graben, definition: 'Block that has sunk between two faults; forms a rift valley.'}
+
+questions:
+  - uid: g12-geography-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which layer of the Earth is liquid?'
+    options:
+      A: 'Inner core'
+      B: 'Outer core'
+      C: 'Crust'
+      D: 'Lithosphere'
+    answer: B
+    explanation: 'The outer core is liquid iron and nickel; the inner core is solid because of the enormous pressure.'
+
+  - uid: g12-geography-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Who developed the theory of continental drift in 1912?'
+    options:
+      A: 'Alfred Wegener'
+      B: 'Charles Darwin'
+      C: 'Isaac Newton'
+      D: 'Harry Hess'
+    answer: A
+    explanation: 'Earlier thinkers had noticed the matching coastlines, but Wegener set out the full theory in 1912. Harry Hess later described sea-floor spreading.'
+
+  - uid: g12-geography-1-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What was the name of the supercontinent that existed before the continents drifted apart?'
+    options:
+      A: 'Atlantis'
+      B: 'Eurasia'
+      C: 'Pangaea'
+      D: 'Gondwana only'
+    answer: C
+    explanation: 'Pangaea later split into Laurasia in the north and Gondwana in the south.'
+
+  - uid: g12-geography-1-1-q004
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are pieces of evidence for continental drift? Choose all that apply.'
+    options:
+      A: 'The coastlines of South America and Africa fit together.'
+      B: 'The same fossils are found on continents now far apart.'
+      C: 'Old glacial deposits are found in places that are now tropical.'
+      D: 'All continents have the same climate today.'
+    answer: [A, B, C]
+    explanation: 'Climates today differ widely, so D is false and is not evidence.'
+
+  - uid: g12-geography-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these helps to drive the movement of tectonic plates?'
+    options:
+      A: 'Wind blowing on the continents'
+      B: 'The Moon''s gravity'
+      C: 'Ocean waves'
+      D: 'Convection currents in the mantle'
+    answer: D
+    explanation: 'Heat from the interior makes the mantle slowly circulate. Together with slab pull (often thought to be the strongest force) and ridge push, this moves the plates. Wind, waves and the Moon do not.'
+
+  - uid: g12-geography-1-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'The East African Rift is an example of which type of plate boundary?'
+    options:
+      A: 'Divergent'
+      B: 'Convergent'
+      C: 'Transform'
+      D: 'No boundary'
+    answer: A
+    explanation: 'The African plate is splitting apart, forming a rift valley.'
+
+  - uid: g12-geography-1-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'What forms where an oceanic plate is subducted beneath a continental plate?'
+    options:
+      A: 'A mid-ocean ridge'
+      B: 'A rift valley'
+      C: 'A deep ocean trench and a chain of volcanoes'
+      D: 'A transform fault only'
+    answer: C
+    explanation: 'The sinking plate makes a trench and melts at depth, feeding volcanoes.'
+
+  - uid: g12-geography-1-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'The Himalayas were formed by:'
+    options:
+      A: 'Two plates moving apart'
+      B: 'A collision between two continental plates'
+      C: 'Plates sliding past each other'
+      D: 'A meteorite impact'
+    answer: B
+    explanation: 'The Indian plate collided with the Eurasian plate, folding the crust upward.'
+
+  - uid: g12-geography-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'At which type of boundary do plates slide past each other horizontally?'
+    options:
+      A: 'Divergent'
+      B: 'Convergent'
+      C: 'Subduction'
+      D: 'Transform'
+    answer: D
+    explanation: 'The San Andreas Fault is a well-known transform boundary.'
+
+  - uid: g12-geography-1-1-q010
+    type: true_false
+    difficulty: 1
+    stem: 'Oceanic crust is denser than continental crust.'
+    answer: true
+    explanation: 'Oceanic crust (mostly basalt) is denser, which is why it sinks beneath continental crust at subduction zones.'
+
+  - uid: g12-geography-1-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the epicentre of an earthquake?'
+    options:
+      A: 'The point on the surface directly above the focus'
+      B: 'The point deep underground where it starts'
+      C: 'The instrument that records it'
+      D: 'The edge of the plate'
+    answer: A
+    explanation: 'The focus (hypocentre) is underground; the epicentre is on the surface above it.'
+
+  - uid: g12-geography-1-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which instrument records earthquakes?'
+    options:
+      A: 'Barometer'
+      B: 'Thermometer'
+      C: 'Seismograph'
+      D: 'Anemometer'
+    answer: C
+    explanation: 'A seismograph records ground vibrations.'
+
+  - uid: g12-geography-1-1-q013
+    type: numeric
+    difficulty: 2
+    stem: 'A plate moves 5 cm per year. How many metres does it move in 100 years?'
+    answer: {value: 5, tolerance: 0, unit: m}
+    explanation: '$5 \times 100 = 500$ cm $= 5$ m.'
+
+  - uid: g12-geography-1-1-q014
+    type: numeric
+    difficulty: 3
+    stem: 'A plate moves 2 cm per year. How many kilometres does it move in one million years?'
+    answer: {value: 20, tolerance: 0, unit: km}
+    explanation: '$2 \times 1\,000\,000 = 2\,000\,000$ cm $= 20$ km.'
+
+  - uid: g12-geography-1-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Erta Ale, a volcano known for its lava lake, is in which region of Ethiopia?'
+    options:
+      A: 'Afar'
+      B: 'Amhara'
+      C: 'Sidama'
+      D: 'Gambella'
+    answer: A
+    explanation: 'Erta Ale lies in the Danakil Depression in the Afar Region.'
+
+  - uid: g12-geography-1-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'An upward fold in rock layers is called:'
+    options:
+      A: 'A syncline'
+      B: 'A graben'
+      C: 'A rift'
+      D: 'An anticline'
+    answer: D
+    explanation: 'Anticline = up-fold; syncline = down-fold.'
+
+  - uid: g12-geography-1-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'A block of land that sinks between two parallel faults forms:'
+    options:
+      A: 'A horst'
+      B: 'A rift valley (graben)'
+      C: 'A volcano'
+      D: 'An anticline'
+    answer: B
+    explanation: 'The sunken block is a graben; a raised block between faults is a horst.'
+
+  - uid: g12-geography-1-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'The Danakil Depression in the Afar Region lies below sea level.'
+    answer: true
+    explanation: 'Parts of it are more than 100 m below sea level, among the lowest land in Africa.'
+
+  - uid: g12-geography-1-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'Magnetic stripes in the rocks on both sides of a mid-ocean ridge are symmetrical. What does this show?'
+    options:
+      A: 'The ocean floor is spreading out from the ridge.'
+      B: 'The ocean is getting colder.'
+      C: 'Continents are sinking.'
+      D: 'The Earth''s magnetic field never changes.'
+    answer: A
+    explanation: 'New rock forms at the ridge and records the field; as the field reverses over time, matching stripes move away on each side.'
+
+  - uid: g12-geography-1-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these lakes is in the Ethiopian Rift Valley?'
+    options:
+      A: 'Lake Tana'
+      B: 'Lake Victoria'
+      C: 'Lake Langano'
+      D: 'Lake Chad'
+    answer: C
+    explanation: 'Langano, Ziway, Abijata, Shala, Hawassa, Abaya and Chamo are Rift Valley lakes. Lake Tana is in the north-western highlands.'
+
+  - uid: g12-geography-1-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The process in which one plate sinks beneath another is called ________.'
+    answer: [subduction]
+    explanation: 'Subduction happens at convergent boundaries involving oceanic crust.'
+
+  - uid: g12-geography-1-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The rigid outer layer of the Earth, made of the crust and the top of the mantle, is called the ________.'
+    answer: [lithosphere]
+    explanation: 'The lithosphere is broken into tectonic plates.'
+
+  - uid: g12-geography-1-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Tectonic plates move several metres every year.'
+    answer: false
+    explanation: 'They move only a few centimetres a year, about as fast as fingernails grow.'
+
+  - uid: g12-geography-1-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each landform with the type of plate boundary where it forms.'
+    left:
+      L1: 'Mid-ocean ridge'
+      L2: 'Ocean trench'
+      L3: 'San Andreas Fault'
+    right:
+      R1: 'Transform'
+      R2: 'Divergent'
+      R3: 'Convergent (subduction)'
+      R4: 'Not at a boundary'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'All three landforms are linked to plate boundaries.'
+
+  - uid: g12-geography-1-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the Earth''s layers in order from the surface to the centre.'
+    items:
+      A: 'Outer core'
+      B: 'Crust'
+      C: 'Inner core'
+      D: 'Mantle'
+    answer: [B, D, A, C]
+    explanation: 'Crust → mantle → outer core → inner core.'
+
+  - uid: g12-geography-1-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do most of the world''s earthquakes and volcanoes occur in narrow belts?'
+    options:
+      A: 'They happen only where it rains a lot.'
+      B: 'They follow the equator.'
+      C: 'They occur only in mountains.'
+      D: 'They are concentrated along plate boundaries.'
+    answer: D
+    explanation: 'Plate movements cause stress and magma at the boundaries, such as the Pacific "Ring of Fire".'
+
+  - uid: g12-geography-1-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'The same fossil reptile, Mesosaurus, which lived in fresh water, is found in both Brazil and South Africa. Why is this good evidence for continental drift?'
+    options:
+      A: 'It could swim across the Atlantic Ocean easily.'
+      B: 'It could not cross a salt-water ocean, so the continents must once have been joined.'
+      C: 'It was carried by humans.'
+      D: 'It shows that both continents have the same climate today.'
+    answer: B
+    explanation: 'A small fresh-water reptile could not have crossed the ocean, so the land was once connected.'
+
+  - uid: g12-geography-1-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which type of seismic wave cannot travel through liquids?'
+    options:
+      A: 'P waves'
+      B: 'Both P and S waves'
+      C: 'S waves'
+      D: 'Neither P nor S waves'
+    answer: C
+    explanation: 'S waves do not pass through the liquid outer core, which helped scientists discover that it is liquid.'
+
+  - uid: g12-geography-1-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Hot springs at places such as Sodere and Wondo Genet are linked mainly to:'
+    options:
+      A: 'Heavy rainfall'
+      B: 'Melting snow'
+      C: 'Ocean tides'
+      D: 'Heat from magma near the surface in the rift zone'
+    answer: D
+    explanation: 'Groundwater is heated by hot rocks in the thin, cracked crust of the rift.'
+
+  - uid: g12-geography-1-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about the asthenosphere is correct?'
+    options:
+      A: 'It is the soft, partly molten layer of the upper mantle on which the plates move.'
+      B: 'It is the solid inner core.'
+      C: 'It is the layer of air above the Earth.'
+      D: 'It is the top layer of the crust.'
+    answer: A
+    explanation: 'Its plastic behaviour allows the rigid lithosphere above to move.'

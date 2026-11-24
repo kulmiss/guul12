@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'The Berlin Conference (1884–1885), called by Bismarck, set rules for European powers to claim African land, including "effective occupation". No African ruler was invited. By 1914 only Ethiopia and Liberia remained independent.'
+    - 'Reasons for the "Scramble for Africa": industrial Europe wanted raw materials, markets and places to invest; national rivalry and prestige; strategic routes (such as the Suez Canal); and missionary and "civilising" claims. New weapons (the machine gun) and quinine against malaria made conquest easier.'
+    - 'At the Battle of Adwa on 1 March 1896, Ethiopian forces under Emperor Menelik II defeated the Italian army. The dispute began over Article 17 of the Treaty of Wuchale (1889). The Treaty of Addis Ababa (October 1896) recognised Ethiopia''s full independence. Adwa became a symbol of African resistance.'
+    - 'Methods of colonial rule: Britain often used indirect rule through local chiefs (for example in Northern Nigeria); France used more direct rule and a policy of assimilation; King Leopold II''s Congo Free State (1885–1908) was notorious for forced labour and brutality.'
+    - 'Resistance took many forms: the Maji Maji rising (1905–1907) in German East Africa; Samori Touré against the French in West Africa; the Herero and Nama against German rule in South West Africa (1904–1908); the Somali Dervish movement led by Sayyid Mohammed Abdullah Hassan (1899–1920); and Omar Mukhtar in Libya against Italy.'
+    - 'Colonial economies focused on cash crops and mining for export, used taxes (such as hut tax) and forced labour, and built railways mainly from mines and plantations to ports.'
+    - 'Pan-Africanism called for African unity and freedom; the Manchester Pan-African Congress (1945) included Kwame Nkrumah and Jomo Kenyatta. After the Second World War, nationalist movements grew.'
+    - 'Decolonisation: Ghana (1957) was the first British colony in sub-Saharan Africa to win independence (Sudan, ruled jointly by Britain and Egypt, became independent in 1956); 1960 is called the "Year of Africa" (seventeen countries became independent, including Somalia); Algeria won independence in 1962 after a long war. The Organisation of African Unity (OAU) was founded in Addis Ababa on 25 May 1963.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-2-1-se01
+    problem: 'Why did the Treaty of Wuchale lead to war between Ethiopia and Italy?'
+    steps:
+      - 'The Amharic text of Article 17 said Ethiopia "could" use Italy for foreign relations; the Italian text said it "must", making Ethiopia a protectorate.'
+      - 'Menelik II rejected the Italian version, and Italy invaded, leading to the Battle of Adwa in 1896.'
+    answer: 'Different versions of Article 17'
+  - uid: g12-history-2-1-se02
+    problem: 'Compare British indirect rule with French assimilation.'
+    steps:
+      - 'Indirect rule governed through existing chiefs and local institutions, keeping costs low.'
+      - 'Assimilation aimed to make Africans adopt French language and culture, with more direct French administration.'
+    answer: 'Through local rulers vs. French culture and direct rule'
+  - uid: g12-history-2-1-se03
+    problem: 'Why were many colonial railways built from the interior straight to the coast?'
+    steps:
+      - 'Their main purpose was to carry raw materials such as minerals and cash crops to ports for export to Europe.'
+      - 'They rarely linked African regions with each other.'
+    answer: 'To export raw materials'
+
+flashcards:
+  - {uid: g12-history-2-1-fc01, term: Berlin Conference, definition: '1884–1885 meeting that set rules for dividing Africa.'}
+  - {uid: g12-history-2-1-fc02, term: Effective occupation, definition: 'Rule that a power must actually control land to claim it.'}
+  - {uid: g12-history-2-1-fc03, term: Battle of Adwa, definition: '1 March 1896: Ethiopia under Menelik II defeated Italy.'}
+  - {uid: g12-history-2-1-fc04, term: Treaty of Wuchale, definition: '1889 treaty whose Article 17 was disputed.'}
+  - {uid: g12-history-2-1-fc05, term: Indirect rule, definition: 'British method of ruling through local chiefs.'}
+  - {uid: g12-history-2-1-fc06, term: Assimilation, definition: 'French policy of spreading French culture to colonised peoples.'}
+  - {uid: g12-history-2-1-fc07, term: Maji Maji, definition: 'Rising against German rule in East Africa, 1905–1907.'}
+  - {uid: g12-history-2-1-fc08, term: Pan-Africanism, definition: 'Movement for the unity and freedom of African peoples.'}
+  - {uid: g12-history-2-1-fc09, term: OAU, definition: 'Organisation of African Unity, founded in Addis Ababa on 25 May 1963.'}
+
+questions:
+  - uid: g12-history-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which conference (1884–1885) set the rules for European powers to divide Africa?'
+    options:
+      A: 'The Congress of Vienna'
+      B: 'The Berlin Conference'
+      C: 'The Paris Peace Conference'
+      D: 'The Bandung Conference'
+    answer: B
+    explanation: 'It was hosted by Bismarck in Berlin; no African rulers attended.'
+
+  - uid: g12-history-2-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'By 1914, which two African countries were still independent?'
+    options:
+      A: 'Ethiopia and Liberia'
+      B: 'Egypt and Kenya'
+      C: 'Ghana and Nigeria'
+      D: 'Somalia and Sudan'
+    answer: A
+    explanation: 'All other parts of Africa were under European control.'
+
+  - uid: g12-history-2-1-q003
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the Battle of Adwa fought?'
+    answer: {value: 1896, tolerance: 0}
+    explanation: 'It was fought on 1 March 1896.'
+
+  - uid: g12-history-2-1-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'Who led Ethiopia to victory at the Battle of Adwa?'
+    options:
+      A: 'Emperor Tewodros II'
+      B: 'Emperor Haile Selassie I'
+      C: 'Emperor Yohannes IV'
+      D: 'Emperor Menelik II'
+    answer: D
+    explanation: 'Menelik II, with Empress Taytu and many regional leaders, defeated the Italians.'
+
+  - uid: g12-history-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which article of the Treaty of Wuchale caused the dispute between Ethiopia and Italy?'
+    options:
+      A: 'Article 1'
+      B: 'Article 5'
+      C: 'Article 17'
+      D: 'Article 30'
+    answer: C
+    explanation: 'The Italian and Amharic versions of Article 17 said different things about foreign relations.'
+
+  - uid: g12-history-2-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which treaty, signed in October 1896, recognised Ethiopia''s full independence after Adwa?'
+    options:
+      A: 'Treaty of Addis Ababa'
+      B: 'Treaty of Versailles'
+      C: 'Treaty of Wuchale'
+      D: 'Treaty of Berlin'
+    answer: A
+    explanation: 'Italy annulled the Treaty of Wuchale and recognised Ethiopian independence.'
+
+  - uid: g12-history-2-1-q007
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which were reasons for the Scramble for Africa? Choose all that apply.'
+    options:
+      A: 'Need for raw materials for European industry'
+      B: 'Rivalry and prestige among European nations'
+      C: 'New markets for manufactured goods'
+      D: 'African rulers inviting Europeans to take their land'
+    answer: [A, B, C]
+    explanation: 'Africans did not invite colonisation; most resisted it.'
+
+  - uid: g12-history-2-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which colonial method governed through existing chiefs and local institutions?'
+    options:
+      A: 'Assimilation'
+      B: 'Apartheid'
+      C: 'Indirect rule'
+      D: 'Direct rule'
+    answer: C
+    explanation: 'Britain used indirect rule, for example in Northern Nigeria.'
+
+  - uid: g12-history-2-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'The French policy of trying to make colonised peoples adopt French language and culture was called:'
+    options:
+      A: 'Indirect rule'
+      B: 'Apartheid'
+      C: 'Pan-Africanism'
+      D: 'Assimilation'
+    answer: D
+    explanation: 'Assimilation aimed to turn colonial subjects into "French" citizens in culture.'
+
+  - uid: g12-history-2-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'The Maji Maji rising (1905–1907) took place against which colonial power?'
+    options:
+      A: 'Germany'
+      B: 'Britain'
+      C: 'France'
+      D: 'Italy'
+    answer: A
+    explanation: 'It happened in German East Africa (now Tanzania).'
+
+  - uid: g12-history-2-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Who led the Somali Dervish resistance against colonial forces from 1899 to 1920?'
+    options:
+      A: 'Omar Mukhtar'
+      B: 'Sayyid Mohammed Abdullah Hassan'
+      C: 'Samori Touré'
+      D: 'Kwame Nkrumah'
+    answer: B
+    explanation: 'His Dervish movement resisted British, Italian and Ethiopian forces for about twenty years.'
+
+  - uid: g12-history-2-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Omar Mukhtar led resistance against which colonial power in Libya?'
+    options:
+      A: 'France'
+      B: 'Britain'
+      C: 'Italy'
+      D: 'Belgium'
+    answer: C
+    explanation: 'He fought Italian rule until he was captured and executed in 1931.'
+
+  - uid: g12-history-2-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which territory was ruled as the personal property of King Leopold II of Belgium from 1885 to 1908?'
+    options:
+      A: 'Rwanda'
+      B: 'Angola'
+      C: 'Namibia'
+      D: 'The Congo Free State'
+    answer: D
+    explanation: 'Forced labour for rubber led to terrible abuses and many deaths.'
+
+  - uid: g12-history-2-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'African rulers were represented at the Berlin Conference.'
+    answer: false
+    explanation: 'No African ruler was invited; Europeans divided Africa among themselves.'
+
+  - uid: g12-history-2-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'The victory at Adwa inspired anti-colonial movements in Africa and the African diaspora.'
+    answer: true
+    explanation: 'It showed that an African state could defeat a European army.'
+
+  - uid: g12-history-2-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Why were most colonial railways built from inland areas straight to the coast?'
+    options:
+      A: 'To carry raw materials to ports for export'
+      B: 'To connect African capitals with each other'
+      C: 'To help African farmers sell food locally'
+      D: 'For tourism'
+    answer: A
+    explanation: 'They served the export economy rather than African trade within the continent.'
+
+  - uid: g12-history-2-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country, formerly the Gold Coast, was the first British colony in sub-Saharan Africa to gain independence, in 1957?'
+    options:
+      A: 'Kenya'
+      B: 'Ghana'
+      C: 'Nigeria'
+      D: 'Uganda'
+    answer: B
+    explanation: 'Ghana became independent under Kwame Nkrumah on 6 March 1957. (Sudan, ruled jointly by Britain and Egypt, had become independent in 1956.)'
+
+  - uid: g12-history-2-1-q018
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the Organisation of African Unity (OAU) founded in Addis Ababa?'
+    answer: {value: 1963, tolerance: 0}
+    explanation: 'The OAU was founded on 25 May 1963.'
+
+  - uid: g12-history-2-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is 1960 called the "Year of Africa"?'
+    options:
+      A: 'The Berlin Conference was held.'
+      B: 'The OAU was founded.'
+      C: 'Ethiopia defeated Italy.'
+      D: 'Seventeen African countries gained independence.'
+    answer: D
+    explanation: 'Many French colonies, Nigeria, Somalia and the Congo became independent that year.'
+
+  - uid: g12-history-2-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country won independence from France in 1962 after a long war of liberation?'
+    options:
+      A: 'Algeria'
+      B: 'Morocco'
+      C: 'Senegal'
+      D: 'Egypt'
+    answer: A
+    explanation: 'The Algerian War lasted from 1954 to 1962.'
+
+  - uid: g12-history-2-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The movement that called for the unity and liberation of all African peoples is called ________.'
+    answer: [Pan-Africanism, Pan Africanism, Panafricanism]
+    explanation: 'The 1945 Manchester Congress was an important Pan-African meeting.'
+
+  - uid: g12-history-2-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The rule from the Berlin Conference that a European power had to actually control a territory to claim it was called effective ________.'
+    answer: [occupation]
+    explanation: 'This sped up military conquest in the interior.'
+
+  - uid: g12-history-2-1-q023
+    type: true_false
+    difficulty: 2
+    stem: 'Colonial governments often introduced taxes, such as hut tax, partly to force Africans to work for wages or grow cash crops.'
+    answer: true
+    explanation: 'Taxes had to be paid in money, pushing people into the colonial economy.'
+
+  - uid: g12-history-2-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each resistance leader or movement with the colonial power it fought.'
+    left:
+      L1: 'Samori Touré'
+      L2: 'Herero and Nama'
+      L3: 'Somali Dervishes'
+    right:
+      R1: 'Germany'
+      R2: 'Britain (and Italy)'
+      R3: 'France'
+      R4: 'Portugal'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Samori fought the French; the Herero and Nama fought the Germans; the Dervishes fought mainly the British and Italians.'
+
+  - uid: g12-history-2-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in the order they happened.'
+    items:
+      A: 'Ghana''s independence'
+      B: 'Battle of Adwa'
+      C: 'Berlin Conference opens'
+      D: 'Founding of the OAU'
+    answer: [C, B, A, D]
+    explanation: '1884, 1896, 1957, 1963.'
+
+  - uid: g12-history-2-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Which two inventions most helped Europeans conquer the African interior in the late 19th century?'
+    options:
+      A: 'The aeroplane and radio'
+      B: 'The steam engine and telephone'
+      C: 'The machine gun and quinine (against malaria)'
+      D: 'The car and the computer'
+    answer: C
+    explanation: 'Machine guns gave military advantage; quinine let Europeans survive in malaria areas.'
+
+  - uid: g12-history-2-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which two future leaders attended the 1945 Pan-African Congress in Manchester?'
+    options:
+      A: 'Menelik II and Taytu'
+      B: 'Kwame Nkrumah and Jomo Kenyatta'
+      C: 'Bismarck and Cavour'
+      D: 'Leopold II and Lugard'
+    answer: B
+    explanation: 'They later led Ghana and Kenya to independence.'
+
+  - uid: g12-history-2-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about colonial economies is correct?'
+    options:
+      A: 'They aimed to build strong local industries.'
+      B: 'They banned all exports.'
+      C: 'They paid Africans the same as Europeans.'
+      D: 'They focused on producing raw materials and cash crops for export.'
+    answer: D
+    explanation: 'Colonies supplied raw materials to European industry and bought European goods.'
+
+  - uid: g12-history-2-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'In 1960, British Somaliland and the Italian-administered Trust Territory of Somalia united to form:'
+    options:
+      A: 'The Somali Republic'
+      B: 'Djibouti'
+      C: 'Eritrea'
+      D: 'The Ogaden State'
+    answer: A
+    explanation: 'Both became independent in late June and early July 1960 and united on 1 July 1960.'
+
+  - uid: g12-history-2-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which empress played an important role alongside Menelik II during the Adwa campaign?'
+    options:
+      A: 'Empress Zewditu'
+      B: 'Empress Menen'
+      C: 'Empress Taytu Betul'
+      D: 'Queen Makeda'
+    answer: C
+    explanation: 'Empress Taytu opposed the Treaty of Wuchale and led troops during the campaign.'

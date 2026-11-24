@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'Indigenous knowledge is the knowledge, skills and practices that communities develop over generations, such as farming methods, medicine, building, conflict resolution and ways of measuring time.'
+    - 'Farming knowledge: the Konso people build stone terraces to conserve soil and water on steep hills; the enset ("false banana") system feeds millions in the south and south-west; pastoralists, including Somali and Afar herders, use detailed knowledge of grazing, water and weather to move their herds.'
+    - 'Social institutions: iddir (community associations that help members with funeral costs), iqub (rotating savings groups), and debo or wonfel (shared labour at harvest or house-building). Traditional dispute resolution includes elders'' councils, shimgilina, the Somali xeer and the Oromo Gadaa system.'
+    - 'The Ethiopian calendar has 12 months of 30 days plus a short 13th month, Pagume (5 days, or 6 in a leap year). It is about seven to eight years behind the Gregorian calendar. Enkutatash (New Year) falls on 11 September, or 12 September in the year before a Gregorian leap year.'
+    - 'Ethiopia has its own script, Ge''ez (Fidel), used for Amharic, Tigrinya and other languages, and a long tradition of manuscripts, church music and painting.'
+    - 'Tangible heritage includes the obelisks of Aksum, the rock-hewn churches of Lalibela, the castles of Fasil Ghebbi in Gondar and the walled city of Harar Jugol – all UNESCO World Heritage Sites – and archaeological sites such as Tiya and the Lower Awash and Omo valleys.'
+    - 'Intangible heritage recognised by UNESCO includes the Meskel celebration, the Gadaa system of the Oromo and Fichee-Chambalaalla, the Sidama New Year.'
+    - 'Heritage is threatened by neglect, theft and illegal trade of objects, unplanned building, climate and conflict. It is protected by laws, museums, documentation, community care and responsible tourism.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-9-1-se01
+    problem: 'Explain how an iqub helps its members.'
+    steps:
+      - 'Each member pays an agreed amount every week or month into a common pot.'
+      - 'Each time, one member takes the whole pot in turn, giving a lump sum for a business, school fees or a large purchase without a bank loan.'
+    answer: 'It is a rotating savings group that gives each member a lump sum in turn.'
+  - uid: g12-history-9-1-se02
+    problem: 'Why are Konso terraces an example of valuable indigenous knowledge?'
+    steps:
+      - 'Stone walls built along the slopes hold soil and slow rainwater on very steep land.'
+      - 'This lets people farm hillsides for generations without severe erosion; the landscape is a UNESCO World Heritage Site.'
+    answer: 'They conserve soil and water on steep land.'
+  - uid: g12-history-9-1-se03
+    problem: 'A student in Jigjiga notices that the Ethiopian year is 2018 while the Gregorian year is 2026 in March. How many years apart are the calendars at that time?'
+    steps:
+      - '$2026 - 2018 = 8$.'
+      - 'From January to early September the difference is 8 years; after Enkutatash it is 7.'
+    answer: '8 years'
+
+flashcards:
+  - {uid: g12-history-9-1-fc01, term: Indigenous knowledge, definition: 'Knowledge and skills developed by communities over generations.'}
+  - {uid: g12-history-9-1-fc02, term: Iddir, definition: 'Community association that supports members, especially at funerals.'}
+  - {uid: g12-history-9-1-fc03, term: Iqub, definition: 'Rotating savings group.'}
+  - {uid: g12-history-9-1-fc04, term: Debo, definition: 'Shared community labour, e.g. at harvest.'}
+  - {uid: g12-history-9-1-fc05, term: Pagume, definition: 'Short 13th month of the Ethiopian calendar (5 or 6 days).'}
+  - {uid: g12-history-9-1-fc06, term: Enkutatash, definition: 'Ethiopian New Year, on 11 (or 12) September.'}
+  - {uid: g12-history-9-1-fc07, term: Fasil Ghebbi, definition: 'Royal castle compound in Gondar; World Heritage Site.'}
+  - {uid: g12-history-9-1-fc08, term: Meskel, definition: 'Finding of the True Cross festival; UNESCO intangible heritage.'}
+  - {uid: g12-history-9-1-fc09, term: Fichee-Chambalaalla, definition: 'Sidama New Year festival; UNESCO intangible heritage.'}
+
+questions:
+  - uid: g12-history-9-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is indigenous knowledge?'
+    options:
+      A: 'Knowledge found only in foreign books'
+      B: 'Knowledge, skills and practices developed by communities over generations'
+      C: 'Knowledge from the internet only'
+      D: 'Rules made by colonial governments'
+    answer: B
+    explanation: 'It includes farming, medicine, building, social institutions and much more.'
+
+  - uid: g12-history-9-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is an iqub?'
+    options:
+      A: 'A rotating savings group'
+      B: 'A church building'
+      C: 'A type of bread'
+      D: 'A government bank'
+    answer: A
+    explanation: 'Members contribute regularly and take the whole pot in turn.'
+
+  - uid: g12-history-9-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the main purpose of an iddir?'
+    options:
+      A: 'To organise football matches'
+      B: 'To run schools'
+      C: 'To help members, especially with funeral costs and support'
+      D: 'To collect taxes for the government'
+    answer: C
+    explanation: 'Iddirs are community mutual-aid associations.'
+
+  - uid: g12-history-9-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Debo (or wonfel) is a traditional practice in which:'
+    options:
+      A: 'People save money together'
+      B: 'Elders judge disputes'
+      C: 'People celebrate the New Year'
+      D: 'Neighbours work together on one person''s farm or house, taking turns'
+    answer: D
+    explanation: 'Shared labour helps finish large tasks such as harvesting quickly.'
+
+  - uid: g12-history-9-1-q005
+    type: numeric
+    difficulty: 1
+    stem: 'How many days does each of the first twelve months of the Ethiopian calendar have?'
+    answer: {value: 30, tolerance: 0}
+    explanation: 'Twelve months of 30 days, then Pagume with 5 or 6 days.'
+
+  - uid: g12-history-9-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What is Pagume?'
+    options:
+      A: 'The short 13th month of the Ethiopian calendar'
+      B: 'A traditional dance'
+      C: 'A coffee ceremony'
+      D: 'An ancient city'
+    answer: A
+    explanation: 'Pagume has 5 days, or 6 in a leap year.'
+
+  - uid: g12-history-9-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'On which Gregorian date does Enkutatash (Ethiopian New Year) usually fall?'
+    options:
+      A: '1 January'
+      B: '7 January'
+      C: '27 September'
+      D: '11 September'
+    answer: D
+    explanation: 'It falls on 11 September, or 12 September in the year before a Gregorian leap year. 27 September is around Meskel.'
+
+  - uid: g12-history-9-1-q008
+    type: numeric
+    difficulty: 2
+    stem: 'In March, the Ethiopian year is 2018 while the Gregorian year is 2026. How many years apart are the two calendars at that time?'
+    answer: {value: 8, tolerance: 0}
+    explanation: '$2026 - 2018 = 8$. The gap is 8 years until Enkutatash in September, then 7.'
+
+  - uid: g12-history-9-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which people are famous for building stone terraces to farm steep hillsides, a landscape listed as a World Heritage Site?'
+    options:
+      A: 'The Afar'
+      B: 'The Konso'
+      C: 'The Somali'
+      D: 'The Nuer'
+    answer: B
+    explanation: 'The Konso Cultural Landscape was inscribed by UNESCO in 2011.'
+
+  - uid: g12-history-9-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which plant, often called "false banana", is a staple food for millions in southern and south-western Ethiopia?'
+    options:
+      A: 'Teff'
+      B: 'Coffee'
+      C: 'Enset'
+      D: 'Khat'
+    answer: C
+    explanation: 'Enset is drought-tolerant and stores food for long periods.'
+
+  - uid: g12-history-9-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which script is used for writing Amharic and Tigrinya?'
+    options:
+      A: 'Latin'
+      B: 'Arabic'
+      C: 'Greek'
+      D: 'Ge''ez (Fidel)'
+    answer: D
+    explanation: 'The Ge''ez script is one of Africa''s oldest writing systems still in use.'
+
+  - uid: g12-history-9-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Where are the famous rock-hewn churches carved from single blocks of rock?'
+    options:
+      A: 'Lalibela'
+      B: 'Harar'
+      C: 'Jigjiga'
+      D: 'Gambella'
+    answer: A
+    explanation: 'They were made in the 12th–13th centuries and are a World Heritage Site.'
+
+  - uid: g12-history-9-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which city is known for its castle compound, Fasil Ghebbi?'
+    options:
+      A: 'Aksum'
+      B: 'Gondar'
+      C: 'Harar'
+      D: 'Lalibela'
+    answer: B
+    explanation: 'Gondar was the royal capital from the 17th century.'
+
+  - uid: g12-history-9-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which historic walled city in eastern Ethiopia is a UNESCO World Heritage Site?'
+    options:
+      A: 'Gode'
+      B: 'Dire Dawa'
+      C: 'Harar Jugol'
+      D: 'Jigjiga'
+    answer: C
+    explanation: 'Harar Jugol was inscribed in 2006; it is a centre of Islamic learning and culture.'
+
+  - uid: g12-history-9-1-q015
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are recognised by UNESCO as intangible cultural heritage of Ethiopia? Choose all that apply.'
+    options:
+      A: 'The Meskel celebration'
+      B: 'The Gadaa system'
+      C: 'Fichee-Chambalaalla (Sidama New Year)'
+      D: 'The Berlin Conference'
+    answer: [A, B, C]
+    explanation: 'The Berlin Conference was a colonial meeting in Europe.'
+
+  - uid: g12-history-9-1-q016
+    type: true_false
+    difficulty: 1
+    stem: 'The obelisks (stelae) of Aksum are part of Ethiopia''s ancient heritage.'
+    answer: true
+    explanation: 'Aksum was the centre of a powerful ancient kingdom; its stelae are a World Heritage Site.'
+
+  - uid: g12-history-9-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Indigenous knowledge has no value today because modern science has replaced it.'
+    answer: false
+    explanation: 'Much of it, such as soil conservation and local weather knowledge, remains useful and can work alongside science.'
+
+  - uid: g12-history-9-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Which customary legal system do Somali elders use to settle disputes?'
+    options:
+      A: 'Xeer'
+      B: 'Iqub'
+      C: 'Debo'
+      D: 'Pagume'
+    answer: A
+    explanation: 'Xeer is an unwritten body of customary law applied by elders.'
+
+  - uid: g12-history-9-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is the best way to protect historical heritage?'
+    options:
+      A: 'Selling ancient objects to tourists'
+      B: 'Building roads through ancient sites'
+      C: 'Documenting sites, enforcing laws and involving local communities in their care'
+      D: 'Ignoring damage'
+    answer: C
+    explanation: 'Protection combines laws, records, museums and community participation.'
+
+  - uid: g12-history-9-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The short 13th month of the Ethiopian calendar is called ________.'
+    answer: [Pagume, Pagumen, Puagume]
+    explanation: 'It has 5 days, or 6 in a leap year.'
+
+  - uid: g12-history-9-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'The Ethiopian New Year, celebrated in September, is called ________.'
+    answer: [Enkutatash, Inkutatash, Enqutatash]
+    explanation: 'It marks the end of the rainy season.'
+
+  - uid: g12-history-9-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'Traditional medicine using local plants is one form of indigenous knowledge.'
+    answer: true
+    explanation: 'Healers have long used plants; some have been studied by modern medicine.'
+
+  - uid: g12-history-9-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each heritage site with its location.'
+    left:
+      L1: 'Rock-hewn churches'
+      L2: 'Fasil Ghebbi'
+      L3: 'Jugol walls'
+    right:
+      R1: 'Gondar'
+      R2: 'Harar'
+      R3: 'Lalibela'
+      R4: 'Gode'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Gode is a town in the Somali Region, not one of these sites.'
+
+  - uid: g12-history-9-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these heritage sites in order of when they were built, oldest first.'
+    items:
+      A: 'Castles of Fasil Ghebbi, Gondar'
+      B: 'Obelisks of Aksum'
+      C: 'Rock-hewn churches of Lalibela'
+    answer: [B, C, A]
+    explanation: 'Aksum''s stelae (about the 3rd–4th centuries), Lalibela (12th–13th centuries), Gondar''s castles (from the 17th century).'
+
+  - uid: g12-history-9-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'How do pastoralist communities use indigenous knowledge to cope with dry seasons?'
+    options:
+      A: 'By staying in one place all year'
+      B: 'By moving herds along known routes to grazing and water, guided by experience of weather signs'
+      C: 'By stopping keeping animals'
+      D: 'By planting only coffee'
+    answer: B
+    explanation: 'Mobility and local knowledge help herds survive variable rainfall.'
+
+  - uid: g12-history-9-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Why can indigenous conflict-resolution systems such as xeer and shimgilina be effective?'
+    options:
+      A: 'They use foreign judges.'
+      B: 'They are imposed by force.'
+      C: 'They are unknown to the community.'
+      D: 'They are based on respected elders and shared values, and aim to restore relationships.'
+    answer: D
+    explanation: 'The goal is reconciliation and compensation, accepted by the community.'
+
+  - uid: g12-history-9-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which festival in late September celebrates the finding of the True Cross, with a large bonfire called the Demera?'
+    options:
+      A: 'Meskel'
+      B: 'Enkutatash'
+      C: 'Timket'
+      D: 'Fichee-Chambalaalla'
+    answer: A
+    explanation: 'Meskel is celebrated on 17 Meskerem (27 September, or 28 in a leap year).'
+
+  - uid: g12-history-9-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a threat to historical heritage?'
+    options:
+      A: 'Careful restoration by experts'
+      B: 'Recording oral history'
+      C: 'Illegal digging and smuggling of ancient objects'
+      D: 'Teaching students about heritage'
+    answer: C
+    explanation: 'Looting removes objects from their context and from the country.'
+
+  - uid: g12-history-9-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about the Ethiopian calendar is correct?'
+    options:
+      A: 'It is exactly the same as the Gregorian calendar.'
+      B: 'It has 12 months of 31 days.'
+      C: 'It has 10 months.'
+      D: 'It has 13 months: twelve of 30 days and Pagume of 5 or 6 days.'
+    answer: D
+    explanation: 'That gives 365 or 366 days in a year.'
+
+  - uid: g12-history-9-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is responsible tourism important for heritage sites?'
+    options:
+      A: 'It brings income for conservation and local people while limiting damage to the sites.'
+      B: 'It allows visitors to take souvenirs from the sites.'
+      C: 'It requires closing the sites forever.'
+      D: 'It has no effect.'
+    answer: A
+    explanation: 'Well-managed tourism supports protection and local jobs.'

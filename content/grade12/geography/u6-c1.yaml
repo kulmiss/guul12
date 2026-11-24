@@ -1,0 +1,366 @@
+summary:
+  key_points:
+    - 'Sustainable development is "development that meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Report, 1987). It balances the economy, society and the environment.'
+    - 'The United Nations adopted 17 Sustainable Development Goals (SDGs) in 2015, to be reached by 2030; they include ending poverty, clean water, affordable clean energy, climate action and life on land.'
+    - 'Soil and water conservation: terraces, stone and soil bunds, check dams in gullies, contour ploughing, planting grass strips and trees, and area closures (exclosures) where grazing is stopped so vegetation can recover.'
+    - 'Afforestation is planting trees where there was no forest; reforestation is replanting where forest was lost.'
+    - 'Integrated watershed management treats a whole catchment together, linking upslope conservation with water supply, farming and livelihoods downstream.'
+    - 'Waste: reduce, reuse, recycle; separate waste; compost organic matter; use proper landfills instead of open dumping and burning.'
+    - 'An Environmental Impact Assessment (EIA) studies the likely effects of a project before it is approved so that harm can be avoided or reduced.'
+    - 'International agreements include the Ramsar Convention on wetlands (1971), the Convention on Biological Diversity (1992) and the UN Convention to Combat Desertification (1994). Community participation is key to making solutions last.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-geography-6-1-se01
+    problem: 'Explain how an area closure helps a degraded hillside recover.'
+    steps:
+      - 'Animals and tree cutting are kept out for several years by community agreement.'
+      - 'Grass and shrubs grow back, the soil is protected from erosion and more water soaks in, so springs below may flow again.'
+    answer: 'Vegetation regrows and protects soil and water.'
+  - uid: g12-geography-6-1-se02
+    problem: 'Classify: (a) planting trees on land that was never forest; (b) replanting a cleared forest.'
+    steps:
+      - '(a) New forest on land without trees is afforestation.'
+      - '(b) Restoring a lost forest is reforestation.'
+    answer: '(a) afforestation; (b) reforestation'
+  - uid: g12-geography-6-1-se03
+    problem: 'Why should a large road project have an Environmental Impact Assessment first?'
+    steps:
+      - 'The road may cut forests, cross wetlands, cause erosion or move people.'
+      - 'An EIA finds these effects early so the route or design can be changed, and plans made to reduce harm.'
+    answer: 'To identify and reduce harm before building.'
+
+flashcards:
+  - {uid: g12-geography-6-1-fc01, term: Sustainable development, definition: 'Meeting present needs without harming the ability of future generations to meet theirs.'}
+  - {uid: g12-geography-6-1-fc02, term: SDGs, definition: '17 UN Sustainable Development Goals adopted in 2015 for 2030.'}
+  - {uid: g12-geography-6-1-fc03, term: Area closure, definition: 'Land closed to grazing and cutting so vegetation can recover.'}
+  - {uid: g12-geography-6-1-fc04, term: Check dam, definition: 'Small barrier across a gully that slows water and traps soil.'}
+  - {uid: g12-geography-6-1-fc05, term: Afforestation, definition: 'Planting trees where there was no forest.'}
+  - {uid: g12-geography-6-1-fc06, term: Reforestation, definition: 'Replanting trees where forest was lost.'}
+  - {uid: g12-geography-6-1-fc07, term: Watershed management, definition: 'Managing a whole river catchment as one system.'}
+  - {uid: g12-geography-6-1-fc08, term: EIA, definition: 'Environmental Impact Assessment of a project before approval.'}
+  - {uid: g12-geography-6-1-fc09, term: Ramsar Convention, definition: '1971 agreement to protect wetlands.'}
+
+questions:
+  - uid: g12-geography-6-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which definition of sustainable development comes from the Brundtland Report?'
+    options:
+      A: 'Using all resources as quickly as possible'
+      B: 'Meeting present needs without compromising the ability of future generations to meet their own needs'
+      C: 'Stopping all economic growth'
+      D: 'Protecting only wild animals'
+    answer: B
+    explanation: 'This 1987 definition is the most widely used.'
+
+  - uid: g12-geography-6-1-q002
+    type: numeric
+    difficulty: 1
+    stem: 'How many Sustainable Development Goals (SDGs) did the United Nations adopt in 2015?'
+    answer: {value: 17, tolerance: 0}
+    explanation: 'There are 17 goals, with targets for 2030.'
+
+  - uid: g12-geography-6-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'By which year are the Sustainable Development Goals meant to be achieved?'
+    options:
+      A: '2020'
+      B: '2050'
+      C: '2100'
+      D: '2030'
+    answer: D
+    explanation: 'The SDGs are part of the "2030 Agenda for Sustainable Development".'
+
+  - uid: g12-geography-6-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'What is an "area closure" (exclosure) in Ethiopian land management?'
+    options:
+      A: 'Land closed to grazing and tree cutting so vegetation can recover'
+      B: 'A fenced cattle market'
+      C: 'A city park with a fee'
+      D: 'A closed road'
+    answer: A
+    explanation: 'Communities agree to keep animals and cutting out for several years.'
+
+  - uid: g12-geography-6-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main purpose of a check dam built across a gully?'
+    options:
+      A: 'To store drinking water for a city'
+      B: 'To generate electricity'
+      C: 'To slow running water and trap soil, so the gully stops growing'
+      D: 'To catch fish'
+    answer: C
+    explanation: 'Small barriers of stone or wood reduce erosion and let sediment build up.'
+
+  - uid: g12-geography-6-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Planting trees on land that has never been forest is called:'
+    options:
+      A: 'Reforestation'
+      B: 'Afforestation'
+      C: 'Deforestation'
+      D: 'Desertification'
+    answer: B
+    explanation: 'Reforestation is replanting where forest once was.'
+
+  - uid: g12-geography-6-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is ploughing along the contour (across the slope) better than ploughing up and down the slope?'
+    options:
+      A: 'It is faster.'
+      B: 'It uses less seed.'
+      C: 'It makes the slope steeper.'
+      D: 'The furrows slow run-off and reduce soil erosion.'
+    answer: D
+    explanation: 'Furrows across the slope act like small barriers to water.'
+
+  - uid: g12-geography-6-1-q008
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are soil and water conservation methods? Choose all that apply.'
+    options:
+      A: 'Terraces'
+      B: 'Stone bunds'
+      C: 'Grass strips along contours'
+      D: 'Overgrazing hillsides'
+    answer: [A, B, C]
+    explanation: 'Overgrazing removes vegetation and increases erosion.'
+
+  - uid: g12-geography-6-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What does an Environmental Impact Assessment (EIA) do?'
+    options:
+      A: 'Studies the likely environmental effects of a project before it is approved'
+      B: 'Measures earthquakes'
+      C: 'Counts the population'
+      D: 'Sets school exam marks'
+    answer: A
+    explanation: 'It helps decision-makers avoid or reduce harm.'
+
+  - uid: g12-geography-6-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which international agreement protects wetlands?'
+    options:
+      A: 'The Kyoto Protocol'
+      B: 'The Paris Agreement'
+      C: 'The Ramsar Convention'
+      D: 'The Montreal Protocol'
+    answer: C
+    explanation: 'The Ramsar Convention (1971) is named after the city in Iran where it was signed.'
+
+  - uid: g12-geography-6-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'The UN convention adopted in 1994 to fight land degradation in dry areas is the Convention to Combat:'
+    options:
+      A: 'Malaria'
+      B: 'Ozone loss'
+      C: 'Overfishing'
+      D: 'Desertification'
+    answer: D
+    explanation: 'The UNCCD addresses land degradation in drylands.'
+
+  - uid: g12-geography-6-1-q012
+    type: true_false
+    difficulty: 1
+    stem: 'Sustainable development considers the economy, society and the environment together.'
+    answer: true
+    explanation: 'These are often called the three pillars of sustainability.'
+
+  - uid: g12-geography-6-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which order of the waste hierarchy is best for the environment?'
+    options:
+      A: 'Recycle, then reuse, then reduce'
+      B: 'Reduce, then reuse, then recycle'
+      C: 'Burn everything first'
+      D: 'Dump, then bury, then burn'
+    answer: B
+    explanation: 'Making less waste is best; reusing comes next; recycling uses energy but saves materials.'
+
+  - uid: g12-geography-6-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is composting kitchen and farm waste useful?'
+    options:
+      A: 'It turns organic waste into natural fertiliser for soil.'
+      B: 'It produces plastic.'
+      C: 'It pollutes rivers.'
+      D: 'It increases the waste going to landfill.'
+    answer: A
+    explanation: 'Compost returns nutrients to soil and reduces waste.'
+
+  - uid: g12-geography-6-1-q015
+    type: single_choice
+    difficulty: 3
+    stem: 'Why does integrated watershed management treat a whole river catchment together?'
+    options:
+      A: 'Because rivers have no effect on farms'
+      B: 'Because only the river mouth matters'
+      C: 'Because what happens upslope, such as erosion, affects water and land downstream'
+      D: 'Because watersheds never change'
+    answer: C
+    explanation: 'Upslope land use changes run-off, sediment and water supply for people further down.'
+
+  - uid: g12-geography-6-1-q016
+    type: true_false
+    difficulty: 2
+    stem: 'Conservation projects last longer when local communities help plan and manage them.'
+    answer: true
+    explanation: 'People who benefit and have a say are more likely to maintain the work.'
+
+  - uid: g12-geography-6-1-q017
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the Brundtland Report, with its famous definition of sustainable development, published?'
+    answer: {value: 1987, tolerance: 0}
+    explanation: 'The report "Our Common Future" was published in 1987.'
+
+  - uid: g12-geography-6-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Which energy source is renewable?'
+    options:
+      A: 'Coal'
+      B: 'Diesel'
+      C: 'Natural gas'
+      D: 'Solar power'
+    answer: D
+    explanation: 'Sunlight is not used up; coal, diesel and gas are fossil fuels.'
+
+  - uid: g12-geography-6-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'Replanting trees where a forest has been cut down is called ________.'
+    answer: [reforestation, re-forestation, reafforestation]
+    explanation: 'Afforestation is planting where there was no forest before.'
+
+  - uid: g12-geography-6-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete the waste hierarchy with ONE word: reduce → ________ → recycle.'
+    answer: [reuse]
+    explanation: 'Reduce, reuse, recycle.'
+
+  - uid: g12-geography-6-1-q021
+    type: true_false
+    difficulty: 1
+    stem: 'Burning plastic waste in the open is a safe way to get rid of it.'
+    answer: false
+    explanation: 'It releases toxic smoke that harms health and the environment.'
+
+  - uid: g12-geography-6-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each agreement with what it protects or addresses.'
+    left:
+      L1: 'Ramsar Convention'
+      L2: 'Convention on Biological Diversity'
+      L3: 'UN Convention to Combat Desertification'
+    right:
+      R1: 'Variety of living things'
+      R2: 'Land degradation in drylands'
+      R3: 'Wetlands'
+      R4: 'Outer space'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'None of these agreements deals with outer space.'
+
+  - uid: g12-geography-6-1-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Put these steps for restoring a degraded hillside in a sensible order.'
+    items:
+      A: 'Build terraces and check dams, and plant grasses and trees.'
+      B: 'Agree with the community to close the area to grazing.'
+      C: 'Monitor recovery and share benefits such as cut grass.'
+    answer: [B, A, C]
+    explanation: 'Community agreement comes first so the work is protected; then the physical and planting work; then monitoring and benefit sharing.'
+
+  - uid: g12-geography-6-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which SDG is about clean water and sanitation?'
+    options:
+      A: 'Goal 1'
+      B: 'Goal 13'
+      C: 'Goal 6'
+      D: 'Goal 17'
+    answer: C
+    explanation: 'Goal 6 is clean water and sanitation; Goal 1 is no poverty, Goal 13 climate action, Goal 17 partnerships.'
+
+  - uid: g12-geography-6-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is the best example of a sustainable use of a forest?'
+    options:
+      A: 'Clearing the whole forest at once for timber'
+      B: 'Burning it for farmland every year'
+      C: 'Harvesting some trees selectively and replanting'
+      D: 'Letting cattle graze it bare'
+    answer: C
+    explanation: 'Selective harvesting with replanting keeps the forest for the future.'
+
+  - uid: g12-geography-6-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'A town dumps untreated sewage into a lake used for fishing. Which solution best addresses the cause?'
+    options:
+      A: 'Building a sewage treatment plant'
+      B: 'Catching more fish quickly'
+      C: 'Moving the fishermen away'
+      D: 'Adding colour to the water'
+    answer: A
+    explanation: 'Treating sewage stops the pollution at its source.'
+
+  - uid: g12-geography-6-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Why are fuel-efficient stoves promoted in rural Ethiopia?'
+    options:
+      A: 'They use more wood.'
+      B: 'They make cooking slower.'
+      C: 'They create more smoke indoors.'
+      D: 'They use less firewood or charcoal and reduce indoor smoke.'
+    answer: D
+    explanation: 'Less fuel means less tree cutting, and less smoke improves health.'
+
+  - uid: g12-geography-6-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which convention, adopted in 1992, aims to conserve biodiversity?'
+    options:
+      A: 'The Convention on Biological Diversity'
+      B: 'The Ramsar Convention'
+      C: 'The Geneva Convention'
+      D: 'The Vienna Convention'
+    answer: A
+    explanation: 'The CBD was opened for signature at the 1992 Earth Summit in Rio de Janeiro.'
+
+  - uid: g12-geography-6-1-q029
+    type: true_false
+    difficulty: 2
+    stem: 'Area closures can help dried-up springs below a hillside to flow again.'
+    answer: true
+    explanation: 'Recovered vegetation lets more rainwater soak into the ground and recharge groundwater.'
+
+  - uid: g12-geography-6-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which action contributes most directly to SDG 13, "Climate action"?'
+    options:
+      A: 'Building more coal power stations'
+      B: 'Expanding renewable energy and protecting forests'
+      C: 'Clearing wetlands'
+      D: 'Increasing open burning of waste'
+    answer: B
+    explanation: 'Renewables cut emissions and forests absorb carbon dioxide.'

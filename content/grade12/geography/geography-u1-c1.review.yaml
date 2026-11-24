@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-1-1-q001: {hash: 'baa2057f3cab17ac39ea7be8aa87e89b5ace3e866a7bbf0fa5eff90c69f83373', answer: B}
+  g12-geography-1-1-q002: {hash: '44dcbf4f9d1d1d28f2362f0608b551f2c55eddf1850c9a119df911d05d2327d0', answer: A, note: 'Minor wording: Wegener (1912) gave the first full theory, but others (Ortelius 1596, Snider-Pellegrini 1858, F. B. Taylor 1908-1910) suggested drift earlier. Safer stem: "Who developed the theory of continental drift?" or "first fully proposed".'}
+  g12-geography-1-1-q003: {hash: 'b5121453f47d35649dd1dded31bd7673e8e9dcc8235c1e1678124bd8fde27d06', answer: C}
+  g12-geography-1-1-q004: {hash: '79e0668693e45075ab4d03420d7b3057e1350b6d4ed9d8dd5d803016b11aaf90', answer: [A, B, C]}
+  g12-geography-1-1-q005: {hash: '1b25a8473566e26acd8d248b30e0dde4ddef15cc490c225610af9f5bde4b7b25', answer: D, note: 'Out-of-date framing: modern geophysics sees slab pull (and ridge push) as the main plate-driving forces, with mantle convection as the overall system. D is the only possible option and matches the school syllabus, but consider wording such as "Which process in the mantle is linked to plate movement?" or adding "according to the textbook".'}
+  g12-geography-1-1-q006: {hash: '6cb8bc47d832a20a4a24b1aced612e401d1d0174fb1b27f3cb07ff95ddc9eef2', answer: A}
+  g12-geography-1-1-q007: {hash: '4a6fe8a1c764b7edef58f69aae52d1b1a204292fb256924eb3378e5c530ca492', answer: C}
+  g12-geography-1-1-q008: {hash: '181a2afa5ef5fe4cedac59d66f0d6fd3a91da4e4a64c285b4c44f2580f7d51ca', answer: B}
+  g12-geography-1-1-q009: {hash: 'a63fd0b213d8b7a32fe9a0111ee5b294cdab33877b172cbb0715ce53519f5a2d', answer: D}
+  g12-geography-1-1-q010: {hash: 'b82dc7e0ec5e5443f911754579b5efa2b7a471d8df2db16e9baec3502892cdbe', answer: true}
+  g12-geography-1-1-q011: {hash: 'fe083f92aa1b0579562684973dd4e4241a8ad56c9795ff5ac1f2a063f11b4650', answer: A}
+  g12-geography-1-1-q012: {hash: '3fdd1e3798687cf9528b8bb03bcef1e6a758c0b88a812f2128834096557cfa62', answer: C}
+  g12-geography-1-1-q013: {hash: 'f8c72263af07cec54cfd078077d64a128e4b7155c2a88852d2949e873ae469b5', answer: 5}
+  g12-geography-1-1-q014: {hash: 'd0c38eded74d19cbfb63cb146967586b72e8bb43dafac1cf1d223439b29c0ae6', answer: 20}
+  g12-geography-1-1-q015: {hash: '99c093e204d80953f0a345092bd0bb5afb09a8c7f1aa8f6aa71e579083e215e8', answer: A}
+  g12-geography-1-1-q016: {hash: '5850e57dc85c83087781f737256d16dbfd8428ea45ccc9b9ee8898420e382cef', answer: D}
+  g12-geography-1-1-q017: {hash: 'd968a2f3c0d42454f0d6b44c1ff417abf0d5af3ae8290a9760d4594c4b458311', answer: B}
+  g12-geography-1-1-q018: {hash: '58b45371761b5e4ad1e4ab31ac39cc4f37e8b4d0ff7da24209723ac2c966f7bc', answer: true}
+  g12-geography-1-1-q019: {hash: '1df1d72a4d4e9c54678e71e21d53c526c6db5e41735c83a317cda845d59c5e7c', answer: A}
+  g12-geography-1-1-q020: {hash: '1f681e7bc7eb7be2b9d070cb679b2597f12d5f86c28bdb5e2c38bc9b16360df2', answer: C}
+  g12-geography-1-1-q021: {hash: 'f0f50cfe23bcd7a6d525d9de54bf4638bf71f6e749041d4aac0348161295bc71', answer: 'subduction'}
+  g12-geography-1-1-q022: {hash: '32f0cd2dde29ec951398d8b49e0b154012468737ff3152e5225ddc1ed82d1d2f', answer: 'lithosphere'}
+  g12-geography-1-1-q023: {hash: '94debd46f85a419d8236e028854ab5ce56a10f5adb2172b8477e10d1822bbd5c', answer: false}
+  g12-geography-1-1-q024: {hash: '14b707a3b79b32bc388422887652c2713aae8ee35e24955313b3c3365fbef37a', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-geography-1-1-q025: {hash: 'ecce7a38beb0fe36f76260710c51254428e7ad0684f7e103dc95de60e8eada1a', answer: [B, D, A, C]}
+  g12-geography-1-1-q026: {hash: '8163922e58244dd9f9803ae204d3163403de6f8c126578b75cbb06d291e9d4d2', answer: D}
+  g12-geography-1-1-q027: {hash: '91875d4818d7f7808671b462ce0c250c70145218628cd31f79cf75363d5d600e', answer: B}
+  g12-geography-1-1-q028: {hash: 'e1e315ed39ec8f6bec346f9386bb855e84fafa0fb5c175f7c0f11a1334d9473a', answer: C, note: 'Minor: distractor B "Surface waves on water" is not a seismic wave type and reads oddly; replace it with a clean distractor that is clearly not the answer (avoid "Love waves", since Love waves also cannot exist in a liquid and would make a second correct option).'}
+  g12-geography-1-1-q029: {hash: '51a272081371d7658366f69593a1ca001c2b48bdb921f52eef2d5343e99ef20b', answer: D}
+  g12-geography-1-1-q030: {hash: '1380aabe32cf4cd0b42b6f53de35348d5a313c0302e04d22385738a1a75ac61f', answer: A}

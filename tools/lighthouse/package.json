@@ -1,0 +1,14 @@
+{
+  "name": "guul12-landing-lighthouse",
+  "private": true,
+  "description": "Runs Lighthouse on every landing page and fails below the agreed scores.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "check": "node check.mjs"
+  },
+  "dependencies": {
+    "chrome-launcher": "1.2.3",
+    "lighthouse": "13.6.0"
+  }
+}

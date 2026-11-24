@@ -1,0 +1,374 @@
+summary:
+  key_points:
+    - 'Crude birth rate (CBR) and crude death rate (CDR) are counted per 1 000 people per year. Rate of natural increase (%) $= \frac{\text{CBR} - \text{CDR}}{10}$. Doubling time is roughly $\frac{70}{\text{growth rate in \%}}$ years.'
+    - 'Population density $= \frac{\text{population}}{\text{area}}$ (people per km²). Dependency ratio $= \frac{\text{people aged 0–14 and 65+}}{\text{people aged 15–64}} \times 100$.'
+    - 'A population pyramid with a wide base shows many young people and high birth rates (typical of Ethiopia); a narrow base shows low birth rates and an ageing population (typical of Japan).'
+    - 'The demographic transition model: Stage 1 high birth and death rates; Stage 2 death rates fall (better food, health, clean water) so population grows fast; Stage 3 birth rates fall; Stage 4 both are low; some countries reach Stage 5, where birth rates fall below death rates.'
+    - 'Malthus (1798) argued that population grows faster than food supply, leading to famine. Boserup (1965) argued that population pressure pushes people to invent better farming methods.'
+    - 'Ethiopia is the second most populous country in Africa (after Nigeria). Its National Population Policy was adopted in 1993 to bring growth into balance with development through family planning, health care, girls'' education and later marriage.'
+    - 'Rapid growth can increase pressure on land, forests and water: deforestation, soil erosion, overgrazing and crowded cities. Good policies and new technology can reduce this pressure.'
+  formulas:
+    - label: Natural increase
+      latex: '\text{NIR}\,(\%) = \frac{\text{CBR} - \text{CDR}}{10}'
+    - label: Doubling time
+      latex: 't_{double} \approx \frac{70}{r}'
+    - label: Population density
+      latex: '\text{density} = \frac{\text{population}}{\text{area}}'
+    - label: Dependency ratio
+      latex: '\text{DR} = \frac{P_{0\text{–}14} + P_{65+}}{P_{15\text{–}64}} \times 100'
+
+solved_exercises:
+  - uid: g12-geography-4-1-se01
+    problem: 'A country has a crude birth rate of 34 and a crude death rate of 6 per 1 000. Find the natural increase rate and the approximate doubling time.'
+    steps:
+      - 'NIR $= \frac{34 - 6}{10} = 2.8\%$.'
+      - 'Doubling time $\approx \frac{70}{2.8} = 25$ years.'
+    answer: '2.8%; about 25 years'
+  - uid: g12-geography-4-1-se02
+    problem: 'A town has 6 000 children aged 0–14, 1 000 people aged 65+, and 10 000 people aged 15–64. Find the dependency ratio.'
+    steps:
+      - 'Dependants $= 6000 + 1000 = 7000$.'
+      - 'DR $= \frac{7000}{10\,000} \times 100 = 70$.'
+    answer: '70'
+  - uid: g12-geography-4-1-se03
+    problem: 'Why does educating girls tend to lower birth rates?'
+    steps:
+      - 'Educated women tend to marry later, know more about health and family planning, and have more job opportunities.'
+      - 'They often choose to have fewer children, and their children are more likely to survive.'
+    answer: 'Later marriage, better health knowledge and more choices'
+
+flashcards:
+  - {uid: g12-geography-4-1-fc01, term: Crude birth rate, definition: 'Live births per 1 000 people per year.'}
+  - {uid: g12-geography-4-1-fc02, term: Natural increase, definition: '(CBR − CDR) ÷ 10, as a percentage.'}
+  - {uid: g12-geography-4-1-fc03, term: Doubling time, definition: 'About 70 ÷ growth rate (%).'}
+  - {uid: g12-geography-4-1-fc04, term: Dependency ratio, definition: 'Dependants (0–14 and 65+) per 100 working-age people.'}
+  - {uid: g12-geography-4-1-fc05, term: Population pyramid, definition: 'Bar chart of a population by age and sex.'}
+  - {uid: g12-geography-4-1-fc06, term: Demographic transition, definition: 'Model of falling death rates, then falling birth rates, as countries develop.'}
+  - {uid: g12-geography-4-1-fc07, term: Malthus, definition: 'Said population would outgrow food supply.'}
+  - {uid: g12-geography-4-1-fc08, term: Boserup, definition: 'Said population pressure drives farming innovation.'}
+  - {uid: g12-geography-4-1-fc09, term: National Population Policy, definition: 'Ethiopia''s population policy, adopted in 1993.'}
+
+questions:
+  - uid: g12-geography-4-1-q001
+    type: numeric
+    difficulty: 2
+    stem: 'A country has a crude birth rate of 35 and a crude death rate of 10 per 1 000 people. What is its rate of natural increase, in per cent?'
+    answer: {value: 2.5, tolerance: 0, unit: '%'}
+    explanation: '$\frac{35 - 10}{10} = 2.5\%$.'
+
+  - uid: g12-geography-4-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'A population grows at 2% per year. About how long will it take to double?'
+    options:
+      A: '20 years'
+      B: '35 years'
+      C: '50 years'
+      D: '140 years'
+    answer: B
+    explanation: 'Doubling time $\approx \frac{70}{2} = 35$ years.'
+
+  - uid: g12-geography-4-1-q003
+    type: numeric
+    difficulty: 1
+    stem: 'A district has 50 000 people living in an area of 250 km². What is its population density, in people per km²?'
+    answer: {value: 200, tolerance: 0, unit: people/km²}
+    explanation: '$\frac{50\,000}{250} = 200$ people per km².'
+
+  - uid: g12-geography-4-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'A town has 4 000 people aged 0–14, 1 000 aged 65 and over, and 10 000 aged 15–64. What is the dependency ratio (dependants per 100 people aged 15–64)?'
+    options:
+      A: '40'
+      B: '100'
+      C: '50'
+      D: '10'
+    answer: C
+    explanation: '$\frac{4000 + 1000}{10\,000} \times 100 = 50$.'
+
+  - uid: g12-geography-4-1-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'A population pyramid with a very wide base and a narrow top shows:'
+    options:
+      A: 'Many young people and a high birth rate'
+      B: 'An ageing population'
+      C: 'Equal numbers at every age'
+      D: 'Very low birth rates'
+    answer: A
+    explanation: 'The wide base means many children, typical of countries with high fertility.'
+
+  - uid: g12-geography-4-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'In Stage 2 of the demographic transition model, what happens?'
+    options:
+      A: 'Birth and death rates are both low.'
+      B: 'Birth rates fall below death rates.'
+      C: 'Death rates fall but birth rates stay high, so population grows quickly.'
+      D: 'Both rates rise together.'
+    answer: C
+    explanation: 'Better food, health care and clean water reduce deaths before birth rates fall.'
+
+  - uid: g12-geography-4-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country has the largest population in Africa?'
+    options:
+      A: 'Ethiopia'
+      B: 'Egypt'
+      C: 'South Africa'
+      D: 'Nigeria'
+    answer: D
+    explanation: 'Nigeria is first and Ethiopia second.'
+
+  - uid: g12-geography-4-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did Ethiopia adopt its National Population Policy?'
+    options:
+      A: '1993'
+      B: '1974'
+      C: '2005'
+      D: '2015'
+    answer: A
+    explanation: 'The policy was adopted in 1993.'
+
+  - uid: g12-geography-4-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Thomas Malthus argued that:'
+    options:
+      A: 'Population pressure always leads to new inventions.'
+      B: 'Population would grow faster than food supply, leading to famine and disease.'
+      C: 'Birth rates would fall to zero.'
+      D: 'Food supply grows faster than population.'
+    answer: B
+    explanation: 'Malthus (1798) said population grows geometrically and food arithmetically.'
+
+  - uid: g12-geography-4-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Ester Boserup''s view differs from Malthus''s because she argued that:'
+    options:
+      A: 'Famine is unavoidable.'
+      B: 'Population never grows.'
+      C: 'Growing population pressure encourages people to find better ways of farming.'
+      D: 'Technology makes no difference.'
+    answer: C
+    explanation: 'She believed "necessity is the mother of invention" in agriculture.'
+
+  - uid: g12-geography-4-1-q011
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which measures are part of Ethiopia''s population policy approach? Choose all that apply.'
+    options:
+      A: 'Wider access to family planning services'
+      B: 'Encouraging girls'' education'
+      C: 'Raising the age at first marriage'
+      D: 'Banning all children in cities'
+    answer: [A, B, C]
+    explanation: 'The policy works through voluntary services, education and health, not bans.'
+
+  - uid: g12-geography-4-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does falling child mortality often lead, after some years, to lower birth rates?'
+    options:
+      A: 'Parents expect their children to survive, so they may choose to have fewer.'
+      B: 'More children die.'
+      C: 'Hospitals ban births.'
+      D: 'It increases the number of births.'
+    answer: A
+    explanation: 'When survival is more certain, families need fewer births to reach the family size they want.'
+
+  - uid: g12-geography-4-1-q013
+    type: true_false
+    difficulty: 1
+    stem: 'A crude death rate of 8 means 8 deaths per 1 000 people per year.'
+    answer: true
+    explanation: 'Crude rates are measured per 1 000 people.'
+
+  - uid: g12-geography-4-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which environmental problem is most directly linked to cutting trees for farmland and fuel as population grows?'
+    options:
+      A: 'Earthquakes'
+      B: 'Volcanic eruptions'
+      C: 'Deforestation and soil erosion'
+      D: 'Ocean tides'
+    answer: C
+    explanation: 'Clearing trees removes the cover that holds soil in place.'
+
+  - uid: g12-geography-4-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'A country with a narrow base and a wide top on its population pyramid most likely has:'
+    options:
+      A: 'A high birth rate'
+      B: 'A very young population'
+      C: 'A fast-growing population'
+      D: 'An ageing population with low birth rates'
+    answer: D
+    explanation: 'Few young people and many older people show low fertility and long life expectancy.'
+
+  - uid: g12-geography-4-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'Country X has a birth rate of 12 and a death rate of 14 per 1 000. In the five-stage demographic transition model, which stage is it most likely in?'
+    options:
+      A: 'Stage 1'
+      B: 'Stage 5'
+      C: 'Stage 2'
+      D: 'Stage 3'
+    answer: B
+    explanation: 'Births below deaths means natural decrease, which describes Stage 5.'
+
+  - uid: g12-geography-4-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'A high dependency ratio means there are many dependants for each person of working age.'
+    answer: true
+    explanation: 'It puts more pressure on workers to support children and older people.'
+
+  - uid: g12-geography-4-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'Population growth always destroys the environment, whatever policies or technologies are used.'
+    answer: false
+    explanation: 'Good land management, terracing, renewable energy and planning can reduce environmental damage.'
+
+  - uid: g12-geography-4-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'The number of people per square kilometre is called population ________.'
+    answer: [density]
+    explanation: 'Density = population ÷ area.'
+
+  - uid: g12-geography-4-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'The model that shows how birth and death rates change as a country develops is called the demographic ________ model.'
+    answer: [transition]
+    explanation: 'It has four or five stages.'
+
+  - uid: g12-geography-4-1-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each stage of the demographic transition with its description.'
+    left:
+      L1: 'Stage 1'
+      L2: 'Stage 3'
+      L3: 'Stage 4'
+    right:
+      R1: 'Both birth and death rates are low.'
+      R2: 'Birth rates fall; growth starts to slow.'
+      R3: 'Both birth and death rates are high.'
+      R4: 'Death rates rise sharply because of better health care.'
+    answer: {L1: R3, L2: R2, L3: R1}
+    explanation: 'Better health care lowers death rates; it does not raise them.'
+
+  - uid: g12-geography-4-1-q022
+    type: ordering
+    difficulty: 2
+    stem: 'Put these population growth rates in order from the shortest doubling time to the longest.'
+    items:
+      A: '1%'
+      B: '3.5%'
+      C: '2%'
+      D: '0.5%'
+    answer: [B, C, A, D]
+    explanation: 'Doubling time ≈ 70 ÷ rate: 20, 35, 70 and 140 years.'
+
+  - uid: g12-geography-4-1-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'The growth in the share of a country''s people who live in towns and cities is called:'
+    options:
+      A: 'Deforestation'
+      B: 'Urbanisation'
+      C: 'Desertification'
+      D: 'Emigration only'
+    answer: B
+    explanation: 'Urbanisation is mainly caused by migration from rural areas and by natural increase in towns.'
+
+  - uid: g12-geography-4-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a common problem in fast-growing cities?'
+    options:
+      A: 'Too much empty land'
+      B: 'Too few people'
+      C: 'No demand for jobs'
+      D: 'Shortage of housing, water and services'
+    answer: D
+    explanation: 'Infrastructure often cannot keep up with rapid growth, leading to crowded informal settlements.'
+
+  - uid: g12-geography-4-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Why can a country''s population keep growing for many years even after families start having fewer children?'
+    options:
+      A: 'Death rates always rise.'
+      B: 'People live shorter lives.'
+      C: 'Immigration always stops.'
+      D: 'A large young population is still entering child-bearing age (population momentum).'
+    answer: D
+    explanation: 'Even with fewer children per woman, many young adults having children keeps total births high for a time.'
+
+  - uid: g12-geography-4-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policy best helps reduce pressure on land from population growth while improving food supply?'
+    options:
+      A: 'Improving farming methods, irrigation and soil conservation'
+      B: 'Cutting all forests for farmland'
+      C: 'Banning all farming'
+      D: 'Overgrazing pastures'
+    answer: A
+    explanation: 'Higher yields per hectare and soil protection reduce the need to clear new land.'
+
+  - uid: g12-geography-4-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which factor most directly lowers death rates in Stage 2 of the demographic transition?'
+    options:
+      A: 'More wars'
+      B: 'Better health care, food supply and clean water'
+      C: 'More factories'
+      D: 'Fewer schools'
+    answer: B
+    explanation: 'Improvements in medicine, nutrition and sanitation reduce deaths, especially of children.'
+
+  - uid: g12-geography-4-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country ran a strict "one-child" policy from about 1980 to 2015?'
+    options:
+      A: 'India'
+      B: 'Japan'
+      C: 'China'
+      D: 'Brazil'
+    answer: C
+    explanation: 'China''s policy limited most urban couples to one child; it was replaced by a two-child policy in 2016.'
+
+  - uid: g12-geography-4-1-q029
+    type: true_false
+    difficulty: 1
+    stem: 'Ethiopia has a young population, with a large share of people under 15.'
+    answer: true
+    explanation: 'High past birth rates give a wide-based population pyramid.'
+
+  - uid: g12-geography-4-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do population censuses matter for planning?'
+    options:
+      A: 'They tell governments how many people live where and of what age, to plan schools, clinics and roads.'
+      B: 'They predict the weather.'
+      C: 'They measure earthquakes.'
+      D: 'They count only animals.'
+    answer: A
+    explanation: 'Census data guide decisions on services and resources.'

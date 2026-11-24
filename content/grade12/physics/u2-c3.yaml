@@ -1,0 +1,383 @@
+summary:
+  key_points:
+    - 'Newton''s law of universal gravitation: every two masses attract with $F = \frac{G m_1 m_2}{r^2}$, where $G \approx 6.67 \times 10^{-11}$ N·m²/kg².'
+    - 'The force is an inverse-square law: doubling the distance makes it 4 times smaller. The forces on the two bodies are equal and opposite (Newton''s third law).'
+    - 'Gravitational field strength at the surface of a planet is $g = \frac{GM}{R^2}$. At a distance $r$ from the centre (outside the planet), $g$ falls as $\frac{1}{r^2}$.'
+    - 'Mass is the amount of matter and is the same everywhere; weight $W = mg$ depends on where you are.'
+    - 'Kepler''s laws: (1) planets move in ellipses with the Sun at one focus; (2) the line from the Sun to a planet sweeps equal areas in equal times, so a planet moves fastest when nearest the Sun; (3) $T^2 \propto r^3$.'
+    - 'For a circular orbit, gravity provides the centripetal force: $\frac{GMm}{r^2} = \frac{mv^2}{r}$, so $v = \sqrt{\frac{GM}{r}}$. Higher orbits are slower and take longer.'
+    - 'Astronauts in orbit feel weightless because they and their spacecraft are in free fall together, not because gravity is absent.'
+    - 'Escape velocity from the surface is $v_e = \sqrt{\frac{2GM}{R}}$.'
+  formulas:
+    - label: Law of universal gravitation
+      latex: 'F = \frac{G m_1 m_2}{r^2}'
+    - label: Surface gravity
+      latex: 'g = \frac{GM}{R^2}'
+    - label: Orbital speed
+      latex: 'v = \sqrt{\frac{GM}{r}}'
+    - label: Kepler's third law
+      latex: '\frac{T^2}{r^3} = \frac{4\pi^2}{GM}'
+    - label: Escape velocity
+      latex: 'v_e = \sqrt{\frac{2GM}{R}}'
+
+solved_exercises:
+  - uid: g12-physics-2-3-se01
+    problem: 'The gravitational force between two asteroids is 900 N. What is it when their distance is tripled?'
+    steps:
+      - 'The force is proportional to $\frac{1}{r^2}$.'
+      - 'Tripling $r$ divides the force by $3^2 = 9$.'
+      - '$\frac{900}{9} = 100$ N.'
+    answer: '100 N'
+  - uid: g12-physics-2-3-se02
+    problem: 'A planet has 3 times the mass of the Earth and 3 times its radius. Find $g$ on its surface if $g_{\text{Earth}} = 10$ m/s².'
+    steps:
+      - '$g = \frac{GM}{R^2}$, so $\frac{g_P}{g_E} = \frac{M_P}{M_E} \times \left(\frac{R_E}{R_P}\right)^2 = 3 \times \frac{1}{9}$.'
+      - '$g_P = \frac{1}{3} \times 10 \approx 3.3$ m/s².'
+    answer: 'About 3.3 m/s²'
+  - uid: g12-physics-2-3-se03
+    problem: 'A moon''s orbit has 9 times the radius of another moon of the same planet. How many times longer is its period?'
+    steps:
+      - 'Kepler''s third law: $T^2 \propto r^3$, so $T \propto r^{3/2}$.'
+      - '$9^{3/2} = (\sqrt{9})^3 = 3^3 = 27$.'
+    answer: '27 times longer'
+
+flashcards:
+  - {uid: g12-physics-2-3-fc01, term: Universal gravitation, definition: 'Every two masses attract: $F = \frac{Gm_1m_2}{r^2}$.'}
+  - {uid: g12-physics-2-3-fc02, term: Gravitational constant G, definition: '$6.67 \times 10^{-11}$ N·m²/kg², the same everywhere; first measured by Cavendish.'}
+  - {uid: g12-physics-2-3-fc03, term: Inverse-square law, definition: 'A quantity proportional to $\frac{1}{r^2}$: double the distance, quarter the effect.'}
+  - {uid: g12-physics-2-3-fc04, term: Gravitational field strength, definition: 'Force per unit mass, $g$; about 9.8 N/kg at the Earth''s surface.'}
+  - {uid: g12-physics-2-3-fc05, term: Kepler's first law, definition: 'Planets orbit in ellipses with the Sun at one focus.'}
+  - {uid: g12-physics-2-3-fc06, term: Kepler's second law, definition: 'Equal areas are swept in equal times; planets move fastest at perihelion.'}
+  - {uid: g12-physics-2-3-fc07, term: Kepler's third law, definition: '$T^2 \propto r^3$ for bodies orbiting the same central mass.'}
+  - {uid: g12-physics-2-3-fc08, term: Escape velocity, definition: 'Minimum launch speed to leave a planet''s gravity: $\sqrt{\frac{2GM}{R}}$.'}
+  - {uid: g12-physics-2-3-fc09, term: Weightlessness in orbit, definition: 'The feeling when you and your spacecraft fall freely together.'}
+
+questions:
+  - uid: g12-physics-2-3-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'The distance between two masses is doubled. What happens to the gravitational force between them?'
+    options:
+      A: 'It doubles.'
+      B: 'It halves.'
+      C: 'It becomes one quarter as large.'
+      D: 'It stays the same.'
+    answer: C
+    explanation: '$F \propto \frac{1}{r^2}$, so doubling $r$ divides $F$ by $2^2 = 4$.'
+
+  - uid: g12-physics-2-3-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Both masses are doubled while the distance between them stays the same. What happens to the gravitational force?'
+    options:
+      A: 'It becomes 4 times as large.'
+      B: 'It doubles.'
+      C: 'It stays the same.'
+      D: 'It becomes 8 times as large.'
+    answer: A
+    explanation: '$F \propto m_1 m_2$, so $2 \times 2 = 4$ times the force.'
+
+  - uid: g12-physics-2-3-q003
+    type: numeric
+    difficulty: 2
+    stem: 'Two masses of 2 kg and 3 kg are 1 m apart. Taking $G = 6.67 \times 10^{-11}$ N·m²/kg², the force between them is $k \times 10^{-10}$ N. What is $k$? (Two decimal places.)'
+    answer: {value: 4.0, tolerance: 0.01}
+    explanation: '$F = 6.67 \times 10^{-11} \times \frac{2 \times 3}{1^2} = 40.02 \times 10^{-11} = 4.002 \times 10^{-10}$ N, so $k \approx 4.00$.'
+
+  - uid: g12-physics-2-3-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'What does Kepler''s first law state?'
+    options:
+      A: 'Planets move in perfect circles around the Earth.'
+      B: 'All planets have the same period.'
+      C: 'Planets move fastest when farthest from the Sun.'
+      D: 'Planets move in ellipses with the Sun at one focus.'
+    answer: D
+    explanation: 'Kepler showed from careful observations that orbits are ellipses, with the Sun at one focus, not at the centre.'
+
+  - uid: g12-physics-2-3-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'According to Kepler''s second law, where is a planet moving fastest?'
+    options:
+      A: 'Where it is farthest from the Sun'
+      B: 'Where it is nearest to the Sun'
+      C: 'It moves at the same speed everywhere.'
+      D: 'Halfway between nearest and farthest'
+    answer: B
+    explanation: 'Equal areas are swept in equal times. Near the Sun the radius is short, so the planet must travel farther along its path to sweep the same area.'
+
+  - uid: g12-physics-2-3-q006
+    type: single_choice
+    difficulty: 1
+    stem: 'For planets orbiting the Sun, how are the period $T$ and the average orbital radius $r$ related (Kepler''s third law)?'
+    options:
+      A: '$T^2 \propto r^3$'
+      B: '$T \propto r$'
+      C: '$T^3 \propto r^2$'
+      D: '$T \propto \frac{1}{r^2}$'
+    answer: A
+    explanation: 'The square of the period is proportional to the cube of the orbital radius.'
+
+  - uid: g12-physics-2-3-q007
+    type: true_false
+    difficulty: 2
+    stem: 'Astronauts on a space station in orbit feel weightless because there is no gravity at that height.'
+    answer: false
+    explanation: 'Gravity at a low orbit is still about 90% of its surface value; it is what keeps the station in orbit. The astronauts feel weightless because they and the station fall freely together.'
+
+  - uid: g12-physics-2-3-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'On the Earth''s surface $g = 10$ m/s². What is $g$ at a height above the surface equal to the Earth''s radius?'
+    options:
+      A: '5 m/s²'
+      B: '10 m/s²'
+      C: '2.5 m/s²'
+      D: '0 m/s²'
+    answer: C
+    explanation: 'The distance from the centre doubles (from $R$ to $2R$), so $g$ is divided by 4: $\frac{10}{4} = 2.5$ m/s².'
+
+  - uid: g12-physics-2-3-q009
+    type: numeric
+    difficulty: 1
+    stem: 'On the Moon $g = 1.6$ m/s². What is the weight, in newtons, of a 60 kg astronaut there?'
+    answer: {value: 96, tolerance: 0, unit: N}
+    explanation: '$W = mg = 60 \times 1.6 = 96$ N.'
+
+  - uid: g12-physics-2-3-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'An astronaut has a mass of 60 kg on Earth. What is her mass on the Moon?'
+    options:
+      A: '10 kg'
+      B: '96 kg'
+      C: '0 kg'
+      D: '60 kg'
+    answer: D
+    explanation: 'Mass is the amount of matter and does not change with place. Only weight changes.'
+
+  - uid: g12-physics-2-3-q011
+    type: single_choice
+    difficulty: 3
+    stem: 'A planet orbits the Sun at 4 times the Earth''s orbital radius. What is its period?'
+    options:
+      A: '4 years'
+      B: '8 years'
+      C: '16 years'
+      D: '64 years'
+    answer: B
+    explanation: '$T^2 \propto r^3$: $T^2 = 4^3 = 64$ (in Earth units), so $T = 8$ years.'
+
+  - uid: g12-physics-2-3-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which expression gives the speed of a satellite in a circular orbit of radius $r$ around a planet of mass $M$?'
+    options:
+      A: '$\sqrt{\frac{GM}{r}}$'
+      B: '$\sqrt{\frac{2GM}{r}}$'
+      C: '$\frac{GM}{r^2}$'
+      D: '$\frac{GM}{r}$'
+    answer: A
+    explanation: 'Setting $\frac{GMm}{r^2} = \frac{mv^2}{r}$ gives $v^2 = \frac{GM}{r}$, so $v = \sqrt{\frac{GM}{r}}$.'
+
+  - uid: g12-physics-2-3-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which expression gives the escape velocity from the surface of a planet of mass $M$ and radius $R$?'
+    options:
+      A: '$\sqrt{\frac{GM}{R}}$'
+      B: '$\frac{2GM}{R^2}$'
+      C: '$\sqrt{\frac{2GM}{R}}$'
+      D: '$\frac{GM}{R}$'
+    answer: C
+    explanation: 'The kinetic energy must equal the work needed to escape: $\frac{1}{2}mv^2 = \frac{GMm}{R}$, so $v_e = \sqrt{\frac{2GM}{R}}$.'
+
+  - uid: g12-physics-2-3-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these change when you travel from the Earth to the Moon? Choose all that apply.'
+    options:
+      A: 'Your weight'
+      B: 'Your mass'
+      C: 'The value of $g$ around you'
+      D: 'The value of the constant $G$'
+    answer: [A, C]
+    explanation: '$g$ and therefore your weight are smaller on the Moon. Your mass and the universal constant $G$ stay the same.'
+
+  - uid: g12-physics-2-3-q015
+    type: fill_in
+    difficulty: 1
+    stem: '$G = 6.67 \times 10^{-11}$ N·m²/kg² is called the universal gravitational ________.'
+    answer: [constant]
+    explanation: 'It is the same everywhere in the universe, unlike $g$, which depends on the planet.'
+
+  - uid: g12-physics-2-3-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'A planet has twice the Earth''s mass and the same radius. If $g = 10$ m/s² on Earth, what is $g$ on its surface?'
+    options:
+      A: '5 m/s²'
+      B: '40 m/s²'
+      C: '10 m/s²'
+      D: '20 m/s²'
+    answer: D
+    explanation: '$g = \frac{GM}{R^2}$ is proportional to $M$ when $R$ is the same, so $g$ doubles to 20 m/s².'
+
+  - uid: g12-physics-2-3-q017
+    type: true_false
+    difficulty: 1
+    stem: 'The gravitational force of the Earth on the Moon has the same size as the force of the Moon on the Earth.'
+    answer: true
+    explanation: 'By Newton''s third law the forces are equal and opposite. The Moon moves more because its mass is much smaller.'
+
+  - uid: g12-physics-2-3-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the SI unit of the gravitational constant $G$?'
+    options:
+      A: 'N/kg'
+      B: 'N·m²/kg²'
+      C: 'm/s²'
+      D: 'kg·m/s²'
+    answer: B
+    explanation: 'From $G = \frac{Fr^2}{m_1 m_2}$: newtons times metres squared, divided by kilograms squared.'
+
+  - uid: g12-physics-2-3-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A satellite moves from a low circular orbit to a higher one. What happens to its speed and period?'
+    options:
+      A: 'Its speed decreases and its period increases.'
+      B: 'Its speed increases and its period decreases.'
+      C: 'Both increase.'
+      D: 'Both stay the same.'
+    answer: A
+    explanation: '$v = \sqrt{\frac{GM}{r}}$ decreases with $r$, and the longer path at lower speed takes more time ($T^2 \propto r^3$).'
+
+  - uid: g12-physics-2-3-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'A planet has the same mass as the Earth but half its radius. How does its surface gravity compare with the Earth''s?'
+    options:
+      A: 'Half as large'
+      B: 'The same'
+      C: '4 times as large'
+      D: 'Twice as large'
+    answer: C
+    explanation: '$g \propto \frac{1}{R^2}$ for the same mass: halving $R$ multiplies $g$ by $2^2 = 4$.'
+
+  - uid: g12-physics-2-3-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'The point of a planet''s orbit nearest to the Sun is called perihelion. What is true there?'
+    options:
+      A: 'The planet stops for a moment.'
+      B: 'The planet moves at its slowest speed.'
+      C: 'The gravitational force on the planet is smallest.'
+      D: 'The planet moves at its greatest speed.'
+    answer: D
+    explanation: 'By Kepler''s second law (and energy conservation) the planet is fastest where it is closest to the Sun, and the force is largest there.'
+
+  - uid: g12-physics-2-3-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each law with its statement.'
+    left:
+      L1: 'Kepler''s first law'
+      L2: 'Kepler''s second law'
+      L3: 'Kepler''s third law'
+    right:
+      R1: '$T^2 \propto r^3$'
+      R2: 'Orbits are ellipses with the Sun at one focus.'
+      R3: 'Gravitational force is proportional to $\frac{1}{r^2}$.'
+      R4: 'Equal areas are swept in equal times.'
+    answer: {L1: R2, L2: R4, L3: R1}
+    explanation: 'The inverse-square force is Newton''s law of gravitation, which explains all three of Kepler''s laws.'
+
+  - uid: g12-physics-2-3-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Put these distances from the Earth''s centre in order of gravitational field strength, from strongest to weakest ($R$ = Earth''s radius).'
+    items:
+      A: '$3R$'
+      B: '$R$'
+      C: '$4R$'
+      D: '$2R$'
+    answer: [B, D, A, C]
+    explanation: 'Outside the Earth $g \propto \frac{1}{r^2}$: $g$, $\frac{g}{4}$, $\frac{g}{9}$, $\frac{g}{16}$ for $R$, $2R$, $3R$, $4R$.'
+
+  - uid: g12-physics-2-3-q024
+    type: single_choice
+    difficulty: 1
+    stem: 'What provides the centripetal force that keeps the Moon in orbit around the Earth?'
+    options:
+      A: 'The Moon''s rotation'
+      B: 'The Earth''s gravitational pull'
+      C: 'The Sun''s light pressure'
+      D: 'Magnetic force'
+    answer: B
+    explanation: 'Gravity from the Earth pulls the Moon towards the centre of its orbit.'
+
+  - uid: g12-physics-2-3-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Planet X has 4 times the mass of planet Y and the same radius. How does the escape velocity from X compare with that from Y?'
+    options:
+      A: 'Twice as large'
+      B: '4 times as large'
+      C: '16 times as large'
+      D: 'The same'
+    answer: A
+    explanation: '$v_e = \sqrt{\frac{2GM}{R}} \propto \sqrt{M}$ for the same radius: $\sqrt{4} = 2$.'
+
+  - uid: g12-physics-2-3-q026
+    type: true_false
+    difficulty: 2
+    stem: 'Kepler''s laws also apply to moons orbiting a planet.'
+    answer: true
+    explanation: 'They follow from the inverse-square law of gravity, so they hold for any bodies orbiting one central mass with the planet at one focus of each orbit. The constant in $\frac{T^2}{r^3}$ is different for moons because it depends on the planet''s mass, not the Sun''s.'
+
+  - uid: g12-physics-2-3-q027
+    type: single_choice
+    difficulty: 1
+    stem: 'Which scientist first measured the value of $G$ in the laboratory?'
+    options:
+      A: 'Johannes Kepler'
+      B: 'Galileo Galilei'
+      C: 'Henry Cavendish'
+      D: 'Albert Einstein'
+    answer: C
+    explanation: 'Cavendish used a torsion balance in 1798 to measure the tiny force between lead spheres.'
+
+  - uid: g12-physics-2-3-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Using $g = \frac{GM}{R^2}$, which expression gives the mass of the Earth?'
+    options:
+      A: '$\frac{G}{gR^2}$'
+      B: '$gGR^2$'
+      C: '$\frac{gR}{G}$'
+      D: '$\frac{gR^2}{G}$'
+    answer: D
+    explanation: 'Multiply both sides by $R^2$ and divide by $G$: $M = \frac{gR^2}{G}$.'
+
+  - uid: g12-physics-2-3-q029
+    type: numeric
+    difficulty: 2
+    stem: 'The gravitational force between two bodies is 36 N. Their distance is tripled. What is the new force, in newtons?'
+    answer: {value: 4, tolerance: 0, unit: N}
+    explanation: 'Tripling the distance divides the force by 9: $\frac{36}{9} = 4$ N.'
+
+  - uid: g12-physics-2-3-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'How does the orbit of a geostationary satellite (period 24 h) compare with the orbit of the International Space Station (period about 90 min)?'
+    options:
+      A: 'It is lower.'
+      B: 'It is much higher.'
+      C: 'It is at the same height.'
+      D: 'It cannot be compared.'
+    answer: B
+    explanation: 'Longer periods need larger orbits ($T^2 \propto r^3$), so the geostationary orbit is much higher (about 36 000 km versus about 400 km).'

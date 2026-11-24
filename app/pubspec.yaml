@@ -1,0 +1,104 @@
+name: guul12
+description: "Guul 12 - Ethiopian Grade 9-12 national exam prep"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  material_ui: ^1.1.0
+
+  flutter_math_fork: ^0.7.4
+  flutter_riverpod: ^3.5.0
+  flutter_secure_storage: ^11.2.0
+  flutter_tts: ^4.2.5
+  go_router: ^18.1.4
+  google_sign_in: ^7.2.0
+  http: ^1.6.0
+  intl: ^0.20.3
+  path: ^1.9.1
+  sqflite: ^2.4.6
+  url_launcher: ^6.3.3
+  uuid: ^4.6.0
+  cupertino_icons: ^2.0.0
+  workmanager: ^0.10.10
+  flutter_local_notifications: ^23.0.3
+  flutter_svg: ^2.5.0
+  share_plus: ^13.3.1
+  google_mobile_ads: ^9.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.5
+  plugin_platform_interface: ^2.1.8
+  sqflite_common_ffi: ^2.4.7
+  url_launcher_platform_interface: ^2.3.2
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/hook/
+    - assets/avatars/notionists-neutral/
+    - assets/avatars/lorelei-neutral/
+    - assets/avatars/thumbs/
+
+  # The four branding fonts (Nova → Settings → Branding): text weights 400/500/700, headings 800/900.
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Nunito-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Nunito-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Nunito-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Nunito-Black.ttf
+          weight: 900
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSans-Black.ttf
+          weight: 900
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Inter-Black.ttf
+          weight: 900
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 900

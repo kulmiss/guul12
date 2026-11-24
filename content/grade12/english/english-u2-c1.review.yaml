@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-2-1-q001: {hash: '2eedd134debc8e9f111925fa4db772de291a07d9561b695c6c4059bbfa266a67', answer: B}
+  g12-english-2-1-q002: {hash: 'e4b1b7cc53c2533b7e07abbe266f415e48468b043e4ed8f2ce914e43203f2a9c', answer: A}
+  g12-english-2-1-q003: {hash: '4af3322c8659557bb52f544c250259b7d009892f7ffd8edb44b0297d21a7e311', answer: C}
+  g12-english-2-1-q004: {hash: 'fb2b467a5984bd65a3ec5481bf70c86966951102df8c4a24c859a41bdbaaaa35', answer: D}
+  g12-english-2-1-q005: {hash: '6c80c2214ed1b450983a3c1cadeb58934f7719018360e892787d24b226d16b93', answer: A}
+  g12-english-2-1-q006: {hash: '862b563c6bbd9c525a26b9d78cc0d684e7195eb65267d752c249f97e851aa4dd', answer: C}
+  g12-english-2-1-q007: {hash: 'a9d97d2957cb21f794fb35efd5b19027f495b1e4c2862d45d1d4aeeb11f09635', answer: B}
+  g12-english-2-1-q008: {hash: 'f19f643632dcd77b9518d6006b8aacb25c5189b3ddbe7069a51d4d903ca891e0', answer: D}
+  g12-english-2-1-q009: {hash: '59a699cf07eed6aba5d77b2d5bba6b5ffbced0bf6d137d1625f87fe5490e6e59', answer: true}
+  g12-english-2-1-q010: {hash: '101cdccfeb242405a4075e88392fc1548ad9dd97d51e8ae9b19d6abf0d0cebcd', answer: A}
+  g12-english-2-1-q011: {hash: '6a483268ab3f6c54365cf48d1abcb0dc399e3dbcd164b678477010f8df8ac706', answer: C}
+  g12-english-2-1-q012: {hash: '2275a3580e7979bed88b5d8f489b5012678be8d581620a553e463c40a601bf63', answer: B}
+  g12-english-2-1-q013: {hash: 'ead357e3c357cd91681ba8886d21c828f1d52fb19bfb8e5e8cd8ddbd0a656c1a', answer: [A, B, C]}
+  g12-english-2-1-q014: {hash: 'c38be4fabff335d958a47c2a84e55b7f32a31437f67e429edd13dd86e8fe691a', answer: D}
+  g12-english-2-1-q015: {hash: 'fb51f291299c50adfdec7da6d7a11d4d223ab13dcc323892853667d0e0570485', answer: A}
+  g12-english-2-1-q016: {hash: 'c54fef3c0eb336ef0f64a1c9eecbaf3fdc9d30f2b58ad80feed1f813f69d8125', answer: false}
+  g12-english-2-1-q017: {hash: '3b1b12fa69e43e5c7ce593fa12da315dc2f56eb9dfec5e8bff45425ce669ea0b', answer: B}
+  g12-english-2-1-q018: {hash: 'f710785886eca511b8d1887e4e7e64c63d11c84cb0002c022a3b95758e5de542', answer: C}
+  g12-english-2-1-q019: {hash: '0ee8bad187dc9df0bb02664d7eeea2d8e185b2687ee50247d975bb78c5b8e802', answer: modern, note: 'Minor: the blank "m______" shows 6 underscores but "modern" has only 5 letters after m; a student counting letters may be confused. Use "m_____" (5) or a plain blank.'}
+  g12-english-2-1-q020: {hash: '9a94776560d0e8027148b4d90cd9ecc90c92a660407926da99d799080b72683b', answer: synonym}
+  g12-english-2-1-q021: {hash: '831813896740272e9f5fab973a5d9572fe2e2cd8f44291e1b7eeeff3b7d4c841', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-english-2-1-q022: {hash: '8824e062dc023fa205a27f7bf5ca54f9d6959c46f423bb04942d7f269768ebee', answer: D}
+  g12-english-2-1-q023: {hash: '6b7d989a37819a5db861fba4620263e3b9f389140cead27f16d3f9ba1ac4e8f7', answer: A}
+  g12-english-2-1-q024: {hash: 'e7cb1f7a45f55ab8fba766f5eca633cf03aeb0c23932854bfd3375a7aa2383f5', answer: true}
+  g12-english-2-1-q025: {hash: 'f208df0e0122d1a23db193c7bf16527510e0a56564dc8598aff2281db272ffd2', answer: C}
+  g12-english-2-1-q026: {hash: '79153bca4e38e8528fa2de30bd5d20cefddb6455c840d024103b77ca534796e6', answer: B}
+  g12-english-2-1-q027: {hash: '5ea1f2d243c989de51fb544d123cb4121fd6f9efa857afbab1b449b60bfaa30c', answer: [B, D, A, C]}
+  g12-english-2-1-q028: {hash: '79dafcbd78501604a01f08bf247d5cc6f4eb9f47a7c79dcf2b761a0f83773f91', answer: D}
+  g12-english-2-1-q029: {hash: 'f2b71c7fc51412b655abcbefa1d2063d098a814f002a3ca2d68310718bdf0526', answer: B}
+  g12-english-2-1-q030: {hash: '16675b0c067353f1b4a8f3675d562298d9d42ef9c7b2188511daa3f946a22419', answer: A}

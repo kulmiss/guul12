@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-4-1-q001: {hash: '5507ce78f34efaec500a0c7c2c2436d33afe3f1bd3ecf502009448e4b1198bea', answer: B}
+  g12-biology-4-1-q002: {hash: 'b49e34689421be558993d1543a44f1a90c644a627b849ac6d24eb7282d3d15f7', answer: C}
+  g12-biology-4-1-q003: {hash: '83aecaf4190b67df953879aeeb30d21618964bb9a7dd7b4e56262bce942a5b5f', answer: A}
+  g12-biology-4-1-q004: {hash: 'd6c85384d34e90a6d6cf7f76e383ff6c199f8d01fbcaa34d4a1e15361f44429d', answer: [B, D, A, C], note: 'Order of the first two steps is debatable: many textbooks list overproduction/competition (D) before variation (B), so [D, B, A, C] is also defensible. Variation and overproduction are both starting conditions, not a time sequence. Consider making the order unambiguous (e.g. accept both, or merge/reword so only A and C must follow).'}
+  g12-biology-4-1-q005: {hash: 'be5e9987eb70860087d7aef8affc3c43f038eeaa0c90d7e48af5d7569e691c4c', answer: D}
+  g12-biology-4-1-q006: {hash: '7438296ab129d8885598240326f883eadb2b41acee32931324125cce15eeb594', answer: A}
+  g12-biology-4-1-q007: {hash: 'e5b4dee75ef2da53550ad6aa29135a1e64fe52d20c5cf30557bf69dbf3d7408f', answer: 1974}
+  g12-biology-4-1-q008: {hash: '63f09fddbd26409672633ad0485cb2c89065b06bf65babd50c477d3c3ec1a997', answer: 25}
+  g12-biology-4-1-q009: {hash: '60d617d02220701d9dff8442dc3b5b1180a6be36f15640835de00d367a413cd3', answer: C}
+  g12-biology-4-1-q010: {hash: 'cb45f2b076344ad23b6f459c2e3d5cba62d3220a7890fb1761a811fae224c0ab', answer: B}
+  g12-biology-4-1-q011: {hash: '11fadfe268d6aaa5198c3186a4c6ba631a02d2104fa14145beae0d35a801b523', answer: [A, B, D], note: 'Minor: the appendix is now known to have some immune/gut-flora function and wisdom teeth are still functional molars, so calling them vestigial is the textbook convention rather than settled fact. Acceptable at Grade 12 level, but the explanation should say "reduced function", not "no function".'}
+  g12-biology-4-1-q012: {hash: '78bc8698fc25c003005c3f69d72245ed52f8927595fc437cd4bf1d3b7d264a8d', answer: D}
+  g12-biology-4-1-q013: {hash: '001cd2c61a7645b4880e710ae1af5cd953442764755f7472a9a4ce19ca6a558d', answer: true}
+  g12-biology-4-1-q014: {hash: '1b06841c878a2c6947efdcff4f4c9c94b9feca0255ce480a6dbb607dd14ed69d', answer: A}
+  g12-biology-4-1-q015: {hash: 'bf2de9a04649aa839bfe8459fa4e8b6a135d9708c058d7738ce006b0c7e08fd2', answer: C}
+  g12-biology-4-1-q016: {hash: '2a5ab30855b9319280919354059e48ef0ff42dbbfa6b38e05b4c03fbbc8e9a27', answer: B}
+  g12-biology-4-1-q017: {hash: '30fbe74359a3948c31dc14ade9ea10a07b2c983c3d08c4f64a3979e6f0e37dae', answer: D}
+  g12-biology-4-1-q018: {hash: '0a1140e00d0234e683898987a2da6c380841cecc48c8fdfb36a84d1e767b1cc6', answer: false}
+  g12-biology-4-1-q019: {hash: '16da3057f714f39a3385520d042f8f8bb66285c656fdd79350ca939d26eaae4f', answer: A}
+  g12-biology-4-1-q020: {hash: '71f6d217bf0f5538bb3d24c9faade5470560365a2531db870c0f57f1fad10c53', answer: B}
+  g12-biology-4-1-q021: {hash: '40c6d155a5a2bfc0657c9eb8848f9620920c98b7789dec0f094956b1574f4807', answer: 'selection'}
+  g12-biology-4-1-q022: {hash: '2919c762be64a7b0397f21d88c4b081d2d5aee60f78772a5fead83e87fef3760', answer: 'vestigial'}
+  g12-biology-4-1-q023: {hash: 'aab19ad9de1fa10a71127bc724fbc719fc2c50dfb8062bd821c651ac54814b90', answer: true}
+  g12-biology-4-1-q024: {hash: '3f6d171ae587d65c8510d5c7d28782da657bbe9c38ace78d2660df206ab06c11', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-biology-4-1-q025: {hash: 'be7253ca922928e299933ea5925ba0e22d07dacd51a1440a8a674e4cca804035', answer: D}
+  g12-biology-4-1-q026: {hash: 'a2853a498866e8af0bcb3009350a9dd5781ee416b200c81ebe950d76f0161e1f', answer: A}
+  g12-biology-4-1-q027: {hash: '18e939ff27465093c59a1a7b2d4cd384d1046b834c9e0178f27a31c067abe738', answer: C}
+  g12-biology-4-1-q028: {hash: '8d51aac988b1ddc554a1b7101905523b869cd0e278276085c4e01b3f98845214', answer: D}
+  g12-biology-4-1-q029: {hash: 'ef2a6ea14e623521ca346931952bfa0c7ccf024336930e4901970a5a71873c4f', answer: B}
+  g12-biology-4-1-q030: {hash: '27dff2a3da96d4893754dc2dfded70f1b3fce03189dc7547b297e60264a12732', answer: A}

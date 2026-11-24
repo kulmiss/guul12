@@ -1,0 +1,73 @@
+/*
+ * Guul 12 additions to Nova's look. Uses Nova's own colour variables, so it follows light and dark mode.
+ * Question preview markup comes from App\Support\QuestionPreview.
+ */
+.guul-preview { max-width: 36rem; line-height: 1.5; }
+.guul-preview .gp-passage { margin-bottom: .75rem; padding: .75rem; border-radius: .375rem; font-size: .875rem; background: rgb(var(--colors-gray-50)); }
+.guul-preview .gp-title, .guul-preview .gp-label, .guul-preview .gp-key { font-weight: 700; }
+.guul-preview .gp-title { margin-bottom: .25rem; }
+.guul-preview .gp-stem { margin-bottom: .75rem; font-size: 1rem; }
+.guul-preview .gp-list, .guul-preview .gp-order { margin: 0 0 .25rem; }
+.guul-preview .gp-list { list-style: none; padding: 0; }
+.guul-preview .gp-order { list-style: decimal; padding-left: 1.5rem; }
+.guul-preview .gp-order li { margin-bottom: .25rem; }
+.guul-preview .gp-label { display: block; margin-bottom: .25rem; font-size: .875rem; }
+.guul-preview .gp-option .gp-label, .guul-preview .gp-explanation .gp-label { display: inline; }
+.guul-preview .gp-option { display: flex; align-items: flex-start; gap: .5rem; margin-bottom: .25rem; padding: .5rem; border: 1px solid rgb(var(--colors-gray-200)); border-radius: .375rem; font-size: .875rem; }
+.guul-preview .gp-right { border: 2px solid rgb(var(--colors-green-600)); background: rgb(var(--colors-green-50)); }
+.guul-preview .gp-body { flex: 1 1 0%; }
+.guul-preview .gp-tick { font-weight: 700; color: rgb(var(--colors-green-700)); }
+.guul-preview .gp-muted { color: rgb(var(--colors-gray-500)); }
+.guul-preview .gp-image { display: block; max-width: 20rem; margin: .5rem 0; border-radius: .375rem; background: #fff; }
+.guul-preview .gp-explanation { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid rgb(var(--colors-gray-200)); font-size: .875rem; }
+
+.dark .guul-preview .gp-passage { background: rgb(var(--colors-gray-900)); }
+.dark .guul-preview .gp-option, .dark .guul-preview .gp-explanation { border-color: rgb(var(--colors-gray-700)); }
+.dark .guul-preview .gp-right { border-color: rgb(var(--colors-green-500)); background: rgb(var(--colors-green-950)); }
+.dark .guul-preview .gp-tick { color: rgb(var(--colors-green-400)); }
+.dark .guul-preview .gp-muted { color: rgb(var(--colors-gray-400)); }
+
+/* Branding page (Settings → Branding). Fonts are the same files the landing page uses. */
+@font-face { font-family: 'Nunito'; font-weight: 400 900; font-display: swap; src: url('/fonts/nunito-latin-800.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans'; font-weight: 400 900; font-display: swap; src: url('/fonts/noto-sans-latin-400.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 400 900; font-display: swap; src: url('/fonts/inter-latin-400.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins'; font-weight: 400 900; font-display: swap; src: url('/fonts/poppins-latin-400.woff2') format('woff2'); }
+.guul-branding-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; }
+@media (max-width: 1024px) { .guul-branding-grid { grid-template-columns: minmax(0, 1fr); } }
+.guul-palette { display: inline-flex; align-items: center; gap: .25rem; padding: .4rem .7rem; border: 2px solid rgb(var(--colors-gray-200)); border-radius: .5rem; font-size: .875rem; font-weight: 700; }
+.guul-palette.is-active { border-color: rgb(var(--colors-primary-500)); }
+.guul-swatch { display: inline-block; width: 1rem; height: 1rem; border-radius: 9999px; border: 1px solid rgb(0 0 0 / .15); }
+.guul-contrast, .guul-history { width: 100%; font-size: .8125rem; border-collapse: collapse; }
+.guul-contrast td, .guul-history td { padding: .25rem .25rem; border-top: 1px solid rgb(var(--colors-gray-200)); }
+.guul-contrast .is-ok { color: rgb(var(--colors-green-700)); font-weight: 700; white-space: nowrap; }
+.guul-contrast .is-bad { color: rgb(var(--colors-red-700)); font-weight: 700; white-space: nowrap; }
+.guul-problems { margin-bottom: 1rem; padding: .75rem 1rem; border-radius: .5rem; background: rgb(var(--colors-red-50)); color: rgb(var(--colors-red-800)); font-size: .875rem; }
+.guul-logo-thumb { height: 32px; width: auto; padding: 2px; border-radius: .25rem; background: #fff; }
+.guul-logo-thumb.is-dark { background: #0F1C20; }
+.guul-phone { width: 15rem; padding: .75rem; border-radius: 1.5rem; border: 6px solid #1f2937; display: flex; flex-direction: column; gap: .6rem; font-size: 14px; }
+.guul-phone-bar { display: flex; align-items: center; gap: .4rem; font-weight: 800; font-size: 18px; }
+.guul-phone-logo { height: 22px; width: auto; }
+.guul-phone-card { padding: .9rem; }
+.guul-phone-option { padding: .55rem .7rem; border: 1px solid; }
+.guul-phone-chip { align-self: flex-start; padding: .15rem .6rem; border-radius: 9999px; font-size: 12px; font-weight: 700; }
+.guul-phone-button { padding: .65rem; font-weight: 700; border: 0; }
+.guul-phone-link { font-weight: 700; text-decoration: underline; }
+.dark .guul-palette, .dark .guul-contrast td, .dark .guul-history td { border-color: rgb(var(--colors-gray-700)); }
+.dark .guul-problems { background: rgb(var(--colors-red-950)); color: rgb(var(--colors-red-200)); }
+
+/* Activity log: Before / After table (App\Support\AuditLogDiff). */
+.guul-diff .gd-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.guul-diff .gd-table th, .guul-diff .gd-table td { padding: .375rem .5rem; text-align: left; vertical-align: top; border-bottom: 1px solid rgb(var(--colors-gray-200)); }
+.dark .guul-diff .gd-table th, .dark .guul-diff .gd-table td { border-bottom-color: rgb(var(--colors-gray-700)); }
+.guul-diff .gd-table th { font-weight: 700; }
+.guul-diff .gd-old, .guul-diff .gd-new { padding: 0 .25rem; border-radius: .25rem; word-break: break-word; }
+.guul-diff .gd-old { background: rgb(var(--colors-red-100)); color: rgb(var(--colors-red-800)); }
+.guul-diff .gd-new { background: rgb(var(--colors-green-100)); color: rgb(var(--colors-green-800)); text-decoration: none; }
+.dark .guul-diff .gd-old { background: rgb(var(--colors-red-900)); color: rgb(var(--colors-red-100)); }
+.dark .guul-diff .gd-new { background: rgb(var(--colors-green-900)); color: rgb(var(--colors-green-100)); }
+.guul-diff .gd-details { display: grid; grid-template-columns: max-content 1fr; gap: .25rem .75rem; margin-top: .75rem; font-size: .875rem; }
+.guul-diff .gd-details dt { font-weight: 700; }
+
+/* Empty lists: the help line under Nova's "No … matched" box (App\Nova\EmptyStates). */
+.guul-empty-help { max-width: 32rem; margin: .75rem auto 0; padding: 0 1rem; text-align: center; font-size: .875rem; color: rgb(var(--colors-gray-600)); }
+.dark .guul-empty-help { color: rgb(var(--colors-gray-300)); }

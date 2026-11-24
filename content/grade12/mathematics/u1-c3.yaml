@@ -1,0 +1,382 @@
+summary:
+  key_points:
+    - 'An infinite series $a_1 + a_2 + a_3 + \dots$ converges if its partial sums $S_n$ get closer and closer to one number $S$; otherwise it diverges.'
+    - 'An infinite geometric series converges exactly when $|r| < 1$ (and $a_1 \neq 0$). Its sum is $S = \frac{a_1}{1 - r}$.'
+    - 'If $|r| \ge 1$ the geometric series diverges. An arithmetic series with $d \neq 0$ always diverges.'
+    - 'A repeating decimal is an infinite geometric series, so it can be written as a fraction: $0.\overline{45} = \frac{45}{99} = \frac{5}{11}$.'
+    - 'Simple interest grows by the same amount each year (arithmetic). Compound interest grows by the same factor $(1 + i)$ each year (geometric).'
+    - 'A bouncing ball travels the first drop once, then every rebound height twice (up and down).'
+  formulas:
+    - label: Sum of an infinite geometric series (|r| < 1)
+      latex: 'S = \frac{a_1}{1 - r}'
+    - label: Simple interest
+      latex: 'I = Prt, \quad A = P(1 + rt)'
+    - label: Compound interest (once a year)
+      latex: 'A = P(1 + i)^n'
+    - label: Growth or decay by a fixed percent
+      latex: 'P_n = P_0 (1 \pm p)^n'
+
+solved_exercises:
+  - uid: g12-mathematics-1-3-se01
+    problem: 'Write $0.\overline{27}$ as a fraction in lowest terms.'
+    steps:
+      - '$0.\overline{27} = 0.27 + 0.0027 + 0.000027 + \dots$, a geometric series with $a_1 = 0.27$ and $r = 0.01$.'
+      - '$S = \frac{0.27}{1 - 0.01} = \frac{0.27}{0.99} = \frac{27}{99}$.'
+      - 'Divide top and bottom by 9: $\frac{3}{11}$.'
+    answer: '$\frac{3}{11}$'
+  - uid: g12-mathematics-1-3-se02
+    problem: 'A ball is dropped from 8 m. After each bounce it rises to $\frac{1}{2}$ of the height it fell from. Find the total distance it travels.'
+    steps:
+      - 'First drop: 8 m.'
+      - 'Rebound heights: $4 + 2 + 1 + \dots$, a geometric series with sum $\frac{4}{1 - \frac{1}{2}} = 8$ m.'
+      - 'Each rebound is travelled up and down, so add $2 \times 8 = 16$ m.'
+      - 'Total: $8 + 16 = 24$ m.'
+    answer: '24 m'
+  - uid: g12-mathematics-1-3-se03
+    problem: 'Fatuma puts 20 000 birr in a bank at 5% compound interest per year. How much does she have after 2 years?'
+    steps:
+      - '$A = 20\,000 \times 1.05^2$.'
+      - '$1.05^2 = 1.1025$.'
+      - '$20\,000 \times 1.1025 = 22\,050$.'
+    answer: '22 050 birr'
+
+flashcards:
+  - {uid: g12-mathematics-1-3-fc01, term: Infinite series, definition: 'The sum of all the terms of an infinite sequence.'}
+  - {uid: g12-mathematics-1-3-fc02, term: Converge, definition: 'The partial sums approach a single finite number.'}
+  - {uid: g12-mathematics-1-3-fc03, term: Diverge, definition: 'The partial sums do not approach a single finite number.'}
+  - {uid: g12-mathematics-1-3-fc04, term: Condition for a geometric series to converge, definition: '$|r| < 1$'}
+  - {uid: g12-mathematics-1-3-fc05, term: Sum to infinity, definition: '$S = \frac{a_1}{1 - r}$ for a geometric series with $|r| < 1$.'}
+  - {uid: g12-mathematics-1-3-fc06, term: Repeating decimal, definition: 'A decimal whose digits repeat forever; it equals a fraction.'}
+  - {uid: g12-mathematics-1-3-fc07, term: Simple interest, definition: 'Interest paid only on the original amount: $I = Prt$.'}
+  - {uid: g12-mathematics-1-3-fc08, term: Compound interest, definition: 'Interest added to the amount each period, so interest earns interest: $A = P(1 + i)^n$.'}
+  - {uid: g12-mathematics-1-3-fc09, term: Depreciation, definition: 'Loss of value over time, often by a fixed percent each year.'}
+
+questions:
+  - uid: g12-mathematics-1-3-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the sum of the infinite series $8 + 4 + 2 + 1 + \dots$?'
+    options:
+      A: '16'
+      B: '15'
+      C: '32'
+      D: 'The series diverges.'
+    answer: A
+    explanation: 'Geometric with $a_1 = 8$ and $r = \frac{1}{2}$, so $S = \frac{8}{1 - \frac{1}{2}} = 16$.'
+
+  - uid: g12-mathematics-1-3-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these infinite series converges?'
+    options:
+      A: '$\sum_{k=1}^{\infty} \left(\frac{3}{2}\right)^k$'
+      B: '$\sum_{k=1}^{\infty} \left(\frac{1}{3}\right)^k$'
+      C: '$\sum_{k=1}^{\infty} 2^k$'
+      D: '$\sum_{k=1}^{\infty} k$'
+    answer: B
+    explanation: 'Only B is geometric with $|r| = \frac{1}{3} < 1$. A and C have $|r| > 1$ and D grows without end.'
+
+  - uid: g12-mathematics-1-3-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Which fraction is equal to $0.333\ldots$ (the 3 repeats forever)?'
+    options:
+      A: '$\frac{3}{10}$'
+      B: '$\frac{33}{100}$'
+      C: '$\frac{1}{3}$'
+      D: '$\frac{3}{100}$'
+    answer: C
+    explanation: '$0.3 + 0.03 + 0.003 + \dots = \frac{0.3}{1 - 0.1} = \frac{0.3}{0.9} = \frac{1}{3}$.'
+
+  - uid: g12-mathematics-1-3-q004
+    type: numeric
+    difficulty: 2
+    stem: 'Find the sum of the infinite series $6 - 2 + \frac{2}{3} - \frac{2}{9} + \dots$'
+    answer: {value: 4.5, tolerance: 0}
+    explanation: '$a_1 = 6$ and $r = -\frac{1}{3}$, so $S = \frac{6}{1 + \frac{1}{3}} = \frac{6}{\frac{4}{3}} = 4.5$.'
+
+  - uid: g12-mathematics-1-3-q005
+    type: true_false
+    difficulty: 1
+    stem: 'An infinite arithmetic series with common difference $d \neq 0$ has a finite sum.'
+    answer: false
+    explanation: 'The terms keep growing (or keep falling) by $d$, so the partial sums grow without limit. The series diverges.'
+
+  - uid: g12-mathematics-1-3-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which fraction is equal to $0.\overline{45}$ (that is, $0.454545\ldots$)?'
+    options:
+      A: '$\frac{9}{20}$'
+      B: '$\frac{45}{100}$'
+      C: '$\frac{4}{9}$'
+      D: '$\frac{5}{11}$'
+    answer: D
+    explanation: '$0.\overline{45} = \frac{0.45}{1 - 0.01} = \frac{45}{99} = \frac{5}{11}$.'
+
+  - uid: g12-mathematics-1-3-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'For which values of $r$ does the infinite geometric series $a + ar + ar^2 + \dots$ (with $a \neq 0$) converge?'
+    options:
+      A: '$r < 1$'
+      B: '$|r| < 1$'
+      C: '$r > 1$'
+      D: '$|r| \le 1$'
+    answer: B
+    explanation: 'A geometric series converges only when $-1 < r < 1$. With $r = 1$ or $r = -1$ the partial sums do not settle on one number.'
+
+  - uid: g12-mathematics-1-3-q008
+    type: single_choice
+    difficulty: 3
+    stem: 'A ball is dropped from a height of 10 m. Each time it bounces it rises to $\frac{3}{5}$ of the height it fell from. What total distance does it travel before it stops?'
+    options:
+      A: '40 m'
+      B: '25 m'
+      C: '30 m'
+      D: '50 m'
+    answer: A
+    explanation: 'The rebound heights are $6 + 3.6 + \dots$ with sum $\frac{6}{1 - \frac{3}{5}} = 15$ m. Each is travelled up and down: $2 \times 15 = 30$ m. Add the first drop of 10 m: 40 m.'
+
+  - uid: g12-mathematics-1-3-q009
+    type: numeric
+    difficulty: 2
+    stem: 'An infinite geometric series has first term 12 and sum 48. What is its common ratio $r$? (Give a decimal.)'
+    answer: {value: 0.75, tolerance: 0}
+    explanation: '$48 = \frac{12}{1 - r}$, so $1 - r = \frac{12}{48} = \frac{1}{4}$ and $r = \frac{3}{4} = 0.75$.'
+
+  - uid: g12-mathematics-1-3-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\sum_{k=1}^{\infty} 5\left(\frac{1}{2}\right)^k$?'
+    options:
+      A: '10'
+      B: '2.5'
+      C: '5'
+      D: 'The series diverges.'
+    answer: C
+    explanation: 'The first term (at $k = 1$) is $\frac{5}{2}$ and $r = \frac{1}{2}$: $S = \frac{\frac{5}{2}}{1 - \frac{1}{2}} = 5$.'
+
+  - uid: g12-mathematics-1-3-q011
+    type: single_choice
+    difficulty: 2
+    stem: '10 000 birr is saved at 10% compound interest per year. How much is in the account after 2 years?'
+    options:
+      A: '12 000 birr'
+      B: '11 000 birr'
+      C: '12 200 birr'
+      D: '12 100 birr'
+    answer: D
+    explanation: '$10\,000 \times 1.1 = 11\,000$ after one year, then $11\,000 \times 1.1 = 12\,100$ birr after two years.'
+
+  - uid: g12-mathematics-1-3-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the simple interest on 5 000 birr at 8% per year for 3 years?'
+    options:
+      A: '1 200 birr'
+      B: '400 birr'
+      C: '1 500 birr'
+      D: '6 200 birr'
+    answer: A
+    explanation: '$I = Prt = 5000 \times 0.08 \times 3 = 1200$ birr.'
+
+  - uid: g12-mathematics-1-3-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'An amount $P$ earns compound interest at rate $i$ per year. The amounts at the end of years 1, 2, 3, … form which kind of sequence?'
+    options:
+      A: 'Arithmetic, with common difference $Pi$'
+      B: 'Arithmetic, with common difference $i$'
+      C: 'Geometric, with common ratio $1 + i$'
+      D: 'Geometric, with common ratio $i$'
+    answer: C
+    explanation: 'Each year the amount is multiplied by $1 + i$: $P(1+i), P(1+i)^2, P(1+i)^3, \dots$ So it is geometric with ratio $1 + i$.'
+
+  - uid: g12-mathematics-1-3-q014
+    type: true_false
+    difficulty: 2
+    stem: 'The repeating decimal $0.999\ldots$ is exactly equal to 1.'
+    answer: true
+    explanation: '$0.9 + 0.09 + \dots = \frac{0.9}{1 - 0.1} = \frac{0.9}{0.9} = 1$.'
+
+  - uid: g12-mathematics-1-3-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\sum_{n=0}^{\infty} \left(-\frac{1}{2}\right)^n$?'
+    options:
+      A: '2'
+      B: '$\frac{2}{3}$'
+      C: '$\frac{1}{2}$'
+      D: '$-\frac{2}{3}$'
+    answer: B
+    explanation: 'The first term (at $n = 0$) is 1 and $r = -\frac{1}{2}$: $S = \frac{1}{1 + \frac{1}{2}} = \frac{2}{3}$.'
+
+  - uid: g12-mathematics-1-3-q016
+    type: multiple_answers
+    difficulty: 3
+    stem: 'Which of these infinite series diverge? Choose all that apply.'
+    options:
+      A: '$1 + 1 + 1 + 1 + \dots$'
+      B: '$1 - 1 + 1 - 1 + \dots$'
+      C: '$\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots$'
+      D: '$2 + 4 + 8 + 16 + \dots$'
+    answer: [A, B, D]
+    explanation: 'A grows without end. B has partial sums 1, 0, 1, 0, … that never settle ($r = -1$). D has $r = 2$. Only C converges (to 1).'
+
+  - uid: g12-mathematics-1-3-q017
+    type: single_choice
+    difficulty: 3
+    stem: 'For which value of $x$ is $1 + x + x^2 + x^3 + \dots = 4$?'
+    options:
+      A: '$\frac{1}{4}$'
+      B: '$4$'
+      C: '$-\frac{3}{4}$'
+      D: '$\frac{3}{4}$'
+    answer: D
+    explanation: 'For $|x| < 1$ the sum is $\frac{1}{1 - x}$. So $\frac{1}{1 - x} = 4$, $1 - x = \frac{1}{4}$ and $x = \frac{3}{4}$.'
+
+  - uid: g12-mathematics-1-3-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'A town has 50 000 people and the population grows by 2% each year. Which expression gives the population after $n$ years?'
+    options:
+      A: '$50\,000 \times 1.02^n$'
+      B: '$50\,000 + 0.02n$'
+      C: '$50\,000 \times 0.02^n$'
+      D: '$50\,000 + 1000n^2$'
+    answer: A
+    explanation: 'Growing by 2% means multiplying by 1.02 every year, so after $n$ years the population is $50\,000 \times 1.02^n$.'
+
+  - uid: g12-mathematics-1-3-q019
+    type: numeric
+    difficulty: 2
+    stem: 'The repeating decimal $0.\overline{36}$ is equal to $\frac{a}{11}$. What is $a$?'
+    answer: {value: 4, tolerance: 0}
+    explanation: '$0.\overline{36} = \frac{36}{99}$. Dividing top and bottom by 9 gives $\frac{4}{11}$, so $a = 4$.'
+
+  - uid: g12-mathematics-1-3-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Kedir pays back a loan in 10 monthly payments: 1 000 birr, then 900, 800, and so on down to 100 birr. How much does he pay in total?'
+    options:
+      A: '5 000 birr'
+      B: '10 000 birr'
+      C: '5 500 birr'
+      D: '4 500 birr'
+    answer: C
+    explanation: 'Arithmetic series with 10 terms, first term 1 000 and last term 100: $S = \frac{10(1000 + 100)}{2} = 5500$ birr.'
+
+  - uid: g12-mathematics-1-3-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the sum to infinity of the geometric series with first term 9 and common ratio $-\frac{1}{2}$?'
+    options:
+      A: '18'
+      B: '6'
+      C: '3'
+      D: '$-18$'
+    answer: B
+    explanation: '$S = \frac{9}{1 - \left(-\frac{1}{2}\right)} = \frac{9}{\frac{3}{2}} = 6$.'
+
+  - uid: g12-mathematics-1-3-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'An infinite series whose partial sums get closer and closer to a finite number is said to ________.'
+    answer: [converge, converges, be convergent]
+    explanation: 'Such a series converges, and that number is its sum.'
+
+  - uid: g12-mathematics-1-3-q023
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the sum of $1 + \frac{1}{3} + \frac{1}{9} + \frac{1}{27} + \dots$?'
+    options:
+      A: '$\frac{4}{3}$'
+      B: '$3$'
+      C: '$\frac{13}{9}$'
+      D: '$\frac{3}{2}$'
+    answer: D
+    explanation: '$S = \frac{1}{1 - \frac{1}{3}} = \frac{1}{\frac{2}{3}} = \frac{3}{2}$.'
+
+  - uid: g12-mathematics-1-3-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'A pendulum swings 30 cm on its first swing. Each later swing is 90% as long as the one before. What total distance does it swing before it stops?'
+    options:
+      A: '300 cm'
+      B: '270 cm'
+      C: '330 cm'
+      D: '33 cm'
+    answer: A
+    explanation: 'Geometric series with $a_1 = 30$ and $r = 0.9$: $S = \frac{30}{1 - 0.9} = \frac{30}{0.1} = 300$ cm.'
+
+  - uid: g12-mathematics-1-3-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each repeating decimal with the fraction it equals.'
+    left:
+      L1: '$0.\overline{3}$'
+      L2: '$0.\overline{6}$'
+      L3: '$0.\overline{1}$'
+    right:
+      R1: '$\frac{1}{9}$'
+      R2: '$\frac{1}{6}$'
+      R3: '$\frac{1}{3}$'
+      R4: '$\frac{2}{3}$'
+    answer: {L1: R3, L2: R4, L3: R1}
+    explanation: 'A single repeating digit $d$ equals $\frac{d}{9}$: $\frac{3}{9} = \frac{1}{3}$, $\frac{6}{9} = \frac{2}{3}$ and $\frac{1}{9}$. $\frac{1}{6} = 0.1\overline{6}$, which is none of them.'
+
+  - uid: g12-mathematics-1-3-q026
+    type: true_false
+    difficulty: 1
+    stem: 'If $|r| \ge 1$ and $a_1 \neq 0$, the infinite geometric series $a_1 + a_1 r + a_1 r^2 + \dots$ diverges.'
+    answer: true
+    explanation: 'With $|r| \ge 1$ the terms do not get smaller, so the partial sums cannot settle on one number.'
+
+  - uid: g12-mathematics-1-3-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the sum of $0.4 + 0.04 + 0.004 + \dots$?'
+    options:
+      A: '$\frac{2}{5}$'
+      B: '$\frac{4}{10}$'
+      C: '$\frac{4}{9}$'
+      D: '$\frac{1}{2}$'
+    answer: C
+    explanation: '$a_1 = 0.4$ and $r = 0.1$: $S = \frac{0.4}{0.9} = \frac{4}{9}$.'
+
+  - uid: g12-mathematics-1-3-q028
+    type: ordering
+    difficulty: 3
+    stem: 'Put these infinite series in order of their sums, from smallest to largest.'
+    items:
+      A: '$\sum_{n=1}^{\infty} \left(\frac{1}{2}\right)^n$'
+      B: '$\sum_{n=0}^{\infty} \left(\frac{1}{2}\right)^n$'
+      C: '$\sum_{n=1}^{\infty} \left(\frac{1}{3}\right)^n$'
+      D: '$\sum_{n=0}^{\infty} \left(\frac{1}{4}\right)^n$'
+    answer: [C, A, D, B]
+    explanation: 'A $= \frac{1/2}{1/2} = 1$, B $= \frac{1}{1/2} = 2$, C $= \frac{1/3}{2/3} = \frac{1}{2}$, D $= \frac{1}{3/4} = \frac{4}{3}$. In order: $\frac{1}{2}, 1, \frac{4}{3}, 2$.'
+
+  - uid: g12-mathematics-1-3-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'A machine loses 20% of its value every year. After how many whole years is its value first less than half of what it cost?'
+    options:
+      A: '3 years'
+      B: '4 years'
+      C: '2 years'
+      D: '5 years'
+    answer: B
+    explanation: 'Each year the value is multiplied by 0.8. $0.8^2 = 0.64$, $0.8^3 = 0.512$ (still above half), $0.8^4 = 0.4096$ (below half). So 4 years.'
+
+  - uid: g12-mathematics-1-3-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the 4th partial sum $S_4$ of the series $\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots$?'
+    options:
+      A: '1'
+      B: '$\frac{7}{8}$'
+      C: '$\frac{31}{32}$'
+      D: '$\frac{15}{16}$'
+    answer: D
+    explanation: '$S_4 = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} = \frac{8 + 4 + 2 + 1}{16} = \frac{15}{16}$.'

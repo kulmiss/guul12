@@ -1,0 +1,381 @@
+summary:
+  key_points:
+    - 'Capital letters begin sentences and are used for names of people, places, languages, nationalities, days and months: Amina, Jigjiga, Somali, Ethiopian, Monday, October.'
+    - 'Full stop (.) ends a statement; question mark (?) ends a direct question; exclamation mark (!) shows strong feeling.'
+    - 'Commas separate items in a list ("teff, maize and sorghum"), follow an introductory phrase ("After the rain, ..."), set off non-defining clauses, and come before a joining word linking two full sentences ("It rained, but we played.").'
+    - 'Do not join two complete sentences with only a comma (a comma splice). Use a full stop, a semicolon, or a comma + and/but/so.'
+    - 'Apostrophes show possession (the girl''s bag = one girl; the girls'' bags = more than one girl) or missing letters (it''s = it is). "Its" (no apostrophe) means "belonging to it".'
+    - 'Commonly confused words: their (belonging to them) / there (place) / they''re (they are); your / you''re (you are); to / too (also, more than enough) / two (2); affect (verb) / effect (noun).'
+    - 'Useful spelling rules: "i before e except after c" (believe, receive) has exceptions such as "science"; double the final consonant before -ing/-ed after a short stressed vowel (stop – stopping, begin – beginning); drop the silent e before a vowel suffix (make – making).'
+    - 'Paragraph order: find the topic sentence that introduces the idea, follow the linking words (first, then, however, as a result, finally) and reference words (this, these, such), and end with the concluding sentence.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-4-1-se01
+    problem: 'Correct the punctuation: "my brother lives in harar he works at the university"'
+    steps:
+      - 'Capitals for "My" and the place name "Harar"; this is two sentences joined with nothing.'
+      - '"My brother lives in Harar. He works at the university." (or "...Harar, and he works...")'
+    answer: 'My brother lives in Harar. He works at the university.'
+  - uid: g12-english-4-1-se02
+    problem: 'Choose its or it''s: "The camel lifted ___ head. ___ very hot today."'
+    steps:
+      - 'Possession (the camel''s head) uses "its" with no apostrophe.'
+      - '"It is very hot" shortens to "It''s".'
+    answer: 'its; It''s'
+  - uid: g12-english-4-1-se03
+    problem: 'Add the ending: "stop + -ing", "make + -ing", "visit + -ed".'
+    steps:
+      - '"Stop" has a short stressed vowel + one consonant, so double it: stopping. "Make" drops the silent e: making.'
+      - '"Visit" has stress on the first syllable, so do not double: visited.'
+    answer: 'stopping, making, visited'
+
+flashcards:
+  - {uid: g12-english-4-1-fc01, term: Comma splice, definition: 'Two full sentences joined only by a comma (an error).'}
+  - {uid: g12-english-4-1-fc02, term: Possessive apostrophe, definition: 'the girl''s (one owner); the girls'' (more than one).'}
+  - {uid: g12-english-4-1-fc03, term: Its vs it's, definition: 'its = belonging to it; it''s = it is.'}
+  - {uid: g12-english-4-1-fc04, term: Their / there / they're, definition: 'belonging to them / place / they are.'}
+  - {uid: g12-english-4-1-fc05, term: Affect vs effect, definition: 'affect is usually a verb; effect is usually a noun.'}
+  - {uid: g12-english-4-1-fc06, term: Topic sentence, definition: 'Sentence that states the main idea of a paragraph.'}
+  - {uid: g12-english-4-1-fc07, term: Semicolon, definition: 'Joins two closely related full sentences.'}
+  - {uid: g12-english-4-1-fc08, term: Silent e rule, definition: 'Drop the e before a vowel suffix: make → making.'}
+
+questions:
+  - uid: g12-english-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which sentence uses capital letters correctly?'
+    options:
+      A: 'we visited lalibela in january.'
+      B: 'We visited Lalibela in January.'
+      C: 'We Visited Lalibela In January.'
+      D: 'We visited lalibela in january.'
+    answer: B
+    explanation: 'Capitals for the first word, the place name and the month.'
+
+  - uid: g12-english-4-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence is punctuated correctly?'
+    options:
+      A: 'We bought teff, maize, and, sorghum at the market.'
+      B: 'We bought, teff maize and sorghum at the market.'
+      C: 'We bought teff maize and sorghum, at the market.'
+      D: 'We bought teff, maize and sorghum at the market.'
+    answer: D
+    explanation: 'Commas separate the items in the list; no comma after "bought" or "and".'
+
+  - uid: g12-english-4-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence is NOT a comma splice?'
+    options:
+      A: 'It was raining, we stayed inside.'
+      B: 'It was raining, so we stayed inside.'
+      C: 'The bus was late, I missed the lesson.'
+      D: 'She studied hard, she passed.'
+    answer: B
+    explanation: 'A comma + "so" correctly joins two full sentences. The others join two sentences with a comma only.'
+
+  - uid: g12-english-4-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct word: "The dog wagged ______ tail."'
+    options:
+      A: 'its'
+      B: 'it''s'
+      C: 'their'
+      D: 'it is'
+    answer: A
+    explanation: '"Its" without an apostrophe shows possession.'
+
+  - uid: g12-english-4-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "The ______ dormitory is next to the library." (It belongs to many girls.)'
+    options:
+      A: 'girl''s'
+      B: 'girls'
+      C: 'girls'''
+      D: 'girl''s'''
+    answer: C
+    explanation: 'For a plural noun ending in -s, add the apostrophe after the s: girls''.'
+
+  - uid: g12-english-4-1-q006
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct word: "The students left ______ bags in the classroom."'
+    options:
+      A: 'there'
+      B: 'they''re'
+      C: 'their'
+      D: 'thier'
+    answer: C
+    explanation: '"Their" means belonging to them.'
+
+  - uid: g12-english-4-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct word: "______ going to win the match if they keep playing like this."'
+    options:
+      A: 'Their'
+      B: 'There'
+      C: 'Thier'
+      D: 'They''re'
+    answer: D
+    explanation: '"They''re" is short for "they are".'
+
+  - uid: g12-english-4-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct word: "The new law will ______ farmers in the lowlands."'
+    options:
+      A: 'affect'
+      B: 'effect'
+      C: 'effects'
+      D: 'affection'
+    answer: A
+    explanation: 'A verb is needed after "will"; "affect" is the verb.'
+
+  - uid: g12-english-4-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which word is spelled correctly?'
+    options:
+      A: 'recieve'
+      B: 'receive'
+      C: 'receeve'
+      D: 'resieve'
+    answer: B
+    explanation: '"I before e except after c": receive.'
+
+  - uid: g12-english-4-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which word is spelled correctly?'
+    options:
+      A: 'begining'
+      B: 'beggining'
+      C: 'beginning'
+      D: 'beginnig'
+    answer: C
+    explanation: 'The stress is on "-gin", so the n is doubled: beginning.'
+
+  - uid: g12-english-4-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which word is spelled correctly?'
+    options:
+      A: 'necessary'
+      B: 'neccessary'
+      C: 'necesary'
+      D: 'neccesary'
+    answer: A
+    explanation: 'One c, double s: necessary.'
+
+  - uid: g12-english-4-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Where should the comma go? "After the long journey the travellers rested."'
+    options:
+      A: 'After, the long journey the travellers rested.'
+      B: 'After the long, journey the travellers rested.'
+      C: 'After the long journey the travellers, rested.'
+      D: 'After the long journey, the travellers rested.'
+    answer: D
+    explanation: 'A comma follows an introductory phrase.'
+
+  - uid: g12-english-4-1-q013
+    type: true_false
+    difficulty: 1
+    stem: 'A direct question ends with a question mark: "Where do you live?"'
+    answer: true
+    explanation: 'Reported questions ("She asked where I lived.") end with a full stop.'
+
+  - uid: g12-english-4-1-q014
+    type: true_false
+    difficulty: 2
+    stem: '"It''s" always means "belonging to it".'
+    answer: false
+    explanation: '"It''s" means "it is" or "it has"; the possessive is "its".'
+
+  - uid: g12-english-4-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct word: "This tea is ______ hot to drink."'
+    options:
+      A: 'to'
+      B: 'too'
+      C: 'two'
+      D: 'tow'
+    answer: B
+    explanation: '"Too" means more than is wanted.'
+
+  - uid: g12-english-4-1-q016
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which words need a capital letter in all positions in a sentence? Choose all that apply.'
+    options:
+      A: 'Somali (the language)'
+      B: 'Wednesday'
+      C: 'Ethiopian'
+      D: 'river (as an ordinary noun)'
+    answer: [A, B, C]
+    explanation: 'Languages, days and nationalities always take capitals; an ordinary noun like "river" does not.'
+
+  - uid: g12-english-4-1-q017
+    type: single_choice
+    difficulty: 3
+    stem: 'Which sentence uses a semicolon correctly?'
+    options:
+      A: 'I like; mangoes and papayas.'
+      B: 'Because it rained; we stayed inside.'
+      C: 'The road was flooded; we had to wait until the water went down.'
+      D: 'She bought; bread, milk and eggs.'
+    answer: C
+    explanation: 'A semicolon joins two complete, closely related sentences.'
+
+  - uid: g12-english-4-1-q018
+    type: fill_in
+    difficulty: 1
+    stem: 'Add -ing to "make": ________.'
+    answer: [making]
+    explanation: 'Drop the silent e before a vowel suffix.'
+
+  - uid: g12-english-4-1-q019
+    type: fill_in
+    difficulty: 2
+    stem: 'Add -ed to "stop": ________.'
+    answer: [stopped]
+    explanation: 'Short stressed vowel + one consonant: double the consonant.'
+
+  - uid: g12-english-4-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence is punctuated correctly? (I have only one sister.)'
+    options:
+      A: 'My sister who lives in Gode, is a nurse.'
+      B: 'My sister, who lives in Gode, is a nurse.'
+      C: 'My sister, who lives in Gode is a nurse.'
+      D: 'My, sister who lives in Gode is a nurse.'
+    answer: B
+    explanation: 'A non-defining clause is set off by commas on both sides.'
+
+  - uid: g12-english-4-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct word: "Please put the books over ______ on the shelf."'
+    options:
+      A: 'their'
+      B: 'they''re'
+      C: 'theirs'
+      D: 'there'
+    answer: D
+    explanation: '"There" refers to a place.'
+
+  - uid: g12-english-4-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'The word "science" is an exception to the rule "i before e except after c".'
+    answer: true
+    explanation: 'In "science" the letters are "ie" after c.'
+
+  - uid: g12-english-4-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each punctuation mark with its use.'
+    left:
+      L1: 'Apostrophe'
+      L2: 'Question mark'
+      L3: 'Comma'
+    right:
+      R1: 'Ends a direct question'
+      R2: 'Separates items in a list'
+      R3: 'Shows possession or missing letters'
+      R4: 'Ends a sentence that shows strong feeling'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Strong feeling is shown by an exclamation mark, which is not in the list.'
+
+  - uid: g12-english-4-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these sentences in order to make a paragraph.'
+    items:
+      A: 'As a result, the girls no longer miss lessons to fetch water.'
+      B: 'Many dry villages struggle to find clean water.'
+      C: 'In one such village, girls used to walk three hours a day to a distant well.'
+      D: 'Last year, the community built a covered tank to store rainwater.'
+    answer: [B, C, D, A]
+    explanation: 'Topic sentence → an example of the problem ("one such village") → the solution → its result ("As a result").'
+
+  - uid: g12-english-4-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence is the best topic sentence for a paragraph about the benefits of reading?'
+    options:
+      A: 'I read a book yesterday.'
+      B: 'The library closes at five.'
+      C: 'Reading regularly improves vocabulary, knowledge and concentration.'
+      D: 'Some books are long.'
+    answer: C
+    explanation: 'A topic sentence states the main idea that the paragraph will develop.'
+
+  - uid: g12-english-4-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct sentence.'
+    options:
+      A: 'Your going to love this film.'
+      B: 'You''re going to love this film.'
+      C: 'Youre going to love this film.'
+      D: 'Your''e going to love this film.'
+    answer: B
+    explanation: '"You''re" = "you are".'
+
+  - uid: g12-english-4-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the correct plural possessive? (The books belong to several children.)'
+    options:
+      A: 'the childrens'' books'
+      B: 'the childs'' books'
+      C: 'the children''s books'
+      D: 'the childrens books'
+    answer: C
+    explanation: '"Children" is an irregular plural not ending in -s, so add ''s: children''s.'
+
+  - uid: g12-english-4-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main job of the last sentence of a paragraph?'
+    options:
+      A: 'To conclude or sum up the main idea'
+      B: 'To start a completely new topic'
+      C: 'To give the title'
+      D: 'To list the writer''s name'
+    answer: A
+    explanation: 'A concluding sentence rounds off the paragraph.'
+
+  - uid: g12-english-4-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which word is spelled correctly?'
+    options:
+      A: 'enviroment'
+      B: 'environmant'
+      C: 'envirenment'
+      D: 'environment'
+    answer: D
+    explanation: 'environment: en-vi-ron-ment.'
+
+  - uid: g12-english-4-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence uses an exclamation mark appropriately?'
+    options:
+      A: 'What a beautiful view!'
+      B: 'Where is the station!'
+      C: 'Could you help me!'
+      D: 'Is it raining outside!'
+    answer: A
+    explanation: 'Exclamations express strong feeling. B, C and D are questions, which need a question mark.'

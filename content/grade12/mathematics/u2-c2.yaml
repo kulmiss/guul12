@@ -1,0 +1,387 @@
+summary:
+  key_points:
+    - 'The derivative $f''(x)$ is the instantaneous rate of change of $f$ and the slope of the tangent line to $y = f(x)$.'
+    - 'Definition: $f''(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$, when this limit exists.'
+    - 'Power rule: $\frac{d}{dx} x^n = n x^{n-1}$ for any real $n$ (including negative and fractional powers).'
+    - 'The derivative of a constant is 0; constants multiply through; sums are differentiated term by term.'
+    - 'Product rule: $(fg)'' = f''g + fg''$. Quotient rule: $\left(\frac{f}{g}\right)'' = \frac{f''g - fg''}{g^2}$.'
+    - 'Chain rule: $\frac{d}{dx} f(g(x)) = f''(g(x)) \cdot g''(x)$, for example $\frac{d}{dx}(2x + 1)^3 = 3(2x + 1)^2 \cdot 2$.'
+    - 'The second derivative $f''''$ is the derivative of $f''$. If $s(t)$ is position, $s''$ is velocity and $s''''$ is acceleration.'
+    - 'A differentiable function is continuous, but a continuous function need not be differentiable (for example $|x|$ at 0).'
+  formulas:
+    - label: Definition of the derivative
+      latex: 'f''(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}'
+    - label: Power rule
+      latex: '\frac{d}{dx} x^n = n x^{n-1}'
+    - label: Product rule
+      latex: '(fg)'' = f''g + fg'''
+    - label: Quotient rule
+      latex: '\left(\frac{f}{g}\right)'' = \frac{f''g - fg''}{g^2}'
+    - label: Chain rule
+      latex: '\frac{d}{dx} f(g(x)) = f''(g(x))\, g''(x)'
+    - label: Tangent line at x = a
+      latex: 'y - f(a) = f''(a)(x - a)'
+
+solved_exercises:
+  - uid: g12-mathematics-2-2-se01
+    problem: 'Differentiate $f(x) = 4x^3 - \frac{2}{x} + 5$.'
+    steps:
+      - 'Write $\frac{2}{x}$ as $2x^{-1}$.'
+      - 'Power rule term by term: $12x^2 - 2(-1)x^{-2} + 0$.'
+      - '$f''(x) = 12x^2 + \frac{2}{x^2}$.'
+    answer: '$f''(x) = 12x^2 + \frac{2}{x^2}$'
+  - uid: g12-mathematics-2-2-se02
+    problem: 'Find the equation of the tangent line to $y = x^3 - 2x$ at $x = 1$.'
+    steps:
+      - 'Point: $y(1) = 1 - 2 = -1$, so $(1, -1)$.'
+      - 'Slope: $y'' = 3x^2 - 2$, so $y''(1) = 1$.'
+      - 'Tangent: $y - (-1) = 1(x - 1)$, so $y = x - 2$.'
+    answer: '$y = x - 2$'
+  - uid: g12-mathematics-2-2-se03
+    problem: 'Differentiate $y = (x^2 + 3)^5$.'
+    steps:
+      - 'Outer function $u^5$, inner function $u = x^2 + 3$.'
+      - 'Chain rule: $5u^4 \cdot u'' = 5(x^2 + 3)^4 \cdot 2x$.'
+      - '$y'' = 10x(x^2 + 3)^4$.'
+    answer: '$y'' = 10x(x^2 + 3)^4$'
+
+flashcards:
+  - {uid: g12-mathematics-2-2-fc01, term: Derivative, definition: 'The instantaneous rate of change of a function; the slope of its tangent line.'}
+  - {uid: g12-mathematics-2-2-fc02, term: Power rule, definition: '$\frac{d}{dx} x^n = n x^{n-1}$'}
+  - {uid: g12-mathematics-2-2-fc03, term: Product rule, definition: '$(fg)'' = f''g + fg''$'}
+  - {uid: g12-mathematics-2-2-fc04, term: Quotient rule, definition: '$\left(\frac{f}{g}\right)'' = \frac{f''g - fg''}{g^2}$'}
+  - {uid: g12-mathematics-2-2-fc05, term: Chain rule, definition: 'Derivative of the outer function at the inner one, times the derivative of the inner function.'}
+  - {uid: g12-mathematics-2-2-fc06, term: Second derivative, definition: 'The derivative of the derivative, $f''''(x)$.'}
+  - {uid: g12-mathematics-2-2-fc07, term: Velocity and acceleration, definition: 'If $s(t)$ is position, $v = s''(t)$ and $a = s''''(t)$.'}
+  - {uid: g12-mathematics-2-2-fc08, term: Tangent line, definition: 'The line through $(a, f(a))$ with slope $f''(a)$.'}
+  - {uid: g12-mathematics-2-2-fc09, term: Differentiable implies continuous, definition: 'If $f''(a)$ exists then $f$ is continuous at $a$; the converse is false.'}
+
+questions:
+  - uid: g12-mathematics-2-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is $\frac{d}{dx}\left(x^5\right)$?'
+    options:
+      A: '$5x^4$'
+      B: '$x^4$'
+      C: '$5x^5$'
+      D: '$\frac{x^6}{6}$'
+    answer: A
+    explanation: 'By the power rule, $\frac{d}{dx} x^5 = 5x^{5-1} = 5x^4$.'
+
+  - uid: g12-mathematics-2-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the derivative of $3x^2 - 4x + 7$?'
+    options:
+      A: '$3x - 4$'
+      B: '$6x - 4$'
+      C: '$6x + 7$'
+      D: '$6x - 4x + 7$'
+    answer: B
+    explanation: 'Term by term: $3 \cdot 2x - 4 + 0 = 6x - 4$.'
+
+  - uid: g12-mathematics-2-2-q003
+    type: numeric
+    difficulty: 1
+    stem: 'If $f(x) = 2x^3 - x$, what is $f''(1)$?'
+    answer: {value: 5, tolerance: 0}
+    explanation: '$f''(x) = 6x^2 - 1$, so $f''(1) = 6 - 1 = 5$.'
+
+  - uid: g12-mathematics-2-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the slope of the tangent line to $y = x^2$ at $x = 3$?'
+    options:
+      A: '9'
+      B: '3'
+      C: '6'
+      D: '2'
+    answer: C
+    explanation: '$y'' = 2x$, so at $x = 3$ the slope is $6$.'
+
+  - uid: g12-mathematics-2-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}\left(\frac{1}{x}\right)$?'
+    options:
+      A: '$\frac{1}{x^2}$'
+      B: '$\ln x$'
+      C: '$-\frac{1}{x}$'
+      D: '$-\frac{1}{x^2}$'
+    answer: D
+    explanation: '$\frac{1}{x} = x^{-1}$, and $\frac{d}{dx} x^{-1} = -1 \cdot x^{-2} = -\frac{1}{x^2}$.'
+
+  - uid: g12-mathematics-2-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}\left(\sqrt{x}\right)$ for $x > 0$?'
+    options:
+      A: '$\frac{1}{2\sqrt{x}}$'
+      B: '$2\sqrt{x}$'
+      C: '$\frac{1}{\sqrt{x}}$'
+      D: '$\frac{\sqrt{x}}{2}$'
+    answer: A
+    explanation: '$\sqrt{x} = x^{1/2}$, so the derivative is $\frac{1}{2}x^{-1/2} = \frac{1}{2\sqrt{x}}$.'
+
+  - uid: g12-mathematics-2-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}\left[x^2(x + 1)\right]$?'
+    options:
+      A: '$2x$'
+      B: '$3x^2 + 2x$'
+      C: '$2x(x + 1)$'
+      D: '$x^2 + 2x$'
+    answer: B
+    explanation: 'Product rule: $2x(x + 1) + x^2 \cdot 1 = 2x^2 + 2x + x^2 = 3x^2 + 2x$. (Or expand to $x^3 + x^2$ first.)'
+
+  - uid: g12-mathematics-2-2-q008
+    type: single_choice
+    difficulty: 3
+    stem: 'What is $\frac{d}{dx}\left(\frac{x}{x + 1}\right)$?'
+    options:
+      A: '$\frac{2x + 1}{(x + 1)^2}$'
+      B: '$1$'
+      C: '$\frac{1}{(x + 1)^2}$'
+      D: '$-\frac{1}{(x + 1)^2}$'
+    answer: C
+    explanation: 'Quotient rule: $\frac{1 \cdot (x + 1) - x \cdot 1}{(x + 1)^2} = \frac{1}{(x + 1)^2}$.'
+
+  - uid: g12-mathematics-2-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}(2x + 1)^3$?'
+    options:
+      A: '$3(2x + 1)^2$'
+      B: '$(2x + 1)^2$'
+      C: '$6(2x + 1)^3$'
+      D: '$6(2x + 1)^2$'
+    answer: D
+    explanation: 'Chain rule: $3(2x + 1)^2 \times 2 = 6(2x + 1)^2$. Forgetting the inner derivative 2 gives option A.'
+
+  - uid: g12-mathematics-2-2-q010
+    type: numeric
+    difficulty: 2
+    stem: 'If $f(x) = (x^2 + 1)^2$, what is $f''(1)$?'
+    answer: {value: 8, tolerance: 0}
+    explanation: '$f''(x) = 2(x^2 + 1) \cdot 2x = 4x(x^2 + 1)$. At $x = 1$: $4 \times 1 \times 2 = 8$.'
+
+  - uid: g12-mathematics-2-2-q011
+    type: true_false
+    difficulty: 1
+    stem: 'The derivative of a constant function is 0.'
+    answer: true
+    explanation: 'A constant does not change, so its rate of change is 0. Its graph is a horizontal line with slope 0.'
+
+  - uid: g12-mathematics-2-2-q012
+    type: true_false
+    difficulty: 2
+    stem: 'For differentiable functions, $(fg)'' = f'' \cdot g''$.'
+    answer: false
+    explanation: 'The product rule is $(fg)'' = f''g + fg''$. Example: $f = g = x$ gives $(x^2)'' = 2x$, but $f''g'' = 1$.'
+
+  - uid: g12-mathematics-2-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the equation of the tangent line to $y = x^2$ at the point $(1, 1)$?'
+    options:
+      A: '$y = 2x - 1$'
+      B: '$y = 2x + 1$'
+      C: '$y = x$'
+      D: '$y = 2x$'
+    answer: A
+    explanation: 'The slope is $y''(1) = 2$. So $y - 1 = 2(x - 1)$, which gives $y = 2x - 1$.'
+
+  - uid: g12-mathematics-2-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which limit defines $f''(x)$?'
+    options:
+      A: '$\lim_{h \to 0} \frac{f(x) - f(h)}{x - h}$'
+      B: '$\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$'
+      C: '$\lim_{h \to \infty} \frac{f(x + h) - f(x)}{h}$'
+      D: '$\lim_{h \to 0} \left(f(x + h) - f(x)\right)$'
+    answer: B
+    explanation: 'The derivative is the limit of the difference quotient $\frac{f(x + h) - f(x)}{h}$ as $h \to 0$.'
+
+  - uid: g12-mathematics-2-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'If $f(x) = x^4 - 2x^2$, what is $f''''(x)$?'
+    options:
+      A: '$4x^3 - 4x$'
+      B: '$12x^2$'
+      C: '$12x^2 - 4$'
+      D: '$12x - 4$'
+    answer: C
+    explanation: '$f''(x) = 4x^3 - 4x$, then $f''''(x) = 12x^2 - 4$.'
+
+  - uid: g12-mathematics-2-2-q016
+    type: numeric
+    difficulty: 2
+    stem: 'A body moves so that its position is $s(t) = t^3 - 2t$ metres after $t$ seconds. What is its velocity, in m/s, at $t = 2$?'
+    answer: {value: 10, tolerance: 0, unit: m/s}
+    explanation: '$v(t) = s''(t) = 3t^2 - 2$, so $v(2) = 12 - 2 = 10$ m/s.'
+
+  - uid: g12-mathematics-2-2-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}\left(5x^{-2}\right)$?'
+    options:
+      A: '$-10x^{-1}$'
+      B: '$10x^{-3}$'
+      C: '$-5x^{-3}$'
+      D: '$-10x^{-3}$'
+    answer: D
+    explanation: '$5 \cdot (-2) x^{-2-1} = -10x^{-3}$.'
+
+  - uid: g12-mathematics-2-2-q018
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which functions have derivative $f''(x) = 2x$? Choose all that apply.'
+    options:
+      A: '$x^2$'
+      B: '$x^2 + 7$'
+      C: '$2x^2$'
+      D: '$x^2 - \pi$'
+    answer: [A, B, D]
+    explanation: 'Adding a constant does not change the derivative, so $x^2$, $x^2 + 7$ and $x^2 - \pi$ all have derivative $2x$. $2x^2$ has derivative $4x$.'
+
+  - uid: g12-mathematics-2-2-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'The value $f''(a)$ is the ________ of the tangent line to $y = f(x)$ at $x = a$.'
+    answer: [slope, gradient]
+    explanation: 'The derivative at a point is the slope (gradient) of the tangent line there.'
+
+  - uid: g12-mathematics-2-2-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'What is $\frac{d}{dx}\left(\frac{x + 1}{x - 1}\right)$?'
+    options:
+      A: '$-\frac{2}{(x - 1)^2}$'
+      B: '$\frac{2}{(x - 1)^2}$'
+      C: '$1$'
+      D: '$\frac{2x}{(x - 1)^2}$'
+    answer: A
+    explanation: 'Quotient rule: $\frac{1 \cdot (x - 1) - (x + 1) \cdot 1}{(x - 1)^2} = \frac{-2}{(x - 1)^2}$.'
+
+  - uid: g12-mathematics-2-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}\left(x^{3/2}\right)$?'
+    options:
+      A: '$\frac{2}{3}x^{1/2}$'
+      B: '$\frac{3}{2}x^{1/2}$'
+      C: '$\frac{3}{2}x^{5/2}$'
+      D: '$x^{1/2}$'
+    answer: B
+    explanation: 'Power rule with $n = \frac{3}{2}$: $\frac{3}{2}x^{\frac{3}{2} - 1} = \frac{3}{2}x^{1/2}$.'
+
+  - uid: g12-mathematics-2-2-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each function with its derivative ($c$ and $n$ are constants).'
+    left:
+      L1: '$x^n$'
+      L2: '$c$'
+      L3: '$cx$'
+    right:
+      R1: '$0$'
+      R2: '$c$'
+      R3: '$n x^{n-1}$'
+      R4: '$\frac{x^{n+1}}{n + 1}$'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Power rule for $x^n$; a constant has derivative 0; $cx$ is a line with slope $c$. $\frac{x^{n+1}}{n+1}$ is an antiderivative, not a derivative.'
+
+  - uid: g12-mathematics-2-2-q023
+    type: ordering
+    difficulty: 3
+    stem: 'Find each derivative at $x = 1$ and put them in order from smallest to largest.'
+    items:
+      A: '$\frac{d}{dx} x^2$'
+      B: '$\frac{d}{dx} x^3$'
+      C: '$\frac{d}{dx} \sqrt{x}$'
+      D: '$\frac{d}{dx} \frac{1}{x}$'
+    answer: [D, C, A, B]
+    explanation: 'At $x = 1$: A $= 2$, B $= 3$, C $= \frac{1}{2}$, D $= -1$. In order: $-1, \frac{1}{2}, 2, 3$.'
+
+  - uid: g12-mathematics-2-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'What is $\frac{d}{dx}\left(x^2\sqrt{x}\right)$ for $x > 0$?'
+    options:
+      A: '$2x\sqrt{x}$'
+      B: '$\frac{1}{\sqrt{x}}$'
+      C: '$\frac{5}{2}x^{3/2}$'
+      D: '$\frac{5}{2}x^{5/2}$'
+    answer: C
+    explanation: '$x^2\sqrt{x} = x^{5/2}$, so the derivative is $\frac{5}{2}x^{3/2}$.'
+
+  - uid: g12-mathematics-2-2-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Which statement about $f(x) = |x|$ at $x = 0$ is true?'
+    options:
+      A: 'It is differentiable and $f''(0) = 0$.'
+      B: 'It is not continuous at 0.'
+      C: 'It is differentiable and $f''(0) = 1$.'
+      D: 'It is continuous at 0 but not differentiable there.'
+    answer: D
+    explanation: 'The graph has no break at 0, so $f$ is continuous. But the slope is $-1$ on the left and $1$ on the right (a sharp corner), so $f''(0)$ does not exist.'
+
+  - uid: g12-mathematics-2-2-q026
+    type: single_choice
+    difficulty: 1
+    stem: 'If $f(x) = 3x^2 + 2x$, what is $f''(-1)$?'
+    options:
+      A: '$-4$'
+      B: '$1$'
+      C: '$-8$'
+      D: '$4$'
+    answer: A
+    explanation: '$f''(x) = 6x + 2$, so $f''(-1) = -6 + 2 = -4$.'
+
+  - uid: g12-mathematics-2-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'The area of a square of side $s$ cm is $A = s^2$. How fast does the area change with respect to $s$ when $s = 5$ cm?'
+    options:
+      A: '25 cm² per cm'
+      B: '10 cm² per cm'
+      C: '5 cm² per cm'
+      D: '20 cm² per cm'
+    answer: B
+    explanation: '$\frac{dA}{ds} = 2s$, which is $10$ when $s = 5$.'
+
+  - uid: g12-mathematics-2-2-q028
+    type: true_false
+    difficulty: 2
+    stem: 'If $f$ is differentiable at $x = a$, then $f$ is continuous at $x = a$.'
+    answer: true
+    explanation: 'Differentiability is a stronger condition than continuity: every differentiable function is continuous at that point.'
+
+  - uid: g12-mathematics-2-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'If $y = (3x - 1)^4$, what is $\frac{dy}{dx}$ at $x = 1$?'
+    options:
+      A: '32'
+      B: '24'
+      C: '96'
+      D: '108'
+    answer: C
+    explanation: '$y'' = 4(3x - 1)^3 \times 3 = 12(3x - 1)^3$. At $x = 1$: $12 \times 2^3 = 96$.'
+
+  - uid: g12-mathematics-2-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'A car''s position is $s(t) = 4t^2 + 3t$ metres. What is its acceleration?'
+    options:
+      A: '$8t + 3$ m/s²'
+      B: '4 m/s²'
+      C: '3 m/s²'
+      D: '8 m/s²'
+    answer: D
+    explanation: 'Velocity $v = s''(t) = 8t + 3$; acceleration $a = s''''(t) = 8$ m/s², constant.'

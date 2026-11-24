@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Dry air is about 78% nitrogen, 21% oxygen, 0.9% argon and about 0.04% carbon dioxide. Weather happens in the lowest layer, the troposphere; the ozone layer is in the stratosphere above it.'
+    - 'Greenhouse effect: gases such as $\text{CO}_2$, methane ($\text{CH}_4$), water vapour and dinitrogen oxide ($\text{N}_2\text{O}$) absorb infrared radiation from the Earth and keep it warm. Burning fossil fuels and cutting forests add $\text{CO}_2$ and enhance this effect, causing global warming and climate change.'
+    - 'Ozone ($\text{O}_3$) in the stratosphere absorbs harmful ultraviolet light. CFCs release chlorine atoms there, which destroy ozone in a chain reaction. The Montreal Protocol (1987) phased out CFCs.'
+    - 'Acid rain: $\text{SO}_2$ (from burning sulfur-containing fuels) and nitrogen oxides (from hot engines) form $\text{H}_2\text{SO}_4$ and $\text{HNO}_3$ in clouds. Normal rain is slightly acidic (about pH 5.6) because of dissolved $\text{CO}_2$; acid rain is lower. It damages limestone buildings, forests, soils and lakes.'
+    - 'Carbon monoxide from incomplete combustion (e.g. charcoal stoves in closed rooms) binds to haemoglobin and stops blood carrying oxygen.'
+    - 'Water pollution: fertiliser run-off (nitrates, phosphates) causes eutrophication – algae grow, die and decay, using up dissolved oxygen so fish die. Heavy metals such as lead, mercury and cadmium are toxic and build up in food chains.'
+    - 'Drinking water treatment: coagulation (e.g. with alum), sedimentation, filtration and disinfection (e.g. chlorination).'
+    - 'Green chemistry designs processes that prevent waste, use safer chemicals and solvents, use renewable raw materials, save energy, use catalysts and make products that break down safely. Atom economy measures how much of the reactants ends up in the wanted product.'
+  formulas:
+    - label: Atom economy
+      latex: '\text{atom economy} = \frac{M_r(\text{desired product})}{\text{sum of } M_r(\text{all reactants})} \times 100\%'
+    - label: Acid rain (sulfur)
+      latex: '2\text{SO}_2 + \text{O}_2 + 2\text{H}_2\text{O} \rightarrow 2\text{H}_2\text{SO}_4'
+    - label: Ozone destruction by chlorine
+      latex: '\text{Cl} + \text{O}_3 \rightarrow \text{ClO} + \text{O}_2'
+
+solved_exercises:
+  - uid: g12-chemistry-5-1-se01
+    problem: 'Calcium oxide is made by $\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2$. Find the atom economy for CaO. (Ca = 40, C = 12, O = 16)'
+    steps:
+      - '$M_r(\text{CaCO}_3) = 100$; $M_r(\text{CaO}) = 56$.'
+      - 'Atom economy $= \frac{56}{100} \times 100\% = 56\%$. The rest becomes $\text{CO}_2$ waste.'
+    answer: '56%'
+  - uid: g12-chemistry-5-1-se02
+    problem: 'Explain why acid rain damages buildings made of limestone or marble.'
+    steps:
+      - 'Limestone and marble are calcium carbonate.'
+      - 'The acid reacts with it: $\text{CaCO}_3 + \text{H}_2\text{SO}_4 \rightarrow \text{CaSO}_4 + \text{H}_2\text{O} + \text{CO}_2$, slowly dissolving the stone.'
+    answer: 'The acid reacts with calcium carbonate.'
+  - uid: g12-chemistry-5-1-se03
+    problem: 'Why is it dangerous to use a charcoal stove (mandefiya) in a closed room?'
+    steps:
+      - 'With little air, charcoal burns incompletely: $2\text{C} + \text{O}_2 \rightarrow 2\text{CO}$.'
+      - 'Carbon monoxide is colourless and odourless and binds strongly to haemoglobin, so it can cause poisoning and death.'
+    answer: 'It produces carbon monoxide.'
+
+flashcards:
+  - {uid: g12-chemistry-5-1-fc01, term: Greenhouse gas, definition: 'Gas that absorbs infrared radiation, e.g. $\text{CO}_2$, $\text{CH}_4$, $\text{H}_2\text{O}$.'}
+  - {uid: g12-chemistry-5-1-fc02, term: Ozone layer, definition: 'Layer of $\text{O}_3$ in the stratosphere that absorbs UV light.'}
+  - {uid: g12-chemistry-5-1-fc03, term: CFCs, definition: 'Chlorofluorocarbons; release chlorine that destroys ozone.'}
+  - {uid: g12-chemistry-5-1-fc04, term: Acid rain, definition: 'Rain with pH below about 5.6, caused mainly by $\text{SO}_2$ and nitrogen oxides.'}
+  - {uid: g12-chemistry-5-1-fc05, term: Eutrophication, definition: 'Excess nutrients cause algal growth and oxygen loss in water.'}
+  - {uid: g12-chemistry-5-1-fc06, term: Carbon monoxide, definition: 'Toxic gas from incomplete combustion; blocks oxygen transport in blood.'}
+  - {uid: g12-chemistry-5-1-fc07, term: Green chemistry, definition: 'Designing chemical processes to reduce waste and hazards.'}
+  - {uid: g12-chemistry-5-1-fc08, term: Atom economy, definition: 'Percentage of reactant mass that ends up in the desired product.'}
+  - {uid: g12-chemistry-5-1-fc09, term: Bioaccumulation, definition: 'Build-up of a toxic substance in living things along a food chain.'}
+
+questions:
+  - uid: g12-chemistry-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which gas makes up the largest part of dry air?'
+    options:
+      A: 'Oxygen'
+      B: 'Nitrogen'
+      C: 'Carbon dioxide'
+      D: 'Argon'
+    answer: B
+    explanation: 'Nitrogen is about 78% of dry air; oxygen is about 21%.'
+
+  - uid: g12-chemistry-5-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'In which layer of the atmosphere is the ozone layer found?'
+    options:
+      A: 'Stratosphere'
+      B: 'Troposphere'
+      C: 'Thermosphere'
+      D: 'At ground level'
+    answer: A
+    explanation: 'Most ozone is in the stratosphere, roughly 15–35 km above the ground.'
+
+  - uid: g12-chemistry-5-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'What does the ozone layer protect living things from?'
+    options:
+      A: 'Infrared radiation'
+      B: 'Radio waves'
+      C: 'Harmful ultraviolet radiation'
+      D: 'Visible light'
+    answer: C
+    explanation: 'Ozone absorbs much of the Sun''s UV light, which causes skin cancer and eye damage.'
+
+  - uid: g12-chemistry-5-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Which substances are mainly responsible for destroying stratospheric ozone?'
+    options:
+      A: 'Nitrogen and oxygen'
+      B: 'Water vapour'
+      C: 'Argon'
+      D: 'Chlorofluorocarbons (CFCs)'
+    answer: D
+    explanation: 'UV light breaks CFCs, releasing chlorine atoms that destroy many ozone molecules each.'
+
+  - uid: g12-chemistry-5-1-q005
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are greenhouse gases? Choose all that apply.'
+    options:
+      A: 'Carbon dioxide'
+      B: 'Methane'
+      C: 'Nitrogen'
+      D: 'Water vapour'
+    answer: [A, B, D]
+    explanation: 'These gases absorb infrared radiation. Nitrogen ($\text{N}_2$) does not.'
+
+  - uid: g12-chemistry-5-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which human activity adds the most carbon dioxide to the atmosphere?'
+    options:
+      A: 'Burning fossil fuels'
+      B: 'Planting trees'
+      C: 'Using solar panels'
+      D: 'Recycling paper'
+    answer: A
+    explanation: 'Coal, oil and gas release $\text{CO}_2$ when burned; trees take $\text{CO}_2$ out of the air.'
+
+  - uid: g12-chemistry-5-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which two gases are the main causes of acid rain?'
+    options:
+      A: 'Oxygen and nitrogen'
+      B: 'Sulfur dioxide and nitrogen oxides'
+      C: 'Methane and carbon dioxide'
+      D: 'Ozone and argon'
+    answer: B
+    explanation: 'They react with water and oxygen in clouds to form sulfuric and nitric acids.'
+
+  - uid: g12-chemistry-5-1-q008
+    type: true_false
+    difficulty: 2
+    stem: 'Unpolluted rain water is slightly acidic.'
+    answer: true
+    explanation: 'Dissolved $\text{CO}_2$ forms weak carbonic acid, giving a pH of about 5.6.'
+
+  - uid: g12-chemistry-5-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does acid rain slowly damage statues made of marble?'
+    options:
+      A: 'Marble absorbs water and swells.'
+      B: 'Acid rain is very hot.'
+      C: 'The acid reacts with the calcium carbonate in marble.'
+      D: 'Marble is a metal that rusts.'
+    answer: C
+    explanation: '$\text{CaCO}_3 + 2\text{H}^+ \rightarrow \text{Ca}^{2+} + \text{H}_2\text{O} + \text{CO}_2$, so the stone dissolves.'
+
+  - uid: g12-chemistry-5-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Which gas is produced when charcoal burns in too little air?'
+    options:
+      A: 'Oxygen'
+      B: 'Hydrogen'
+      C: 'Nitrogen'
+      D: 'Carbon monoxide'
+    answer: D
+    explanation: 'Incomplete combustion gives CO, a poisonous gas.'
+
+  - uid: g12-chemistry-5-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is carbon monoxide poisonous?'
+    options:
+      A: 'It binds strongly to haemoglobin so blood cannot carry oxygen.'
+      B: 'It is a strong acid.'
+      C: 'It destroys the ozone layer.'
+      D: 'It is radioactive.'
+    answer: A
+    explanation: 'CO binds to haemoglobin about 200 times more strongly than oxygen.'
+
+  - uid: g12-chemistry-5-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the first cause of eutrophication in a lake?'
+    options:
+      A: 'Too much salt'
+      B: 'Too many fish'
+      C: 'Nitrates and phosphates from fertilisers washing into the water'
+      D: 'Cold weather'
+    answer: C
+    explanation: 'Extra nutrients make algae grow fast; when they die and decay, bacteria use up the dissolved oxygen.'
+
+  - uid: g12-chemistry-5-1-q013
+    type: ordering
+    difficulty: 2
+    stem: 'Put the stages of eutrophication in order.'
+    items:
+      A: 'Bacteria decompose dead algae and use up dissolved oxygen.'
+      B: 'Fertiliser nutrients enter a lake.'
+      C: 'Fish and other animals die from lack of oxygen.'
+      D: 'Algae grow very quickly and then die.'
+    answer: [B, D, A, C]
+    explanation: 'Nutrients → algal bloom → decay uses oxygen → animals die.'
+
+  - uid: g12-chemistry-5-1-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these heavy metals are toxic water pollutants? Choose all that apply.'
+    options:
+      A: 'Lead'
+      B: 'Mercury'
+      C: 'Cadmium'
+      D: 'Sodium'
+    answer: [A, B, C]
+    explanation: 'Lead, mercury and cadmium build up in the body. Sodium is not a heavy metal.'
+
+  - uid: g12-chemistry-5-1-q015
+    type: numeric
+    difficulty: 2
+    stem: 'Lime is made by $\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2$. What is the atom economy for making CaO, as a percentage? (Ca = 40, C = 12, O = 16)'
+    answer: {value: 56, tolerance: 0, unit: '%'}
+    explanation: '$\frac{56}{100} \times 100\% = 56\%$.'
+
+  - uid: g12-chemistry-5-1-q016
+    type: numeric
+    difficulty: 1
+    stem: 'Ethene and hydrogen react to form ethane: $\text{C}_2\text{H}_4 + \text{H}_2 \rightarrow \text{C}_2\text{H}_6$. What is the atom economy, as a percentage?'
+    answer: {value: 100, tolerance: 0, unit: '%'}
+    explanation: 'There is only one product, so all the reactant atoms end up in it: 100%.'
+
+  - uid: g12-chemistry-5-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is a principle of green chemistry?'
+    options:
+      A: 'Use as much solvent as possible.'
+      B: 'Prevent waste instead of treating it afterwards.'
+      C: 'Use toxic chemicals whenever they are cheaper.'
+      D: 'Design products that never break down.'
+    answer: B
+    explanation: 'Green chemistry aims to prevent waste, use safer substances and make products that degrade safely.'
+
+  - uid: g12-chemistry-5-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'In green chemistry, why are catalysts preferred to using large amounts of reagents?'
+    options:
+      A: 'Catalysts are used up completely.'
+      B: 'Catalysts make reactions slower and safer.'
+      C: 'Catalysts always make the product cheaper to sell.'
+      D: 'Catalysts are not used up and can lower the energy needed.'
+    answer: D
+    explanation: 'A catalyst is reused many times and lets reactions run at lower temperatures, saving energy and waste.'
+
+  - uid: g12-chemistry-5-1-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Which international agreement phased out CFCs to protect the ozone layer?'
+    options:
+      A: 'The Montreal Protocol'
+      B: 'The Kyoto Protocol'
+      C: 'The Geneva Convention'
+      D: 'The Paris Agreement'
+    answer: A
+    explanation: 'The Montreal Protocol (1987) is widely seen as one of the most successful environmental treaties.'
+
+  - uid: g12-chemistry-5-1-q020
+    type: true_false
+    difficulty: 1
+    stem: 'Cutting down forests increases the amount of carbon dioxide in the air.'
+    answer: true
+    explanation: 'Fewer trees remove less $\text{CO}_2$ by photosynthesis, and burning the wood releases more.'
+
+  - uid: g12-chemistry-5-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'In drinking-water treatment, what is the purpose of adding chlorine?'
+    options:
+      A: 'To remove mud'
+      B: 'To make the water taste sweet'
+      C: 'To kill harmful microorganisms'
+      D: 'To add minerals'
+    answer: C
+    explanation: 'Chlorination disinfects water. Mud is removed earlier by coagulation, settling and filtration.'
+
+  - uid: g12-chemistry-5-1-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is alum added at an early stage of water treatment?'
+    options:
+      A: 'To kill bacteria'
+      B: 'To make tiny suspended particles clump together so they settle'
+      C: 'To soften the water'
+      D: 'To add fluoride'
+    answer: B
+    explanation: 'Alum acts as a coagulant: small particles stick together into larger flocs that sink.'
+
+  - uid: g12-chemistry-5-1-q023
+    type: fill_in
+    difficulty: 1
+    stem: 'The warming of the Earth caused by gases that trap infrared radiation is called the ________ effect.'
+    answer: [greenhouse, enhanced greenhouse]
+    explanation: 'The natural effect keeps Earth warm; extra greenhouse gases make it stronger.'
+
+  - uid: g12-chemistry-5-1-q024
+    type: fill_in
+    difficulty: 2
+    stem: 'The process in which nutrients from fertilisers cause algae to grow and oxygen to run out in a lake is called ________.'
+    answer: [eutrophication]
+    explanation: 'It is a common result of farm run-off.'
+
+  - uid: g12-chemistry-5-1-q025
+    type: true_false
+    difficulty: 2
+    stem: 'Ozone at ground level is harmless and useful to people.'
+    answer: false
+    explanation: 'Ground-level ozone, formed in photochemical smog, irritates the lungs and eyes. Only stratospheric ozone is protective.'
+
+  - uid: g12-chemistry-5-1-q026
+    type: matching
+    difficulty: 2
+    stem: 'Match each pollutant with its main harmful effect.'
+    left:
+      L1: 'CFCs'
+      L2: 'Sulfur dioxide'
+      L3: 'Carbon dioxide'
+    right:
+      R1: 'Acid rain'
+      R2: 'Enhanced greenhouse effect'
+      R3: 'Depletion of the ozone layer'
+      R4: 'Making water hard'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Water hardness is caused by calcium and magnesium ions, not by these pollutants.'
+
+  - uid: g12-chemistry-5-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'A pesticide does not break down easily and is stored in body fat. What happens to its concentration as it moves up a food chain?'
+    options:
+      A: 'It increases at each level.'
+      B: 'It decreases at each level.'
+      C: 'It stays the same.'
+      D: 'It disappears at the first level.'
+    answer: A
+    explanation: 'Each predator eats many prey, so the substance builds up (biomagnification), as happened with DDT.'
+
+  - uid: g12-chemistry-5-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these would most reduce acid rain from a coal power station?'
+    options:
+      A: 'Building a taller chimney'
+      B: 'Burning more coal'
+      C: 'Removing sulfur dioxide from waste gases before release'
+      D: 'Painting the chimney white'
+    answer: C
+    explanation: 'Flue-gas desulfurisation (for example, reacting $\text{SO}_2$ with limestone) removes the acidic gas; a tall chimney only spreads it further.'
+
+  - uid: g12-chemistry-5-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is a renewable raw material, as preferred in green chemistry?'
+    options:
+      A: 'Crude oil'
+      B: 'Coal'
+      C: 'Natural gas'
+      D: 'Plant material such as sugarcane'
+    answer: D
+    explanation: 'Plants can be regrown; fossil fuels take millions of years to form.'
+
+  - uid: g12-chemistry-5-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is the best way to lower carbon monoxide risk at home?'
+    options:
+      A: 'Use charcoal stoves only in well-ventilated places.'
+      B: 'Close all windows while cooking with charcoal.'
+      C: 'Burn charcoal in a small closed room.'
+      D: 'Use more charcoal at once.'
+    answer: A
+    explanation: 'Good ventilation gives enough oxygen for complete combustion and carries any CO away.'

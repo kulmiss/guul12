@@ -1,0 +1,385 @@
+summary:
+  key_points:
+    - 'A sequence is a list of numbers in a fixed order. Each number is a term; $a_n$ is the $n$th term.'
+    - 'A sequence can be given by a general term (for example $a_n = 3n + 2$) or by a recursive rule (for example $a_1 = 2$, $a_{n+1} = 3a_n - 1$).'
+    - 'Arithmetic sequence: the same number $d$ (the common difference) is added each time.'
+    - 'Geometric sequence: each term is multiplied by the same number $r$ (the common ratio), $r \neq 0$.'
+    - 'To test a sequence: equal differences mean arithmetic; equal ratios mean geometric.'
+    - 'The arithmetic mean of $a$ and $b$ is $\frac{a+b}{2}$; the geometric mean of two positive numbers is $\sqrt{ab}$.'
+    - 'Growth by a fixed percent (savings, population) is geometric; growth by a fixed amount is arithmetic.'
+  formulas:
+    - label: nth term of an arithmetic sequence
+      latex: 'a_n = a_1 + (n-1)d'
+    - label: nth term of a geometric sequence
+      latex: 'a_n = a_1 r^{n-1}'
+    - label: Number of terms from a_1 to a_n (arithmetic)
+      latex: 'n = \frac{a_n - a_1}{d} + 1'
+    - label: Three terms in arithmetic sequence
+      latex: '2b = a + c'
+    - label: Three terms in geometric sequence
+      latex: 'b^2 = ac'
+
+solved_exercises:
+  - uid: g12-mathematics-1-1-se01
+    problem: 'The 4th term of an arithmetic sequence is 17 and the 9th term is 42. Find the first term and the common difference.'
+    steps:
+      - 'Write both terms with the formula: $a_1 + 3d = 17$ and $a_1 + 8d = 42$.'
+      - 'Subtract the first equation from the second: $5d = 25$, so $d = 5$.'
+      - 'Put $d = 5$ back: $a_1 + 15 = 17$, so $a_1 = 2$.'
+    answer: '$a_1 = 2$ and $d = 5$.'
+  - uid: g12-mathematics-1-1-se02
+    problem: 'A geometric sequence has $a_1 = 5$ and $a_4 = 40$. Find the common ratio and the 6th term.'
+    steps:
+      - 'Use $a_4 = a_1 r^3$: $40 = 5r^3$, so $r^3 = 8$ and $r = 2$.'
+      - '$a_6 = a_1 r^5 = 5 \times 2^5 = 5 \times 32 = 160$.'
+    answer: '$r = 2$ and $a_6 = 160$.'
+  - uid: g12-mathematics-1-1-se03
+    problem: 'A town in the Somali Region has 20 000 people and grows by 10% each year. How many people will it have after 3 years?'
+    steps:
+      - 'Growing by 10% means multiplying by 1.1 each year, so the populations form a geometric sequence with $r = 1.1$.'
+      - 'After 3 years: $20\,000 \times 1.1^3$.'
+      - '$1.1^2 = 1.21$ and $1.21 \times 1.1 = 1.331$.'
+      - '$20\,000 \times 1.331 = 26\,620$.'
+    answer: 'About 26 620 people.'
+
+flashcards:
+  - {uid: g12-mathematics-1-1-fc01, term: Sequence, definition: 'A list of numbers written in a definite order.'}
+  - {uid: g12-mathematics-1-1-fc02, term: General term, definition: 'A formula for $a_n$ that gives any term from its position $n$.'}
+  - {uid: g12-mathematics-1-1-fc03, term: Recursive rule, definition: 'A rule that gives each term from the term or terms before it.'}
+  - {uid: g12-mathematics-1-1-fc04, term: Arithmetic sequence, definition: 'A sequence with a constant difference $d$ between consecutive terms.'}
+  - {uid: g12-mathematics-1-1-fc05, term: Common difference, definition: '$d = a_{n+1} - a_n$, the same for every $n$ in an arithmetic sequence.'}
+  - {uid: g12-mathematics-1-1-fc06, term: Geometric sequence, definition: 'A sequence with a constant ratio $r$ between consecutive terms.'}
+  - {uid: g12-mathematics-1-1-fc07, term: Common ratio, definition: '$r = \frac{a_{n+1}}{a_n}$, the same for every $n$ in a geometric sequence.'}
+  - {uid: g12-mathematics-1-1-fc08, term: Arithmetic mean, definition: 'The middle term between $a$ and $b$ in an arithmetic sequence: $\frac{a+b}{2}$.'}
+  - {uid: g12-mathematics-1-1-fc09, term: Geometric mean, definition: 'The middle term between positive $a$ and $b$ in a geometric sequence: $\sqrt{ab}$.'}
+  - {uid: g12-mathematics-1-1-fc10, term: Finite and infinite sequences, definition: 'A finite sequence has a last term; an infinite sequence goes on without end.'}
+
+questions:
+  - uid: g12-mathematics-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which formula gives the $n$th term of the sequence $5, 8, 11, 14, \dots$?'
+    options:
+      A: '$a_n = 3n + 5$'
+      B: '$a_n = 3n + 2$'
+      C: '$a_n = 5n + 3$'
+      D: '$a_n = n + 4$'
+    answer: B
+    explanation: 'The terms go up by 3, so $a_n = 3n + c$. When $n = 1$ the term is 5, so $3 + c = 5$ and $c = 2$. Check: $a_2 = 8$.'
+
+  - uid: g12-mathematics-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the 20th term of the arithmetic sequence $4, 9, 14, \dots$?'
+    options:
+      A: '95'
+      B: '104'
+      C: '99'
+      D: '100'
+    answer: C
+    explanation: 'Here $a_1 = 4$ and $d = 5$. So $a_{20} = 4 + 19 \times 5 = 4 + 95 = 99$.'
+
+  - uid: g12-mathematics-1-1-q003
+    type: numeric
+    difficulty: 2
+    stem: 'In an arithmetic sequence, $a_3 = 11$ and $a_7 = 27$. What is $a_1$?'
+    answer: {value: 3, tolerance: 0}
+    explanation: 'From $a_3$ to $a_7$ there are 4 steps: $4d = 27 - 11 = 16$, so $d = 4$. Then $a_1 = a_3 - 2d = 11 - 8 = 3$.'
+
+  - uid: g12-mathematics-1-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the 8th term of the geometric sequence $3, 6, 12, \dots$?'
+    options:
+      A: '768'
+      B: '192'
+      C: '256'
+      D: '384'
+    answer: D
+    explanation: '$a_1 = 3$ and $r = 2$, so $a_8 = 3 \times 2^7 = 3 \times 128 = 384$.'
+
+  - uid: g12-mathematics-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the common ratio of the geometric sequence $81, -27, 9, -3, \dots$?'
+    options:
+      A: '$-\frac{1}{3}$'
+      B: '$\frac{1}{3}$'
+      C: '$-3$'
+      D: '$3$'
+    answer: A
+    explanation: '$r = \frac{-27}{81} = -\frac{1}{3}$. Check: $9 \times \left(-\frac{1}{3}\right) = -3$.'
+
+  - uid: g12-mathematics-1-1-q006
+    type: true_false
+    difficulty: 1
+    stem: 'The sequence $2, 4, 8, 14, \dots$ is an arithmetic sequence.'
+    answer: false
+    explanation: 'The differences are 2, 4 and 6. They are not equal, so the sequence is not arithmetic.'
+
+  - uid: g12-mathematics-1-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Which of these sequences is geometric?'
+    options:
+      A: '$1, 4, 9, 16, \dots$'
+      B: '$2, 6, 18, 54, \dots$'
+      C: '$5, 10, 15, 20, \dots$'
+      D: '$1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots$'
+    answer: B
+    explanation: 'In $2, 6, 18, 54$ each term is 3 times the one before, so the ratio is constant. The others have no constant ratio.'
+
+  - uid: g12-mathematics-1-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'A sequence is defined by $a_1 = 2$ and $a_{n+1} = 3a_n - 1$. What is $a_4$?'
+    options:
+      A: '41'
+      B: '40'
+      C: '122'
+      D: '14'
+    answer: A
+    explanation: '$a_2 = 3(2) - 1 = 5$, $a_3 = 3(5) - 1 = 14$, $a_4 = 3(14) - 1 = 41$.'
+
+  - uid: g12-mathematics-1-1-q009
+    type: numeric
+    difficulty: 2
+    stem: 'How many terms does the arithmetic sequence $7, 11, 15, \dots, 99$ have?'
+    answer: {value: 24, tolerance: 0}
+    explanation: 'Use $n = \frac{a_n - a_1}{d} + 1 = \frac{99 - 7}{4} + 1 = 23 + 1 = 24$.'
+
+  - uid: g12-mathematics-1-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which general term fits the sequence $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \dots$?'
+    options:
+      A: '$a_n = \frac{1}{2n}$'
+      B: '$a_n = 2^{1-n}$'
+      C: '$a_n = \frac{1}{n^2}$'
+      D: '$a_n = \left(\frac{1}{2}\right)^n$'
+    answer: D
+    explanation: 'Each term is half of the one before and $a_1 = \frac{1}{2}$, so $a_n = \left(\frac{1}{2}\right)^n$. Option B gives $a_1 = 1$, and A gives $\frac{1}{6}$ as the 3rd term.'
+
+  - uid: g12-mathematics-1-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'If $a_n = n^2 - n$, what is $a_5$?'
+    options:
+      A: '25'
+      B: '30'
+      C: '20'
+      D: '15'
+    answer: C
+    explanation: '$a_5 = 5^2 - 5 = 25 - 5 = 20$.'
+
+  - uid: g12-mathematics-1-1-q012
+    type: multiple_answers
+    difficulty: 3
+    stem: 'Which of these sequences are arithmetic? Choose all that apply.'
+    options:
+      A: '$10, 7, 4, 1, \dots$'
+      B: '$1, 2, 4, 8, \dots$'
+      C: '$-3, -3, -3, -3, \dots$'
+      D: '$2, 5, 9, 14, \dots$'
+    answer: [A, C]
+    explanation: 'In A the difference is always $-3$. In C the difference is always 0, which is allowed. B has ratio 2 (geometric) and D has differences 3, 4, 5.'
+
+  - uid: g12-mathematics-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the positive geometric mean of 4 and 36?'
+    options:
+      A: '12'
+      B: '20'
+      C: '16'
+      D: '18'
+    answer: A
+    explanation: 'The geometric mean is $\sqrt{4 \times 36} = \sqrt{144} = 12$. Check: $4, 12, 36$ has ratio 3.'
+
+  - uid: g12-mathematics-1-1-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'What number must go between 7 and 19 so that the three numbers form an arithmetic sequence?'
+    options:
+      A: '12'
+      B: '26'
+      C: '14'
+      D: '13'
+    answer: D
+    explanation: 'The middle term is the arithmetic mean: $\frac{7 + 19}{2} = 13$. Check: $7, 13, 19$ has difference 6.'
+
+  - uid: g12-mathematics-1-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'A sequence in which the same number is added to get each next term is called an ________ sequence.'
+    answer: [arithmetic]
+    explanation: 'Adding a fixed number (the common difference) each time gives an arithmetic sequence.'
+
+  - uid: g12-mathematics-1-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Hodan saves 50 birr in the first week and 10 birr more each week than the week before. How much does she save in week 12?'
+    options:
+      A: '170 birr'
+      B: '120 birr'
+      C: '160 birr'
+      D: '150 birr'
+    answer: C
+    explanation: 'The weekly savings form an arithmetic sequence with $a_1 = 50$ and $d = 10$. So $a_{12} = 50 + 11 \times 10 = 160$ birr.'
+
+  - uid: g12-mathematics-1-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'A colony of 500 bacteria doubles every hour. How many bacteria are there after 5 hours?'
+    options:
+      A: '2 500'
+      B: '16 000'
+      C: '8 000'
+      D: '32 000'
+    answer: B
+    explanation: 'After each hour multiply by 2. After 5 hours: $500 \times 2^5 = 500 \times 32 = 16\,000$.'
+
+  - uid: g12-mathematics-1-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'If the first term of a geometric sequence is positive and the common ratio $r$ satisfies $0 < r < 1$, the terms get smaller.'
+    answer: true
+    explanation: 'Multiplying a positive number by a number between 0 and 1 makes it smaller, so every term is smaller than the one before.'
+
+  - uid: g12-mathematics-1-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'In a geometric sequence $a_2 = 6$ and $a_5 = 162$. What is $a_1$?'
+    options:
+      A: '2'
+      B: '3'
+      C: '6'
+      D: '1'
+    answer: A
+    explanation: 'From $a_2$ to $a_5$ there are 3 steps: $r^3 = \frac{162}{6} = 27$, so $r = 3$. Then $a_1 = \frac{a_2}{r} = \frac{6}{3} = 2$.'
+
+  - uid: g12-mathematics-1-1-q020
+    type: numeric
+    difficulty: 3
+    stem: 'For what value of $x$ are $x - 2$, $x + 4$ and $3x + 2$ consecutive terms of an arithmetic sequence?'
+    answer: {value: 4, tolerance: 0}
+    explanation: 'The middle term is the mean of the other two: $2(x + 4) = (x - 2) + (3x + 2)$, so $2x + 8 = 4x$ and $x = 4$. The terms are 2, 8, 14.'
+
+  - uid: g12-mathematics-1-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Which term of the sequence $3, 7, 11, 15, \dots$ is equal to 83?'
+    options:
+      A: 'The 20th term'
+      B: 'The 22nd term'
+      C: 'The 19th term'
+      D: 'The 21st term'
+    answer: D
+    explanation: 'Solve $3 + (n - 1) \times 4 = 83$: $4(n - 1) = 80$, $n - 1 = 20$, $n = 21$.'
+
+  - uid: g12-mathematics-1-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each sequence with its general term.'
+    left:
+      L1: '$2, 5, 8, 11, \dots$'
+      L2: '$2, 4, 8, 16, \dots$'
+      L3: '$1, 4, 9, 16, \dots$'
+    right:
+      R1: '$a_n = n^2$'
+      R2: '$a_n = 3n - 1$'
+      R3: '$a_n = 2^n$'
+      R4: '$a_n = 2n$'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: '$3n - 1$ gives 2, 5, 8, 11. $2^n$ gives 2, 4, 8, 16. $n^2$ gives 1, 4, 9, 16. $2n$ gives 2, 4, 6, 8, which is none of them.'
+
+  - uid: g12-mathematics-1-1-q023
+    type: ordering
+    difficulty: 3
+    stem: 'For $a_n = (-1)^n n$, put the terms in order from smallest to largest.'
+    items:
+      A: '$a_1$'
+      B: '$a_2$'
+      C: '$a_3$'
+      D: '$a_4$'
+    answer: [C, A, B, D]
+    explanation: '$a_1 = -1$, $a_2 = 2$, $a_3 = -3$, $a_4 = 4$. From smallest: $-3, -1, 2, 4$, that is $a_3, a_1, a_2, a_4$.'
+
+  - uid: g12-mathematics-1-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement describes the sequence $a_n = 5 - 2n$?'
+    options:
+      A: 'Increasing arithmetic sequence with $d = 2$'
+      B: 'Geometric sequence with $r = -2$'
+      C: 'Decreasing arithmetic sequence with $d = -2$'
+      D: 'Neither arithmetic nor geometric'
+    answer: C
+    explanation: '$a_{n+1} - a_n = (5 - 2(n+1)) - (5 - 2n) = -2$. The difference is constant and negative, so the sequence is arithmetic and decreasing: 3, 1, $-1$, …'
+
+  - uid: g12-mathematics-1-1-q025
+    type: single_choice
+    difficulty: 1
+    stem: 'A sequence starts $1, 1$ and every later term is the sum of the two terms before it. What is the 7th term?'
+    options:
+      A: '8'
+      B: '13'
+      C: '21'
+      D: '11'
+    answer: B
+    explanation: 'The terms are 1, 1, 2, 3, 5, 8, 13. The 7th term is 13.'
+
+  - uid: g12-mathematics-1-1-q026
+    type: single_choice
+    difficulty: 1
+    stem: 'A geometric sequence has $a_1 = 1000$ and $r = \frac{1}{10}$. What is $a_4$?'
+    options:
+      A: '10'
+      B: '0.1'
+      C: '100'
+      D: '1'
+    answer: D
+    explanation: '$a_4 = 1000 \times \left(\frac{1}{10}\right)^3 = \frac{1000}{1000} = 1$.'
+
+  - uid: g12-mathematics-1-1-q027
+    type: multiple_answers
+    difficulty: 3
+    stem: 'Which statements about the sequence $2, -4, 8, -16, \dots$ are true? Choose all that apply.'
+    options:
+      A: 'It is geometric with $r = -2$.'
+      B: 'Its 6th term is $-64$.'
+      C: 'It is arithmetic.'
+      D: 'Every term in an odd position is positive.'
+    answer: [A, B, D]
+    explanation: 'Each term is $-2$ times the one before, so A is true and C is false. $a_6 = 2 \times (-2)^5 = -64$, so B is true. $a_n = 2(-2)^{n-1}$ is positive when $n - 1$ is even, that is when $n$ is odd, so D is true.'
+
+  - uid: g12-mathematics-1-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'A minibus worth 400 000 birr loses 25% of its value every year. What is it worth after 2 years?'
+    options:
+      A: '225 000 birr'
+      B: '200 000 birr'
+      C: '250 000 birr'
+      D: '300 000 birr'
+    answer: A
+    explanation: 'Losing 25% leaves 75%, so multiply by 0.75 each year: $400\,000 \times 0.75 = 300\,000$, then $300\,000 \times 0.75 = 225\,000$ birr.'
+
+  - uid: g12-mathematics-1-1-q029
+    type: fill_in
+    difficulty: 1
+    stem: 'In a geometric sequence, the fixed number that each term is multiplied by is called the common ________.'
+    answer: [ratio]
+    explanation: 'The common ratio $r = \frac{a_{n+1}}{a_n}$ is the same for every pair of consecutive terms.'
+
+  - uid: g12-mathematics-1-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'For the sequence $a_n = 2n + 3$, what is $a_{n+1} - a_n$?'
+    options:
+      A: '3'
+      B: '$2n$'
+      C: '2'
+      D: '5'
+    answer: C
+    explanation: '$a_{n+1} - a_n = (2(n+1) + 3) - (2n + 3) = 2$. The difference is the same for all $n$, so the sequence is arithmetic with $d = 2$.'

@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'A linear inequality in two variables, such as $2x + y \le 6$, is satisfied by a whole region of the plane.'
+    - 'To graph it: draw the boundary line (solid for $\le$ or $\ge$, dashed for $<$ or $>$), test a point not on the line, and shade the side where the test point works.'
+    - 'Multiplying or dividing an inequality by a negative number reverses the inequality sign.'
+    - 'Words to symbols: "at most" is $\le$, "at least" is $\ge$, "more than" is $>$, "less than" is $<$.'
+    - 'A system of inequalities is satisfied in the overlap of all its regions: the feasible region.'
+    - 'The corner points (vertices) of the feasible region are where boundary lines meet; find them by solving pairs of equations.'
+    - 'A feasible region can be bounded (closed, like a triangle), unbounded, or empty when the constraints contradict each other.'
+  formulas:
+    - label: Intercepts of ax + by = c
+      latex: '\left(\frac{c}{a}, 0\right) \text{ and } \left(0, \frac{c}{b}\right)'
+    - label: Slope-intercept form
+      latex: 'y = mx + b'
+    - label: Non-negativity constraints
+      latex: 'x \ge 0, \quad y \ge 0'
+
+solved_exercises:
+  - uid: g12-mathematics-4-1-se01
+    problem: 'Graph $3x + 2y \le 12$ with $x \ge 0$ and $y \ge 0$ and list the corner points.'
+    steps:
+      - 'Boundary $3x + 2y = 12$ meets the axes at $(4, 0)$ and $(0, 6)$. Draw it solid.'
+      - 'Test $(0, 0)$: $0 \le 12$ is true, so shade the side containing the origin.'
+      - 'With $x \ge 0$ and $y \ge 0$ the region is the triangle with corners $(0, 0)$, $(4, 0)$ and $(0, 6)$.'
+    answer: 'Corner points $(0, 0)$, $(4, 0)$, $(0, 6)$.'
+  - uid: g12-mathematics-4-1-se02
+    problem: 'Solve $5 - 2x > 11$.'
+    steps:
+      - 'Subtract 5: $-2x > 6$.'
+      - 'Divide by $-2$ and reverse the sign: $x < -3$.'
+    answer: '$x < -3$'
+  - uid: g12-mathematics-4-1-se03
+    problem: 'A trader buys sacks of rice ($x$) at 400 birr and sacks of flour ($y$) at 500 birr. She has at most 10 000 birr and can store at most 22 sacks. Write the constraints.'
+    steps:
+      - 'Money: $400x + 500y \le 10\,000$, which simplifies to $4x + 5y \le 100$.'
+      - 'Storage: $x + y \le 22$.'
+      - 'Amounts cannot be negative: $x \ge 0$, $y \ge 0$.'
+    answer: '$4x + 5y \le 100$, $x + y \le 22$, $x \ge 0$, $y \ge 0$'
+
+flashcards:
+  - {uid: g12-mathematics-4-1-fc01, term: Linear inequality, definition: 'An inequality like $ax + by \le c$; its solutions form a half-plane.'}
+  - {uid: g12-mathematics-4-1-fc02, term: Boundary line, definition: 'The line $ax + by = c$; solid if included ($\le, \ge$), dashed if not ($<, >$).'}
+  - {uid: g12-mathematics-4-1-fc03, term: Test point, definition: 'A point not on the boundary used to decide which side to shade.'}
+  - {uid: g12-mathematics-4-1-fc04, term: Feasible region, definition: 'The set of points that satisfy every constraint.'}
+  - {uid: g12-mathematics-4-1-fc05, term: Corner point, definition: 'A vertex of the feasible region where two boundary lines meet.'}
+  - {uid: g12-mathematics-4-1-fc06, term: Reversing the sign, definition: 'Multiplying or dividing by a negative number flips $<$ to $>$ and $\le$ to $\ge$.'}
+  - {uid: g12-mathematics-4-1-fc07, term: Bounded region, definition: 'A feasible region that can be enclosed in a circle.'}
+  - {uid: g12-mathematics-4-1-fc08, term: Non-negativity constraints, definition: '$x \ge 0$ and $y \ge 0$: amounts cannot be negative.'}
+
+questions:
+  - uid: g12-mathematics-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which point satisfies $2x + y \le 6$?'
+    options:
+      A: '$(3, 1)$'
+      B: '$(0, 7)$'
+      C: '$(1, 2)$'
+      D: '$(4, 0)$'
+    answer: C
+    explanation: '$2(1) + 2 = 4 \le 6$. The others give 7, 7 and 8, which are greater than 6.'
+
+  - uid: g12-mathematics-4-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'How is the graph of $y > 2x + 1$ drawn?'
+    options:
+      A: 'Dashed line $y = 2x + 1$, shade above it'
+      B: 'Solid line $y = 2x + 1$, shade above it'
+      C: 'Dashed line $y = 2x + 1$, shade below it'
+      D: 'Solid line $y = 2x + 1$, shade below it'
+    answer: A
+    explanation: 'The sign $>$ does not include the line, so it is dashed. Points with $y$ bigger than $2x + 1$ lie above the line.'
+
+  - uid: g12-mathematics-4-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'A bus must carry at least 5 passengers to make a trip. Which inequality describes the number of passengers $x$?'
+    options:
+      A: '$x \le 5$'
+      B: '$x \ge 5$'
+      C: '$x < 5$'
+      D: '$x > 5$'
+    answer: B
+    explanation: '"At least 5" means 5 or more: $x \ge 5$.'
+
+  - uid: g12-mathematics-4-1-q004
+    type: true_false
+    difficulty: 1
+    stem: 'The point $(0, 0)$ satisfies $3x - 2y < 6$.'
+    answer: true
+    explanation: 'Substituting gives $0 < 6$, which is true.'
+
+  - uid: g12-mathematics-4-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What shape is the feasible region of $x + y \le 4$, $x \ge 0$, $y \ge 0$?'
+    options:
+      A: 'A square with corners $(0, 0)$, $(4, 0)$, $(4, 4)$, $(0, 4)$'
+      B: 'An unbounded region'
+      C: 'A triangle with corners $(0, 0)$, $(4, 4)$, $(0, 4)$'
+      D: 'A triangle with corners $(0, 0)$, $(4, 0)$, $(0, 4)$'
+    answer: D
+    explanation: 'The line $x + y = 4$ cuts the axes at $(4, 0)$ and $(0, 4)$. Together with the axes it closes a triangle containing the origin.'
+
+  - uid: g12-mathematics-4-1-q006
+    type: numeric
+    difficulty: 2
+    stem: 'What is the area of the feasible region of $x + y \le 4$, $x \ge 0$, $y \ge 0$?'
+    answer: {value: 8, tolerance: 0}
+    explanation: 'It is a right triangle with legs 4 and 4: area $= \frac{1}{2} \times 4 \times 4 = 8$.'
+
+  - uid: g12-mathematics-4-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the solution of $3x - 7 > 5$?'
+    options:
+      A: '$x > 4$'
+      B: '$x < 4$'
+      C: '$x > \frac{2}{3}$'
+      D: '$x > 12$'
+    answer: A
+    explanation: 'Add 7: $3x > 12$. Divide by 3: $x > 4$.'
+
+  - uid: g12-mathematics-4-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the solution of $-2x \ge 8$?'
+    options:
+      A: '$x \ge -4$'
+      B: '$x \ge 4$'
+      C: '$x \le -4$'
+      D: '$x \le 4$'
+    answer: C
+    explanation: 'Divide by $-2$ and reverse the sign: $x \le -4$.'
+
+  - uid: g12-mathematics-4-1-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'Where does the boundary line of $2x + 3y \le 12$ cross the $x$-axis?'
+    options:
+      A: '$(4, 0)$'
+      B: '$(6, 0)$'
+      C: '$(0, 4)$'
+      D: '$(12, 0)$'
+    answer: B
+    explanation: 'On the $x$-axis $y = 0$, so $2x = 12$ and $x = 6$.'
+
+  - uid: g12-mathematics-4-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Which inequality describes the region on or below the line $y = x$?'
+    options:
+      A: '$y \ge x$'
+      B: '$y > x$'
+      C: '$y < x$'
+      D: '$y \le x$'
+    answer: D
+    explanation: '"Below" means $y$ is smaller than $x$, and "on" the line includes equality: $y \le x$.'
+
+  - uid: g12-mathematics-4-1-q011
+    type: single_choice
+    difficulty: 3
+    stem: 'Which point is a corner of the feasible region $x \ge 0$, $y \ge 0$, $x + 2y \le 8$, $x \le 4$?'
+    options:
+      A: '$(4, 2)$'
+      B: '$(8, 0)$'
+      C: '$(4, 4)$'
+      D: '$(2, 4)$'
+    answer: A
+    explanation: 'The lines $x = 4$ and $x + 2y = 8$ meet where $2y = 4$, so at $(4, 2)$. $(8, 0)$ breaks $x \le 4$, and $(4, 4)$ and $(2, 4)$ break $x + 2y \le 8$.'
+
+  - uid: g12-mathematics-4-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'A farmer has at most 100 hectares to plant teff ($x$ hectares) and wheat ($y$ hectares). Which constraint describes the land?'
+    options:
+      A: '$x + y \ge 100$'
+      B: '$xy \le 100$'
+      C: '$x + y \le 100$'
+      D: '$x + y = 100$'
+    answer: C
+    explanation: 'The total planted cannot exceed 100 hectares: $x + y \le 100$.'
+
+  - uid: g12-mathematics-4-1-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which points lie in the region $x + y \le 5$, $x \ge 1$, $y \ge 0$? Choose all that apply.'
+    options:
+      A: '$(1, 0)$'
+      B: '$(2, 3)$'
+      C: '$(0, 2)$'
+      D: '$(4, 2)$'
+    answer: [A, B]
+    explanation: '$(1, 0)$ and $(2, 3)$ satisfy all three (for $(2, 3)$, $2 + 3 = 5 \le 5$). $(0, 2)$ breaks $x \ge 1$ and $(4, 2)$ breaks $x + y \le 5$.'
+
+  - uid: g12-mathematics-4-1-q014
+    type: fill_in
+    difficulty: 1
+    stem: 'The set of all points that satisfy every constraint of a linear programming problem is called the ________ region.'
+    answer: [feasible]
+    explanation: 'It is the feasible region; only its points are possible solutions.'
+
+  - uid: g12-mathematics-4-1-q015
+    type: ordering
+    difficulty: 1
+    stem: 'Put the steps for graphing a linear inequality in order.'
+    items:
+      A: 'Draw the boundary line, solid or dashed.'
+      B: 'Choose a test point that is not on the line.'
+      C: 'Substitute the test point into the inequality.'
+      D: 'Shade the side containing the test point if it works, otherwise the other side.'
+    answer: [A, B, C, D]
+    explanation: 'The line comes first, then a test point decides which half-plane to shade.'
+
+  - uid: g12-mathematics-4-1-q016
+    type: numeric
+    difficulty: 1
+    stem: 'In the region $4x + 5y \le 40$ with $x \ge 0$, $y \ge 0$, what is the largest possible value of $y$?'
+    answer: {value: 8, tolerance: 0}
+    explanation: '$y$ is largest when $x = 0$: $5y \le 40$, so $y \le 8$.'
+
+  - uid: g12-mathematics-4-1-q017
+    type: true_false
+    difficulty: 1
+    stem: 'The boundary of $x + y < 3$ is drawn as a solid line.'
+    answer: false
+    explanation: 'Points on the line $x + y = 3$ do not satisfy the strict inequality, so the line is dashed.'
+
+  - uid: g12-mathematics-4-1-q018
+    type: single_choice
+    difficulty: 1
+    stem: 'Which system describes the first quadrant, including the axes?'
+    options:
+      A: '$x \le 0$, $y \ge 0$'
+      B: '$x \ge 0$, $y \ge 0$'
+      C: '$x > 0$, $y < 0$'
+      D: '$x \le 0$, $y \le 0$'
+    answer: B
+    explanation: 'In the first quadrant both coordinates are non-negative.'
+
+  - uid: g12-mathematics-4-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the solution of $-3 < 2x + 1 \le 7$?'
+    options:
+      A: '$-1 < x \le 4$'
+      B: '$-2 \le x < 3$'
+      C: '$-4 < x \le 6$'
+      D: '$-2 < x \le 3$'
+    answer: D
+    explanation: 'Subtract 1 from all parts: $-4 < 2x \le 6$. Divide by 2: $-2 < x \le 3$.'
+
+  - uid: g12-mathematics-4-1-q020
+    type: numeric
+    difficulty: 1
+    stem: 'How many whole numbers $x$ satisfy $1 < x \le 4$?'
+    answer: {value: 3, tolerance: 0}
+    explanation: 'They are 2, 3 and 4. (1 is not included because the inequality is strict.)'
+
+  - uid: g12-mathematics-4-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Which system describes the region on or above the line $y = 1$ and on or to the left of the line $x = 3$?'
+    options:
+      A: '$y \ge 1$, $x \le 3$'
+      B: '$y \le 1$, $x \le 3$'
+      C: '$y \ge 1$, $x \ge 3$'
+      D: '$x \ge 1$, $y \le 3$'
+    answer: A
+    explanation: 'Above $y = 1$ means $y \ge 1$; left of $x = 3$ means $x \le 3$.'
+
+  - uid: g12-mathematics-4-1-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each phrase with its symbol.'
+    left:
+      L1: 'at most'
+      L2: 'at least'
+      L3: 'more than'
+    right:
+      R1: '$\ge$'
+      R2: '$<$'
+      R3: '$\le$'
+      R4: '$>$'
+    answer: {L1: R3, L2: R1, L3: R4}
+    explanation: '"At most" allows the value and anything smaller ($\le$); "at least" allows it and anything bigger ($\ge$); "more than" is strictly bigger ($>$). $<$ means "less than".'
+
+  - uid: g12-mathematics-4-1-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'A workshop has 60 machine hours. Product $x$ needs 2 hours and product $y$ needs 3 hours, so $2x + 3y \le 60$. Is making 15 of $x$ and 10 of $y$ possible?'
+    options:
+      A: 'No, it needs 75 hours.'
+      B: 'No, it needs more than 60 hours.'
+      C: 'Yes, it uses exactly 60 hours.'
+      D: 'Yes, it uses only 25 hours.'
+    answer: C
+    explanation: '$2(15) + 3(10) = 30 + 30 = 60 \le 60$. The point is on the boundary, so it is feasible and uses all the hours.'
+
+  - uid: g12-mathematics-4-1-q024
+    type: single_choice
+    difficulty: 1
+    stem: 'What kind of line is $x = 2$?'
+    options:
+      A: 'A horizontal line'
+      B: 'A vertical line'
+      C: 'A line through the origin with slope 2'
+      D: 'A line with slope $\frac{1}{2}$'
+    answer: B
+    explanation: 'Every point on it has $x = 2$ whatever $y$ is, so it is vertical.'
+
+  - uid: g12-mathematics-4-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which system has an unbounded feasible region?'
+    options:
+      A: '$x \ge 0$, $y \ge 0$, $x + y \le 2$'
+      B: '$0 \le x \le 3$, $0 \le y \le 3$'
+      C: '$x \ge 0$, $y \ge 0$, $2x + y \le 4$'
+      D: '$x \ge 0$, $y \ge 0$, $x + y \ge 2$'
+    answer: D
+    explanation: 'In D every point far out in the first quadrant works, so the region goes on forever. A, B and C are closed shapes.'
+
+  - uid: g12-mathematics-4-1-q026
+    type: true_false
+    difficulty: 1
+    stem: 'Multiplying both sides of an inequality by a negative number reverses the inequality sign.'
+    answer: true
+    explanation: 'For example $2 < 3$, but $-2 > -3$.'
+
+  - uid: g12-mathematics-4-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the feasible region of $x + y \le 2$ and $x + y \ge 5$?'
+    options:
+      A: 'Empty: no point satisfies both.'
+      B: 'The strip between the two lines'
+      C: 'The whole plane'
+      D: 'Only the line $x + y = 3.5$'
+    answer: A
+    explanation: '$x + y$ cannot be at most 2 and at least 5 at the same time, so there is no feasible point.'
+
+  - uid: g12-mathematics-4-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'The region to the right of the dashed line $x = -1$ is shaded. Which inequality is shown?'
+    options:
+      A: '$x < -1$'
+      B: '$y > -1$'
+      C: '$x > -1$'
+      D: '$x \ge -1$'
+    answer: C
+    explanation: 'Right of the line means larger $x$; a dashed line means the line itself is not included: $x > -1$.'
+
+  - uid: g12-mathematics-4-1-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'Which inequality is the same as $3x + y \le 6$?'
+    options:
+      A: '$y \ge -3x + 6$'
+      B: '$y \le -3x + 6$'
+      C: '$y \le 3x + 6$'
+      D: '$y \le 3x - 6$'
+    answer: B
+    explanation: 'Subtract $3x$ from both sides: $y \le -3x + 6$. No sign change is needed because we did not multiply by a negative.'
+
+  - uid: g12-mathematics-4-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'At which point do the lines $x + y = 6$ and $x - y = 2$ meet?'
+    options:
+      A: '$(2, 4)$'
+      B: '$(3, 3)$'
+      C: '$(6, 0)$'
+      D: '$(4, 2)$'
+    answer: D
+    explanation: 'Adding the equations: $2x = 8$, so $x = 4$ and $y = 2$.'

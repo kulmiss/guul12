@@ -1,0 +1,377 @@
+summary:
+  key_points:
+    - 'The Zemene Mesafint ("Era of the Princes", about 1769–1855) was a period when regional lords held real power and the emperors were weak.'
+    - 'Tewodros II (crowned 1855) ended the Zemene Mesafint and tried to unify and modernise the state: a paid standing army, an attempt to reduce church land and local lords'' power, and a workshop at Gafat that cast cannon (such as "Sebastopol"). After a dispute with Britain, a British expedition reached Meqdela in 1868, where Tewodros took his own life.'
+    - 'Yohannes IV (1872–1889) defended the country against Egypt, winning at Gundet (1875) and Gura (1876). His general Ras Alula defeated an Italian force at Dogali (1887). Yohannes died at the Battle of Metemma (1889) fighting the Mahdist Sudanese.'
+    - 'Menelik II (1889–1913) expanded the state southward and westward, founded Addis Ababa (1886) and introduced modern institutions: the Bank of Abyssinia (1905), the Menelik II School (1908), telephone and telegraph, and the Djibouti railway (reaching Addis Ababa in 1917). He won the Battle of Adwa (1896).'
+    - 'Lij Iyasu (1913–1916) was deposed. Empress Zewditu ruled (1916–1930) with Ras Tafari Mekonnen as regent and heir. Ethiopia joined the League of Nations in 1923.'
+    - 'Ras Tafari was crowned Emperor Haile Selassie I in 1930 and introduced Ethiopia''s first written constitution in 1931, strengthening central government.'
+    - 'After the Walwal incident (December 1934), Fascist Italy invaded in October 1935 and occupied Ethiopia from 1936 to 1941. Haile Selassie appealed to the League of Nations in Geneva (June 1936), which failed to stop Italy. After an attack on Viceroy Graziani on Yekatit 12 (19 February 1937), Italian forces massacred thousands in Addis Ababa.'
+    - 'Ethiopian patriots (Arbegnoch) resisted throughout the occupation. With British and Commonwealth forces, Ethiopia was liberated in 1941; Haile Selassie re-entered Addis Ababa on 5 May 1941.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-3-1-se01
+    problem: 'Explain why Tewodros II is seen as the founder of modern Ethiopia.'
+    steps:
+      - 'He ended the Zemene Mesafint and aimed to rebuild a strong central state under one ruler.'
+      - 'He tried reforms such as a paid national army and local arms making, ideas later followed by Yohannes IV and Menelik II.'
+    answer: 'He ended regional fragmentation and began modernising reforms.'
+  - uid: g12-history-3-1-se02
+    problem: 'Why did the League of Nations fail Ethiopia in 1935–1936?'
+    steps:
+      - 'It imposed only weak economic sanctions on Italy and did not block oil or close the Suez Canal.'
+      - 'Britain and France did not want to push Italy towards Germany, so Ethiopia, a member, was not protected.'
+    answer: 'Weak sanctions and great-power self-interest'
+  - uid: g12-history-3-1-se03
+    problem: 'Put in order: Battle of Adwa, Meqdela, Battle of Gundet, Italian invasion.'
+    steps:
+      - 'Meqdela 1868, Gundet 1875, Adwa 1896, Italian invasion 1935.'
+      - 'So the order is Meqdela → Gundet → Adwa → invasion.'
+    answer: 'Meqdela, Gundet, Adwa, invasion'
+
+flashcards:
+  - {uid: g12-history-3-1-fc01, term: Zemene Mesafint, definition: '"Era of the Princes" (about 1769–1855) when regional lords dominated.'}
+  - {uid: g12-history-3-1-fc02, term: Tewodros II, definition: 'Emperor from 1855; ended the Zemene Mesafint; died at Meqdela in 1868.'}
+  - {uid: g12-history-3-1-fc03, term: Gundet and Gura, definition: 'Victories of Yohannes IV over Egypt (1875, 1876).'}
+  - {uid: g12-history-3-1-fc04, term: Dogali, definition: '1887 victory of Ras Alula over an Italian force.'}
+  - {uid: g12-history-3-1-fc05, term: Metemma, definition: '1889 battle against the Mahdists in which Yohannes IV died.'}
+  - {uid: g12-history-3-1-fc06, term: Addis Ababa, definition: 'Founded by Menelik II and Empress Taytu in 1886.'}
+  - {uid: g12-history-3-1-fc07, term: 1931 Constitution, definition: 'Ethiopia''s first written constitution, under Haile Selassie I.'}
+  - {uid: g12-history-3-1-fc08, term: Yekatit 12, definition: '19 February 1937: massacre in Addis Ababa by Italian forces.'}
+  - {uid: g12-history-3-1-fc09, term: Arbegnoch, definition: 'Ethiopian patriots who resisted the Italian occupation.'}
+
+questions:
+  - uid: g12-history-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What was the Zemene Mesafint?'
+    options:
+      A: 'A period of strong rule by one emperor'
+      B: 'A period when regional lords held power and emperors were weak'
+      C: 'The Italian occupation'
+      D: 'A religious festival'
+    answer: B
+    explanation: 'The "Era of the Princes" lasted from about 1769 to 1855.'
+
+  - uid: g12-history-3-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which emperor ended the Zemene Mesafint?'
+    options:
+      A: 'Tewodros II'
+      B: 'Menelik II'
+      C: 'Yohannes IV'
+      D: 'Haile Selassie I'
+    answer: A
+    explanation: 'Kassa Hailu was crowned Tewodros II in 1855.'
+
+  - uid: g12-history-3-1-q003
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was Tewodros II crowned emperor?'
+    answer: {value: 1855, tolerance: 0}
+    explanation: 'His coronation in 1855 ended the Zemene Mesafint.'
+
+  - uid: g12-history-3-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Where did Tewodros II die in 1868, during the British expedition?'
+    options:
+      A: 'Adwa'
+      B: 'Metemma'
+      C: 'Gondar'
+      D: 'Meqdela'
+    answer: D
+    explanation: 'He took his own life at his mountain fortress of Meqdela rather than be captured.'
+
+  - uid: g12-history-3-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country did Yohannes IV defeat at Gundet (1875) and Gura (1876)?'
+    options:
+      A: 'Italy'
+      B: 'Britain'
+      C: 'Egypt'
+      D: 'France'
+    answer: C
+    explanation: 'Egyptian forces invaded from the north and were defeated in both battles.'
+
+  - uid: g12-history-3-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which general defeated an Italian force at Dogali in 1887?'
+    options:
+      A: 'Ras Alula'
+      B: 'Ras Makonnen'
+      C: 'Ras Tafari'
+      D: 'Ras Mengesha'
+    answer: A
+    explanation: 'Ras Alula Engida, governor of the Mereb Melash, won at Dogali.'
+
+  - uid: g12-history-3-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'How did Emperor Yohannes IV die in 1889?'
+    options:
+      A: 'At the Battle of Adwa against Italy'
+      B: 'Of illness in Addis Ababa'
+      C: 'At Meqdela against Britain'
+      D: 'At the Battle of Metemma against the Mahdists of Sudan'
+    answer: D
+    explanation: 'He was mortally wounded at Metemma in March 1889.'
+
+  - uid: g12-history-3-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year was Addis Ababa founded?'
+    options:
+      A: '1855'
+      B: '1886'
+      C: '1896'
+      D: '1931'
+    answer: B
+    explanation: 'Menelik II and Empress Taytu founded it in 1886 (some sources give 1887). 1855 is Tewodros''s coronation, 1896 is Adwa and 1931 is the first constitution.'
+
+  - uid: g12-history-3-1-q009
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which modern institutions were introduced during the reign of Menelik II? Choose all that apply.'
+    options:
+      A: 'The Bank of Abyssinia'
+      B: 'The Menelik II School'
+      C: 'Telephone and telegraph'
+      D: 'The 1931 written constitution'
+    answer: [A, B, C]
+    explanation: 'The 1931 constitution came under Haile Selassie I.'
+
+  - uid: g12-history-3-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which railway linked Addis Ababa with the sea during the early 20th century?'
+    options:
+      A: 'The Addis Ababa–Massawa railway'
+      B: 'The Djibouti–Addis Ababa railway'
+      C: 'The Mombasa–Addis Ababa railway'
+      D: 'The Port Sudan–Gondar railway'
+    answer: B
+    explanation: 'The Franco-Ethiopian railway reached Addis Ababa in 1917.'
+
+  - uid: g12-history-3-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Who was regent and heir during the reign of Empress Zewditu?'
+    options:
+      A: 'Lij Iyasu'
+      B: 'Ras Alula'
+      C: 'Ras Tafari Mekonnen'
+      D: 'Ras Mengesha Yohannes'
+    answer: C
+    explanation: 'Ras Tafari later became Emperor Haile Selassie I.'
+
+  - uid: g12-history-3-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did Ethiopia join the League of Nations?'
+    options:
+      A: '1923'
+      B: '1919'
+      C: '1935'
+      D: '1945'
+    answer: A
+    explanation: 'Ethiopia was admitted in 1923.'
+
+  - uid: g12-history-3-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year was Haile Selassie I crowned emperor?'
+    options:
+      A: '1916'
+      B: '1941'
+      C: '1923'
+      D: '1930'
+    answer: D
+    explanation: 'He was crowned in November 1930 after Empress Zewditu died.'
+
+  - uid: g12-history-3-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'Ethiopia''s first written constitution was introduced in 1931.'
+    answer: true
+    explanation: 'It strengthened the emperor''s power and created an appointed parliament.'
+
+  - uid: g12-history-3-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Which incident in December 1934 was used by Italy as an excuse to invade Ethiopia?'
+    options:
+      A: 'The Walwal incident'
+      B: 'The Battle of Dogali'
+      C: 'The Yekatit 12 massacre'
+      D: 'The Battle of Metemma'
+    answer: A
+    explanation: 'A clash at the wells of Walwal in the Ogaden was used to justify the 1935 invasion.'
+
+  - uid: g12-history-3-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'For how many years did Fascist Italy occupy Ethiopia?'
+    options:
+      A: 'About 15 years'
+      B: 'About 1 year'
+      C: 'About 5 years (1936–1941)'
+      D: 'About 40 years'
+    answer: C
+    explanation: 'The occupation lasted from 1936 until liberation in 1941.'
+
+  - uid: g12-history-3-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'What happened in Addis Ababa on Yekatit 12 (19 February 1937)?'
+    options:
+      A: 'Italian forces massacred thousands of residents after an attack on Viceroy Graziani.'
+      B: 'Haile Selassie returned to the capital.'
+      C: 'The Battle of Adwa was fought.'
+      D: 'The city was founded.'
+    answer: A
+    explanation: 'The massacre is remembered every year on Yekatit 12.'
+
+  - uid: g12-history-3-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'The League of Nations imposed sanctions strong enough to stop Italy''s invasion of Ethiopia.'
+    answer: false
+    explanation: 'The sanctions were weak (oil was not included), and Italy completed its conquest.'
+
+  - uid: g12-history-3-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Who were the Arbegnoch?'
+    options:
+      A: 'Italian officials'
+      B: 'Ethiopian patriots who resisted the Italian occupation'
+      C: 'British soldiers'
+      D: 'Members of the League of Nations'
+    answer: B
+    explanation: 'Patriot fighters kept up resistance in many regions from 1936 to 1941.'
+
+  - uid: g12-history-3-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The mountain fortress where Tewodros II died in 1868 is called ________.'
+    answer: [Meqdela, Magdala, Mekdela, Makdala, Maqdala]
+    explanation: 'Spellings vary; it is in present-day South Wollo.'
+
+  - uid: g12-history-3-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'Ethiopian patriots who fought the Italian occupation are called ________ in Amharic.'
+    answer: [Arbegnoch, Arbegnoč, Arbegnotch, Arbegna]
+    explanation: 'Arbegna means "patriot"; Arbegnoch is the plural.'
+
+  - uid: g12-history-3-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'Haile Selassie I spoke at the League of Nations in Geneva in 1936 to appeal for help against Italy.'
+    answer: true
+    explanation: 'His June 1936 speech warned that collective security was failing.'
+
+  - uid: g12-history-3-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each ruler with an event of his or her reign.'
+    left:
+      L1: 'Tewodros II'
+      L2: 'Yohannes IV'
+      L3: 'Menelik II'
+    right:
+      R1: 'Victory at Gundet over Egypt'
+      R2: 'Founding of Addis Ababa'
+      R3: 'Cannon cast at Gafat'
+      R4: 'The 1931 constitution'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'The 1931 constitution belongs to Haile Selassie I.'
+
+  - uid: g12-history-3-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order.'
+    items:
+      A: 'Battle of Adwa'
+      B: 'Death of Tewodros II at Meqdela'
+      C: 'Italian invasion of Ethiopia'
+      D: 'Battle of Gundet'
+    answer: [B, D, A, C]
+    explanation: '1868, 1875, 1896, 1935.'
+
+  - uid: g12-history-3-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Why did the British send an expedition against Tewodros II in 1867–1868?'
+    options:
+      A: 'To help him fight Egypt'
+      B: 'To build a railway'
+      C: 'To trade coffee'
+      D: 'He had imprisoned British envoys and other Europeans.'
+    answer: D
+    explanation: 'Tewodros held the British consul and others after Britain did not answer his letter to Queen Victoria.'
+
+  - uid: g12-history-3-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which treaty of 1884 among Ethiopia, Britain and Egypt promised Ethiopia free transit through Massawa?'
+    options:
+      A: 'The Hewett Treaty (Adwa Treaty)'
+      B: 'The Treaty of Wuchale'
+      C: 'The Treaty of Addis Ababa'
+      D: 'The Treaty of Versailles'
+    answer: A
+    explanation: 'Signed by Yohannes IV and Admiral Hewett, it also involved helping evacuate Egyptian garrisons from Sudan.'
+
+  - uid: g12-history-3-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'On which date did Haile Selassie re-enter Addis Ababa after the liberation?'
+    options:
+      A: '1 March 1896'
+      B: '19 February 1937'
+      C: '2 November 1930'
+      D: '5 May 1941'
+    answer: D
+    explanation: 'He returned on 5 May 1941, five years to the day after Italian troops entered the city.'
+
+  - uid: g12-history-3-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which ruler was deposed in 1916 and replaced by Empress Zewditu?'
+    options:
+      A: 'Menelik II'
+      B: 'Tekle Giyorgis II'
+      C: 'Lij Iyasu'
+      D: 'Yohannes IV'
+    answer: C
+    explanation: 'Lij Iyasu, Menelik''s grandson, was deposed by the nobility and church.'
+
+  - uid: g12-history-3-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'Which of these was a goal of Tewodros II''s reforms?'
+    options:
+      A: 'Giving more power to regional lords'
+      B: 'Building a strong central state with a paid national army'
+      C: 'Inviting Italy to govern the country'
+      D: 'Ending all contact with foreigners forever'
+    answer: B
+    explanation: 'He wanted soldiers loyal to the emperor rather than to local lords.'
+
+  - uid: g12-history-3-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which outside forces helped Ethiopian patriots liberate the country in 1941?'
+    options:
+      A: 'British and Commonwealth forces'
+      B: 'German forces'
+      C: 'Japanese forces'
+      D: 'Egyptian forces only'
+    answer: A
+    explanation: 'British, Commonwealth and Ethiopian forces together defeated the Italians in East Africa.'

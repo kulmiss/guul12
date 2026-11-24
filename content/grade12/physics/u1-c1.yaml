@@ -1,0 +1,384 @@
+summary:
+  key_points:
+    - 'Physics studies matter, energy, forces and motion. Its laws hold everywhere in the universe, so other sciences build on them.'
+    - 'Chemistry: atomic structure, chemical bonding (electric forces between charges) and spectroscopy all come from physics.'
+    - 'Biology: biophysics studies living things with physics, for example nerve signals (electric), blood flow (fluid pressure) and the eye (a converging lens).'
+    - 'Geology: geophysics uses seismic waves, gravity and magnetism to study the Earth''s interior, find minerals and explain features such as the Great Rift Valley (plate tectonics).'
+    - 'Radioactive (radiometric) dating uses half-life to find the age of rocks and ancient remains.'
+    - 'Astronomy: light from stars carries information. Spectra show what stars are made of; redshift shows galaxies moving away, evidence that the universe is expanding.'
+    - 'The Sun shines because of nuclear fusion of hydrogen into helium.'
+  formulas:
+    - label: Amount left after n half-lives
+      latex: 'N = N_0 \left(\frac{1}{2}\right)^n'
+    - label: Distance travelled by light
+      latex: 'd = ct, \quad c \approx 3 \times 10^8\ \text{m/s}'
+    - label: Wave speed
+      latex: 'v = f\lambda'
+
+solved_exercises:
+  - uid: g12-physics-1-1-se01
+    problem: 'A radioactive sample has a mass of 64 g and a half-life of 3 days. How much is left after 12 days?'
+    steps:
+      - 'Number of half-lives: $\frac{12}{3} = 4$.'
+      - 'Remaining mass: $64 \times \left(\frac{1}{2}\right)^4 = \frac{64}{16}$.'
+      - '$= 4$ g.'
+    answer: '4 g'
+  - uid: g12-physics-1-1-se02
+    problem: 'A seismic wave travels at 6 km/s. How long does it take to reach a station 300 km away?'
+    steps:
+      - '$t = \frac{d}{v} = \frac{300\ \text{km}}{6\ \text{km/s}}$.'
+      - '$t = 50$ s.'
+    answer: '50 s'
+  - uid: g12-physics-1-1-se03
+    problem: 'Why can astronomers say what a distant star is made of without visiting it?'
+    steps:
+      - 'Each element absorbs and emits light only at its own set of wavelengths (its spectral lines).'
+      - 'Splitting starlight into a spectrum shows these lines.'
+      - 'Matching the lines with those of known elements on Earth identifies the elements in the star.'
+    answer: 'By spectroscopy: the spectral lines in starlight identify the elements.'
+
+flashcards:
+  - {uid: g12-physics-1-1-fc01, term: Biophysics, definition: 'The use of physics to study living things.'}
+  - {uid: g12-physics-1-1-fc02, term: Geophysics, definition: 'The physics of the Earth: seismic waves, gravity, magnetism, heat flow.'}
+  - {uid: g12-physics-1-1-fc03, term: Seismology, definition: 'The study of earthquakes and the waves they produce.'}
+  - {uid: g12-physics-1-1-fc04, term: Half-life, definition: 'The time for half of the radioactive nuclei in a sample to decay.'}
+  - {uid: g12-physics-1-1-fc05, term: Radiometric dating, definition: 'Finding the age of a rock or fossil from radioactive decay.'}
+  - {uid: g12-physics-1-1-fc06, term: Spectroscopy, definition: 'Studying the wavelengths of light emitted or absorbed by substances.'}
+  - {uid: g12-physics-1-1-fc07, term: Redshift, definition: 'Light from a source moving away is shifted to longer wavelengths.'}
+  - {uid: g12-physics-1-1-fc08, term: Light-year, definition: 'The distance light travels in one year, about $9.5 \times 10^{15}$ m.'}
+  - {uid: g12-physics-1-1-fc09, term: Nuclear fusion, definition: 'Light nuclei join to form a heavier nucleus and release energy, as in the Sun.'}
+
+questions:
+  - uid: g12-physics-1-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which field uses the physics of waves to study earthquakes and the inside of the Earth?'
+    options:
+      A: 'Biophysics'
+      B: 'Seismology'
+      C: 'Astronomy'
+      D: 'Spectroscopy'
+    answer: B
+    explanation: 'Seismology studies the seismic waves made by earthquakes; how they travel and bend reveals the Earth''s layers.'
+
+  - uid: g12-physics-1-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Carbon-14 dating of ancient bones depends on which physical idea?'
+    options:
+      A: 'The half-life of a radioactive isotope'
+      B: 'The speed of sound in bone'
+      C: 'The refraction of light'
+      D: 'Magnetic induction'
+    answer: A
+    explanation: 'Carbon-14 decays at a known rate. Measuring how much is left, and knowing its half-life, gives the age.'
+
+  - uid: g12-physics-1-1-q003
+    type: numeric
+    difficulty: 2
+    stem: 'A sample contains 80 g of a radioactive substance with a half-life of 5 years. How many grams are left after 15 years?'
+    answer: {value: 10, tolerance: 0, unit: g}
+    explanation: '15 years is 3 half-lives: $80 \to 40 \to 20 \to 10$ g.'
+
+  - uid: g12-physics-1-1-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'How do astronomers find out which elements a star contains?'
+    options:
+      A: 'By measuring its mass'
+      B: 'By sending probes to it'
+      C: 'By studying the spectrum of its light'
+      D: 'By timing its rising and setting'
+    answer: C
+    explanation: 'Each element has its own spectral lines. The lines in starlight show which elements are present.'
+
+  - uid: g12-physics-1-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'The light from a distant galaxy is redshifted. What does this tell us?'
+    options:
+      A: 'The galaxy is very hot.'
+      B: 'The galaxy is moving towards us.'
+      C: 'The galaxy is made only of hydrogen.'
+      D: 'The galaxy is moving away from us.'
+    answer: D
+    explanation: 'Light from a source moving away is stretched to longer (redder) wavelengths. Redshift means the galaxy is receding.'
+
+  - uid: g12-physics-1-1-q006
+    type: true_false
+    difficulty: 1
+    stem: 'Nerve impulses in the human body involve electrical signals.'
+    answer: true
+    explanation: 'A nerve impulse is a moving change in electric potential across the nerve cell membrane.'
+
+  - uid: g12-physics-1-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Which statement best describes the lens of the human eye?'
+    options:
+      A: 'A converging lens that forms a real image on the retina'
+      B: 'A diverging lens that forms a virtual image on the retina'
+      C: 'A converging lens that forms a virtual image in front of the eye'
+      D: 'A diverging lens that forms a real image behind the retina'
+    answer: A
+    explanation: 'The eye lens brings light rays together to form a real image on the retina, so it is converging.'
+
+  - uid: g12-physics-1-1-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'What is biophysics?'
+    options:
+      A: 'The study of rocks with chemistry'
+      B: 'The use of physics to study living things'
+      C: 'The study of stars and galaxies'
+      D: 'The study of ancient human cultures'
+    answer: B
+    explanation: 'Biophysics applies physical laws and methods to biological systems, such as the heart, nerves and eyes.'
+
+  - uid: g12-physics-1-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'How can geophysicists search for an underground mineral deposit without digging?'
+    options:
+      A: 'By measuring the air temperature above it'
+      B: 'By counting plants growing above it'
+      C: 'By measuring small changes in gravity or magnetic field above it'
+      D: 'By listening to birds'
+    answer: C
+    explanation: 'Dense or magnetic ore bodies slightly change the local gravity and magnetic field, which sensitive instruments can detect.'
+
+  - uid: g12-physics-1-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which force holds atoms together in chemical bonds?'
+    options:
+      A: 'Gravitational force'
+      B: 'Strong nuclear force'
+      C: 'Weak nuclear force'
+      D: 'Electromagnetic (electric) force'
+    answer: D
+    explanation: 'Bonds come from electric attraction between charges: electrons and nuclei. This is why physics underlies chemistry.'
+
+  - uid: g12-physics-1-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'A light-year is a unit of:'
+    options:
+      A: 'Distance'
+      B: 'Time'
+      C: 'Speed'
+      D: 'Brightness'
+    answer: A
+    explanation: 'It is the distance light travels in one year, used for distances between stars.'
+
+  - uid: g12-physics-1-1-q012
+    type: numeric
+    difficulty: 2
+    stem: 'Light from the Sun takes about 8 minutes (480 s) to reach the Earth. Taking $c = 3 \times 10^8$ m/s, the distance is $k \times 10^{11}$ m. What is $k$?'
+    answer: {value: 1.44, tolerance: 0.01}
+    explanation: '$d = ct = 3 \times 10^8 \times 480 = 1440 \times 10^8 = 1.44 \times 10^{11}$ m.'
+
+  - uid: g12-physics-1-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Weather forecasting is mainly an application of which areas of physics?'
+    options:
+      A: 'Optics and nuclear physics'
+      B: 'Thermodynamics and the motion of fluids (air)'
+      C: 'Electronics and magnetism only'
+      D: 'Atomic spectra only'
+    answer: B
+    explanation: 'The atmosphere is a fluid heated by the Sun. Forecasts solve the physics of heat and fluid flow.'
+
+  - uid: g12-physics-1-1-q014
+    type: multiple_answers
+    difficulty: 1
+    stem: 'Which of these are based on physics principles? Choose all that apply.'
+    options:
+      A: 'Magnetic resonance imaging (MRI)'
+      B: 'X-ray imaging'
+      C: 'Carbon-14 dating'
+      D: 'Astrology'
+    answer: [A, B, C]
+    explanation: 'MRI uses magnetism, X-ray imaging uses high-energy radiation, and carbon dating uses radioactive decay. Astrology is not a science.'
+
+  - uid: g12-physics-1-1-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The time taken for half of the radioactive nuclei in a sample to decay is called the ________.'
+    answer: [half-life, half life]
+    explanation: 'The half-life is constant for each isotope, which makes radioactive dating possible.'
+
+  - uid: g12-physics-1-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'A mass spectrometer, used in chemistry, separates ions in a magnetic field. What property decides how much each ion''s path bends?'
+    options:
+      A: 'Its colour'
+      B: 'Its temperature only'
+      C: 'Its mass-to-charge ratio'
+      D: 'Its smell'
+    answer: C
+    explanation: 'The radius of the circular path in a magnetic field depends on mass divided by charge (for a given speed), so ions are sorted by this ratio.'
+
+  - uid: g12-physics-1-1-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Seismic P-waves can travel through liquids, but S-waves cannot.'
+    answer: true
+    explanation: 'P-waves are compression waves and pass through solids and liquids. S-waves are shear waves and need a solid. This showed that the Earth''s outer core is liquid.'
+
+  - uid: g12-physics-1-1-q018
+    type: single_choice
+    difficulty: 1
+    stem: 'Measuring a person''s blood pressure is an application of which physics topic?'
+    options:
+      A: 'Radioactivity'
+      B: 'Electromagnetic induction'
+      C: 'Optics'
+      D: 'Pressure in fluids'
+    answer: D
+    explanation: 'Blood is a fluid pumped by the heart; blood pressure is the fluid pressure on the artery walls.'
+
+  - uid: g12-physics-1-1-q019
+    type: single_choice
+    difficulty: 1
+    stem: 'Doctors check a baby before birth using high-frequency sound waves. What is this method called?'
+    options:
+      A: 'Ultrasound imaging'
+      B: 'X-ray imaging'
+      C: 'Radiotherapy'
+      D: 'Electrocardiography'
+    answer: A
+    explanation: 'Ultrasound reflects from tissue boundaries to build an image, without harmful ionising radiation.'
+
+  - uid: g12-physics-1-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Hubble found that more distant galaxies move away from us faster. What does this support?'
+    options:
+      A: 'The universe is shrinking.'
+      B: 'The universe is expanding.'
+      C: 'The Earth is at the centre of the universe.'
+      D: 'Galaxies do not move.'
+    answer: B
+    explanation: 'Speeds of recession that grow with distance are what an expanding universe produces.'
+
+  - uid: g12-physics-1-1-q021
+    type: single_choice
+    difficulty: 1
+    stem: 'Where does the Sun''s energy come from?'
+    options:
+      A: 'Burning coal and gas'
+      B: 'Nuclear fission of uranium'
+      C: 'Nuclear fusion of hydrogen into helium'
+      D: 'Chemical reactions of oxygen'
+    answer: C
+    explanation: 'In the Sun''s core, hydrogen nuclei fuse into helium and a little mass is turned into a lot of energy.'
+
+  - uid: g12-physics-1-1-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each method with what it is used to study.'
+    left:
+      L1: 'Seismology'
+      L2: 'Spectroscopy of starlight'
+      L3: 'Radiometric dating'
+    right:
+      R1: 'The age of rocks and fossils'
+      R2: 'Earthquakes and the Earth''s interior'
+      R3: 'Ocean tides'
+      R4: 'What stars are made of'
+    answer: {L1: R2, L2: R4, L3: R1}
+    explanation: 'Seismic waves reveal the Earth''s interior, spectral lines show a star''s elements, and radioactive decay dates rocks and fossils.'
+
+  - uid: g12-physics-1-1-q023
+    type: ordering
+    difficulty: 1
+    stem: 'Put these in order of size, from smallest to largest.'
+    items:
+      A: 'An atomic nucleus'
+      B: 'An atom'
+      C: 'A living cell'
+      D: 'The Earth'
+    answer: [A, B, C, D]
+    explanation: 'A nucleus (about $10^{-15}$ m) is far smaller than an atom (about $10^{-10}$ m), which is much smaller than a cell (about $10^{-5}$ m), which is tiny compared with the Earth (about $10^7$ m).'
+
+  - uid: g12-physics-1-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is an example of physics used in agriculture?'
+    options:
+      A: 'Choosing a crop by its name'
+      B: 'Counting the farm''s workers'
+      C: 'Writing a farm diary'
+      D: 'Measuring soil moisture with sensors to plan irrigation'
+    answer: D
+    explanation: 'Soil moisture sensors use electrical or radiation measurements, and irrigation design uses fluid flow — both physics.'
+
+  - uid: g12-physics-1-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'A dairy uses a hydrometer that floats in milk to check its quality. Which principle does the hydrometer use?'
+    options:
+      A: 'Archimedes'' principle'
+      B: 'Ohm''s law'
+      C: 'Newton''s law of gravitation'
+      D: 'The law of reflection'
+    answer: A
+    explanation: 'How deep a floating hydrometer sinks depends on the buoyant force, which depends on the liquid''s density (Archimedes'' principle). Added water lowers the density.'
+
+  - uid: g12-physics-1-1-q026
+    type: true_false
+    difficulty: 1
+    stem: 'The laws of physics apply only on the Earth.'
+    answer: false
+    explanation: 'The same laws, such as gravitation and conservation of energy, explain the motion of planets and the light of distant stars.'
+
+  - uid: g12-physics-1-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'The Great Rift Valley in Ethiopia was formed mainly by:'
+    options:
+      A: 'Wind erosion over a few years'
+      B: 'Plates of the Earth''s crust slowly pulling apart'
+      C: 'A meteorite impact'
+      D: 'Rivers cutting through rock in one flood'
+    answer: B
+    explanation: 'Plate tectonics, studied with geophysics, explains the rift: the African and Arabian plates are moving apart.'
+
+  - uid: g12-physics-1-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'In photosynthesis, which energy change takes place?'
+    options:
+      A: 'Chemical energy to light energy'
+      B: 'Sound energy to heat energy'
+      C: 'Light energy to chemical energy'
+      D: 'Nuclear energy to light energy'
+    answer: C
+    explanation: 'Plants capture light energy and store it as chemical energy in sugars.'
+
+  - uid: g12-physics-1-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'The greenhouse effect happens because certain gases in the atmosphere:'
+    options:
+      A: 'Reflect all sunlight back to space'
+      B: 'Produce their own light'
+      C: 'Block sound waves'
+      D: 'Absorb infrared radiation given off by the Earth''s surface'
+    answer: D
+    explanation: 'Gases such as carbon dioxide and water vapour absorb outgoing infrared radiation and send part of it back, warming the surface.'
+
+  - uid: g12-physics-1-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Which scientist showed that the same law of gravitation explains both falling objects and the motion of planets?'
+    options:
+      A: 'Isaac Newton'
+      B: 'Michael Faraday'
+      C: 'Marie Curie'
+      D: 'Charles Darwin'
+    answer: A
+    explanation: 'Newton''s law of universal gravitation applies to an apple falling and to the Moon and planets in orbit.'

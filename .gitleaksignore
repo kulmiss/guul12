@@ -1,0 +1,5 @@
+# False positives only, each by its exact fingerprint (commit:file:rule:line). Rules stay unchanged.
+# A Nova lens address ("premium-ends-in-7-days") in a constant named KEY, renamed to SLUG in the next commit.
+d47b25e563d22fdd77d3b06e5c492c105d8398db:backend/app/Nova/Lenses/PremiumEndsSoon.php:generic-api-key:18
+# The first version of QUESTIONS #57 quoted that same constant line.
+a700986a3998a2aafbde1309caa52aba21090586:QUESTIONS.md:generic-api-key:61

@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'After the fall of the Derg in May 1991, a Transitional Government of Ethiopia (1991–1995) was set up under a Transitional Charter adopted in July 1991.'
+    - 'Eritrea held a referendum in April 1993 and became independent in May 1993.'
+    - 'The Constitution of the Federal Democratic Republic of Ethiopia (FDRE) was adopted in December 1994 and came into force on 21 August 1995. It created a federal system of regional states, drawn largely along language and settlement lines, plus the two city administrations of Addis Ababa and Dire Dawa.'
+    - 'The federal parliament has two houses: the House of Peoples'' Representatives (which makes laws) and the House of the Federation (which represents nations, nationalities and peoples and interprets the constitution). Article 39 recognises the right of nations, nationalities and peoples to self-determination.'
+    - 'The number of regional states has grown from nine to twelve as new regions were formed by referendum, including Sidama (2020), South West Ethiopia Peoples'' (2021), and South Ethiopia and Central Ethiopia (2023).'
+    - 'A border war with Eritrea (1998–2000) ended with the Algiers Agreement (December 2000). Relations were restored in 2018, and Prime Minister Abiy Ahmed received the Nobel Peace Prize in 2019.'
+    - 'Prime ministers: Meles Zenawi (1995–2012), Hailemariam Desalegn (2012–2018) and Abiy Ahmed (from April 2018). The Prosperity Party was formed in December 2019.'
+    - 'Development plans included the Growth and Transformation Plans (GTP I, 2010–2015; GTP II, 2015–2020), large road, rail and power projects such as the GERD, and industrial parks. A war in northern Ethiopia (2020–2022) ended with a cessation of hostilities agreement signed in Pretoria in November 2022.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-8-1-se01
+    problem: 'What are the two houses of the Ethiopian federal parliament, and what does each do?'
+    steps:
+      - 'The House of Peoples'' Representatives is elected by the people and makes federal laws.'
+      - 'The House of the Federation represents nations, nationalities and peoples and has the power to interpret the constitution.'
+    answer: 'HoPR makes laws; HoF represents groups and interprets the constitution'
+  - uid: g12-history-8-1-se02
+    problem: 'Put in order: FDRE constitution in force, Eritrean independence, Transitional Charter, Algiers Agreement.'
+    steps:
+      - 'Transitional Charter 1991, Eritrean independence 1993, constitution in force 1995, Algiers Agreement 2000.'
+      - 'So: Charter → Eritrea → constitution → Algiers.'
+    answer: 'Charter, Eritrea, constitution, Algiers'
+  - uid: g12-history-8-1-se03
+    problem: 'How have new regional states been created since 2019?'
+    steps:
+      - 'Zones that wanted their own regional state held referendums under the constitution.'
+      - 'After approval, Sidama, South West Ethiopia Peoples'', South Ethiopia and Central Ethiopia became regional states.'
+    answer: 'By referendum'
+
+flashcards:
+  - {uid: g12-history-8-1-fc01, term: Transitional Charter, definition: 'July 1991 document that set up the Transitional Government (1991–1995).'}
+  - {uid: g12-history-8-1-fc02, term: FDRE Constitution, definition: 'Adopted December 1994; in force from 21 August 1995.'}
+  - {uid: g12-history-8-1-fc03, term: House of Peoples' Representatives, definition: 'Elected house of parliament that makes federal laws.'}
+  - {uid: g12-history-8-1-fc04, term: House of the Federation, definition: 'House representing nations, nationalities and peoples; interprets the constitution.'}
+  - {uid: g12-history-8-1-fc05, term: Article 39, definition: 'Constitutional right of nations, nationalities and peoples to self-determination.'}
+  - {uid: g12-history-8-1-fc06, term: Algiers Agreement, definition: 'December 2000 agreement ending the Ethiopia–Eritrea war.'}
+  - {uid: g12-history-8-1-fc07, term: GTP, definition: 'Growth and Transformation Plan (GTP I 2010–2015, GTP II 2015–2020).'}
+  - {uid: g12-history-8-1-fc08, term: Pretoria agreement, definition: 'November 2022 cessation of hostilities that ended the war in northern Ethiopia.'}
+
+questions:
+  - uid: g12-history-8-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which government ruled Ethiopia from 1991 to 1995?'
+    options:
+      A: 'The Derg'
+      B: 'The Transitional Government of Ethiopia'
+      C: 'The imperial government'
+      D: 'The PDRE'
+    answer: B
+    explanation: 'It was set up under the Transitional Charter of July 1991.'
+
+  - uid: g12-history-8-1-q002
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did Eritrea become independent after a referendum?'
+    answer: {value: 1993, tolerance: 0}
+    explanation: 'The referendum was in April 1993 and independence was declared in May 1993.'
+
+  - uid: g12-history-8-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'On which date did the FDRE Constitution come into force?'
+    options:
+      A: '28 May 1991'
+      B: '8 December 1994'
+      C: '12 September 1974'
+      D: '21 August 1995'
+    answer: D
+    explanation: 'It was adopted in December 1994 and came into force on 21 August 1995.'
+
+  - uid: g12-history-8-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'What kind of state structure does the FDRE Constitution set up?'
+    options:
+      A: 'A federal system of regional states'
+      B: 'An absolute monarchy'
+      C: 'A single-party military state'
+      D: 'A colony'
+    answer: A
+    explanation: 'Power is shared between the federal government and regional states.'
+
+  - uid: g12-history-8-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which house of the federal parliament makes federal laws?'
+    options:
+      A: 'The House of the Federation'
+      B: 'The Council of Ministers'
+      C: 'The House of Peoples'' Representatives'
+      D: 'The Supreme Court'
+    answer: C
+    explanation: 'Its members are elected by the people.'
+
+  - uid: g12-history-8-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which body has the power to interpret the FDRE Constitution?'
+    options:
+      A: 'The House of Peoples'' Representatives'
+      B: 'The Prime Minister'
+      C: 'Regional councils'
+      D: 'The House of the Federation'
+    answer: D
+    explanation: 'It is advised by the Council of Constitutional Inquiry.'
+
+  - uid: g12-history-8-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which two cities are administered as federal city administrations rather than as part of a regional state?'
+    options:
+      A: 'Addis Ababa and Dire Dawa'
+      B: 'Adama and Hawassa'
+      C: 'Gondar and Mekelle'
+      D: 'Jigjiga and Harar'
+    answer: A
+    explanation: 'Addis Ababa and Dire Dawa are city administrations accountable to the federal government.'
+
+  - uid: g12-history-8-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which article of the FDRE Constitution recognises the right of nations, nationalities and peoples to self-determination?'
+    options:
+      A: 'Article 9'
+      B: 'Article 39'
+      C: 'Article 17'
+      D: 'Article 100'
+    answer: B
+    explanation: 'Article 39 sets out this right.'
+
+  - uid: g12-history-8-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which agreement of December 2000 ended the war between Ethiopia and Eritrea?'
+    options:
+      A: 'The Treaty of Addis Ababa'
+      B: 'The Pretoria agreement'
+      C: 'The Algiers Agreement'
+      D: 'The Treaty of Wuchale'
+    answer: C
+    explanation: 'It was signed in Algiers after the 1998–2000 war.'
+
+  - uid: g12-history-8-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Who served as Prime Minister of Ethiopia from 1995 to 2012?'
+    options:
+      A: 'Abiy Ahmed'
+      B: 'Hailemariam Desalegn'
+      C: 'Tamrat Layne'
+      D: 'Meles Zenawi'
+    answer: D
+    explanation: 'Meles Zenawi was prime minister until his death in 2012.'
+
+  - uid: g12-history-8-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which Ethiopian prime minister received the Nobel Peace Prize in 2019, largely for restoring relations with Eritrea?'
+    options:
+      A: 'Abiy Ahmed'
+      B: 'Meles Zenawi'
+      C: 'Hailemariam Desalegn'
+      D: 'Haile Selassie I'
+    answer: A
+    explanation: 'The prize recognised the 2018 peace with Eritrea and other reforms.'
+
+  - uid: g12-history-8-1-q012
+    type: numeric
+    difficulty: 2
+    stem: 'Since August 2023, into how many regional states has Ethiopia been divided (not counting the two city administrations)?'
+    answer: {value: 12, tolerance: 0}
+    explanation: 'The original nine grew to twelve with Sidama (2020), South West Ethiopia Peoples'' (2021), and South Ethiopia and Central Ethiopia (2023), which replaced the former SNNPR.'
+
+  - uid: g12-history-8-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Which regional state was created in 2020 after a referendum in 2019?'
+    options:
+      A: 'Afar'
+      B: 'Sidama'
+      C: 'Somali'
+      D: 'Harari'
+    answer: B
+    explanation: 'Sidama became Ethiopia''s tenth regional state.'
+
+  - uid: g12-history-8-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'The Somali Regional State is one of the regional states of the Federal Democratic Republic of Ethiopia.'
+    answer: true
+    explanation: 'Its capital is Jigjiga.'
+
+  - uid: g12-history-8-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'The FDRE Constitution came into force before Eritrea became independent.'
+    answer: false
+    explanation: 'Eritrea became independent in 1993; the constitution came into force in 1995.'
+
+  - uid: g12-history-8-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'What were the Growth and Transformation Plans (GTP I and GTP II)?'
+    options:
+      A: 'Military alliances'
+      B: 'Election laws'
+      C: 'Five-year national development plans'
+      D: 'Constitutions'
+    answer: C
+    explanation: 'GTP I covered 2010–2015 and GTP II 2015–2020.'
+
+  - uid: g12-history-8-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'In which month and year was a cessation of hostilities agreement signed in Pretoria to end the war in northern Ethiopia?'
+    options:
+      A: 'May 1991'
+      B: 'December 2000'
+      C: 'April 2018'
+      D: 'November 2022'
+    answer: D
+    explanation: 'The agreement was signed in Pretoria, South Africa, on 2 November 2022.'
+
+  - uid: g12-history-8-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did Abiy Ahmed become Prime Minister?'
+    options:
+      A: '2018'
+      B: '2012'
+      C: '2015'
+      D: '2020'
+    answer: A
+    explanation: 'He took office in April 2018 after Hailemariam Desalegn resigned.'
+
+  - uid: g12-history-8-1-q019
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are regional states of Ethiopia today? Choose all that apply.'
+    options:
+      A: 'Oromia'
+      B: 'Amhara'
+      C: 'Somali'
+      D: 'Dire Dawa'
+    answer: [A, B, C]
+    explanation: 'Dire Dawa is a city administration, not a regional state.'
+
+  - uid: g12-history-8-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The house of the federal parliament that represents nations, nationalities and peoples is the House of the ________.'
+    answer: [Federation]
+    explanation: 'The other house is the House of Peoples'' Representatives.'
+
+  - uid: g12-history-8-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'The capital city of the Somali Regional State is ________.'
+    answer: [Jigjiga, Jijiga, Jig-jiga]
+    explanation: 'Jigjiga is in the north of the region.'
+
+  - uid: g12-history-8-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'Ethiopia and Eritrea fought a border war from 1998 to 2000.'
+    answer: true
+    explanation: 'It ended with the Algiers Agreement in December 2000.'
+
+  - uid: g12-history-8-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each prime minister with the years he took office.'
+    left:
+      L1: 'Meles Zenawi'
+      L2: 'Hailemariam Desalegn'
+      L3: 'Abiy Ahmed'
+    right:
+      R1: '2012'
+      R2: '2018'
+      R3: '1995'
+      R4: '1974'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '1974 is the year of the revolution.'
+
+  - uid: g12-history-8-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order.'
+    items:
+      A: 'Algiers Agreement'
+      B: 'Adoption of the Transitional Charter'
+      C: 'Formation of the Sidama Regional State'
+      D: 'FDRE Constitution comes into force'
+    answer: [B, D, A, C]
+    explanation: '1991, 1995, 2000, 2020.'
+
+  - uid: g12-history-8-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which party was formed in December 2019, replacing the EPRDF coalition?'
+    options:
+      A: 'The Workers'' Party of Ethiopia'
+      B: 'The Prosperity Party'
+      C: 'The EPLF'
+      D: 'The Derg'
+    answer: B
+    explanation: 'The Prosperity Party merged most of the former EPRDF member parties and several allied parties.'
+
+  - uid: g12-history-8-1-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'Under the federal system, how are regional state governments mainly formed?'
+    options:
+      A: 'They are appointed by foreign governments.'
+      B: 'They are chosen by the emperor.'
+      C: 'Each region has an elected council that forms its government.'
+      D: 'They have no governments.'
+    answer: C
+    explanation: 'Regional councils are elected and form the regional executive.'
+
+  - uid: g12-history-8-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which large hydropower project was begun on the Abay in 2011?'
+    options:
+      A: 'Gibe III'
+      B: 'Tekeze Dam'
+      C: 'Koka Dam'
+      D: 'The Grand Ethiopian Renaissance Dam'
+    answer: D
+    explanation: 'Construction of the GERD began in 2011.'
+
+  - uid: g12-history-8-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'The regional states South Ethiopia and Central Ethiopia were formed in 2023 from which former region?'
+    options:
+      A: 'The Southern Nations, Nationalities and Peoples'' Region (SNNPR)'
+      B: 'Oromia'
+      C: 'Afar'
+      D: 'Gambella'
+    answer: A
+    explanation: 'After Sidama and South West Ethiopia Peoples'' had left, the rest of the SNNPR was divided into these two regions.'
+
+  - uid: g12-history-8-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'How many houses does the Ethiopian federal parliament have?'
+    options:
+      A: 'One'
+      B: 'Two'
+      C: 'Three'
+      D: 'Four'
+    answer: B
+    explanation: 'The House of Peoples'' Representatives and the House of the Federation.'
+
+  - uid: g12-history-8-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'In which month and year did the Transitional Charter set up the Transitional Government of Ethiopia?'
+    options:
+      A: 'May 1993'
+      B: 'August 1995'
+      C: 'July 1991'
+      D: 'December 2019'
+    answer: C
+    explanation: 'The Transitional Charter was adopted at a conference in July 1991.'

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-6-1-q001: {hash: 'c42f9da326f5113fc4cf5238b4a8d3ce48e7be1adebde50138a8c0c2e226bbee', answer: B}
+  g12-geography-6-1-q002: {hash: '8e1b5b3904060e1a610ec3d112ff856669bc5cc175e77cd432db1d9d24fdad71', answer: 17}
+  g12-geography-6-1-q003: {hash: '9264f2d8c75fafe8b4746ef98d91b7ac2f461db093cd7930c83092c2e528865c', answer: D}
+  g12-geography-6-1-q004: {hash: '78bb5d33229ed3945f3203be909e72426a24439032a719425967196327de0a73', answer: A}
+  g12-geography-6-1-q005: {hash: 'd0e8dc201772372c6e4ee09e74ac10b0a306fbf61f60652601536a93b7ac7732', answer: C}
+  g12-geography-6-1-q006: {hash: 'c572b08d7bef05529c9700ec429ed96eae5592292f8bca1c5949a635f008a0b4', answer: B}
+  g12-geography-6-1-q007: {hash: 'c0b01a521cd345210154d4b3d815af5cf0a97dd36df746048d7fc2672793a418', answer: D}
+  g12-geography-6-1-q008: {hash: 'c483d5f27f119d1788c1e8c4188779101cb671bcd985100fd60aab0fcde47fc8', answer: [A, B, C]}
+  g12-geography-6-1-q009: {hash: '8ededf7df62c9111f7e51bc1842b1af22fc913442c7dfc0eb055fdc8bbd35e20', answer: A}
+  g12-geography-6-1-q010: {hash: '9760fc7bbb3762cd09c43b5c6e4682b8dc88f82a7179a88c9228048e3552e42d', answer: C}
+  g12-geography-6-1-q011: {hash: '51bc16812f0ff06b03ee2a7c5741cf32a9814d725bc4a0c47cac320ec8da1fa9', answer: D}
+  g12-geography-6-1-q012: {hash: '5e4cdbd00652c05db71a9da3aa0950a81f9fa01b83098296d1229f95c33270e9', answer: true}
+  g12-geography-6-1-q013: {hash: 'c0461bbd5dbf03f15837e9ba5b2fe5bf27d8001ae5f128ed394acb2a9e6c9e21', answer: B}
+  g12-geography-6-1-q014: {hash: '7ea539b4a76c63aebef16f5bb1917576c5adf9bec32191af26d82d0ab3f11fa6', answer: A}
+  g12-geography-6-1-q015: {hash: '005545c829512b94a085ce6a7202be34db37a2a25494d2331509d914fc151c85', answer: C}
+  g12-geography-6-1-q016: {hash: '22ec4049f89a568f121404a0c3a2773131dc4bc8d7802c5922580b9d00d15751', answer: true}
+  g12-geography-6-1-q017: {hash: '1fbcc3fcafe737847dac09eade65587eda41986b6df053e8b1d737461dba7192', answer: 1987}
+  g12-geography-6-1-q018: {hash: 'ee83d0ebff35a93f6ea72882db400770e1cbf71be77afced1796684de0af864d', answer: D}
+  g12-geography-6-1-q019: {hash: 'a721161b90f83cbe2d277d1987a79cde4b465bf556ad7471830071711602b86a', answer: 'reforestation', note: 'Accept the spelling variant "reafforestation" too.'}
+  g12-geography-6-1-q020: {hash: '62b00bc1c033e4f52835b7da678efd0ff7639b497067799b52866acd30c10a9a', answer: 'reuse', note: 'Wording is slightly confusing: it asks to "write the three Rs ... separated by commas" but only one blank is shown. Students may type "reduce, reuse, recycle" instead of just "reuse"; accept both or reword the stem.'}
+  g12-geography-6-1-q021: {hash: '2a9f0d41bbcf235eb3aa3bc3407e105ce4330f747df59dc55db071c9d4b994fd', answer: false}
+  g12-geography-6-1-q022: {hash: 'b46b906eebf4c12f83c42e8ca7ecbb621e2425a0a0304099b052275c0cfbe6d0', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-geography-6-1-q023: {hash: 'b282c2203cda4ced74ffb958dfd101138be88d3f11109601cbed5e1a7a5be00f', answer: [B, D, A, C], note: 'Minor ambiguity: D (terraces/check dams) and A (planting) are often done together, and some guides plant first. B first and C last are clear; the D-before-A order should be stated as the expected logic (structures first, then plant on them) in the explanation.'}
+  g12-geography-6-1-q024: {hash: '4e5aa82db74825d4fdab695c89549ac69a59fcb589375238dd029ef3f8cef4cb', answer: C}
+  g12-geography-6-1-q025: {hash: 'f15564940dde9642802f61d29a7d32b1502b13d2012fed44e1ee82dbb0a47d34', answer: C}
+  g12-geography-6-1-q026: {hash: 'f76c33b6f777c3496842864390a3ee65002fa135b263a8a319640d8cd22f5956', answer: A}
+  g12-geography-6-1-q027: {hash: '564ec8640edd6468734ae6345d95bbb511db8bb31c5bb5777188f5de6aac950b', answer: D}
+  g12-geography-6-1-q028: {hash: '23ad8f7b50e8d00365b0ceb1ba5579663c8aff13a2e21b5aa80452fc03fb942b', answer: A}
+  g12-geography-6-1-q029: {hash: '77fd60fe683d1c43e4011f12134d0d59446c89f9866df60736ac5f8c7f356d8a', answer: true}
+  g12-geography-6-1-q030: {hash: '89e805740f73cbe272005f14e0bced630e7ceac4143c1924a665a57804fb278e', answer: B}

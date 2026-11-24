@@ -1,0 +1,373 @@
+summary:
+  key_points:
+    - 'Bacteria are prokaryotes: single cells with no nucleus. Their DNA is a single circular chromosome, often with small extra rings called plasmids. They have a cell wall (made of peptidoglycan), cell membrane, cytoplasm and small ribosomes; many have flagella for movement.'
+    - 'Bacteria are named by shape: cocci (spheres), bacilli (rods), spirilla (spirals) and vibrios (commas). Gram staining sorts them: Gram-positive bacteria (thick wall) stain purple; Gram-negative bacteria stain pink.'
+    - 'Bacteria reproduce asexually by binary fission – one cell splits into two. In good conditions some divide every 20 minutes, so numbers double quickly. Some form tough endospores that survive heat and drying.'
+    - 'Viruses are not cells. A virus is a piece of DNA or RNA inside a protein coat (capsid), sometimes with an outer envelope. They are much smaller than bacteria and can only reproduce inside a living host cell, so they are obligate parasites.'
+    - 'In the lytic cycle a virus attaches to a cell, injects its genetic material, makes the cell build new viruses, and then bursts (lyses) the cell. In the lysogenic cycle the viral DNA hides inside the host DNA for a time. Viruses that infect bacteria are bacteriophages.'
+    - 'Fungi are eukaryotes with cell walls made of chitin. They cannot photosynthesise; most are saprophytes that digest dead matter outside their bodies and absorb the products. Most are made of threads called hyphae, which form a mycelium; yeast is single-celled and reproduces by budding. Fungi spread by spores.'
+  formulas:
+    - label: Growth by binary fission
+      latex: 'N = N_0 \times 2^{n}, \quad n = \frac{\text{time}}{\text{doubling time}}'
+
+solved_exercises:
+  - uid: g12-biology-2-1-se01
+    problem: 'One bacterium divides every 20 minutes. How many bacteria are there after 2 hours, if none die?'
+    steps:
+      - '2 hours = 120 minutes, so there are $\frac{120}{20} = 6$ divisions.'
+      - '$N = 1 \times 2^6 = 64$.'
+    answer: '64'
+  - uid: g12-biology-2-1-se02
+    problem: 'Give two reasons why viruses are often said to be on the border between living and non-living.'
+    steps:
+      - 'Like living things, they have genes (DNA or RNA) and can reproduce and evolve.'
+      - 'But they are not cells, have no metabolism of their own and can reproduce only inside a host cell.'
+    answer: 'They have genes and reproduce, but only inside host cells and with no metabolism.'
+  - uid: g12-biology-2-1-se03
+    problem: 'How do bread moulds get their food?'
+    steps:
+      - 'Hyphae grow into the bread and release digestive enzymes onto it.'
+      - 'The digested small molecules are absorbed through the hyphal walls. This is saprophytic nutrition.'
+    answer: 'External digestion and absorption (saprophytic)'
+
+flashcards:
+  - {uid: g12-biology-2-1-fc01, term: Prokaryote, definition: 'Cell with no nucleus or membrane-bound organelles, e.g. a bacterium.'}
+  - {uid: g12-biology-2-1-fc02, term: Plasmid, definition: 'Small extra ring of DNA in a bacterium.'}
+  - {uid: g12-biology-2-1-fc03, term: Binary fission, definition: 'Asexual reproduction in which one cell splits into two.'}
+  - {uid: g12-biology-2-1-fc04, term: Endospore, definition: 'Tough resting form of some bacteria that survives harsh conditions.'}
+  - {uid: g12-biology-2-1-fc05, term: Capsid, definition: 'Protein coat around a virus''s genetic material.'}
+  - {uid: g12-biology-2-1-fc06, term: Bacteriophage, definition: 'A virus that infects bacteria.'}
+  - {uid: g12-biology-2-1-fc07, term: Lytic cycle, definition: 'Virus multiplies in a host cell and bursts it.'}
+  - {uid: g12-biology-2-1-fc08, term: Hyphae, definition: 'Thread-like filaments that make up the body of most fungi.'}
+  - {uid: g12-biology-2-1-fc09, term: Chitin, definition: 'Tough material in the cell walls of fungi.'}
+  - {uid: g12-biology-2-1-fc10, term: Saprophyte, definition: 'Organism that feeds on dead matter by external digestion.'}
+
+questions:
+  - uid: g12-biology-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which feature is found in bacterial cells?'
+    options:
+      A: 'A true nucleus with a membrane'
+      B: 'Mitochondria'
+      C: 'A cell wall made of peptidoglycan'
+      D: 'Chloroplasts in every cell'
+    answer: C
+    explanation: 'Bacteria are prokaryotes: no nucleus or mitochondria, but a peptidoglycan cell wall.'
+
+  - uid: g12-biology-2-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Rod-shaped bacteria are called:'
+    options:
+      A: 'Cocci'
+      B: 'Bacilli'
+      C: 'Spirilla'
+      D: 'Vibrios'
+    answer: B
+    explanation: 'Bacilli are rods; cocci are spheres; spirilla are spirals; vibrios are comma-shaped.'
+
+  - uid: g12-biology-2-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'How do bacteria usually reproduce?'
+    options:
+      A: 'By binary fission'
+      B: 'By budding only'
+      C: 'By making seeds'
+      D: 'By forming spores in a mushroom'
+    answer: A
+    explanation: 'The cell copies its DNA and divides into two identical daughter cells.'
+
+  - uid: g12-biology-2-1-q004
+    type: numeric
+    difficulty: 2
+    stem: 'A single bacterium divides every 20 minutes. How many bacteria will there be after 2 hours if all survive?'
+    answer: {value: 64, tolerance: 0}
+    explanation: '120 min ÷ 20 min = 6 divisions; $2^6 = 64$.'
+
+  - uid: g12-biology-2-1-q005
+    type: numeric
+    difficulty: 2
+    stem: 'A culture starts with 100 bacteria that double every 20 minutes. How many are there after 1 hour?'
+    answer: {value: 800, tolerance: 0}
+    explanation: '60 ÷ 20 = 3 doublings: $100 \times 2^3 = 800$.'
+
+  - uid: g12-biology-2-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What is a plasmid?'
+    options:
+      A: 'A protein coat of a virus'
+      B: 'A type of fungal spore'
+      C: 'The nucleus of a bacterium'
+      D: 'A small extra ring of DNA in a bacterium'
+    answer: D
+    explanation: 'Plasmids often carry useful genes such as antibiotic resistance and are used in genetic engineering.'
+
+  - uid: g12-biology-2-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'What colour do Gram-positive bacteria appear after Gram staining?'
+    options:
+      A: 'Pink'
+      B: 'Green'
+      C: 'Purple'
+      D: 'Colourless'
+    answer: C
+    explanation: 'Their thick peptidoglycan wall holds the purple (crystal violet) stain; Gram-negative bacteria appear pink.'
+
+  - uid: g12-biology-2-1-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Viruses can reproduce only inside living host cells.'
+    answer: true
+    explanation: 'Viruses have no metabolism of their own, so they use the host cell''s machinery to make copies.'
+
+  - uid: g12-biology-2-1-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'What does a virus consist of?'
+    options:
+      A: 'A complete cell with a nucleus'
+      B: 'Genetic material (DNA or RNA) inside a protein coat'
+      C: 'Cytoplasm and ribosomes only'
+      D: 'A cell wall made of chitin'
+    answer: B
+    explanation: 'A virus is a nucleic acid core inside a capsid; some also have a lipid envelope.'
+
+  - uid: g12-biology-2-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the correct order of size, from largest to smallest?'
+    options:
+      A: 'Virus > bacterium > animal cell'
+      B: 'Bacterium > animal cell > virus'
+      C: 'Animal cell > virus > bacterium'
+      D: 'Animal cell > bacterium > virus'
+    answer: D
+    explanation: 'Animal cells are about 10–30 μm, bacteria about 1–5 μm and viruses about 20–300 nm.'
+
+  - uid: g12-biology-2-1-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'A virus that infects bacteria is called a:'
+    options:
+      A: 'Bacteriophage'
+      B: 'Retrovirus'
+      C: 'Prion'
+      D: 'Plasmid'
+    answer: A
+    explanation: 'Bacteriophages ("bacteria eaters") inject their DNA into bacterial cells.'
+
+  - uid: g12-biology-2-1-q012
+    type: ordering
+    difficulty: 2
+    stem: 'Put the stages of the lytic cycle of a virus in order.'
+    items:
+      A: 'New viruses are assembled inside the cell.'
+      B: 'The virus attaches to the host cell.'
+      C: 'The cell bursts and releases new viruses.'
+      D: 'Viral genetic material enters the cell and is copied.'
+    answer: [B, D, A, C]
+    explanation: 'Attachment, entry and replication, assembly, then lysis and release.'
+
+  - uid: g12-biology-2-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'How does the lysogenic cycle differ from the lytic cycle?'
+    options:
+      A: 'In the lysogenic cycle the cell bursts at once.'
+      B: 'In the lysogenic cycle the viral DNA joins the host DNA and stays inactive for a time.'
+      C: 'The lysogenic cycle happens only in fungi.'
+      D: 'The lysogenic cycle does not involve any genetic material.'
+    answer: B
+    explanation: 'The viral DNA is copied with the host DNA at each division and can later switch to the lytic cycle.'
+
+  - uid: g12-biology-2-1-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'The cell walls of fungi are made of:'
+    options:
+      A: 'Cellulose'
+      B: 'Peptidoglycan'
+      C: 'Chitin'
+      D: 'Protein only'
+    answer: C
+    explanation: 'Chitin is also found in insect exoskeletons. Plant walls are cellulose; bacterial walls are peptidoglycan.'
+
+  - uid: g12-biology-2-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'How do most fungi obtain their food?'
+    options:
+      A: 'By photosynthesis'
+      B: 'By swallowing other organisms'
+      C: 'From the air only'
+      D: 'By releasing enzymes onto dead matter and absorbing the products'
+    answer: D
+    explanation: 'Most fungi are saprophytes; they digest food outside their bodies.'
+
+  - uid: g12-biology-2-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'How does yeast usually reproduce?'
+    options:
+      A: 'By budding'
+      B: 'By binary fission'
+      C: 'By making seeds'
+      D: 'By making flowers'
+    answer: A
+    explanation: 'A small bud grows out of the parent cell and eventually separates.'
+
+  - uid: g12-biology-2-1-q017
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which statements are true of fungi? Choose all that apply.'
+    options:
+      A: 'They are eukaryotes.'
+      B: 'They reproduce by spores.'
+      C: 'They make their own food by photosynthesis.'
+      D: 'Many are made of thread-like hyphae.'
+    answer: [A, B, D]
+    explanation: 'Fungi have nuclei, spread by spores and are mostly hyphal. They are heterotrophs, not photosynthetic.'
+
+  - uid: g12-biology-2-1-q018
+    type: true_false
+    difficulty: 1
+    stem: 'Bacteria have a nucleus surrounded by a membrane.'
+    answer: false
+    explanation: 'Bacteria are prokaryotes; their DNA lies free in the cytoplasm in a region called the nucleoid.'
+
+  - uid: g12-biology-2-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Why are some bacteria difficult to kill by boiling?'
+    options:
+      A: 'They have chloroplasts.'
+      B: 'They form endospores that resist heat.'
+      C: 'They are viruses.'
+      D: 'They live only in cold places.'
+    answer: B
+    explanation: 'Endospores have thick protective coats. Autoclaving at about 121 °C under pressure is used to kill them.'
+
+  - uid: g12-biology-2-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement explains why antibiotics do not work against viruses?'
+    options:
+      A: 'Viruses are too large.'
+      B: 'Viruses have peptidoglycan walls.'
+      C: 'Viruses lack the cell structures, such as bacterial walls and ribosomes, that antibiotics target.'
+      D: 'Viruses live only outside cells.'
+    answer: C
+    explanation: 'Antibiotics attack bacterial walls, ribosomes or enzymes; viruses use the host''s machinery instead.'
+
+  - uid: g12-biology-2-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The protein coat that surrounds the genetic material of a virus is called the ________.'
+    answer: [capsid]
+    explanation: 'The capsid protects the nucleic acid and helps the virus attach to host cells.'
+
+  - uid: g12-biology-2-1-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'The network of hyphae that forms the body of a fungus is called the ________.'
+    answer: [mycelium]
+    explanation: 'A mushroom is only the spore-producing part; most of the fungus is the mycelium in the soil.'
+
+  - uid: g12-biology-2-1-q023
+    type: true_false
+    difficulty: 2
+    stem: 'Some viruses contain RNA instead of DNA as their genetic material.'
+    answer: true
+    explanation: 'For example, HIV and influenza viruses are RNA viruses.'
+
+  - uid: g12-biology-2-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each microorganism with its feature.'
+    left:
+      L1: 'Bacterium'
+      L2: 'Virus'
+      L3: 'Fungus'
+    right:
+      R1: 'Not a cell; reproduces only inside host cells'
+      R2: 'Eukaryote with chitin cell walls'
+      R3: 'Prokaryote that divides by binary fission'
+      R4: 'Makes food by photosynthesis in chloroplasts'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Photosynthesis in chloroplasts describes plants and algae, not these groups.'
+
+  - uid: g12-biology-2-1-q025
+    type: single_choice
+    difficulty: 1
+    stem: 'What do many bacteria use flagella for?'
+    options:
+      A: 'Photosynthesis'
+      B: 'Storing DNA'
+      C: 'Making spores'
+      D: 'Moving'
+    answer: D
+    explanation: 'A flagellum is a whip-like tail that rotates to push the bacterium along.'
+
+  - uid: g12-biology-2-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Viruses are called obligate parasites because they:'
+    options:
+      A: 'Can only reproduce inside the cells of a host'
+      B: 'Always help their host'
+      C: 'Make their own food'
+      D: 'Live freely in soil'
+    answer: A
+    explanation: '"Obligate" means they have no choice: outside a cell they cannot multiply.'
+
+  - uid: g12-biology-2-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'A sample from a patient contains particles that cannot be seen with a light microscope and that pass through filters that stop bacteria. What are they most likely to be?'
+    options:
+      A: 'Fungal hyphae'
+      B: 'Viruses'
+      C: 'Yeast cells'
+      D: 'Large bacteria'
+    answer: B
+    explanation: 'Viruses are too small to see with light microscopes and pass through bacterial filters; an electron microscope is needed.'
+
+  - uid: g12-biology-2-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Bacteria that are spherical and grow in chains are described as:'
+    options:
+      A: 'Staphylococci'
+      B: 'Bacilli'
+      C: 'Streptococci'
+      D: 'Spirilla'
+    answer: C
+    explanation: '"Strepto-" means chain; "staphylo-" means grape-like cluster.'
+
+  - uid: g12-biology-2-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is a fungus?'
+    options:
+      A: 'Mushroom'
+      B: 'Amoeba'
+      C: 'Moss'
+      D: 'Algae'
+    answer: A
+    explanation: 'Mushrooms are the fruiting bodies of fungi. Amoeba is a protozoan; moss is a plant; algae photosynthesise.'
+
+  - uid: g12-biology-2-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about viruses is correct?'
+    options:
+      A: 'They carry out respiration.'
+      B: 'They grow by binary fission.'
+      C: 'They have ribosomes.'
+      D: 'They have genes and can change over time.'
+    answer: D
+    explanation: 'Viruses have DNA or RNA and mutate, which is why flu vaccines are updated. They do not respire or divide.'

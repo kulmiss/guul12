@@ -1,0 +1,374 @@
+summary:
+  key_points:
+    - 'Humans have a double circulation: the right side of the heart pumps deoxygenated blood to the lungs; the left side pumps oxygenated blood to the body. The left ventricle has the thickest wall because it pumps blood all round the body.'
+    - 'Blood flow: vena cava → right atrium → right ventricle → pulmonary artery → lungs → pulmonary vein → left atrium → left ventricle → aorta → body. Valves (tricuspid, bicuspid, semilunar) stop backflow. The heartbeat starts at the pacemaker (SA node).'
+    - 'Arteries carry blood away from the heart at high pressure and have thick, muscular, elastic walls. Veins carry blood back at low pressure and have valves. Capillaries are one cell thick, so substances exchange easily with tissues.'
+    - 'Blood: plasma carries dissolved food, CO₂, hormones and urea; red cells (no nucleus, biconcave, full of haemoglobin) carry oxygen; white cells fight infection; platelets help clotting. Considering only the ABO system, group O red cells can be given to anyone and group AB can receive from anyone; the Rh factor must also match in practice.'
+    - 'Breathing: air passes through the trachea, bronchi and bronchioles to the alveoli. Alveoli are thin, moist and very numerous, with many capillaries, for fast gas exchange. To inhale, the diaphragm contracts and flattens and the intercostal muscles lift the ribs, so chest volume rises and pressure falls.'
+    - 'Smoking damages health: tar causes cancer and damages cilia, carbon monoxide reduces oxygen carried by blood, and nicotine is addictive.'
+    - 'Excretion removes metabolic wastes. The liver turns excess amino acids into urea (deamination). Each kidney has about a million nephrons: blood is filtered in the glomerulus into Bowman''s capsule (ultrafiltration); glucose and useful substances are reabsorbed; water reabsorption in the collecting duct is controlled by ADH. Lungs excrete CO₂; skin loses water and salts in sweat.'
+  formulas:
+    - label: Cardiac output
+      latex: '\text{cardiac output} = \text{stroke volume} \times \text{heart rate}'
+
+solved_exercises:
+  - uid: g12-biology-5-3-se01
+    problem: 'A heart pumps 70 mL per beat at 72 beats per minute. Find the cardiac output in litres per minute.'
+    steps:
+      - '$70 \times 72 = 5040$ mL/min.'
+      - '$= 5.04$ L/min.'
+    answer: '5.04 L/min'
+  - uid: g12-biology-5-3-se02
+    problem: 'Why is the wall of the left ventricle thicker than that of the right ventricle?'
+    steps:
+      - 'The right ventricle pumps blood only to the nearby lungs.'
+      - 'The left ventricle must produce a much higher pressure to push blood around the whole body, so it has more muscle.'
+    answer: 'It pumps blood to the whole body at high pressure.'
+  - uid: g12-biology-5-3-se03
+    problem: 'Glucose is filtered into the nephron but is normally absent from urine. Explain.'
+    steps:
+      - 'Glucose is small, so it passes from the glomerulus into Bowman''s capsule.'
+      - 'All of it is then reabsorbed into the blood by active transport in the first coiled tubule, so none reaches the urine.'
+    answer: 'It is all reabsorbed.'
+
+flashcards:
+  - {uid: g12-biology-5-3-fc01, term: Double circulation, definition: 'Blood passes through the heart twice in each full circuit of the body.'}
+  - {uid: g12-biology-5-3-fc02, term: Aorta, definition: 'Largest artery; carries oxygenated blood from the left ventricle.'}
+  - {uid: g12-biology-5-3-fc03, term: Pulmonary vein, definition: 'Carries oxygenated blood from the lungs to the left atrium.'}
+  - {uid: g12-biology-5-3-fc04, term: Capillary, definition: 'Tiny vessel with walls one cell thick, where exchange happens.'}
+  - {uid: g12-biology-5-3-fc05, term: Haemoglobin, definition: 'Iron-containing protein in red cells that carries oxygen.'}
+  - {uid: g12-biology-5-3-fc06, term: Alveoli, definition: 'Tiny air sacs in the lungs where gas exchange happens.'}
+  - {uid: g12-biology-5-3-fc07, term: Nephron, definition: 'Filtering unit of the kidney.'}
+  - {uid: g12-biology-5-3-fc08, term: Ultrafiltration, definition: 'Filtering of blood under pressure in the glomerulus.'}
+  - {uid: g12-biology-5-3-fc09, term: Deamination, definition: 'Removal of the nitrogen part of excess amino acids in the liver, forming urea.'}
+  - {uid: g12-biology-5-3-fc10, term: Cardiac output, definition: 'Stroke volume × heart rate.'}
+
+questions:
+  - uid: g12-biology-5-3-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which chamber of the heart pumps oxygenated blood to the body?'
+    options:
+      A: 'Right atrium'
+      B: 'Left ventricle'
+      C: 'Right ventricle'
+      D: 'Left atrium'
+    answer: B
+    explanation: 'The left ventricle pumps blood into the aorta, which carries it to the body.'
+
+  - uid: g12-biology-5-3-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which blood vessel carries oxygenated blood from the lungs to the heart?'
+    options:
+      A: 'Pulmonary vein'
+      B: 'Pulmonary artery'
+      C: 'Vena cava'
+      D: 'Aorta'
+    answer: A
+    explanation: 'It is the only vein carrying oxygenated blood; the pulmonary artery is the only artery carrying deoxygenated blood.'
+
+  - uid: g12-biology-5-3-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do veins have valves?'
+    options:
+      A: 'To make blood flow faster'
+      B: 'To add oxygen to the blood'
+      C: 'To prevent blood flowing backwards at low pressure'
+      D: 'To filter the blood'
+    answer: C
+    explanation: 'Blood in veins is at low pressure; valves keep it moving towards the heart.'
+
+  - uid: g12-biology-5-3-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'Why are capillaries well suited to exchanging substances with body cells?'
+    options:
+      A: 'They have thick muscular walls.'
+      B: 'They have valves.'
+      C: 'They carry blood at very high pressure.'
+      D: 'Their walls are only one cell thick.'
+    answer: D
+    explanation: 'Thin walls give a short diffusion distance for oxygen, glucose and wastes.'
+
+  - uid: g12-biology-5-3-q005
+    type: numeric
+    difficulty: 2
+    stem: 'A person''s stroke volume is 70 mL and their heart rate is 70 beats per minute. What is their cardiac output, in mL per minute?'
+    answer: {value: 4900, tolerance: 0, unit: mL/min}
+    explanation: '$70 \times 70 = 4900$ mL/min (about 4.9 L/min).'
+
+  - uid: g12-biology-5-3-q006
+    type: numeric
+    difficulty: 1
+    stem: 'A nurse counts 20 pulse beats in 15 seconds. What is the heart rate in beats per minute?'
+    answer: {value: 80, tolerance: 0, unit: beats/min}
+    explanation: '15 s is a quarter of a minute: $20 \times 4 = 80$ beats per minute.'
+
+  - uid: g12-biology-5-3-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Which blood component carries oxygen?'
+    options:
+      A: 'Red blood cells'
+      B: 'White blood cells'
+      C: 'Platelets'
+      D: 'Plasma only'
+    answer: A
+    explanation: 'Red cells contain haemoglobin, which binds oxygen in the lungs and releases it in tissues.'
+
+  - uid: g12-biology-5-3-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the main role of platelets?'
+    options:
+      A: 'Carrying oxygen'
+      B: 'Making antibodies'
+      C: 'Helping blood to clot'
+      D: 'Carrying urea'
+    answer: C
+    explanation: 'Platelets start the clotting process that seals wounds.'
+
+  - uid: g12-biology-5-3-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Considering only the ABO blood group system, a person with blood group O can give red blood cells to people of:'
+    options:
+      A: 'Group O only'
+      B: 'Group AB only'
+      C: 'Groups A and B only'
+      D: 'Groups A, B, AB and O'
+    answer: D
+    explanation: 'Group O red cells have no A or B antigens, so they are not attacked by anti-A or anti-B antibodies. In practice the Rh factor must also be matched; O-negative is the true universal donor.'
+
+  - uid: g12-biology-5-3-q010
+    type: true_false
+    difficulty: 2
+    stem: 'Mature human red blood cells have no nucleus.'
+    answer: true
+    explanation: 'Without a nucleus there is more room for haemoglobin.'
+
+  - uid: g12-biology-5-3-q011
+    type: ordering
+    difficulty: 2
+    stem: 'Put these in the order blood passes through them, starting from the body.'
+    items:
+      A: 'Right ventricle'
+      B: 'Lungs'
+      C: 'Vena cava'
+      D: 'Right atrium'
+    answer: [C, D, A, B]
+    explanation: 'Vena cava → right atrium → right ventricle → pulmonary artery → lungs.'
+
+  - uid: g12-biology-5-3-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is the left ventricle wall thicker than the right ventricle wall?'
+    options:
+      A: 'It pumps blood to the whole body at higher pressure.'
+      B: 'It receives blood from the lungs.'
+      C: 'It holds more blood.'
+      D: 'It contains the valves.'
+    answer: A
+    explanation: 'The right ventricle only pumps to the nearby lungs.'
+
+  - uid: g12-biology-5-3-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'Where does gas exchange take place in the lungs?'
+    options:
+      A: 'Trachea'
+      B: 'Bronchi'
+      C: 'Alveoli'
+      D: 'Larynx'
+    answer: C
+    explanation: 'Oxygen diffuses from the alveoli into the blood and CO₂ diffuses out.'
+
+  - uid: g12-biology-5-3-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which features make alveoli good for gas exchange? Choose all that apply.'
+    options:
+      A: 'Very large total surface area'
+      B: 'Walls one cell thick'
+      C: 'A good blood supply'
+      D: 'Thick, dry walls'
+    answer: [A, B, C]
+    explanation: 'Alveoli have thin, moist walls; thick, dry walls would slow diffusion.'
+
+  - uid: g12-biology-5-3-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'What happens when you breathe in?'
+    options:
+      A: 'The diaphragm relaxes and moves up.'
+      B: 'The ribs move down and in.'
+      C: 'Chest volume decreases and pressure rises.'
+      D: 'The diaphragm contracts and flattens, chest volume increases and air rushes in.'
+    answer: D
+    explanation: 'Lower pressure inside the chest than outside draws air into the lungs.'
+
+  - uid: g12-biology-5-3-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which substance in cigarette smoke reduces the amount of oxygen the blood can carry?'
+    options:
+      A: 'Tar'
+      B: 'Carbon monoxide'
+      C: 'Nicotine'
+      D: 'Water vapour'
+    answer: B
+    explanation: 'Carbon monoxide binds strongly to haemoglobin. Tar causes cancer; nicotine is addictive.'
+
+  - uid: g12-biology-5-3-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Where is urea made in the body?'
+    options:
+      A: 'Kidneys'
+      B: 'Lungs'
+      C: 'Liver'
+      D: 'Heart'
+    answer: C
+    explanation: 'The liver deaminates excess amino acids, making urea, which the kidneys then remove.'
+
+  - uid: g12-biology-5-3-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Where in the kidney does ultrafiltration take place?'
+    options:
+      A: 'Collecting duct'
+      B: 'Loop of Henle'
+      C: 'Ureter'
+      D: 'Glomerulus and Bowman''s capsule'
+    answer: D
+    explanation: 'High blood pressure in the glomerulus forces small molecules into Bowman''s capsule.'
+
+  - uid: g12-biology-5-3-q019
+    type: true_false
+    difficulty: 1
+    stem: 'In a healthy person, urine contains glucose.'
+    answer: false
+    explanation: 'All filtered glucose is reabsorbed. Glucose in urine can be a sign of diabetes.'
+
+  - uid: g12-biology-5-3-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is too large to pass from the blood into Bowman''s capsule in a healthy kidney?'
+    options:
+      A: 'Plasma proteins'
+      B: 'Water'
+      C: 'Glucose'
+      D: 'Urea'
+    answer: A
+    explanation: 'Blood cells and large proteins stay in the blood; small molecules are filtered.'
+
+  - uid: g12-biology-5-3-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The largest artery, which carries oxygenated blood from the left ventricle to the body, is the ________.'
+    answer: [aorta]
+    explanation: 'All the body''s arteries branch from the aorta.'
+
+  - uid: g12-biology-5-3-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The microscopic filtering units of the kidney are called ________.'
+    answer: [nephrons, nephron]
+    explanation: 'Each kidney contains about a million nephrons.'
+
+  - uid: g12-biology-5-3-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Arteries carry blood away from the heart.'
+    answer: true
+    explanation: 'Arteries carry blood away; veins carry it back towards the heart.'
+
+  - uid: g12-biology-5-3-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each excretory organ with a waste it removes.'
+    left:
+      L1: 'Lungs'
+      L2: 'Kidneys'
+      L3: 'Skin'
+    right:
+      R1: 'Urea in urine'
+      R2: 'Water and salts in sweat'
+      R3: 'Carbon dioxide'
+      R4: 'Undigested fibre'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Undigested fibre is egested, not excreted, because it was never made by body cells.'
+
+  - uid: g12-biology-5-3-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'A person''s kidneys have failed. How does a dialysis machine help?'
+    options:
+      A: 'It adds urea to the blood.'
+      B: 'It removes urea and excess salts from the blood by diffusion across a membrane.'
+      C: 'It makes new red blood cells.'
+      D: 'It pumps blood instead of the heart.'
+    answer: B
+    explanation: 'Blood flows past a partially permeable membrane with dialysis fluid on the other side; wastes diffuse out.'
+
+  - uid: g12-biology-5-3-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which structure starts each heartbeat?'
+    options:
+      A: 'The aorta'
+      B: 'The semilunar valve'
+      C: 'The pacemaker (SA node) in the right atrium'
+      D: 'The diaphragm'
+    answer: C
+    explanation: 'The SA node sends electrical signals that make the atria and then the ventricles contract.'
+
+  - uid: g12-biology-5-3-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement about white blood cells is correct?'
+    options:
+      A: 'They carry oxygen with haemoglobin.'
+      B: 'They have no nucleus.'
+      C: 'They help blood to clot.'
+      D: 'They defend the body by engulfing pathogens or making antibodies.'
+    answer: D
+    explanation: 'Phagocytes engulf microbes; lymphocytes make antibodies.'
+
+  - uid: g12-biology-5-3-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does the heart rate increase during exercise?'
+    options:
+      A: 'To deliver more oxygen and glucose to the muscles and remove more carbon dioxide'
+      B: 'To make the body cooler by stopping blood flow'
+      C: 'To reduce the amount of blood'
+      D: 'Because the lungs stop working'
+    answer: A
+    explanation: 'Working muscles respire faster and need more supplies.'
+
+  - uid: g12-biology-5-3-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the job of the tiny hairs (cilia) lining the trachea?'
+    options:
+      A: 'To absorb oxygen'
+      B: 'To sweep mucus with trapped dust and microbes up out of the airways'
+      C: 'To make sounds'
+      D: 'To carry blood'
+    answer: B
+    explanation: 'Smoking damages cilia, so mucus builds up and causes "smoker''s cough".'
+
+  - uid: g12-biology-5-3-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Which vessel carries blood from the kidneys towards the heart after it has been filtered?'
+    options:
+      A: 'Renal artery'
+      B: 'Ureter'
+      C: 'Renal vein'
+      D: 'Urethra'
+    answer: C
+    explanation: 'The renal vein carries cleaned blood away; the ureter carries urine to the bladder.'

@@ -1,0 +1,848 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:math';
+import 'dart:typed_data';
+
+import '../domain/exam.dart';
+import '../domain/exam_builder.dart';
+import '../domain/study_plan.dart';
+import 'api_client.dart';
+import 'local_db.dart';
+import 'models.dart';
+import 'token_store.dart';
+
+/// Keys in the local key/value table.
+abstract final class Keys {
+  static const catalog = 'catalog';
+  static const cursor = 'sync_cursor';
+  static const serverProfile = 'profile_server';
+  static const pendingProfile = 'profile_pending';
+  static const config = 'config';
+  static const logoLight = 'brand_logo_light';
+  static const logoDark = 'brand_logo_dark';
+  static const recentChapters = 'recent_chapters';
+  static const pendingReports = 'pending_reports';
+  static const mocks = 'mocks';
+  static const examInProgress = 'exam_in_progress';
+  static const historyRestored = 'history_restored';
+  static const planMinutes = 'plan_minutes';
+  static const planToday = 'plan_today';
+  static const lastPremiumUntil = 'premium_last_until';
+}
+
+/// Today's plan as saved on the phone, so it does not change while the student works on it.
+class SavedPlan {
+  const SavedPlan({
+    required this.day,
+    required this.minutes,
+    required this.tasks,
+    required this.done,
+  });
+
+  /// Local date, `yyyy-mm-dd`.
+  final String day;
+  final int minutes;
+  final List<PlanTask> tasks;
+
+  /// Indexes of ticked tasks.
+  final Set<int> done;
+}
+
+/// `yyyy-mm-dd` of the local date.
+String planDay(DateTime t) =>
+    '${t.year.toString().padLeft(4, '0')}-${t.month.toString().padLeft(2, '0')}-${t.day.toString().padLeft(2, '0')}';
+
+/// Offline-first data access. Every read comes from the phone; the network only refreshes it.
+class Repository {
+  Repository({
+    required this.api,
+    required this.db,
+    required this.tokens,
+    DateTime Function()? clock,
+  }) : _clock = clock ?? DateTime.now;
+
+  final ApiClient api;
+  final LocalDb db;
+  final TokenStore tokens;
+  final DateTime Function() _clock;
+
+  /// The repository's clock (tests replace it).
+  DateTime now() => _clock();
+
+  static const _profileFields = {
+    'grade',
+    'stream',
+    'is_retaker',
+    'region',
+    'city',
+    'gender',
+    'target_score',
+    'reminder_time',
+    'onboarded',
+  };
+
+  // ---- session ---------------------------------------------------------------------------------
+
+  /// Makes sure this install has an account and a token. Works silently; throws [ApiException] when offline.
+  Future<void> ensureSession({String platform = 'android', String? appVersion}) async {
+    if (await tokens.readToken() != null) return;
+    await _register(platform, appVersion);
+  }
+
+  Future<void> _register(String platform, String? appVersion) async {
+    final json = await api.post('auth/device', {
+      'install_id': await tokens.installId(),
+      'platform': platform,
+      'app_version': ?appVersion,
+    }, auth: false);
+    await tokens.writeToken(asString(json['token']));
+    await _saveServerProfile(asMap(json['user']));
+  }
+
+  /// Runs [call]; if the token was rejected (e.g. account merged elsewhere), registers again once and retries.
+  Future<T> _authed<T>(Future<T> Function() call) async {
+    try {
+      return await call();
+    } on ApiException catch (e) {
+      if (!e.isUnauthorized) rethrow;
+      await tokens.clearToken();
+      await _register('android', null);
+      return call();
+    }
+  }
+
+  /// Google sign-in. Returns the new profile. Throws [ApiException] (code `account_conflict`, `invalid_google_token`).
+  Future<Profile> signInWithGoogle(String idToken) async {
+    final json = await _authed(
+      () async =>
+          api.post('auth/google', {'id_token': idToken, 'install_id': await tokens.installId()}),
+    );
+    await tokens.writeToken(asString(json['token']));
+    await _saveServerProfile(asMap(json['user']));
+    // The account may now be an older one with its own history: fetch it on the next sync.
+    await db.writeString(Keys.historyRestored, '');
+    return profile();
+  }
+
+  // ---- profile ---------------------------------------------------------------------------------
+
+  /// Saves the server's profile, and remembers the last Premium end date seen (the server stops
+  /// sending it once Premium has ended; the phone uses it for "Your Premium ended on …").
+  Future<void> _saveServerProfile(Map<String, Object?> user) async {
+    await db.writeJson(Keys.serverProfile, user);
+    final until = asStringOrNull(asMap(user['premium'])['until']);
+    if (until != null) await db.writeString(Keys.lastPremiumUntil, until);
+  }
+
+  /// The last Premium end date this phone saw, or null.
+  Future<DateTime?> lastPremiumUntil() async {
+    final raw = await db.readString(Keys.lastPremiumUntil);
+    return raw == null ? null : DateTime.tryParse(raw);
+  }
+
+  /// Server profile with any changes not yet uploaded applied on top.
+  Future<Profile> profile() => profileFrom(db);
+
+  /// The profile from the phone only (also used by the background reminder, which has no API).
+  static Future<Profile> profileFrom(LocalDb db) async {
+    final server = await db.readJson(Keys.serverProfile) ?? _emptyProfileJson;
+    final pending = await db.readJson(Keys.pendingProfile) ?? const {};
+    return Profile.fromJson({...server, ...pending});
+  }
+
+  static const Map<String, Object?> _emptyProfileJson = {
+    'student_id': null,
+    'signed_in': false,
+    'grade': null,
+    'stream': null,
+    'is_retaker': false,
+    'region': null,
+    'city': null,
+    'gender': null,
+    'target_score': null,
+    'reminder_time': null,
+    'nickname': null,
+    'avatar_style': null,
+    'avatar_seed': null,
+    'onboarded': false,
+    'premium': {'active': false, 'until': null},
+  };
+
+  /// Saves profile changes on the phone at once and uploads them when possible.
+  Future<void> updateProfile(Map<String, Object?> changes) async {
+    final unknown = changes.keys.where((k) => !_profileFields.contains(k));
+    if (unknown.isNotEmpty) throw ArgumentError('Unknown profile fields: $unknown');
+    final pending = {...?await db.readJson(Keys.pendingProfile), ...changes};
+    await db.writeJson(Keys.pendingProfile, pending);
+    unawaited(_tryQuietly(uploadProfile));
+  }
+
+  Future<void> uploadProfile() async {
+    final pending = await db.readJson(Keys.pendingProfile);
+    if (pending == null || pending.isEmpty) return;
+    final body = {...pending};
+    // The server only accepts `onboarded: true`.
+    if (body['onboarded'] != true) body.remove('onboarded');
+    final json = await _authed(() => api.patch('me', body));
+    await _saveServerProfile(asMap(json['user']));
+    // Only clear what was sent; newer local edits stay pending.
+    final now = await db.readJson(Keys.pendingProfile) ?? const {};
+    final remaining = {
+      for (final e in now.entries)
+        if (!pending.containsKey(e.key) || pending[e.key] != e.value) e.key: e.value,
+    };
+    await db.writeJson(Keys.pendingProfile, remaining);
+  }
+
+  /// Nickname and avatar are saved online only: the server may refuse a nickname, and a refused
+  /// one must not wait in the offline queue. Throws [ApiException] (422 = choose another
+  /// nickname; offline = no internet).
+  Future<void> saveIdentity({
+    required String nickname,
+    required String avatarStyle,
+    required String avatarSeed,
+  }) async {
+    final json = await _authed(
+      () => api.patch('me', {
+        'nickname': nickname,
+        'avatar_style': avatarStyle,
+        'avatar_seed': avatarSeed,
+      }),
+    );
+    await _saveServerProfile(asMap(json['user']));
+  }
+
+  /// Deletes the account and all its data on the server (online only), then wipes this phone's
+  /// data and sign-in so the app starts fresh. Throws [ApiException] (offline, or refused).
+  Future<void> deleteAccount() async {
+    await _authed(() => api.delete('me', query: {'confirm': 'delete-my-account'}));
+    await db.clearAll();
+    await tokens.clearToken();
+  }
+
+  Future<void> refreshProfile() async {
+    final json = await _authed(() => api.get('me'));
+    await _saveServerProfile(asMap(json['user']));
+  }
+
+  // ---- config ----------------------------------------------------------------------------------
+
+  Future<AppConfig> config() async {
+    final json = await db.readJson(Keys.config);
+    return json == null ? AppConfig.fallback : AppConfig.fromJson(json);
+  }
+
+  Future<AppConfig> refreshConfig() async {
+    final json = await _authed(() => api.get('config'));
+    await db.writeJson(Keys.config, json);
+    final config = AppConfig.fromJson(json);
+    await _refreshLogo(Keys.logoLight, config.branding.logoLightUrl);
+    await _refreshLogo(Keys.logoDark, config.branding.logoDarkUrl);
+    return config;
+  }
+
+  /// Keeps the branding logo on the phone (downloaded once per new address). Without internet
+  /// or with a bad file the old one, or the built-in icon, stays.
+  Future<void> _refreshLogo(String key, String? url) async {
+    final saved = await db.readString('${key}_url');
+    if (url == null) {
+      await db.deleteKey(key);
+      await db.deleteKey('${key}_url');
+      return;
+    }
+    if (url == saved) return;
+    final bytes = await api.downloadPng(url);
+    if (bytes == null) return;
+    await db.writeString(key, base64Encode(bytes));
+    await db.writeString('${key}_url', url);
+  }
+
+  /// The logo picture for light or dark mode (dark falls back to light), or null for the icon.
+  Future<Uint8List?> brandLogo({required bool dark}) async {
+    final raw =
+        (dark ? await db.readString(Keys.logoDark) : null) ?? await db.readString(Keys.logoLight);
+    return raw == null ? null : base64Decode(raw);
+  }
+
+  // ---- content ---------------------------------------------------------------------------------
+
+  Future<Catalog> catalog() async {
+    final json = await db.readJson(Keys.catalog);
+    return json == null ? Catalog.empty : Catalog.fromJson(json);
+  }
+
+  Future<Catalog> refreshCatalog() async {
+    final json = await _authed(() => api.get('catalog'));
+    await db.writeJson(Keys.catalog, json);
+    final catalog = Catalog.fromJson(json);
+    if (await db.readInt(Keys.cursor) == 0) await db.writeInt(Keys.cursor, catalog.cursor);
+    return catalog;
+  }
+
+  /// Chapter from the phone; downloads and saves it the first time (needs internet once).
+  Future<ChapterContent> chapter(int id) async {
+    final local = await db.chapter(id);
+    if (local != null) return local;
+    return downloadChapter(id);
+  }
+
+  Future<ChapterContent> downloadChapter(int id) async {
+    final json = await _authed(() => api.get('chapters/$id'));
+    await db.saveChapter(id, json, _clock());
+    return ChapterContent.fromJson(json);
+  }
+
+  /// Downloads only what changed since the last sync. Returns the number of chapters refreshed.
+  Future<int> syncContent() async {
+    var cursor = await db.readInt(Keys.cursor);
+    final saved = await db.savedChapterIds();
+    final toRefresh = <int>{};
+    var catalogChanged = false;
+
+    while (true) {
+      final json = await _authed(() => api.get('sync/changes', query: {'since': '$cursor'}));
+      catalogChanged |= asBool(json['catalog_changed']);
+      for (final id in asList(json['chapter_ids'])) {
+        final chapterId = asInt(id);
+        if (saved.contains(chapterId)) toRefresh.add(chapterId);
+      }
+      cursor = asInt(json['cursor']);
+      if (!asBool(json['has_more'])) break;
+    }
+
+    if (catalogChanged) await refreshCatalog();
+
+    final active = (await catalog()).chapters.map((c) => c.id).toSet();
+    for (final id in toRefresh) {
+      if (active.contains(id)) {
+        await downloadChapter(id);
+      } else {
+        await db.deleteChapter(id);
+      }
+    }
+
+    await db.writeInt(Keys.cursor, cursor);
+    return toRefresh.length;
+  }
+
+  /// Chapters opened lately, newest first (for "Continue studying").
+  Future<List<int>> recentChapters() async {
+    final raw = await db.readString(Keys.recentChapters);
+    if (raw == null || raw.isEmpty) return const [];
+    return raw.split(',').map(int.tryParse).whereType<int>().toList();
+  }
+
+  Future<void> rememberChapter(int id, {int keep = 3}) async {
+    final list = [id, ...(await recentChapters()).where((e) => e != id)].take(keep);
+    await db.writeString(Keys.recentChapters, list.join(','));
+  }
+
+  // ---- attempts --------------------------------------------------------------------------------
+
+  /// Stores a finished practice set on the phone, then tries to upload it.
+  Future<void> saveAttempt({
+    required String clientUuid,
+    required String mode,
+    required int? chapterId,
+    required DateTime startedAt,
+    required DateTime finishedAt,
+    required List<AttemptAnswer> answers,
+    int? mockId,
+    String? challengeDate,
+    int? battleId,
+  }) async {
+    final payload = <String, Object?>{
+      'client_uuid': clientUuid,
+      'mode': mode,
+      'chapter_id': chapterId,
+      'mock_id': ?mockId,
+      'challenge_date': ?challengeDate,
+      'battle_id': ?battleId,
+      'started_at': startedAt.toUtc().toIso8601String(),
+      'finished_at': finishedAt.toUtc().toIso8601String(),
+      'answers': [for (final a in answers) a.toJson()],
+    };
+    await db.queueAttempt(clientUuid, payload, _clock());
+    final results = [
+      for (final a in answers)
+        (questionId: a.questionId, chapterId: a.chapterId, correct: a.correctLocally),
+    ];
+    await db.recordAnswers(results, finishedAt);
+    // Skipped questions count as wrong, so they come back for review too.
+    await db.applySrs(results, finishedAt);
+  }
+
+  /// Uploads attempts that were saved offline. Returns how many were uploaded.
+  Future<int> uploadAttempts() async {
+    var uploaded = 0;
+    for (final (uuid, payload) in await db.pendingAttempts()) {
+      try {
+        final json = await _authed(() => api.post('attempts', payload));
+        await _keepExamDetails(uuid, json);
+      } on ApiException catch (e) {
+        // A rejected attempt (e.g. finish time in the future) would block the queue forever: drop it.
+        if (e.isOffline || e.status >= 500 || e.status == 429) rethrow;
+      }
+      await db.removeAttempt(uuid);
+      uploaded++;
+    }
+    return uploaded;
+  }
+
+  /// Uploads waiting attempts right away. True when nothing is left waiting. Never throws.
+  Future<bool> tryUploadAttempts({String? appVersion}) async {
+    try {
+      await ensureSession(appVersion: appVersion);
+      await uploadAttempts();
+    } on ApiException {
+      // Stays queued; syncAll retries later.
+    }
+    return (await db.pendingAttempts()).isEmpty;
+  }
+
+  // ---- exams -----------------------------------------------------------------------------------
+
+  /// Fixed mocks as last downloaded (works offline).
+  Future<List<MockHeader>> mocks() async {
+    final json = await db.readJson(Keys.mocks);
+    return json == null
+        ? const []
+        : asList(json['mocks']).map((e) => MockHeader.fromJson(asMap(e))).toList();
+  }
+
+  Future<List<MockHeader>> refreshMocks() async {
+    final json = await _authed(() => api.get('mocks'));
+    await db.writeJson(Keys.mocks, json);
+    return asList(json['mocks']).map((e) => MockHeader.fromJson(asMap(e))).toList();
+  }
+
+  /// A fixed mock, from the phone if its questions have not changed; downloaded otherwise.
+  /// Throws [ApiException] (`premium_required`, offline).
+  Future<ExamPaper> mockPaper(MockHeader header) async {
+    final saved = await db.mock(header.id, header.contentHash);
+    final Map<String, Object?> json;
+    if (saved != null) {
+      json = saved;
+    } else {
+      json = await _authed(() => api.get('mocks/${header.id}'));
+      await db.saveMock(header.id, header.contentHash, json);
+    }
+    return ExamPaper(
+      kind: ExamKind.fixed,
+      mockId: header.id,
+      subjectId: header.subjectId,
+      title: header.title,
+      minutes: header.minutes,
+      questions: asList(json['questions']).map((e) => Question.fromJson(asMap(e))).toList(),
+      passages: {
+        for (final p in asList(json['passages']).map((e) => Passage.fromJson(asMap(e)))) p.id: p,
+      },
+    );
+  }
+
+  /// A random mock from the server. Throws [ApiException] (`daily_limit`, `no_questions`, offline).
+  Future<ExamPaper> randomPaper({required int subjectId, required String title}) async {
+    final json = await _authed(() => api.post('exams/random', {'subject_id': subjectId}));
+    final exam = asMap(json['exam']);
+    return ExamPaper(
+      kind: ExamKind.random,
+      subjectId: subjectId,
+      title: title,
+      minutes: asInt(exam['minutes']),
+      questions: asList(json['questions']).map((e) => Question.fromJson(asMap(e))).toList(),
+      passages: {
+        for (final p in asList(json['passages']).map((e) => Passage.fromJson(asMap(e)))) p.id: p,
+      },
+    );
+  }
+
+  /// "My weak topics" or "My mistakes" for one subject, built on the phone from saved chapters
+  /// and the student's own answers. Null when there is nothing to build from yet.
+  Future<ExamPaper?> personalPaper({
+    required ExamKind kind,
+    required int subjectId,
+    required String title,
+    Random? random,
+  }) async {
+    assert(kind == ExamKind.weak || kind == ExamKind.mistakes, 'only personal exams');
+    final catalog = await this.catalog();
+    final unitIds = catalog.units.where((u) => u.subjectId == subjectId).map((u) => u.id).toSet();
+    final chapterIds = catalog.chapters.where((c) => unitIds.contains(c.unitId)).map((c) => c.id);
+    final chapters = await db.chapters(chapterIds);
+    final pool = [for (final c in chapters) ...c.questions];
+    final r = random ?? Random();
+    final lastWrong = await db.lastAnswerWrong();
+    final questions = kind == ExamKind.mistakes
+        ? mistakesExamQuestions(pool: pool, lastWrong: lastWrong, random: r)
+        : weakExamQuestions(
+            pool: pool,
+            stats: await db.chapterStats(),
+            lastWrong: lastWrong,
+            answered: await db.answeredQuestionIds(),
+            random: r,
+          );
+    if (questions.isEmpty) return null;
+    final passageIds = questions.map((q) => q.passageId).whereType<int>().toSet();
+    return ExamPaper(
+      kind: kind,
+      subjectId: subjectId,
+      title: title,
+      minutes: examMinutesFor(questions.length),
+      questions: questions,
+      passages: {
+        for (final c in chapters)
+          for (final p in c.passages)
+            if (passageIds.contains(p.id)) p.id: p,
+      },
+    );
+  }
+
+  /// The exam being sat, saved after every change so closing the app loses nothing.
+  Future<void> saveExamProgress(ExamSession session) =>
+      db.writeJson(Keys.examInProgress, session.toJson());
+
+  Future<ExamSession?> examInProgress() async {
+    final json = await db.readJson(Keys.examInProgress);
+    if (json == null || json.isEmpty) return null;
+    return ExamSession.fromJson(json);
+  }
+
+  Future<void> clearExamProgress() => db.writeJson(Keys.examInProgress, const {});
+
+  /// Ends an exam: keeps the result on the phone, queues the attempt and tries to upload it.
+  /// [now] is the screen's clock (the same one the exam's timer uses).
+  Future<ExamRecord> submitExam(ExamSession session, {DateTime? now, String? appVersion}) async {
+    final outcome = session.finish(now ?? _clock());
+    final record = ExamRecord.fromOutcome(session, outcome);
+    await db.saveExamResult(record.clientUuid, record.finishedAt, record.toJson());
+    await saveAttempt(
+      clientUuid: session.clientUuid,
+      mode: session.paper.kind.wire,
+      chapterId: null,
+      mockId: session.paper.mockId,
+      startedAt: outcome.startedAt,
+      finishedAt: outcome.finishedAt,
+      answers: [
+        for (final i in outcome.items)
+          AttemptAnswer(
+            questionId: i.question.id,
+            chapterId: i.question.chapterId,
+            version: i.question.version,
+            response: i.response,
+            timeMs: i.timeMs,
+            correctLocally: i.correct,
+          ),
+      ],
+    );
+    await clearExamProgress();
+    await tryUploadAttempts(appVersion: appVersion);
+    return await examResult(record.clientUuid) ?? record;
+  }
+
+  Future<ExamRecord?> examResult(String clientUuid) async {
+    final json = await db.examResult(clientUuid);
+    return json == null ? null : ExamRecord.fromJson(json);
+  }
+
+  Future<List<ExamRecord>> examResults() async =>
+      (await db.examResults()).map(ExamRecord.fromJson).toList();
+
+  /// Asks the server again, e.g. for "better than X%" once more students took the mock.
+  /// The student's battles of the last 7 days (online only).
+  Future<List<BattleInfo>> battles() async {
+    final json = await _authed(() => api.get('battles'));
+    return asList(json['battles']).map((e) => BattleInfo.fromJson(asMap(e))).toList();
+  }
+
+  /// Starts a quick battle (random opponent) or a battle for a friend (with a code).
+  Future<BattleWithQuestions> startBattle({required bool forFriend}) async =>
+      BattleWithQuestions.fromJson(
+        await _authed(() => api.post('battles', {'type': forFriend ? 'friend' : 'random'})),
+      );
+
+  /// Joins a friend's battle. Throws [ApiException] (code not_found, own_battle, battle_full, expired).
+  Future<BattleWithQuestions> joinBattle(String code) async =>
+      BattleWithQuestions.fromJson(await _authed(() => api.post('battles/join', {'code': code})));
+
+  Future<BattleWithQuestions> battle(int id) async =>
+      BattleWithQuestions.fromJson(await _authed(() => api.get('battles/$id')));
+
+  /// After a watched rewarded video: one more random exam today. Throws [ApiException]
+  /// (reward_limit when today's extra exams are used up).
+  Future<void> claimAdReward() => _authed(() => api.post('rewards', {'kind': 'random_exam'}));
+
+  /// "Explain more" (Premium, online). Throws [ApiException]
+  /// (premium_required, explain_limit, ai_budget, ai_unavailable, feature_disabled).
+  Future<AiExplanation> explainMore(int questionId) async =>
+      AiExplanation.fromJson(await _authed(() => api.post('questions/$questionId/explain', {})));
+
+  Future<void> rateExplanation(int explanationId, {required bool helpful}) =>
+      _authed(() => api.post('explanations/$explanationId/feedback', {'helpful': helpful}));
+
+  /// My invite code and invites (online only).
+  Future<ReferralInfo> referral() async =>
+      ReferralInfo.fromJson(asMap((await _authed(() => api.get('referral')))['referral']));
+
+  /// Enter the code of the friend who invited me. Throws [ApiException]
+  /// (not_found, own_code, already_invited, too_late).
+  Future<ReferralInfo> enterReferralCode(String code) async => ReferralInfo.fromJson(
+    asMap((await _authed(() => api.post('referral', {'code': code})))['referral']),
+  );
+
+  /// Today's daily challenge (online only).
+  Future<DailyChallengeInfo> dailyChallenge() async =>
+      DailyChallengeInfo.fromJson(await _authed(() => api.get('challenge')));
+
+  /// "Report nickname" from a leaderboard or battle row (online only). Throws [ApiException]
+  /// (report_limit, own_nickname, no_nickname, unknown_student, or offline).
+  Future<void> reportNickname(String ref, {required String reason, String? note}) async {
+    final text = note?.trim();
+    await _authed(
+      () => api.post('nickname-reports', {
+        'ref': ref,
+        'reason': reason,
+        if (text != null && text.isNotEmpty) 'note': text,
+      }),
+    );
+  }
+
+  /// This week's leaderboard (online only). Offline work is uploaded first so the student's own
+  /// points are up to date.
+  Future<WeeklyLeaderboard> leaderboard({String? appVersion}) async {
+    await tryUploadAttempts(appVersion: appVersion);
+    return WeeklyLeaderboard.fromJson(await _authed(() => api.get('leaderboard')));
+  }
+
+  Future<ExamRecord?> refreshExamResult(String clientUuid) async {
+    final json = await _authed(() => api.get('attempts/$clientUuid'));
+    await _keepExamDetails(clientUuid, json);
+    return examResult(clientUuid);
+  }
+
+  Future<void> _keepExamDetails(String clientUuid, Map<String, Object?> json) async {
+    final attempt = json['attempt'];
+    if (attempt is! Map) return;
+    final exam = attempt['exam'];
+    if (exam is! Map) return;
+    final record = await examResult(clientUuid);
+    if (record == null) return;
+    final updated = record.withServer(
+      betterThanPercent: asIntOrNull(exam['better_than_percent']),
+      students: asIntOrNull(exam['students']),
+    );
+    await db.saveExamResult(clientUuid, updated.finishedAt, updated.toJson());
+  }
+
+  // ---- answer history on a new phone ----------------------------------------------------------
+
+  /// Brings back the student's own answers from the server once per account on this phone
+  /// (new phone, or after Google sign-in joined another account). Answers the phone already
+  /// has are not added twice. Returns how many were added.
+  Future<int> restoreHistory() async {
+    if ((await db.readString(Keys.historyRestored) ?? '').isNotEmpty) return 0;
+    var after = 0;
+    var restored = 0;
+    while (true) {
+      final json = await _authed(() => api.get('history', query: {'after': '$after'}));
+      final answers = [
+        for (final a in asList(json['answers']).map(asMap))
+          (
+            questionId: asInt(a['question_id']),
+            chapterId: asInt(a['chapter_id']),
+            correct: asBool(a['correct']),
+            at: DateTime.parse(asString(a['answered_at'])),
+          ),
+      ];
+      restored += await db.restoreAnswers(answers);
+      after = asInt(json['next_after']);
+      if (!asBool(json['has_more'])) break;
+    }
+    await db.seedSrsFromMistakes(_clock());
+    await db.writeString(Keys.historyRestored, 'done');
+    return restored;
+  }
+
+  // ---- reports ---------------------------------------------------------------------------------
+
+  /// Saves a "Report a problem" on the phone and sends it when possible.
+  /// A second report for the same question replaces the first one still waiting.
+  Future<void> reportQuestion(int questionId, {required String reason, String? note}) async {
+    final pending = await _pendingReports()
+      ..removeWhere((r) => r['question_id'] == questionId);
+    final text = note?.trim();
+    pending.add({
+      'question_id': questionId,
+      'reason': reason,
+      if (text != null && text.isNotEmpty) 'note': text,
+    });
+    await db.writeJson(Keys.pendingReports, {'items': pending});
+    unawaited(_tryQuietly(() async => uploadReports()));
+  }
+
+  Future<List<Map<String, Object?>>> _pendingReports() async {
+    final json = await db.readJson(Keys.pendingReports);
+    return json == null ? [] : asList(json['items']).map(asMap).toList();
+  }
+
+  Future<int>? _reportsInFlight;
+
+  /// Sends waiting reports. Returns how many were sent. Calls made while a send is running
+  /// share it, so a report is never sent twice.
+  Future<int> uploadReports() =>
+      _reportsInFlight ??= _sendReports().whenComplete(() => _reportsInFlight = null);
+
+  Future<int> _sendReports() async {
+    var sent = 0;
+    for (final report in await _pendingReports()) {
+      final id = asInt(report['question_id']);
+      try {
+        await _authed(
+          () => api.post('questions/$id/reports', {
+            'reason': report['reason'],
+            if (report['note'] != null) 'note': report['note'],
+          }),
+        );
+        sent++;
+      } on ApiException catch (e) {
+        // Offline or busy: keep it for later. Refused (question gone, daily limit): drop it.
+        final retryLater =
+            e.isOffline || e.status >= 500 || (e.status == 429 && e.code != 'report_limit');
+        if (retryLater) rethrow;
+      }
+      final left = await _pendingReports()
+        ..removeWhere((r) => r['question_id'] == id && r['reason'] == report['reason']);
+      await db.writeJson(Keys.pendingReports, {'items': left});
+    }
+    return sent;
+  }
+
+  // ---- bookmarks -------------------------------------------------------------------------------
+
+  Future<Set<int>> bookmarks() => db.bookmarks();
+
+  Future<void> toggleBookmark(int questionId, {required bool on}) async {
+    await db.setBookmark(questionId, on: on);
+    unawaited(_tryQuietly(syncBookmarks));
+  }
+
+  Future<void> syncBookmarks() async {
+    for (final (id, on) in await db.unsyncedBookmarks()) {
+      try {
+        await _authed(() => on ? api.put('bookmarks/$id') : api.delete('bookmarks/$id'));
+      } on ApiException catch (e) {
+        if (e.isOffline || e.status >= 500 || e.status == 429) rethrow;
+        // 404: the question is gone; forget the bookmark.
+        await db.markBookmarkSynced(id, on: false);
+        continue;
+      }
+      await db.markBookmarkSynced(id, on: on);
+    }
+    final json = await _authed(() => api.get('bookmarks'));
+    await db.replaceBookmarksFromServer(asList(json['question_ids']).map(asInt).toSet());
+  }
+
+  // ---- everything ------------------------------------------------------------------------------
+
+  /// Background sync on start and when the app comes back online. Never throws.
+  Future<bool> syncAll({String? appVersion}) async {
+    try {
+      await ensureSession(appVersion: appVersion);
+      await uploadProfile();
+      await refreshConfig();
+      await restoreHistory();
+      await uploadAttempts();
+      await uploadReports();
+      await syncBookmarks();
+      if ((await catalog()).subjects.isEmpty) await refreshCatalog();
+      await syncContent();
+      await refreshProfile();
+      return true;
+    } on ApiException {
+      return false;
+    }
+  }
+
+  Future<void> _tryQuietly(Future<void> Function() action) async {
+    try {
+      await action();
+    } on ApiException {
+      // Offline or server busy: it stays queued and is retried by syncAll.
+    }
+  }
+
+  // ---- study plan ------------------------------------------------------------------------------
+
+  /// Minutes a day the student wants to study; one of [StudyPlanner.minutesChoices].
+  Future<int> planMinutes() async {
+    final value = await db.readInt(Keys.planMinutes, fallback: StudyPlanner.defaultMinutes);
+    return StudyPlanner.minutesChoices.contains(value) ? value : StudyPlanner.defaultMinutes;
+  }
+
+  /// Saves the minutes a day and drops today's saved plan, so it is built again.
+  Future<void> setPlanMinutes(int minutes) async {
+    if (!StudyPlanner.minutesChoices.contains(minutes)) {
+      throw ArgumentError.value(minutes, 'minutes', 'not one of the choices');
+    }
+    await db.writeString(Keys.planMinutes, '$minutes');
+    await db.writeJson(Keys.planToday, const {});
+  }
+
+  /// Today's saved plan, or null when none was saved today (or it cannot be read).
+  Future<SavedPlan?> savedPlan(DateTime today) async {
+    final json = await db.readJson(Keys.planToday);
+    if (json == null || json['day'] != planDay(today)) return null;
+    final minutes = json['minutes'];
+    final rawTasks = json['tasks'];
+    final rawDone = json['done'];
+    if (minutes is! int || rawTasks is! List || rawDone is! List) return null;
+    final tasks = <PlanTask>[];
+    for (final raw in rawTasks) {
+      final task = raw is Map ? PlanTask.fromJson(raw.cast<String, Object?>()) : null;
+      if (task == null) return null;
+      tasks.add(task);
+    }
+    return SavedPlan(
+      day: planDay(today),
+      minutes: minutes,
+      tasks: tasks,
+      done: {
+        for (final i in rawDone)
+          if (i is int && i >= 0 && i < tasks.length) i,
+      },
+    );
+  }
+
+  Future<void> savePlan(SavedPlan plan) => db.writeJson(Keys.planToday, {
+    'day': plan.day,
+    'minutes': plan.minutes,
+    'tasks': [for (final t in plan.tasks) t.toJson()],
+    'done': plan.done.toList()..sort(),
+  });
+}
+
+class AttemptAnswer {
+  const AttemptAnswer({
+    required this.questionId,
+    required this.chapterId,
+    required this.version,
+    required this.response,
+    required this.timeMs,
+    required this.correctLocally,
+  });
+
+  final int questionId;
+  final int chapterId;
+  final int version;
+  final Object? response;
+  final int timeMs;
+
+  /// The phone's own check, used for offline history. The server decides the official result.
+  final bool correctLocally;
+
+  Map<String, Object?> toJson() => {
+    'question_id': questionId,
+    'version': version,
+    'response': response,
+    'time_ms': timeMs,
+  };
+}

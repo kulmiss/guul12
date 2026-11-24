@@ -1,0 +1,390 @@
+summary:
+  key_points:
+    - 'Angles in rotation are measured in radians: one revolution is $2\pi$ rad. Arc length $s = r\theta$.'
+    - 'Angular velocity $\omega = \frac{\Delta\theta}{\Delta t} = \frac{2\pi}{T} = 2\pi f$. A point at radius $r$ has linear speed $v = \omega r$.'
+    - 'In uniform circular motion the speed is constant but the direction changes, so the velocity changes and there is an acceleration towards the centre: $a_c = \frac{v^2}{r} = \omega^2 r$.'
+    - 'A net force towards the centre, $F_c = \frac{mv^2}{r}$, is needed: friction for a car on a bend, tension for a stone on a string, gravity for a satellite. If it disappears, the object moves off along the tangent.'
+    - 'Torque is the turning effect of a force: $\tau = rF\sin\theta$. A body is in rotational balance when clockwise and anticlockwise torques are equal.'
+    - 'Moment of inertia $I$ is the rotational version of mass; it depends on the mass and how far it is from the axis. Rotational kinetic energy is $\frac{1}{2}I\omega^2$.'
+    - 'Angular momentum $L = I\omega$ is conserved when no external torque acts: a skater who pulls her arms in spins faster.'
+  formulas:
+    - label: Angular velocity
+      latex: '\omega = \frac{2\pi}{T} = 2\pi f'
+    - label: Linear and angular speed
+      latex: 'v = \omega r'
+    - label: Centripetal acceleration
+      latex: 'a_c = \frac{v^2}{r} = \omega^2 r'
+    - label: Centripetal force
+      latex: 'F_c = \frac{mv^2}{r}'
+    - label: Torque
+      latex: '\tau = rF\sin\theta'
+    - label: Rotational kinetic energy and angular momentum
+      latex: 'K = \frac{1}{2}I\omega^2, \quad L = I\omega'
+
+solved_exercises:
+  - uid: g12-physics-2-2-se01
+    problem: 'A 1 000 kg car goes round a flat bend of radius 50 m at 10 m/s. What friction force is needed?'
+    steps:
+      - 'Friction provides the centripetal force: $F = \frac{mv^2}{r}$.'
+      - '$F = \frac{1000 \times 10^2}{50} = \frac{100\,000}{50}$.'
+      - '$F = 2000$ N towards the centre of the bend.'
+    answer: '2 000 N'
+  - uid: g12-physics-2-2-se02
+    problem: 'A wheel turns at 120 revolutions per minute. Find its angular velocity and the speed of a point 0.25 m from the axle.'
+    steps:
+      - '$120$ rev/min $= 2$ rev/s, so $\omega = 2 \times 2\pi = 4\pi$ rad/s.'
+      - '$v = \omega r = 4\pi \times 0.25 = \pi \approx 3.14$ m/s.'
+    answer: '$\omega = 4\pi$ rad/s; $v = \pi \approx 3.14$ m/s'
+  - uid: g12-physics-2-2-se03
+    problem: 'A skater spins at 2 rad/s with moment of inertia 6 kg·m². She pulls in her arms, reducing $I$ to 2 kg·m². What is her new angular velocity?'
+    steps:
+      - 'No external torque, so angular momentum is conserved: $I_1\omega_1 = I_2\omega_2$.'
+      - '$6 \times 2 = 2 \times \omega_2$.'
+      - '$\omega_2 = 6$ rad/s.'
+    answer: '6 rad/s'
+
+flashcards:
+  - {uid: g12-physics-2-2-fc01, term: Radian, definition: 'The angle for which the arc length equals the radius; $2\pi$ rad $= 360°$.'}
+  - {uid: g12-physics-2-2-fc02, term: Angular velocity, definition: 'Angle turned per second, $\omega$, in rad/s.'}
+  - {uid: g12-physics-2-2-fc03, term: Period, definition: 'Time for one full revolution, $T = \frac{2\pi}{\omega}$.'}
+  - {uid: g12-physics-2-2-fc04, term: Centripetal acceleration, definition: 'Acceleration towards the centre of a circle: $\frac{v^2}{r}$.'}
+  - {uid: g12-physics-2-2-fc05, term: Centripetal force, definition: 'The net inward force needed for circular motion: $\frac{mv^2}{r}$.'}
+  - {uid: g12-physics-2-2-fc06, term: Torque, definition: 'The turning effect of a force: $\tau = rF\sin\theta$.'}
+  - {uid: g12-physics-2-2-fc07, term: Moment of inertia, definition: 'Resistance to changes in rotation; depends on mass and its distance from the axis.'}
+  - {uid: g12-physics-2-2-fc08, term: Angular momentum, definition: '$L = I\omega$; conserved when no external torque acts.'}
+  - {uid: g12-physics-2-2-fc09, term: Principle of moments, definition: 'In balance, total clockwise torque equals total anticlockwise torque.'}
+
+questions:
+  - uid: g12-physics-2-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'How many radians are there in one complete revolution?'
+    options:
+      A: '$\pi$'
+      B: '$2\pi$'
+      C: '360'
+      D: '$\frac{\pi}{2}$'
+    answer: B
+    explanation: 'The circumference is $2\pi r$, so a full turn is an arc of $2\pi$ radii: $2\pi$ rad $= 360°$.'
+
+  - uid: g12-physics-2-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'A wheel makes one revolution every 2 s. What is its angular velocity?'
+    options:
+      A: '2 rad/s'
+      B: '$4\pi$ rad/s'
+      C: '0.5 rad/s'
+      D: '$\pi$ rad/s'
+    answer: D
+    explanation: '$\omega = \frac{2\pi}{T} = \frac{2\pi}{2} = \pi$ rad/s.'
+
+  - uid: g12-physics-2-2-q003
+    type: numeric
+    difficulty: 1
+    stem: 'A disc rotates at 4 rad/s. What is the speed, in m/s, of a point 0.5 m from its centre?'
+    answer: {value: 2, tolerance: 0, unit: m/s}
+    explanation: '$v = \omega r = 4 \times 0.5 = 2$ m/s.'
+
+  - uid: g12-physics-2-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'A cyclist moves at 10 m/s round a circular track of radius 5 m. What is her centripetal acceleration?'
+    options:
+      A: '20 m/s²'
+      B: '2 m/s²'
+      C: '50 m/s²'
+      D: '10 m/s²'
+    answer: A
+    explanation: '$a_c = \frac{v^2}{r} = \frac{100}{5} = 20$ m/s².'
+
+  - uid: g12-physics-2-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'A 2 kg ball on a string moves in a horizontal circle of radius 1.5 m at 3 m/s. What centripetal force acts on it?'
+    options:
+      A: '4 N'
+      B: '9 N'
+      C: '12 N'
+      D: '6 N'
+    answer: C
+    explanation: '$F_c = \frac{mv^2}{r} = \frac{2 \times 9}{1.5} = 12$ N.'
+
+  - uid: g12-physics-2-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'An object in uniform circular motion has constant velocity.'
+    answer: false
+    explanation: 'Its speed is constant but its direction keeps changing, so its velocity changes. That is why it has a centripetal acceleration.'
+
+  - uid: g12-physics-2-2-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'In uniform circular motion, in which direction does the acceleration point?'
+    options:
+      A: 'Towards the centre of the circle'
+      B: 'Along the tangent, in the direction of motion'
+      C: 'Away from the centre'
+      D: 'There is no acceleration.'
+    answer: A
+    explanation: 'The velocity keeps turning towards the centre, so the acceleration (centripetal) points to the centre.'
+
+  - uid: g12-physics-2-2-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'A car goes round a flat, unbanked bend. Which force provides the centripetal force?'
+    options:
+      A: 'The car''s weight'
+      B: 'Friction between the tyres and the road'
+      C: 'The engine''s forward force'
+      D: 'Air resistance'
+    answer: B
+    explanation: 'On a flat road only sideways friction on the tyres can push the car towards the centre of the bend.'
+
+  - uid: g12-physics-2-2-q009
+    type: numeric
+    difficulty: 1
+    stem: 'A force of 20 N is applied at right angles to a spanner, 0.5 m from the bolt. What is the torque, in N·m?'
+    answer: {value: 10, tolerance: 0, unit: N·m}
+    explanation: '$\tau = rF = 0.5 \times 20 = 10$ N·m.'
+
+  - uid: g12-physics-2-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'A spinning ice skater pulls her arms close to her body. What happens?'
+    options:
+      A: 'She slows down because her moment of inertia increases.'
+      B: 'She keeps the same angular velocity.'
+      C: 'She spins faster because her angular momentum stays the same while her moment of inertia decreases.'
+      D: 'She stops spinning.'
+    answer: C
+    explanation: '$L = I\omega$ is conserved. Pulling the arms in reduces $I$, so $\omega$ must increase.'
+
+  - uid: g12-physics-2-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'A fan blade turns at a frequency of 5 Hz. What is its period?'
+    options:
+      A: '5 s'
+      B: '$10\pi$ s'
+      C: '2 s'
+      D: '0.2 s'
+    answer: D
+    explanation: '$T = \frac{1}{f} = \frac{1}{5} = 0.2$ s.'
+
+  - uid: g12-physics-2-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A flywheel with moment of inertia 2 kg·m² spins at 3 rad/s. What is its rotational kinetic energy?'
+    options:
+      A: '9 J'
+      B: '6 J'
+      C: '18 J'
+      D: '3 J'
+    answer: A
+    explanation: '$K = \frac{1}{2}I\omega^2 = \frac{1}{2} \times 2 \times 9 = 9$ J.'
+
+  - uid: g12-physics-2-2-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'A wheel with moment of inertia 4 kg·m² rotates at 5 rad/s. What is its angular momentum?'
+    options:
+      A: '9 kg·m²/s'
+      B: '20 kg·m²/s'
+      C: '50 kg·m²/s'
+      D: '1.25 kg·m²/s'
+    answer: B
+    explanation: '$L = I\omega = 4 \times 5 = 20$ kg·m²/s.'
+
+  - uid: g12-physics-2-2-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'For an object in uniform circular motion, which of these stay constant? Choose all that apply.'
+    options:
+      A: 'Its speed'
+      B: 'Its velocity'
+      C: 'The size of its centripetal acceleration'
+      D: 'The direction of its acceleration'
+    answer: [A, C]
+    explanation: 'Speed and the size of $\frac{v^2}{r}$ are constant. The velocity and the direction of the acceleration change as the object moves round.'
+
+  - uid: g12-physics-2-2-q015
+    type: fill_in
+    difficulty: 1
+    stem: 'The turning effect of a force about a pivot is called ________.'
+    answer: [torque, moment, the moment of a force, moment of force]
+    explanation: 'Torque (moment) $= rF\sin\theta$.'
+
+  - uid: g12-physics-2-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'A car takes the same bend at twice the speed. How does the centripetal force needed change?'
+    options:
+      A: 'It doubles.'
+      B: 'It stays the same.'
+      C: 'It becomes 4 times as large.'
+      D: 'It halves.'
+    answer: C
+    explanation: '$F_c = \frac{mv^2}{r}$ is proportional to $v^2$, so doubling the speed needs $2^2 = 4$ times the force.'
+
+  - uid: g12-physics-2-2-q017
+    type: true_false
+    difficulty: 1
+    stem: 'The moment of inertia of a body depends on how its mass is spread out around the axis of rotation.'
+    answer: true
+    explanation: 'Mass farther from the axis adds more to $I$. The same object has different $I$ about different axes.'
+
+  - uid: g12-physics-2-2-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'A motor turns at 60 revolutions per minute. What is its angular velocity?'
+    options:
+      A: '60 rad/s'
+      B: '1 rad/s'
+      C: '$120\pi$ rad/s'
+      D: '$2\pi$ rad/s'
+    answer: D
+    explanation: '60 rev/min $= 1$ rev/s $= 2\pi$ rad/s.'
+
+  - uid: g12-physics-2-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A stone whirled in a horizontal circle on a string is released when the string breaks. Which way does it move at first (seen from above)?'
+    options:
+      A: 'Along the tangent to the circle at that point'
+      B: 'Straight towards the centre'
+      C: 'Straight outward, away from the centre'
+      D: 'It keeps moving in the circle.'
+    answer: A
+    explanation: 'With no centripetal force, the stone continues in the direction of its velocity at that moment, which is along the tangent.'
+
+  - uid: g12-physics-2-2-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'A bucket of water is swung in a vertical circle of radius 2.5 m. What is the minimum speed at the top so that the water does not fall out? ($g = 10$ m/s²)'
+    options:
+      A: '2.5 m/s'
+      B: '5 m/s'
+      C: '25 m/s'
+      D: '10 m/s'
+    answer: B
+    explanation: 'At the minimum speed, gravity alone provides the centripetal force: $mg = \frac{mv^2}{r}$, so $v = \sqrt{gr} = \sqrt{25} = 5$ m/s.'
+
+  - uid: g12-physics-2-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'A wheel speeds up uniformly from rest to 20 rad/s in 4 s. What is its angular acceleration?'
+    options:
+      A: '80 rad/s²'
+      B: '4 rad/s²'
+      C: '5 rad/s²'
+      D: '0.2 rad/s²'
+    answer: C
+    explanation: '$\alpha = \frac{\Delta\omega}{\Delta t} = \frac{20 - 0}{4} = 5$ rad/s².'
+
+  - uid: g12-physics-2-2-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each quantity of straight-line motion with its rotational partner.'
+    left:
+      L1: 'Mass'
+      L2: 'Force'
+      L3: 'Velocity'
+    right:
+      R1: 'Angular velocity'
+      R2: 'Moment of inertia'
+      R3: 'Centripetal force'
+      R4: 'Torque'
+    answer: {L1: R2, L2: R4, L3: R1}
+    explanation: 'Moment of inertia plays the role of mass, torque the role of force, and angular velocity the role of velocity ($\tau = I\alpha$ like $F = ma$).'
+
+  - uid: g12-physics-2-2-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Points on a disc turning at a steady 2 rad/s are at these distances from the centre. Put them in order of centripetal acceleration, smallest first.'
+    items:
+      A: '0.1 m'
+      B: '0.5 m'
+      C: '0.25 m'
+      D: '1.0 m'
+    answer: [A, C, B, D]
+    explanation: '$a_c = \omega^2 r$ grows with $r$ when $\omega$ is the same, so the order follows the radius: 0.1, 0.25, 0.5, 1.0 m.'
+
+  - uid: g12-physics-2-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'A thin ring and a solid disc have the same mass and radius. About their central axes, which has the larger moment of inertia?'
+    options:
+      A: 'The disc'
+      B: 'They are equal.'
+      C: 'It depends on how fast they spin.'
+      D: 'The ring'
+    answer: D
+    explanation: 'All of the ring''s mass is at the full radius, while much of the disc''s mass is near the centre. Ring: $MR^2$; disc: $\frac{1}{2}MR^2$.'
+
+  - uid: g12-physics-2-2-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Why are bends on highways often banked (tilted)?'
+    options:
+      A: 'So that part of the normal force pushes the car towards the centre, reducing the need for friction'
+      B: 'To make the road drain faster only'
+      C: 'To slow the cars down'
+      D: 'To increase the car''s weight'
+    answer: A
+    explanation: 'On a tilted road the normal force has a horizontal component towards the centre, which supplies some or all of the centripetal force.'
+
+  - uid: g12-physics-2-2-q026
+    type: true_false
+    difficulty: 2
+    stem: 'Seen from the ground, a real outward ("centrifugal") force pushes a car outwards as it goes round a bend.'
+    answer: false
+    explanation: 'In the ground frame there is only an inward net force. Passengers feel pushed outward because their bodies tend to keep moving straight while the car turns.'
+
+  - uid: g12-physics-2-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'The Earth turns once on its axis in about 24 hours. Which expression gives its angular velocity?'
+    options:
+      A: '$\frac{24}{2\pi}$ rad/h'
+      B: '$\frac{2\pi}{24}$ rad/h'
+      C: '$24 \times 2\pi$ rad/h'
+      D: '$\frac{1}{24}$ rad/h'
+    answer: B
+    explanation: '$\omega = \frac{2\pi}{T} = \frac{2\pi}{24}$ rad/h (about $7.3 \times 10^{-5}$ rad/s).'
+
+  - uid: g12-physics-2-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'When does a force produce no torque about a pivot?'
+    options:
+      A: 'When it is very large'
+      B: 'When it acts far from the pivot'
+      C: 'When its line of action passes through the pivot'
+      D: 'When it acts at right angles to the arm'
+    answer: C
+    explanation: 'If the line of the force passes through the pivot, the perpendicular distance is zero, so $\tau = 0$.'
+
+  - uid: g12-physics-2-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'A 30 kg child sits 2 m from the centre of a seesaw. Where must a 40 kg child sit on the other side to balance it?'
+    options:
+      A: '2 m from the centre'
+      B: '2.67 m from the centre'
+      C: '1 m from the centre'
+      D: '1.5 m from the centre'
+    answer: D
+    explanation: 'Principle of moments: $30 \times 2 = 40 \times d$, so $d = \frac{60}{40} = 1.5$ m.'
+
+  - uid: g12-physics-2-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'A wheel of radius 3 m turns through 2 rad. How far does a point on its rim travel?'
+    options:
+      A: '6 m'
+      B: '1.5 m'
+      C: '$6\pi$ m'
+      D: '5 m'
+    answer: A
+    explanation: '$s = r\theta = 3 \times 2 = 6$ m.'

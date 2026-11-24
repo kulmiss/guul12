@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'Long-term causes of the First World War are often remembered as MAIN: Militarism, Alliances, Imperialism and Nationalism. The immediate trigger was the assassination of Archduke Franz Ferdinand of Austria-Hungary in Sarajevo on 28 June 1914.'
+    - 'The war (1914–1918) was fought between the Central Powers (Germany, Austria-Hungary, the Ottoman Empire, Bulgaria) and the Allies (Britain, France, Russia, later Italy and, from 1917, the United States). Trench warfare on the Western Front caused huge losses. Fighting ended with the armistice of 11 November 1918.'
+    - 'The Treaty of Versailles (1919) blamed Germany for the war (the "war guilt" clause), made it pay reparations, took its colonies and some land, and limited its army. The League of Nations was set up (1920) to keep peace, but the United States never joined.'
+    - 'In Russia, the February Revolution of 1917 ended the rule of the tsar, and in the October Revolution the Bolsheviks under Lenin took power. The Soviet Union (USSR) was formed in 1922.'
+    - 'The Wall Street Crash of October 1929 began the Great Depression: mass unemployment and poverty helped extreme movements grow.'
+    - 'Fascism (Mussolini, in power in Italy from 1922) and Nazism (Hitler, chancellor of Germany from January 1933) were dictatorships based on extreme nationalism, one-party rule and the use of force. Japan invaded Manchuria (1931) and Italy invaded Ethiopia (1935). Britain and France followed appeasement, for example at Munich (1938).'
+    - 'The Second World War began when Germany invaded Poland on 1 September 1939. The Axis (Germany, Italy, Japan) fought the Allies (Britain, France, the USSR, the USA and others). Japan''s attack on Pearl Harbor (7 December 1941) brought the USA into the war. The Nazis murdered about six million Jews in the Holocaust.'
+    - 'The Allies landed in Normandy on D-Day (6 June 1944). Germany surrendered in May 1945. After atomic bombs were dropped on Hiroshima and Nagasaki in August 1945, Japan surrendered. The United Nations was founded on 24 October 1945.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-4-1-se01
+    problem: 'Explain how the alliance system turned a local crisis in 1914 into a world war.'
+    steps:
+      - 'Austria-Hungary declared war on Serbia; Russia supported Serbia and mobilised.'
+      - 'Germany, allied with Austria-Hungary, declared war on Russia and France; when Germany invaded Belgium, Britain entered. One conflict pulled in all the alliance members.'
+    answer: 'Alliances pulled one power after another into the war.'
+  - uid: g12-history-4-1-se02
+    problem: 'Why did many Germans resent the Treaty of Versailles?'
+    steps:
+      - 'It forced Germany to accept blame, pay heavy reparations and lose land and colonies.'
+      - 'Germany was not allowed to negotiate the terms, so many called it a "dictated peace", which Hitler later exploited.'
+    answer: 'Blame, reparations and losses imposed without negotiation'
+  - uid: g12-history-4-1-se03
+    problem: 'How did the Great Depression help Hitler gain power?'
+    steps:
+      - 'Unemployment in Germany rose to millions after 1929, and people lost faith in the democratic government.'
+      - 'The Nazis promised jobs, order and national pride, so their vote grew and Hitler became chancellor in 1933.'
+    answer: 'Economic crisis increased support for extremist promises.'
+
+flashcards:
+  - {uid: g12-history-4-1-fc01, term: MAIN causes, definition: 'Militarism, Alliances, Imperialism, Nationalism.'}
+  - {uid: g12-history-4-1-fc02, term: Franz Ferdinand, definition: 'Austro-Hungarian archduke assassinated in Sarajevo, 28 June 1914.'}
+  - {uid: g12-history-4-1-fc03, term: Armistice, definition: 'Ceasefire that ended fighting in WWI on 11 November 1918.'}
+  - {uid: g12-history-4-1-fc04, term: Treaty of Versailles, definition: '1919 peace treaty that punished Germany.'}
+  - {uid: g12-history-4-1-fc05, term: League of Nations, definition: 'Peace organisation set up after WWI; the USA did not join.'}
+  - {uid: g12-history-4-1-fc06, term: Great Depression, definition: 'World economic crisis that began with the 1929 Wall Street Crash.'}
+  - {uid: g12-history-4-1-fc07, term: Appeasement, definition: 'Giving in to an aggressor''s demands to avoid war, e.g. Munich 1938.'}
+  - {uid: g12-history-4-1-fc08, term: Holocaust, definition: 'Nazi genocide of about six million Jews.'}
+  - {uid: g12-history-4-1-fc09, term: United Nations, definition: 'International organisation founded on 24 October 1945.'}
+
+questions:
+  - uid: g12-history-4-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Whose assassination in Sarajevo in June 1914 triggered the First World War?'
+    options:
+      A: 'Tsar Nicholas II'
+      B: 'Archduke Franz Ferdinand'
+      C: 'Kaiser Wilhelm II'
+      D: 'Woodrow Wilson'
+    answer: B
+    explanation: 'The heir to the Austro-Hungarian throne was shot by Gavrilo Princip on 28 June 1914.'
+
+  - uid: g12-history-4-1-q002
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which were Central Powers in the First World War? Choose all that apply.'
+    options:
+      A: 'Germany'
+      B: 'Austria-Hungary'
+      C: 'The Ottoman Empire'
+      D: 'France'
+    answer: [A, B, C]
+    explanation: 'France was one of the Allies.'
+
+  - uid: g12-history-4-1-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'On which date did the armistice end the fighting of the First World War?'
+    options:
+      A: '11 November 1918'
+      B: '28 June 1914'
+      C: '1 September 1939'
+      D: '6 June 1944'
+    answer: A
+    explanation: 'It is remembered as Armistice Day.'
+
+  - uid: g12-history-4-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Which was a term of the Treaty of Versailles?'
+    options:
+      A: 'Germany gained new colonies.'
+      B: 'Germany''s army was made larger.'
+      C: 'The United States joined the League of Nations.'
+      D: 'Germany had to pay reparations.'
+    answer: D
+    explanation: 'Germany also accepted war guilt and lost land and colonies.'
+
+  - uid: g12-history-4-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which major power never joined the League of Nations?'
+    options:
+      A: 'Britain'
+      B: 'France'
+      C: 'The United States'
+      D: 'Italy'
+    answer: C
+    explanation: 'The US Senate refused to approve membership, weakening the League.'
+
+  - uid: g12-history-4-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Who led the Bolsheviks when they took power in Russia in October 1917?'
+    options:
+      A: 'Stalin'
+      B: 'Lenin'
+      C: 'Trotsky only'
+      D: 'Tsar Nicholas II'
+    answer: B
+    explanation: 'Vladimir Lenin led the October Revolution.'
+
+  - uid: g12-history-4-1-q007
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did the Wall Street Crash start the Great Depression?'
+    answer: {value: 1929, tolerance: 0}
+    explanation: 'Share prices collapsed in October 1929.'
+
+  - uid: g12-history-4-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Who led the Fascists to power in Italy in 1922?'
+    options:
+      A: 'Benito Mussolini'
+      B: 'Adolf Hitler'
+      C: 'Francisco Franco'
+      D: 'Giuseppe Garibaldi'
+    answer: A
+    explanation: 'After the "March on Rome", Mussolini became prime minister.'
+
+  - uid: g12-history-4-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did Hitler become chancellor of Germany?'
+    options:
+      A: '1919'
+      B: '1929'
+      C: '1939'
+      D: '1933'
+    answer: D
+    explanation: 'He was appointed chancellor in January 1933.'
+
+  - uid: g12-history-4-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What was the policy of "appeasement" in the 1930s?'
+    options:
+      A: 'Giving in to some of the aggressor''s demands to avoid war'
+      B: 'Declaring war immediately'
+      C: 'Forming the United Nations'
+      D: 'Banning all armies'
+    answer: A
+    explanation: 'Britain and France allowed Germany to take the Sudetenland at Munich in 1938.'
+
+  - uid: g12-history-4-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Which event started the Second World War in Europe?'
+    options:
+      A: 'The attack on Pearl Harbor'
+      B: 'The Munich Agreement'
+      C: 'Germany''s invasion of Poland'
+      D: 'The D-Day landings'
+    answer: C
+    explanation: 'Germany invaded Poland on 1 September 1939; Britain and France declared war two days later.'
+
+  - uid: g12-history-4-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Which event brought the United States into the Second World War?'
+    options:
+      A: 'The invasion of Poland'
+      B: 'The fall of France'
+      C: 'The bombing of London'
+      D: 'Japan''s attack on Pearl Harbor'
+    answer: D
+    explanation: 'The attack on 7 December 1941 led the USA to declare war on Japan.'
+
+  - uid: g12-history-4-1-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which countries were the main Axis powers? Choose all that apply.'
+    options:
+      A: 'Germany'
+      B: 'Italy'
+      C: 'Japan'
+      D: 'The Soviet Union'
+    answer: [A, B, C]
+    explanation: 'The USSR fought with the Allies after Germany invaded it in 1941.'
+
+  - uid: g12-history-4-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'The Holocaust was the Nazi murder of about six million Jews.'
+    answer: true
+    explanation: 'Millions of others, including Roma and disabled people, were also killed.'
+
+  - uid: g12-history-4-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'Italy''s invasion of Ethiopia in 1935 was an example of aggression that the League of Nations failed to stop.'
+    answer: true
+    explanation: 'The League''s weak response encouraged further aggression by the dictators.'
+
+  - uid: g12-history-4-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'What happened on D-Day, 6 June 1944?'
+    options:
+      A: 'Allied forces landed in Normandy, France.'
+      B: 'Germany surrendered.'
+      C: 'Japan attacked Pearl Harbor.'
+      D: 'The United Nations was founded.'
+    answer: A
+    explanation: 'It was the largest seaborne invasion in history and opened a western front against Germany.'
+
+  - uid: g12-history-4-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'On which two Japanese cities were atomic bombs dropped in August 1945?'
+    options:
+      A: 'Tokyo and Osaka'
+      B: 'Kyoto and Kobe'
+      C: 'Hiroshima and Nagasaki'
+      D: 'Yokohama and Sapporo'
+    answer: C
+    explanation: 'Hiroshima (6 August) and Nagasaki (9 August); Japan surrendered soon after.'
+
+  - uid: g12-history-4-1-q018
+    type: numeric
+    difficulty: 1
+    stem: 'In which year was the United Nations founded?'
+    answer: {value: 1945, tolerance: 0}
+    explanation: 'The UN Charter came into force on 24 October 1945.'
+
+  - uid: g12-history-4-1-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'Why did the Great Depression help extremist parties win support in Germany?'
+    options:
+      A: 'It made people richer.'
+      B: 'Mass unemployment made many people lose faith in democracy and turn to leaders promising quick solutions.'
+      C: 'It ended all political parties.'
+      D: 'It strengthened the Treaty of Versailles.'
+    answer: B
+    explanation: 'Millions were unemployed, and the Nazis promised work and national revival.'
+
+  - uid: g12-history-4-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The policy of giving in to an aggressor''s demands to avoid war is called ________.'
+    answer: [appeasement]
+    explanation: 'The best-known example is the Munich Agreement of 1938.'
+
+  - uid: g12-history-4-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'The international organisation set up after the First World War to keep peace was the League of ________.'
+    answer: [Nations]
+    explanation: 'It was replaced by the United Nations after the Second World War.'
+
+  - uid: g12-history-4-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'The United States fought in the First World War from its very beginning in 1914.'
+    answer: false
+    explanation: 'The USA entered in April 1917.'
+
+  - uid: g12-history-4-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each leader with his country.'
+    left:
+      L1: 'Lenin'
+      L2: 'Mussolini'
+      L3: 'Hitler'
+    right:
+      R1: 'Italy'
+      R2: 'Germany'
+      R3: 'Russia'
+      R4: 'Japan'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'None of these three led Japan.'
+
+  - uid: g12-history-4-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order.'
+    items:
+      A: 'Wall Street Crash'
+      B: 'Treaty of Versailles'
+      C: 'Germany invades Poland'
+      D: 'Assassination of Franz Ferdinand'
+    answer: [D, B, A, C]
+    explanation: '1914, 1919, 1929, 1939.'
+
+  - uid: g12-history-4-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the "M" in the MAIN causes of the First World War stand for?'
+    options:
+      A: 'Monarchy'
+      B: 'Mobilisation'
+      C: 'Migration'
+      D: 'Militarism'
+    answer: D
+    explanation: 'MAIN = Militarism, Alliances, Imperialism, Nationalism.'
+
+  - uid: g12-history-4-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country invaded Manchuria in 1931?'
+    options:
+      A: 'Germany'
+      B: 'Japan'
+      C: 'Italy'
+      D: 'The Soviet Union'
+    answer: B
+    explanation: 'Japan''s invasion was an early test the League of Nations failed.'
+
+  - uid: g12-history-4-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What kind of warfare caused enormous losses on the Western Front in the First World War?'
+    options:
+      A: 'Trench warfare'
+      B: 'Nuclear warfare'
+      C: 'Guerrilla warfare in jungles'
+      D: 'Naval warfare only'
+    answer: A
+    explanation: 'Soldiers faced each other from trenches; attacks over open ground were very costly.'
+
+  - uid: g12-history-4-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year was the Soviet Union (USSR) formed?'
+    options:
+      A: '1917'
+      B: '1918'
+      C: '1922'
+      D: '1945'
+    answer: C
+    explanation: 'The USSR was established in December 1922.'
+
+  - uid: g12-history-4-1-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'Why did the League of Nations fail to prevent the Second World War?'
+    options:
+      A: 'It had its own strong army.'
+      B: 'All great powers were loyal members.'
+      C: 'It acted quickly against every aggressor.'
+      D: 'It lacked an army, key powers were absent or left, and its sanctions were weak.'
+    answer: D
+    explanation: 'The USA never joined, and Germany, Japan and Italy left the League in the 1930s.'
+
+  - uid: g12-history-4-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement describes Fascism?'
+    options:
+      A: 'A one-party dictatorship based on extreme nationalism and the use of force'
+      B: 'A system of free elections with many parties'
+      C: 'A religious movement for peace'
+      D: 'An economic system with no government'
+    answer: A
+    explanation: 'Fascist states suppressed opposition and glorified the nation and its leader.'

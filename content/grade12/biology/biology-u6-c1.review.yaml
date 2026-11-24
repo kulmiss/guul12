@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-6-1-q001: {hash: '4fcb864a9b70343cdc1e486e76deee09aa8f0bd0393835834aab5593dc297bec', answer: B}
+  g12-biology-6-1-q002: {hash: '7e1ab8ae729f4e3e5a6a7a92f3fcd9f574e2f1e183e6d6b481bdc24d1e6e28c0', answer: A}
+  g12-biology-6-1-q003: {hash: 'ad4624ad8db91d6fbcfbb0cbb4c9a1ea2b5246647172f9c9196dc71ac17a7503', answer: [A, B, C]}
+  g12-biology-6-1-q004: {hash: 'b707707d4aa2d6b743bf38abe65bf020e7ecc92ec16cff4b51d28a74b3291902', answer: C}
+  g12-biology-6-1-q005: {hash: 'e40298dda408959678165ff6c752b592e97799d7b399a6432a308193e39faa76', answer: D, note: 'Minor: 1.1 °C is the IPCC AR6 figure (2011-2020); more recent estimates are about 1.2-1.3 °C. D is still clearly the only reasonable option, but consider wording such as "about 1.1-1.2 °C" or naming the reference period.'}
+  g12-biology-6-1-q006: {hash: 'cc9a621f52c8efbb609b989f9deedac70af066ea5b7786d69f6c441d43a32798', answer: A}
+  g12-biology-6-1-q007: {hash: 'a67aff6f9bf960d3d61a84d68685fa14e7fb417aef3a053b5d046834926c3414', answer: B}
+  g12-biology-6-1-q008: {hash: '0509656d6640a0449b2aae7c34edd1501c930b81013085edb2bd4bc649184310', answer: true}
+  g12-biology-6-1-q009: {hash: '9e2c8aa1d898aa55c49e7b51498e8df8fac6a3d6ff0e856cd71c69e8e111058e', answer: C}
+  g12-biology-6-1-q010: {hash: '6c4a4fe8a1ec36bf9a0d6207fae7a08f16fad9e9a3ac78792ac52484ba2c3b2c', answer: D}
+  g12-biology-6-1-q011: {hash: 'f3327fa2fec9888865b6f6a54993133010438b505f8856d4ab858e29100edb34', answer: A}
+  g12-biology-6-1-q012: {hash: 'd0fb327fca536520359dcaa997f9b641c4a1af6100e8eb9405d27fdad0dc4b1e', answer: 10000}
+  g12-biology-6-1-q013: {hash: '2a757439deeb687700c136925c8be3eed0596c69abfe4d1d3a87fd8f76b7391c', answer: 2015}
+  g12-biology-6-1-q014: {hash: 'd7587c0a42abb52f3ff2df9486a8fdf31f0f0c3e2911e29289b3816da3046ab6', answer: B}
+  g12-biology-6-1-q015: {hash: '09ef6381f027ef883e1c47b96f2d203aaa144ad6253c742f8b9456ef39f8a741', answer: C}
+  g12-biology-6-1-q016: {hash: '24e77032f09254766c0601d195e6c67ec8bb0468ad75942c1a468390b64bc3ab', answer: D}
+  g12-biology-6-1-q017: {hash: '726f0ccbe17052e3b0e943a022b97c9fa863a445d18527fc60621871f6a8f3ce', answer: true}
+  g12-biology-6-1-q018: {hash: 'e54c79c7ebef611b1a88da948083935de4bbc235530b44377ff8d1aaadcf31d5', answer: A}
+  g12-biology-6-1-q019: {hash: 'db9d545e9db4c064ee40da1b2511dd1cc5d332376efa3e265ee2da5c19da9835', answer: B}
+  g12-biology-6-1-q020: {hash: 'b72df45c0f753d864d191ce7592099b7e2ca600ea9c1822a6e8caea5b44eea5b', answer: false}
+  g12-biology-6-1-q021: {hash: '706252147dd68874539c398a404aa04b85461ec78fed9c930e5530204ebdcedc', answer: 'mitigation'}
+  g12-biology-6-1-q022: {hash: '12e062a7ee05ac0f761e60de98ae3cbd36a0cb23e8110bf088e616ea73659ee2', answer: 'footprint'}
+  g12-biology-6-1-q023: {hash: '008c71de34ee1d4f2903c2706b3599e8b0670ca959b910bff2a6ce9da5cdad21', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-biology-6-1-q024: {hash: '773bb049b95d950dddd7e1572f129ed641cfcb641a82fdaf1244700bb7096e1b', answer: [B, D, A, C]}
+  g12-biology-6-1-q025: {hash: '8828f878bca66f8cdbf92b9a2aea6f507eb489f52ff0d0a4dea4779090e16232', answer: C}
+  g12-biology-6-1-q026: {hash: 'c46989b1f63d355bc033259e241df0cd74970a32f0651e8b6250a0c896ebea83', answer: D}
+  g12-biology-6-1-q027: {hash: 'b201d8e9ae58f07297d787289e1ae154ce7cabd4ffd9c54e973178759c25a0a6', answer: A}
+  g12-biology-6-1-q028: {hash: '123c9d38dfb1f9276bfe85d4880e85a8ddfd7179e9560f00f5896ea686278fb8', answer: B}
+  g12-biology-6-1-q029: {hash: 'e298c1c3c676c61d4fca8f2d600a4772ec3fe54c54032c1bc828ff1bb7ae6e61', answer: C}
+  g12-biology-6-1-q030: {hash: 'c3a19ebc56d518f1d8da0e9b44c136e05dd150e6944b550b5cf5bf725e605684', answer: D}

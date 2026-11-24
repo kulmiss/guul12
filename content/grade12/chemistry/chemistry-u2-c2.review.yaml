@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-chemistry-2-2-q001: {hash: 'dafa731b152abe2c02ce5084f8c6f7eb23df1155f762696f3b8c3a6f60412168', answer: B}
+  g12-chemistry-2-2-q002: {hash: 'e673c1e02a0fbf2f4abdbbf19e9b9627a8e3c17eafe12e397c9bf8c6f38285d0', answer: A}
+  g12-chemistry-2-2-q003: {hash: 'ed411acef05b891ff7031225944fefda6117f0387c34e42982ad79a997268c8c', answer: C}
+  g12-chemistry-2-2-q004: {hash: 'aec4b0511af2d0747b1112fdb92b9d94fe559b1fc269fc4ac5d1588b96560b72', answer: D}
+  g12-chemistry-2-2-q005: {hash: 'f5e318ad2cdffce4ee5794bf34d96a6ff6887d7ac3d10646812d3010118cf215', answer: [A, B, C]}
+  g12-chemistry-2-2-q006: {hash: 'fa5442d83714af223d621d2f04682a5fc357e1164b4d7eca5132f1072b1b9f48', answer: A}
+  g12-chemistry-2-2-q007: {hash: '520b57c9f39066b603d0d0bd82474cb50eddd1a223b6b8c28c8b122464ba2130', answer: C}
+  g12-chemistry-2-2-q008: {hash: '54b51164369a8baf28a2ff5f5c6132f476b2ab98cfce5efefa99e98ff88f7aee', answer: true, note: 'Minor: the stem does not say inert electrodes (e.g. platinum). With reactive anodes no oxygen forms. Suggest adding "with inert electrodes".'}
+  g12-chemistry-2-2-q009: {hash: '799c07fc835e27f575a3f6e2d35c0d699ab8cfdbabe82178e91ab505310a8b50', answer: 3000}
+  g12-chemistry-2-2-q010: {hash: '6335f2ad7c2fbb0459e17f3896a269c80d886c10296222b2e14cd1ff98602cc2', answer: 10.8}
+  g12-chemistry-2-2-q011: {hash: 'e3d17aea474d88160527e38f1557744341bec762d79872c609c3ad155d588892', answer: B}
+  g12-chemistry-2-2-q012: {hash: '0de65c50c2e344a5617928a3e123b22e02e39129fbd5850284bdef8ce6c7036e', answer: D}
+  g12-chemistry-2-2-q013: {hash: '360cd33482afa42eb3ac6fcd8942e311cd04aba723bd200f7a527b675b782a0b', answer: A}
+  g12-chemistry-2-2-q014: {hash: '6b6d374027f45ed9ff96952360a201651fa1e0dd81bd3f5b934eadc5e1b1e555', answer: C}
+  g12-chemistry-2-2-q015: {hash: 'fd3eef8afa98f94874d166cc77115d0926262b07dc4f0a8f8b9df43f70dbd85b', answer: D}
+  g12-chemistry-2-2-q016: {hash: '4823aab73af24f57438bb437efda558fef0f8ece9a82486a7a56bd5b62cdfb60', answer: A}
+  g12-chemistry-2-2-q017: {hash: '1b306eef0ca6624d18c9dece379fcb5942baafd1b37e8897c65e5f0dab8acd61', answer: false}
+  g12-chemistry-2-2-q018: {hash: '40929e31aceabc0e82845d646cb42af72078ad1ef3cc70604a042bf3a739d9d8', answer: B}
+  g12-chemistry-2-2-q019: {hash: 'd19b85870414ed8b71365b52b3fcf7d2d7fecf156d3cd32abf1ac6591c052855', answer: C}
+  g12-chemistry-2-2-q020: {hash: 'cf8bc9e3fa1b07a7224e02b4e4a3ab3f9cf0a1d193b6eea41a4a845db6209acb', answer: C}
+  g12-chemistry-2-2-q021: {hash: '196960fed321cb49ee338406e57f7c10bed4f72b66af4d13eba142fc8c917120', answer: 'electrolyte'}
+  g12-chemistry-2-2-q022: {hash: '6ed42d9a867b393fea146e8bdb95ef90004f6b98db9961b0c4cfc7bf2d205035', answer: 'electroplating'}
+  g12-chemistry-2-2-q023: {hash: '60ffe27f03d95cf8aa59435dae03bd7d4a823bf3a51cfccc64c796ed652c2a52', answer: true}
+  g12-chemistry-2-2-q024: {hash: '80b26b60581573196737539545fe6a29d19a9b24c1977799237aa59c628fd0d7', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-chemistry-2-2-q025: {hash: '64c1d7ec4ccb0a0a1675d16648c9ea4ee1bef1af751c0a22cba9b15c0ea9655e', answer: [B, C, A]}
+  g12-chemistry-2-2-q026: {hash: '81ef0ceecf508705fa98e5dc045f34cd0534c8e7a1942591e0691fbd8da42aac', answer: D}
+  g12-chemistry-2-2-q027: {hash: 'ba9d20150919bd10af510a886036c751b49e4d17b83ed49e54d4452d19b49c75', answer: B}
+  g12-chemistry-2-2-q028: {hash: 'e042f8c6193b9fa71107a798071316fb433de30656a849b4f7280f9b52d5a5f1', answer: A}
+  g12-chemistry-2-2-q029: {hash: '5243d1a00df28d7dbf9370302d9603e8d4c3f4eab5bb98e1b40ac0eb03ec19f5', answer: C}
+  g12-chemistry-2-2-q030: {hash: 'c3094da28466051caefdba55c81bd2d91c8eee6075f9b98a4cd178be1304b90f', answer: B}

@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'After independence, many African states faced border disputes inherited from colonialism, ethnic and regional tensions, weak economies dependent on a few exports, military coups and one-party rule.'
+    - 'Liberation continued in southern Africa. A 1974 coup in Portugal (the "Carnation Revolution") led to the independence of Guinea-Bissau (1974) and Mozambique and Angola (1975). Zimbabwe became independent in 1980 and Namibia in 1990.'
+    - 'In South Africa, apartheid (legal racial segregation, from 1948) was resisted by the ANC and others. Key events: the Sharpeville massacre (1960), the Soweto uprising (1976), Nelson Mandela''s release (February 1990) and the first democratic election (April 1994), after which Mandela became president.'
+    - 'In the 1980s many countries faced a debt crisis and accepted Structural Adjustment Programmes (SAPs) from the IMF and World Bank: cuts in government spending, privatisation and freer markets. These often hurt the poor.'
+    - 'From about 1990 a wave of democratisation brought multi-party elections to many countries. Tragedy also struck: the 1994 genocide against the Tutsi in Rwanda.'
+    - 'New states formed: Eritrea (1993) and South Sudan (2011).'
+    - 'Regional cooperation: ECOWAS (1975), SADC (1992, from SADCC 1980) and IGAD (1996, from IGADD 1986). The OAU was replaced by the African Union (AU), launched in Durban in 2002, with its headquarters in Addis Ababa. The AU''s Agenda 2063 and the African Continental Free Trade Area (AfCFTA) aim at integration and development.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-history-7-1-se01
+    problem: 'How did a coup in Portugal in 1974 lead to independence for its African colonies?'
+    steps:
+      - 'Long colonial wars had made the Portuguese army unhappy; officers overthrew the dictatorship in April 1974.'
+      - 'The new government agreed to end the wars, and Guinea-Bissau, Mozambique and Angola became independent in 1974–1975.'
+    answer: 'The new government ended the colonial wars.'
+  - uid: g12-history-7-1-se02
+    problem: 'Name two ways the African Union differs from the OAU.'
+    steps:
+      - 'The OAU (1963) focused on ending colonialism and strictly respected non-interference.'
+      - 'The AU (2002) can intervene in serious cases such as genocide and war crimes, and emphasises integration, development and good governance.'
+    answer: 'Right to intervene; stronger focus on integration and development'
+  - uid: g12-history-7-1-se03
+    problem: 'Why were Structural Adjustment Programmes unpopular in many countries?'
+    steps:
+      - 'They required cuts in spending on health, education and food subsidies.'
+      - 'Prices rose and jobs were lost through privatisation, so poorer people suffered.'
+    answer: 'Spending cuts and rising costs hurt the poor.'
+
+flashcards:
+  - {uid: g12-history-7-1-fc01, term: Apartheid, definition: 'System of legal racial segregation in South Africa (1948–1994).'}
+  - {uid: g12-history-7-1-fc02, term: Carnation Revolution, definition: '1974 coup in Portugal that led to independence for its African colonies.'}
+  - {uid: g12-history-7-1-fc03, term: Structural Adjustment Programmes, definition: 'IMF/World Bank reform conditions of the 1980s–1990s.'}
+  - {uid: g12-history-7-1-fc04, term: Rwandan genocide, definition: '1994 mass killing of Tutsi in Rwanda.'}
+  - {uid: g12-history-7-1-fc05, term: ECOWAS, definition: 'Economic Community of West African States (1975).'}
+  - {uid: g12-history-7-1-fc06, term: IGAD, definition: 'Intergovernmental Authority on Development in the Horn and East Africa (1996).'}
+  - {uid: g12-history-7-1-fc07, term: African Union, definition: 'Launched in 2002 to replace the OAU; HQ in Addis Ababa.'}
+  - {uid: g12-history-7-1-fc08, term: Agenda 2063, definition: 'The AU''s long-term plan for Africa''s development.'}
+  - {uid: g12-history-7-1-fc09, term: AfCFTA, definition: 'African Continental Free Trade Area.'}
+
+questions:
+  - uid: g12-history-7-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What was apartheid?'
+    options:
+      A: 'A trade agreement'
+      B: 'A system of legal racial segregation in South Africa'
+      C: 'A type of farming'
+      D: 'A liberation army'
+    answer: B
+    explanation: 'Apartheid laws separated people by race from 1948 until the early 1990s.'
+
+  - uid: g12-history-7-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Who became South Africa''s first president after the democratic election of 1994?'
+    options:
+      A: 'Nelson Mandela'
+      B: 'F. W. de Klerk'
+      C: 'Thabo Mbeki'
+      D: 'Desmond Tutu'
+    answer: A
+    explanation: 'Mandela, released from prison in 1990, became president in May 1994.'
+
+  - uid: g12-history-7-1-q003
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did South Africa hold its first democratic election with all races voting?'
+    answer: {value: 1994, tolerance: 0}
+    explanation: 'The election was held in April 1994.'
+
+  - uid: g12-history-7-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Which event in South Africa in 1976 began when students protested against compulsory teaching in Afrikaans?'
+    options:
+      A: 'The Sharpeville massacre'
+      B: 'Mandela''s release'
+      C: 'The 1994 election'
+      D: 'The Soweto uprising'
+    answer: D
+    explanation: 'Police fired on students in Soweto in June 1976, sparking protests across the country.'
+
+  - uid: g12-history-7-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which event in Portugal in 1974 led to independence for Mozambique and Angola?'
+    options:
+      A: 'The Berlin Conference'
+      B: 'The Carnation Revolution, a coup that ended the dictatorship'
+      C: 'Portugal joining NATO'
+      D: 'The Soweto uprising'
+    answer: B
+    explanation: 'The new Portuguese government agreed to end its colonial wars.'
+
+  - uid: g12-history-7-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'In which year did Zimbabwe become independent?'
+    options:
+      A: '1960'
+      B: '1975'
+      C: '1980'
+      D: '1994'
+    answer: C
+    explanation: 'Zimbabwe (formerly Rhodesia) became independent in April 1980.'
+
+  - uid: g12-history-7-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which country became independent in 2011, making it Africa''s newest state?'
+    options:
+      A: 'Eritrea'
+      B: 'Namibia'
+      C: 'Djibouti'
+      D: 'South Sudan'
+    answer: D
+    explanation: 'South Sudan became independent from Sudan in July 2011 after a referendum.'
+
+  - uid: g12-history-7-1-q008
+    type: numeric
+    difficulty: 1
+    stem: 'In which year did Eritrea formally become independent?'
+    answer: {value: 1993, tolerance: 0}
+    explanation: 'After a referendum, Eritrea declared independence in May 1993.'
+
+  - uid: g12-history-7-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which organisation replaced the OAU in 2002?'
+    options:
+      A: 'The African Union'
+      B: 'ECOWAS'
+      C: 'The United Nations'
+      D: 'IGAD'
+    answer: A
+    explanation: 'The AU was launched in Durban, South Africa, in July 2002.'
+
+  - uid: g12-history-7-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'Where are the headquarters of the African Union?'
+    options:
+      A: 'Nairobi'
+      B: 'Cairo'
+      C: 'Addis Ababa'
+      D: 'Lagos'
+    answer: C
+    explanation: 'Like the OAU before it, the AU is based in Addis Ababa.'
+
+  - uid: g12-history-7-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'What were Structural Adjustment Programmes (SAPs)?'
+    options:
+      A: 'Plans to build more colonial railways'
+      B: 'Liberation armies'
+      C: 'Agreements to end apartheid'
+      D: 'Economic reforms required by the IMF and World Bank in return for loans'
+    answer: D
+    explanation: 'They included spending cuts, privatisation and market reforms.'
+
+  - uid: g12-history-7-1-q012
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which were typical conditions of Structural Adjustment Programmes? Choose all that apply.'
+    options:
+      A: 'Cutting government spending'
+      B: 'Privatising state companies'
+      C: 'Removing price controls'
+      D: 'Doubling food subsidies'
+    answer: [A, B, C]
+    explanation: 'SAPs usually reduced subsidies, not increased them.'
+
+  - uid: g12-history-7-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'In which country did genocide against the Tutsi take place in 1994?'
+    options:
+      A: 'Rwanda'
+      B: 'Kenya'
+      C: 'Ghana'
+      D: 'Tanzania'
+    answer: A
+    explanation: 'In about 100 days, hundreds of thousands of people were killed.'
+
+  - uid: g12-history-7-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'Nelson Mandela was released from prison in 1990.'
+    answer: true
+    explanation: 'He was released in February 1990 after 27 years in prison.'
+
+  - uid: g12-history-7-1-q015
+    type: true_false
+    difficulty: 2
+    stem: 'The African Union, unlike the OAU, allows intervention in a member state in grave cases such as genocide.'
+    answer: true
+    explanation: 'Article 4(h) of the AU Constitutive Act gives this right.'
+
+  - uid: g12-history-7-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which regional organisation of West African states was founded in 1975?'
+    options:
+      A: 'SADC'
+      B: 'IGAD'
+      C: 'ECOWAS'
+      D: 'The EAC'
+    answer: C
+    explanation: 'The Economic Community of West African States promotes trade and cooperation.'
+
+  - uid: g12-history-7-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'IGAD, whose members include Ethiopia, Djibouti, Somalia and Kenya, took its current name in:'
+    options:
+      A: '1963'
+      B: '1975'
+      C: '2011'
+      D: '1996'
+    answer: D
+    explanation: 'IGADD (founded 1986 to fight drought) became IGAD in 1996.'
+
+  - uid: g12-history-7-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'What is "Agenda 2063"?'
+    options:
+      A: 'The African Union''s long-term plan for Africa''s development'
+      B: 'A colonial treaty'
+      C: 'A football competition'
+      D: 'A UN peacekeeping mission'
+    answer: A
+    explanation: 'It sets goals for a prosperous, integrated and peaceful Africa by 2063.'
+
+  - uid: g12-history-7-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main aim of the African Continental Free Trade Area (AfCFTA)?'
+    options:
+      A: 'To stop trade between African countries'
+      B: 'To create a single market by reducing barriers to trade among African countries'
+      C: 'To return to colonial rule'
+      D: 'To ban imports from Africa'
+    answer: B
+    explanation: 'It aims to increase trade within Africa, which has been low.'
+
+  - uid: g12-history-7-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'The system of legal racial segregation in South Africa was called ________.'
+    answer: [apartheid]
+    explanation: 'It means "separateness" in Afrikaans.'
+
+  - uid: g12-history-7-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'The African Union was launched in 2002 in which South African city?'
+    answer: [Durban]
+    explanation: 'The first AU summit was held in Durban in July 2002.'
+
+  - uid: g12-history-7-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'After independence, all African countries remained multi-party democracies without any military coups.'
+    answer: false
+    explanation: 'Many countries experienced coups and one-party rule from the 1960s to the 1980s.'
+
+  - uid: g12-history-7-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each country with its year of independence.'
+    left:
+      L1: 'Namibia'
+      L2: 'Mozambique'
+      L3: 'South Sudan'
+    right:
+      R1: '1975'
+      R2: '2011'
+      R3: '1990'
+      R4: '1957'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '1957 is the year of Ghana''s independence.'
+
+  - uid: g12-history-7-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'Put these events in order.'
+    items:
+      A: 'Launch of the African Union'
+      B: 'Soweto uprising'
+      C: 'Sharpeville massacre'
+      D: 'Zimbabwe''s independence'
+    answer: [C, B, D, A]
+    explanation: '1960, 1976, 1980, 2002.'
+
+  - uid: g12-history-7-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Why did many new African states keep the borders drawn by colonial powers, even though they often divided peoples?'
+    options:
+      A: 'The borders followed ethnic lines exactly.'
+      B: 'The United Nations forced them to change borders.'
+      C: 'Changing borders could cause wars, so the OAU agreed to respect inherited borders.'
+      D: 'The borders were drawn by African rulers.'
+    answer: C
+    explanation: 'In 1964 the OAU resolved to respect borders as they existed at independence.'
+
+  - uid: g12-history-7-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which was the main liberation movement in the struggle against apartheid in South Africa?'
+    options:
+      A: 'FRELIMO'
+      B: 'The ANC (African National Congress)'
+      C: 'The MPLA'
+      D: 'ZANU'
+    answer: B
+    explanation: 'FRELIMO, the MPLA and ZANU fought in Mozambique, Angola and Zimbabwe.'
+
+  - uid: g12-history-7-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What happened at Sharpeville, South Africa, in 1960?'
+    options:
+      A: 'The first democratic election'
+      B: 'Mandela''s release'
+      C: 'The founding of the African Union'
+      D: 'Police opened fire on people protesting against pass laws, killing dozens.'
+    answer: D
+    explanation: 'The massacre led the government to ban the ANC and PAC.'
+
+  - uid: g12-history-7-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'What was a major cause of the African debt crisis of the 1980s?'
+    options:
+      A: 'Falling prices for African exports together with high interest rates on loans'
+      B: 'Too much export income'
+      C: 'No borrowing at all'
+      D: 'The Berlin Conference'
+    answer: A
+    explanation: 'Countries earned less while repayments grew more expensive.'
+
+  - uid: g12-history-7-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which wave of change spread across many African countries in the early 1990s?'
+    options:
+      A: 'A return to colonial rule'
+      B: 'Democratisation with multi-party elections'
+      C: 'The Scramble for Africa'
+      D: 'The creation of the OAU'
+    answer: B
+    explanation: 'The end of the Cold War and popular protests led to multi-party systems in many states.'
+
+  - uid: g12-history-7-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which organisation in southern Africa was formed in 1992 from an earlier coordination conference (SADCC)?'
+    options:
+      A: 'ECOWAS'
+      B: 'IGAD'
+      C: 'SADC'
+      D: 'The Arab League'
+    answer: C
+    explanation: 'The Southern African Development Community replaced SADCC (1980).'

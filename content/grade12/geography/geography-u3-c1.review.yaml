@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-3-1-q001: {hash: '0d7393d8d160caf88eb8f4cda2b2ec1f214fd56758ff521243415aa67ee86a61', answer: B}
+  g12-geography-3-1-q002: {hash: '41abddd8cb6ba15343d6355a17d2345a8d1a34b0d338ed65360fc7228c30855b', answer: A}
+  g12-geography-3-1-q003: {hash: '1ce57e96c0b42a4fdaba4752e9edd4b4a06e6e44cb3228f1eee5cd8b7e0d90ef', answer: C}
+  g12-geography-3-1-q004: {hash: '4e639badd08d07867f9e23bb6bf60dae69fab8ab883f81f36a0df6c71f1a2905', answer: D, note: 'Answer is correct, but the stem says GERD "is being built". The dam was officially inaugurated in September 2025, so "is being built" is out of date. Suggest "On which river is the GERD built?" or "located".'}
+  g12-geography-3-1-q005: {hash: 'e38dd22aec988c9655c3662384e9f339ea6a10079a67069ad0d8014527f2ba85', answer: B}
+  g12-geography-3-1-q006: {hash: '907c590048e05aa1beade30dc5991e120ef3c36f23fbe7527dbe0e579fc61ea6', answer: C}
+  g12-geography-3-1-q007: {hash: 'd48277096c2deab741a5abc9a3f4411e0237cab4f6b7b8fddd344d025e750916', answer: A}
+  g12-geography-3-1-q008: {hash: 'd39d36bf3c5c02c13fcdf11c5cd3737a35c247331470394aec564d2d45f12e96', answer: true}
+  g12-geography-3-1-q009: {hash: '967e1e5cac874a771875d793b4fcb11cb3747ad6cdef0ace531e39dc5e386aa1', answer: B}
+  g12-geography-3-1-q010: {hash: '9af26bfb7f32075afb638f6251cdfed181e4f435fec66da825ae446188590309', answer: D}
+  g12-geography-3-1-q011: {hash: '3c7802f6c62adc1eb75020c8ab26a87a0b826f101f2983ee5e76da9e6c68f286', answer: C}
+  g12-geography-3-1-q012: {hash: 'ac03b06c1394bed7a76266af5465b0e5d343d48adb77dfa935563c16c3f971d9', answer: A}
+  g12-geography-3-1-q013: {hash: '876210bffb2e48537b71eecdce1f1ee811263b875458a23140063bd49435ad0d', answer: [A, B, C]}
+  g12-geography-3-1-q014: {hash: '37d7dfee926323ea00c0d95104ebb1396f189afca910637874816f5352ed82af', answer: 250}
+  g12-geography-3-1-q015: {hash: 'd82c584954f12754121a4d91d323e3e859895ab393c39be22988deddd854c6b2', answer: 200}
+  g12-geography-3-1-q016: {hash: '62dc5e1430f95c49775985b257650e80275837531ca064ba04ae8a605c861ef7', answer: B}
+  g12-geography-3-1-q017: {hash: '55ab5efd9ff9015611b9d3f181767cba1b898936530cd6c895b8278d93ed8f9b', answer: true}
+  g12-geography-3-1-q018: {hash: 'f85a4f40c9749a12bf13dbd72b897f88c56b7f71807f2c49b41b55f6334d9d79', answer: C}
+  g12-geography-3-1-q019: {hash: '6dcb1f39ce30016c50f2d4183a1ac6475b9e75f1e66a99dd32dd952647c4a435', answer: D}
+  g12-geography-3-1-q020: {hash: '2a39308cb264d62402ef982fd84867150cc4109899aea6bceea9dbcb5bd907f9', answer: 'non-renewable', note: 'Accept spelling variants: non-renewable, nonrenewable, non renewable (resource).'}
+  g12-geography-3-1-q021: {hash: 'b2a2cce1e300295fd953a462dccfcd107108e2bf7b92b6745ab519f48cd4118c', answer: 'transboundary', note: 'Several correct words exist: transboundary, international, shared, trans-boundary. The accepted-answer list must include all of them or students giving a correct answer will be marked wrong.'}
+  g12-geography-3-1-q022: {hash: '0e26fb725322717c6b725f91e040f3ca826b5160e10c6585df794fe14bf081ff', answer: false}
+  g12-geography-3-1-q023: {hash: '8899005d4b1a31772c71aeb76fcf362626ba10fd52b95cfe59e239f815e12840', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-geography-3-1-q024: {hash: '0d093a8d4c89cb388b87c8bd82a4e3128918653bb67019b474c2d3a7d75a5654', answer: [B, D, A, C]}
+  g12-geography-3-1-q025: {hash: 'a0c587eaeb056459b78e0f19aec5dde23027a219078b8d7272235f2a424e59d7', answer: B}
+  g12-geography-3-1-q026: {hash: '89c407e321eacccead669a4f75663b7dae3cdb230b98afeb9d6b50366a1845c6', answer: D}
+  g12-geography-3-1-q027: {hash: '2b4ad4ddcab0d7e7d51620440dc57bb02679268d52a6905205fe7c48d9fe02d9', answer: A}
+  g12-geography-3-1-q028: {hash: '335b86eb655f9d0249848cfad32d0639e1175a5a5b813253820a7cb15321b76f', answer: C}
+  g12-geography-3-1-q029: {hash: '720950d1ffa10ad2c15161b28777de70e9d220190939490fc06555d53c0277f3', answer: true}
+  g12-geography-3-1-q030: {hash: '95e7f83271de6c302f1357953abdd4b46aa5b6f6ce8e7400a1e593e41e984ad3', answer: B}

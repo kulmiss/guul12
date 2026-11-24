@@ -1,0 +1,5 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-1-1-q002: {hash: '85bee05d19faa852d0507ea51a02ddb809706eea47bc2e20f606f4f3162219a3', answer: A}
+  g12-geography-1-1-q005: {hash: '0a341fe4af1df84449d4972443dd082e2f5749107027b038d089b492a1bc2634', answer: D}
+  g12-geography-1-1-q028: {hash: '343cbfaa55b7fbd278758de5ad44759a281060a884c4b5864f31685d3fb03a83', answer: C}

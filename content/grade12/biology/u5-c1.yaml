@@ -1,0 +1,376 @@
+summary:
+  key_points:
+    - 'The central nervous system (CNS) is the brain and spinal cord; the peripheral nervous system (PNS) is the nerves that connect it to the body. The autonomic system controls automatic actions: sympathetic ("fight or flight") and parasympathetic ("rest and digest").'
+    - 'A neuron has dendrites, a cell body and a long axon. Many axons have a fatty myelin sheath with gaps (nodes of Ranvier); impulses jump from node to node (saltatory conduction), which is much faster. Sensory neurons carry impulses from receptors, relay neurons connect inside the CNS, and motor neurons carry impulses to effectors (muscles and glands).'
+    - 'At rest the inside of a neuron is about −70 mV (resting potential), kept by the sodium–potassium pump (3 $\text{Na}^+$ out, 2 $\text{K}^+$ in). In an action potential, $\text{Na}^+$ rushes in (depolarisation), then $\text{K}^+$ flows out (repolarisation). It is all-or-none.'
+    - 'A synapse is a tiny gap between neurons. The impulse releases a neurotransmitter such as acetylcholine, which diffuses across and starts an impulse in the next neuron. Synapses pass impulses in one direction only.'
+    - 'A reflex is a fast, automatic response: receptor → sensory neuron → relay neuron (in the spinal cord) → motor neuron → effector. Example: pulling your hand from a hot stove.'
+    - 'Brain: the cerebrum controls thinking, memory and voluntary actions; the cerebellum controls balance and coordination; the medulla oblongata controls breathing and heart rate; the hypothalamus controls body temperature and links to the pituitary gland.'
+    - 'Eye: the cornea and lens focus light on the retina; the iris controls the size of the pupil. Rods work in dim light (black and white); cones detect colour in bright light. The blind spot has no receptors. Short sight is corrected with concave lenses, long sight with convex lenses.'
+    - 'Ear: the eardrum vibrates; three ossicles (hammer, anvil, stirrup) amplify the vibrations; the cochlea changes them into nerve impulses; the semicircular canals detect head movement for balance; the Eustachian tube equalises air pressure.'
+  formulas:
+    - label: Impulse travel time
+      latex: 't = \frac{d}{v}'
+
+solved_exercises:
+  - uid: g12-biology-5-1-se01
+    problem: 'An impulse travels along a 1.2 m motor neuron at 60 m/s. How long does it take?'
+    steps:
+      - '$t = \frac{d}{v} = \frac{1.2}{60}$.'
+      - '$t = 0.02$ s $= 20$ ms.'
+    answer: '20 ms'
+  - uid: g12-biology-5-1-se02
+    problem: 'Explain why a reflex action is faster than a voluntary action.'
+    steps:
+      - 'In a reflex the impulse goes through the spinal cord using few neurons and synapses.'
+      - 'It does not have to travel to the brain and wait for a conscious decision, so the response is very quick.'
+    answer: 'Shorter pathway, no conscious thought'
+  - uid: g12-biology-5-1-se03
+    problem: 'Why do we see poorly in colour at night?'
+    steps:
+      - 'Cones, which detect colour, need bright light.'
+      - 'In dim light only rods work, and rods give black-and-white vision.'
+    answer: 'Only rods work in dim light.'
+
+flashcards:
+  - {uid: g12-biology-5-1-fc01, term: CNS, definition: 'Central nervous system: brain and spinal cord.'}
+  - {uid: g12-biology-5-1-fc02, term: Myelin sheath, definition: 'Fatty layer around an axon that speeds up impulses.'}
+  - {uid: g12-biology-5-1-fc03, term: Resting potential, definition: 'About −70 mV across the membrane of a resting neuron.'}
+  - {uid: g12-biology-5-1-fc04, term: Action potential, definition: 'Rapid reversal of membrane charge as $\text{Na}^+$ enters; all-or-none.'}
+  - {uid: g12-biology-5-1-fc05, term: Synapse, definition: 'Junction between neurons where a neurotransmitter crosses a gap.'}
+  - {uid: g12-biology-5-1-fc06, term: Reflex arc, definition: 'Receptor → sensory → relay → motor neuron → effector.'}
+  - {uid: g12-biology-5-1-fc07, term: Cerebellum, definition: 'Part of the brain controlling balance and coordination.'}
+  - {uid: g12-biology-5-1-fc08, term: Medulla oblongata, definition: 'Brain region controlling breathing and heart rate.'}
+  - {uid: g12-biology-5-1-fc09, term: Rods and cones, definition: 'Retina cells: rods for dim light, cones for colour.'}
+  - {uid: g12-biology-5-1-fc10, term: Cochlea, definition: 'Coiled part of the inner ear that changes vibrations into nerve impulses.'}
+
+questions:
+  - uid: g12-biology-5-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'The central nervous system is made up of:'
+    options:
+      A: 'The brain and the nerves of the arms'
+      B: 'The brain and the spinal cord'
+      C: 'The spinal cord and the eyes'
+      D: 'All the nerves of the body'
+    answer: B
+    explanation: 'The CNS is the brain and spinal cord; the rest of the nerves form the PNS.'
+
+  - uid: g12-biology-5-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which type of neuron carries impulses from the CNS to muscles?'
+    options:
+      A: 'Motor neuron'
+      B: 'Sensory neuron'
+      C: 'Relay neuron'
+      D: 'Receptor cell'
+    answer: A
+    explanation: 'Motor neurons carry instructions to effectors such as muscles and glands.'
+
+  - uid: g12-biology-5-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the function of the myelin sheath?'
+    options:
+      A: 'It makes neurotransmitters.'
+      B: 'It detects light.'
+      C: 'It insulates the axon and makes impulses travel faster.'
+      D: 'It stores glucose.'
+    answer: C
+    explanation: 'Impulses jump between the nodes of Ranvier (saltatory conduction).'
+
+  - uid: g12-biology-5-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the approximate resting potential of a neuron?'
+    options:
+      A: '+40 mV'
+      B: '0 mV'
+      C: '+70 mV'
+      D: '−70 mV'
+    answer: D
+    explanation: 'The inside is negative compared with the outside at rest.'
+
+  - uid: g12-biology-5-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'During depolarisation in an action potential, which ions move into the axon?'
+    options:
+      A: 'Potassium ions'
+      B: 'Sodium ions'
+      C: 'Chloride ions'
+      D: 'Calcium ions only'
+    answer: B
+    explanation: 'Sodium channels open and $\text{Na}^+$ rushes in, making the inside positive; then $\text{K}^+$ flows out to repolarise.'
+
+  - uid: g12-biology-5-1-q006
+    type: numeric
+    difficulty: 1
+    stem: 'For each cycle of the sodium–potassium pump, how many sodium ions are pumped out of the cell?'
+    answer: {value: 3, tolerance: 0}
+    explanation: 'The pump moves 3 $\text{Na}^+$ out and 2 $\text{K}^+$ in, using one ATP.'
+
+  - uid: g12-biology-5-1-q007
+    type: numeric
+    difficulty: 2
+    stem: 'An impulse travels 1.5 m along a nerve at 100 m/s. How long does it take, in milliseconds?'
+    answer: {value: 15, tolerance: 0, unit: ms}
+    explanation: '$t = \frac{1.5}{100} = 0.015$ s $= 15$ ms.'
+
+  - uid: g12-biology-5-1-q008
+    type: true_false
+    difficulty: 2
+    stem: 'An action potential is all-or-none: a stronger stimulus gives a bigger action potential.'
+    answer: false
+    explanation: 'All-or-none means every action potential has the same size; a stronger stimulus gives more impulses per second, not bigger ones.'
+
+  - uid: g12-biology-5-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'How does a nerve impulse cross a synapse?'
+    options:
+      A: 'Electrons jump across the gap.'
+      B: 'The two neurons touch and join.'
+      C: 'A hormone travels in the blood.'
+      D: 'A neurotransmitter diffuses across the gap and binds to the next neuron.'
+    answer: D
+    explanation: 'For example, acetylcholine is released, crosses the cleft and triggers an impulse in the next neuron.'
+
+  - uid: g12-biology-5-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do impulses pass across a synapse in one direction only?'
+    options:
+      A: 'Neurotransmitter is released only from the axon end and its receptors are only on the next neuron.'
+      B: 'The gap is too wide in one direction.'
+      C: 'Impulses are too fast to go backwards.'
+      D: 'The myelin sheath blocks one side.'
+    answer: A
+    explanation: 'Vesicles of neurotransmitter are only in the presynaptic knob; receptors are only on the postsynaptic membrane.'
+
+  - uid: g12-biology-5-1-q011
+    type: ordering
+    difficulty: 1
+    stem: 'Put the parts of a reflex arc in the order the impulse travels.'
+    items:
+      A: 'Motor neuron'
+      B: 'Receptor'
+      C: 'Effector (muscle)'
+      D: 'Sensory neuron'
+      E: 'Relay neuron'
+    answer: [B, D, E, A, C]
+    explanation: 'Receptor → sensory neuron → relay neuron in the spinal cord → motor neuron → effector.'
+
+  - uid: g12-biology-5-1-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which part of the brain controls balance and coordination of movement?'
+    options:
+      A: 'Cerebrum'
+      B: 'Medulla oblongata'
+      C: 'Cerebellum'
+      D: 'Hypothalamus'
+    answer: C
+    explanation: 'The cerebellum fine-tunes movements and keeps us balanced.'
+
+  - uid: g12-biology-5-1-q013
+    type: single_choice
+    difficulty: 1
+    stem: 'Which part of the brain controls breathing and heart rate?'
+    options:
+      A: 'Cerebrum'
+      B: 'Cerebellum'
+      C: 'Pituitary gland'
+      D: 'Medulla oblongata'
+    answer: D
+    explanation: 'The medulla controls these automatic, life-supporting functions.'
+
+  - uid: g12-biology-5-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which part of the brain is responsible for thinking, memory and voluntary actions?'
+    options:
+      A: 'Cerebrum'
+      B: 'Medulla oblongata'
+      C: 'Spinal cord'
+      D: 'Cerebellum'
+    answer: A
+    explanation: 'The cerebrum is the largest part of the human brain.'
+
+  - uid: g12-biology-5-1-q015
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which effects are caused by the sympathetic nervous system ("fight or flight")? Choose all that apply.'
+    options:
+      A: 'Faster heart rate'
+      B: 'Wider pupils'
+      C: 'More saliva and faster digestion'
+      D: 'Faster breathing'
+    answer: [A, B, D]
+    explanation: 'The sympathetic system prepares the body for action. Increased digestion is a parasympathetic effect.'
+
+  - uid: g12-biology-5-1-q016
+    type: single_choice
+    difficulty: 1
+    stem: 'Which part of the eye controls how much light enters?'
+    options:
+      A: 'Retina'
+      B: 'Iris'
+      C: 'Lens'
+      D: 'Optic nerve'
+    answer: B
+    explanation: 'The iris muscles change the size of the pupil.'
+
+  - uid: g12-biology-5-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Which cells in the retina allow us to see colours?'
+    options:
+      A: 'Rods'
+      B: 'Neurons of the cerebellum'
+      C: 'Cones'
+      D: 'Red blood cells'
+    answer: C
+    explanation: 'Cones need bright light and detect colour; rods work in dim light.'
+
+  - uid: g12-biology-5-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can we not see an image that falls on the blind spot?'
+    options:
+      A: 'The lens is missing there.'
+      B: 'It is covered by the iris.'
+      C: 'Light cannot reach the back of the eye.'
+      D: 'There are no rods or cones where the optic nerve leaves the eye.'
+    answer: D
+    explanation: 'With no receptor cells, light there cannot produce impulses.'
+
+  - uid: g12-biology-5-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A short-sighted person can see near objects clearly but not distant ones. Which lens corrects this?'
+    options:
+      A: 'A concave (diverging) lens'
+      B: 'A convex (converging) lens'
+      C: 'A flat glass sheet'
+      D: 'No lens can help.'
+    answer: A
+    explanation: 'In short sight light focuses in front of the retina; a concave lens spreads it so it focuses on the retina.'
+
+  - uid: g12-biology-5-1-q020
+    type: single_choice
+    difficulty: 1
+    stem: 'Which part of the ear changes vibrations into nerve impulses?'
+    options:
+      A: 'Eardrum'
+      B: 'Eustachian tube'
+      C: 'Cochlea'
+      D: 'Pinna'
+    answer: C
+    explanation: 'Hair cells in the cochlea respond to vibrations and send impulses along the auditory nerve.'
+
+  - uid: g12-biology-5-1-q021
+    type: true_false
+    difficulty: 1
+    stem: 'The semicircular canals of the inner ear help us keep our balance.'
+    answer: true
+    explanation: 'Fluid in the canals moves when the head moves, and receptors detect it.'
+
+  - uid: g12-biology-5-1-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'A fast, automatic response to a stimulus, such as pulling a hand away from fire, is called a ________ action.'
+    answer: [reflex]
+    explanation: 'Reflexes protect the body from harm.'
+
+  - uid: g12-biology-5-1-q023
+    type: fill_in
+    difficulty: 2
+    stem: 'The chemical released at a synapse that carries the signal to the next neuron is called a ________.'
+    answer: [neurotransmitter, neuro-transmitter, transmitter]
+    explanation: 'Acetylcholine is a common example.'
+
+  - uid: g12-biology-5-1-q024
+    type: true_false
+    difficulty: 2
+    stem: 'The Eustachian tube connects the middle ear to the throat and helps equalise air pressure on both sides of the eardrum.'
+    answer: true
+    explanation: 'Swallowing or yawning when flying opens the tube and relieves ear pressure.'
+
+  - uid: g12-biology-5-1-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each part of the eye with its job.'
+    left:
+      L1: 'Cornea'
+      L2: 'Retina'
+      L3: 'Optic nerve'
+    right:
+      R1: 'Carries impulses to the brain'
+      R2: 'Contains light-sensitive rods and cones'
+      R3: 'Transparent front layer that bends light'
+      R4: 'Amplifies sound'
+    answer: {L1: R3, L2: R2, L3: R1}
+    explanation: 'Amplifying sound is done by the ossicles of the ear.'
+
+  - uid: g12-biology-5-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'What do the three small bones of the middle ear (ossicles) do?'
+    options:
+      A: 'Amplify the vibrations from the eardrum and pass them to the inner ear'
+      B: 'Detect light'
+      C: 'Make nerve impulses'
+      D: 'Control balance only'
+    answer: A
+    explanation: 'The hammer, anvil and stirrup act as levers that increase the force of the vibrations.'
+
+  - uid: g12-biology-5-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'A drug blocks the receptors for a neurotransmitter on muscle cells. What is the most likely effect?'
+    options:
+      A: 'The muscles contract more strongly.'
+      B: 'The muscles cannot be stimulated, so they do not contract.'
+      C: 'Nerve impulses travel faster.'
+      D: 'The person sees better.'
+    answer: B
+    explanation: 'Without receptors to bind, the signal cannot pass from the motor neuron to the muscle, causing paralysis.'
+
+  - uid: g12-biology-5-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'When you look from a far object to a near one, what happens in your eye?'
+    options:
+      A: 'The pupil disappears.'
+      B: 'The retina moves forward.'
+      C: 'The iris turns a different colour.'
+      D: 'The lens becomes thicker and more curved.'
+    answer: D
+    explanation: 'This is accommodation: the ciliary muscles contract, the lens rounds up and bends light more for near objects.'
+
+  - uid: g12-biology-5-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which part of the brain controls body temperature?'
+    options:
+      A: 'Cerebellum'
+      B: 'Medulla oblongata'
+      C: 'Hypothalamus'
+      D: 'Cerebrum'
+    answer: C
+    explanation: 'The hypothalamus works like a thermostat and also controls the pituitary gland.'
+
+  - uid: g12-biology-5-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Why should students avoid listening to very loud music through earphones for long periods?'
+    options:
+      A: 'Loud sound can permanently damage the hair cells in the cochlea.'
+      B: 'It makes the eardrum grow thicker and hear better.'
+      C: 'It improves balance.'
+      D: 'It only affects the eyes.'
+    answer: A
+    explanation: 'Damaged cochlear hair cells do not grow back, so the hearing loss is permanent.'

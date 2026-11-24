@@ -1,0 +1,48 @@
+name: Store pack
+
+on:
+  pull_request:
+    paths: ['docs/store/**', 'app/tool/icon/**', 'app/assets/fonts/**', '.github/workflows/store.yml']
+  push:
+    branches: [main, develop]
+    paths: ['docs/store/**', 'app/tool/icon/**', 'app/assets/fonts/**', '.github/workflows/store.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: store-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  store:
+    name: Listing texts and pictures
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q librsvg2-bin
+          pip install fonttools==4.55.3 pillow==11.1.0
+
+      - name: Listings keep Play's limits and payment rules
+        run: python3 docs/store/tool/check_listing.py
+
+      - name: The checker catches a bad listing
+        run: |
+          if python3 docs/store/tool/check_listing.py docs/store/tool/samples/bad-listing.md; then
+            echo "The bad sample passed: the checker is broken." && exit 1
+          fi
+
+      - name: App icon builds and stays inside the adaptive safe zone
+        working-directory: app
+        run: python3 tool/icon/make_icon.py
+
+      - name: Feature graphic builds at 1024 x 500
+        run: python3 docs/store/tool/make_feature_graphic.py

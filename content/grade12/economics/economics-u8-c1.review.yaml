@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-8-1-q001: {hash: 'c38e8e41761f95526dd7a96b50e4876067a78d76082f0eadfd1bec98cbd4d4cd', answer: B}
+  g12-economics-8-1-q002: {hash: '697da6c4fb7a8a91007c22a643cbdb5913ae8a7290556af377b855153d8ad46c', answer: A}
+  g12-economics-8-1-q003: {hash: '3b971f1b0307e691645ff4cb6ea7441c6c0ada1f7bd6291d4f82323bc408b1e8', answer: C}
+  g12-economics-8-1-q004: {hash: '6eb634e330b7f9c6323830533fc2962943d32925bc10eb219cc743d335a434e6', answer: D}
+  g12-economics-8-1-q005: {hash: 'a260cece4aaaab7dbc3af616c313c54d47b8fdfdbe7b39133ba3f540c04305d5', answer: A}
+  g12-economics-8-1-q006: {hash: 'a5b44f51ac711734b1f4065b83152d94e1f8334e692577eb239f8851f4ef7bad', answer: B}
+  g12-economics-8-1-q007: {hash: '88723bcba641eb1e5d3b400e96f4077e15c9d0ad11e324f19e9cf9b50d9d1f85', answer: C}
+  g12-economics-8-1-q008: {hash: '1d0c278abc3e1ec9f37c5d0b48fae6cf556ff57651214b40f91c58a1900ca66f', answer: D}
+  g12-economics-8-1-q009: {hash: '021e2745b99d1ede7c2abd412cb52dd9ba1fbad87c72f8618a60de1daea8a9df', answer: A}
+  g12-economics-8-1-q010: {hash: 'd952ca1e17964c5bb4baab36625b89f9cb006a5602fef4f31de821d89d0e6314', answer: B}
+  g12-economics-8-1-q011: {hash: '55a555e02d0641ce8af3a8699d66227c2194a591ea1d4c1fea746e022640ab75', answer: C}
+  g12-economics-8-1-q012: {hash: 'd510a5dc156dbda3d2e9d96be602a056839b6e314383db5f511f5ac98f0e7f46', answer: D}
+  g12-economics-8-1-q013: {hash: '5fdde0fb84fa5e7e1483bfcd13ca5a7501d4299038e06fca23e2c3c64ab65f59', answer: A, note: 'Distractors (new currency, oil drilling, stock exchange) are implausible, so the item tests almost nothing.'}
+  g12-economics-8-1-q014: {hash: '187fcf236768bf47aa1c76d9c3fa029e191587efed34f65b3bd9956ebadb787c', answer: B, note: 'Distractors (airline pilots, bank managers) are implausible; answer is obvious without knowledge.'}
+  g12-economics-8-1-q015: {hash: '61cc4008a3be7756daea64117e117b9b6869f696ee19c93e30ffae1ae1349a53', answer: C}
+  g12-economics-8-1-q016: {hash: '5744d9d51a8d6f6b20d2a73c0832d85a85ba42c3356203a615de97bafe0218cb', answer: D}
+  g12-economics-8-1-q017: {hash: '8c3cf85e5ed147bc6af4bf284d59e5117fd963b88e92ccad782268acffb37a90', answer: A}
+  g12-economics-8-1-q018: {hash: '89cf0916f9c663418836df94d0a0ea7c65bd383bd8397930cd94ee043a477495', answer: B}
+  g12-economics-8-1-q019: {hash: '859717f77f92c5343564f07f18333568001380053fe73f11e4c2f3ff9705d212', answer: C}
+  g12-economics-8-1-q020: {hash: 'af08c789f77fb46f14b9e5a003497ce7fd1d66999315d55010ec8741142b0821', answer: D, note: 'Sheet-level: keys for q001-q020 follow a strict repeating B,A,C,D,A,B,C,D,... cycle (A,B,C,D from q005 on); students could learn the pattern. Shuffle option order.'}
+  g12-economics-8-1-q021: {hash: '46b08b599d167e3e142100106c8eb6bd66c51b7fc12c936d2b5bd754269df5f3', answer: 15000}
+  g12-economics-8-1-q022: {hash: 'f42de0fb4870010af6ac5ed993bdbf71e9feb1f281d594afa7a60f21fa4db36b', answer: 10000}
+  g12-economics-8-1-q023: {hash: 'f40be98dbec9841af73fdc0fb7864f8e66777d6e43a2667597dd6fa54c94cc9c', answer: false}
+  g12-economics-8-1-q024: {hash: 'bdcef390506ec6977d5d6c3ec8ea84bd236131ccf90040fe6fc4abf47023233c', answer: true}
+  g12-economics-8-1-q025: {hash: 'bb3beefd9353d06271a5bb5928863bcd823077bd681b166681dfb7e84c2fed89', answer: false}
+  g12-economics-8-1-q026: {hash: 'acb195c5ef6cd0820759d8f5a855c0e516e73c3a0d95d836b839df222db48958', answer: 'mitigation'}
+  g12-economics-8-1-q027: {hash: '9779ff51e63027ea6aa9b2b506a19f8c19a185b8a04d22cbd2f32724c3f90155', answer: 'sustainable'}
+  g12-economics-8-1-q028: {hash: 'a6887dadfe0a6df7be20a55f8b7a93de78c32374091d503ea6ebceb69b3cf616', answer: [A, B, C]}
+  g12-economics-8-1-q029: {hash: '15a60a04d33e946fdae694a9d7a5f1e22f99a598dab4bbb1d95782c3ccfcdd34', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-economics-8-1-q030: {hash: 'baa7f7a599e774016296d98b245c7a589703c53763886ea310fff4999c3a8547', answer: [B, C, A]}

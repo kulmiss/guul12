@@ -1,0 +1,155 @@
+name: Backend
+
+on:
+  pull_request:
+    paths: ['backend/**', 'content/**', '.github/workflows/backend.yml']
+  push:
+    branches: [main, develop]
+    paths: ['backend/**', 'content/**', '.github/workflows/backend.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: backend-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 8.2 = minimum for shared hosting, 8.3 = recommended.
+        php: ['8.2', '8.3']
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, pdo_sqlite, sqlite3, intl, bcmath
+          coverage: none
+          tools: composer:v2
+
+      - name: Nova credentials (only when the secrets exist)
+        id: nova
+        env:
+          NOVA_USERNAME: ${{ secrets.NOVA_USERNAME }}
+          NOVA_LICENSE_KEY: ${{ secrets.NOVA_LICENSE_KEY }}
+        run: |
+          if [ -n "$NOVA_USERNAME" ] && [ -n "$NOVA_LICENSE_KEY" ]; then
+            composer config --global http-basic.nova.laravel.com "$NOVA_USERNAME" "$NOVA_LICENSE_KEY"
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "Nova credentials configured."
+          else
+            echo "No Nova secrets: running without Nova."
+          fi
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache/files
+          key: composer-${{ matrix.php }}-${{ hashFiles('backend/composer.lock') }}
+
+      - name: Install
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Validate composer files
+        run: composer validate --strict --no-check-publish
+
+      # The licensed package is never committed: CI adds it only when the owner's secrets exist.
+      - name: Install Nova (only when the secrets exist)
+        if: steps.nova.outputs.enabled == 'true'
+        run: |
+          composer config repositories.nova composer https://nova.laravel.com
+          composer require "laravel/nova:^5.7" --no-interaction --no-progress --prefer-dist
+          php artisan vendor:publish --tag=nova-assets --force
+
+      - name: Security audit
+        run: composer audit
+
+      - name: Prepare app
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Pint (code style)
+        run: vendor/bin/pint --test
+
+      - name: Larastan (level 8)
+        run: vendor/bin/phpstan analyse --memory-limit=1G --no-progress
+
+      - name: Tests
+        run: php artisan test
+
+      - name: Nova admin tests (only when Nova is installed)
+        if: steps.nova.outputs.enabled == 'true'
+        run: php artisan test --testsuite=Nova
+
+      - name: Content files pass the automatic checks
+        run: php artisan content:check ../content
+
+      - name: Migrations, seed and content import on a fresh database
+        run: |
+          touch database/database.sqlite
+          php artisan migrate --force
+          php artisan db:seed --force
+          php artisan content:import ../content
+          php artisan migrate:rollback --force
+
+  mysql:
+    # The owner's PC (Laragon) and most hosts use MySQL; SQLite alone missed two migration bugs.
+    name: MySQL 8
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: guul12
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -proot"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    env:
+      DB_CONNECTION: mysql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_DATABASE: guul12
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, pdo_mysql, intl, bcmath
+          coverage: none
+          tools: composer:v2
+
+      - name: Install
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Prepare app
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Tests on MySQL
+        run: php artisan test
+
+      - name: Migrations, seed, content import and full rollback on MySQL
+        run: |
+          php artisan migrate:fresh --force
+          php artisan db:seed --force
+          php artisan content:import ../content
+          php artisan migrate:reset --force
+

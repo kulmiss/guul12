@@ -1,0 +1,432 @@
+# Grade 12 curriculum (new curriculum, MoE 2023).
+# Unit titles follow the official textbooks. Chapters are Guul 12's own topic split of each unit.
+# English and Aptitude are organised by exam skill. Mathematics units are for both streams.
+# Add `file: <subject>/u<unit>-c<chapter>.yaml` to a chapter when its content is written.
+grade: 12
+subjects:
+- code: mathematics
+  textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-Mathematics-STB-2023-web.pdf
+  units:
+  - number: 1
+    title: Sequence and Series
+    chapters:
+    - number: 1
+      title: 'Sequences: arithmetic and geometric'
+      file: mathematics/u1-c1.yaml
+    - number: 2
+      title: Sigma notation and partial sums
+      file: mathematics/u1-c2.yaml
+    - number: 3
+      title: Infinite series and applications
+      file: mathematics/u1-c3.yaml
+  - number: 2
+    title: Introduction to Calculus
+    chapters:
+    - number: 1
+      title: Limits
+      file: mathematics/u2-c1.yaml
+    - number: 2
+      title: Derivatives and rules of differentiation
+      file: mathematics/u2-c2.yaml
+    - number: 3
+      title: Applications of derivatives
+      file: mathematics/u2-c3.yaml
+    - number: 4
+      title: Integration and area under a curve
+      file: mathematics/u2-c4.yaml
+  - number: 3
+    title: Statistics
+    chapters:
+    - number: 1
+      title: Sampling and presenting data
+      file: mathematics/u3-c1.yaml
+    - number: 2
+      title: Measures of location and dispersion
+      file: mathematics/u3-c2.yaml
+  - number: 4
+    title: Introduction to Linear Programming
+    chapters:
+    - number: 1
+      title: Linear inequalities and their graphs
+      file: mathematics/u4-c1.yaml
+    - number: 2
+      title: Solving linear programming problems
+      file: mathematics/u4-c2.yaml
+  - number: 5
+    title: Mathematical Application in Business
+    chapters:
+    - number: 1
+      title: Percent, interest and the time value of money
+      file: mathematics/u5-c1.yaml
+    - number: 2
+      title: Saving, borrowing, investment and taxation
+      file: mathematics/u5-c2.yaml
+- code: physics
+  textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-Physics-STB-2023-web.pdf
+  units:
+  - number: 1
+    title: Application of Physics in Other Fields
+    chapters:
+    - number: 1
+      title: Physics and the other sciences
+      file: physics/u1-c1.yaml
+    - number: 2
+      title: Physics in technology and medicine
+      file: physics/u1-c2.yaml
+  - number: 2
+    title: Two-Dimensional Motion
+    chapters:
+    - number: 1
+      title: Projectile motion
+      file: physics/u2-c1.yaml
+    - number: 2
+      title: Circular and rotational motion
+      file: physics/u2-c2.yaml
+    - number: 3
+      title: Gravitation and planetary motion
+      file: physics/u2-c3.yaml
+  - number: 3
+    title: Fluid Mechanics
+    chapters:
+    - number: 1
+      title: 'Fluid statics: pressure, Pascal and Archimedes'
+      file: physics/u3-c1.yaml
+    - number: 2
+      title: 'Fluid flow: continuity and Bernoulli'
+      file: physics/u3-c2.yaml
+  - number: 4
+    title: Electromagnetism
+    chapters:
+    - number: 1
+      title: Magnets, magnetic fields and magnetic forces
+      file: physics/u4-c1.yaml
+    - number: 2
+      title: Electromagnetic induction and transformers
+      file: physics/u4-c2.yaml
+  - number: 5
+    title: Basics of Electronics
+    chapters:
+    - number: 1
+      title: Semiconductors, diodes and rectification
+      file: physics/u5-c1.yaml
+    - number: 2
+      title: Transistors, integrated circuits and logic gates
+      file: physics/u5-c2.yaml
+- code: chemistry
+  units:
+  - number: 1
+    title: Acid-Base Equilibrium
+    chapters:
+    - number: 1
+      title: Acid-base theories
+      file: chemistry/u1-c1.yaml
+    - number: 2
+      title: Ionic equilibria of weak acids and bases, pH
+      file: chemistry/u1-c2.yaml
+    - number: 3
+      title: Buffers, salt hydrolysis, indicators and titration
+      file: chemistry/u1-c3.yaml
+  - number: 2
+    title: Electrochemistry
+    chapters:
+    - number: 1
+      title: Redox reactions and electrochemical cells
+      file: chemistry/u2-c1.yaml
+    - number: 2
+      title: Electrolysis and Faraday's laws
+      file: chemistry/u2-c2.yaml
+  - number: 3
+    title: Industrial Chemistry
+    chapters:
+    - number: 1
+      title: Industrial production of chemicals
+      file: chemistry/u3-c1.yaml
+    - number: 2
+      title: Manufacturing industries in Ethiopia
+      file: chemistry/u3-c2.yaml
+  - number: 4
+    title: Polymers
+    chapters:
+    - number: 1
+      title: Polymers and polymerization
+      file: chemistry/u4-c1.yaml
+  - number: 5
+    title: Introduction to Environmental Chemistry
+    chapters:
+    - number: 1
+      title: Environment, pollution and green chemistry
+      file: chemistry/u5-c1.yaml
+- code: biology
+  units:
+  - number: 1
+    title: Application of Biology
+    chapters:
+    - number: 1
+      title: Biology in everyday life and society
+      file: biology/u1-c1.yaml
+  - number: 2
+    title: Microorganisms
+    chapters:
+    - number: 1
+      title: Bacteria, viruses and fungi
+      file: biology/u2-c1.yaml
+    - number: 2
+      title: Microorganisms, health and industry
+      file: biology/u2-c2.yaml
+  - number: 3
+    title: Energy Transformation
+    chapters:
+    - number: 1
+      title: Photosynthesis
+      file: biology/u3-c1.yaml
+    - number: 2
+      title: Cellular respiration and energy flow
+      file: biology/u3-c2.yaml
+  - number: 4
+    title: Evolution
+    chapters:
+    - number: 1
+      title: Theories and evidence of evolution
+      file: biology/u4-c1.yaml
+    - number: 2
+      title: Mechanisms of evolution and classification
+      file: biology/u4-c2.yaml
+  - number: 5
+    title: Human Body Systems
+    chapters:
+    - number: 1
+      title: Nervous system and sense organs
+      file: biology/u5-c1.yaml
+    - number: 2
+      title: Endocrine system and homeostasis
+      file: biology/u5-c2.yaml
+    - number: 3
+      title: Circulation, respiration and excretion
+      file: biology/u5-c3.yaml
+  - number: 6
+    title: Climate Change
+    chapters:
+    - number: 1
+      title: 'Climate change: causes, effects and responses'
+      file: biology/u6-c1.yaml
+- code: english
+  textbook_url: https://elearn.moe.gov.et/storage/2023%20Text%20books/Grade%2012/G12-English-STB-2023-web.pdf
+  units:
+  - number: 1
+    title: Grammar
+    chapters:
+    - number: 1
+      title: Tenses and verb forms
+      file: english/u1-c1.yaml
+    - number: 2
+      title: Conditionals and modal verbs
+      file: english/u1-c2.yaml
+    - number: 3
+      title: Passive voice and reported speech
+      file: english/u1-c3.yaml
+    - number: 4
+      title: Clauses, articles, prepositions and linking words
+      file: english/u1-c4.yaml
+  - number: 2
+    title: Vocabulary
+    chapters:
+    - number: 1
+      title: Word meaning in context
+      file: english/u2-c1.yaml
+    - number: 2
+      title: Word formation, idioms and phrasal verbs
+      file: english/u2-c2.yaml
+  - number: 3
+    title: Reading
+    chapters:
+    - number: 1
+      title: Reading comprehension
+      file: english/u3-c1.yaml
+  - number: 4
+    title: Writing Skills
+    chapters:
+    - number: 1
+      title: Punctuation, spelling and paragraph order
+      file: english/u4-c1.yaml
+- code: aptitude
+  units:
+  - number: 1
+    title: Verbal Reasoning
+    chapters:
+    - number: 1
+      title: Analogies and word relationships
+      file: aptitude/u1-c1.yaml
+    - number: 2
+      title: Sentence completion and verbal logic
+      file: aptitude/u1-c2.yaml
+  - number: 2
+    title: Quantitative Reasoning
+    chapters:
+    - number: 1
+      title: Number series and arithmetic reasoning
+      file: aptitude/u2-c1.yaml
+    - number: 2
+      title: Word problems and data interpretation
+      file: aptitude/u2-c2.yaml
+  - number: 3
+    title: Logical Reasoning
+    chapters:
+    - number: 1
+      title: Patterns, codes, directions and arrangements
+      file: aptitude/u3-c1.yaml
+- code: geography
+  units:
+  - number: 1
+    title: Major Geological Processes Associated with Plate Tectonics
+    chapters:
+    - number: 1
+      title: Major Geological Processes Associated with Plate Tectonics
+      file: geography/u1-c1.yaml
+  - number: 2
+    title: Climate Change
+    chapters:
+    - number: 1
+      title: Climate Change
+      file: geography/u2-c1.yaml
+  - number: 3
+    title: Management of Conflict Over Resources
+    chapters:
+    - number: 1
+      title: Management of Conflict Over Resources
+      file: geography/u3-c1.yaml
+  - number: 4
+    title: Population Policies, Programs and the Environment
+    chapters:
+    - number: 1
+      title: Population Policies, Programs and the Environment
+      file: geography/u4-c1.yaml
+  - number: 5
+    title: Challenges of Economic Development
+    chapters:
+    - number: 1
+      title: Challenges of Economic Development
+      file: geography/u5-c1.yaml
+  - number: 6
+    title: Solutions to Environmental and Sustainability Problems
+    chapters:
+    - number: 1
+      title: Solutions to Environmental and Sustainability Problems
+      file: geography/u6-c1.yaml
+  - number: 7
+    title: Contemporary Global Geographic Issues and Public Concerns
+    chapters:
+    - number: 1
+      title: Contemporary Global Geographic Issues and Public Concerns
+      file: geography/u7-c1.yaml
+  - number: 8
+    title: Geographical Enquiry and Map Making
+    chapters:
+    - number: 1
+      title: Geographical Enquiry and Map Making
+      file: geography/u8-c1.yaml
+- code: history
+  units:
+  - number: 1
+    title: Development of Capitalism and Nationalism, 1815–1914
+    chapters:
+    - number: 1
+      title: Development of Capitalism and Nationalism, 1815–1914
+      file: history/u1-c1.yaml
+  - number: 2
+    title: Africa and the Colonial Experience, 1880s–1960s
+    chapters:
+    - number: 1
+      title: Africa and the Colonial Experience, 1880s–1960s
+      file: history/u2-c1.yaml
+  - number: 3
+    title: Social, Economic and Political Developments in Ethiopia, Mid-19th Century to 1941
+    chapters:
+    - number: 1
+      title: Social, Economic and Political Developments in Ethiopia, Mid-19th Century to 1941
+      file: history/u3-c1.yaml
+  - number: 4
+    title: Society and Politics in the Age of World Wars, 1914–1945
+    chapters:
+    - number: 1
+      title: Society and Politics in the Age of World Wars, 1914–1945
+      file: history/u4-c1.yaml
+  - number: 5
+    title: Global and Regional Developments Since 1945
+    chapters:
+    - number: 1
+      title: Global and Regional Developments Since 1945
+      file: history/u5-c1.yaml
+  - number: 6
+    title: 'Ethiopia: Internal Developments and External Influences, 1941–1991'
+    chapters:
+    - number: 1
+      title: 'Ethiopia: Internal Developments and External Influences, 1941–1991'
+      file: history/u6-c1.yaml
+  - number: 7
+    title: Africa Since the 1960s
+    chapters:
+    - number: 1
+      title: Africa Since the 1960s
+      file: history/u7-c1.yaml
+  - number: 8
+    title: Post-1991 Developments in Ethiopia
+    chapters:
+    - number: 1
+      title: Post-1991 Developments in Ethiopia
+      file: history/u8-c1.yaml
+  - number: 9
+    title: Indigenous Knowledge Systems and Heritages of Ethiopia
+    chapters:
+    - number: 1
+      title: Indigenous Knowledge Systems and Heritages of Ethiopia
+      file: history/u9-c1.yaml
+- code: economics
+  units:
+  - number: 1
+    title: The Fundamental Concepts of Macroeconomics
+    chapters:
+    - number: 1
+      title: The Fundamental Concepts of Macroeconomics
+      file: economics/u1-c1.yaml
+  - number: 2
+    title: Aggregate Demand and Aggregate Supply Analysis
+    chapters:
+    - number: 1
+      title: Aggregate Demand and Aggregate Supply Analysis
+      file: economics/u2-c1.yaml
+  - number: 3
+    title: Market Failure and Consumer Protection
+    chapters:
+    - number: 1
+      title: Market Failure and Consumer Protection
+      file: economics/u3-c1.yaml
+  - number: 4
+    title: Macroeconomic Policy Instruments
+    chapters:
+    - number: 1
+      title: Macroeconomic Policy Instruments
+      file: economics/u4-c1.yaml
+  - number: 5
+    title: Tax Theory and Practice
+    chapters:
+    - number: 1
+      title: Tax Theory and Practice
+      file: economics/u5-c1.yaml
+  - number: 6
+    title: Poverty and Inequality
+    chapters:
+    - number: 1
+      title: Poverty and Inequality
+      file: economics/u6-c1.yaml
+  - number: 7
+    title: Macroeconomic Reforms in Ethiopia
+    chapters:
+    - number: 1
+      title: Macroeconomic Reforms in Ethiopia
+      file: economics/u7-c1.yaml
+  - number: 8
+    title: Economy, Environment and Climate Change
+    chapters:
+    - number: 1
+      title: Economy, Environment and Climate Change
+      file: economics/u8-c1.yaml

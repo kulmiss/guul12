@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-chemistry-3-2-q001: {hash: '88556663c9593a520325db4ca88e1ba24e5573f1f4d7e6edff49a72e95bb6214', answer: B}
+  g12-chemistry-3-2-q002: {hash: '10eead61bb7d412f3f3dd3c1da3be6e15e51d5d0d8c25560ba05ee25d9e1be9c', answer: A}
+  g12-chemistry-3-2-q003: {hash: '117eb5495b9b48e2734b3169d3e1013189e6bc8f3a624e79d53d428bf6d17d22', answer: C}
+  g12-chemistry-3-2-q004: {hash: '6fc7c1f18a3560f19e5f27455a24468925f3f426f117409b49e14b649f2256c5', answer: 28}
+  g12-chemistry-3-2-q005: {hash: '4513c23994ea8ee09ddf6449ea64c9e56b2cffb1db2096a101e39de73e95c57f', answer: D}
+  g12-chemistry-3-2-q006: {hash: 'de6d75ff92631fdfa02d8deab35da3eecadc1b7548d876e283dc21fbc2e47ba9', answer: A}
+  g12-chemistry-3-2-q007: {hash: 'dc72068d65bdc877726fc75129606bef5bf36f349a003bdfc53ab707561ed7d7', answer: C}
+  g12-chemistry-3-2-q008: {hash: '3492491ae370e2cd72d3b8b773d1c47593f41b444f9ae8415e739db95ae7df87', answer: true, note: 'Minor wording issue: firing makes clay hard and stops it softening in water, but unglazed earthenware stays porous and absorbs water; "water-resistant" could be read as waterproof. Consider "hard and no longer softens in water".'}
+  g12-chemistry-3-2-q009: {hash: '57fccee781aae8ecf326bd3d8ce35b4b12eadfe1e7552b71894bdf194643cb21', answer: B}
+  g12-chemistry-3-2-q010: {hash: '42f86d23ceb25e7ed89b491f57763ce5d9876f1fc98697cecf960c0d38fc0f38', answer: D}
+  g12-chemistry-3-2-q011: {hash: '88e00ae8ead64279841e976ea1b8057cbcec37e0d8c90bd51e9766df48a9a4d6', answer: [B, D, A, C]}
+  g12-chemistry-3-2-q012: {hash: '32886fc9f754e28fa9e3deca52d3aaee6a77a57d2f0eba3c7c68b8ddbbdac612', answer: A}
+  g12-chemistry-3-2-q013: {hash: '5421ffeb17d280af670cbf5eb6e196ce79fe205c0dbb4a9ea7605242982d16e0', answer: 46}
+  g12-chemistry-3-2-q014: {hash: 'b02d73af68d525cfb090936b6d8682bfd1f9bc94d46a65faf85e3a8682cf8e7c', answer: C}
+  g12-chemistry-3-2-q015: {hash: '09bfe5f604eb06945bd416e094ecb0d97d04ae185e1347760a7faa76884057c4', answer: B}
+  g12-chemistry-3-2-q016: {hash: '9c6bb95e23cc69a648c835be05851cff4212991fdda51d66a7f0277cc5927bf0', answer: D}
+  g12-chemistry-3-2-q017: {hash: '626ebad01743dbffa659a5a9dc50d7a9f5ee7576b34b60f32c7b143fc2bb86cd', answer: [A, B]}
+  g12-chemistry-3-2-q018: {hash: '8f73a10de44b0d0cceed3487a953c0ffaa263bc99713df6a2ad001e8755741c5', answer: A}
+  g12-chemistry-3-2-q019: {hash: 'd6d0a574754e63016b07e99f8079d3bd5797a64848d861c36d5f89984a467a64', answer: true}
+  g12-chemistry-3-2-q020: {hash: '459da7b119c91832a1d18f99519f030cb735e37ee2aceb9f2f7fe6fd2dd8fa6d', answer: C}
+  g12-chemistry-3-2-q021: {hash: 'd2c90bc04b9d72ae90bfd1dc3bde6fac8ad00fdc5d41e185b9b431b374053fd4', answer: B}
+  g12-chemistry-3-2-q022: {hash: '726475d53b133fe156de177e3e8889f73e37ce11f5534c2f305572ff395d764b', answer: 'saponification'}
+  g12-chemistry-3-2-q023: {hash: 'cf7bbc5d1ece504c4ccc273eb0723b7ad4860945af2bcd102ac1ac12252dc76e', answer: 'clinker'}
+  g12-chemistry-3-2-q024: {hash: 'c7e180097add9645046facc5632b1d05e0c400d0d3ff21b8b3fdf741c50cce7e', answer: true}
+  g12-chemistry-3-2-q025: {hash: '9ffd39ffe8eefcc158c2b008c8707b8b15f3bfe2b5712fb3c9c8dd4e348f08c7', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-chemistry-3-2-q026: {hash: 'a8bf07320cc0bc3d74276c03e13e7091a145173a7a1f6d4262fe04cb5f9db037', answer: D}
+  g12-chemistry-3-2-q027: {hash: 'eda3915e487b325360187b3425524b2501009e71abda97d833e367ad8ef73482', answer: A}
+  g12-chemistry-3-2-q028: {hash: '290e08c1cb35164b625f4a0fc6f131ff0b45374fd19b88132e8c929d2002e39b', answer: C}
+  g12-chemistry-3-2-q029: {hash: '5f849cf50a32301faa2b063f04958a09e990e883c47a3fa774d0e4845d40d64b', answer: B}
+  g12-chemistry-3-2-q030: {hash: '09d4225eb24767e551c92fbd540718f206ed0e0b0efcecb5ba5bf0f9d429f800', answer: A}

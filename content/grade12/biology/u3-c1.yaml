@@ -1,0 +1,376 @@
+summary:
+  key_points:
+    - 'Photosynthesis turns light energy into chemical energy stored in glucose: $6\text{CO}_2 + 6\text{H}_2\text{O} \xrightarrow{\text{light, chlorophyll}} \text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2$.'
+    - 'It takes place in chloroplasts. The light-dependent reactions happen on the thylakoid membranes (stacked into grana); the light-independent reactions (Calvin cycle) happen in the fluid stroma.'
+    - 'Chlorophyll absorbs mainly red and blue light and reflects green light, which is why leaves look green.'
+    - 'Light-dependent reactions: light excites electrons in chlorophyll; water is split (photolysis), releasing oxygen, protons and electrons; ATP and NADPH are made.'
+    - 'Calvin cycle: the enzyme RuBisCO fixes $\text{CO}_2$ onto ribulose bisphosphate (RuBP, 5 carbons), giving two 3-carbon molecules. ATP and NADPH from the light reactions turn these into sugar (G3P), and RuBP is regenerated.'
+    - 'The oxygen released comes from water, not from carbon dioxide (shown with isotope-labelled water).'
+    - 'Limiting factors: the rate is held back by whichever of light intensity, $\text{CO}_2$ concentration or temperature is in shortest supply. Very high temperatures denature the enzymes.'
+    - 'C4 plants (maize, sugarcane, sorghum) and CAM plants (cacti, pineapple) have extra ways of capturing $\text{CO}_2$ that help in hot, dry conditions. Leaves store extra glucose as starch, which turns iodine blue-black.'
+  formulas:
+    - label: Photosynthesis
+      latex: '6\text{CO}_2 + 6\text{H}_2\text{O} \rightarrow \text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2'
+    - label: Photolysis of water
+      latex: '2\text{H}_2\text{O} \rightarrow 4\text{H}^+ + 4e^- + \text{O}_2'
+
+solved_exercises:
+  - uid: g12-biology-3-1-se01
+    problem: 'How many molecules of $\text{CO}_2$ and of $\text{O}_2$ are involved in making 2 molecules of glucose?'
+    steps:
+      - 'Each glucose needs 6 $\text{CO}_2$ and releases 6 $\text{O}_2$.'
+      - 'For 2 glucose: 12 $\text{CO}_2$ used and 12 $\text{O}_2$ released.'
+    answer: '12 $\text{CO}_2$ used; 12 $\text{O}_2$ released'
+  - uid: g12-biology-3-1-se02
+    problem: 'On a bright, cool morning, raising the light intensity does not increase the rate of photosynthesis. Suggest why.'
+    steps:
+      - 'Light is no longer the limiting factor.'
+      - 'Another factor, most likely the low temperature or the $\text{CO}_2$ concentration, is now limiting the rate.'
+    answer: 'Temperature or $\text{CO}_2$ has become limiting.'
+  - uid: g12-biology-3-1-se03
+    problem: 'Describe how to test a leaf for starch.'
+    steps:
+      - 'Boil the leaf in water to kill it, then in ethanol (heated in a water bath, away from flames) to remove the chlorophyll; rinse in water to soften it.'
+      - 'Add iodine solution: blue-black shows starch; orange-brown means no starch.'
+    answer: 'Blue-black colour with iodine means starch is present.'
+
+flashcards:
+  - {uid: g12-biology-3-1-fc01, term: Chloroplast, definition: 'Organelle where photosynthesis takes place.'}
+  - {uid: g12-biology-3-1-fc02, term: Thylakoid, definition: 'Membrane disc in a chloroplast; site of the light-dependent reactions.'}
+  - {uid: g12-biology-3-1-fc03, term: Stroma, definition: 'Fluid in a chloroplast; site of the Calvin cycle.'}
+  - {uid: g12-biology-3-1-fc04, term: Photolysis, definition: 'Splitting of water by light energy, releasing oxygen.'}
+  - {uid: g12-biology-3-1-fc05, term: Calvin cycle, definition: 'Light-independent reactions that fix $\text{CO}_2$ into sugar.'}
+  - {uid: g12-biology-3-1-fc06, term: RuBisCO, definition: 'Enzyme that fixes $\text{CO}_2$ onto RuBP.'}
+  - {uid: g12-biology-3-1-fc07, term: Limiting factor, definition: 'The factor in shortest supply that controls the rate.'}
+  - {uid: g12-biology-3-1-fc08, term: C4 plant, definition: 'Plant like maize with an extra $\text{CO}_2$-capturing step for hot conditions.'}
+  - {uid: g12-biology-3-1-fc09, term: Iodine test, definition: 'Turns blue-black when starch is present.'}
+
+questions:
+  - uid: g12-biology-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What are the raw materials of photosynthesis?'
+    options:
+      A: 'Glucose and oxygen'
+      B: 'Carbon dioxide and water'
+      C: 'Oxygen and water'
+      D: 'Glucose and carbon dioxide'
+    answer: B
+    explanation: '$6\text{CO}_2 + 6\text{H}_2\text{O} \rightarrow \text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2$.'
+
+  - uid: g12-biology-3-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'In which organelle does photosynthesis take place?'
+    options:
+      A: 'Chloroplast'
+      B: 'Mitochondrion'
+      C: 'Nucleus'
+      D: 'Ribosome'
+    answer: A
+    explanation: 'Chloroplasts contain chlorophyll and all the enzymes for photosynthesis.'
+
+  - uid: g12-biology-3-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Where do the light-dependent reactions take place?'
+    options:
+      A: 'In the stroma'
+      B: 'In the cytoplasm'
+      C: 'On the thylakoid membranes'
+      D: 'In the cell wall'
+    answer: C
+    explanation: 'The pigments and electron carriers are in the thylakoid membranes; the Calvin cycle is in the stroma.'
+
+  - uid: g12-biology-3-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Where does the Calvin cycle take place?'
+    options:
+      A: 'On the thylakoid membranes'
+      B: 'In the mitochondria'
+      C: 'In the nucleus'
+      D: 'In the stroma of the chloroplast'
+    answer: D
+    explanation: 'The enzymes of carbon fixation, including RuBisCO, are dissolved in the stroma.'
+
+  - uid: g12-biology-3-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'The oxygen released in photosynthesis comes from:'
+    options:
+      A: 'Carbon dioxide'
+      B: 'Water'
+      C: 'Glucose'
+      D: 'Chlorophyll'
+    answer: B
+    explanation: 'Experiments with water containing heavy oxygen ($^{18}\text{O}$) showed the released $\text{O}_2$ comes from water.'
+
+  - uid: g12-biology-3-1-q006
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are products of the light-dependent reactions? Choose all that apply.'
+    options:
+      A: 'ATP'
+      B: 'NADPH'
+      C: 'Oxygen'
+      D: 'Glucose'
+    answer: [A, B, C]
+    explanation: 'Glucose is made later, in the Calvin cycle, using the ATP and NADPH.'
+
+  - uid: g12-biology-3-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Why do most leaves look green?'
+    options:
+      A: 'Chlorophyll absorbs green light.'
+      B: 'Leaves contain green water.'
+      C: 'Chlorophyll reflects green light and absorbs mostly red and blue light.'
+      D: 'Leaves make green glucose.'
+    answer: C
+    explanation: 'The colour we see is the light that is reflected, not absorbed.'
+
+  - uid: g12-biology-3-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the enzyme RuBisCO do?'
+    options:
+      A: 'It splits water.'
+      B: 'It makes chlorophyll.'
+      C: 'It breaks down glucose.'
+      D: 'It fixes carbon dioxide onto RuBP.'
+    answer: D
+    explanation: 'RuBisCO catalyses the first step of the Calvin cycle; it is probably the most abundant protein on Earth.'
+
+  - uid: g12-biology-3-1-q009
+    type: numeric
+    difficulty: 1
+    stem: 'How many carbon atoms does one molecule of RuBP (ribulose bisphosphate) contain?'
+    answer: {value: 5, tolerance: 0}
+    explanation: 'RuBP is a 5-carbon sugar; adding $\text{CO}_2$ gives an unstable 6-carbon compound that splits into two 3-carbon molecules.'
+
+  - uid: g12-biology-3-1-q010
+    type: numeric
+    difficulty: 2
+    stem: 'How many molecules of oxygen are released when a plant makes 3 molecules of glucose?'
+    answer: {value: 18, tolerance: 0}
+    explanation: 'Each glucose releases 6 $\text{O}_2$: $3 \times 6 = 18$.'
+
+  - uid: g12-biology-3-1-q011
+    type: true_false
+    difficulty: 1
+    stem: 'The light-independent reactions of photosynthesis use ATP and NADPH from the light-dependent reactions.'
+    answer: true
+    explanation: 'ATP provides energy and NADPH provides hydrogen to reduce the 3-carbon compounds to sugar.'
+
+  - uid: g12-biology-3-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'A plant is in bright light but in air with very little carbon dioxide. Increasing the light further has no effect. What is the limiting factor?'
+    options:
+      A: 'Carbon dioxide concentration'
+      B: 'Light intensity'
+      C: 'Water'
+      D: 'Chlorophyll colour'
+    answer: A
+    explanation: 'Light is already in excess; the rate is held back by the shortage of $\text{CO}_2$.'
+
+  - uid: g12-biology-3-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does the rate of photosynthesis fall sharply at very high temperatures (above about 40 °C)?'
+    options:
+      A: 'There is too much light.'
+      B: 'The enzymes are denatured.'
+      C: 'Carbon dioxide disappears.'
+      D: 'Chlorophyll turns blue.'
+    answer: B
+    explanation: 'High temperatures change the shape of enzymes such as RuBisCO, so they stop working.'
+
+  - uid: g12-biology-3-1-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'What colour does iodine solution turn when starch is present?'
+    options:
+      A: 'Orange-brown'
+      B: 'Red'
+      C: 'Blue-black'
+      D: 'Green'
+    answer: C
+    explanation: 'Iodine solution is orange-brown; it turns blue-black with starch.'
+
+  - uid: g12-biology-3-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Before testing a leaf for starch, it is warmed in ethanol. Why?'
+    options:
+      A: 'To add starch'
+      B: 'To make the leaf grow'
+      C: 'To kill bacteria on the leaf'
+      D: 'To remove chlorophyll so the colour change can be seen'
+    answer: D
+    explanation: 'Ethanol dissolves the green pigment, leaving the leaf pale so the iodine colour shows clearly.'
+
+  - uid: g12-biology-3-1-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'A plant is kept in the dark for 48 hours and then one leaf is tested for starch. What result is expected, and why?'
+    options:
+      A: 'No starch, because stored starch was used up and none was made in the dark'
+      B: 'A lot of starch, because plants make more starch in the dark'
+      C: 'Starch only in the veins'
+      D: 'The leaf turns green with iodine'
+    answer: A
+    explanation: 'This "de-starching" is done before experiments so any starch found later was made during the experiment.'
+
+  - uid: g12-biology-3-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Maize and sugarcane are C4 plants. What advantage does this give them?'
+    options:
+      A: 'They need no light.'
+      B: 'They photosynthesise efficiently in hot, sunny conditions.'
+      C: 'They do not need carbon dioxide.'
+      D: 'They grow only in cold places.'
+    answer: B
+    explanation: 'C4 plants concentrate $\text{CO}_2$ around RuBisCO, so they lose less to wasteful reactions when it is hot.'
+
+  - uid: g12-biology-3-1-q018
+    type: true_false
+    difficulty: 2
+    stem: 'CAM plants such as cacti open their stomata mainly at night to reduce water loss.'
+    answer: true
+    explanation: 'They take in $\text{CO}_2$ at night, store it as an acid and use it for photosynthesis during the day with stomata closed.'
+
+  - uid: g12-biology-3-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which leaf cells contain the most chloroplasts?'
+    options:
+      A: 'Upper epidermis cells'
+      B: 'Xylem vessels'
+      C: 'Palisade mesophyll cells'
+      D: 'Phloem sieve tubes'
+    answer: C
+    explanation: 'Palisade cells lie just below the upper surface and are packed with chloroplasts to catch light.'
+
+  - uid: g12-biology-3-1-q020
+    type: single_choice
+    difficulty: 1
+    stem: 'Through which openings does carbon dioxide enter a leaf?'
+    options:
+      A: 'Root hairs'
+      B: 'Veins'
+      C: 'Chloroplasts'
+      D: 'Stomata'
+    answer: D
+    explanation: 'Stomata, controlled by guard cells, let $\text{CO}_2$ in and $\text{O}_2$ and water vapour out.'
+
+  - uid: g12-biology-3-1-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The green pigment that absorbs light energy for photosynthesis is called ________.'
+    answer: [chlorophyll]
+    explanation: 'Chlorophyll a and b are found in the thylakoid membranes.'
+
+  - uid: g12-biology-3-1-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The splitting of water molecules using light energy in the chloroplast is called ________.'
+    answer: [photolysis]
+    explanation: 'Photolysis provides electrons and protons and releases oxygen.'
+
+  - uid: g12-biology-3-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Plants carry out photosynthesis both day and night at the same rate.'
+    answer: false
+    explanation: 'Photosynthesis needs light, so it stops in the dark. Respiration continues day and night.'
+
+  - uid: g12-biology-3-1-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each part of the chloroplast with what happens there.'
+    left:
+      L1: 'Thylakoid membrane'
+      L2: 'Stroma'
+      L3: 'Starch grain'
+    right:
+      R1: 'Calvin cycle fixes carbon dioxide'
+      R2: 'Storage of extra carbohydrate'
+      R3: 'Light absorption and ATP production'
+      R4: 'Protein synthesis for export from the cell'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Protein for export is made on ribosomes of the rough endoplasmic reticulum, not in these parts.'
+
+  - uid: g12-biology-3-1-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put these steps of photosynthesis in order.'
+    items:
+      A: 'ATP and NADPH are used to turn 3-carbon compounds into sugar.'
+      B: 'Light energy is absorbed by chlorophyll.'
+      C: 'Water is split and ATP and NADPH are made.'
+      D: 'Carbon dioxide is fixed onto RuBP.'
+    answer: [B, C, D, A]
+    explanation: 'Light absorption drives water splitting and ATP/NADPH production; then $\text{CO}_2$ is fixed and reduced to sugar.'
+
+  - uid: g12-biology-3-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'In a greenhouse, a farmer burns a paraffin heater. This can increase crop growth because it:'
+    options:
+      A: 'Raises both temperature and carbon dioxide concentration'
+      B: 'Removes oxygen'
+      C: 'Adds water to the soil'
+      D: 'Blocks sunlight'
+    answer: A
+    explanation: 'Burning fuel releases heat and $\text{CO}_2$, two factors that can limit photosynthesis.'
+
+  - uid: g12-biology-3-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'The light reactions of a plant are suddenly stopped by darkness. What happens first to the amount of RuBP in the chloroplast?'
+    options:
+      A: 'It increases.'
+      B: 'It decreases, because ATP and NADPH run out so RuBP cannot be regenerated.'
+      C: 'It stays exactly the same.'
+      D: 'It turns into chlorophyll.'
+    answer: B
+    explanation: 'RuBP is still used to fix $\text{CO}_2$, but without ATP and NADPH it is not remade, so it falls.'
+
+  - uid: g12-biology-3-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'An aquatic plant gives off bubbles of gas in light. The bubbles are counted at different distances from a lamp. What do the bubbles mainly contain?'
+    options:
+      A: 'Carbon dioxide'
+      B: 'Nitrogen'
+      C: 'Oxygen'
+      D: 'Water vapour'
+    answer: C
+    explanation: 'Oxygen is released by photosynthesis; more bubbles mean a faster rate.'
+
+  - uid: g12-biology-3-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'In the same experiment, the lamp is moved closer to the plant. What is the most likely effect on the bubble rate?'
+    options:
+      A: 'It falls to zero.'
+      B: 'It stays the same.'
+      C: 'It becomes negative.'
+      D: 'It rises, until another factor becomes limiting.'
+    answer: D
+    explanation: 'Closer means brighter light, so the rate increases until $\text{CO}_2$ or temperature limits it.'
+
+  - uid: g12-biology-3-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Photosynthesis changes light energy into:'
+    options:
+      A: 'Chemical energy in glucose'
+      B: 'Sound energy'
+      C: 'Electrical energy in the soil'
+      D: 'Heat only'
+    answer: A
+    explanation: 'The energy of sunlight is stored in the bonds of glucose, which feeds almost all food chains.'

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-biology-3-1-q001: {hash: 'c45251d74ca253c9909061c9c182a740d7a31c283e81bb2f033303f80d95f18b', answer: B}
+  g12-biology-3-1-q002: {hash: '23827b04fdfb64205b63b3b2fdd628a3acb82acf8e65342f41b801b7057f01fc', answer: A}
+  g12-biology-3-1-q003: {hash: '89a71b3388ea7da83c56fa81f1a53c87fa14ee70f87fd23c0e921b19c62b0027', answer: C}
+  g12-biology-3-1-q004: {hash: '44097780ddccd4e1baa0a3a4549c4f389c430a8f80b7129365267986321ad68c', answer: D}
+  g12-biology-3-1-q005: {hash: 'de9cc1b1fb03d5c1004948cb7ca1deba16f2b4ec0111293dfaa8cfa901940c8c', answer: B}
+  g12-biology-3-1-q006: {hash: 'bb45e844ba82fc95ad32c0b632482fe26cbc639b189516a1444ba37ab4848dad', answer: [A, B, C]}
+  g12-biology-3-1-q007: {hash: '2b26a380805ebbc86ca413ae146dc339d1d77ccc787e4f012f91b2f2088d95dd', answer: C}
+  g12-biology-3-1-q008: {hash: '474bf5a25a922f13ff66334cc02de24c35bea0f388c1c3e15fefaa5c3ec72562', answer: D}
+  g12-biology-3-1-q009: {hash: '87bd0ef3d7584d19ee3e96728636e29b8f021a12f456da2c3cabe7923878481c', answer: 5}
+  g12-biology-3-1-q010: {hash: '2f462db86ac6b4bd4bf524add75734fa66039c9a79e889fc70c9ebc9df6f2d8a', answer: 18}
+  g12-biology-3-1-q011: {hash: '1021777a44d47ed1d8c9f5690fc039669f6228e043f208356ebed4862371cd60', answer: true}
+  g12-biology-3-1-q012: {hash: '2b689fd1df01a1b50eb2af74982c5f1bd633967d0635b915dd0193f377d5017a', answer: A}
+  g12-biology-3-1-q013: {hash: '56ed713ca6d5097041666048fce4a55a0e5cd98e539f7b57d9f4b849543cebde', answer: B}
+  g12-biology-3-1-q014: {hash: 'd348b8a3c52cb1ec7f9a9c4aeba4f0b05eedfa0acfbaaf3b6ef1566533ee3dd5', answer: C}
+  g12-biology-3-1-q015: {hash: 'faae5b7a11c2d9fd05ffffd24e45651c62a097e1f7ff6cfbc7e2685df38086c2', answer: D}
+  g12-biology-3-1-q016: {hash: '7a63afa6ec9b5521274cd0ac31eec5d19ad12f8d6899667718515d2ae40820a1', answer: A}
+  g12-biology-3-1-q017: {hash: '6cbc04492cd7a9e698b11daf85620c2ec0e685f2556e216c598381263f06a9dc', answer: B}
+  g12-biology-3-1-q018: {hash: '54f4f8979ebfde56c644e6f4d1def7f59a2dd069868cb8813819d56828e08429', answer: true}
+  g12-biology-3-1-q019: {hash: '88f29d71affea9f2bbfeb718d4e22051db4ce8df05cab5ae1f85e1df0c200ff1', answer: C}
+  g12-biology-3-1-q020: {hash: 'ea5b8a649a54ce8930c07e4d55c00c1759e90ae0309565c67c826435044f452b', answer: D}
+  g12-biology-3-1-q021: {hash: '8a0eb2a11f65906b75d64a47369b069b508113699ba42713cd2bfc7a6889258e', answer: 'chlorophyll'}
+  g12-biology-3-1-q022: {hash: '048cada70595333d8628c7e7b641974465cf62098631b886bf0a1480e10f0c8a', answer: 'photolysis'}
+  g12-biology-3-1-q023: {hash: '9dfa1594b863a64b3b4a6dfb79fcdaa42f4b08ca7c3430f1093a6639eeb072cf', answer: false}
+  g12-biology-3-1-q024: {hash: '2956b81a2e1251d5d4e0785b0b53b3f9942ab1dfacfd74a01e096e3277b23a1e', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-biology-3-1-q025: {hash: '29d155818969dd5f73dc6e1eb671bab7348a9a2e6ca038a3222dd4ba7a446286', answer: [B, C, D, A]}
+  g12-biology-3-1-q026: {hash: '143a43d32e25e3f3918fef8e94f386a20f3a569bcae55f21efd6d53d4ed1a472', answer: A}
+  g12-biology-3-1-q027: {hash: 'bc05ea2bdd85c15ed25789573d8ed4ee5a7ca27c7324bd7efd88ed4a6f637dc7', answer: B}
+  g12-biology-3-1-q028: {hash: '08cabee1edacec20d06f6018fd2e1d0fc1a44dcf297b3d575b9969e34f2f20ee', answer: C}
+  g12-biology-3-1-q029: {hash: 'a2fd8c168c0daff81972988c377ccc665a9e24aebaa8a75cccdecf6e5a7a5c32', answer: D}
+  g12-biology-3-1-q030: {hash: 'f5b2b5c3747762f6b2b49781334a0fa39d0b5166305bef07923db7b8cd49da37', answer: A}

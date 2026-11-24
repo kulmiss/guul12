@@ -1,0 +1,379 @@
+summary:
+  key_points:
+    - 'Many exam questions ask for the meaning of a word as it is used in a sentence. Read the whole sentence, and the ones around it, before choosing.'
+    - 'Context clues: a definition or explanation after a comma or dash; a synonym (similar word) nearby; an antonym or contrast signalled by but, however, unlike, although; an example signalled by such as, for instance, including; and the general sense of the passage.'
+    - 'Synonyms have similar meanings (big – large); antonyms have opposite meanings (ancient – modern).'
+    - 'Many words have several meanings. "Bank" can be the side of a river or a place for money; context decides which one is meant.'
+    - 'Test your choice: put it in place of the word and check that the sentence still makes sense.'
+    - 'Word parts help: prefixes (un-, dis-, mis-, re-, pre-) and suffixes (-ful, -less, -able, -ment) change meaning in regular ways.'
+    - 'Connotation: words with similar meanings can feel positive or negative (thrifty is positive, stingy is negative).'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-2-1-se01
+    problem: 'What does "arid" mean? "The arid lowlands receive less than 300 mm of rain a year, so only hardy plants survive."'
+    steps:
+      - 'The clue "less than 300 mm of rain" shows very little rain.'
+      - '"Arid" means very dry.'
+    answer: 'Very dry'
+  - uid: g12-english-2-1-se02
+    problem: 'Use the contrast clue: "Unlike her talkative brother, Hamdi is reticent." What does "reticent" mean?'
+    steps:
+      - '"Unlike" shows contrast with "talkative".'
+      - 'So "reticent" means quiet and not saying much.'
+    answer: 'Quiet; not saying much'
+  - uid: g12-english-2-1-se03
+    problem: 'Which meaning of "bank" is used? "We sat on the bank and watched the Awash River flow past."'
+    steps:
+      - 'The clue "watched the Awash River flow past" shows we are near water.'
+      - '"Bank" here means the land at the side of a river.'
+    answer: 'The side of a river'
+
+flashcards:
+  - {uid: g12-english-2-1-fc01, term: Context clue, definition: 'Information near a word that helps you find its meaning.'}
+  - {uid: g12-english-2-1-fc02, term: Synonym, definition: 'A word with a similar meaning.'}
+  - {uid: g12-english-2-1-fc03, term: Antonym, definition: 'A word with the opposite meaning.'}
+  - {uid: g12-english-2-1-fc04, term: Contrast clue, definition: 'Signalled by but, however, unlike, although.'}
+  - {uid: g12-english-2-1-fc05, term: Example clue, definition: 'Signalled by such as, for example, including.'}
+  - {uid: g12-english-2-1-fc06, term: Connotation, definition: 'The positive or negative feeling a word carries.'}
+  - {uid: g12-english-2-1-fc07, term: Substitution test, definition: 'Put your choice in place of the word and check that the sentence still makes sense.'}
+
+questions:
+  - uid: g12-english-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: '"The arid region gets very little rain, so farmers rely on wells." What does "arid" mean?'
+    options:
+      A: 'Wet'
+      B: 'Very dry'
+      C: 'Cold'
+      D: 'Crowded'
+    answer: B
+    explanation: 'The clue "very little rain" shows that arid means very dry.'
+
+  - uid: g12-english-2-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: '"Unlike his talkative sister, Yusuf is taciturn and rarely speaks in class." What does "taciturn" mean?'
+    options:
+      A: 'Saying very little'
+      B: 'Very loud'
+      C: 'Very clever'
+      D: 'Often late'
+    answer: A
+    explanation: '"Unlike his talkative sister" and "rarely speaks" show the opposite of talkative.'
+
+  - uid: g12-english-2-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: '"The medicine alleviated her pain; within an hour she felt much better." What does "alleviated" mean?'
+    options:
+      A: 'Increased'
+      B: 'Caused'
+      C: 'Reduced'
+      D: 'Hid'
+    answer: C
+    explanation: '"She felt much better" shows the pain became less.'
+
+  - uid: g12-english-2-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: '"The ancient obelisks of Aksum are among the oldest monuments in Africa." Which word is the closest ANTONYM of "ancient"?'
+    options:
+      A: 'old'
+      B: 'historic'
+      C: 'famous'
+      D: 'modern'
+    answer: D
+    explanation: 'Ancient means very old; modern means new or recent.'
+
+  - uid: g12-english-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: '"After the long drought, the rain was a welcome respite for the herders." What does "respite" mean?'
+    options:
+      A: 'A short rest or relief from something difficult'
+      B: 'A serious problem'
+      C: 'A heavy punishment'
+      D: 'A type of plant'
+    answer: A
+    explanation: 'The rain ended a hard period, giving relief.'
+
+  - uid: g12-english-2-1-q006
+    type: single_choice
+    difficulty: 1
+    stem: '"We sat on the bank of the river and fished." What does "bank" mean here?'
+    options:
+      A: 'A place to keep money'
+      B: 'A row of seats'
+      C: 'The land beside a river'
+      D: 'A large amount'
+    answer: C
+    explanation: 'The phrase "of the river" shows the meaning.'
+
+  - uid: g12-english-2-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: '"The scientist was meticulous; she checked every measurement three times." What does "meticulous" mean?'
+    options:
+      A: 'Careless'
+      B: 'Very careful about details'
+      C: 'Slow and lazy'
+      D: 'Easily angry'
+    answer: B
+    explanation: 'Checking every measurement three times shows great care.'
+
+  - uid: g12-english-2-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: '"The village is remote; the nearest road is a two-day walk away." What does "remote" mean?'
+    options:
+      A: 'Busy'
+      B: 'Modern'
+      C: 'Rich'
+      D: 'Far from other places'
+    answer: D
+    explanation: 'A two-day walk to the nearest road shows the village is far away.'
+
+  - uid: g12-english-2-1-q009
+    type: true_false
+    difficulty: 1
+    stem: '"Enormous" and "huge" are synonyms.'
+    answer: true
+    explanation: 'Both mean very big.'
+
+  - uid: g12-english-2-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: '"Many crops, such as teff, maize and sorghum, are staples in Ethiopia." What does "staples" mean here?'
+    options:
+      A: 'Main foods eaten regularly'
+      B: 'Small metal pins'
+      C: 'Rare luxuries'
+      D: 'Export taxes'
+    answer: A
+    explanation: 'The examples teff, maize and sorghum are basic everyday foods.'
+
+  - uid: g12-english-2-1-q011
+    type: single_choice
+    difficulty: 3
+    stem: '"Although the task seemed daunting at first, the students completed it easily." What does "daunting" mean?'
+    options:
+      A: 'Easy and boring'
+      B: 'Short'
+      C: 'Seeming difficult or frightening'
+      D: 'Finished'
+    answer: C
+    explanation: '"Although" contrasts it with "completed it easily", so it first seemed hard.'
+
+  - uid: g12-english-2-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: '"The rumour proved to be false; the minister had never said such a thing." What does "rumour" mean?'
+    options:
+      A: 'A government law'
+      B: 'An unproven story passed from person to person'
+      C: 'A newspaper photograph'
+      D: 'A true report'
+    answer: B
+    explanation: 'It "proved to be false", so it was an unchecked story.'
+
+  - uid: g12-english-2-1-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which words are synonyms of "brave"? Choose all that apply.'
+    options:
+      A: 'courageous'
+      B: 'bold'
+      C: 'fearless'
+      D: 'timid'
+    answer: [A, B, C]
+    explanation: '"Timid" means shy and easily frightened, the opposite of brave.'
+
+  - uid: g12-english-2-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: '"The bridge was so fragile that the engineers closed it to heavy lorries." What does "fragile" mean?'
+    options:
+      A: 'Strong'
+      B: 'New'
+      C: 'Wide'
+      D: 'Easily broken or damaged'
+    answer: D
+    explanation: 'Closing it to heavy lorries shows it could break easily.'
+
+  - uid: g12-english-2-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: '"He is not stingy; he is simply thrifty and saves for his children''s education." Which statement best explains the difference?'
+    options:
+      A: '"Thrifty" is positive (careful with money); "stingy" is negative (unwilling to spend or share).'
+      B: 'They mean exactly the same with the same feeling.'
+      C: '"Thrifty" means spending a lot.'
+      D: '"Stingy" is positive and "thrifty" is negative.'
+    answer: A
+    explanation: 'This is a difference in connotation.'
+
+  - uid: g12-english-2-1-q016
+    type: true_false
+    difficulty: 2
+    stem: 'In "The light from the lamp was dim, so we could hardly read.", "dim" means bright.'
+    answer: false
+    explanation: '"We could hardly read" shows the light was weak; dim means not bright.'
+
+  - uid: g12-english-2-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: '"The committee will postpone the meeting until next week because the chairperson is ill." What does "postpone" mean?'
+    options:
+      A: 'Cancel forever'
+      B: 'Move to a later time'
+      C: 'Start early'
+      D: 'Shorten'
+    answer: B
+    explanation: '"Until next week" shows it will happen later.'
+
+  - uid: g12-english-2-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: '"Water is scarce in the dry season, so families must walk far to fetch it." What does "scarce" mean?'
+    options:
+      A: 'Plentiful'
+      B: 'Dirty'
+      C: 'In short supply'
+      D: 'Expensive to drink'
+    answer: C
+    explanation: 'Walking far to fetch it shows there is not enough nearby.'
+
+  - uid: g12-english-2-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'Write one word that is the antonym (opposite) of "ancient". It starts with the letter m.'
+    answer: [modern]
+    explanation: 'Ancient = very old; modern = new.'
+
+  - uid: g12-english-2-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'A word with a similar meaning to another word is called a ________.'
+    answer: [synonym]
+    explanation: 'For example, "begin" is a synonym of "start".'
+
+  - uid: g12-english-2-1-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each word with its meaning.'
+    left:
+      L1: 'abundant'
+      L2: 'hostile'
+      L3: 'reluctant'
+    right:
+      R1: 'unfriendly'
+      R2: 'unwilling'
+      R3: 'more than enough'
+      R4: 'very quick'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: '"Very quick" would match "rapid", which is not in the list.'
+
+  - uid: g12-english-2-1-q022
+    type: single_choice
+    difficulty: 2
+    stem: '"The coach praised the team for their diligent training: they practised every morning for months." What does "diligent" mean?'
+    options:
+      A: 'Lazy'
+      B: 'Unlucky'
+      C: 'Short'
+      D: 'Hard-working and careful'
+    answer: D
+    explanation: 'Practising every morning for months shows steady effort.'
+
+  - uid: g12-english-2-1-q023
+    type: single_choice
+    difficulty: 3
+    stem: '"Her explanation was so lucid that even the youngest pupils understood the experiment." What does "lucid" mean?'
+    options:
+      A: 'Clear and easy to understand'
+      B: 'Very long'
+      C: 'Confusing'
+      D: 'Funny'
+    answer: A
+    explanation: '"Even the youngest pupils understood" shows it was clear.'
+
+  - uid: g12-english-2-1-q024
+    type: true_false
+    difficulty: 1
+    stem: 'The phrase "such as" usually introduces examples that can help explain a difficult word.'
+    answer: true
+    explanation: '"Fruits such as mango and papaya" gives examples of what is meant.'
+
+  - uid: g12-english-2-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: '"The bus was crowded, but the train was nearly empty." What kind of clue helps you understand "crowded"?'
+    options:
+      A: 'A definition clue'
+      B: 'An example clue'
+      C: 'A contrast clue'
+      D: 'No clue'
+    answer: C
+    explanation: '"But ... nearly empty" gives the opposite, so crowded means full of people.'
+
+  - uid: g12-english-2-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: '"The noise from the factory was incessant; it continued day and night without stopping." What does "incessant" mean?'
+    options:
+      A: 'Very quiet'
+      B: 'Never stopping'
+      C: 'Pleasant'
+      D: 'Happening once'
+    answer: B
+    explanation: 'The sentence itself explains it: "continued day and night without stopping".'
+
+  - uid: g12-english-2-1-q027
+    type: ordering
+    difficulty: 2
+    stem: 'Put these steps for working out a new word''s meaning in a sensible order.'
+    items:
+      A: 'Choose a meaning that fits.'
+      B: 'Read the whole sentence and the sentences around it.'
+      C: 'Put your meaning in place of the word to check it makes sense.'
+      D: 'Look for clues such as examples, definitions or contrasts.'
+    answer: [B, D, A, C]
+    explanation: 'Read → find clues → choose → check by substitution.'
+
+  - uid: g12-english-2-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: '"Ahmed was elated when he heard he had won the scholarship; he jumped and shouted with joy." What does "elated" mean?'
+    options:
+      A: 'Very sad'
+      B: 'Very tired'
+      C: 'Angry'
+      D: 'Extremely happy'
+    answer: D
+    explanation: '"Jumped and shouted with joy" shows great happiness.'
+
+  - uid: g12-english-2-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: '"The plant is dormant in winter but grows quickly when the rains come." What does "dormant" mean?'
+    options:
+      A: 'Growing very fast'
+      B: 'Alive but not active or growing'
+      C: 'Dead'
+      D: 'Flowering'
+    answer: B
+    explanation: 'The contrast "but grows quickly when the rains come" shows it was resting, not dead.'
+
+  - uid: g12-english-2-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Which word is the best synonym for "begin"?'
+    options:
+      A: 'start'
+      B: 'finish'
+      C: 'stop'
+      D: 'delay'
+    answer: A
+    explanation: '"Begin" and "start" have the same meaning.'

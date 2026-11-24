@@ -1,0 +1,375 @@
+@Tags(['golden'])
+library;
+
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:flutter/services.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:guul12/data/repository.dart';
+import 'package:material_ui/material_ui.dart';
+
+import '../support/app_harness.dart';
+import '../support/branding_fixtures.dart';
+import '../support/fake_server.dart';
+
+/// Real fonts, so the pictures look like the phone (tests use a box font by default).
+Future<void> loadFonts() async {
+  Future<void> load(String family, List<String> paths) async {
+    final loader = FontLoader(family);
+    for (final path in paths) {
+      loader.addFont(Future.value(ByteData.sublistView(File(path).readAsBytesSync())));
+    }
+    await loader.load();
+  }
+
+  // The four branding fonts, every weight the app uses.
+  for (final family in ['Nunito', 'NotoSans', 'Inter', 'Poppins']) {
+    await load(family, [
+      for (final weight in ['Regular', 'Medium', 'Bold', 'ExtraBold', 'Black'])
+        'assets/fonts/$family-$weight.ttf',
+    ]);
+  }
+  await load('MaterialIcons', [
+    '${_flutterRoot()}/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf',
+  ]);
+  // KaTeX fonts for formulas (flutter_math_fork), found through the package config.
+  final config =
+      jsonDecode(File('.dart_tool/package_config.json').readAsStringSync()) as Map<String, Object?>;
+  final mathPackage = (config['packages']! as List).cast<Map<String, Object?>>().firstWhere(
+    (p) => p['name'] == 'flutter_math_fork',
+  );
+  final root = Uri.parse(mathPackage['rootUri']! as String);
+  final katexPath = root.isAbsolute
+      ? root.toFilePath()
+      : File('.dart_tool/${root.path}').absolute.path;
+  final katex = Directory(katexPath);
+  final fontsDir = Directory('${katex.path}/lib/katex_fonts/fonts');
+  final byFamily = <String, List<String>>{};
+  for (final f in fontsDir.listSync().whereType<File>()) {
+    final name = f.uri.pathSegments.last;
+    if (!name.endsWith('.ttf')) continue;
+    final family = name.substring(0, name.indexOf('-'));
+    byFamily.putIfAbsent(family, () => []).add(f.path);
+  }
+  for (final e in byFamily.entries) {
+    await load('packages/flutter_math_fork/${e.key}', e.value);
+  }
+}
+
+/// Flutter SDK folder: from FLUTTER_ROOT, or from the test runner's own location
+/// (`bin/cache/artifacts/engine/<platform>/flutter_tester`).
+String _flutterRoot() {
+  final fromEnv = Platform.environment['FLUTTER_ROOT'];
+  if (fromEnv != null && fromEnv.isNotEmpty) return fromEnv;
+  var dir = File(Platform.resolvedExecutable).parent;
+  for (var i = 0; i < 5; i++) {
+    dir = dir.parent;
+  }
+  return dir.path;
+}
+
+FakeServer richServer() {
+  final s = FakeServer();
+  onboardedProfile(s);
+  s.profile.addAll({'nickname': 'Ayan', 'avatar_style': 'thumbs', 'avatar_seed': 'a06'});
+  s.contact = {'whatsapp': '251912345678', 'telegram': 'Guul12_Help'};
+  s.battles.addAll([
+    {'id': 1, 'friend': false, 'opponent': 'Hodan'},
+    {'id': 2, 'friend': true, 'opponent': null},
+  ]);
+  s.receivedAttempts.add({'mode': 'battle', 'battle_id': 1, 'answers': <Object?>[]});
+  s.leaderboard = {
+    'week_start': '2026-11-16',
+    'top': [
+      for (final (i, (nick, xp, style)) in [
+        ('Hodan', 1240, 'lorelei-neutral'),
+        ('Abdi_12', 1180, 'notionists-neutral'),
+        ('Sara', 1180, 'thumbs'),
+        ('Mohamed A.', 960, 'notionists-neutral'),
+        ('Ayan', 610, 'thumbs'),
+      ].indexed)
+        {
+          'rank': i == 2 ? 2 : i + 1,
+          'nickname': nick,
+          'avatar_style': style,
+          'avatar_seed': 'a0${i + 2}',
+          'xp': xp,
+          'is_me': i == 4,
+          'ref': i == 4 ? null : 'ref-$nick',
+        },
+    ],
+    'me': {'has_nickname': true, 'xp': 610, 'rank': 5},
+  };
+  return s;
+}
+
+Future<void> prepared(Repository repo) async {
+  await repo.syncAll();
+  await repo.chapter(21);
+  await repo.rememberChapter(21);
+}
+
+typedef Scene = Future<void> Function(WidgetTester tester);
+
+void main() {
+  setUpAll(loadFonts);
+
+  final scenes = <String, Scene>{
+    'home': (tester) async {},
+    'study': (tester) async => tapOn(tester, find.text('Study')),
+    'chapter': (tester) async {
+      await tapOn(tester, find.text('1. Chapter 21'));
+    },
+    'question_feedback': (tester) async {
+      await tapOn(tester, find.text('Quick 10'));
+      await tapOn(tester, find.text('22'));
+      await tapOn(tester, find.byKey(const ValueKey('check')));
+    },
+    'me': (tester) async => tapOn(tester, find.text('Me')),
+    'premium': (tester) async => tapOn(tester, find.text('Become Premium')),
+    'leaderboard': (tester) async {
+      await tapOn(tester, find.text('Progress').last);
+      await tapOn(tester, find.text('See the weekly leaderboard'));
+    },
+    'identity': (tester) async {
+      await tapOn(tester, find.text('Me'));
+      await tapOn(tester, find.text('Ayan'));
+    },
+    'battles': (tester) async => tapOn(tester, find.text('Battles')),
+    'invite': (tester) async {
+      await tapOn(tester, find.text('Me'));
+      await tapOn(tester, find.text('Invite friends'));
+    },
+    'plan': (tester) async => tapOn(tester, find.text("Today's plan")),
+    'exams': (tester) async {
+      await tapOn(tester, find.text('Exams').last);
+      await tapOn(tester, find.widgetWithText(ChoiceChip, 'Physics'));
+    },
+    'exam': (tester) async {
+      await tapOn(tester, find.text('Exams').last);
+      await tapOn(tester, find.widgetWithText(ChoiceChip, 'Physics'));
+      await tapOn(tester, find.text('Physics mock exam 1'));
+      await tapOn(tester, find.text('Start exam'));
+      await tapOn(tester, find.text('Option C'));
+      await tapOn(tester, find.byTooltip('Flag for review'));
+    },
+    'exam_result': (tester) async {
+      await tapOn(tester, find.text('Exams').last);
+      await tapOn(tester, find.widgetWithText(ChoiceChip, 'Physics'));
+      await tapOn(tester, find.text('Physics mock exam 1'));
+      await tapOn(tester, find.text('Start exam'));
+      await tapOn(tester, find.text('Option A'));
+      await tapOn(tester, find.byTooltip('All questions'));
+      await tapOn(tester, find.bySemanticsLabel('4, Not answered'));
+      await tapOn(tester, find.text('Option D'));
+      await tapOn(tester, find.text('Submit exam'));
+      await tapOn(
+        tester,
+        find.descendant(of: find.byType(AlertDialog), matching: find.text('Submit exam')),
+      );
+    },
+  };
+
+  for (final (sizeName, size) in [('phone', phoneSize), ('tablet', tabletSize)]) {
+    for (final dark in [false, true]) {
+      for (final MapEntry(key: name, value: scene) in scenes.entries) {
+        final file = '${name}_${sizeName}_${dark ? 'dark' : 'light'}.png';
+        testWidgets(file, (tester) async {
+          await pumpGuul(
+            tester,
+            server: richServer(),
+            size: size,
+            before: (repo) async {
+              await prepared(repo);
+              await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+            },
+          );
+          await scene(tester);
+          await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+        });
+      }
+    }
+  }
+
+  // Scenes that need one wrong answer saved first.
+  final afterMistake = <String, Scene>{
+    'mistakes': (tester) async {
+      await tapOn(tester, find.text('My mistakes'));
+      await tapOn(tester, find.text('What is 2 + 2?'));
+    },
+    'progress': (tester) async => tapOn(tester, find.text('Progress').last),
+  };
+
+  for (final MapEntry(key: name, value: scene) in afterMistake.entries) {
+    for (final dark in [false, true]) {
+      final file = '${name}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        await pumpGuul(
+          tester,
+          server: richServer(),
+          before: (repo) async {
+            await prepared(repo);
+            await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+            await repo.saveAttempt(
+              clientUuid: '00000000-0000-4000-8000-00000000abcd',
+              mode: 'quick10',
+              chapterId: 21,
+              startedAt: testNow,
+              finishedAt: testNow,
+              answers: const [
+                AttemptAnswer(
+                  questionId: 2101,
+                  chapterId: 21,
+                  version: 1,
+                  response: 'A',
+                  timeMs: 9000,
+                  correctLocally: false,
+                ),
+              ],
+            );
+          },
+        );
+        await scene(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
+  }
+
+  // A busy student: the daily goal reached on Friday, Saturday and Sunday (today), with some
+  // wrong answers in chapter 21, so Home shows a 3-day streak, filled days and a weak chapter.
+  for (final (part, scroll) in [('top', 0.0), ('bottom', -2000.0)]) {
+    for (final dark in [false, true]) {
+      final file = 'home_active_${part}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        await pumpGuul(
+          tester,
+          server: richServer(),
+          before: (repo) async {
+            await prepared(repo);
+            await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+            for (final (i, daysAgo) in [2, 1, 0].indexed) {
+              final at = testNow.subtract(Duration(days: daysAgo));
+              await repo.saveAttempt(
+                clientUuid: '00000000-0000-4000-8000-00000000ac0$i',
+                mode: 'quick10',
+                chapterId: 21,
+                startedAt: at,
+                finishedAt: at,
+                answers: [
+                  for (var q = 0; q < 10; q++)
+                    AttemptAnswer(
+                      questionId: 2101 + q,
+                      chapterId: 21,
+                      version: 1,
+                      response: 'A',
+                      timeMs: 6000,
+                      correctLocally: q < 4,
+                    ),
+                ],
+              );
+            }
+          },
+        );
+        await tester.drag(find.byType(ListView).first, Offset(0, scroll));
+        await settle(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
+  }
+
+  // First run: welcome slides, the easy warm-up and its result, then the grade question.
+  Future<void> nextSlide(WidgetTester tester) =>
+      tapOn(tester, find.byKey(const ValueKey('walkthrough-next')));
+  Future<void> warmUp(WidgetTester tester, String answer) async {
+    await tapOn(tester, find.text(answer));
+    await tapOn(tester, find.byKey(const ValueKey('warmup-next')));
+  }
+
+  final firstRun = <String, Scene>{
+    'walkthrough_1': (tester) async {},
+    'walkthrough_3': (tester) async {
+      await nextSlide(tester);
+      await nextSlide(tester);
+    },
+    'warmup_right': (tester) async {
+      await tapOn(tester, find.text('Skip'));
+      await tapOn(tester, find.text('12'));
+    },
+    'warmup_wrong': (tester) async {
+      await tapOn(tester, find.text('Skip'));
+      await warmUp(tester, '12');
+      await warmUp(tester, 'Ice');
+      await tapOn(tester, find.text('Tall'));
+    },
+    'warmup_result': (tester) async {
+      await tapOn(tester, find.text('Skip'));
+      for (final answer in ['12', 'Ice', 'Small', 'Addis Ababa', '9']) {
+        await warmUp(tester, answer);
+      }
+    },
+  };
+  for (final MapEntry(key: name, value: scene) in firstRun.entries) {
+    for (final dark in [false, true]) {
+      final file = '${name}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        await pumpGuul(
+          tester,
+          before: (repo) => repo.db.writeString('theme_mode', dark ? 'dark' : 'light'),
+        );
+        await scene(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
+  }
+
+  testWidgets('onboarding_grade_phone_light.png', (tester) async {
+    await pumpGuul(tester);
+    await tapOn(tester, find.text('Skip'));
+    for (final answer in ['12', 'Ice', 'Small', 'Addis Ababa', '10']) {
+      await warmUp(tester, answer);
+    }
+    await tapOn(tester, find.byKey(const ValueKey('onboarding-continue')));
+    await tapOn(tester, find.text('Grade 12'));
+    await expectLater(
+      find.byType(MaterialApp),
+      matchesGoldenFile('goldens/onboarding_grade_phone_light.png'),
+    );
+  });
+
+  // A second branding from Nova (Nile palette, Poppins + Inter, round corners, a logo).
+  for (final dark in [false, true]) {
+    final file = 'home_nile_phone_${dark ? 'dark' : 'light'}.png';
+    testWidgets(file, (tester) async {
+      final server = richServer()
+        ..branding = nileBranding()
+        ..logos[nileLogoPath] = tinyPng;
+      await pumpGuul(
+        tester,
+        server: server,
+        before: (repo) async {
+          await prepared(repo);
+          await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+        },
+      );
+      await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+    });
+  }
+
+  testWidgets('welcome_nile_phone_light.png', (tester) async {
+    final server = FakeServer()
+      ..branding = nileBranding()
+      ..logos[nileLogoPath] = tinyPng;
+    await pumpGuul(tester, server: server);
+    // Pictures are drawn only after they are decoded, which needs real (not fake) async time.
+    final logo = find.byKey(const ValueKey('brand-logo'));
+    await tester.runAsync(
+      () => precacheImage(tester.widget<Image>(logo).image, tester.element(logo)),
+    );
+    await tester.pumpAndSettle();
+    await expectLater(
+      find.byType(MaterialApp),
+      matchesGoldenFile('goldens/welcome_nile_phone_light.png'),
+    );
+  });
+}

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-chemistry-1-3-q001: {hash: '267a5af744a35511c5b3a0fddfa3cc821e09fb47273f4f87c07174b346edd461', answer: C}
+  g12-chemistry-1-3-q002: {hash: '4eb99aca7435c6b71d00ecfc277cdedd1cbc9f1f8c7cc9c73115925a2a6698f2', answer: A}
+  g12-chemistry-1-3-q003: {hash: '3baebc9d382554d217856fcf959d02b6ec29b80bacdad96119548bf015f07ae7', answer: D}
+  g12-chemistry-1-3-q004: {hash: '2e7fa477d3bb3e5876c21608124d4e939f8a6f42ea436cfb8b79ee61251ce77e', answer: 4.7}
+  g12-chemistry-1-3-q005: {hash: '3b96e1403769ecf0e956b8e4756c298241986fb72b7549163dbd45a39332145a', answer: B}
+  g12-chemistry-1-3-q006: {hash: 'b520157ad7e375bc17606ea865a764a12e98faaa9b8cf9969ebec6043e226519', answer: A}
+  g12-chemistry-1-3-q007: {hash: 'b8534ce38432553bdd357e468ecadf2e68a9100a686ee09e5e7a2021ecd82f19', answer: C}
+  g12-chemistry-1-3-q008: {hash: '3eb5b8096bef168062785363ca498a7a6957a575b57e1dad3cd850ca31e919b1', answer: [A, D]}
+  g12-chemistry-1-3-q009: {hash: '6a81be1f2c6638f63d9d280f9e93f56e0fba3f6e522f2bd86613885c8ff37b43', answer: true}
+  g12-chemistry-1-3-q010: {hash: 'b8fa5577ec929ad7d7462d3747a2f62f168f482096c02bedda7c4135804e5237', answer: D, note: 'Minor: some textbooks describe phenolphthalein in base as pink-red or magenta, so a student could argue for B (Red). Consider replacing option B with a clearly wrong colour such as Blue.'}
+  g12-chemistry-1-3-q011: {hash: 'ad5eb309867b7ed692c0eb1cc6c268e70a30c4e8524da752f1c4d0f05f2329e8', answer: A}
+  g12-chemistry-1-3-q012: {hash: 'ac8d84bee6b6dd4b68c6d5dba193b6219e5c3a0d07952cd4040ee064655da9fa', answer: 0.08}
+  g12-chemistry-1-3-q013: {hash: 'df612ddc20dd959d50936f640dfe672776baa5d174563fed315b65d4754ddb27', answer: B}
+  g12-chemistry-1-3-q014: {hash: '064457fb9182b576dee977171f274ee0f7f02ed9e6041aa4cf87756aa2e8523b', answer: D}
+  g12-chemistry-1-3-q015: {hash: 'fd3ccd8235f44666f724df0a080c611c6bdb1c9a51be5fa75c425d56ae47a2c9', answer: C}
+  g12-chemistry-1-3-q016: {hash: 'b2232a027ecf7a4a02b688f27eca926698b7b0f4f5c87edcd427a2a05dd2470a', answer: B}
+  g12-chemistry-1-3-q017: {hash: '2fdca5b50ad02690ba01009c9fb407e597c248b7b654603fc8532229da209577', answer: A}
+  g12-chemistry-1-3-q018: {hash: '912feb10d7950bbd6a82ecc518ad3e84588d9c83848fef83689c7a2443ba962f', answer: false}
+  g12-chemistry-1-3-q019: {hash: 'b84e63c33eeb24b82b32c7eef20f611803acf6aa4e636b3f985e6fc84ba1f5e0', answer: D}
+  g12-chemistry-1-3-q020: {hash: '69153af6e6997178b2adf6682633e3669fdb90ef2db0ca7080afa5a15f254d22', answer: A}
+  g12-chemistry-1-3-q021: {hash: '248bb87c9d5c1859bffa8e1b4a2ad60f06cd0d5b00fb84b42892d5c0ffb4b675', answer: 'end'}
+  g12-chemistry-1-3-q022: {hash: '6c7952fca23d2826a0be61790c3865fbe5539b7b7fde93994725d958a766f73b', answer: 'hydrolysis'}
+  g12-chemistry-1-3-q023: {hash: '46c10ae038dd5e0b62175d38118f038ac866881a29cd7aa1782546ab9b4c0be7', answer: true}
+  g12-chemistry-1-3-q024: {hash: '95fe8bbfd93d11fbbf568d03e7513b12767fbce98aa6e94ed2b2c05a491142fa', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-chemistry-1-3-q025: {hash: '311dc24e40cd148ff95fe7daa729a13389df8732534ecf742d68b550531157c6', answer: [B, D, A, C]}
+  g12-chemistry-1-3-q026: {hash: 'f8d29f7f8a40cf2b613368b79b1d8f9dac9187f19f2b5bae9acea9d47428f6e1', answer: C}
+  g12-chemistry-1-3-q027: {hash: 'a33b6c92553cb888dc4930213fe6e58bc71de89bfa226b3363b7feccd8f99637', answer: B}
+  g12-chemistry-1-3-q028: {hash: '5164e5150a0ed754e2db894528828ad28969e6c8beb2cbb65bf66f96e66193d7', answer: C}
+  g12-chemistry-1-3-q029: {hash: 'ce500feeff2d1c09a7eea288cbfd45ca4d20924565939a8487a40ecfce234311', answer: D}
+  g12-chemistry-1-3-q030: {hash: 'ad3bb7520c2a3144897dc409bfc5147d45a0ef01fc3963101d85e31f4c4bed8a', answer: B}

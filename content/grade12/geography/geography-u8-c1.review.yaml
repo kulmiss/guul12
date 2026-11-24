@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-geography-8-1-q001: {hash: 'cb3e5ccc9ea98e00174c38c3fd7d5841f201190b13d9baea12920b0da88c1d2f', answer: 3}
+  g12-geography-8-1-q002: {hash: '53694839f8a1f6b9848f0933c0c9d0795062943bdcf59fd8d88d07ed12d82644', answer: B}
+  g12-geography-8-1-q003: {hash: '8e22c18b3565144ada203b136b997de642be64ecfffe6321c82152e463c0d3a0', answer: C}
+  g12-geography-8-1-q004: {hash: '30f8d1abf59cfe4fe7e31d14c78767a0924d19ae9f7e1b433bba9abdc59c7edb', answer: A}
+  g12-geography-8-1-q005: {hash: '4a3c1c54ea890414683bae86470c13ff9f6f0fefb189e26ac25169f900d5f8b1', answer: D}
+  g12-geography-8-1-q006: {hash: '2a5a9dfa1f6d4940993c2b56423e14de004178407e29ed92b3630f8915d525d2', answer: B}
+  g12-geography-8-1-q007: {hash: 'a171abed07eb4a4bc6e3684c06aa0e7c298827d64376530f335b2deb1fd2fc1d', answer: C}
+  g12-geography-8-1-q008: {hash: '05fa2650da50d2351b100ecb4f4089faff200847d883e4b4b1d80d2cda5e7cbc', answer: A}
+  g12-geography-8-1-q009: {hash: '8f825d5079a38601aafda7b3464b88fa90e898a5a09364f23091bbbf15d37342', answer: [B, A, D, C]}
+  g12-geography-8-1-q010: {hash: '11ea641cd245204202d3ee96f7b31a323b2235101d7e8fe8aa47588286b2da4b', answer: D}
+  g12-geography-8-1-q011: {hash: 'c7192c226a223cfd09c7b3c50d114d2799b14555cb7eda6553e42257c0afe3bc', answer: B}
+  g12-geography-8-1-q012: {hash: '2b45584cbcb185663b303c2a9e1f57eb46bceb2019088309e9d0a4c2248543f9', answer: A}
+  g12-geography-8-1-q013: {hash: 'df5d5a86597fab2d5772d1b681b186017632c1dfe7118d9aba0ed046defe93a9', answer: [A, B, C]}
+  g12-geography-8-1-q014: {hash: '68c0487d85d8d12dcfd531ba023efff46d4d2263a5e026f2ad0a5e834c84c304', answer: C}
+  g12-geography-8-1-q015: {hash: 'dfb32d2f69b839a065cf9a7c19ee739999200c0784e12403414fbdc11af05111', answer: D}
+  g12-geography-8-1-q016: {hash: '0f5e808567fb76901c9d894705de2073ebf4bb3615d5f8cf8da6ed6f74ce964b', answer: true}
+  g12-geography-8-1-q017: {hash: '3ea787cf3c4b59b512adad4862206d3535fb7d4350f27e410d6357c5251732bd', answer: true}
+  g12-geography-8-1-q018: {hash: 'c63807cf5d90ad2ef98dd3354c4c7f92abc9020e49bba7ffde5b9653a4ac2147', answer: 3}
+  g12-geography-8-1-q019: {hash: '6bcdd53c47c2e715b74e082a72b9ba222ac45f49aca860392dcb7fbb1c5e75f1', answer: 'hypothesis'}
+  g12-geography-8-1-q020: {hash: '12314c3fb4c2919e5bf9a755456ec62ea4d41b779e6e6f84d0a2fa3106902a56', answer: 'contour'}
+  g12-geography-8-1-q021: {hash: '8222c9202129f51524a2baeb7092cac46bb7c581d802239de2481f733dae373b', answer: false}
+  g12-geography-8-1-q022: {hash: '2f145871b58df80ba7e147d66dc83d910263efd5860f47c82d93c596eff86264', answer: {L1: R2, L2: R3, L3: R1}}
+  g12-geography-8-1-q023: {hash: '75537b3f326addfd48c16499b723144a878f1d1d0cff52400008e9c5a89bdb43', answer: C}
+  g12-geography-8-1-q024: {hash: 'ae1cda32ec8f627e202edfa2ce25b36b64cc333bb088b6bbcd25123c6d373e54', answer: B}
+  g12-geography-8-1-q025: {hash: '0fe3b8a238172a4bd3fa032f9a5d6b5522b6402f35225809de92fba33e64e447', answer: A}
+  g12-geography-8-1-q026: {hash: '8c114017e1376e37d593f70514cd154e5d0b863b185094df61f4615b32ad2717', answer: D}
+  g12-geography-8-1-q027: {hash: '6e583d1441eeb7d0de2a673f35f8090344fc3ed268661c59dbcae8e0efd01516', answer: B}
+  g12-geography-8-1-q028: {hash: '937432131537fb6af2effe5c95c89db48256188101aa1b2529c7281c7eb11371', answer: A}
+  g12-geography-8-1-q029: {hash: 'c94001d63cb4537c53cfe3e0ea478ca97f93f8eafae109690165c8dd2c6378af', answer: B}
+  g12-geography-8-1-q030: {hash: 'e71681cb7aa810f4c8fb946b3b0f76c742d84d80bb21abe22b67c0ba62d7ec3d', answer: C}

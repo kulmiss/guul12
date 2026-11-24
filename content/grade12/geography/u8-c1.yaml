@@ -1,0 +1,375 @@
+summary:
+  key_points:
+    - 'A geographical enquiry follows steps: ask a question, form a hypothesis, collect data (primary data you collect yourself, such as surveys and measurements; secondary data from books, maps, statistics), present it (maps, graphs, tables), analyse it, draw conclusions and evaluate the method.'
+    - 'A map scale shows how distance on the map relates to distance on the ground. It can be a ratio (1 : 50 000), a statement ("1 cm represents 0.5 km") or a line (bar) scale. In 1 : 50 000, 1 cm on the map is 50 000 cm = 500 m on the ground.'
+    - 'A large-scale map (such as 1 : 10 000) shows a small area in great detail; a small-scale map (such as 1 : 1 000 000) shows a large area with little detail.'
+    - 'Grid references locate places: read eastings (along the bottom, left to right) first, then northings (up the side). A four-figure reference names a square; a six-figure reference names a point to a tenth of a square.'
+    - 'Contour lines join places of equal height. Close contours show a steep slope; widely spaced contours show a gentle slope. Height difference ÷ horizontal distance gives the gradient.'
+    - 'Latitude measures distance north or south of the equator (0° to 90°); longitude measures distance east or west of the Prime Meridian through Greenwich (0° to 180°). Ethiopia lies roughly between 3°N and 15°N and between 33°E and 48°E.'
+    - 'Modern tools: GPS (Global Positioning System) finds exact positions using satellites; remote sensing collects data from satellites and aircraft; GIS (Geographic Information Systems) stores and analyses data in map layers.'
+  formulas:
+    - label: Ground distance
+      latex: '\text{ground distance} = \text{map distance} \times \text{scale denominator}'
+    - label: Gradient
+      latex: '\text{gradient} = \frac{\text{vertical interval}}{\text{horizontal distance}}'
+
+solved_exercises:
+  - uid: g12-geography-8-1-se01
+    problem: 'On a 1 : 50 000 map, two villages are 6 cm apart. What is the real distance in kilometres?'
+    steps:
+      - '$6 \times 50\,000 = 300\,000$ cm.'
+      - '$300\,000\ \text{cm} = 3\,000\ \text{m} = 3$ km.'
+    answer: '3 km'
+  - uid: g12-geography-8-1-se02
+    problem: 'A hill rises 200 m over a horizontal distance of 2 km. Find the gradient as a ratio.'
+    steps:
+      - 'Use the same units: 2 km = 2 000 m.'
+      - 'Gradient $= \frac{200}{2000} = \frac{1}{10}$, i.e. 1 : 10.'
+    answer: '1 : 10'
+  - uid: g12-geography-8-1-se03
+    problem: 'Is data from a questionnaire you give to farmers primary or secondary data?'
+    steps:
+      - 'You collected it yourself, directly from the source.'
+      - 'So it is primary data.'
+    answer: 'Primary data'
+
+flashcards:
+  - {uid: g12-geography-8-1-fc01, term: Primary data, definition: 'Data you collect yourself, e.g. surveys and measurements.'}
+  - {uid: g12-geography-8-1-fc02, term: Secondary data, definition: 'Data collected by others, e.g. census reports and books.'}
+  - {uid: g12-geography-8-1-fc03, term: Hypothesis, definition: 'A statement to be tested by the enquiry.'}
+  - {uid: g12-geography-8-1-fc04, term: Representative fraction, definition: 'Scale as a ratio, e.g. 1 : 50 000.'}
+  - {uid: g12-geography-8-1-fc05, term: Large-scale map, definition: 'Shows a small area in great detail.'}
+  - {uid: g12-geography-8-1-fc06, term: Eastings, definition: 'Grid lines read first, along the bottom from left to right.'}
+  - {uid: g12-geography-8-1-fc07, term: Contour line, definition: 'Line joining places of equal height.'}
+  - {uid: g12-geography-8-1-fc08, term: GIS, definition: 'Computer system that stores and analyses map data in layers.'}
+  - {uid: g12-geography-8-1-fc09, term: Prime Meridian, definition: '0° longitude, through Greenwich, London.'}
+
+questions:
+  - uid: g12-geography-8-1-q001
+    type: numeric
+    difficulty: 2
+    stem: 'On a map with a scale of 1 : 50 000, two villages are 6 cm apart. What is the real distance between them, in kilometres?'
+    answer: {value: 3, tolerance: 0, unit: km}
+    explanation: '$6 \times 50\,000 = 300\,000$ cm $= 3$ km.'
+
+  - uid: g12-geography-8-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'On a 1 : 25 000 map, what real distance does 4 cm represent?'
+    options:
+      A: '100 m'
+      B: '1 km'
+      C: '10 km'
+      D: '25 km'
+    answer: B
+    explanation: '$4 \times 25\,000 = 100\,000$ cm $= 1$ km.'
+
+  - uid: g12-geography-8-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Which map shows the MOST detail of a small area?'
+    options:
+      A: '1 : 1 000 000'
+      B: '1 : 250 000'
+      C: '1 : 10 000'
+      D: '1 : 500 000'
+    answer: C
+    explanation: 'The smaller the denominator, the larger the scale and the more detail is shown.'
+
+  - uid: g12-geography-8-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'When giving a grid reference, which do you read first?'
+    options:
+      A: 'Eastings (the numbers along the bottom, read from left to right)'
+      B: 'Northings (the numbers up the side)'
+      C: 'Either, it does not matter'
+      D: 'The map title'
+    answer: A
+    explanation: '"Along the corridor, then up the stairs": eastings first, then northings.'
+
+  - uid: g12-geography-8-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Contour lines that are very close together show:'
+    options:
+      A: 'Flat land'
+      B: 'A river'
+      C: 'A gentle slope'
+      D: 'A steep slope'
+    answer: D
+    explanation: 'Height changes quickly over a short distance.'
+
+  - uid: g12-geography-8-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'A hill rises 200 m over a horizontal distance of 2 km. What is the gradient?'
+    options:
+      A: '1 : 100'
+      B: '1 : 10'
+      C: '1 : 1'
+      D: '10 : 1'
+    answer: B
+    explanation: '$\frac{200\ \text{m}}{2000\ \text{m}} = \frac{1}{10}$.'
+
+  - uid: g12-geography-8-1-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'Data that you collect yourself, for example by measuring a river or interviewing farmers, is called:'
+    options:
+      A: 'Secondary data'
+      B: 'Census data'
+      C: 'Primary data'
+      D: 'Satellite data'
+    answer: C
+    explanation: 'Secondary data has been collected by someone else.'
+
+  - uid: g12-geography-8-1-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is an example of secondary data?'
+    options:
+      A: 'A national census report'
+      B: 'Your own traffic count'
+      C: 'Your measurements of a river''s width'
+      D: 'A questionnaire you gave to shopkeepers'
+    answer: A
+    explanation: 'Census reports are collected and published by others.'
+
+  - uid: g12-geography-8-1-q009
+    type: ordering
+    difficulty: 2
+    stem: 'Put the stages of a geographical enquiry in order.'
+    items:
+      A: 'Collect data'
+      B: 'Ask a question and form a hypothesis'
+      C: 'Draw conclusions and evaluate'
+      D: 'Present and analyse the data'
+    answer: [B, A, D, C]
+    explanation: 'Question → collect → present and analyse → conclude and evaluate.'
+
+  - uid: g12-geography-8-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the latitude of the equator?'
+    options:
+      A: '90°'
+      B: '180°'
+      C: '45°'
+      D: '0°'
+    answer: D
+    explanation: 'Latitudes are measured north and south from the equator at 0°.'
+
+  - uid: g12-geography-8-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'The Prime Meridian (0° longitude) passes through:'
+    options:
+      A: 'Addis Ababa'
+      B: 'Greenwich, London'
+      C: 'New York'
+      D: 'The North Pole only'
+    answer: B
+    explanation: 'Longitudes are measured east and west from Greenwich.'
+
+  - uid: g12-geography-8-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'Ethiopia lies in which part of the world?'
+    options:
+      A: 'North of the equator and east of the Prime Meridian'
+      B: 'South of the equator and west of the Prime Meridian'
+      C: 'North of the equator and west of the Prime Meridian'
+      D: 'South of the equator and east of the Prime Meridian'
+    answer: A
+    explanation: 'Ethiopia is roughly between 3°N–15°N and 33°E–48°E.'
+
+  - uid: g12-geography-8-1-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are ways of showing scale on a map? Choose all that apply.'
+    options:
+      A: 'A ratio such as 1 : 50 000'
+      B: 'A statement such as "1 cm represents 1 km"'
+      C: 'A line (bar) scale'
+      D: 'A compass rose'
+    answer: [A, B, C]
+    explanation: 'A compass rose shows direction, not scale.'
+
+  - uid: g12-geography-8-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which technology uses satellites to give your exact position on Earth?'
+    options:
+      A: 'GIS'
+      B: 'A barometer'
+      C: 'GPS'
+      D: 'A thermometer'
+    answer: C
+    explanation: 'GPS receivers calculate position from satellite signals; GIS is used to analyse map data.'
+
+  - uid: g12-geography-8-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'What is a Geographic Information System (GIS)?'
+    options:
+      A: 'A type of compass'
+      B: 'A school subject'
+      C: 'A paper atlas'
+      D: 'A computer system that stores, analyses and displays data in map layers'
+    answer: D
+    explanation: 'GIS can combine layers such as roads, rivers and population to answer questions.'
+
+  - uid: g12-geography-8-1-q016
+    type: true_false
+    difficulty: 2
+    stem: 'A 1 : 1 000 000 map is a smaller-scale map than a 1 : 50 000 map.'
+    answer: true
+    explanation: 'A larger denominator means a smaller scale (less detail, larger area).'
+
+  - uid: g12-geography-8-1-q017
+    type: true_false
+    difficulty: 1
+    stem: 'A contour line joins places that have the same height above sea level.'
+    answer: true
+    explanation: 'Contours show the shape and height of the land.'
+
+  - uid: g12-geography-8-1-q018
+    type: numeric
+    difficulty: 2
+    stem: 'Two points on a road are 3 km apart. On a map with a scale of 1 : 100 000, how many centimetres apart will they be?'
+    answer: {value: 3, tolerance: 0, unit: cm}
+    explanation: '3 km $= 300\,000$ cm; $\frac{300\,000}{100\,000} = 3$ cm.'
+
+  - uid: g12-geography-8-1-q019
+    type: fill_in
+    difficulty: 1
+    stem: 'A statement that a geographical enquiry sets out to test, such as "Rainfall decreases from west to east", is called a ________.'
+    answer: [hypothesis]
+    explanation: 'The data collected will support or reject the hypothesis.'
+
+  - uid: g12-geography-8-1-q020
+    type: fill_in
+    difficulty: 2
+    stem: 'Lines on a map that join places of equal height are called ________ lines.'
+    answer: [contour]
+    explanation: 'The height is usually written on the line in metres.'
+
+  - uid: g12-geography-8-1-q021
+    type: true_false
+    difficulty: 2
+    stem: 'Longitude lines measure distance north or south of the equator.'
+    answer: false
+    explanation: 'Latitude measures north–south; longitude measures east–west from the Prime Meridian.'
+
+  - uid: g12-geography-8-1-q022
+    type: matching
+    difficulty: 2
+    stem: 'Match each tool with what it is used for.'
+    left:
+      L1: 'GPS'
+      L2: 'GIS'
+      L3: 'Remote sensing'
+    right:
+      R1: 'Collecting images and data from satellites or aircraft'
+      R2: 'Finding an exact position on Earth'
+      R3: 'Analysing map data in layers on a computer'
+      R4: 'Measuring air pressure'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'Air pressure is measured with a barometer.'
+
+  - uid: g12-geography-8-1-q023
+    type: single_choice
+    difficulty: 3
+    stem: 'A four-figure grid reference is 2843. Which number gives the easting?'
+    options:
+      A: '43'
+      B: '84'
+      C: '28'
+      D: '2843'
+    answer: C
+    explanation: 'The first two figures are the easting (28) and the last two the northing (43).'
+
+  - uid: g12-geography-8-1-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'Which graph is best for showing how rainfall changes month by month through a year?'
+    options:
+      A: 'A pie chart'
+      B: 'A bar or line graph with months on the horizontal axis'
+      C: 'A scatter graph of two unrelated things'
+      D: 'A photograph'
+    answer: B
+    explanation: 'Monthly values over time are shown clearly on a bar or line graph.'
+
+  - uid: g12-geography-8-1-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'Which graph is best for showing the shares of land used for crops, grazing, forest and towns?'
+    options:
+      A: 'A pie chart'
+      B: 'A line graph over time'
+      C: 'A climate graph'
+      D: 'A contour map'
+    answer: A
+    explanation: 'A pie chart shows parts of a whole.'
+
+  - uid: g12-geography-8-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Why should a sample for a questionnaire include people of different ages and both sexes?'
+    options:
+      A: 'To make the survey take longer'
+      B: 'To get the answers the researcher wants'
+      C: 'To avoid paying anyone'
+      D: 'So that the sample represents the whole population and reduces bias'
+    answer: D
+    explanation: 'A representative sample gives more reliable results.'
+
+  - uid: g12-geography-8-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'The last stage of an enquiry, "evaluation", means:'
+    options:
+      A: 'Collecting the first data'
+      B: 'Judging the strengths and weaknesses of the method and results'
+      C: 'Choosing the topic'
+      D: 'Drawing the title'
+    answer: B
+    explanation: 'Evaluation asks how reliable the results are and how the enquiry could be improved.'
+
+  - uid: g12-geography-8-1-q028
+    type: single_choice
+    difficulty: 3
+    stem: 'On a 1 : 50 000 map, a square field measures 2 cm by 2 cm. What is its real area?'
+    options:
+      A: '1 km²'
+      B: '2 km²'
+      C: '4 km²'
+      D: '0.5 km²'
+    answer: A
+    explanation: 'Each side is $2 \times 0.5$ km $= 1$ km, so the area is $1 \times 1 = 1$ km².'
+
+  - uid: g12-geography-8-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'In which direction do rivers flow, as shown by contour lines on a map?'
+    options:
+      A: 'Always towards the north'
+      B: 'From higher to lower land'
+      C: 'From lower to higher land'
+      D: 'Always towards the east'
+    answer: B
+    explanation: 'Water flows downhill, crossing contours from higher to lower values.'
+
+  - uid: g12-geography-8-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'What is remote sensing?'
+    options:
+      A: 'Talking to people on the phone'
+      B: 'Drawing maps by hand'
+      C: 'Collecting information about the Earth''s surface from a distance, using satellites or aircraft'
+      D: 'Measuring rainfall in a rain gauge'
+    answer: C
+    explanation: 'Satellite images are used for weather, crops, forests and floods.'

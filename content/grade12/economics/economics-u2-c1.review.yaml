@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-economics-2-1-q001: {hash: 'b5bea3f79032a9b284aca3b8d005af9949319a44645ce718fbcfa1859f13a7ee', answer: B}
+  g12-economics-2-1-q002: {hash: '46f24c7f8ce52e83a8985e67c70dee089a421fe8bdcf4ae932aa11012cb201b6', answer: A}
+  g12-economics-2-1-q003: {hash: '8d65ca582e00c6a068baa71678af7fd34ab5f6de4173d3bac14cf1a9b708d132', answer: C}
+  g12-economics-2-1-q004: {hash: 'cc8b0f7b07b1ccc153272faab9ef9a5f1c0f6bf495db66a2020435b8c3ba463b', answer: D}
+  g12-economics-2-1-q005: {hash: 'c95a005bf081e1954e1db980fd1c449fac9eb22234d43d1fd3decf7f844f68a7', answer: A}
+  g12-economics-2-1-q006: {hash: 'e8de958c8dff0921258ae4775eff1097fe72d600a47ab6dba0adefdca039c419', answer: B}
+  g12-economics-2-1-q007: {hash: 'f0e106358203c021e058a8dcd34a182ba5b1bc4327caf2b59efdca939c91e24f', answer: C}
+  g12-economics-2-1-q008: {hash: '85d75bcc47906b28f8aa2423d2e48e77f04980f53bfafc04e00468090b00dbd1', answer: D}
+  g12-economics-2-1-q009: {hash: '4e4d39fd3cf05a5962adb2c27b23334b3aea32422218ddb7cd2975dd4d5d3e41', answer: 5}
+  g12-economics-2-1-q010: {hash: '9df5d779426cb77aec2335d3c25fc9c129d195ea5d7738c4b34b8d8fa3cc5cc1', answer: 800}
+  g12-economics-2-1-q011: {hash: '983a67fb4b5c3da9c0ea26d8a8aaae8e28fc05ab4eaff4bb65bcd870be5f9a22', answer: A}
+  g12-economics-2-1-q012: {hash: 'c201db1e5a332303bd6fae84e870fef6f6bb4042dc534ed26bf2f107da73139c', answer: B}
+  g12-economics-2-1-q013: {hash: 'ec46518e7dbd6207e01a1b4650a252857cf105f3c8f41b74eb61191ba2e0cb85', answer: [A, B, C]}
+  g12-economics-2-1-q014: {hash: '92877f442ce513b2bd0b37d7a13ac504128a8d0cbc0d8e17c3a6e7d7f9ef1c7b', answer: true}
+  g12-economics-2-1-q015: {hash: '9370e7adb02bc3ad839355b7787e198a8852c4477e0c0b19001bd1a73b4fbba5', answer: false}
+  g12-economics-2-1-q016: {hash: 'c81bb37aa7d8c4d1d628a9518818f3416f494d112d13131f121b7bc020840ba8', answer: D}
+  g12-economics-2-1-q017: {hash: '931ef253fe99649ee88f2fea660d76608d144979df5bf7ec748e197afa7132fc', answer: A}
+  g12-economics-2-1-q018: {hash: '62ae7172eb5029240926c366a2e9c972c706191fa5e88c3483dc264a31cfd03a', answer: B}
+  g12-economics-2-1-q019: {hash: '228c8122627cc0213dcac97a71f8cc5fa36511d1491dbb739698dfb634e1f1cd', answer: 'consume'}
+  g12-economics-2-1-q020: {hash: '50ffa4e63c9f92f0a3195e908cc3893a15629e4a8bd4b193d4a0a0de2320f125', answer: 'stagflation'}
+  g12-economics-2-1-q021: {hash: '05212ba72ef445b9b09bc91b97836fcc9aafec034fdaefb74f406fa97c9b3a80', answer: true}
+  g12-economics-2-1-q022: {hash: '53eaad89b9edcbda4a3fb0ae33a58f428fc4a2174af6b567bf581267feaa354d', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-economics-2-1-q023: {hash: '220c104b97791e515927ec3be60100aafd4b4902607a63bb7494db565699dbcf', answer: [B, A, C, D]}
+  g12-economics-2-1-q024: {hash: '0d9b3e791851e2e664b6f907301dc08bdaca86b0fc633f11c74848e93ed82119', answer: D}
+  g12-economics-2-1-q025: {hash: 'dde77820b83414887213565ef3d5f8d9adfbeb02dfd54299fb06940b1d5bef3c', answer: C}
+  g12-economics-2-1-q026: {hash: '4f6b4858494bf03a0c1424325ace847f6b8703e5aead0be65fb84ee805a90256', answer: A}
+  g12-economics-2-1-q027: {hash: 'c437c28d8c51568c82011bb06181a2e8e271736c303ed1103bbabdeb8a91c316', answer: B}
+  g12-economics-2-1-q028: {hash: '005e75ccecb38d01478f7d8489dd83a431f5f99787cbd549d6ceead115056d79', answer: C}
+  g12-economics-2-1-q029: {hash: 'f3c09e202f97bd1da5e131fbea025ab96b3fc3d1811c5c7e5ea6db442a429fff', answer: D}
+  g12-economics-2-1-q030: {hash: '237e0c06f7b2b99edf2a6ddd3f2a084c59a8afe07c86d1e4ebf7ba83e7f3540d', answer: A}

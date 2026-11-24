@@ -1,0 +1,2577 @@
+{
+  "appName": "Guul 12",
+  "@appName": {
+    "description": "App name. Do not translate."
+  },
+  "commonContinue": "Continue",
+  "@commonContinue": {
+    "description": "Primary button to go to the next step"
+  },
+  "commonSkip": "Skip",
+  "@commonSkip": {
+    "description": "Button to skip an optional step"
+  },
+  "commonRetry": "Try again",
+  "@commonRetry": {
+    "description": "Retry after an error"
+  },
+  "commonDone": "Done",
+  "@commonDone": {
+    "description": "Finish a step"
+  },
+  "commonNext": "Next",
+  "@commonNext": {
+    "description": "Go to the next question or card"
+  },
+  "commonPrevious": "Previous",
+  "@commonPrevious": {
+    "description": "Go to the previous question or card"
+  },
+  "commonCheck": "Check",
+  "@commonCheck": {
+    "description": "Check my answer"
+  },
+  "commonCopied": "Copied",
+  "@commonCopied": {
+    "description": "Snackbar after copying text"
+  },
+  "commonOffline": "You are offline. Your progress is saved and will sync later.",
+  "@commonOffline": {
+    "description": "Banner when there is no internet"
+  },
+  "commonError": "Something went wrong. Please try again.",
+  "@commonError": {
+    "description": "Generic error"
+  },
+  "commonLoading": "Loading…",
+  "@commonLoading": {
+    "description": "Loading indicator label"
+  },
+  "premiumLabel": "Premium",
+  "@premiumLabel": {
+    "description": "Small label on locked items. Must not mention price or how to buy."
+  },
+  "betaLabel": "Beta",
+  "@betaLabel": {
+    "description": "Label on new questions that are still being checked"
+  },
+  "onboardingGradeTitle": "Which grade are you in?",
+  "@onboardingGradeTitle": {
+    "description": "First onboarding screen"
+  },
+  "onboardingGradeOption": "Grade {grade}",
+  "@onboardingGradeOption": {
+    "description": "Grade choice button",
+    "placeholders": {
+      "grade": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingHookTitle": "Warm-up: 5 easy questions",
+  "@onboardingHookTitle": {
+    "description": "Title of the 30-second hook quiz"
+  },
+  "warmUpHint": "Just for fun. Tap an answer.",
+  "@warmUpHint": {
+    "description": "Line under the warm-up title"
+  },
+  "warmUpProgress": "Question {current} of {total}",
+  "@warmUpProgress": {
+    "description": "Warm-up progress",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "warmUpPraise1": "Great job!",
+  "@warmUpPraise1": {
+    "description": "Warm-up: right answer (1st, 4th question)"
+  },
+  "warmUpPraise2": "You got it!",
+  "@warmUpPraise2": {
+    "description": "Warm-up: right answer (2nd, 5th question)"
+  },
+  "warmUpPraise3": "Nice one!",
+  "@warmUpPraise3": {
+    "description": "Warm-up: right answer (3rd question)"
+  },
+  "warmUpAlmost": "Almost! The answer is {answer}.",
+  "@warmUpAlmost": {
+    "description": "Warm-up: wrong answer, kind",
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "warmUpNext": "Next",
+  "@warmUpNext": {
+    "description": "Warm-up: next question"
+  },
+  "warmUpSeeResult": "See my result",
+  "@warmUpSeeResult": {
+    "description": "Warm-up: after the last question"
+  },
+  "onboardingHookResult": "You got {correct} of {total}!",
+  "@onboardingHookResult": {
+    "description": "Hook quiz result",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingHookResultGreat": "Great start! Now let's set up your plan.",
+  "@onboardingHookResultGreat": {
+    "description": "Under the warm-up result, 4 or 5 right"
+  },
+  "onboardingHookResultGood": "Good start! Guul 12 will help you get even better.",
+  "@onboardingHookResultGood": {
+    "description": "Under the warm-up result, 0 to 3 right"
+  },
+  "onboardingStreamTitle": "Which stream are you in?",
+  "@onboardingStreamTitle": {
+    "description": "Stream choice screen (Grades 11–12)"
+  },
+  "streamNatural": "Natural Science",
+  "@streamNatural": {
+    "description": "Natural science stream"
+  },
+  "streamSocial": "Social Science",
+  "@streamSocial": {
+    "description": "Social science stream"
+  },
+  "onboardingRetakerTitle": "Are you taking the national exam again?",
+  "@onboardingRetakerTitle": {
+    "description": "Retaker question"
+  },
+  "onboardingRetakerYes": "Yes, I am retaking it",
+  "@onboardingRetakerYes": {
+    "description": "Retaker answer yes"
+  },
+  "onboardingRetakerNo": "No, first time",
+  "@onboardingRetakerNo": {
+    "description": "Retaker answer no"
+  },
+  "onboardingRegionTitle": "Where do you study?",
+  "@onboardingRegionTitle": {
+    "description": "Region and city screen"
+  },
+  "onboardingRegionLabel": "Region",
+  "@onboardingRegionLabel": {
+    "description": "Region field label"
+  },
+  "onboardingCityLabel": "City or town",
+  "@onboardingCityLabel": {
+    "description": "City field label"
+  },
+  "onboardingGenderTitle": "Gender (optional)",
+  "@onboardingGenderTitle": {
+    "description": "Optional gender screen"
+  },
+  "genderFemale": "Female",
+  "@genderFemale": {
+    "description": "Gender option"
+  },
+  "genderMale": "Male",
+  "@genderMale": {
+    "description": "Gender option"
+  },
+  "onboardingPrivacyNote": "Used only for anonymous statistics. Never shown to other students.",
+  "@onboardingPrivacyNote": {
+    "description": "Privacy note under personal questions"
+  },
+  "onboardingTargetTitle": "What is your target score?",
+  "@onboardingTargetTitle": {
+    "description": "Target score screen"
+  },
+  "onboardingTargetValue": "{score} / 600",
+  "@onboardingTargetValue": {
+    "description": "Target score value",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingReminderTitle": "When should we remind you to study?",
+  "@onboardingReminderTitle": {
+    "description": "Reminder time screen"
+  },
+  "onboardingReminderPick": "Pick a time",
+  "@onboardingReminderPick": {
+    "description": "Button to open time picker"
+  },
+  "onboardingFinish": "Start studying",
+  "@onboardingFinish": {
+    "description": "Last onboarding button"
+  },
+  "navHome": "Home",
+  "@navHome": {
+    "description": "Bottom navigation"
+  },
+  "navStudy": "Study",
+  "@navStudy": {
+    "description": "Bottom navigation"
+  },
+  "navMe": "Me",
+  "@navMe": {
+    "description": "Bottom navigation"
+  },
+  "homeExamCountdown": "{days, plural, =0{Exam is today} =1{1 day to the exam} other{{days} days to the exam}}",
+  "@homeExamCountdown": {
+    "description": "Exam countdown",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "homeExamDates": "{gregorian} · {ethiopian} E.C.",
+  "@homeExamDates": {
+    "description": "Exam date in Gregorian and Ethiopian calendars",
+    "placeholders": {
+      "gregorian": {
+        "type": "String"
+      },
+      "ethiopian": {
+        "type": "String"
+      }
+    }
+  },
+  "homeExamDateUnknown": "Exam date not announced yet",
+  "@homeExamDateUnknown": {
+    "description": "When admin has not set the exam date"
+  },
+  "homeQuick10": "Quick 10",
+  "@homeQuick10": {
+    "description": "Start a quick 10-question practice"
+  },
+  "homeContinueStudying": "Continue studying",
+  "@homeContinueStudying": {
+    "description": "Card to open the study section"
+  },
+  "homeNoContentYet": "Open a subject in Study to download it for offline use.",
+  "@homeNoContentYet": {
+    "description": "Home when nothing is downloaded yet"
+  },
+  "studyTitle": "Study",
+  "@studyTitle": {
+    "description": "Study tab title"
+  },
+  "studyGrade": "Grade {grade}",
+  "@studyGrade": {
+    "description": "Grade heading",
+    "placeholders": {
+      "grade": {
+        "type": "int"
+      }
+    }
+  },
+  "studyUnit": "Unit {number}: {title}",
+  "@studyUnit": {
+    "description": "Unit heading",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "studyChapter": "{number}. {title}",
+  "@studyChapter": {
+    "description": "Chapter row",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "studyEmpty": "Content for this part is coming soon.",
+  "@studyEmpty": {
+    "description": "Nothing in this list yet"
+  },
+  "studyCatalogEmpty": "Connect to the internet once to download the list of subjects.",
+  "@studyCatalogEmpty": {
+    "description": "No catalog downloaded yet"
+  },
+  "studyDownloadedOffline": "Saved for offline use",
+  "@studyDownloadedOffline": {
+    "description": "Chapter is stored on the phone"
+  },
+  "chapterSummary": "Summary",
+  "@chapterSummary": {
+    "description": "Chapter section"
+  },
+  "chapterKeyPoints": "Key points",
+  "@chapterKeyPoints": {
+    "description": "Summary heading"
+  },
+  "chapterFormulas": "Formulas",
+  "@chapterFormulas": {
+    "description": "Summary heading"
+  },
+  "chapterSolvedExercises": "Solved exercises",
+  "@chapterSolvedExercises": {
+    "description": "Chapter section"
+  },
+  "chapterSolvedStep": "Step {number}",
+  "@chapterSolvedStep": {
+    "description": "Solved exercise step",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterShowSolution": "Show solution",
+  "@chapterShowSolution": {
+    "description": "Reveal the steps of a solved exercise"
+  },
+  "chapterAnswer": "Answer",
+  "@chapterAnswer": {
+    "description": "Final answer label"
+  },
+  "chapterFlashcards": "Flashcards",
+  "@chapterFlashcards": {
+    "description": "Chapter section"
+  },
+  "chapterFlashcardHint": "Tap to flip · swipe for the next card",
+  "@chapterFlashcardHint": {
+    "description": "Hint on flashcards"
+  },
+  "chapterFlashcardCount": "{current} / {total}",
+  "@chapterFlashcardCount": {
+    "description": "Flashcard position",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterQuiz": "Chapter quiz",
+  "@chapterQuiz": {
+    "description": "Chapter section"
+  },
+  "chapterQuizCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@chapterQuizCount": {
+    "description": "Number of questions",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterSummaryPdf": "Chapter summary (PDF)",
+  "@chapterSummaryPdf": {
+    "description": "Opens the printable Guul 12 summary of this chapter"
+  },
+  "chapterTextbook": "Official textbook (PDF)",
+  "@chapterTextbook": {
+    "description": "Link to the Ministry of Education textbook"
+  },
+  "chapterVideo": "Video lesson",
+  "@chapterVideo": {
+    "description": "Video slot (shown only when a video exists)"
+  },
+  "practiceTitle": "Practice",
+  "@practiceTitle": {
+    "description": "Practice mode picker title"
+  },
+  "practiceModeQuick10": "Quick 10",
+  "@practiceModeQuick10": {
+    "description": "Practice mode"
+  },
+  "practiceModeChapter": "This chapter",
+  "@practiceModeChapter": {
+    "description": "Practice mode"
+  },
+  "practiceModeUnit": "Whole unit",
+  "@practiceModeUnit": {
+    "description": "Practice mode"
+  },
+  "practiceModeMixed": "Mixed",
+  "@practiceModeMixed": {
+    "description": "Practice mode"
+  },
+  "practiceModeTimed": "Timed (1 minute each)",
+  "@practiceModeTimed": {
+    "description": "Practice mode"
+  },
+  "practiceModeWrongOnly": "Only my wrong answers",
+  "@practiceModeWrongOnly": {
+    "description": "Practice mode"
+  },
+  "practiceModeQuickRevise": "Quick revise (5 minutes)",
+  "@practiceModeQuickRevise": {
+    "description": "Practice mode: key points then 5 questions"
+  },
+  "practiceNoQuestions": "No questions here yet. Study a chapter first.",
+  "@practiceNoQuestions": {
+    "description": "Empty practice set"
+  },
+  "practiceNoWrongAnswers": "No wrong answers to practise. Well done!",
+  "@practiceNoWrongAnswers": {
+    "description": "Wrong-only mode with nothing to show"
+  },
+  "practiceQuestionOf": "Question {current} of {total}",
+  "@practiceQuestionOf": {
+    "description": "Progress label",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceCorrect": "Correct!",
+  "@practiceCorrect": {
+    "description": "Feedback after a correct answer"
+  },
+  "practiceWrong": "Not quite",
+  "@practiceWrong": {
+    "description": "Feedback after a wrong answer"
+  },
+  "practiceCorrectAnswer": "Correct answer: {answer}",
+  "@practiceCorrectAnswer": {
+    "description": "Shows the right answer",
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceExplanation": "Explanation",
+  "@practiceExplanation": {
+    "description": "Explanation heading"
+  },
+  "practiceTimeLeft": "{seconds}s",
+  "@practiceTimeLeft": {
+    "description": "Seconds left in timed mode",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceTimeUp": "Time is up",
+  "@practiceTimeUp": {
+    "description": "Timed mode ran out"
+  },
+  "practiceReadAloud": "Read aloud",
+  "@practiceReadAloud": {
+    "description": "Read the question with text-to-speech"
+  },
+  "practiceBookmark": "Bookmark",
+  "@practiceBookmark": {
+    "description": "Bookmark the question"
+  },
+  "practiceBookmarked": "Bookmarked",
+  "@practiceBookmarked": {
+    "description": "Question is bookmarked"
+  },
+  "practiceTrue": "True",
+  "@practiceTrue": {
+    "description": "True/false option"
+  },
+  "practiceFalse": "False",
+  "@practiceFalse": {
+    "description": "True/false option"
+  },
+  "practiceTypeAnswer": "Type your answer",
+  "@practiceTypeAnswer": {
+    "description": "Fill-in field hint"
+  },
+  "practiceTypeNumber": "Type a number",
+  "@practiceTypeNumber": {
+    "description": "Numeric field hint"
+  },
+  "practiceUnit": "Unit: {unit}",
+  "@practiceUnit": {
+    "description": "Expected unit for numeric answers",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceChooseAll": "Choose all that apply",
+  "@practiceChooseAll": {
+    "description": "Multiple answers hint"
+  },
+  "practiceMatchHint": "Tap an item on the left, then its match on the right",
+  "@practiceMatchHint": {
+    "description": "Matching hint"
+  },
+  "practiceOrderHint": "Drag to put the items in the right order",
+  "@practiceOrderHint": {
+    "description": "Ordering hint"
+  },
+  "practiceMoveUp": "Move up",
+  "@practiceMoveUp": {
+    "description": "Accessibility: move item up"
+  },
+  "practiceMoveDown": "Move down",
+  "@practiceMoveDown": {
+    "description": "Accessibility: move item down"
+  },
+  "practiceReadPassage": "Read the passage",
+  "@practiceReadPassage": {
+    "description": "Passage heading"
+  },
+  "practiceResultTitle": "Practice finished",
+  "@practiceResultTitle": {
+    "description": "Result screen title"
+  },
+  "practiceResultScore": "{correct} / {total} correct",
+  "@practiceResultScore": {
+    "description": "Result score",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceResultSaved": "Saved. It will sync when you are online.",
+  "@practiceResultSaved": {
+    "description": "Attempt stored for upload"
+  },
+  "practiceResultSynced": "Saved and synced.",
+  "@practiceResultSynced": {
+    "description": "Attempt uploaded"
+  },
+  "practiceAgain": "Practise again",
+  "@practiceAgain": {
+    "description": "Restart practice"
+  },
+  "meTitle": "Me",
+  "@meTitle": {
+    "description": "Profile tab title"
+  },
+  "meStudentId": "Your student ID",
+  "@meStudentId": {
+    "description": "Private student ID label"
+  },
+  "meStudentIdHelp": "Private. Keep it for support.",
+  "@meStudentIdHelp": {
+    "description": "Help under student ID. Must not mention payment."
+  },
+  "meCopy": "Copy",
+  "@meCopy": {
+    "description": "Copy button"
+  },
+  "mePremiumUntil": "Premium until {date}",
+  "@mePremiumUntil": {
+    "description": "Premium status",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "meFree": "Free plan",
+  "@meFree": {
+    "description": "Not Premium. Must not mention price or buying."
+  },
+  "meSignIn": "Sign in with Google",
+  "@meSignIn": {
+    "description": "Google sign-in button"
+  },
+  "meSignInWhy": "Keep your progress if you change phones.",
+  "@meSignInWhy": {
+    "description": "Why sign in"
+  },
+  "meSignedIn": "Signed in",
+  "@meSignedIn": {
+    "description": "Shown when signed in with Google"
+  },
+  "meSignInFailed": "Sign-in did not work. Please try again.",
+  "@meSignInFailed": {
+    "description": "Sign-in error"
+  },
+  "meSignInConflict": "This phone is already signed in with another Google account.",
+  "@meSignInConflict": {
+    "description": "Account conflict"
+  },
+  "meSettings": "Settings",
+  "@meSettings": {
+    "description": "Settings heading"
+  },
+  "meTheme": "Theme",
+  "@meTheme": {
+    "description": "Theme setting"
+  },
+  "meThemeSystem": "Same as phone",
+  "@meThemeSystem": {
+    "description": "Theme option"
+  },
+  "meThemeLight": "Light",
+  "@meThemeLight": {
+    "description": "Theme option"
+  },
+  "meThemeDark": "Dark",
+  "@meThemeDark": {
+    "description": "Theme option"
+  },
+  "meGrade": "Grade",
+  "@meGrade": {
+    "description": "Profile field"
+  },
+  "meStream": "Stream",
+  "@meStream": {
+    "description": "Profile field"
+  },
+  "meEditProfile": "Edit study profile",
+  "@meEditProfile": {
+    "description": "Open onboarding answers again"
+  },
+  "meVersion": "Version {version}",
+  "@meVersion": {
+    "description": "App version",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "ethiopianMonth": "{month, select, m1{Meskerem} m2{Tikimt} m3{Hidar} m4{Tahsas} m5{Tir} m6{Yekatit} m7{Megabit} m8{Miyazya} m9{Ginbot} m10{Sene} m11{Hamle} m12{Nehase} m13{Pagume} other{?}}",
+  "@ethiopianMonth": {
+    "description": "Ethiopian month name; month is m1…m13",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "ethiopianDate": "{month} {day}, {year}",
+  "@ethiopianDate": {
+    "description": "Ethiopian date, e.g. Sene 23, 2018",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "day": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingStep": "Step {current} of {total}",
+  "@onboardingStep": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingCityHint": "For example: Jijiga",
+  "@onboardingCityHint": {
+    "description": "UI text."
+  },
+  "onboardingReminderNone": "No reminder",
+  "@onboardingReminderNone": {
+    "description": "UI text."
+  },
+  "onboardingReminderAt": "Every day at {time}",
+  "@onboardingReminderAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "regionName": "{code, select, somali{Somali} addis_ababa{Addis Ababa} afar{Afar} amhara{Amhara} benishangul_gumuz{Benishangul-Gumuz} central_ethiopia{Central Ethiopia} dire_dawa{Dire Dawa} gambela{Gambela} harari{Harari} oromia{Oromia} sidama{Sidama} south_ethiopia{South Ethiopia} south_west_ethiopia{South West Ethiopia} tigray{Tigray} other{Other}}",
+  "@regionName": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "updateRequiredTitle": "Please update Guul 12",
+  "@updateRequiredTitle": {
+    "description": "UI text."
+  },
+  "updateRequiredBody": "This version is too old. Update the app from Google Play to continue.",
+  "@updateRequiredBody": {
+    "description": "UI text."
+  },
+  "studyNoChapters": "No chapters yet.",
+  "@studyNoChapters": {
+    "description": "UI text."
+  },
+  "studyPremiumLocked": "🔒 Premium",
+  "@studyPremiumLocked": {
+    "description": "UI text."
+  },
+  "chapterPractice": "Practise this chapter",
+  "@chapterPractice": {
+    "description": "UI text."
+  },
+  "chapterNoSummary": "The summary for this chapter is coming soon.",
+  "@chapterNoSummary": {
+    "description": "UI text."
+  },
+  "chapterOffline": "Connect to the internet once to download this chapter.",
+  "@chapterOffline": {
+    "description": "UI text."
+  },
+  "practiceChooseMode": "How do you want to practise?",
+  "@practiceChooseMode": {
+    "description": "UI text."
+  },
+  "practiceFinish": "Finish",
+  "@practiceFinish": {
+    "description": "UI text."
+  },
+  "practiceReview": "Review your answers",
+  "@practiceReview": {
+    "description": "UI text."
+  },
+  "practiceYourAnswer": "Your answer: {answer}",
+  "@practiceYourAnswer": {
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceNoAnswer": "No answer",
+  "@practiceNoAnswer": {
+    "description": "UI text."
+  },
+  "practiceLeaveTitle": "Stop practising?",
+  "@practiceLeaveTitle": {
+    "description": "UI text."
+  },
+  "practiceLeaveBody": "Answers so far will not be saved.",
+  "@practiceLeaveBody": {
+    "description": "UI text."
+  },
+  "practiceLeave": "Stop",
+  "@practiceLeave": {
+    "description": "UI text."
+  },
+  "practiceStay": "Keep going",
+  "@practiceStay": {
+    "description": "UI text."
+  },
+  "practicePairs": "{count, plural, =1{1 pair made} other{{count} pairs made}}",
+  "@practicePairs": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceClearPairs": "Clear pairs",
+  "@practiceClearPairs": {
+    "description": "UI text."
+  },
+  "meSignInUnavailable": "Google sign-in is not available yet.",
+  "@meSignInUnavailable": {
+    "description": "UI text."
+  },
+  "meRegion": "Region",
+  "@meRegion": {
+    "description": "UI text."
+  },
+  "meTarget": "Target score",
+  "@meTarget": {
+    "description": "UI text."
+  },
+  "meReminder": "Study reminder",
+  "@meReminder": {
+    "description": "UI text."
+  },
+  "meRetaker": "Retaking the exam",
+  "@meRetaker": {
+    "description": "UI text."
+  },
+  "meGender": "Gender",
+  "@meGender": {
+    "description": "UI text."
+  },
+  "meNotSet": "Not set",
+  "@meNotSet": {
+    "description": "UI text."
+  },
+  "meStudentIdPending": "Connect to the internet once to get your student ID.",
+  "@meStudentIdPending": {
+    "description": "UI text."
+  },
+  "meSave": "Save",
+  "@meSave": {
+    "description": "UI text."
+  },
+  "practicePickAnswer": "Choose or type an answer first.",
+  "@practicePickAnswer": {
+    "description": "Shown when Check is pressed with no answer."
+  },
+  "meStudyProfile": "Study profile",
+  "@meStudyProfile": {
+    "description": "Section title on Me."
+  },
+  "practiceReport": "Report a problem",
+  "@practiceReport": {
+    "description": "Report a problem sheet."
+  },
+  "reportTitle": "What is wrong with this question?",
+  "@reportTitle": {
+    "description": "Report a problem sheet."
+  },
+  "reportWrongAnswer": "The answer is wrong",
+  "@reportWrongAnswer": {
+    "description": "Report a problem sheet."
+  },
+  "reportUnclear": "The question is unclear",
+  "@reportUnclear": {
+    "description": "Report a problem sheet."
+  },
+  "reportTypo": "There is a typo",
+  "@reportTypo": {
+    "description": "Report a problem sheet."
+  },
+  "reportOther": "Something else",
+  "@reportOther": {
+    "description": "Report a problem sheet."
+  },
+  "reportNote": "Tell us more (optional)",
+  "@reportNote": {
+    "description": "Report a problem sheet."
+  },
+  "reportSend": "Send",
+  "@reportSend": {
+    "description": "Report a problem sheet."
+  },
+  "reportThanks": "Thank you! We will check this question.",
+  "@reportThanks": {
+    "description": "Report a problem sheet."
+  },
+  "navExams": "Exams",
+  "@navExams": {
+    "description": "Bottom navigation"
+  },
+  "examsTitle": "Exams",
+  "@examsTitle": {
+    "description": "Exams tab title"
+  },
+  "examsMocks": "Mock exams",
+  "@examsMocks": {
+    "description": "Section: fixed mock exams of a subject"
+  },
+  "examsMore": "More exams",
+  "@examsMore": {
+    "description": "Section: random, weak-topic and mistakes exams"
+  },
+  "examsPast": "Your results",
+  "@examsPast": {
+    "description": "Section: finished exams"
+  },
+  "examsMockInfo": "{questions, plural, =1{1 question} other{{questions} questions}} · {minutes} min",
+  "@examsMockInfo": {
+    "description": "Mock list subtitle",
+    "placeholders": {
+      "questions": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "examsRandom": "Random mock",
+  "@examsRandom": {
+    "description": "A random exam from the whole subject"
+  },
+  "examsRandomBody": "50 questions from the whole subject. One free each day.",
+  "@examsRandomBody": {
+    "description": "Random mock subtitle"
+  },
+  "examsWeak": "My weak topics",
+  "@examsWeak": {
+    "description": "Exam from the student's weakest chapters"
+  },
+  "examsWeakBody": "Questions from the chapters where you score lowest.",
+  "@examsWeakBody": {
+    "description": "Weak topics subtitle"
+  },
+  "examsMistakes": "My mistakes",
+  "@examsMistakes": {
+    "description": "Exam from questions answered wrong"
+  },
+  "examsMistakesBody": "Questions you got wrong before.",
+  "@examsMistakesBody": {
+    "description": "Mistakes subtitle"
+  },
+  "examsNoMocks": "Mock exams appear here when you are online.",
+  "@examsNoMocks": {
+    "description": "Empty mock list"
+  },
+  "examsContinue": "Continue your exam",
+  "@examsContinue": {
+    "description": "Banner for an exam in progress"
+  },
+  "examsContinueBody": "{title} · {time} left",
+  "@examsContinueBody": {
+    "description": "Exam in progress subtitle",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "examsResultLine": "{correct} / {total} · {date}",
+  "@examsResultLine": {
+    "description": "Past result subtitle",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "examsFinishFirst": "Finish or submit your current exam first.",
+  "@examsFinishFirst": {
+    "description": "Starting a second exam"
+  },
+  "examsDailyLimit": "Today's free random mock is used. A new one is ready tomorrow.",
+  "@examsDailyLimit": {
+    "description": "Random mock daily limit reached"
+  },
+  "examsNeedPractice": "Practise some questions in this subject first.",
+  "@examsNeedPractice": {
+    "description": "No data yet for a personal exam"
+  },
+  "examsNoQuestions": "There are no questions for this exam yet.",
+  "@examsNoQuestions": {
+    "description": "Server has no questions"
+  },
+  "examsOffline": "No internet. Connect and try again.",
+  "@examsOffline": {
+    "description": "Exam download failed offline"
+  },
+  "examIntroRules": "Real Exam Mode",
+  "@examIntroRules": {
+    "description": "Intro dialog heading"
+  },
+  "examIntroTimer": "The timer starts now and does not stop, even if you leave the app.",
+  "@examIntroTimer": {
+    "description": "Rule 1"
+  },
+  "examIntroNoFeedback": "You see right and wrong answers only at the end.",
+  "@examIntroNoFeedback": {
+    "description": "Rule 2"
+  },
+  "examIntroChange": "You can change answers and flag questions to check again.",
+  "@examIntroChange": {
+    "description": "Rule 3"
+  },
+  "examIntroAuto": "When the time is up, the exam is submitted for you.",
+  "@examIntroAuto": {
+    "description": "Rule 4"
+  },
+  "examStart": "Start exam",
+  "@examStart": {
+    "description": "Intro dialog button"
+  },
+  "examQuestionOf": "Question {current} of {total}",
+  "@examQuestionOf": {
+    "description": "Exam app bar",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "examTimeLeft": "Time left: {time}",
+  "@examTimeLeft": {
+    "description": "Exam timer for screen readers",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "examFlag": "Flag for review",
+  "@examFlag": {
+    "description": "Exam flag button"
+  },
+  "examUnflag": "Remove flag",
+  "@examUnflag": {
+    "description": "Exam flag button when flagged"
+  },
+  "examMap": "All questions",
+  "@examMap": {
+    "description": "Opens the question map"
+  },
+  "examClear": "Clear answer",
+  "@examClear": {
+    "description": "Removes the chosen answer"
+  },
+  "examPrevious": "Previous",
+  "@examPrevious": {
+    "description": "Exam navigation"
+  },
+  "examSubmit": "Submit exam",
+  "@examSubmit": {
+    "description": "Exam submit button"
+  },
+  "examSubmitTitle": "Submit the exam?",
+  "@examSubmitTitle": {
+    "description": "Submit confirm title"
+  },
+  "examSubmitBody": "Answered: {answered} of {total}\nNot answered: {unanswered}\nFlagged: {flagged}",
+  "@examSubmitBody": {
+    "description": "Submit confirm body",
+    "placeholders": {
+      "answered": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "unanswered": {
+        "type": "int"
+      },
+      "flagged": {
+        "type": "int"
+      }
+    }
+  },
+  "examKeepGoing": "Keep going",
+  "@examKeepGoing": {
+    "description": "Submit confirm: cancel"
+  },
+  "examLeaveTitle": "Leave the exam?",
+  "@examLeaveTitle": {
+    "description": "Back button during an exam"
+  },
+  "examLeaveBody": "The timer keeps running. You can come back from the Exams tab.",
+  "@examLeaveBody": {
+    "description": "Back button during an exam"
+  },
+  "examLeave": "Leave",
+  "@examLeave": {
+    "description": "Leave the exam"
+  },
+  "examTimeUp": "Time is up. Your exam was submitted.",
+  "@examTimeUp": {
+    "description": "Shown when the exam auto-submits"
+  },
+  "examMapAnswered": "Answered",
+  "@examMapAnswered": {
+    "description": "Question map legend"
+  },
+  "examMapFlagged": "Flagged",
+  "@examMapFlagged": {
+    "description": "Question map legend"
+  },
+  "examMapEmpty": "Not answered",
+  "@examMapEmpty": {
+    "description": "Question map legend"
+  },
+  "examResultTitle": "Exam result",
+  "@examResultTitle": {
+    "description": "Result screen title"
+  },
+  "examResultPercent": "{percent}% right",
+  "@examResultPercent": {
+    "description": "Result percent",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultEstimate": "Estimated exam score: {low}–{high} out of {max}",
+  "@examResultEstimate": {
+    "description": "Likely real score range",
+    "placeholders": {
+      "low": {
+        "type": "int"
+      },
+      "high": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultEstimateNote": "An estimate from this practice, not a promise.",
+  "@examResultEstimateNote": {
+    "description": "Note under the estimate"
+  },
+  "examResultTime": "Time used: {time}",
+  "@examResultTime": {
+    "description": "Result time",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "examResultBetterThan": "Better than {percent}% of Guul 12 students",
+  "@examResultBetterThan": {
+    "description": "Comparison with other students",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultNotEnough": "Not enough students have taken this mock yet. Check again later.",
+  "@examResultNotEnough": {
+    "description": "Comparison not available yet"
+  },
+  "examResultConnect": "Saved on your phone. Connect to the internet to compare with other students.",
+  "@examResultConnect": {
+    "description": "Comparison needs upload"
+  },
+  "examResultRefresh": "Check again",
+  "@examResultRefresh": {
+    "description": "Refresh comparison"
+  },
+  "examResultChapters": "By chapter",
+  "@examResultChapters": {
+    "description": "Section title"
+  },
+  "examResultChapterScore": "{correct} / {total}",
+  "@examResultChapterScore": {
+    "description": "Chapter score",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "examResultReview": "Review answers",
+  "@examResultReview": {
+    "description": "Toggle the answer review"
+  },
+  "examResultHideReview": "Hide answers",
+  "@examResultHideReview": {
+    "description": "Toggle the answer review"
+  },
+  "examResultPractiseWeakest": "Practise your weakest chapter",
+  "@examResultPractiseWeakest": {
+    "description": "Button to practise the weakest chapter"
+  },
+  "examResultNotFound": "This result is not on this phone.",
+  "@examResultNotFound": {
+    "description": "Unknown result id"
+  },
+  "examUnknownChapter": "Chapter {id}",
+  "@examUnknownChapter": {
+    "description": "Chapter not in the catalog",
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  "practiceModeReview": "Review due questions",
+  "@practiceModeReview": {
+    "description": "Spaced repetition practice mode"
+  },
+  "practiceNothingToReview": "Nothing to review today. Well done!",
+  "@practiceNothingToReview": {
+    "description": "Review mode with nothing due"
+  },
+  "homeReviewDue": "{count, plural, =1{1 question to review today} other{{count} questions to review today}}",
+  "@homeReviewDue": {
+    "description": "Home card: spaced repetition",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeMistakes": "My mistakes",
+  "@homeMistakes": {
+    "description": "Home: mistakes notebook"
+  },
+  "homeMistakesBody": "{count, plural, =1{1 question to learn} other{{count} questions to learn}}",
+  "@homeMistakesBody": {
+    "description": "Home: mistakes count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mistakesTitle": "My mistakes",
+  "@mistakesTitle": {
+    "description": "Mistakes notebook title"
+  },
+  "mistakesEmpty": "No mistakes yet. Questions you get wrong appear here.",
+  "@mistakesEmpty": {
+    "description": "Empty notebook"
+  },
+  "mistakesPractise": "Practise my mistakes",
+  "@mistakesPractise": {
+    "description": "Starts wrong-only practice"
+  },
+  "mistakesReviewToday": "Review today",
+  "@mistakesReviewToday": {
+    "description": "SRS state"
+  },
+  "mistakesNextReview": "Next review: {date}",
+  "@mistakesNextReview": {
+    "description": "SRS state",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceModeSmart": "Smart practice",
+  "@practiceModeSmart": {
+    "description": "Adaptive practice mode"
+  },
+  "navProgress": "Progress",
+  "@navProgress": {
+    "description": "Bottom navigation"
+  },
+  "progressTitle": "Progress",
+  "@progressTitle": {
+    "description": "Progress tab title"
+  },
+  "progressAnswered": "{count, plural, =1{1 question answered} other{{count} questions answered}}",
+  "@progressAnswered": {
+    "description": "Progress summary",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progressAccuracy": "{percent}% right (last answer to each question)",
+  "@progressAccuracy": {
+    "description": "Progress summary",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "progressEmpty": "Study a chapter and answer some questions to see your progress here.",
+  "@progressEmpty": {
+    "description": "Progress empty state"
+  },
+  "progressWeak": "Weak topics",
+  "@progressWeak": {
+    "description": "Progress section"
+  },
+  "progressWeakNone": "No weak topics right now. Keep practising!",
+  "@progressWeakNone": {
+    "description": "No weak chapters"
+  },
+  "progressStrength": "Chapter strength",
+  "@progressStrength": {
+    "description": "Progress section: mastery by subject"
+  },
+  "progressChapterInfo": "{score}/100 · {answered} answered",
+  "@progressChapterInfo": {
+    "description": "Chapter mastery line",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "answered": {
+        "type": "int"
+      }
+    }
+  },
+  "progressSubjectStarted": "{started} of {total, plural, =1{1 chapter} other{{total} chapters}} started",
+  "@progressSubjectStarted": {
+    "description": "Under a subject on the Progress screen",
+    "placeholders": {
+      "started": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "progressPractise": "Practise",
+  "@progressPractise": {
+    "description": "Practise a weak chapter"
+  },
+  "masteryNotStarted": "Not started",
+  "@masteryNotStarted": {
+    "description": "Mastery level"
+  },
+  "masteryLearning": "Learning",
+  "@masteryLearning": {
+    "description": "Mastery level"
+  },
+  "masteryGood": "Good",
+  "@masteryGood": {
+    "description": "Mastery level"
+  },
+  "masteryStrong": "Strong",
+  "@masteryStrong": {
+    "description": "Mastery level"
+  },
+  "planTitle": "Today's plan",
+  "@planTitle": {
+    "description": "Study plan title"
+  },
+  "planSummary": "{count, plural, =1{1 task} other{{count} tasks}} · {minutes} min",
+  "@planSummary": {
+    "description": "Plan size",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "planAllDone": "All done for today. Great work!",
+  "@planAllDone": {
+    "description": "Every task ticked"
+  },
+  "planMinutesLabel": "Minutes a day",
+  "@planMinutesLabel": {
+    "description": "Daily study time picker"
+  },
+  "planMinutesValue": "{minutes} min",
+  "@planMinutesValue": {
+    "description": "Minutes",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "planTaskReview": "{count, plural, =1{Review 1 due question} other{Review {count} due questions}}",
+  "@planTaskReview": {
+    "description": "Plan task",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planTaskLearn": "Study {chapter}",
+  "@planTaskLearn": {
+    "description": "Plan task: a new chapter",
+    "placeholders": {
+      "chapter": {
+        "type": "String"
+      }
+    }
+  },
+  "planTaskPractise": "Practise {chapter}",
+  "@planTaskPractise": {
+    "description": "Plan task: a weak chapter",
+    "placeholders": {
+      "chapter": {
+        "type": "String"
+      }
+    }
+  },
+  "planTaskSmart": "Smart practice",
+  "@planTaskSmart": {
+    "description": "Plan task"
+  },
+  "planTaskMock": "Full mock exam",
+  "@planTaskMock": {
+    "description": "Plan task on mock days"
+  },
+  "planTaskDone": "Done",
+  "@planTaskDone": {
+    "description": "Checkbox label for a plan task"
+  },
+  "planStageNoDate": "No exam date yet. Learn a little every day.",
+  "@planStageNoDate": {
+    "description": "Plan stage"
+  },
+  "planStageLearn": "{days, plural, =1{Learning time. Revision starts tomorrow.} other{Learning time. Revision starts in {days} days.}}",
+  "@planStageLearn": {
+    "description": "Plan stage",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "planStageRevision": "Revision time: weak chapters first and a mock exam every week.",
+  "@planStageRevision": {
+    "description": "Plan stage: last 30 days"
+  },
+  "planStageLastDay": "The exam is tomorrow. Do a short review, then rest well.",
+  "@planStageLastDay": {
+    "description": "Plan stage"
+  },
+  "planStageExamDay": "Exam day. Good luck!",
+  "@planStageExamDay": {
+    "description": "Plan stage"
+  },
+  "planStageOver": "The exam date has passed.",
+  "@planStageOver": {
+    "description": "Plan stage"
+  },
+  "planPace": "{count, plural, =1{Study about 1 new chapter a week to finish before revision.} other{Study about {count} new chapters a week to finish before revision.}}",
+  "@planPace": {
+    "description": "Weekly pace",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planAtTarget": "{done} of {total} chapters at your target",
+  "@planAtTarget": {
+    "description": "Chapters whose score reached the target",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "planEmpty": "Nothing to plan yet. Open a subject in Study to begin.",
+  "@planEmpty": {
+    "description": "No chapters available"
+  },
+  "streakDays": "{days, plural, =0{No streak yet} =1{1-day streak} other{{days}-day streak}}",
+  "@streakDays": {
+    "description": "Streak",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "streakToday": "{count} / {goal} questions today",
+  "@streakToday": {
+    "description": "Daily goal progress",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "streakGoalDone": "Daily goal reached",
+  "@streakGoalDone": {
+    "description": "Daily goal reached"
+  },
+  "engagementBest": "{days, plural, =1{Best: 1 day} other{Best: {days} days}}",
+  "@engagementBest": {
+    "description": "Best streak",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "engagementXp": "{xp} XP",
+  "@engagementXp": {
+    "description": "Total points",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "engagementWeekXp": "{xp} XP this week",
+  "@engagementWeekXp": {
+    "description": "Points since Monday",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "badgesTitle": "Badges",
+  "@badgesTitle": {
+    "description": "Badges section"
+  },
+  "badgesEarned": "{count} of {total} earned",
+  "@badgesEarned": {
+    "description": "Badges earned",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "badgeProgress": "{value} / {goal}",
+  "@badgeProgress": {
+    "description": "Badge progress",
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "badgeEarned": "Earned",
+  "@badgeEarned": {
+    "description": "Badge earned label"
+  },
+  "badgeFirstSteps": "First steps",
+  "@badgeFirstSteps": {
+    "description": "Badge"
+  },
+  "badgeFirstStepsBody": "Answer 10 questions",
+  "@badgeFirstStepsBody": {
+    "description": "Badge goal"
+  },
+  "badgeHundred": "Hundred",
+  "@badgeHundred": {
+    "description": "Badge"
+  },
+  "badgeHundredBody": "Answer 100 questions",
+  "@badgeHundredBody": {
+    "description": "Badge goal"
+  },
+  "badgeThousand": "Thousand",
+  "@badgeThousand": {
+    "description": "Badge"
+  },
+  "badgeThousandBody": "Answer 1,000 questions",
+  "@badgeThousandBody": {
+    "description": "Badge goal"
+  },
+  "badgeStreak3": "3 days in a row",
+  "@badgeStreak3": {
+    "description": "Badge"
+  },
+  "badgeStreak3Body": "Reach the daily goal 3 days in a row",
+  "@badgeStreak3Body": {
+    "description": "Badge goal"
+  },
+  "badgeStreak7": "One week",
+  "@badgeStreak7": {
+    "description": "Badge"
+  },
+  "badgeStreak7Body": "Reach the daily goal 7 days in a row",
+  "@badgeStreak7Body": {
+    "description": "Badge goal"
+  },
+  "badgeStreak30": "One month",
+  "@badgeStreak30": {
+    "description": "Badge"
+  },
+  "badgeStreak30Body": "Reach the daily goal 30 days in a row",
+  "@badgeStreak30Body": {
+    "description": "Badge goal"
+  },
+  "badgeFirstExam": "First exam",
+  "@badgeFirstExam": {
+    "description": "Badge"
+  },
+  "badgeFirstExamBody": "Finish a mock exam",
+  "@badgeFirstExamBody": {
+    "description": "Badge goal"
+  },
+  "badgeExamStar": "Exam star",
+  "@badgeExamStar": {
+    "description": "Badge"
+  },
+  "badgeExamStarBody": "Score 80% or more in an exam",
+  "@badgeExamStarBody": {
+    "description": "Badge goal"
+  },
+  "badgeStrongChapter": "Strong chapter",
+  "@badgeStrongChapter": {
+    "description": "Badge"
+  },
+  "badgeStrongChapterBody": "Make a chapter Strong",
+  "@badgeStrongChapterBody": {
+    "description": "Badge goal"
+  },
+  "badgeStrongTen": "Ten strong",
+  "@badgeStrongTen": {
+    "description": "Badge"
+  },
+  "badgeStrongTenBody": "Make 10 chapters Strong",
+  "@badgeStrongTenBody": {
+    "description": "Badge goal"
+  },
+  "reminderTitle": "Time to practise",
+  "@reminderTitle": {
+    "description": "Daily reminder title"
+  },
+  "reminderKeepStreak": "{remaining, plural, =1{Keep your {streak}-day streak: 1 more question today.} other{Keep your {streak}-day streak: {remaining} more questions today.}}",
+  "@reminderKeepStreak": {
+    "description": "Reminder when a streak is running",
+    "placeholders": {
+      "streak": {
+        "type": "int"
+      },
+      "remaining": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderStart": "{remaining, plural, =1{1 more question today to reach your daily goal.} other{{remaining} questions today to reach your daily goal.}}",
+  "@reminderStart": {
+    "description": "Reminder without a streak",
+    "placeholders": {
+      "remaining": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderChannel": "Daily reminder",
+  "@reminderChannel": {
+    "description": "Android notification channel name"
+  },
+  "identityTitle": "Nickname and avatar",
+  "@identityTitle": {
+    "description": "Identity screen title"
+  },
+  "identityWhy": "Only your nickname and avatar are shown on the leaderboard and in battles. Your grade, region and other details are never shown.",
+  "@identityWhy": {
+    "description": "Privacy note"
+  },
+  "identityNickname": "Nickname",
+  "@identityNickname": {
+    "description": "Field label"
+  },
+  "identityNicknameHelp": "3 to 24 letters, numbers, spaces, dots, dashes or underscores. Don't use your real full name.",
+  "@identityNicknameHelp": {
+    "description": "Field help"
+  },
+  "identityNicknameInvalid": "Use 3 to 24 letters, numbers, spaces, dots, dashes or underscores.",
+  "@identityNicknameInvalid": {
+    "description": "Client-side validation"
+  },
+  "identityNicknameRefused": "Please choose another nickname.",
+  "@identityNicknameRefused": {
+    "description": "Server refused the nickname"
+  },
+  "identityAvatar": "Avatar",
+  "@identityAvatar": {
+    "description": "Section"
+  },
+  "identityAvatarOption": "Avatar {number}",
+  "@identityAvatarOption": {
+    "description": "Semantics label for an avatar choice",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "identitySave": "Save",
+  "@identitySave": {
+    "description": "Button"
+  },
+  "identityNeedsInternet": "Saving your nickname needs the internet. Please try again when you are online.",
+  "@identityNeedsInternet": {
+    "description": "Offline"
+  },
+  "identitySaved": "Saved",
+  "@identitySaved": {
+    "description": "Snack bar"
+  },
+  "identityNone": "Choose a nickname",
+  "@identityNone": {
+    "description": "Me screen when no nickname"
+  },
+  "leaderboardTitle": "Weekly leaderboard",
+  "@leaderboardTitle": {
+    "description": "Screen title"
+  },
+  "leaderboardWeek": "Week of {date} · resets every Monday",
+  "@leaderboardWeek": {
+    "description": "Week line",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "leaderboardMyRank": "You are number {rank} this week",
+  "@leaderboardMyRank": {
+    "description": "My rank",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "leaderboardNoPoints": "Answer questions this week to get on the board.",
+  "@leaderboardNoPoints": {
+    "description": "No points yet"
+  },
+  "leaderboardNeedNickname": "Choose a nickname to appear on the board. Only your nickname and avatar are shown.",
+  "@leaderboardNeedNickname": {
+    "description": "No nickname"
+  },
+  "leaderboardEmpty": "Nobody has points this week yet. Be the first!",
+  "@leaderboardEmpty": {
+    "description": "Empty list"
+  },
+  "leaderboardOffline": "The leaderboard needs the internet.",
+  "@leaderboardOffline": {
+    "description": "Offline"
+  },
+  "leaderboardRank": "#{rank}",
+  "@leaderboardRank": {
+    "description": "Rank number",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "leaderboardYou": "You",
+  "@leaderboardYou": {
+    "description": "Marks my row"
+  },
+  "leaderboardOpen": "See the weekly leaderboard",
+  "@leaderboardOpen": {
+    "description": "Progress entry"
+  },
+  "nicknameReportAction": "Report nickname",
+  "@nicknameReportAction": {
+    "description": "Menu item and tooltip on another student's leaderboard or battle row"
+  },
+  "nicknameReportTitle": "Report \"{nickname}\"",
+  "@nicknameReportTitle": {
+    "description": "Title of the report sheet",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "nicknameReportIntro": "Staff will check this nickname. The student is not told who reported it.",
+  "@nicknameReportIntro": {
+    "description": "Explains what happens"
+  },
+  "nicknameReportRude": "Rude or hurtful",
+  "@nicknameReportRude": {
+    "description": "Reason"
+  },
+  "nicknameReportImpersonation": "Pretends to be someone else",
+  "@nicknameReportImpersonation": {
+    "description": "Reason"
+  },
+  "nicknameReportOther": "Other",
+  "@nicknameReportOther": {
+    "description": "Reason"
+  },
+  "nicknameReportNote": "Anything else? (optional)",
+  "@nicknameReportNote": {
+    "description": "Optional note field"
+  },
+  "nicknameReportSend": "Send report",
+  "@nicknameReportSend": {
+    "description": "Button"
+  },
+  "nicknameReportCancel": "Cancel",
+  "@nicknameReportCancel": {
+    "description": "Button"
+  },
+  "nicknameReportThanks": "Thanks. Staff will check this nickname.",
+  "@nicknameReportThanks": {
+    "description": "Shown after sending"
+  },
+  "nicknameReportOffline": "You need the internet to send this report.",
+  "@nicknameReportOffline": {
+    "description": "Offline error"
+  },
+  "nicknameReportLimit": "You have sent many reports today. Please try again tomorrow.",
+  "@nicknameReportLimit": {
+    "description": "Daily limit reached"
+  },
+  "challengeTitle": "Daily challenge",
+  "@challengeTitle": {
+    "description": "Title"
+  },
+  "challengeDone": "Today: {correct} / {total} right",
+  "@challengeDone": {
+    "description": "Home card after playing",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "challengeBetterThan": "Better than {percent}% of today's players",
+  "@challengeBetterThan": {
+    "description": "Comparison",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "challengeCompareLater": "Come back later to compare with other players",
+  "@challengeCompareLater": {
+    "description": "Not enough players yet"
+  },
+  "battleTitle": "Battles",
+  "@battleTitle": {
+    "description": "Title"
+  },
+  "battleQuick": "Quick battle",
+  "@battleQuick": {
+    "description": "Button: random opponent"
+  },
+  "battleQuickBody": "Play against a student of your grade",
+  "@battleQuickBody": {
+    "description": "Help"
+  },
+  "battleFriend": "Battle a friend",
+  "@battleFriend": {
+    "description": "Button"
+  },
+  "battleFriendBody": "Get a code to give your friend",
+  "@battleFriendBody": {
+    "description": "Help"
+  },
+  "battleJoin": "Join with a code",
+  "@battleJoin": {
+    "description": "Button"
+  },
+  "battleCodeLabel": "Battle code",
+  "@battleCodeLabel": {
+    "description": "Field"
+  },
+  "battleCodeTitle": "Your battle code",
+  "@battleCodeTitle": {
+    "description": "Dialog title"
+  },
+  "battleCodeBody": "Tell your friend this code. They open Battles, tap \"Join with a code\" and enter it. The battle is open for 48 hours.",
+  "@battleCodeBody": {
+    "description": "Dialog"
+  },
+  "battlePlayNow": "Play now",
+  "@battlePlayNow": {
+    "description": "Button"
+  },
+  "battleCancel": "Cancel",
+  "@battleCancel": {
+    "description": "Button"
+  },
+  "battleMine": "My battles",
+  "@battleMine": {
+    "description": "Section"
+  },
+  "battleNone": "No battles yet.",
+  "@battleNone": {
+    "description": "Empty list"
+  },
+  "battleWaitingOpponent": "Waiting for an opponent",
+  "@battleWaitingOpponent": {
+    "description": "Opponent not found yet"
+  },
+  "battleYourTurn": "Your turn",
+  "@battleYourTurn": {
+    "description": "Status"
+  },
+  "battleTheirTurn": "Waiting for {name}",
+  "@battleTheirTurn": {
+    "description": "Status",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "battleWon": "You won",
+  "@battleWon": {
+    "description": "Status"
+  },
+  "battleLost": "You lost",
+  "@battleLost": {
+    "description": "Status"
+  },
+  "battleDraw": "Draw",
+  "@battleDraw": {
+    "description": "Status"
+  },
+  "battleExpired": "Ended without a result",
+  "@battleExpired": {
+    "description": "Status"
+  },
+  "battleScore": "You {mine} · {name} {theirs}",
+  "@battleScore": {
+    "description": "Both scores",
+    "placeholders": {
+      "mine": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      },
+      "theirs": {
+        "type": "String"
+      }
+    }
+  },
+  "battleNeedNickname": "Choose a nickname to start battles. Only your nickname and avatar are shown.",
+  "@battleNeedNickname": {
+    "description": "No nickname"
+  },
+  "battleErrorNotFound": "No battle has this code.",
+  "@battleErrorNotFound": {
+    "description": "Join error"
+  },
+  "battleErrorFull": "Another student already joined this battle.",
+  "@battleErrorFull": {
+    "description": "Join error"
+  },
+  "battleErrorOwn": "This is your own battle. Give the code to a friend.",
+  "@battleErrorOwn": {
+    "description": "Join error"
+  },
+  "battleErrorExpired": "This battle has ended.",
+  "@battleErrorExpired": {
+    "description": "Join error"
+  },
+  "battleErrorLimit": "That's enough battles for today. Come back tomorrow!",
+  "@battleErrorLimit": {
+    "description": "Daily limit"
+  },
+  "battleOffline": "Battles need the internet.",
+  "@battleOffline": {
+    "description": "Offline"
+  },
+  "battleRule": "10 questions · 60 seconds each · more right answers wins; on a tie, the faster one",
+  "@battleRule": {
+    "description": "Rules line"
+  },
+  "battleClose": "Close",
+  "@battleClose": {
+    "description": "Button"
+  },
+  "inviteTitle": "Invite friends",
+  "@inviteTitle": {
+    "description": "Title and Me entry"
+  },
+  "inviteMeBody": "Study together: share your invite code",
+  "@inviteMeBody": {
+    "description": "Me entry subtitle"
+  },
+  "inviteYourCode": "Your invite code",
+  "@inviteYourCode": {
+    "description": "Label"
+  },
+  "inviteRewardRule": "When a friend you invite answers {answers} questions, you get {days} days of Premium (up to {max} friends a month).",
+  "@inviteRewardRule": {
+    "description": "Rule with reward",
+    "placeholders": {
+      "answers": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteNoRewardRule": "Invite friends to study for the exam with you.",
+  "@inviteNoRewardRule": {
+    "description": "Rule without reward"
+  },
+  "inviteShare": "Share",
+  "@inviteShare": {
+    "description": "Button"
+  },
+  "inviteCopy": "Copy",
+  "@inviteCopy": {
+    "description": "Button"
+  },
+  "inviteCopied": "Code copied",
+  "@inviteCopied": {
+    "description": "Snack bar"
+  },
+  "inviteShareText": "Study for the Grade 12 national exam with Guul 12. My invite code: {code}. {link}",
+  "@inviteShareText": {
+    "description": "Shared message",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      },
+      "link": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteStats": "Friends joined: {joined} · Counted: {valid} · Premium days earned: {days}",
+  "@inviteStats": {
+    "description": "Stats",
+    "placeholders": {
+      "joined": {
+        "type": "int"
+      },
+      "valid": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteEnterTitle": "Did a friend invite you?",
+  "@inviteEnterTitle": {
+    "description": "Section"
+  },
+  "inviteEnterLabel": "Friend's invite code",
+  "@inviteEnterLabel": {
+    "description": "Field"
+  },
+  "inviteEnterButton": "Use code",
+  "@inviteEnterButton": {
+    "description": "Button"
+  },
+  "inviteEntered": "Thanks! Your friend's code is saved.",
+  "@inviteEntered": {
+    "description": "Success"
+  },
+  "inviteErrorNotFound": "No student has this code.",
+  "@inviteErrorNotFound": {
+    "description": "Error"
+  },
+  "inviteErrorOwn": "That's your own code. Share it with friends instead.",
+  "@inviteErrorOwn": {
+    "description": "Error"
+  },
+  "inviteErrorAlready": "You already used a friend's code.",
+  "@inviteErrorAlready": {
+    "description": "Error"
+  },
+  "inviteErrorTooLate": "Codes can only be used in your first days with the app.",
+  "@inviteErrorTooLate": {
+    "description": "Error"
+  },
+  "inviteOffline": "Invites need the internet.",
+  "@inviteOffline": {
+    "description": "Offline"
+  },
+  "examsRewardTitle": "One more random exam?",
+  "@examsRewardTitle": {
+    "description": "Dialog title"
+  },
+  "examsRewardBody": "You used today's free random exam. Watch a short video to unlock one more today.",
+  "@examsRewardBody": {
+    "description": "Dialog body"
+  },
+  "examsRewardWatch": "Watch video",
+  "@examsRewardWatch": {
+    "description": "Button"
+  },
+  "examsRewardNotNow": "Not now",
+  "@examsRewardNotNow": {
+    "description": "Button"
+  },
+  "examsRewardNotFinished": "The video was not finished, so nothing was unlocked.",
+  "@examsRewardNotFinished": {
+    "description": "Snack bar"
+  },
+  "examsRewardLimit": "That's all the extra exams for today. Come back tomorrow!",
+  "@examsRewardLimit": {
+    "description": "Snack bar"
+  },
+  "explainMore": "Explain more",
+  "@explainMore": {
+    "description": "Button"
+  },
+  "explainLocked": "Explain more · 🔒 Premium",
+  "@explainLocked": {
+    "description": "Locked label for free students"
+  },
+  "explainTitle": "More explanation",
+  "@explainTitle": {
+    "description": "Sheet title"
+  },
+  "explainAiNote": "Written by AI. It may contain mistakes. If something looks wrong, report the question.",
+  "@explainAiNote": {
+    "description": "Warning under AI text"
+  },
+  "explainHelpful": "Helpful",
+  "@explainHelpful": {
+    "description": "Button"
+  },
+  "explainNotHelpful": "Not helpful",
+  "@explainNotHelpful": {
+    "description": "Button"
+  },
+  "explainThanks": "Thanks for telling us!",
+  "@explainThanks": {
+    "description": "After voting"
+  },
+  "explainLimit": "That's all the extra explanations for today. Come back tomorrow!",
+  "@explainLimit": {
+    "description": "Daily limit"
+  },
+  "explainUnavailable": "Explain more is not available right now. Please try again later.",
+  "@explainUnavailable": {
+    "description": "AI down or budget used"
+  },
+  "explainOffline": "Explain more needs the internet.",
+  "@explainOffline": {
+    "description": "Offline"
+  },
+  "premiumEnding": "Your Premium ends on {date}.",
+  "@premiumEnding": {
+    "description": "Neutral note, no instructions",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumEnded": "Your Premium ended on {date}.",
+  "@premiumEnded": {
+    "description": "Neutral note, no instructions",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "meDelete": "Delete my account",
+  "@meDelete": {
+    "description": "Button"
+  },
+  "meDeleteTitle": "Delete your account?",
+  "@meDeleteTitle": {
+    "description": "Dialog title"
+  },
+  "meDeleteBody": "This deletes your study profile, answers, results, bookmarks, nickname, battles and invites from our server, and resets the app on this phone. Any Premium time is lost. This cannot be undone.",
+  "@meDeleteBody": {
+    "description": "Dialog body"
+  },
+  "meDeleteConfirm": "Delete",
+  "@meDeleteConfirm": {
+    "description": "Button"
+  },
+  "meDeleteCancel": "Cancel",
+  "@meDeleteCancel": {
+    "description": "Button"
+  },
+  "meDeleteOffline": "Deleting your account needs the internet.",
+  "@meDeleteOffline": {
+    "description": "Offline"
+  },
+  "meDeleteDone": "Your account was deleted.",
+  "@meDeleteDone": {
+    "description": "Snack bar"
+  },
+  "walkSkip": "Skip",
+  "@walkSkip": {
+    "description": "Skip the welcome slides"
+  },
+  "walkNext": "Next",
+  "@walkNext": {
+    "description": "Next welcome slide"
+  },
+  "walkStart": "Let's start",
+  "@walkStart": {
+    "description": "Button on the last welcome slide"
+  },
+  "walkPage": "Page {page} of {total}",
+  "@walkPage": {
+    "description": "Screen-reader label of the slide dots",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "walk1Title": "Learn in short, clear lessons",
+  "@walk1Title": {
+    "description": "Welcome slide 1 title"
+  },
+  "walk1Body": "Every chapter has a short summary, solved examples and flashcards. They work offline too.",
+  "@walk1Body": {
+    "description": "Welcome slide 1 text"
+  },
+  "walk2Title": "Practise like the real exam",
+  "@walk2Title": {
+    "description": "Welcome slide 2 title"
+  },
+  "walk2Body": "Quick practice, a daily challenge and full mock exams with a timer show you where you stand.",
+  "@walk2Body": {
+    "description": "Welcome slide 2 text"
+  },
+  "walk3Title": "A little every day adds up",
+  "@walk3Title": {
+    "description": "Welcome slide 3 title"
+  },
+  "walk3Body": "Keep your streak, watch your progress grow and reach your target score.",
+  "@walk3Body": {
+    "description": "Welcome slide 3 text"
+  },
+  "homeGreeting": "{part, select, morning{Good morning!} afternoon{Good afternoon!} other{Good evening!}}",
+  "@homeGreeting": {
+    "description": "Home greeting by time of day",
+    "placeholders": {
+      "part": {
+        "type": "String"
+      }
+    }
+  },
+  "homeGreetingName": "{part, select, morning{Good morning, {name}!} afternoon{Good afternoon, {name}!} other{Good evening, {name}!}}",
+  "@homeGreetingName": {
+    "description": "Home greeting with the nickname",
+    "placeholders": {
+      "part": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeMoodStart": "Ready to learn something new today?",
+  "@homeMoodStart": {
+    "description": "Home: no answers yet today"
+  },
+  "homeMoodGoing": "{count, plural, =1{1 more question to reach today's goal} other{{count} more questions to reach today's goal}}",
+  "@homeMoodGoing": {
+    "description": "Home: some answers today",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeMoodDone": "Today's goal is done. Amazing!",
+  "@homeMoodDone": {
+    "description": "Home: goal reached"
+  },
+  "homeGoalLabel": "Today's goal",
+  "@homeGoalLabel": {
+    "description": "Under the goal ring"
+  },
+  "homeGoalRing": "{done} of {goal} questions today",
+  "@homeGoalRing": {
+    "description": "Screen-reader label of the goal ring",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "homeContinueTitle": "Continue where you left off",
+  "@homeContinueTitle": {
+    "description": "Big card: last chapter"
+  },
+  "homeStartTitle": "Start your first lesson",
+  "@homeStartTitle": {
+    "description": "Big card: nothing studied yet"
+  },
+  "homeStartBody": "Pick a subject and open a chapter. It takes about 5 minutes.",
+  "@homeStartBody": {
+    "description": "Big card text: nothing studied yet"
+  },
+  "homeForYou": "For you today",
+  "@homeForYou": {
+    "description": "Home section title"
+  },
+  "homeSubjects": "Your subjects",
+  "@homeSubjects": {
+    "description": "Home section title"
+  },
+  "homeSeeAll": "See all",
+  "@homeSeeAll": {
+    "description": "Link to the Study tab"
+  },
+  "homeTipTitle": "Tip of the day",
+  "@homeTipTitle": {
+    "description": "Home tip card title"
+  },
+  "homeTip": "{n, select, 0{Study for 25 minutes, then rest for 5. Your brain remembers more.} 1{Got a question wrong? Read the explanation. Mistakes are how you learn.} 2{Explain a topic out loud as if you were the teacher.} 3{Sleep well before an exam. A rested brain thinks faster.} 4{Do a little every day. Ten questions a day is better than a hundred once a week.} 5{Read the whole question twice before you choose an answer.} 6{Start with the subject you like least while your mind is fresh.} 7{Write short notes in your own words after each chapter.} 8{In a mock exam, skip a hard question and come back to it later.} other{Drink water and take short walks. Your body helps your brain.}}",
+  "@homeTip": {
+    "description": "Tip of the day (one per day, in turn)",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "homeTileChallenge": "{count} questions",
+  "@homeTileChallenge": {
+    "description": "Challenge tile line",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeTileBattle": "Play another student",
+  "@homeTileBattle": {
+    "description": "Battles tile line"
+  },
+  "homeTileQuick": "10 mixed questions",
+  "@homeTileQuick": {
+    "description": "Quick 10 tile line"
+  },
+  "homeTileSmart": "Your weak spots",
+  "@homeTileSmart": {
+    "description": "Smart practice tile line"
+  },
+  "homeTileReview": "Review",
+  "@homeTileReview": {
+    "description": "Review tile title"
+  },
+  "homeTileMore": "More practice",
+  "@homeTileMore": {
+    "description": "Tile that opens all practice modes"
+  },
+  "homeTileMoreLine": "Pick a mode",
+  "@homeTileMoreLine": {
+    "description": "More practice tile line"
+  },
+  "homeWeekTitle": "This week",
+  "@homeWeekTitle": {
+    "description": "Home card: the 7 days of this week"
+  },
+  "homeWeekCount": "{count, plural, =0{Reach the daily goal to fill a day} =1{Goal reached on 1 day this week} other{Goal reached on {count} days this week}}",
+  "@homeWeekCount": {
+    "description": "Line on the week card",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeekDayReached": "{day}: goal reached",
+  "@homeWeekDayReached": {
+    "description": "Screen-reader label of a filled day",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "homeWeekDayCount": "{day}: {count} of {goal} questions",
+  "@homeWeekDayCount": {
+    "description": "Screen-reader label of a day not filled",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeakTitle": "Your weakest chapter",
+  "@homeWeakTitle": {
+    "description": "Home card title"
+  },
+  "homeWeakLine": "{subject} · {percent}% right so far",
+  "@homeWeakLine": {
+    "description": "Home weak-chapter card line",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeakPercent": "{percent}% right so far",
+  "@homeWeakPercent": {
+    "description": "Home weak-chapter card line when the subject is unknown",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "homeWeakAction": "Practise it",
+  "@homeWeakAction": {
+    "description": "Button on the weak-chapter card"
+  },
+  "homeBadgeNext": "Next badge: {name}",
+  "@homeBadgeNext": {
+    "description": "Home next-badge card title",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBecomePremium": "Become Premium",
+  "@homeBecomePremium": {
+    "description": "Home card for free students"
+  },
+  "homeBecomePremiumLine": "All mock exams, offline subjects, AI help and no ads",
+  "@homeBecomePremiumLine": {
+    "description": "Line on the Become Premium card"
+  },
+  "homePremiumOn": "Premium is on",
+  "@homePremiumOn": {
+    "description": "Home card for Premium students"
+  },
+  "homePremiumUntil": "Until {date}",
+  "@homePremiumUntil": {
+    "description": "Premium end date on Home",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumPageTitle": "Guul 12 Premium",
+  "@premiumPageTitle": {
+    "description": "Premium page title"
+  },
+  "premiumPageIntro": "Everything in the free app, plus:",
+  "@premiumPageIntro": {
+    "description": "Premium page intro"
+  },
+  "premiumBenefitMocks": "All mock exams",
+  "@premiumBenefitMocks": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitMocksBody": "Every subject's third full mock exam, plus the \"My weak topics\" and \"My mistakes\" exams.",
+  "@premiumBenefitMocksBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumBenefitOffline": "Whole subjects offline",
+  "@premiumBenefitOffline": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitOfflineBody": "Download a whole subject at once and study without internet.",
+  "@premiumBenefitOfflineBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumBenefitExplain": "Explain more (AI)",
+  "@premiumBenefitExplain": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitExplainBody": "Ask for a simpler, step-by-step explanation of a question.",
+  "@premiumBenefitExplainBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumBenefitNoAds": "No ads",
+  "@premiumBenefitNoAds": {
+    "description": "Premium benefit"
+  },
+  "premiumBenefitNoAdsBody": "Study without any ads.",
+  "@premiumBenefitNoAdsBody": {
+    "description": "Premium benefit text"
+  },
+  "premiumActiveNote": "Your Premium is on. Thank you!",
+  "@premiumActiveNote": {
+    "description": "Premium page note for Premium students"
+  },
+  "premiumContactTitle": "How to get Premium",
+  "@premiumContactTitle": {
+    "description": "Premium page section (owner decision #40)"
+  },
+  "premiumContactStep1": "Message us on WhatsApp or Telegram.",
+  "@premiumContactStep1": {
+    "description": "Premium page step 1"
+  },
+  "premiumContactStep2": "Send us your student ID:",
+  "@premiumContactStep2": {
+    "description": "Premium page step 2"
+  },
+  "premiumContactStep3": "We turn on your Premium. Pull down on Home to see it.",
+  "@premiumContactStep3": {
+    "description": "Premium page step 3"
+  },
+  "premiumContactCopy": "Copy student ID",
+  "@premiumContactCopy": {
+    "description": "Copy button"
+  },
+  "premiumContactCopied": "Student ID copied",
+  "@premiumContactCopied": {
+    "description": "Snack bar after copying"
+  },
+  "premiumContactWhatsApp": "Message us on WhatsApp",
+  "@premiumContactWhatsApp": {
+    "description": "Button (owner decision #40)"
+  },
+  "premiumContactTelegram": "Message us on Telegram",
+  "@premiumContactTelegram": {
+    "description": "Button (owner decision #40)"
+  },
+  "premiumContactMessage": "Hello! I want Guul 12 Premium. My student ID: {id}",
+  "@premiumContactMessage": {
+    "description": "Pre-filled WhatsApp message",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumContactMessageNoId": "Hello! I want Guul 12 Premium.",
+  "@premiumContactMessageNoId": {
+    "description": "Pre-filled WhatsApp message when the student ID is not known yet"
+  }
+}

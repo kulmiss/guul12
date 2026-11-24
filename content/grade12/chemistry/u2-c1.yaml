@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Oxidation is loss of electrons (oxidation number goes up); reduction is gain of electrons (oxidation number goes down). Memory aid: OIL RIG – Oxidation Is Loss, Reduction Is Gain. Both always happen together in a redox reaction.'
+    - 'The oxidising agent is reduced; the reducing agent is oxidised.'
+    - 'Oxidation-number rules: an element on its own is 0; a simple ion equals its charge; O is usually −2 (−1 in peroxides); H is usually +1; the numbers in a compound add up to 0, and in an ion they add up to its charge.'
+    - 'A galvanic (voltaic) cell turns the energy of a spontaneous redox reaction into electrical energy. Oxidation happens at the anode (negative) and reduction at the cathode (positive). Electrons flow through the wire from anode to cathode; a salt bridge keeps the solutions electrically neutral.'
+    - 'Standard electrode potentials $E^\circ$ are measured against the standard hydrogen electrode (0.00 V). The higher (more positive) $E^\circ$, the stronger the oxidising agent; the more negative, the stronger the reducing agent.'
+    - '$E^\circ_{cell} = E^\circ_{cathode} - E^\circ_{anode}$. A positive $E^\circ_{cell}$ means the reaction is spontaneous. Example (Daniell cell): $E^\circ_{cell} = +0.34 - (-0.76) = +1.10$ V.'
+    - 'Cell notation: $\text{Zn} | \text{Zn}^{2+} \| \text{Cu}^{2+} | \text{Cu}$ (anode on the left, cathode on the right, $\|$ is the salt bridge).'
+    - 'Everyday redox: batteries (dry cell, lead–acid, lithium-ion), rusting of iron, and its prevention by painting or galvanising with zinc.'
+  formulas:
+    - label: Cell potential
+      latex: 'E^\circ_{cell} = E^\circ_{cathode} - E^\circ_{anode}'
+    - label: Daniell cell reaction
+      latex: '\text{Zn} + \text{Cu}^{2+} \rightarrow \text{Zn}^{2+} + \text{Cu}'
+    - label: Some standard potentials
+      latex: '\text{Mg}^{2+}/\text{Mg}: -2.37,\ \text{Zn}^{2+}/\text{Zn}: -0.76,\ \text{Cu}^{2+}/\text{Cu}: +0.34,\ \text{Ag}^+/\text{Ag}: +0.80\ \text{V}'
+
+solved_exercises:
+  - uid: g12-chemistry-2-1-se01
+    problem: 'Find the oxidation number of chromium in $\text{K}_2\text{Cr}_2\text{O}_7$.'
+    steps:
+      - 'K is +1 and O is −2: $2(+1) + 2x + 7(-2) = 0$.'
+      - '$2 + 2x - 14 = 0$, so $2x = 12$ and $x = +6$.'
+    answer: '+6'
+  - uid: g12-chemistry-2-1-se02
+    problem: 'A cell is made from $\text{Mg}^{2+}/\text{Mg}$ ($-2.37$ V) and $\text{Cu}^{2+}/\text{Cu}$ ($+0.34$ V). Which is the anode, and what is $E^\circ_{cell}$?'
+    steps:
+      - 'Mg has the more negative potential, so it is oxidised: Mg is the anode.'
+      - '$E^\circ_{cell} = 0.34 - (-2.37) = 2.71$ V.'
+    answer: 'Mg is the anode; 2.71 V'
+  - uid: g12-chemistry-2-1-se03
+    problem: 'In $\text{Zn} + \text{Cu}^{2+} \rightarrow \text{Zn}^{2+} + \text{Cu}$, name the species oxidised and the oxidising agent.'
+    steps:
+      - 'Zn goes from 0 to +2: it loses electrons, so Zn is oxidised.'
+      - '$\text{Cu}^{2+}$ goes from +2 to 0: it is reduced, so $\text{Cu}^{2+}$ is the oxidising agent.'
+    answer: 'Zn is oxidised; $\text{Cu}^{2+}$ is the oxidising agent'
+
+flashcards:
+  - {uid: g12-chemistry-2-1-fc01, term: Oxidation, definition: 'Loss of electrons; increase in oxidation number.'}
+  - {uid: g12-chemistry-2-1-fc02, term: Reduction, definition: 'Gain of electrons; decrease in oxidation number.'}
+  - {uid: g12-chemistry-2-1-fc03, term: Oxidising agent, definition: 'Species that accepts electrons and is itself reduced.'}
+  - {uid: g12-chemistry-2-1-fc04, term: Galvanic cell, definition: 'Cell that turns chemical energy from a spontaneous redox reaction into electricity.'}
+  - {uid: g12-chemistry-2-1-fc05, term: Anode, definition: 'Electrode where oxidation happens (negative in a galvanic cell).'}
+  - {uid: g12-chemistry-2-1-fc06, term: Cathode, definition: 'Electrode where reduction happens (positive in a galvanic cell).'}
+  - {uid: g12-chemistry-2-1-fc07, term: Salt bridge, definition: 'Connects the two half-cells and lets ions move to keep charges balanced.'}
+  - {uid: g12-chemistry-2-1-fc08, term: Standard hydrogen electrode, definition: 'Reference electrode with $E^\circ = 0.00$ V.'}
+  - {uid: g12-chemistry-2-1-fc09, term: Galvanising, definition: 'Coating iron with zinc, which corrodes first and protects the iron.'}
+
+questions:
+  - uid: g12-chemistry-2-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Oxidation is best defined as:'
+    options:
+      A: 'Gain of electrons'
+      B: 'Loss of electrons'
+      C: 'Gain of protons'
+      D: 'Loss of neutrons'
+    answer: B
+    explanation: 'OIL RIG: Oxidation Is Loss of electrons.'
+
+  - uid: g12-chemistry-2-1-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the oxidation number of sulfur in $\text{H}_2\text{SO}_4$?'
+    options:
+      A: '+6'
+      B: '+4'
+      C: '−2'
+      D: '+2'
+    answer: A
+    explanation: '$2(+1) + x + 4(-2) = 0$, so $x = +6$.'
+
+  - uid: g12-chemistry-2-1-q003
+    type: numeric
+    difficulty: 2
+    stem: 'What is the oxidation number of manganese in potassium permanganate, $\text{KMnO}_4$? (Give the number without the + sign.)'
+    answer: {value: 7, tolerance: 0}
+    explanation: '$+1 + x + 4(-2) = 0$, so $x = +7$.'
+
+  - uid: g12-chemistry-2-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the oxidation number of nitrogen in ammonia, $\text{NH}_3$?'
+    options:
+      A: '+3'
+      B: '0'
+      C: '−3'
+      D: '+5'
+    answer: C
+    explanation: '$x + 3(+1) = 0$, so $x = -3$.'
+
+  - uid: g12-chemistry-2-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the oxidation number of oxygen in hydrogen peroxide, $\text{H}_2\text{O}_2$?'
+    options:
+      A: '−2'
+      B: '0'
+      C: '+1'
+      D: '−1'
+    answer: D
+    explanation: 'In peroxides O is −1: $2(+1) + 2x = 0$, so $x = -1$.'
+
+  - uid: g12-chemistry-2-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'In $\text{Zn} + \text{Cu}^{2+} \rightarrow \text{Zn}^{2+} + \text{Cu}$, which species is the reducing agent?'
+    options:
+      A: 'Zn'
+      B: '$\text{Cu}^{2+}$'
+      C: '$\text{Zn}^{2+}$'
+      D: 'Cu'
+    answer: A
+    explanation: 'Zn gives electrons to $\text{Cu}^{2+}$, so Zn is the reducing agent (and is itself oxidised).'
+
+  - uid: g12-chemistry-2-1-q007
+    type: true_false
+    difficulty: 1
+    stem: 'In every redox reaction, oxidation and reduction happen together.'
+    answer: true
+    explanation: 'Electrons lost by one species must be gained by another.'
+
+  - uid: g12-chemistry-2-1-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'In a galvanic cell, at which electrode does oxidation take place?'
+    options:
+      A: 'The cathode'
+      B: 'The salt bridge'
+      C: 'The anode'
+      D: 'Both electrodes'
+    answer: C
+    explanation: 'Oxidation always happens at the anode; reduction at the cathode.'
+
+  - uid: g12-chemistry-2-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'In a galvanic cell, electrons flow through the external wire:'
+    options:
+      A: 'From the cathode to the anode'
+      B: 'Through the salt bridge'
+      C: 'In both directions equally'
+      D: 'From the anode to the cathode'
+    answer: D
+    explanation: 'Electrons are released by oxidation at the anode and used by reduction at the cathode.'
+
+  - uid: g12-chemistry-2-1-q010
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the job of the salt bridge in a galvanic cell?'
+    options:
+      A: 'It lets ions move so the two solutions stay electrically neutral.'
+      B: 'It carries electrons between the electrodes.'
+      C: 'It provides the metal for the electrodes.'
+      D: 'It stops the reaction.'
+    answer: A
+    explanation: 'Without a salt bridge, charge builds up in the half-cells and the current stops. Electrons travel only through the wire.'
+
+  - uid: g12-chemistry-2-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Using $E^\circ(\text{Cu}^{2+}/\text{Cu}) = +0.34$ V and $E^\circ(\text{Zn}^{2+}/\text{Zn}) = -0.76$ V, what is $E^\circ_{cell}$ for the Daniell cell?'
+    options:
+      A: '−0.42 V'
+      B: '+1.10 V'
+      C: '+0.42 V'
+      D: '−1.10 V'
+    answer: B
+    explanation: '$E^\circ_{cell} = E^\circ_{cathode} - E^\circ_{anode} = 0.34 - (-0.76) = +1.10$ V.'
+
+  - uid: g12-chemistry-2-1-q012
+    type: numeric
+    difficulty: 2
+    stem: 'A cell is made from zinc ($E^\circ = -0.76$ V) and silver ($E^\circ(\text{Ag}^+/\text{Ag}) = +0.80$ V). What is $E^\circ_{cell}$, in volts?'
+    answer: {value: 1.56, tolerance: 0, unit: V}
+    explanation: 'Silver is the cathode: $E^\circ_{cell} = 0.80 - (-0.76) = 1.56$ V.'
+
+  - uid: g12-chemistry-2-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the standard electrode potential of the standard hydrogen electrode?'
+    options:
+      A: '+1.00 V'
+      B: '−1.00 V'
+      C: '0.00 V'
+      D: '+0.34 V'
+    answer: C
+    explanation: 'The hydrogen electrode is the agreed reference, given the value 0.00 V.'
+
+  - uid: g12-chemistry-2-1-q014
+    type: single_choice
+    difficulty: 3
+    stem: 'Which of these is the strongest reducing agent? $E^\circ$ values: $\text{Mg}^{2+}/\text{Mg} = -2.37$ V, $\text{Zn}^{2+}/\text{Zn} = -0.76$ V, $\text{Cu}^{2+}/\text{Cu} = +0.34$ V, $\text{Ag}^+/\text{Ag} = +0.80$ V.'
+    options:
+      A: 'Ag'
+      B: 'Cu'
+      C: 'Zn'
+      D: 'Mg'
+    answer: D
+    explanation: 'The metal with the most negative $E^\circ$ loses electrons most easily, so Mg is the strongest reducing agent.'
+
+  - uid: g12-chemistry-2-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'A piece of zinc is placed in blue copper(II) sulfate solution. What is observed?'
+    options:
+      A: 'Nothing happens.'
+      B: 'Zinc is deposited on the copper.'
+      C: 'Copper is deposited on the zinc and the blue colour fades.'
+      D: 'The solution turns darker blue.'
+    answer: C
+    explanation: 'Zinc is more reactive: $\text{Zn} + \text{Cu}^{2+} \rightarrow \text{Zn}^{2+} + \text{Cu}$. Blue $\text{Cu}^{2+}$ ions are used up.'
+
+  - uid: g12-chemistry-2-1-q016
+    type: true_false
+    difficulty: 2
+    stem: 'A copper strip placed in zinc sulfate solution becomes coated with zinc.'
+    answer: false
+    explanation: 'Copper is less reactive than zinc ($E^\circ$ is higher), so it cannot reduce $\text{Zn}^{2+}$. No reaction happens.'
+
+  - uid: g12-chemistry-2-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'A cell reaction has a positive $E^\circ_{cell}$. This means the reaction is:'
+    options:
+      A: 'Spontaneous under standard conditions'
+      B: 'Impossible'
+      C: 'Only possible with an outside power supply'
+      D: 'Always very fast'
+    answer: A
+    explanation: 'A positive cell potential means the reaction can happen by itself. $E^\circ$ says nothing about speed.'
+
+  - uid: g12-chemistry-2-1-q018
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these are redox processes? Choose all that apply.'
+    options:
+      A: 'Rusting of iron'
+      B: 'Burning of charcoal in air'
+      C: 'Neutralising HCl with NaOH'
+      D: 'Discharging a car battery'
+    answer: [A, B, D]
+    explanation: 'Rusting, burning and battery reactions all involve electron transfer. Neutralisation is an acid–base reaction with no change in oxidation numbers.'
+
+  - uid: g12-chemistry-2-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which species is the strongest oxidising agent: $\text{F}_2$ ($E^\circ = +2.87$ V), $\text{Cl}_2$ (+1.36 V), $\text{Br}_2$ (+1.07 V) or $\text{I}_2$ (+0.54 V)?'
+    options:
+      A: '$\text{I}_2$'
+      B: '$\text{F}_2$'
+      C: '$\text{Cl}_2$'
+      D: '$\text{Br}_2$'
+    answer: B
+    explanation: 'The most positive $E^\circ$ means the strongest tendency to gain electrons.'
+
+  - uid: g12-chemistry-2-1-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'In the cell notation $\text{Zn} | \text{Zn}^{2+} \| \text{Cu}^{2+} | \text{Cu}$, what does $\|$ stand for?'
+    options:
+      A: 'The wire'
+      B: 'The anode'
+      C: 'The voltmeter'
+      D: 'The salt bridge'
+    answer: D
+    explanation: 'A single line separates phases; the double line is the salt bridge between the two half-cells.'
+
+  - uid: g12-chemistry-2-1-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Why does a zinc coating protect iron from rusting even when the coating is scratched?'
+    options:
+      A: 'Zinc is less reactive than iron.'
+      B: 'Zinc is more reactive, so it is oxidised instead of the iron.'
+      C: 'Zinc turns the iron into steel.'
+      D: 'Zinc keeps oxygen away only where it is unbroken.'
+    answer: B
+    explanation: 'Zinc acts as a sacrificial metal: it gives up electrons more easily than iron, so it corrodes first.'
+
+  - uid: g12-chemistry-2-1-q022
+    type: fill_in
+    difficulty: 1
+    stem: 'The electrode where reduction takes place is called the ________.'
+    answer: [cathode]
+    explanation: 'Reduction at the cathode, oxidation at the anode.'
+
+  - uid: g12-chemistry-2-1-q023
+    type: fill_in
+    difficulty: 2
+    stem: 'Coating iron with a layer of zinc to prevent rusting is called ________.'
+    answer: [galvanising, galvanizing, galvanisation, galvanization]
+    explanation: 'Galvanised iron sheets (korkoro) are common for roofs in Ethiopia.'
+
+  - uid: g12-chemistry-2-1-q024
+    type: true_false
+    difficulty: 1
+    stem: 'In a galvanic cell, chemical energy is changed into electrical energy.'
+    answer: true
+    explanation: 'The spontaneous redox reaction drives electrons through the external circuit.'
+
+  - uid: g12-chemistry-2-1-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each term with its meaning.'
+    left:
+      L1: 'Oxidising agent'
+      L2: 'Reducing agent'
+      L3: 'Anode'
+    right:
+      R1: 'Electrode where oxidation happens'
+      R2: 'Species that gains electrons and is reduced'
+      R3: 'Species that loses electrons and is oxidised'
+      R4: 'The tube joining the two half-cells'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'The oxidising agent takes electrons, the reducing agent gives them, and oxidation happens at the anode. The tube is the salt bridge.'
+
+  - uid: g12-chemistry-2-1-q026
+    type: ordering
+    difficulty: 2
+    stem: 'Put these metals in order from strongest reducing agent to weakest, using their standard potentials: Ag (+0.80 V), Zn (−0.76 V), Cu (+0.34 V), Mg (−2.37 V).'
+    items:
+      A: 'Ag'
+      B: 'Zn'
+      C: 'Cu'
+      D: 'Mg'
+    answer: [D, B, C, A]
+    explanation: 'The more negative the potential, the more easily the metal is oxidised: Mg > Zn > Cu > Ag.'
+
+  - uid: g12-chemistry-2-1-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'In a cell made from $\text{Mg}^{2+}/\text{Mg}$ ($-2.37$ V) and $\text{Ag}^+/\text{Ag}$ ($+0.80$ V), what is $E^\circ_{cell}$?'
+    options:
+      A: '3.17 V'
+      B: '1.57 V'
+      C: '−3.17 V'
+      D: '1.37 V'
+    answer: A
+    explanation: 'Ag is the cathode: $E^\circ_{cell} = 0.80 - (-2.37) = 3.17$ V.'
+
+  - uid: g12-chemistry-2-1-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Which battery type is rechargeable and is used in most cars?'
+    options:
+      A: 'Zinc–carbon dry cell'
+      B: 'Alkaline dry cell'
+      C: 'Lead–acid battery'
+      D: 'Lemon cell'
+    answer: C
+    explanation: 'The lead–acid battery can be recharged by passing current through it in the reverse direction.'
+
+  - uid: g12-chemistry-2-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'In $2\text{Fe}^{3+} + 2\text{I}^- \rightarrow 2\text{Fe}^{2+} + \text{I}_2$, what happens to the iodide ions?'
+    options:
+      A: 'They are reduced.'
+      B: 'They act as the oxidising agent.'
+      C: 'Their oxidation number stays the same.'
+      D: 'They are oxidised from −1 to 0.'
+    answer: D
+    explanation: 'Each $\text{I}^-$ loses an electron to form $\text{I}_2$, so iodide is oxidised and is the reducing agent.'
+
+  - uid: g12-chemistry-2-1-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'In a galvanic cell, the cathode is the:'
+    options:
+      A: 'Negative electrode, where oxidation happens'
+      B: 'Positive electrode, where reduction happens'
+      C: 'Electrode that dissolves'
+      D: 'Salt bridge'
+    answer: B
+    explanation: 'In a galvanic cell the cathode is positive and is where electrons are gained.'

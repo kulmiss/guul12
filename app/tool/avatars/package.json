@@ -1,0 +1,12 @@
+{
+  "name": "guul12-avatars",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generate.mjs"
+  },
+  "dependencies": {
+    "@dicebear/collection": "9.4.3",
+    "@dicebear/core": "9.4.3"
+  }
+}

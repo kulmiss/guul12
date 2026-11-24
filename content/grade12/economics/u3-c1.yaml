@@ -1,0 +1,371 @@
+summary:
+  key_points:
+    - 'Market failure happens when free markets do not allocate resources efficiently or fairly. Main causes: public goods, externalities, merit and demerit goods, information problems and monopoly power.'
+    - 'Public goods are non-rival (one person''s use does not reduce another''s) and non-excludable (people cannot easily be stopped from using them), such as street lighting, national defence and flood barriers. Because people can enjoy them without paying (the free-rider problem), markets under-provide them, so governments usually supply them.'
+    - 'Externalities are costs or benefits to third parties not paid for in the market. Negative externalities (factory pollution, noise) lead to over-production; positive externalities (vaccination, education, beekeeping that pollinates nearby crops) lead to under-production.'
+    - 'Merit goods (education, health care) are under-consumed if left to the market; demerit goods (cigarettes, alcohol) are over-consumed because people underestimate their harm.'
+    - 'Asymmetric information: one side of a deal knows more than the other, for example a seller of a used car who hides faults. Monopoly power lets a single seller charge higher prices and supply less.'
+    - 'Government responses: taxes on harmful activities, subsidies for beneficial ones, regulation and standards, direct provision, information campaigns, and competition laws.'
+    - 'Consumer protection safeguards buyers against unsafe products, false advertising, cheating on weights and prices, and unfair contracts. Widely recognised consumer rights include the rights to safety, information, choice, to be heard, to redress (compensation) and to consumer education; the UN-based list used by Consumers International adds basic needs and a healthy environment, making eight. World Consumer Rights Day is 15 March.'
+    - 'Ethiopia has laws on trade competition and consumer protection, enforced by a government authority, and consumers can complain about unfair practices.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-economics-3-1-se01
+    problem: 'Why will private firms rarely build street lighting on their own?'
+    steps:
+      - 'Street lighting is non-excludable: people who do not pay still benefit.'
+      - 'So people "free ride", and a firm cannot collect enough payment to cover its costs. The government provides it, paid for by taxes.'
+    answer: 'Because of the free-rider problem'
+  - uid: g12-economics-3-1-se02
+    problem: 'A tannery dumps waste in a river, harming fishermen downstream. Name the problem and one solution.'
+    steps:
+      - 'This is a negative externality: the fishermen bear a cost that the tannery does not pay.'
+      - 'Solutions: a tax or fine on pollution, or a regulation requiring the waste to be treated.'
+    answer: 'Negative externality; tax or regulation'
+  - uid: g12-economics-3-1-se03
+    problem: 'Explain why the government subsidises vaccination.'
+    steps:
+      - 'Vaccination protects not only the person vaccinated but also others, by reducing the spread of disease (a positive externality).'
+      - 'Without help, people would buy less than the socially best amount, so a subsidy or free provision raises use.'
+    answer: 'Positive externality leads to under-consumption.'
+
+flashcards:
+  - {uid: g12-economics-3-1-fc01, term: Market failure, definition: 'When free markets fail to allocate resources efficiently.'}
+  - {uid: g12-economics-3-1-fc02, term: Public good, definition: 'Non-rival and non-excludable, e.g. street lighting.'}
+  - {uid: g12-economics-3-1-fc03, term: Free-rider problem, definition: 'People use a good without paying for it.'}
+  - {uid: g12-economics-3-1-fc04, term: Negative externality, definition: 'Cost to third parties, e.g. pollution.'}
+  - {uid: g12-economics-3-1-fc05, term: Positive externality, definition: 'Benefit to third parties, e.g. vaccination.'}
+  - {uid: g12-economics-3-1-fc06, term: Merit good, definition: 'Good that is under-consumed in a free market, e.g. education.'}
+  - {uid: g12-economics-3-1-fc07, term: Demerit good, definition: 'Good that is over-consumed in a free market, e.g. cigarettes.'}
+  - {uid: g12-economics-3-1-fc08, term: Asymmetric information, definition: 'One side of a deal knows more than the other.'}
+  - {uid: g12-economics-3-1-fc09, term: Right to redress, definition: 'Consumer right to fair compensation for faulty goods or services.'}
+
+questions:
+  - uid: g12-economics-3-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'What is market failure?'
+    options:
+      A: 'A shop going out of business'
+      B: 'When free markets do not allocate resources efficiently'
+      C: 'A fall in share prices'
+      D: 'When prices rise'
+    answer: B
+    explanation: 'Public goods, externalities, information problems and monopoly are common causes.'
+
+  - uid: g12-economics-3-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the best example of a public good?'
+    options:
+      A: 'Street lighting'
+      B: 'A loaf of bread'
+      C: 'A private car'
+      D: 'A mobile phone'
+    answer: A
+    explanation: 'It is non-rival and non-excludable.'
+
+  - uid: g12-economics-3-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'A good is "non-excludable" when:'
+    options:
+      A: 'Only one person can use it at a time.'
+      B: 'It is very expensive.'
+      C: 'People who do not pay cannot easily be stopped from using it.'
+      D: 'It is made in another country.'
+    answer: C
+    explanation: 'This creates the free-rider problem.'
+
+  - uid: g12-economics-3-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do markets under-provide public goods?'
+    options:
+      A: 'They are too cheap to produce.'
+      B: 'Nobody wants them.'
+      C: 'The government bans them.'
+      D: 'People can benefit without paying, so firms cannot earn enough from them.'
+    answer: D
+    explanation: 'This is the free-rider problem.'
+
+  - uid: g12-economics-3-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'A factory''s smoke harms the health of nearby residents, who are not compensated. This is:'
+    options:
+      A: 'A negative externality'
+      B: 'A positive externality'
+      C: 'A public good'
+      D: 'A merit good'
+    answer: A
+    explanation: 'A cost falls on third parties outside the market.'
+
+  - uid: g12-economics-3-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'A beekeeper''s bees pollinate a neighbour''s fruit trees, raising the harvest. This is:'
+    options:
+      A: 'A negative externality'
+      B: 'A positive externality'
+      C: 'Asymmetric information'
+      D: 'Monopoly power'
+    answer: B
+    explanation: 'A third party gains a benefit without paying for it.'
+
+  - uid: g12-economics-3-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'In a free market, goods with negative externalities tend to be:'
+    options:
+      A: 'Under-produced'
+      B: 'Not produced at all'
+      C: 'Over-produced'
+      D: 'Produced at exactly the right amount'
+    answer: C
+    explanation: 'Producers ignore the cost to others, so they make too much.'
+
+  - uid: g12-economics-3-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policy best reduces a negative externality such as pollution?'
+    options:
+      A: 'A subsidy for the polluting firm'
+      B: 'Removing all environmental rules'
+      C: 'Lowering the price of the product'
+      D: 'A tax or fine on pollution'
+    answer: D
+    explanation: 'Making the polluter pay brings private costs closer to social costs.'
+
+  - uid: g12-economics-3-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a merit good?'
+    options:
+      A: 'Education'
+      B: 'Cigarettes'
+      C: 'Alcohol'
+      D: 'Gambling'
+    answer: A
+    explanation: 'Merit goods are under-consumed if left to the market.'
+
+  - uid: g12-economics-3-1-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do governments often tax cigarettes heavily?'
+    options:
+      A: 'Cigarettes are merit goods.'
+      B: 'They are demerit goods that are over-consumed and cause harm to smokers and others.'
+      C: 'They are public goods.'
+      D: 'To increase smoking'
+    answer: B
+    explanation: 'Higher prices discourage smoking and raise revenue for health care.'
+
+  - uid: g12-economics-3-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'A seller knows a used car has engine problems but the buyer does not. This is an example of:'
+    options:
+      A: 'A public good'
+      B: 'A positive externality'
+      C: 'Asymmetric information'
+      D: 'Perfect competition'
+    answer: C
+    explanation: 'One side knows more than the other, which can lead to unfair deals.'
+
+  - uid: g12-economics-3-1-q012
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are causes of market failure? Choose all that apply.'
+    options:
+      A: 'Externalities'
+      B: 'Public goods'
+      C: 'Monopoly power'
+      D: 'Perfect information for everyone'
+    answer: [A, B, C]
+    explanation: 'Perfect information helps markets work well.'
+
+  - uid: g12-economics-3-1-q013
+    type: true_false
+    difficulty: 2
+    stem: 'A positive externality leads to the good being under-produced in a free market.'
+    answer: true
+    explanation: 'Buyers and sellers ignore the benefit to others, so less than the socially best amount is produced.'
+
+  - uid: g12-economics-3-1-q014
+    type: true_false
+    difficulty: 1
+    stem: 'National defence is an example of a public good.'
+    answer: true
+    explanation: 'Everyone in the country is protected, whether or not they pay.'
+
+  - uid: g12-economics-3-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policy best increases the use of a good with positive externalities, such as vaccination?'
+    options:
+      A: 'Taxing it heavily'
+      B: 'Banning it'
+      C: 'Raising its price'
+      D: 'Subsidising it or providing it free'
+    answer: D
+    explanation: 'Lower cost to users raises consumption towards the social optimum.'
+
+  - uid: g12-economics-3-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a widely recognised consumer right?'
+    options:
+      A: 'The right to safety'
+      B: 'The right to set any price'
+      C: 'The right to sell fake goods'
+      D: 'The right to hide product information'
+    answer: A
+    explanation: 'Consumers should be protected from dangerous goods and services.'
+
+  - uid: g12-economics-3-1-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'A shopkeeper uses a weighing scale that shows more than the true weight. Which consumer problem is this?'
+    options:
+      A: 'A public good'
+      B: 'A positive externality'
+      C: 'Cheating on weights and measures'
+      D: 'A subsidy'
+    answer: C
+    explanation: 'Weights-and-measures inspection protects consumers from this.'
+
+  - uid: g12-economics-3-1-q018
+    type: numeric
+    difficulty: 1
+    stem: 'World Consumer Rights Day is held every year in which month? Write the month as a number (January = 1).'
+    answer: {value: 3, tolerance: 0}
+    explanation: 'It marks a 1962 speech by US President John F. Kennedy on consumer rights.'
+
+  - uid: g12-economics-3-1-q019
+    type: numeric
+    difficulty: 2
+    stem: 'A tannery makes 200 hides a month. Each hide causes 5 birr of pollution damage to farmers downstream, which the tannery does not pay. What is the total external cost per month, in birr?'
+    answer: {value: 1000, tolerance: 0}
+    explanation: '200 × 5 = 1,000 birr. This cost falls on third parties, so it is a negative externality.'
+
+  - uid: g12-economics-3-1-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'People who benefit from a good without paying for it are called free ________.'
+    answer: [riders, rider]
+    explanation: 'Free riding is why markets under-provide public goods.'
+
+  - uid: g12-economics-3-1-q021
+    type: fill_in
+    difficulty: 2
+    stem: 'A cost or benefit that affects a third party who is not part of the deal is called an ________.'
+    answer: [externality, externalities]
+    explanation: 'Externalities can be negative or positive.'
+
+  - uid: g12-economics-3-1-q022
+    type: true_false
+    difficulty: 2
+    stem: 'A monopoly usually charges lower prices and produces more than a competitive market.'
+    answer: false
+    explanation: 'A monopoly usually restricts output and charges higher prices.'
+
+  - uid: g12-economics-3-1-q023
+    type: matching
+    difficulty: 2
+    stem: 'Match each example with the type of market failure.'
+    left:
+      L1: 'A lighthouse guiding all ships'
+      L2: 'Noise from a nightclub keeping neighbours awake'
+      L3: 'A single company controlling all mobile phone services'
+    right:
+      R1: 'Negative externality'
+      R2: 'Monopoly power'
+      R3: 'Public good'
+      R4: 'Merit good'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'A merit good, such as education, is under-consumed; none of these three is a merit good.'
+
+  - uid: g12-economics-3-1-q024
+    type: ordering
+    difficulty: 2
+    stem: 'A customer buys a faulty phone. Put the steps for seeking redress in a sensible order.'
+    items:
+      A: 'If the shop refuses, complain to the consumer protection authority.'
+      B: 'Keep the receipt and check the warranty.'
+      C: 'Return to the shop and ask for repair, replacement or a refund.'
+    answer: [B, C, A]
+    explanation: 'Have proof of purchase, try the seller first, then go to the authority.'
+
+  - uid: g12-economics-3-1-q025
+    type: single_choice
+    difficulty: 3
+    stem: 'Why might the government require food labels to show ingredients and expiry dates?'
+    options:
+      A: 'To raise food prices'
+      B: 'To reduce asymmetric information and protect consumers'
+      C: 'To stop all food imports'
+      D: 'To create a monopoly'
+    answer: B
+    explanation: 'Labels give buyers the information they need to choose safely.'
+
+  - uid: g12-economics-3-1-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a "non-rival" good?'
+    options:
+      A: 'An orange'
+      B: 'A seat on a full bus'
+      C: 'A glass of milk'
+      D: 'A radio broadcast'
+    answer: D
+    explanation: 'One person listening does not reduce what others can hear.'
+
+  - uid: g12-economics-3-1-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the aim of competition (anti-monopoly) laws?'
+    options:
+      A: 'To stop firms from abusing market power and fixing prices'
+      B: 'To help one firm control the market'
+      C: 'To ban all trade'
+      D: 'To raise taxes'
+    answer: A
+    explanation: 'Competition keeps prices fair and encourages better products.'
+
+  - uid: g12-economics-3-1-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Which consumer right is about getting accurate facts on price, quality and ingredients?'
+    options:
+      A: 'The right to safety'
+      B: 'The right to redress'
+      C: 'The right to information'
+      D: 'The right to choose'
+    answer: C
+    explanation: 'Accurate information lets consumers make good decisions.'
+
+  - uid: g12-economics-3-1-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do governments provide free primary education?'
+    options:
+      A: 'Education is a demerit good.'
+      B: 'Education is a public good with no benefits.'
+      C: 'Education is never useful.'
+      D: 'Education is a merit good with benefits for society that markets alone would under-provide.'
+    answer: D
+    explanation: 'Educated citizens benefit the whole economy.'
+
+  - uid: g12-economics-3-1-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'False advertising that claims a medicine cures every disease mainly harms which consumer right?'
+    options:
+      A: 'The right to information'
+      B: 'The right to a public good'
+      C: 'The right to free riding'
+      D: 'The right to monopoly'
+    answer: A
+    explanation: 'Consumers are misled about what they are buying.'

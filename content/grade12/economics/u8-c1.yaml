@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'The environment supports the economy in three ways: it supplies resources (land, water, forests, minerals), it absorbs waste (a "sink"), and it provides services such as clean air, pollination and a stable climate.'
+    - 'Renewable resources (forests, fish, water, solar and wind energy) can be replaced naturally if they are not over-used. Non-renewable resources (oil, coal, natural gas, most minerals) exist in fixed amounts and run out.'
+    - 'Sustainable development, as defined by the Brundtland Commission (1987), meets the needs of the present without harming the ability of future generations to meet their own needs.'
+    - 'Environmental problems are often market failures: pollution is a negative externality, and shared resources such as open grazing land or fisheries can be over-used because no one owns them (the "tragedy of the commons").'
+    - 'Climate change is mainly caused by greenhouse gases from burning fossil fuels, deforestation and some farming. Its effects in Ethiopia include more frequent droughts and floods, which hit rain-fed farming and herding.'
+    - 'Mitigation means reducing greenhouse gas emissions (for example renewable energy, tree planting, efficient stoves). Adaptation means adjusting to climate effects (for example drought-resistant crops, water harvesting, early warning systems).'
+    - 'Policy tools: carbon or pollution taxes, emissions trading (cap-and-trade), regulations and standards, subsidies for clean technology, and protecting forests. The Paris Agreement (2015) aims to keep warming well below 2 °C and to pursue efforts to limit it to 1.5 °C.'
+    - 'Ethiopia''s Climate Resilient Green Economy (CRGE) strategy (2011) aims for growth with low emissions. The Green Legacy Initiative, launched in 2019, is a national tree-planting campaign.'
+  formulas:
+    - {label: 'Pollution tax bill', latex: '\text{Tax} = \text{Rate per tonne} \times \text{Tonnes emitted}'}
+
+solved_exercises:
+  - uid: g12-economics-8-1-se01
+    problem: 'A factory emits 300 tonnes of CO₂ a year. The carbon tax is 40 birr per tonne. What is its yearly carbon tax bill?'
+    steps:
+      - 'Tax = 40 × 300.'
+      - 'Tax = 12,000 birr.'
+    answer: '12,000 birr'
+  - uid: g12-economics-8-1-se02
+    problem: 'Classify each as mitigation or adaptation: (a) building a wind farm, (b) planting drought-resistant sorghum.'
+    steps:
+      - '(a) A wind farm replaces fossil-fuel power, so it reduces emissions: mitigation.'
+      - '(b) Drought-resistant crops help farmers cope with drier weather: adaptation.'
+    answer: '(a) mitigation, (b) adaptation'
+  - uid: g12-economics-8-1-se03
+    problem: 'Why might a shared grazing area become overgrazed?'
+    steps:
+      - 'Each herder gains fully from adding one more animal, but the damage to the pasture is shared by everyone.'
+      - 'So each herder adds animals, and together they overgraze the land. This is the tragedy of the commons.'
+    answer: 'Private gain, shared cost'
+
+flashcards:
+  - {uid: g12-economics-8-1-fc01, term: Renewable resource, definition: 'Resource that can be replaced naturally, e.g. forests.'}
+  - {uid: g12-economics-8-1-fc02, term: Non-renewable resource, definition: 'Resource in fixed supply, e.g. oil.'}
+  - {uid: g12-economics-8-1-fc03, term: Sustainable development, definition: 'Meeting present needs without harming future generations.'}
+  - {uid: g12-economics-8-1-fc04, term: Tragedy of the commons, definition: 'Over-use of a shared resource that no one owns.'}
+  - {uid: g12-economics-8-1-fc05, term: Mitigation, definition: 'Reducing greenhouse gas emissions.'}
+  - {uid: g12-economics-8-1-fc06, term: Adaptation, definition: 'Adjusting to the effects of climate change.'}
+  - {uid: g12-economics-8-1-fc07, term: Carbon tax, definition: 'Tax per tonne of greenhouse gas emitted.'}
+  - {uid: g12-economics-8-1-fc08, term: CRGE, definition: 'Climate Resilient Green Economy strategy of Ethiopia (2011).'}
+  - {uid: g12-economics-8-1-fc09, term: Paris Agreement, definition: '2015 deal to keep warming well below 2 °C, aiming for 1.5 °C.'}
+
+questions:
+  - uid: g12-economics-8-1-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Which is a non-renewable resource?'
+    options:
+      A: 'Solar energy'
+      B: 'Coal'
+      C: 'Forests'
+      D: 'Wind energy'
+    answer: B
+    explanation: 'Coal exists in fixed amounts and is used up.'
+
+  - uid: g12-economics-8-1-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the Brundtland Commission''s idea of sustainable development?'
+    options:
+      A: 'Meeting the needs of the present without harming the ability of future generations to meet theirs'
+      B: 'Using all resources as fast as possible'
+      C: 'Stopping all economic growth'
+      D: 'Growing only in cities'
+    answer: A
+    explanation: 'It balances today''s needs with those of the future.'
+
+  - uid: g12-economics-8-1-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'When the environment absorbs waste such as smoke and sewage, it is acting as a:'
+    options:
+      A: 'Market'
+      B: 'Bank'
+      C: 'Sink'
+      D: 'Public firm'
+    answer: C
+    explanation: 'The environment can absorb only a limited amount of waste.'
+
+  - uid: g12-economics-8-1-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Herders share an open pasture that no one owns, and each adds more cattle until the grass is destroyed. This is called:'
+    options:
+      A: 'A merit good'
+      B: 'Perfect competition'
+      C: 'A positive externality'
+      D: 'The tragedy of the commons'
+    answer: D
+    explanation: 'Each herder gains privately while the cost of damage is shared.'
+
+  - uid: g12-economics-8-1-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which activity is climate change mitigation?'
+    options:
+      A: 'Replacing diesel generators with solar panels'
+      B: 'Building higher walls against floods'
+      C: 'Planting drought-resistant crops'
+      D: 'Setting up drought early-warning systems'
+    answer: A
+    explanation: 'It cuts emissions. The other three help people cope with climate effects (adaptation).'
+
+  - uid: g12-economics-8-1-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which activity is climate change adaptation?'
+    options:
+      A: 'Switching from coal to wind power'
+      B: 'Harvesting rainwater for use in dry months'
+      C: 'Reducing fuel use in cars'
+      D: 'Using a carbon tax'
+    answer: B
+    explanation: 'It helps people cope with drier conditions rather than cutting emissions.'
+
+  - uid: g12-economics-8-1-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is pollution treated as a market failure?'
+    options:
+      A: 'Polluters always pay its full cost.'
+      B: 'Pollution is a public good.'
+      C: 'Its cost falls on third parties and is not included in market prices.'
+      D: 'It makes goods too expensive.'
+    answer: C
+    explanation: 'It is a negative externality, so too much of the polluting good is produced.'
+
+  - uid: g12-economics-8-1-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main source of greenhouse gas emissions worldwide?'
+    options:
+      A: 'Volcanoes'
+      B: 'Ocean waves'
+      C: 'Tree planting'
+      D: 'Burning fossil fuels'
+    answer: D
+    explanation: 'Coal, oil and gas release carbon dioxide when burned.'
+
+  - uid: g12-economics-8-1-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'What does a carbon tax do?'
+    options:
+      A: 'Makes firms pay for each tonne of greenhouse gas they emit'
+      B: 'Gives free fuel to factories'
+      C: 'Bans all industry'
+      D: 'Lowers the price of coal'
+    answer: A
+    explanation: 'It makes polluters pay, so they have a reason to emit less.'
+
+  - uid: g12-economics-8-1-q010
+    type: single_choice
+    difficulty: 3
+    stem: 'Under a "cap-and-trade" scheme, what happens?'
+    options:
+      A: 'All emissions are banned.'
+      B: 'A total limit on emissions is set, and firms can buy and sell permits to emit.'
+      C: 'Each firm can emit as much as it wants.'
+      D: 'Only farmers pay for emissions.'
+    answer: B
+    explanation: 'Firms that cut emissions cheaply can sell spare permits to others.'
+
+  - uid: g12-economics-8-1-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'The Paris Agreement (2015) aims to keep global warming:'
+    options:
+      A: 'Above 3 °C'
+      B: 'Exactly at 5 °C'
+      C: 'Well below 2 °C, and to pursue efforts to limit it to 1.5 °C'
+      D: 'At any level, with no target'
+    answer: C
+    explanation: 'The warming is measured relative to pre-industrial levels.'
+
+  - uid: g12-economics-8-1-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the main aim of Ethiopia''s Climate Resilient Green Economy (CRGE) strategy?'
+    options:
+      A: 'To stop all farming'
+      B: 'To rely only on imported oil'
+      C: 'To close all factories'
+      D: 'To achieve economic growth with low greenhouse gas emissions'
+    answer: D
+    explanation: 'It was launched in 2011.'
+
+  - uid: g12-economics-8-1-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the Green Legacy Initiative, launched in Ethiopia in 2019?'
+    options:
+      A: 'A national tree-planting campaign'
+      B: 'A programme to build solar power plants'
+      C: 'A plan to protect wildlife in national parks'
+      D: 'A scheme to give clean cooking stoves to rural homes'
+    answer: A
+    explanation: 'It aims to restore forests and reduce land degradation.'
+
+  - uid: g12-economics-8-1-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which group in Ethiopia is especially vulnerable to more frequent droughts?'
+    options:
+      A: 'Salaried government workers in Addis Ababa'
+      B: 'Rain-fed farmers and pastoralists'
+      C: 'Employees of telecom companies'
+      D: 'Workers on fully irrigated farms'
+    answer: B
+    explanation: 'Their crops and livestock depend directly on rainfall; irrigated farms and salaried jobs are less exposed.'
+
+  - uid: g12-economics-8-1-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Cutting trees faster than they can regrow mainly leads to:'
+    options:
+      A: 'More rainfall everywhere'
+      B: 'Lower carbon dioxide in the air'
+      C: 'Soil erosion and loss of forest resources'
+      D: 'More fertile soil'
+    answer: C
+    explanation: 'Tree roots hold soil; without them, rain washes topsoil away.'
+
+  - uid: g12-economics-8-1-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'Why can improved cooking stoves help both households and the environment?'
+    options:
+      A: 'They use more firewood.'
+      B: 'They increase smoke indoors.'
+      C: 'They are only used in factories.'
+      D: 'They use less firewood or charcoal, saving money and trees.'
+    answer: D
+    explanation: 'They also reduce indoor smoke and emissions.'
+
+  - uid: g12-economics-8-1-q017
+    type: single_choice
+    difficulty: 3
+    stem: 'A river is polluted by many small upstream users. Why is it hard for downstream victims to solve this through private bargaining?'
+    options:
+      A: 'There are many parties, so bargaining is costly and hard to organise.'
+      B: 'Pollution has no cost.'
+      C: 'Downstream users like pollution.'
+      D: 'Rivers are non-renewable.'
+    answer: A
+    explanation: 'High bargaining costs are one reason governments regulate pollution.'
+
+  - uid: g12-economics-8-1-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a renewable energy source used widely in Ethiopia for electricity?'
+    options:
+      A: 'Coal'
+      B: 'Hydropower'
+      C: 'Natural gas'
+      D: 'Diesel'
+    answer: B
+    explanation: 'Most of Ethiopia''s electricity comes from dams such as the GERD and Gibe III.'
+
+  - uid: g12-economics-8-1-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which policy gives firms a direct reason to switch to cleaner technology?'
+    options:
+      A: 'Subsidising coal'
+      B: 'Removing all pollution rules'
+      C: 'Subsidies for clean technology or a tax on pollution'
+      D: 'Lowering fuel prices'
+    answer: C
+    explanation: 'Both make clean choices relatively cheaper.'
+
+  - uid: g12-economics-8-1-q020
+    type: single_choice
+    difficulty: 3
+    stem: 'Why is GDP alone a weak measure of sustainable well-being?'
+    options:
+      A: 'GDP includes all environmental damage as a cost.'
+      B: 'GDP measures only exports.'
+      C: 'GDP is always zero in poor countries.'
+      D: 'GDP can rise even when natural resources are being used up or the environment is damaged.'
+    answer: D
+    explanation: 'Cutting a forest adds to GDP but reduces natural capital.'
+
+  - uid: g12-economics-8-1-q021
+    type: numeric
+    difficulty: 2
+    stem: 'A cement plant emits 500 tonnes of CO₂ a year. The carbon tax is 30 birr per tonne. What is its yearly carbon tax bill, in birr?'
+    answer: {value: 15000, tolerance: 0}
+    explanation: '30 × 500 = 15,000 birr.'
+
+  - uid: g12-economics-8-1-q022
+    type: numeric
+    difficulty: 3
+    stem: 'A firm emits 1,000 tonnes a year and holds permits for 800 tonnes. Permits cost 50 birr per tonne. How much must it spend on extra permits to cover all its emissions, in birr?'
+    answer: {value: 10000, tolerance: 0}
+    explanation: 'It needs 1,000 − 800 = 200 more tonnes; 200 × 50 = 10,000 birr.'
+
+  - uid: g12-economics-8-1-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Oil and natural gas are renewable resources.'
+    answer: false
+    explanation: 'They exist in fixed amounts and run out.'
+
+  - uid: g12-economics-8-1-q024
+    type: true_false
+    difficulty: 2
+    stem: 'Planting drought-resistant crops is an example of climate change adaptation.'
+    answer: true
+    explanation: 'It helps farmers cope with drier conditions.'
+
+  - uid: g12-economics-8-1-q025
+    type: true_false
+    difficulty: 2
+    stem: 'A carbon tax makes greenhouse gas emissions cheaper for firms.'
+    answer: false
+    explanation: 'It makes emissions more expensive, which encourages cuts.'
+
+  - uid: g12-economics-8-1-q026
+    type: fill_in
+    difficulty: 2
+    stem: 'Reducing greenhouse gas emissions to limit climate change is called climate change ________.'
+    answer: [mitigation]
+    explanation: 'Adjusting to climate effects is called adaptation.'
+
+  - uid: g12-economics-8-1-q027
+    type: fill_in
+    difficulty: 2
+    stem: 'Development that meets present needs without harming future generations is called ________ development.'
+    answer: [sustainable]
+    explanation: 'The idea was made famous by the Brundtland Commission in 1987.'
+
+  - uid: g12-economics-8-1-q028
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which are renewable resources? Choose all that apply.'
+    options:
+      A: 'Solar energy'
+      B: 'Forests that are managed well'
+      C: 'River water'
+      D: 'Coal'
+    answer: [A, B, C]
+    explanation: 'Coal is non-renewable.'
+
+  - uid: g12-economics-8-1-q029
+    type: matching
+    difficulty: 2
+    stem: 'Match each policy tool with its description.'
+    left:
+      L1: 'Carbon tax'
+      L2: 'Cap-and-trade'
+      L3: 'Emission standard'
+    right:
+      R1: 'A total limit with permits that firms can buy and sell'
+      R2: 'A legal maximum amount a vehicle or factory may emit'
+      R3: 'A charge for each tonne of gas emitted'
+      R4: 'A free gift of fuel'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Giving away fuel is not a climate policy tool.'
+
+  - uid: g12-economics-8-1-q030
+    type: ordering
+    difficulty: 2
+    stem: 'Put the chain of events from deforestation in order.'
+    items:
+      A: 'Crop yields fall and farm incomes drop.'
+      B: 'Trees on a hillside are cut down.'
+      C: 'Heavy rain washes away the topsoil.'
+    answer: [B, C, A]
+    explanation: 'Loss of tree cover leads to erosion, which lowers soil fertility and yields.'

@@ -1,0 +1,378 @@
+summary:
+  key_points:
+    - 'Prefixes change meaning: un-, in-, im-, il-, ir-, dis- and non- mean "not" (unhappy, impossible, illegal, irregular, dishonest); mis- means "wrongly" (misunderstand); re- means "again" (rewrite); pre- means "before" (preview); over- means "too much" (overcook).'
+    - 'Suffixes often change the word class: nouns -ment, -ness, -tion, -ity (development, kindness, education, ability); adjectives -ful, -less, -able, -ous, -ive (useful, careless, readable, dangerous, active); verbs -ise/-ize, -en, -ify (modernise, widen, simplify); adverbs -ly (quickly).'
+    - 'Choose the word form that fits the gap: after an article or adjective you need a noun ("the development"); before a noun you usually need an adjective ("a useful tool"); to describe a verb you need an adverb ("she spoke clearly").'
+    - 'An idiom is a fixed phrase whose meaning is not the sum of its words: "a piece of cake" = very easy; "break the ice" = start a friendly conversation; "once in a blue moon" = very rarely; "hit the books" = study hard; "under the weather" = slightly ill; "cost an arm and a leg" = be very expensive.'
+    - 'A phrasal verb is a verb + particle with a special meaning: give up (stop), look after (take care of), look up (find in a dictionary), put off (postpone), carry on (continue), find out (discover), turn down (refuse), run out of (have none left).'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-2-2-se01
+    problem: 'Complete with the correct form of "develop": "The ______ of new roads has helped farmers in the Somali Region."'
+    steps:
+      - 'After "the" and before "of" we need a noun.'
+      - 'The noun form is "development".'
+    answer: 'development'
+  - uid: g12-english-2-2-se02
+    problem: 'Give the opposite of "legal", "possible" and "regular" using prefixes.'
+    steps:
+      - 'Before l use il-, before p use im-, before r use ir-.'
+      - 'illegal, impossible, irregular.'
+    answer: 'illegal, impossible, irregular'
+  - uid: g12-english-2-2-se03
+    problem: 'Replace the phrasal verb with one word: "The match was put off because of the rain."'
+    steps:
+      - '"Put off" means to move an event to a later time.'
+      - 'One-word equivalent: "postponed".'
+    answer: 'postponed'
+
+flashcards:
+  - {uid: g12-english-2-2-fc01, term: Prefix, definition: 'Letters added to the start of a word: un-, re-, mis-.'}
+  - {uid: g12-english-2-2-fc02, term: Suffix, definition: 'Letters added to the end of a word: -ment, -ful, -ly.'}
+  - {uid: g12-english-2-2-fc03, term: il- / im- / ir-, definition: 'Negative prefixes before l, before m or p, and before r.'}
+  - {uid: g12-english-2-2-fc04, term: Idiom, definition: 'Fixed phrase with a special meaning, e.g. "a piece of cake".'}
+  - {uid: g12-english-2-2-fc05, term: Phrasal verb, definition: 'Verb + particle with its own meaning, e.g. "give up".'}
+  - {uid: g12-english-2-2-fc06, term: Look after, definition: 'Take care of.'}
+  - {uid: g12-english-2-2-fc07, term: Turn down, definition: 'Refuse an offer.'}
+  - {uid: g12-english-2-2-fc08, term: Once in a blue moon, definition: 'Very rarely.'}
+  - {uid: g12-english-2-2-fc09, term: Under the weather, definition: 'Feeling slightly ill.'}
+
+questions:
+  - uid: g12-english-2-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct opposite of "possible".'
+    options:
+      A: 'unpossible'
+      B: 'impossible'
+      C: 'dispossible'
+      D: 'inpossible'
+    answer: B
+    explanation: 'Words beginning with p usually take im-.'
+
+  - uid: g12-english-2-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct opposite of "legal".'
+    options:
+      A: 'illegal'
+      B: 'unlegal'
+      C: 'dislegal'
+      D: 'irlegal'
+    answer: A
+    explanation: 'Words beginning with l usually take il-.'
+
+  - uid: g12-english-2-2-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "The ______ of the new hospital took three years." (construct)'
+    options:
+      A: 'construct'
+      B: 'constructive'
+      C: 'construction'
+      D: 'constructively'
+    answer: C
+    explanation: 'After "the" and before "of", a noun is needed: construction.'
+
+  - uid: g12-english-2-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "Smoking is very ______ to your health." (harm)'
+    options:
+      A: 'harm'
+      B: 'harmless'
+      C: 'harmfully'
+      D: 'harmful'
+    answer: D
+    explanation: 'After "very" we need an adjective that means "causing harm".'
+
+  - uid: g12-english-2-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "She answered all the questions ______." (correct)'
+    options:
+      A: 'correctly'
+      B: 'correct'
+      C: 'correction'
+      D: 'correctness'
+    answer: A
+    explanation: 'An adverb describes how she answered.'
+
+  - uid: g12-english-2-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the prefix "mis-" mean in "misunderstand" and "misspell"?'
+    options:
+      A: 'Again'
+      B: 'Before'
+      C: 'Wrongly'
+      D: 'Very much'
+    answer: C
+    explanation: 'To misunderstand is to understand wrongly.'
+
+  - uid: g12-english-2-2-q007
+    type: single_choice
+    difficulty: 1
+    stem: 'What does the prefix "re-" mean in "rewrite"?'
+    options:
+      A: 'Not'
+      B: 'Again'
+      C: 'Before'
+      D: 'Too much'
+    answer: B
+    explanation: 'To rewrite is to write again.'
+
+  - uid: g12-english-2-2-q008
+    type: true_false
+    difficulty: 1
+    stem: '"Careless" is the opposite of "careful".'
+    answer: true
+    explanation: '-ful means "full of" and -less means "without".'
+
+  - uid: g12-english-2-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: '"The maths test was a piece of cake." What does this mean?'
+    options:
+      A: 'The test was about food.'
+      B: 'The test was very difficult.'
+      C: 'The test was cancelled.'
+      D: 'The test was very easy.'
+    answer: D
+    explanation: '"A piece of cake" is an idiom meaning very easy.'
+
+  - uid: g12-english-2-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: '"My grandfather visits the city once in a blue moon." What does this mean?'
+    options:
+      A: 'Very rarely'
+      B: 'Every night'
+      C: 'Only in summer'
+      D: 'When the moon is full'
+    answer: A
+    explanation: 'The idiom means something happens very seldom.'
+
+  - uid: g12-english-2-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: '"At the start of the workshop, the trainer told a joke to break the ice." What does "break the ice" mean?'
+    options:
+      A: 'Make something cold'
+      B: 'End a meeting'
+      C: 'Help people feel relaxed and start talking'
+      D: 'Cause an argument'
+    answer: C
+    explanation: 'It means to remove shyness or tension at the start of a meeting.'
+
+  - uid: g12-english-2-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: '"I feel a bit under the weather today, so I will rest." What does this mean?'
+    options:
+      A: 'Very happy'
+      B: 'Slightly ill'
+      C: 'Wet from the rain'
+      D: 'Very busy'
+    answer: B
+    explanation: '"Under the weather" means feeling unwell.'
+
+  - uid: g12-english-2-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: '"The doctor told him to give up smoking." What does "give up" mean here?'
+    options:
+      A: 'Start'
+      B: 'Increase'
+      C: 'Offer to others'
+      D: 'Stop doing'
+    answer: D
+    explanation: '"Give up" a habit means stop doing it.'
+
+  - uid: g12-english-2-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: '"Who will look after the children while you are at work?" What does "look after" mean?'
+    options:
+      A: 'Take care of'
+      B: 'Search for'
+      C: 'Look behind'
+      D: 'Forget about'
+    answer: A
+    explanation: '"Look after" means care for someone or something.'
+
+  - uid: g12-english-2-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: '"We have run out of sugar, so I must go to the shop." What does "run out of" mean?'
+    options:
+      A: 'Have too much'
+      B: 'Run quickly'
+      C: 'Have no more left'
+      D: 'Spill'
+    answer: C
+    explanation: 'To run out of something is to use it all up.'
+
+  - uid: g12-english-2-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: '"She was offered a job in Nairobi, but she turned it down." What does "turned it down" mean?'
+    options:
+      A: 'Accepted it'
+      B: 'Refused it'
+      C: 'Made it quieter'
+      D: 'Lost it'
+    answer: B
+    explanation: 'To turn down an offer is to refuse it.'
+
+  - uid: g12-english-2-2-q017
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which words are formed with a suffix that makes a noun? Choose all that apply.'
+    options:
+      A: 'happiness'
+      B: 'education'
+      C: 'enjoyment'
+      D: 'quickly'
+    answer: [A, B, C]
+    explanation: '-ness, -tion and -ment make nouns; -ly makes an adverb.'
+
+  - uid: g12-english-2-2-q018
+    type: fill_in
+    difficulty: 1
+    stem: 'Add a prefix to make the opposite of "regular": ________.'
+    answer: [irregular]
+    explanation: 'Words beginning with r usually take ir-.'
+
+  - uid: g12-english-2-2-q019
+    type: fill_in
+    difficulty: 2
+    stem: 'Write the noun form of "able": "She has the ________ to become a doctor."'
+    answer: [ability]
+    explanation: 'able → ability.'
+
+  - uid: g12-english-2-2-q020
+    type: true_false
+    difficulty: 2
+    stem: 'In "Please look up this word in the dictionary.", "look up" means "find information".'
+    answer: true
+    explanation: '"Look up" a word or fact means to search for it in a reference source.'
+
+  - uid: g12-english-2-2-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each phrasal verb with its meaning.'
+    left:
+      L1: 'find out'
+      L2: 'carry on'
+      L3: 'put off'
+    right:
+      R1: 'continue'
+      R2: 'discover'
+      R3: 'postpone'
+      R4: 'arrive'
+    answer: {L1: R2, L2: R1, L3: R3}
+    explanation: '"Arrive" would match "turn up" or "show up", which are not in the list.'
+
+  - uid: g12-english-2-2-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "The government wants to ______ the old railway." (modern)'
+    options:
+      A: 'modernity'
+      B: 'modernly'
+      C: 'modernise'
+      D: 'modernised the'
+    answer: C
+    explanation: 'After "wants to" a verb is needed: modernise (or modernize).'
+
+  - uid: g12-english-2-2-q023
+    type: single_choice
+    difficulty: 3
+    stem: 'Choose the correct form: "His ______ to help his neighbours made him popular." (willing)'
+    options:
+      A: 'willingly'
+      B: 'unwilling'
+      C: 'willed'
+      D: 'willingness'
+    answer: D
+    explanation: 'After "His" and before "to help" a noun is needed: willingness.'
+
+  - uid: g12-english-2-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: '"Before the exam, the students hit the books every evening." What does "hit the books" mean?'
+    options:
+      A: 'Studied hard'
+      B: 'Threw their books'
+      C: 'Bought new books'
+      D: 'Sold their books'
+    answer: A
+    explanation: 'It is an informal idiom meaning to study seriously.'
+
+  - uid: g12-english-2-2-q025
+    type: true_false
+    difficulty: 2
+    stem: '"That new phone cost an arm and a leg." means that the phone was very cheap.'
+    answer: false
+    explanation: 'The idiom means something was very expensive.'
+
+  - uid: g12-english-2-2-q026
+    type: ordering
+    difficulty: 3
+    stem: 'Build a word from "employ" in three steps. Put the forms in the order they are made.'
+    items:
+      A: 'unemployment'
+      B: 'employ'
+      C: 'employment'
+    answer: [B, C, A]
+    explanation: 'employ (verb) → employment (noun, add -ment) → unemployment (add un-).'
+
+  - uid: g12-english-2-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which word means "not honest"?'
+    options:
+      A: 'unhonest'
+      B: 'dishonest'
+      C: 'inhonest'
+      D: 'mishonest'
+    answer: B
+    explanation: 'The standard negative of honest is dishonest.'
+
+  - uid: g12-english-2-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "The road is too narrow; the council plans to ______ it." (wide)'
+    options:
+      A: 'wideness'
+      B: 'widely'
+      C: 'wide them'
+      D: 'widen'
+    answer: D
+    explanation: 'The suffix -en turns the adjective "wide" into the verb "widen".'
+
+  - uid: g12-english-2-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "The instructions were so ______ that nobody could follow them." (confuse)'
+    options:
+      A: 'confusing'
+      B: 'confuse'
+      C: 'confusion'
+      D: 'confusingly'
+    answer: A
+    explanation: 'After "so" an adjective is needed; "-ing" adjectives describe the thing that causes the feeling.'
+
+  - uid: g12-english-2-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the word that means "to cook too much".'
+    options:
+      A: 'precook'
+      B: 'recook'
+      C: 'overcook'
+      D: 'miscook'
+    answer: C
+    explanation: 'The prefix over- means "too much".'

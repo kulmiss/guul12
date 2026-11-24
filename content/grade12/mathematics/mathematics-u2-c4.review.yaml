@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-mathematics-2-4-q001: {hash: 'cb15c1e84db126452d5e5ddf5666c9e05522edcf0647646c8b90478044c4f330', answer: B}
+  g12-mathematics-2-4-q002: {hash: 'ec2688e87aba8629e23e6ee3a84caa6c00e06c343a5a4f64d12dfc2aabbf077f', answer: A}
+  g12-mathematics-2-4-q003: {hash: '75a4a97f5bc5090168c239a24ec465ea927c8d0b2fcfafe5088d606416494d32', answer: 8}
+  g12-mathematics-2-4-q004: {hash: '544fd6106b6c7c27bf64714a41007743e29183e21579e89355f4162448bd11d6', answer: C}
+  g12-mathematics-2-4-q005: {hash: '87cab86f1ea687cc2eb8de02746bfd324f7bb00c97b712daa4d1b131bc2a6895', answer: D}
+  g12-mathematics-2-4-q006: {hash: 'a269d25913ecf07a0ddfd2be0b94214b96c88862d86f1921f7067978c08682b7', answer: true}
+  g12-mathematics-2-4-q007: {hash: '70968cdc568b6bc95869838638bd58f51fa1895e77006f047676780c87115827', answer: A}
+  g12-mathematics-2-4-q008: {hash: '0d75570d86e0eb877513958c474a87010c725c19a2334f11d30cda95bd53d273', answer: 8}
+  g12-mathematics-2-4-q009: {hash: '6f77a25279a1b62875d228e5cd808bae172e2c8c576acd66e8e3d152bb212e39', answer: B}
+  g12-mathematics-2-4-q010: {hash: '5e052fe0d617a31efb5de17a04a31969edc8c94365bff377def856e634405d0f', answer: C}
+  g12-mathematics-2-4-q011: {hash: 'ddf8ccffc0132cf97f5d53c382f74000328f31f06fa744e1e5746b2fa304e859', answer: D}
+  g12-mathematics-2-4-q012: {hash: '77262b4e9fbf5be528cab4ed1e08fdecb75004b642a553bfd3a7f211d2a40af9', answer: true}
+  g12-mathematics-2-4-q013: {hash: '04a21bff11f2381479408cccb68f28df1b819259f5d709005e5fb5fe0ef37d75', answer: A}
+  g12-mathematics-2-4-q014: {hash: '4a808fe5c6ca26d2e846d214db24d80b361be38a8f238f696f6e420df2967aa4', answer: B}
+  g12-mathematics-2-4-q015: {hash: 'd8eb2de1efa5acd73278bac29606cf58474f75e12a33cbdaec1522cec47cbb79', answer: 0}
+  g12-mathematics-2-4-q016: {hash: '6fbc5c0128ed55d983a4607c17707087a85757bba1252f04ba2231aa3a143a31', answer: [A, B, D]}
+  g12-mathematics-2-4-q017: {hash: 'a03b848fe84a926fe932f104852a8f93fae06c12021b1ba3c2ef4c0e54c5e121', answer: 12}
+  g12-mathematics-2-4-q018: {hash: '56fb80de0618a4153f0870a926dc1f1dea90d864c91be1a2909f27462aa8c0e4', answer: C}
+  g12-mathematics-2-4-q019: {hash: '5f06682d658b5ed366a6ea40c0cf3aca37b6302656ca6c5305dc0a1d26bba33d', answer: D}
+  g12-mathematics-2-4-q020: {hash: 'd004d7f75a515231f994c20be4f86861c5887d79f03853b804b06c1b33fa5789', answer: indefinite}
+  g12-mathematics-2-4-q021: {hash: '7ce05371c0d201c2301faab30deece06718b827d179b68bd15ce0fbc39b29082', answer: A}
+  g12-mathematics-2-4-q022: {hash: 'cfcdc274a48a28794d88e5bd0d92d11c5663253c975fbe5b91f191373ed1578e', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-mathematics-2-4-q023: {hash: '2fbe27764380ac9b9c2a214c683886fbf1dde813148ff01d9dcef7d4f555cfef', answer: [B, A, D, C]}
+  g12-mathematics-2-4-q024: {hash: '59ee42af132983b4a38369bc74f9edd56b7efbd101b54dd0d1a9121ea7bfad8f', answer: B}
+  g12-mathematics-2-4-q025: {hash: '23c6d5e2526a0577bdcd1ec8a9b2ba2513b1e52a489d84f507d9d8195fab4219', answer: C}
+  g12-mathematics-2-4-q026: {hash: 'b63255f1b7dccc3f49d69d892a902adbf06f50d81d686e4fd9c5c6b706cd085d', answer: true, note: 'True only if f is integrable on [a, b]; the stem does not say so (e.g. add "continuous"). Minor at this level.'}
+  g12-mathematics-2-4-q027: {hash: '376bbe1f98a87d255d7e7976125961fbac52922a5e8af354eb91605b1138b09b', answer: D}
+  g12-mathematics-2-4-q028: {hash: 'caeebdc071c1b4617f0633a712256bd910c1fd4ef3078ebf8c9643c82342128d', answer: A}
+  g12-mathematics-2-4-q029: {hash: 'a3b84d384a5192f82681425150821b88623249144c35752d855ba2605fb3694e', answer: B}
+  g12-mathematics-2-4-q030: {hash: '939ee59253b16b9a66194cfd91e66a2166530dee66ac1514a4654ef71870c22f', answer: C}

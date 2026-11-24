@@ -1,0 +1,384 @@
+summary:
+  key_points:
+    - 'Magnetic flux through an area is $\Phi = BA\cos\theta$, where $\theta$ is the angle between the field and the normal to the area. Its unit is the weber (Wb = T·m²).'
+    - 'Faraday''s law: a changing flux through a coil induces an emf $\varepsilon = -N\frac{\Delta \Phi}{\Delta t}$. The faster the change and the more turns, the bigger the emf.'
+    - 'Lenz''s law: the induced current flows in the direction that opposes the change that caused it (the minus sign in Faraday''s law). This follows from conservation of energy.'
+    - 'A straight conductor of length $L$ moving at speed $v$ across a field $B$ has an emf $\varepsilon = BLv$.'
+    - 'A generator turns a coil in a magnetic field and produces alternating current (AC). A motor does the reverse: it turns electrical energy into motion.'
+    - 'A transformer has two coils on an iron core and works only with AC. $\frac{V_s}{V_p} = \frac{N_s}{N_p}$. Step-up: more secondary turns; step-down: fewer.'
+    - 'For an ideal transformer, power in equals power out: $V_p I_p = V_s I_s$. Real transformers lose some energy as heat; a laminated core reduces eddy-current losses.'
+    - 'Electricity is sent over long distances at high voltage and small current, because the heat lost in the cables is $P = I^2R$.'
+  formulas:
+    - label: Magnetic flux
+      latex: '\Phi = BA\cos\theta'
+    - label: Faraday's law
+      latex: '\varepsilon = -N\frac{\Delta \Phi}{\Delta t}'
+    - label: Motional emf
+      latex: '\varepsilon = BLv'
+    - label: Transformer turns ratio
+      latex: '\frac{V_s}{V_p} = \frac{N_s}{N_p}'
+    - label: Ideal transformer
+      latex: 'V_p I_p = V_s I_s'
+    - label: Efficiency
+      latex: '\eta = \frac{P_{out}}{P_{in}} \times 100\%'
+
+solved_exercises:
+  - uid: g12-physics-4-2-se01
+    problem: 'A coil of 200 turns has its flux changed from 0.05 Wb to 0.01 Wb in 0.2 s. Find the size of the induced emf.'
+    steps:
+      - '$\Delta \Phi = 0.01 - 0.05 = -0.04$ Wb.'
+      - '$|\varepsilon| = N\frac{|\Delta \Phi|}{\Delta t} = 200 \times \frac{0.04}{0.2} = 40$ V.'
+    answer: '40 V'
+  - uid: g12-physics-4-2-se02
+    problem: 'A transformer has 500 primary turns and 25 secondary turns. The primary is connected to 220 V AC. Find the secondary voltage. Is it step-up or step-down?'
+    steps:
+      - '$V_s = V_p \times \frac{N_s}{N_p} = 220 \times \frac{25}{500} = 11$ V.'
+      - 'The voltage goes down, so it is a step-down transformer.'
+    answer: '11 V, step-down'
+  - uid: g12-physics-4-2-se03
+    problem: 'An ideal transformer steps 220 V down to 11 V. The primary current is 0.2 A. Find the secondary current.'
+    steps:
+      - 'Power in = power out: $220 \times 0.2 = 11 \times I_s$.'
+      - '$44 = 11 I_s$, so $I_s = 4$ A.'
+    answer: '4 A'
+
+flashcards:
+  - {uid: g12-physics-4-2-fc01, term: Magnetic flux, definition: '$\Phi = BA\cos\theta$, measured in webers (Wb).'}
+  - {uid: g12-physics-4-2-fc02, term: Electromagnetic induction, definition: 'Producing an emf by changing the magnetic flux through a circuit.'}
+  - {uid: g12-physics-4-2-fc03, term: Faraday's law, definition: 'Induced emf equals the rate of change of flux linkage: $\varepsilon = -N\frac{\Delta\Phi}{\Delta t}$.'}
+  - {uid: g12-physics-4-2-fc04, term: Lenz's law, definition: 'The induced current opposes the change that produces it.'}
+  - {uid: g12-physics-4-2-fc05, term: Generator, definition: 'Device that turns kinetic energy into electrical energy using induction.'}
+  - {uid: g12-physics-4-2-fc06, term: Transformer, definition: 'Device that changes AC voltage using two coils on an iron core.'}
+  - {uid: g12-physics-4-2-fc07, term: Step-up transformer, definition: 'More turns on the secondary than the primary, so $V_s > V_p$.'}
+  - {uid: g12-physics-4-2-fc08, term: Eddy currents, definition: 'Swirling induced currents in a metal core that waste energy as heat.'}
+  - {uid: g12-physics-4-2-fc09, term: Laminated core, definition: 'Core made of thin insulated sheets to reduce eddy currents.'}
+
+questions:
+  - uid: g12-physics-4-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'A uniform field of 0.5 T passes straight through (at right angles to) a flat loop of area 0.2 m². What is the magnetic flux through the loop?'
+    options:
+      A: '2.5 Wb'
+      B: '0.1 Wb'
+      C: '0.7 Wb'
+      D: '0.4 Wb'
+    answer: B
+    explanation: '$\Phi = BA = 0.5 \times 0.2 = 0.1$ Wb.'
+
+  - uid: g12-physics-4-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the SI unit of magnetic flux?'
+    options:
+      A: 'Tesla'
+      B: 'Henry'
+      C: 'Weber'
+      D: 'Ampere'
+    answer: C
+    explanation: 'Flux is measured in webers: 1 Wb = 1 T·m².'
+
+  - uid: g12-physics-4-2-q003
+    type: numeric
+    difficulty: 2
+    stem: 'The flux through a 100-turn coil changes by 0.02 Wb in 0.1 s. What is the size of the induced emf, in volts?'
+    answer: {value: 20, tolerance: 0, unit: V}
+    explanation: '$|\varepsilon| = N\frac{\Delta \Phi}{\Delta t} = 100 \times \frac{0.02}{0.1} = 20$ V.'
+
+  - uid: g12-physics-4-2-q004
+    type: single_choice
+    difficulty: 1
+    stem: 'A magnet is held still inside a coil connected to a meter. What does the meter show?'
+    options:
+      A: 'No current, because the flux is not changing'
+      B: 'A large steady current'
+      C: 'An alternating current'
+      D: 'A current that slowly grows'
+    answer: A
+    explanation: 'An emf is induced only when the flux changes. A still magnet gives a constant flux.'
+
+  - uid: g12-physics-4-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Which change would NOT increase the emf induced when a magnet is pushed into a coil?'
+    options:
+      A: 'Pushing the magnet in faster'
+      B: 'Using a stronger magnet'
+      C: 'Using a coil with more turns'
+      D: 'Pushing the magnet in more slowly'
+    answer: D
+    explanation: 'A slower movement gives a slower change of flux, so a smaller emf.'
+
+  - uid: g12-physics-4-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'The north pole of a magnet is pushed towards one end of a coil. By Lenz''s law, that end of the coil becomes:'
+    options:
+      A: 'A south pole, attracting the magnet'
+      B: 'Not magnetic at all'
+      C: 'A north pole, repelling the magnet'
+      D: 'A north pole and a south pole at once'
+    answer: C
+    explanation: 'The induced current opposes the motion, so the near end of the coil becomes a north pole that pushes the magnet back.'
+
+  - uid: g12-physics-4-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Lenz''s law is a consequence of the conservation of:'
+    options:
+      A: 'Charge'
+      B: 'Energy'
+      C: 'Mass'
+      D: 'Momentum'
+    answer: B
+    explanation: 'If the induced current helped the change, energy would be created from nothing. Work must be done against the opposing force.'
+
+  - uid: g12-physics-4-2-q008
+    type: true_false
+    difficulty: 1
+    stem: 'A transformer works with a steady direct current (DC) in its primary coil.'
+    answer: false
+    explanation: 'A steady DC makes a constant flux, so no emf is induced in the secondary. Transformers need AC.'
+
+  - uid: g12-physics-4-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'A 0.4 m metal rod moves at 10 m/s at right angles to a 0.5 T field. What emf is induced across its ends?'
+    options:
+      A: '20 V'
+      B: '0.2 V'
+      C: '8 V'
+      D: '2 V'
+    answer: D
+    explanation: '$\varepsilon = BLv = 0.5 \times 0.4 \times 10 = 2$ V.'
+
+  - uid: g12-physics-4-2-q010
+    type: numeric
+    difficulty: 2
+    stem: 'An ideal transformer has 200 primary turns and 1 000 secondary turns. The primary voltage is 220 V. What is the secondary voltage, in volts?'
+    answer: {value: 1100, tolerance: 0, unit: V}
+    explanation: '$V_s = 220 \times \frac{1000}{200} = 1100$ V. This is a step-up transformer.'
+
+  - uid: g12-physics-4-2-q011
+    type: single_choice
+    difficulty: 1
+    stem: 'A step-down transformer has:'
+    options:
+      A: 'Fewer turns on the secondary coil than on the primary'
+      B: 'More turns on the secondary coil than on the primary'
+      C: 'The same number of turns on both coils'
+      D: 'No iron core'
+    answer: A
+    explanation: '$\frac{V_s}{V_p} = \frac{N_s}{N_p}$, so fewer secondary turns give a lower secondary voltage.'
+
+  - uid: g12-physics-4-2-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'An ideal transformer takes 0.5 A from a 220 V supply. Its secondary gives 11 V. What is the secondary current?'
+    options:
+      A: '0.025 A'
+      B: '0.5 A'
+      C: '10 A'
+      D: '20 A'
+    answer: C
+    explanation: '$V_p I_p = V_s I_s$: $220 \times 0.5 = 110 = 11 \times I_s$, so $I_s = 10$ A.'
+
+  - uid: g12-physics-4-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'A transformer takes in 200 W and gives out 180 W. What is its efficiency?'
+    options:
+      A: '111%'
+      B: '90%'
+      C: '20%'
+      D: '10%'
+    answer: B
+    explanation: '$\eta = \frac{180}{200} \times 100\% = 90\%$.'
+
+  - uid: g12-physics-4-2-q014
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which of these reduce energy losses in a transformer? Choose all that apply.'
+    options:
+      A: 'Using a laminated iron core'
+      B: 'Using thick copper wire for the coils'
+      C: 'Using a solid steel core instead of a laminated one'
+      D: 'Using a soft iron core that is easy to magnetise and demagnetise'
+    answer: [A, B, D]
+    explanation: 'Laminations cut eddy currents, thick wire lowers resistance heating, and soft iron reduces losses when it is magnetised back and forth. A solid core increases eddy currents.'
+
+  - uid: g12-physics-4-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is electricity sent along long power lines at very high voltage?'
+    options:
+      A: 'High voltage travels faster.'
+      B: 'High voltage is safer for people near the lines.'
+      C: 'It makes the cables lighter.'
+      D: 'For the same power the current is smaller, so less energy is lost as heat in the cables.'
+    answer: D
+    explanation: '$P = VI$, so a higher $V$ means a smaller $I$. Heat loss is $I^2R$, which falls sharply.'
+
+  - uid: g12-physics-4-2-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'The same power is sent through the same cables, but the voltage is raised 10 times. By what factor does the heat lost in the cables change?'
+    options:
+      A: 'It becomes $\frac{1}{100}$ as large.'
+      B: 'It becomes $\frac{1}{10}$ as large.'
+      C: 'It becomes 10 times larger.'
+      D: 'It does not change.'
+    answer: A
+    explanation: 'The current becomes $\frac{1}{10}$ as large, and the loss $I^2R$ becomes $\left(\frac{1}{10}\right)^2 = \frac{1}{100}$ as large.'
+
+  - uid: g12-physics-4-2-q017
+    type: single_choice
+    difficulty: 1
+    stem: 'Which energy change happens in a generator at a hydroelectric power station such as the Grand Ethiopian Renaissance Dam?'
+    options:
+      A: 'Electrical to kinetic'
+      B: 'Chemical to electrical'
+      C: 'Kinetic to electrical'
+      D: 'Electrical to chemical'
+    answer: C
+    explanation: 'Falling water turns turbines; the generators turn this kinetic energy into electrical energy by induction.'
+
+  - uid: g12-physics-4-2-q018
+    type: fill_in
+    difficulty: 1
+    stem: 'The law stating that an induced current always opposes the change that produced it is called ________ law.'
+    answer: [Lenz's, Lenz, Lenzs]
+    explanation: 'Lenz''s law gives the direction of the induced current.'
+
+  - uid: g12-physics-4-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'A flat coil lies so that the magnetic field is parallel to its plane (no field lines pass through it). What is the flux through it?'
+    options:
+      A: 'The largest possible value'
+      B: 'Zero'
+      C: 'Half the largest value'
+      D: 'It depends on the number of turns only'
+    answer: B
+    explanation: 'The field is at $90^\circ$ to the normal of the coil, so $\Phi = BA\cos 90^\circ = 0$.'
+
+  - uid: g12-physics-4-2-q020
+    type: single_choice
+    difficulty: 1
+    stem: 'What kind of current does a simple generator with slip rings produce?'
+    options:
+      A: 'Direct current'
+      B: 'No current'
+      C: 'A current that only grows'
+      D: 'Alternating current'
+    answer: D
+    explanation: 'As the coil turns, the flux increases and decreases, so the emf keeps changing direction: AC.'
+
+  - uid: g12-physics-4-2-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is a transformer core made from thin insulated sheets (laminated)?'
+    options:
+      A: 'To reduce eddy currents and the heat they cause'
+      B: 'To make the core heavier'
+      C: 'To increase the number of turns'
+      D: 'To change AC into DC'
+    answer: A
+    explanation: 'Insulation between the sheets blocks the large swirling currents that would heat a solid core.'
+
+  - uid: g12-physics-4-2-q022
+    type: true_false
+    difficulty: 1
+    stem: 'In an ideal transformer, a step-up in voltage comes with a step-down in current.'
+    answer: true
+    explanation: 'Power in equals power out, $V_p I_p = V_s I_s$, so if $V$ goes up, $I$ goes down by the same factor.'
+
+  - uid: g12-physics-4-2-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'A phone charger has a transformer that changes 220 V to 5.5 V. Its primary coil has 800 turns. How many turns does the secondary have?'
+    options:
+      A: '40 turns'
+      B: '32 000 turns'
+      C: '20 turns'
+      D: '160 turns'
+    answer: C
+    explanation: '$N_s = N_p \times \frac{V_s}{V_p} = 800 \times \frac{5.5}{220} = 800 \times \frac{1}{40} = 20$.'
+
+  - uid: g12-physics-4-2-q024
+    type: single_choice
+    difficulty: 2
+    stem: 'What does the minus sign in $\varepsilon = -N\frac{\Delta \Phi}{\Delta t}$ show?'
+    options:
+      A: 'The emf is always negative.'
+      B: 'The induced emf opposes the change in flux (Lenz''s law).'
+      C: 'The flux is always decreasing.'
+      D: 'The number of turns is negative.'
+    answer: B
+    explanation: 'The sign carries the direction given by Lenz''s law; it does not mean the size is negative.'
+
+  - uid: g12-physics-4-2-q025
+    type: matching
+    difficulty: 2
+    stem: 'Match each device with its main job.'
+    left:
+      L1: 'Generator'
+      L2: 'Electric motor'
+      L3: 'Transformer'
+    right:
+      R1: 'Changes AC voltage up or down'
+      R2: 'Turns electrical energy into kinetic energy'
+      R3: 'Stores charge'
+      R4: 'Turns kinetic energy into electrical energy'
+    answer: {L1: R4, L2: R2, L3: R1}
+    explanation: 'Generators and motors are opposites; transformers change voltage. Storing charge is the job of a capacitor.'
+
+  - uid: g12-physics-4-2-q026
+    type: true_false
+    difficulty: 2
+    stem: 'Doubling the number of turns on a coil doubles the emf induced by the same rate of change of flux.'
+    answer: true
+    explanation: '$\varepsilon = N\frac{\Delta \Phi}{\Delta t}$ is directly proportional to $N$.'
+
+  - uid: g12-physics-4-2-q027
+    type: ordering
+    difficulty: 1
+    stem: 'Put these stages in the order electricity passes through them, from the power station to a home.'
+    items:
+      A: 'Step-down transformer near the town'
+      B: 'Generator at the power station'
+      C: 'High-voltage transmission lines'
+      D: 'Step-up transformer at the power station'
+    answer: [B, D, C, A]
+    explanation: 'The generator makes the electricity, a step-up transformer raises the voltage, the lines carry it, and a step-down transformer lowers it for homes.'
+
+  - uid: g12-physics-4-2-q028
+    type: fill_in
+    difficulty: 1
+    stem: 'Swirling induced currents in a solid metal core, which waste energy as heat, are called ________ currents.'
+    answer: [eddy]
+    explanation: 'Laminating the core reduces eddy currents.'
+
+  - uid: g12-physics-4-2-q029
+    type: single_choice
+    difficulty: 3
+    stem: 'A magnet is dropped through a long vertical copper tube. It falls more slowly than through a plastic tube. Why?'
+    options:
+      A: 'Copper attracts the magnet like iron does.'
+      B: 'Air pressure is higher inside copper.'
+      C: 'The copper tube is heavier.'
+      D: 'Currents induced in the copper make a magnetic field that opposes the magnet''s motion.'
+    answer: D
+    explanation: 'The moving magnet changes the flux through the copper, inducing eddy currents. By Lenz''s law they oppose the fall. Plastic does not conduct, so no currents flow.'
+
+  - uid: g12-physics-4-2-q030
+    type: single_choice
+    difficulty: 1
+    stem: 'Who discovered electromagnetic induction in 1831?'
+    options:
+      A: 'Michael Faraday'
+      B: 'Albert Einstein'
+      C: 'Johannes Kepler'
+      D: 'Blaise Pascal'
+    answer: A
+    explanation: 'Faraday showed that a changing magnetic field can produce an electric current.'

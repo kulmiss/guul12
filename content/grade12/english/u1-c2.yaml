@@ -1,0 +1,382 @@
+summary:
+  key_points:
+    - 'Zero conditional (general truths): If + present simple, present simple. "If you heat ice, it melts."'
+    - 'First conditional (real future possibility): If + present simple, will + base verb. "If it rains tomorrow, we will stay at home." Do not use "will" in the if-clause.'
+    - 'Second conditional (unreal or unlikely present/future): If + past simple, would + base verb. "If I had more time, I would learn Chinese." In formal English use "were" for all persons: "If I were you, I would apologise."'
+    - 'Third conditional (unreal past): If + past perfect, would have + past participle. "If she had studied, she would have passed."'
+    - '"Unless" means "if not": "Unless you hurry, you will miss the bus." = "If you do not hurry, ..."'
+    - 'Modal verbs are followed by the base form without "to" (except ought to). They do not add -s: "She can swim."'
+    - 'Ability: can, could, be able to. Possibility: may, might, could. Advice: should, ought to. Obligation: must, have to. Prohibition: must not (mustn''t). No obligation: don''t have to, needn''t.'
+    - 'Deduction: must (sure it is true), can''t (sure it is not true), might/may/could (possible). "He must be tired; he worked all night." "She can''t be at home; I just saw her at the market."'
+    - 'Past criticism or regret: should have + past participle. "You should have told me."'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-english-1-2-se01
+    problem: 'Complete: "If I ______ (be) the minister of education, I ______ (build) more libraries."'
+    steps:
+      - 'This is an imaginary present situation, so use the second conditional.'
+      - '"If I were the minister of education, I would build more libraries."'
+    answer: 'were / would build'
+  - uid: g12-english-1-2-se02
+    problem: 'Rewrite with a third conditional: "He did not wake up early, so he missed the bus."'
+    steps:
+      - 'Change the real past to its opposite in the if-clause with the past perfect.'
+      - '"If he had woken up early, he would not have missed the bus."'
+    answer: 'If he had woken up early, he would not have missed the bus.'
+  - uid: g12-english-1-2-se03
+    problem: 'Explain the difference: "You mustn''t use your phone in the exam" and "You don''t have to bring a pen; we will give you one."'
+    steps:
+      - '"Mustn''t" means it is forbidden.'
+      - '"Don''t have to" means it is not necessary, but you are allowed to.'
+    answer: 'mustn''t = forbidden; don''t have to = not necessary'
+
+flashcards:
+  - {uid: g12-english-1-2-fc01, term: Zero conditional, definition: 'If + present, present: general truths.'}
+  - {uid: g12-english-1-2-fc02, term: First conditional, definition: 'If + present, will + verb: real future possibility.'}
+  - {uid: g12-english-1-2-fc03, term: Second conditional, definition: 'If + past, would + verb: imaginary present or future.'}
+  - {uid: g12-english-1-2-fc04, term: Third conditional, definition: 'If + past perfect, would have + participle: imaginary past.'}
+  - {uid: g12-english-1-2-fc05, term: Unless, definition: 'Means "if not".'}
+  - {uid: g12-english-1-2-fc06, term: Mustn't vs don't have to, definition: 'Mustn''t = forbidden; don''t have to = not necessary.'}
+  - {uid: g12-english-1-2-fc07, term: Must (deduction), definition: 'Used when you are sure something is true.'}
+  - {uid: g12-english-1-2-fc08, term: Can't (deduction), definition: 'Used when you are sure something is not true.'}
+  - {uid: g12-english-1-2-fc09, term: Should have + participle, definition: 'Criticism or regret about the past.'}
+
+questions:
+  - uid: g12-english-1-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct form: "If you heat ice, it ______."'
+    options:
+      A: 'would melt'
+      B: 'melts'
+      C: 'melted'
+      D: 'would have melted'
+    answer: B
+    explanation: 'A general truth uses the zero conditional: present simple in both parts.'
+
+  - uid: g12-english-1-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the correct form: "If it rains tomorrow, we ______ the match."'
+    options:
+      A: 'will cancel'
+      B: 'cancelled'
+      C: 'would have cancelled'
+      D: 'had cancelled'
+    answer: A
+    explanation: 'A real future possibility uses the first conditional: if + present, will + verb.'
+
+  - uid: g12-english-1-2-q003
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "If I ______ a lot of money, I would build a school in my village."'
+    options:
+      A: 'have'
+      B: 'will have'
+      C: 'had'
+      D: 'would have'
+    answer: C
+    explanation: 'An imaginary present situation uses the second conditional: if + past simple, would + verb.'
+
+  - uid: g12-english-1-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "If she had left earlier, she ______ the bus."'
+    options:
+      A: 'will catch'
+      B: 'catch'
+      C: 'catches'
+      D: 'would have caught'
+    answer: D
+    explanation: 'An imaginary past uses the third conditional: if + past perfect, would have + past participle.'
+
+  - uid: g12-english-1-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best advice phrase in formal English: "If I ______ you, I would revise every evening."'
+    options:
+      A: 'were'
+      B: 'am'
+      C: 'will be'
+      D: 'have been'
+    answer: A
+    explanation: '"If I were you" is the standard form for giving advice in the second conditional.'
+
+  - uid: g12-english-1-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence has the same meaning as "If you do not water the seedlings, they will die"?'
+    options:
+      A: 'Unless you do not water the seedlings, they will die.'
+      B: 'Unless you water the seedlings, they will die.'
+      C: 'If you water the seedlings, they will die.'
+      D: 'Unless you water the seedlings, they will grow.'
+    answer: B
+    explanation: '"Unless" already means "if not", so it is followed by a positive verb.'
+
+  - uid: g12-english-1-2-q007
+    type: true_false
+    difficulty: 1
+    stem: 'The sentence "If it will rain, we will stay inside." is correct standard English.'
+    answer: false
+    explanation: 'In first conditionals the if-clause uses the present simple: "If it rains, we will stay inside."'
+
+  - uid: g12-english-1-2-q008
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct modal: "Students ______ use mobile phones during the national exam. It is against the rules."'
+    options:
+      A: 'don''t have to'
+      B: 'needn''t'
+      C: 'mustn''t'
+      D: 'might'
+    answer: C
+    explanation: '"Mustn''t" expresses prohibition. "Don''t have to" and "needn''t" mean it is not necessary.'
+
+  - uid: g12-english-1-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct modal: "You ______ bring lunch tomorrow; the school will provide food."'
+    options:
+      A: 'mustn''t'
+      B: 'must'
+      C: 'can''t'
+      D: 'don''t have to'
+    answer: D
+    explanation: 'There is no need to bring lunch, but it is not forbidden: "don''t have to".'
+
+  - uid: g12-english-1-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best modal: "Ayan has worked for twelve hours without a break. She ______ be very tired."'
+    options:
+      A: 'must'
+      B: 'can''t'
+      C: 'needn''t'
+      D: 'mustn''t'
+    answer: A
+    explanation: '"Must" shows a strong logical deduction that something is true.'
+
+  - uid: g12-english-1-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the best modal: "That ______ be Mohammed at the door. He is in Addis Ababa this week."'
+    options:
+      A: 'must'
+      B: 'can''t'
+      C: 'should'
+      D: 'has to'
+    answer: B
+    explanation: '"Can''t" shows you are sure something is impossible.'
+
+  - uid: g12-english-1-2-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which sentence is correct?'
+    options:
+      A: 'She cans speak three languages.'
+      B: 'She can to speak three languages.'
+      C: 'She can speak three languages.'
+      D: 'She can speaks three languages.'
+    answer: C
+    explanation: 'Modals do not add -s and are followed by the base verb without "to".'
+
+  - uid: g12-english-1-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "You failed because you did not study. You ______ harder."'
+    options:
+      A: 'should study yesterday'
+      B: 'must study'
+      C: 'can study'
+      D: 'should have studied'
+    answer: D
+    explanation: '"Should have + past participle" criticises or regrets something in the past.'
+
+  - uid: g12-english-1-2-q014
+    type: single_choice
+    difficulty: 1
+    stem: 'Choose the best modal for advice: "You look ill. You ______ see a doctor."'
+    options:
+      A: 'should'
+      B: 'mustn''t'
+      C: 'can''t'
+      D: 'needn''t'
+    answer: A
+    explanation: '"Should" gives advice.'
+
+  - uid: g12-english-1-2-q015
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which modals can express possibility? Choose all that apply.'
+    options:
+      A: 'might'
+      B: 'may'
+      C: 'could'
+      D: 'mustn''t'
+    answer: [A, B, C]
+    explanation: '"It might/may/could rain later." "Mustn''t" expresses prohibition, not possibility.'
+
+  - uid: g12-english-1-2-q016
+    type: single_choice
+    difficulty: 3
+    stem: 'Choose the correct form: "If the government had built the road last year, the farmers ______ their crops to market more easily now."'
+    options:
+      A: 'would have taken'
+      B: 'will take'
+      C: 'could take'
+      D: 'had taken'
+    answer: C
+    explanation: 'This is a mixed conditional: past condition (had built) with a present result (could/would take now).'
+
+  - uid: g12-english-1-2-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "When I was a child, I ______ climb trees very fast."'
+    options:
+      A: 'can'
+      B: 'could'
+      C: 'must'
+      D: 'should'
+    answer: B
+    explanation: '"Could" expresses general ability in the past.'
+
+  - uid: g12-english-1-2-q018
+    type: true_false
+    difficulty: 2
+    stem: '"You don''t have to wear a uniform" means that wearing a uniform is not allowed.'
+    answer: false
+    explanation: 'It means a uniform is not necessary. "You mustn''t wear a uniform" would mean it is not allowed.'
+
+  - uid: g12-english-1-2-q019
+    type: fill_in
+    difficulty: 2
+    stem: 'Complete with one word: "If I ______ known about the meeting, I would have come." (third conditional)'
+    answer: [had]
+    explanation: 'The if-clause of a third conditional uses the past perfect: had + past participle.'
+
+  - uid: g12-english-1-2-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'Write one word that means "if not": "We will be late ______ we leave now."'
+    answer: [unless]
+    explanation: '"We will be late unless we leave now" = "...if we do not leave now."'
+
+  - uid: g12-english-1-2-q021
+    type: matching
+    difficulty: 2
+    stem: 'Match each sentence with its type of conditional.'
+    left:
+      L1: 'If you mix red and white, you get pink.'
+      L2: 'If I won the prize, I would buy a laptop.'
+      L3: 'If they had trained more, they would have won.'
+    right:
+      R1: 'Second conditional'
+      R2: 'Third conditional'
+      R3: 'Zero conditional'
+      R4: 'First conditional'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Present + present = zero; past + would = second; past perfect + would have = third. None uses the first conditional pattern.'
+
+  - uid: g12-english-1-2-q022
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "We will start the lesson as soon as the teacher ______."'
+    options:
+      A: 'will arrive'
+      B: 'would arrive'
+      C: 'had arrived'
+      D: 'arrives'
+    answer: D
+    explanation: 'After time words like "as soon as", "when" and "before" referring to the future, use the present simple.'
+
+  - uid: g12-english-1-2-q023
+    type: single_choice
+    difficulty: 2
+    stem: 'Which word is used to politely ask for permission? "______ I borrow your dictionary, please?"'
+    options:
+      A: 'May'
+      B: 'Must'
+      C: 'Should have'
+      D: 'Ought'
+    answer: A
+    explanation: '"May I...?" (or "Can I...?") is used to ask for permission politely.'
+
+  - uid: g12-english-1-2-q024
+    type: true_false
+    difficulty: 1
+    stem: 'In "If I had wings, I would fly to Mogadishu.", the situation is imaginary.'
+    answer: true
+    explanation: 'The second conditional describes unreal or imaginary situations.'
+
+  - uid: g12-english-1-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the words in order to make a correct first conditional sentence.'
+    items:
+      A: 'you study,'
+      B: 'If'
+      C: 'you will pass.'
+    answer: [B, A, C]
+    explanation: '"If you study, you will pass."'
+
+  - uid: g12-english-1-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which sentence expresses obligation?'
+    options:
+      A: 'You might visit the doctor.'
+      B: 'You could visit the doctor.'
+      C: 'You have to visit the doctor before you can return to school.'
+      D: 'You needn''t visit the doctor.'
+    answer: C
+    explanation: '"Have to" (like "must") expresses obligation.'
+
+  - uid: g12-english-1-2-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'Which sentence is grammatically correct?'
+    options:
+      A: 'If I would have known, I would have helped you.'
+      B: 'If I knew, I would have helped you yesterday.'
+      C: 'If I know, I would help you yesterday.'
+      D: 'If I had known, I would have helped you.'
+    answer: D
+    explanation: 'Standard third conditional: if + past perfect, would have + past participle. "Would" is not used in the if-clause.'
+
+  - uid: g12-english-1-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "You ______ to respect your elders."'
+    options:
+      A: 'ought'
+      B: 'should'
+      C: 'must'
+      D: 'can'
+    answer: A
+    explanation: 'Only "ought" is followed by "to". The other modals take the base verb directly.'
+
+  - uid: g12-english-1-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "If he ______ harder, he would get better marks."'
+    options:
+      A: 'works'
+      B: 'worked'
+      C: 'will work'
+      D: 'has worked'
+    answer: B
+    explanation: 'With "would get" in the main clause, the if-clause takes the past simple (second conditional).'
+
+  - uid: g12-english-1-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Choose the correct form: "Hurry up, or we ______ the start of the film."'
+    options:
+      A: 'would have missed'
+      B: 'had missed'
+      C: 'will miss'
+      D: 'missed'
+    answer: C
+    explanation: '"Or" here means "if not", giving a real future result: will + verb.'

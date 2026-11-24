@@ -1,0 +1,380 @@
+summary:
+  key_points:
+    - 'Cellular respiration releases energy from food and stores it in ATP. Aerobic respiration: $\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \rightarrow 6\text{CO}_2 + 6\text{H}_2\text{O}$ + energy (about 36–38 ATP per glucose in many textbooks).'
+    - 'ATP (adenosine triphosphate) is the cell''s energy currency: adenine + ribose + three phosphates. $\text{ATP} \rightarrow \text{ADP} + \text{P}_i$ releases energy for muscle contraction, active transport and building molecules.'
+    - 'Stage 1 – Glycolysis (cytoplasm, no oxygen needed): glucose is split into 2 pyruvate, with a net gain of 2 ATP and 2 NADH.'
+    - 'Stage 2 – Link reaction (mitochondrial matrix): each pyruvate loses $\text{CO}_2$ and becomes acetyl coenzyme A.'
+    - 'Stage 3 – Krebs cycle (matrix): acetyl groups are broken down to $\text{CO}_2$, producing NADH, $\text{FADH}_2$ and a little ATP.'
+    - 'Stage 4 – Electron transport chain (inner mitochondrial membrane, folded into cristae): electrons from NADH and $\text{FADH}_2$ pass along carriers; oxygen is the final electron acceptor and forms water. Most ATP is made here.'
+    - 'Anaerobic respiration (no oxygen) gives only 2 ATP per glucose. In muscles it makes lactic acid, causing fatigue and an "oxygen debt". In yeast it makes ethanol and carbon dioxide.'
+    - 'Energy flow: energy enters ecosystems as light, is fixed by producers and passes along food chains. Only about 10% passes to the next trophic level; the rest is lost, mostly as heat. Energy flows one way, while nutrients are recycled.'
+  formulas:
+    - label: Aerobic respiration
+      latex: '\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \rightarrow 6\text{CO}_2 + 6\text{H}_2\text{O} + \text{energy}'
+    - label: Anaerobic (muscle)
+      latex: '\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\,\text{lactic acid}'
+    - label: Anaerobic (yeast)
+      latex: '\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2'
+    - label: Ten per cent rule
+      latex: 'E_{next\ level} \approx 0.1 \times E_{this\ level}'
+
+solved_exercises:
+  - uid: g12-biology-3-2-se01
+    problem: 'Grass captures 20 000 kJ of energy. Using the 10% rule, how much reaches a lion in the chain grass → zebra → lion?'
+    steps:
+      - 'Zebra: $0.1 \times 20\,000 = 2\,000$ kJ.'
+      - 'Lion: $0.1 \times 2\,000 = 200$ kJ.'
+    answer: '200 kJ'
+  - uid: g12-biology-3-2-se02
+    problem: 'Why do athletes keep breathing hard after a race has finished?'
+    steps:
+      - 'During the race muscles respired anaerobically and built up lactic acid.'
+      - 'Extra oxygen is needed afterwards to break down the lactic acid (repaying the oxygen debt).'
+    answer: 'To repay the oxygen debt and remove lactic acid.'
+  - uid: g12-biology-3-2-se03
+    problem: 'Why does aerobic respiration release far more ATP than anaerobic respiration?'
+    steps:
+      - 'Anaerobic respiration stops after glycolysis, so glucose is only partly broken down (2 ATP).'
+      - 'In aerobic respiration the Krebs cycle and electron transport chain break it down fully to $\text{CO}_2$ and water, releasing much more energy.'
+    answer: 'Glucose is broken down completely only with oxygen.'
+
+flashcards:
+  - {uid: g12-biology-3-2-fc01, term: ATP, definition: 'Adenosine triphosphate; the energy currency of the cell.'}
+  - {uid: g12-biology-3-2-fc02, term: Glycolysis, definition: 'Splitting of glucose into 2 pyruvate in the cytoplasm; net 2 ATP.'}
+  - {uid: g12-biology-3-2-fc03, term: Link reaction, definition: 'Pyruvate → acetyl CoA + $\text{CO}_2$ in the mitochondrial matrix.'}
+  - {uid: g12-biology-3-2-fc04, term: Krebs cycle, definition: 'Cycle in the matrix that releases $\text{CO}_2$ and makes NADH and $\text{FADH}_2$.'}
+  - {uid: g12-biology-3-2-fc05, term: Electron transport chain, definition: 'Carriers on the inner mitochondrial membrane; makes most ATP; oxygen is the final acceptor.'}
+  - {uid: g12-biology-3-2-fc06, term: Oxygen debt, definition: 'Extra oxygen needed after exercise to break down lactic acid.'}
+  - {uid: g12-biology-3-2-fc07, term: Cristae, definition: 'Folds of the inner mitochondrial membrane that increase surface area.'}
+  - {uid: g12-biology-3-2-fc08, term: Trophic level, definition: 'Feeding position in a food chain.'}
+  - {uid: g12-biology-3-2-fc09, term: Ten per cent rule, definition: 'About 10% of energy passes to the next trophic level.'}
+
+questions:
+  - uid: g12-biology-3-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'Where in the cell does glycolysis take place?'
+    options:
+      A: 'In the mitochondrial matrix'
+      B: 'In the cytoplasm'
+      C: 'On the inner mitochondrial membrane'
+      D: 'In the chloroplast'
+    answer: B
+    explanation: 'Glycolysis happens in the cytoplasm and does not need oxygen.'
+
+  - uid: g12-biology-3-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'What are the products of aerobic respiration?'
+    options:
+      A: 'Glucose and oxygen'
+      B: 'Lactic acid only'
+      C: 'Ethanol and carbon dioxide'
+      D: 'Carbon dioxide, water and energy (ATP)'
+    answer: D
+    explanation: '$\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \rightarrow 6\text{CO}_2 + 6\text{H}_2\text{O}$ + energy.'
+
+  - uid: g12-biology-3-2-q003
+    type: numeric
+    difficulty: 1
+    stem: 'How many molecules of ATP are gained (net) from one glucose molecule in glycolysis?'
+    answer: {value: 2, tolerance: 0}
+    explanation: '4 ATP are made but 2 are used to start the process, so the net gain is 2.'
+
+  - uid: g12-biology-3-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the end product of glycolysis?'
+    options:
+      A: 'Pyruvate'
+      B: 'Acetyl coenzyme A'
+      C: 'Carbon dioxide and water'
+      D: 'Glucose'
+    answer: A
+    explanation: 'Each glucose (6C) becomes two molecules of pyruvate (3C).'
+
+  - uid: g12-biology-3-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'Where does the Krebs cycle take place?'
+    options:
+      A: 'In the cytoplasm'
+      B: 'On the cell membrane'
+      C: 'In the mitochondrial matrix'
+      D: 'In the nucleus'
+    answer: C
+    explanation: 'The enzymes of the link reaction and the Krebs cycle are in the matrix.'
+
+  - uid: g12-biology-3-2-q006
+    type: single_choice
+    difficulty: 2
+    stem: 'Which stage of aerobic respiration produces the most ATP?'
+    options:
+      A: 'Glycolysis'
+      B: 'The link reaction'
+      C: 'The Krebs cycle'
+      D: 'The electron transport chain'
+    answer: D
+    explanation: 'Most ATP is made by ATP synthase on the inner mitochondrial membrane as electrons pass along the chain.'
+
+  - uid: g12-biology-3-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the role of oxygen in aerobic respiration?'
+    options:
+      A: 'It is the final electron acceptor and forms water.'
+      B: 'It breaks glucose into pyruvate.'
+      C: 'It is released as a waste product.'
+      D: 'It is used in glycolysis.'
+    answer: A
+    explanation: 'Without oxygen to accept electrons, the chain stops and little ATP is made.'
+
+  - uid: g12-biology-3-2-q008
+    type: true_false
+    difficulty: 1
+    stem: 'Glycolysis needs oxygen.'
+    answer: false
+    explanation: 'Glycolysis is anaerobic; it happens in both aerobic and anaerobic respiration.'
+
+  - uid: g12-biology-3-2-q009
+    type: single_choice
+    difficulty: 1
+    stem: 'During hard exercise, muscle cells short of oxygen produce:'
+    options:
+      A: 'Ethanol'
+      B: 'Lactic acid'
+      C: 'Starch'
+      D: 'Oxygen'
+    answer: B
+    explanation: 'Anaerobic respiration in animal muscles gives lactic acid, which causes fatigue and cramp.'
+
+  - uid: g12-biology-3-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What does yeast produce when it respires without oxygen?'
+    options:
+      A: 'Lactic acid'
+      B: 'Water and oxygen'
+      C: 'Ethanol and carbon dioxide'
+      D: 'Glucose'
+    answer: C
+    explanation: 'This alcoholic fermentation is used in brewing and baking.'
+
+  - uid: g12-biology-3-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'What is meant by an "oxygen debt"?'
+    options:
+      A: 'Oxygen stored in the lungs'
+      B: 'Oxygen given out by plants'
+      C: 'Lack of oxygen in water'
+      D: 'The extra oxygen needed after exercise to break down lactic acid'
+    answer: D
+    explanation: 'That is why breathing stays fast after exercise has stopped.'
+
+  - uid: g12-biology-3-2-q012
+    type: single_choice
+    difficulty: 1
+    stem: 'Which molecule is called the "energy currency" of the cell?'
+    options:
+      A: 'ATP'
+      B: 'DNA'
+      C: 'Glucose'
+      D: 'Starch'
+    answer: A
+    explanation: 'ATP carries energy in small, usable amounts to wherever it is needed in the cell.'
+
+  - uid: g12-biology-3-2-q013
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which processes in cells use energy from ATP? Choose all that apply.'
+    options:
+      A: 'Muscle contraction'
+      B: 'Active transport'
+      C: 'Making proteins'
+      D: 'Diffusion of oxygen'
+    answer: [A, B, C]
+    explanation: 'Diffusion is passive; it needs no ATP.'
+
+  - uid: g12-biology-3-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is the inner membrane of a mitochondrion folded into cristae?'
+    options:
+      A: 'To store glucose'
+      B: 'To give a large surface area for the electron transport chain'
+      C: 'To make chlorophyll'
+      D: 'To let the mitochondrion divide'
+    answer: B
+    explanation: 'More membrane means more carriers and ATP synthase, so more ATP can be made.'
+
+  - uid: g12-biology-3-2-q015
+    type: single_choice
+    difficulty: 2
+    stem: 'Muscle cells that work very hard, such as in the heart, contain many:'
+    options:
+      A: 'Chloroplasts'
+      B: 'Vacuoles'
+      C: 'Mitochondria'
+      D: 'Cell walls'
+    answer: C
+    explanation: 'Many mitochondria supply the large amount of ATP needed.'
+
+  - uid: g12-biology-3-2-q016
+    type: single_choice
+    difficulty: 2
+    stem: 'In the link reaction, what is removed from each pyruvate?'
+    options:
+      A: 'Oxygen'
+      B: 'Water'
+      C: 'Glucose'
+      D: 'Carbon dioxide'
+    answer: D
+    explanation: 'Pyruvate (3C) loses one $\text{CO}_2$ and becomes a 2-carbon acetyl group attached to coenzyme A.'
+
+  - uid: g12-biology-3-2-q017
+    type: true_false
+    difficulty: 2
+    stem: 'Anaerobic respiration releases much less energy per glucose molecule than aerobic respiration.'
+    answer: true
+    explanation: 'Anaerobic: 2 ATP. Aerobic: many more, because glucose is broken down completely.'
+
+  - uid: g12-biology-3-2-q018
+    type: numeric
+    difficulty: 2
+    stem: 'Grass in a field captures 10 000 kJ of energy. Using the 10% rule, how much energy, in kJ, reaches the secondary consumers?'
+    answer: {value: 100, tolerance: 0, unit: kJ}
+    explanation: 'Primary consumers: 1 000 kJ. Secondary consumers: 100 kJ.'
+
+  - uid: g12-biology-3-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Why do food chains rarely have more than four or five trophic levels?'
+    options:
+      A: 'So much energy is lost at each level that too little is left to support more.'
+      B: 'Animals at the top do not eat.'
+      C: 'Producers cannot make enough oxygen.'
+      D: 'Decomposers eat the top predators first.'
+    answer: A
+    explanation: 'About 90% is lost at each step, mostly as heat from respiration.'
+
+  - uid: g12-biology-3-2-q020
+    type: single_choice
+    difficulty: 2
+    stem: 'How is most of the energy that is not passed on to the next trophic level lost?'
+    options:
+      A: 'As light'
+      B: 'As heat from respiration'
+      C: 'As sound'
+      D: 'It is stored forever in the soil'
+    answer: B
+    explanation: 'Respiration releases heat; some energy is also lost in faeces and uneaten parts.'
+
+  - uid: g12-biology-3-2-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'The first stage of respiration, in which glucose is split into two pyruvate molecules, is called ________.'
+    answer: [glycolysis]
+    explanation: '"Glyco-lysis" means sugar-splitting.'
+
+  - uid: g12-biology-3-2-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'The cycle in the mitochondrial matrix that releases carbon dioxide and produces NADH is called the ________ cycle.'
+    answer: [Krebs, citric acid, TCA, tricarboxylic acid]
+    explanation: 'It is also called the citric acid cycle.'
+
+  - uid: g12-biology-3-2-q023
+    type: true_false
+    difficulty: 1
+    stem: 'In an ecosystem, energy is recycled, but nutrients flow in one direction only.'
+    answer: false
+    explanation: 'It is the opposite: energy flows one way (and is lost as heat), while nutrients such as carbon and nitrogen are recycled.'
+
+  - uid: g12-biology-3-2-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each stage of respiration with where it happens.'
+    left:
+      L1: 'Glycolysis'
+      L2: 'Krebs cycle'
+      L3: 'Electron transport chain'
+    right:
+      R1: 'Inner mitochondrial membrane'
+      R2: 'Cytoplasm'
+      R3: 'Mitochondrial matrix'
+      R4: 'Chloroplast stroma'
+    answer: {L1: R2, L2: R3, L3: R1}
+    explanation: 'The chloroplast stroma is the site of the Calvin cycle in photosynthesis, not respiration.'
+
+  - uid: g12-biology-3-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the stages of aerobic respiration in order.'
+    items:
+      A: 'Krebs cycle'
+      B: 'Electron transport chain'
+      C: 'Glycolysis'
+      D: 'Link reaction'
+    answer: [C, D, A, B]
+    explanation: 'Glycolysis → link reaction → Krebs cycle → electron transport chain.'
+
+  - uid: g12-biology-3-2-q026
+    type: single_choice
+    difficulty: 3
+    stem: 'A poison blocks the electron transport chain. What happens to ATP production in a cell?'
+    options:
+      A: 'It increases.'
+      B: 'It stops completely, even glycolysis.'
+      C: 'It falls sharply; only the small amount from glycolysis continues.'
+      D: 'It is not affected.'
+    answer: C
+    explanation: 'Cyanide works this way. Glycolysis can still make 2 ATP per glucose, but that is far too little for the body.'
+
+  - uid: g12-biology-3-2-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is the main difference between photosynthesis and respiration?'
+    options:
+      A: 'Photosynthesis stores energy in glucose; respiration releases energy from glucose.'
+      B: 'Both release oxygen.'
+      C: 'Respiration happens only in plants.'
+      D: 'Photosynthesis happens in mitochondria.'
+    answer: A
+    explanation: 'The two processes are roughly the reverse of each other in their overall equations.'
+
+  - uid: g12-biology-3-2-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Do plants carry out respiration?'
+    options:
+      A: 'No, only animals respire.'
+      B: 'Only in the dark.'
+      C: 'Only in their roots.'
+      D: 'Yes, all living cells respire, day and night.'
+    answer: D
+    explanation: 'Plants need ATP all the time; in bright light their photosynthesis is faster than their respiration.'
+
+  - uid: g12-biology-3-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'A pyramid of energy is always upright (wider at the bottom). Why?'
+    options:
+      A: 'Top predators are always bigger.'
+      B: 'Energy decreases at each trophic level.'
+      C: 'Producers are always smaller.'
+      D: 'Energy increases up the food chain.'
+    answer: B
+    explanation: 'Energy is lost at every transfer, so each level has less than the one below.'
+
+  - uid: g12-biology-3-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Which of these is the starting source of energy for almost all ecosystems on Earth?'
+    options:
+      A: 'Sunlight'
+      B: 'Soil minerals'
+      C: 'Water'
+      D: 'Oxygen'
+    answer: A
+    explanation: 'Producers capture sunlight by photosynthesis, and that energy then passes to consumers.'

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /nova
+
+Sitemap: https://guul12.kulmiss.com/sitemap.xml

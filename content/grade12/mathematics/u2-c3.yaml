@@ -1,0 +1,383 @@
+summary:
+  key_points:
+    - 'If $f''(x) > 0$ on an interval, $f$ is increasing there; if $f''(x) < 0$, $f$ is decreasing.'
+    - 'A critical point is where $f''(x) = 0$ or $f''(x)$ does not exist. Local maxima and minima can only happen at critical points.'
+    - 'First derivative test: $f''$ changes from $+$ to $-$ at a local maximum, and from $-$ to $+$ at a local minimum.'
+    - 'Second derivative test: if $f''(a) = 0$ and $f''''(a) < 0$, there is a local maximum; if $f''''(a) > 0$, a local minimum.'
+    - '$f''(a) = 0$ alone does not prove a maximum or minimum: $f(x) = x^3$ has $f''(0) = 0$ but no extremum.'
+    - 'Concave up where $f'''' > 0$, concave down where $f'''' < 0$. A point where the concavity changes is a point of inflection.'
+    - 'On a closed interval $[a, b]$ a continuous function has an absolute maximum and minimum: compare its values at the critical points and at the end points.'
+    - 'Optimisation: write the quantity in one variable, differentiate, set the derivative to 0, check it is a maximum or minimum, and answer in words.'
+  formulas:
+    - label: Related rates (circle area)
+      latex: '\frac{dA}{dt} = 2\pi r \frac{dr}{dt}'
+    - label: Velocity and acceleration
+      latex: 'v = \frac{ds}{dt}, \quad a = \frac{dv}{dt}'
+    - label: Marginal cost and profit
+      latex: 'MC = C''(x), \quad P(x) = R(x) - C(x)'
+    - label: Vertex of a parabola
+      latex: 'x = -\frac{b}{2a}'
+
+solved_exercises:
+  - uid: g12-mathematics-2-3-se01
+    problem: 'Find the local maximum and minimum points of $f(x) = x^3 - 12x$.'
+    steps:
+      - '$f''(x) = 3x^2 - 12 = 3(x - 2)(x + 2)$, so the critical points are $x = -2$ and $x = 2$.'
+      - '$f''''(x) = 6x$. $f''''(-2) = -12 < 0$: local maximum. $f''''(2) = 12 > 0$: local minimum.'
+      - '$f(-2) = -8 + 24 = 16$ and $f(2) = 8 - 24 = -16$.'
+    answer: 'Local maximum at $(-2, 16)$, local minimum at $(2, -16)$.'
+  - uid: g12-mathematics-2-3-se02
+    problem: 'A farmer has 60 m of fence to make a rectangular pen. What is the largest area he can enclose?'
+    steps:
+      - 'Let the sides be $x$ and $30 - x$ (half the perimeter is 30). Area $A = x(30 - x) = 30x - x^2$.'
+      - '$A''(x) = 30 - 2x = 0$ gives $x = 15$. $A'''' = -2 < 0$, so it is a maximum.'
+      - 'The pen is a 15 m by 15 m square and $A = 225$ m².'
+    answer: '225 m²'
+  - uid: g12-mathematics-2-3-se03
+    problem: 'Find the absolute maximum and minimum of $f(x) = x^2 - 4x + 1$ on $[0, 5]$.'
+    steps:
+      - '$f''(x) = 2x - 4 = 0$ at $x = 2$, which is inside the interval.'
+      - 'Values: $f(0) = 1$, $f(2) = -3$, $f(5) = 6$.'
+      - 'The largest is 6 and the smallest is $-3$.'
+    answer: 'Absolute maximum 6 at $x = 5$; absolute minimum $-3$ at $x = 2$.'
+
+flashcards:
+  - {uid: g12-mathematics-2-3-fc01, term: Increasing function, definition: '$f''(x) > 0$ on the interval: the graph goes up from left to right.'}
+  - {uid: g12-mathematics-2-3-fc02, term: Critical point, definition: 'A point where $f''(x) = 0$ or $f''(x)$ does not exist.'}
+  - {uid: g12-mathematics-2-3-fc03, term: Local maximum, definition: 'A point higher than all nearby points; $f''$ changes from $+$ to $-$.'}
+  - {uid: g12-mathematics-2-3-fc04, term: Second derivative test, definition: '$f''(a) = 0$ and $f''''(a) > 0$: minimum; $f''''(a) < 0$: maximum.'}
+  - {uid: g12-mathematics-2-3-fc05, term: Concave up, definition: '$f''''(x) > 0$: the graph bends upward like a cup.'}
+  - {uid: g12-mathematics-2-3-fc06, term: Point of inflection, definition: 'A point where the graph changes concavity.'}
+  - {uid: g12-mathematics-2-3-fc07, term: 'Absolute maximum on [a, b]', definition: 'The largest value of $f$ among the critical points and the end points.'}
+  - {uid: g12-mathematics-2-3-fc08, term: Optimisation, definition: 'Finding the largest or smallest value of a quantity using derivatives.'}
+  - {uid: g12-mathematics-2-3-fc09, term: Marginal cost, definition: '$C''(x)$, the approximate cost of producing one more unit.'}
+
+questions:
+  - uid: g12-mathematics-2-3-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'At which value of $x$ does $f(x) = x^2 - 4x$ have a critical point?'
+    options:
+      A: '$x = 4$'
+      B: '$x = -2$'
+      C: '$x = 2$'
+      D: '$x = 0$'
+    answer: C
+    explanation: '$f''(x) = 2x - 4 = 0$ when $x = 2$.'
+
+  - uid: g12-mathematics-2-3-q002
+    type: single_choice
+    difficulty: 2
+    stem: 'On which interval is $f(x) = x^3 - 3x$ decreasing?'
+    options:
+      A: '$(-1, 1)$'
+      B: '$(1, \infty)$'
+      C: '$(-\infty, -1)$'
+      D: '$(-3, 3)$'
+    answer: A
+    explanation: '$f''(x) = 3x^2 - 3 = 3(x - 1)(x + 1)$, which is negative when $-1 < x < 1$.'
+
+  - uid: g12-mathematics-2-3-q003
+    type: numeric
+    difficulty: 2
+    stem: 'What is the maximum value of $f(x) = -x^2 + 6x$?'
+    answer: {value: 9, tolerance: 0}
+    explanation: '$f''(x) = -2x + 6 = 0$ at $x = 3$, and $f''''(x) = -2 < 0$, so it is a maximum: $f(3) = -9 + 18 = 9$.'
+
+  - uid: g12-mathematics-2-3-q004
+    type: single_choice
+    difficulty: 3
+    stem: 'What is the local maximum value of $f(x) = x^3 - 3x$?'
+    options:
+      A: '$-2$'
+      B: '2'
+      C: '0'
+      D: '$-1$'
+    answer: B
+    explanation: 'Critical points: $x = \pm 1$. $f''''(x) = 6x$ is negative at $x = -1$, so the local maximum is $f(-1) = -1 + 3 = 2$.'
+
+  - uid: g12-mathematics-2-3-q005
+    type: single_choice
+    difficulty: 1
+    stem: 'If $f''(a) = 0$ and $f''''(a) > 0$, what does $f$ have at $x = a$?'
+    options:
+      A: 'A local maximum'
+      B: 'A point of inflection'
+      C: 'No turning point'
+      D: 'A local minimum'
+    answer: D
+    explanation: 'The graph is horizontal at $a$ and bends upward (concave up), so $a$ is a local minimum.'
+
+  - uid: g12-mathematics-2-3-q006
+    type: true_false
+    difficulty: 2
+    stem: 'If $f''(a) = 0$, then $f$ must have a local maximum or a local minimum at $x = a$.'
+    answer: false
+    explanation: '$f(x) = x^3$ has $f''(0) = 0$, but the function keeps increasing through 0, so there is no maximum or minimum there.'
+
+  - uid: g12-mathematics-2-3-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Two positive numbers add up to 20. What is the largest possible value of their product?'
+    options:
+      A: '100'
+      B: '96'
+      C: '75'
+      D: '400'
+    answer: A
+    explanation: 'Let the numbers be $x$ and $20 - x$. $P = 20x - x^2$, $P'' = 20 - 2x = 0$ gives $x = 10$, and $P = 10 \times 10 = 100$.'
+
+  - uid: g12-mathematics-2-3-q008
+    type: numeric
+    difficulty: 3
+    stem: 'A farmer has 100 m of fence to make a rectangular field next to a straight river. No fence is needed along the river. What is the largest area, in m², he can enclose?'
+    answer: {value: 1250, tolerance: 0, unit: m²}
+    explanation: 'Let the two sides from the river be $x$; the side parallel to the river is $100 - 2x$. $A = x(100 - 2x) = 100x - 2x^2$, $A'' = 100 - 4x = 0$ gives $x = 25$. $A = 25 \times 50 = 1250$ m².'
+
+  - uid: g12-mathematics-2-3-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'A particle moves along a line with position $s(t) = t^2 - 6t + 5$. At what time is it momentarily at rest?'
+    options:
+      A: '$t = 5$'
+      B: '$t = 1$'
+      C: '$t = 3$'
+      D: '$t = 6$'
+    answer: C
+    explanation: 'It is at rest when $v = s''(t) = 2t - 6 = 0$, that is $t = 3$.'
+
+  - uid: g12-mathematics-2-3-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What are the critical points of $f(x) = x^4 - 2x^2$?'
+    options:
+      A: '$x = 0$ only'
+      B: '$x = -1, 0, 1$'
+      C: '$x = 1$ only'
+      D: '$x = \pm\sqrt{2}$'
+    answer: B
+    explanation: '$f''(x) = 4x^3 - 4x = 4x(x - 1)(x + 1)$, which is 0 at $x = -1$, $0$ and $1$.'
+
+  - uid: g12-mathematics-2-3-q011
+    type: multiple_answers
+    difficulty: 3
+    stem: 'For $f(x) = x^3 - 3x^2$, which statements are true? Choose all that apply.'
+    options:
+      A: '$f''(x) = 3x^2 - 6x$'
+      B: 'The critical points are $x = 0$ and $x = 2$.'
+      C: '$f$ has a local minimum at $x = 0$.'
+      D: '$f$ has a local minimum at $x = 2$.'
+    answer: [A, B, D]
+    explanation: '$f''(x) = 3x(x - 2)$, so the critical points are 0 and 2. $f''''(x) = 6x - 6$: $f''''(0) = -6$ (local maximum, so C is false) and $f''''(2) = 6$ (local minimum).'
+
+  - uid: g12-mathematics-2-3-q012
+    type: single_choice
+    difficulty: 2
+    stem: 'What is the absolute maximum of $f(x) = x^2$ on the interval $[-1, 3]$?'
+    options:
+      A: '1'
+      B: '0'
+      C: '3'
+      D: '9'
+    answer: D
+    explanation: 'Check the critical point $x = 0$ and the end points: $f(-1) = 1$, $f(0) = 0$, $f(3) = 9$. The largest is 9.'
+
+  - uid: g12-mathematics-2-3-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'At which value of $x$ does $f(x) = x^3 - 6x^2$ have a point of inflection?'
+    options:
+      A: '$x = 2$'
+      B: '$x = 0$'
+      C: '$x = 4$'
+      D: '$x = 6$'
+    answer: A
+    explanation: '$f''''(x) = 6x - 12$, which is 0 at $x = 2$ and changes sign there.'
+
+  - uid: g12-mathematics-2-3-q014
+    type: true_false
+    difficulty: 1
+    stem: 'If $f''(x) > 0$ for every $x$ in an interval, then $f$ is increasing on that interval.'
+    answer: true
+    explanation: 'A positive derivative means the slope is positive everywhere in the interval, so the function goes up.'
+
+  - uid: g12-mathematics-2-3-q015
+    type: single_choice
+    difficulty: 3
+    stem: 'The radius of a circle grows at 2 cm/s. How fast is the area growing when the radius is 5 cm?'
+    options:
+      A: '$10\pi$ cm²/s'
+      B: '$25\pi$ cm²/s'
+      C: '$20\pi$ cm²/s'
+      D: '$4\pi$ cm²/s'
+    answer: C
+    explanation: '$\frac{dA}{dt} = 2\pi r \frac{dr}{dt} = 2\pi \times 5 \times 2 = 20\pi$ cm²/s.'
+
+  - uid: g12-mathematics-2-3-q016
+    type: numeric
+    difficulty: 3
+    stem: 'An open box is made from a 12 cm by 12 cm sheet by cutting equal squares of side $x$ cm from each corner and folding up the sides. For which $x$ (in cm) is the volume largest?'
+    answer: {value: 2, tolerance: 0, unit: cm}
+    explanation: '$V = x(12 - 2x)^2$. $V'' = (12 - 2x)^2 - 4x(12 - 2x) = (12 - 2x)(12 - 6x)$, which is 0 at $x = 6$ (no box) or $x = 2$. $V(2) = 2 \times 8^2 = 128$ cm³ is the maximum.'
+
+  - uid: g12-mathematics-2-3-q017
+    type: single_choice
+    difficulty: 2
+    stem: 'A shop''s daily profit is $P(x) = -2x^2 + 40x - 50$ birr when it sells $x$ items. What is the largest profit?'
+    options:
+      A: '200 birr'
+      B: '150 birr'
+      C: '350 birr'
+      D: '100 birr'
+    answer: B
+    explanation: '$P''(x) = -4x + 40 = 0$ at $x = 10$. $P(10) = -200 + 400 - 50 = 150$ birr.'
+
+  - uid: g12-mathematics-2-3-q018
+    type: single_choice
+    difficulty: 2
+    stem: 'Where is $f(x) = x^3$ concave up?'
+    options:
+      A: 'For all $x$'
+      B: 'For $x < 0$'
+      C: 'Nowhere'
+      D: 'For $x > 0$'
+    answer: D
+    explanation: '$f''''(x) = 6x$, which is positive when $x > 0$.'
+
+  - uid: g12-mathematics-2-3-q019
+    type: single_choice
+    difficulty: 3
+    stem: 'What is the smallest value of $f(x) = x + \frac{4}{x}$ for $x > 0$?'
+    options:
+      A: '4'
+      B: '2'
+      C: '5'
+      D: '8'
+    answer: A
+    explanation: '$f''(x) = 1 - \frac{4}{x^2} = 0$ at $x = 2$ (for $x > 0$). $f''''(x) = \frac{8}{x^3} > 0$, so it is a minimum: $f(2) = 2 + 2 = 4$.'
+
+  - uid: g12-mathematics-2-3-q020
+    type: fill_in
+    difficulty: 1
+    stem: 'A number $c$ in the domain of $f$ where $f''(c) = 0$ or $f''(c)$ does not exist is called a ________ point of $f$.'
+    answer: [critical, stationary]
+    explanation: 'Such points are critical points. Points where $f''(x) = 0$ are also called stationary points.'
+
+  - uid: g12-mathematics-2-3-q021
+    type: single_choice
+    difficulty: 2
+    stem: 'An object moves with velocity $v(t) = 12 - 4t$ m/s. At what time does it change direction?'
+    options:
+      A: '$t = 4$ s'
+      B: '$t = 12$ s'
+      C: '$t = 3$ s'
+      D: 'It never changes direction.'
+    answer: C
+    explanation: 'The velocity is positive before $t = 3$ and negative after, so the object turns around at $t = 3$ s.'
+
+  - uid: g12-mathematics-2-3-q022
+    type: matching
+    difficulty: 1
+    stem: 'Match each condition with what it tells you about the graph of $f$.'
+    left:
+      L1: '$f''(x) > 0$'
+      L2: '$f''(x) < 0$'
+      L3: '$f''''(x) > 0$'
+    right:
+      R1: 'Concave down'
+      R2: 'Increasing'
+      R3: 'Concave up'
+      R4: 'Decreasing'
+    answer: {L1: R2, L2: R4, L3: R3}
+    explanation: 'The sign of $f''$ tells increasing or decreasing; the sign of $f''''$ tells the concavity. Concave down would need $f'''' < 0$.'
+
+  - uid: g12-mathematics-2-3-q023
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps for solving an optimisation problem in order.'
+    items:
+      A: 'Write a formula for the quantity to be made largest or smallest.'
+      B: 'Use the given condition to write it with one variable.'
+      C: 'Differentiate and set the derivative equal to 0.'
+      D: 'Check it is a maximum or minimum and answer the question.'
+    answer: [A, B, C, D]
+    explanation: 'First model the quantity, then reduce it to one variable, then find critical points, and finally check and interpret.'
+
+  - uid: g12-mathematics-2-3-q024
+    type: single_choice
+    difficulty: 3
+    stem: 'What is the local minimum value of $f(x) = 2x^3 - 3x^2 - 12x$?'
+    options:
+      A: '7'
+      B: '$-2$'
+      C: '0'
+      D: '$-20$'
+    answer: D
+    explanation: '$f''(x) = 6x^2 - 6x - 12 = 6(x - 2)(x + 1)$. $f''''(x) = 12x - 6$ is positive at $x = 2$, so the minimum is $f(2) = 16 - 12 - 24 = -20$.'
+
+  - uid: g12-mathematics-2-3-q025
+    type: single_choice
+    difficulty: 2
+    stem: 'At which point is the tangent to $y = x^2 - 6x + 1$ horizontal?'
+    options:
+      A: '$(0, 1)$'
+      B: '$(3, -8)$'
+      C: '$(3, 10)$'
+      D: '$(-3, 28)$'
+    answer: B
+    explanation: '$y'' = 2x - 6 = 0$ at $x = 3$, and $y(3) = 9 - 18 + 1 = -8$.'
+
+  - uid: g12-mathematics-2-3-q026
+    type: true_false
+    difficulty: 2
+    stem: 'A function that is continuous on a closed interval $[a, b]$ always has an absolute maximum on that interval.'
+    answer: true
+    explanation: 'This is the extreme value theorem: a continuous function on a closed interval reaches both a largest and a smallest value.'
+
+  - uid: g12-mathematics-2-3-q027
+    type: single_choice
+    difficulty: 2
+    stem: 'The cost of making $x$ chairs is $C(x) = 500 + 20x + 0.5x^2$ birr. What is the marginal cost when $x = 10$?'
+    options:
+      A: '30 birr per chair'
+      B: '20 birr per chair'
+      C: '750 birr per chair'
+      D: '25 birr per chair'
+    answer: A
+    explanation: '$C''(x) = 20 + x$, so $C''(10) = 30$ birr per chair.'
+
+  - uid: g12-mathematics-2-3-q028
+    type: single_choice
+    difficulty: 1
+    stem: 'Which function is decreasing for every real $x$?'
+    options:
+      A: '$f(x) = x^2$'
+      B: '$f(x) = x^3$'
+      C: '$f(x) = -3x + 2$'
+      D: '$f(x) = |x|$'
+    answer: C
+    explanation: '$f''(x) = -3 < 0$ for all $x$. $x^3$ is always increasing, and $x^2$ and $|x|$ go down and then up.'
+
+  - uid: g12-mathematics-2-3-q029
+    type: single_choice
+    difficulty: 1
+    stem: 'What is the minimum value of $f(x) = x^2 - 2x + 5$?'
+    options:
+      A: '5'
+      B: '4'
+      C: '1'
+      D: '6'
+    answer: B
+    explanation: '$f''(x) = 2x - 2 = 0$ at $x = 1$, and $f(1) = 1 - 2 + 5 = 4$.'
+
+  - uid: g12-mathematics-2-3-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'A particle has position $s(t) = t^3 - 3t$. What is its acceleration at $t = 2$?'
+    options:
+      A: '9'
+      B: '2'
+      C: '6'
+      D: '12'
+    answer: D
+    explanation: '$v(t) = 3t^2 - 3$ and $a(t) = 6t$, so $a(2) = 12$.'

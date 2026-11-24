@@ -1,0 +1,372 @@
+summary:
+  key_points:
+    - 'Hormones are chemical messengers made by endocrine (ductless) glands and carried in the blood to target organs. Compared with nerves, hormonal effects are slower but last longer.'
+    - 'The pituitary gland, controlled by the hypothalamus, is called the "master gland". It releases growth hormone, TSH (stimulates the thyroid), FSH and LH (control reproduction) and ADH (controls water balance).'
+    - 'Other glands: thyroid – thyroxine, which controls metabolic rate and needs iodine; adrenal glands – adrenaline, which prepares the body for "fight or flight"; pancreas – insulin and glucagon; ovaries – oestrogen and progesterone; testes – testosterone.'
+    - 'Homeostasis is keeping the internal environment (temperature, blood glucose, water) constant. It mostly works by negative feedback: a change away from the set point causes a response that reverses the change.'
+    - 'Blood glucose: when it rises, the pancreas releases insulin, which makes the liver and muscles take in glucose and store it as glycogen. When it falls, glucagon makes the liver break glycogen down into glucose. In diabetes the body cannot control blood glucose: type 1 makes no insulin; type 2 does not respond well to insulin.'
+    - 'Temperature (about 37 °C) is controlled by the hypothalamus. When hot: sweating and vasodilation (skin vessels widen). When cold: shivering, vasoconstriction (skin vessels narrow) and hairs standing up.'
+    - 'Water balance: when the body is short of water, the pituitary releases more ADH, so the kidneys reabsorb more water and make a small volume of concentrated urine.'
+  formulas: []
+
+solved_exercises:
+  - uid: g12-biology-5-2-se01
+    problem: 'After a meal of injera and shiro, a student''s blood glucose rises. Describe how it returns to normal.'
+    steps:
+      - 'The pancreas detects the rise and releases insulin into the blood.'
+      - 'Insulin makes liver and muscle cells take in glucose and store it as glycogen, so blood glucose falls back to normal (negative feedback).'
+    answer: 'Insulin → glucose stored as glycogen'
+  - uid: g12-biology-5-2-se02
+    problem: 'On a hot afternoon in Gode, a farmer sweats a lot and drinks little. What happens to his urine, and why?'
+    steps:
+      - 'He loses water, so his blood becomes more concentrated; the hypothalamus detects it and the pituitary releases more ADH.'
+      - 'ADH makes the kidney collecting ducts reabsorb more water, so his urine is small in volume and concentrated (dark).'
+    answer: 'Less, more concentrated urine because of more ADH'
+  - uid: g12-biology-5-2-se03
+    problem: 'Why does a lack of iodine in the diet affect metabolism?'
+    steps:
+      - 'The thyroid gland needs iodine to make thyroxine.'
+      - 'Without enough thyroxine the metabolic rate falls, causing tiredness, and the thyroid swells (goitre).'
+    answer: 'Iodine is needed to make thyroxine.'
+
+flashcards:
+  - {uid: g12-biology-5-2-fc01, term: Hormone, definition: 'Chemical messenger carried in the blood to a target organ.'}
+  - {uid: g12-biology-5-2-fc02, term: Endocrine gland, definition: 'Ductless gland that secretes hormones into the blood.'}
+  - {uid: g12-biology-5-2-fc03, term: Pituitary gland, definition: '"Master gland" at the base of the brain that controls other glands.'}
+  - {uid: g12-biology-5-2-fc04, term: Insulin, definition: 'Pancreatic hormone that lowers blood glucose.'}
+  - {uid: g12-biology-5-2-fc05, term: Glucagon, definition: 'Pancreatic hormone that raises blood glucose.'}
+  - {uid: g12-biology-5-2-fc06, term: Adrenaline, definition: 'Adrenal hormone for "fight or flight".'}
+  - {uid: g12-biology-5-2-fc07, term: Homeostasis, definition: 'Keeping the internal environment of the body constant.'}
+  - {uid: g12-biology-5-2-fc08, term: Negative feedback, definition: 'A change triggers a response that reverses the change.'}
+  - {uid: g12-biology-5-2-fc09, term: ADH, definition: 'Anti-diuretic hormone; makes the kidneys reabsorb more water.'}
+  - {uid: g12-biology-5-2-fc10, term: Vasodilation, definition: 'Widening of skin blood vessels to lose heat.'}
+
+questions:
+  - uid: g12-biology-5-2-q001
+    type: single_choice
+    difficulty: 1
+    stem: 'How are hormones carried around the body?'
+    options:
+      A: 'Along nerves'
+      B: 'In the blood'
+      C: 'Through the air in the lungs'
+      D: 'In the digestive system'
+    answer: B
+    explanation: 'Endocrine glands release hormones directly into the bloodstream.'
+
+  - uid: g12-biology-5-2-q002
+    type: single_choice
+    difficulty: 1
+    stem: 'Which gland is often called the "master gland"?'
+    options:
+      A: 'Thyroid'
+      B: 'Adrenal'
+      C: 'Pituitary'
+      D: 'Pancreas'
+    answer: C
+    explanation: 'The pituitary releases hormones that control several other glands.'
+
+  - uid: g12-biology-5-2-q003
+    type: single_choice
+    difficulty: 1
+    stem: 'Which hormone lowers blood glucose?'
+    options:
+      A: 'Insulin'
+      B: 'Glucagon'
+      C: 'Adrenaline'
+      D: 'Thyroxine'
+    answer: A
+    explanation: 'Insulin helps cells take up glucose and the liver store it as glycogen.'
+
+  - uid: g12-biology-5-2-q004
+    type: single_choice
+    difficulty: 2
+    stem: 'A person has not eaten for many hours. Which hormone raises their blood glucose?'
+    options:
+      A: 'Insulin'
+      B: 'ADH'
+      C: 'Testosterone'
+      D: 'Glucagon'
+    answer: D
+    explanation: 'Glucagon makes the liver break glycogen into glucose and release it into the blood.'
+
+  - uid: g12-biology-5-2-q005
+    type: single_choice
+    difficulty: 2
+    stem: 'In which organ is excess glucose stored as glycogen?'
+    options:
+      A: 'Kidney'
+      B: 'Liver'
+      C: 'Heart'
+      D: 'Brain'
+    answer: B
+    explanation: 'The liver (and muscles) store glycogen; the liver can release glucose back into the blood.'
+
+  - uid: g12-biology-5-2-q006
+    type: true_false
+    difficulty: 1
+    stem: 'In type 1 diabetes, the pancreas produces little or no insulin.'
+    answer: true
+    explanation: 'The insulin-making cells are destroyed, so insulin must be given by injection.'
+
+  - uid: g12-biology-5-2-q007
+    type: single_choice
+    difficulty: 2
+    stem: 'Which is a common cause of type 2 diabetes?'
+    options:
+      A: 'Body cells no longer respond well to insulin, often linked to obesity and lack of exercise'
+      B: 'A virus that attacks the eyes'
+      C: 'Too much iodine'
+      D: 'A broken bone'
+    answer: A
+    explanation: 'Type 2 diabetes is linked to lifestyle and can often be controlled by diet and exercise.'
+
+  - uid: g12-biology-5-2-q008
+    type: single_choice
+    difficulty: 1
+    stem: 'Which hormone prepares the body for "fight or flight"?'
+    options:
+      A: 'Insulin'
+      B: 'Progesterone'
+      C: 'Adrenaline'
+      D: 'ADH'
+    answer: C
+    explanation: 'Adrenaline from the adrenal glands raises heart rate, breathing rate and blood glucose.'
+
+  - uid: g12-biology-5-2-q009
+    type: single_choice
+    difficulty: 2
+    stem: 'Thyroxine controls the body''s metabolic rate. Which element is needed to make it?'
+    options:
+      A: 'Iron'
+      B: 'Calcium'
+      C: 'Sodium'
+      D: 'Iodine'
+    answer: D
+    explanation: 'Iodised salt helps prevent thyroxine shortage and goitre.'
+
+  - uid: g12-biology-5-2-q010
+    type: single_choice
+    difficulty: 2
+    stem: 'What is meant by homeostasis?'
+    options:
+      A: 'Keeping the internal conditions of the body nearly constant'
+      B: 'Growth of the body'
+      C: 'Reproduction of cells'
+      D: 'Digestion of food'
+    answer: A
+    explanation: 'Examples are control of body temperature, blood glucose and water content.'
+
+  - uid: g12-biology-5-2-q011
+    type: single_choice
+    difficulty: 2
+    stem: 'In negative feedback, a change away from normal causes:'
+    options:
+      A: 'A response that makes the change bigger'
+      B: 'A response that brings the condition back towards normal'
+      C: 'No response'
+      D: 'The death of cells'
+    answer: B
+    explanation: 'For example, a rise in blood glucose triggers insulin release, which lowers glucose.'
+
+  - uid: g12-biology-5-2-q012
+    type: multiple_answers
+    difficulty: 2
+    stem: 'Which responses help the body cool down when it is too hot? Choose all that apply.'
+    options:
+      A: 'Sweating'
+      B: 'Vasodilation of skin blood vessels'
+      C: 'Shivering'
+      D: 'Hairs on the skin standing up'
+    answer: [A, B]
+    explanation: 'Sweat evaporation and wider skin vessels lose heat. Shivering and raised hairs are responses to cold.'
+
+  - uid: g12-biology-5-2-q013
+    type: single_choice
+    difficulty: 2
+    stem: 'What happens to blood vessels in the skin when the body is cold?'
+    options:
+      A: 'They widen (vasodilation) to lose heat.'
+      B: 'They burst.'
+      C: 'They narrow (vasoconstriction) so less heat is lost.'
+      D: 'Nothing changes.'
+    answer: C
+    explanation: 'Less blood flows near the surface, keeping heat inside the body.'
+
+  - uid: g12-biology-5-2-q014
+    type: single_choice
+    difficulty: 2
+    stem: 'Which part of the brain detects changes in body temperature and starts corrective responses?'
+    options:
+      A: 'Cerebellum'
+      B: 'Hypothalamus'
+      C: 'Medulla oblongata'
+      D: 'Spinal cord'
+    answer: B
+    explanation: 'The hypothalamus acts as the body''s thermostat.'
+
+  - uid: g12-biology-5-2-q015
+    type: single_choice
+    difficulty: 3
+    stem: 'A student drinks a lot of water. What happens to ADH and urine?'
+    options:
+      A: 'More ADH; small volume of concentrated urine'
+      B: 'More ADH; large volume of dilute urine'
+      C: 'Less ADH; small volume of concentrated urine'
+      D: 'Less ADH; large volume of dilute urine'
+    answer: D
+    explanation: 'With extra water, less ADH is released, the kidneys reabsorb less water, and much dilute urine is made.'
+
+  - uid: g12-biology-5-2-q016
+    type: numeric
+    difficulty: 1
+    stem: 'What is the normal core body temperature of a healthy human, in °C (to the nearest whole number)?'
+    answer: {value: 37, tolerance: 0, unit: °C}
+    explanation: 'The body keeps its core near 37 °C, the best temperature for its enzymes.'
+
+  - uid: g12-biology-5-2-q017
+    type: numeric
+    difficulty: 1
+    stem: 'Normal core body temperature is 37 °C. A patient with malaria has a temperature of 39.5 °C. By how many degrees Celsius is it above normal?'
+    answer: {value: 2.5, tolerance: 0, unit: °C}
+    explanation: '$39.5 - 37 = 2.5$ °C. A fever happens when the hypothalamus raises the set point during infection.'
+
+  - uid: g12-biology-5-2-q018
+    type: single_choice
+    difficulty: 1
+    stem: 'Which hormone is produced by the testes?'
+    options:
+      A: 'Oestrogen'
+      B: 'Insulin'
+      C: 'Testosterone'
+      D: 'Glucagon'
+    answer: C
+    explanation: 'Testosterone causes male secondary sexual characteristics and sperm production.'
+
+  - uid: g12-biology-5-2-q019
+    type: single_choice
+    difficulty: 2
+    stem: 'Which statement compares hormonal and nervous control correctly?'
+    options:
+      A: 'Hormones act faster than nerve impulses.'
+      B: 'Nerve impulses travel in the blood.'
+      C: 'Both always last only milliseconds.'
+      D: 'Hormonal responses are slower but usually last longer.'
+    answer: D
+    explanation: 'Nerves give fast, short responses; hormones give slower, longer-lasting ones.'
+
+  - uid: g12-biology-5-2-q020
+    type: true_false
+    difficulty: 2
+    stem: 'Shivering helps to warm the body because muscle contractions release heat.'
+    answer: true
+    explanation: 'Respiration in the rapidly contracting muscles releases heat.'
+
+  - uid: g12-biology-5-2-q021
+    type: fill_in
+    difficulty: 1
+    stem: 'Keeping the internal environment of the body nearly constant is called ________.'
+    answer: [homeostasis, homoeostasis]
+    explanation: 'It keeps conditions right for enzymes and cells.'
+
+  - uid: g12-biology-5-2-q022
+    type: fill_in
+    difficulty: 2
+    stem: 'Insulin causes glucose to be stored in the liver as ________.'
+    answer: [glycogen]
+    explanation: 'Glycogen is a large, insoluble storage carbohydrate.'
+
+  - uid: g12-biology-5-2-q023
+    type: true_false
+    difficulty: 1
+    stem: 'Endocrine glands release their hormones through ducts.'
+    answer: false
+    explanation: 'Endocrine glands are ductless; their hormones go straight into the blood.'
+
+  - uid: g12-biology-5-2-q024
+    type: matching
+    difficulty: 2
+    stem: 'Match each gland with a hormone it makes.'
+    left:
+      L1: 'Thyroid'
+      L2: 'Adrenal'
+      L3: 'Ovary'
+    right:
+      R1: 'Adrenaline'
+      R2: 'Oestrogen'
+      R3: 'Thyroxine'
+      R4: 'Bile'
+    answer: {L1: R3, L2: R1, L3: R2}
+    explanation: 'Bile is made by the liver and is not a hormone.'
+
+  - uid: g12-biology-5-2-q025
+    type: ordering
+    difficulty: 2
+    stem: 'Put the steps of blood glucose control after a meal in order.'
+    items:
+      A: 'Liver and muscle cells take up glucose and store it as glycogen.'
+      B: 'Blood glucose rises after digestion.'
+      C: 'Blood glucose falls back to normal.'
+      D: 'The pancreas releases insulin.'
+    answer: [B, D, A, C]
+    explanation: 'Rise → detection and insulin release → storage → return to normal (negative feedback).'
+
+  - uid: g12-biology-5-2-q026
+    type: single_choice
+    difficulty: 2
+    stem: 'Which part of the pancreas makes insulin and glucagon?'
+    options:
+      A: 'The islets of Langerhans'
+      B: 'The pancreatic duct'
+      C: 'The bile duct'
+      D: 'The villi'
+    answer: A
+    explanation: 'Beta cells in the islets make insulin and alpha cells make glucagon.'
+
+  - uid: g12-biology-5-2-q027
+    type: single_choice
+    difficulty: 3
+    stem: 'A person''s pituitary gland makes too little growth hormone during childhood. What is the most likely result?'
+    options:
+      A: 'Very tall height'
+      B: 'Much shorter than average height'
+      C: 'Diabetes'
+      D: 'Goitre'
+    answer: B
+    explanation: 'Growth hormone stimulates the growth of bones and muscles; a shortage in childhood causes dwarfism.'
+
+  - uid: g12-biology-5-2-q028
+    type: single_choice
+    difficulty: 2
+    stem: 'Why is it important to keep body temperature near 37 °C?'
+    options:
+      A: 'Bones melt at higher temperatures.'
+      B: 'Blood turns solid below 37 °C.'
+      C: 'Enzymes work best near this temperature and can be denatured if it is too high.'
+      D: 'Hormones only exist at 37 °C.'
+    answer: C
+    explanation: 'Enzyme activity falls when it is too cold and enzymes are damaged when it is too hot.'
+
+  - uid: g12-biology-5-2-q029
+    type: single_choice
+    difficulty: 2
+    stem: 'Which advice best helps prevent type 2 diabetes?'
+    options:
+      A: 'Eat a lot of sugary drinks.'
+      B: 'Avoid all physical activity.'
+      C: 'Never drink water.'
+      D: 'Keep a healthy weight, eat a balanced diet and exercise regularly.'
+    answer: D
+    explanation: 'Being overweight and inactive are major risk factors for type 2 diabetes.'
+
+  - uid: g12-biology-5-2-q030
+    type: single_choice
+    difficulty: 2
+    stem: 'Where is ADH made and released?'
+    options:
+      A: 'Made in the hypothalamus and released from the pituitary gland'
+      B: 'Made and released by the pancreas'
+      C: 'Made by the kidneys'
+      D: 'Made by the thyroid gland'
+    answer: A
+    explanation: 'ADH is produced by hypothalamus neurons and stored in, then released from, the posterior pituitary.'

@@ -1,0 +1,32 @@
+reviewer: reviewer-agent
+answers:
+  g12-english-1-4-q001: {hash: '6cc418fd31b41d22805b09fb6cc02df637efcff1fceda4000f4756ec78a0c2a5', answer: B}
+  g12-english-1-4-q002: {hash: '8e050b09b100b59b280755d28cee860fa136d247bf145476453e25a2bf94a417', answer: A}
+  g12-english-1-4-q003: {hash: 'dccfa15cedf4071a127e819bb9380519b7357df99413ae8e457aa3efa8c6f787', answer: C}
+  g12-english-1-4-q004: {hash: 'd09f331f629caf202664562718d09cf3a574c6865f2d792a630a27ca9b37f693', answer: D}
+  g12-english-1-4-q005: {hash: 'fbdad81c8a0863b62fe2aa2aa1d8b5b1c2ade17052df7fac0da8bfd243c7757a', answer: A}
+  g12-english-1-4-q006: {hash: 'f339a88f96781f31985494be658cb016476c4162db96cbef4e6347e8e80b7b49', answer: B}
+  g12-english-1-4-q007: {hash: 'a6c3853a945fa4185eec8f04cdb10f1eeea304b0c979ac31d578d0afe794f0f2', answer: C}
+  g12-english-1-4-q008: {hash: '49423e418dad94733715ee478d477a0ed0813eb78d0f226640286cf65218226d', answer: false}
+  g12-english-1-4-q009: {hash: '6d48ff35e2dd9f1d2d4abd481416dbfd30a91aad2ecb3d27c7de73db5b34f4cb', answer: D}
+  g12-english-1-4-q010: {hash: '3c4279717756392bd867bdc22ca3c308731338cbb5824833f3e2b2393d342099', answer: C}
+  g12-english-1-4-q011: {hash: 'ad750d655bb4c82663e80e3be666661259015d78603707af1342cec267823308', answer: A}
+  g12-english-1-4-q012: {hash: '0fdc2d4b31218008fb2496e3ab8bcbbf245bfc814924885db180f412477fd61c', answer: B}
+  g12-english-1-4-q013: {hash: '8b074164462d8aab1193978cab0327a3d628e30e483c118b251270d74840bf6d', answer: D}
+  g12-english-1-4-q014: {hash: 'e476950896d17641f1501cac98c73598538bfb5288f287b82260a4030b35d097', answer: B}
+  g12-english-1-4-q015: {hash: '27a18f788d2b3c7e5d6e54b122cfa52fd7333af0eadd44e2ecc4cd4044d24340', answer: A}
+  g12-english-1-4-q016: {hash: 'a7026dd123115976ef32043ea837509d0481c9307a4f2ad6b879d23bf010849d', answer: C}
+  g12-english-1-4-q017: {hash: 'c9481e6c983130037da143ac5edf832cee29ce9877306a0128689e8c0d4b1501', answer: D}
+  g12-english-1-4-q018: {hash: 'b7228b441bdcd5e9f6de83240d24d7d9f984d015a9566bc4f2872ef7ea5f5762', answer: A}
+  g12-english-1-4-q019: {hash: '2b2751ef482ea805c7416a9df29c4835c3c21158ad843b1839e3fb88070470c7', answer: [A, B, C]}
+  g12-english-1-4-q020: {hash: '79ed9ebce6cdb469951e713bfa9090d114e7fd7f520d22f185a3d542a4a231a2', answer: 'that', note: 'Both "that" and "which" are correct in standard English for this defining clause (and the pronoun could also be left out). The key must accept "that" and "which" (case-insensitive); accepting only one would mark correct answers wrong.'}
+  g12-english-1-4-q021: {hash: '9a899d4eae5a8bd71906b4b1bbe49b1e4dc52c80c691e480a54338d87761599f', answer: 'in'}
+  g12-english-1-4-q022: {hash: 'c9cf1b257c35e56f57a7b7b76c5979ea8d3cd334dbe854027521a60bd4cdd241', answer: false}
+  g12-english-1-4-q023: {hash: '1291d3cbcefb971a9e44e3b51e6c9c4ee147b2eb1cdc56d63bd63151554b8555', answer: {L1: R3, L2: R1, L3: R2}}
+  g12-english-1-4-q024: {hash: 'a690bf12bfd2f23a5bd1bd684f5581f5ab8abcc3c1a8ab349ce25052feb69b8d', answer: B}
+  g12-english-1-4-q025: {hash: '7c79e3ff61b25cae5bb74e80035a09487613385fc8b840be5cd401c9ac73e627', answer: [B, A, C]}
+  g12-english-1-4-q026: {hash: '8a1ca316884223b25e7a33ee182d51d98ae15940bddc7f4ca1715a8dca68573c', answer: C}
+  g12-english-1-4-q027: {hash: '3404919fc9b84c1f212cd4983c193ee2b65cf24b520eda614f0df793e190d1a4', answer: D}
+  g12-english-1-4-q028: {hash: 'b5576b8b6643e954d709104b5fe9094fd007fd38ea2b96c046a17fb1fac23300', answer: A}
+  g12-english-1-4-q029: {hash: '8c908ee856f600047006516f84fe9a0bb7b052c1449962290709f53bfeae2ace', answer: true}
+  g12-english-1-4-q030: {hash: 'f5e97052b78bfccea76da44cfc9b4034b71a9a4caef3949090225a0bc0eddfd1', answer: B}
