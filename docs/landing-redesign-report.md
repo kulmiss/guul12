@@ -38,14 +38,14 @@
 
 ## 3. Screenshots
 
-Sent in chat: `home_v2_computer.png`, `home_v2_phone.png` (with the Premium part), `final_amharic_phone.png`.
+Sent in chat: `new_ui_computer.png`, `new_ui_phone.png` (latest look), `final_amharic_phone.png`.
 The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/img/landing/`.
 
 ## 4. Numbers
 
 | Check | Result |
 |---|---|
-| Backend tests | **332 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
+| Backend tests | **333 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
 | Nova tests | **89 passed**; Larastan with Nova 0 |
 | App tests | **408 passed** (9 new landing pictures; all other pictures unchanged); analyze 0; format clean |
 | Layout check | 9 pages × 7 widths (320–1920 px): no sideways scrolling, no horizontal scrollbar (it failed on the old layout, passes now) |
