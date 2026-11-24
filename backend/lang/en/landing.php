@@ -8,7 +8,6 @@ return [
     'description' => 'Practise for the Ethiopian Grade 12 national exam: short lessons, original questions with explanations, mock exams and a daily study plan. Works offline.',
     'skip' => 'Skip to content',
     'nav_label' => 'Main menu',
-    'nav_home' => 'Home',
     'nav_features' => 'Features',
     'nav_subjects' => 'Subjects',
     'nav_premium' => 'Premium',
@@ -120,7 +119,6 @@ return [
         '“Explain more” step-by-step help (AI)',
         'No ads',
     ],
-    'compare_button' => 'See Premium plans',
 
     // Reviews (real ones only, added in Nova)
     'reviews_kicker' => 'Students',
@@ -154,16 +152,7 @@ return [
     'app_title' => 'Guul 12 – the exam-prep app',
     'app_body' => 'Guul 12 helps Grade 12 students in Ethiopia prepare for the national exam with lessons, practice questions, mock exams and a daily plan.',
 
-    // /premium
-    'premium_title' => 'Premium',
-    'premium_page_title' => 'Get more with Premium',
-    'premium_intro' => 'Premium opens every mock exam, personal exams from your mistakes and weak topics, all subjects offline at once, “Explain more” and no ads.',
-    'premium_benefits' => [
-        ['Every mock exam', 'All 3 mock exams in every subject, plus exams from your mistakes and weak topics.'],
-        ['Whole subjects offline', 'Download a whole subject at once and study without internet.'],
-        ['“Explain more”', 'Ask for a simpler, step-by-step explanation of any question.'],
-        ['No ads', 'Study without any ads.'],
-    ],
+    // Premium part of the home page (prices and how to pay: never on /app or the legal pages)
     'plans_title' => 'Choose your plan',
     'plan_term' => 'One term',
     'plan_term_days' => ':days days',

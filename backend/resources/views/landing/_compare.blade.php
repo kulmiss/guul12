@@ -1,4 +1,4 @@
-{{-- What is free and what Premium adds. Never a price here; the button (home page only) goes to /premium. --}}
+{{-- What is free and what Premium adds. Prices and how to pay are added on the home page only. --}}
 @php($free = 6)
 @php($icon = \App\Support\LandingIcons::class)
 <section id="premium" class="sec sec-white" aria-labelledby="compare-title">
@@ -21,8 +21,8 @@
                 </tbody>
             </table>
         </div>
-        @if ($premiumLink ?? false)
-            <p class="center"><a class="btn btn-dark" href="{{ $premiumLink }}">{{ __('landing.compare_button') }}</a></p>
+        @if ($withPlans)
+            @include('landing._plans')
         @endif
     </div>
 </section>

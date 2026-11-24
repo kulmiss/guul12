@@ -46,9 +46,9 @@ Point a free uptime monitor (for example UptimeRobot) at `https://guul12.kulmiss
 
 | Setting | Used for |
 |---|---|
-| `premium_price_term_birr`, `premium_price_year_birr` | prices on the landing page `/premium` |
-| `contact_whatsapp`, `contact_email` | how to pay on `/premium`; contact on the legal pages; WhatsApp is also the app's Premium-page button |
-| `contact_telegram` | Telegram name (or t.me link) for the app's Premium-page button and the website's `/premium` page. Switch `premium_contact` off to hide both app buttons at once |
+| `premium_price_term_birr`, `premium_price_year_birr` | prices in the Premium part of the home page (`/#premium`) |
+| `contact_whatsapp`, `contact_email` | how to pay on the home page; contact on the legal pages; WhatsApp is also the app's Premium-page button |
+| `contact_telegram` | Telegram name (or t.me link) for the app's Premium-page button and the home page's Premium part. Switch `premium_contact` off to hide both app buttons at once |
 | `play_store_url` | download button on the landing page (only real `https://play.google.com/` links) |
 | `exam_date` | countdown and study plan in the app; "N days left" and the exam year on the website (hidden when empty or past) |
 | `ai_monthly_cap_usd` | stops new AI explanations for the month at this amount |
@@ -60,4 +60,4 @@ Point a free uptime monitor (for example UptimeRobot) at `https://guul12.kulmiss
 - **App pictures** come from `app/test/golden/landing_screens_test.dart` (real lessons, drawn at 2×). After changing the app's look, run in `app/`:
   `flutter test test/golden/landing_screens_test.dart --update-goldens && tool/landing_images.sh`
   and commit the new `backend/public/img/landing/*.webp`.
-- Pages linked from the app (`/app`, `/privacy`, `/terms`, `/delete-account`) never show a price, a contact for paying, or a link to `/` or `/premium` (a test checks every word).
+- Pages linked from the app (`/app`, `/privacy`, `/terms`, `/delete-account`) never show a price, a contact for paying, or a link to `/` (a test checks every word). The old `/premium` address redirects to `/#premium`.

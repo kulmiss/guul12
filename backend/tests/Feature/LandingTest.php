@@ -26,22 +26,20 @@ class LandingTest extends TestCase
     /** Words that must never appear on pages linked from the app (Play payments policy). */
     private const PAYMENT_WORDS = ['birr', 'price', 'wa.me', 'whatsapp', 't.me', 'telegram', 'mailto:', '/premium'];
 
-    public function test_home_and_premium_pages_show_live_prices_and_how_to_pay(): void
+    public function test_home_page_shows_live_prices_and_how_to_pay_in_its_premium_part(): void
     {
         $this->get('/')->assertOk()
             ->assertSee('Pass the Grade 12 exam')
-            ->assertSee('href="/premium"', false)
+            ->assertSee('href="#premium"', false)
+            ->assertSee('id="premium"', false)
             ->assertSeeText('Coming soon to Google Play')
-            // The home page shows no prices: they are only on /premium.
-            ->assertDontSee('Birr');
-
-        $this->get('/premium')->assertOk()
             ->assertSee('250 Birr')
             ->assertSee('600 Birr')
             ->assertSee('120 days')
             ->assertSee('Contact details are coming soon.')
             ->assertSee('Payment is never made inside the app.')
-            ->assertDontSee('wa.me');
+            ->assertDontSee('wa.me')
+            ->assertDontSee('href="/premium"', false);
 
         // Prices and contacts come from the admin settings.
         $settings = app(Settings::class);
@@ -50,7 +48,7 @@ class LandingTest extends TestCase
         $settings->set('contact_whatsapp', '+251 91 234 5678');
         $settings->set('contact_telegram', 'https://t.me/Guul12_Help');
         $settings->set('contact_email', 'pay@example.com');
-        $this->get('/premium')
+        $this->get('/')
             ->assertSee('href="https://t.me/Guul12_Help"', false)
             ->assertSee('Telegram: @Guul12_Help')
             ->assertSee('300 Birr')
@@ -58,7 +56,14 @@ class LandingTest extends TestCase
             ->assertSee('href="https://wa.me/251912345678"', false)
             ->assertSee('WhatsApp: +251912345678')
             ->assertSee('href="mailto:pay@example.com"', false)
-            ->assertDontSee('coming soon');
+            ->assertDontSee('Contact details are coming soon.');
+    }
+
+    public function test_the_old_premium_address_goes_to_the_home_pages_premium_part(): void
+    {
+        $this->get('/premium')->assertStatus(301)->assertRedirect('/#premium');
+        $this->get('/so/premium')->assertStatus(301)->assertRedirect('/so#premium');
+        $this->get('/am/premium')->assertStatus(301)->assertRedirect('/am#premium');
     }
 
     public function test_pages_linked_from_the_app_never_show_or_link_to_prices(): void
@@ -102,8 +107,8 @@ class LandingTest extends TestCase
             ->assertSee('<html lang="so">', false)
             ->assertSee('Qoraal qabyo ah')
             ->assertSee('<meta name="robots" content="noindex">', false)
-            ->assertSee('href="/so/premium"', false);
-        $this->get('/am/premium')->assertOk()
+            ->assertSee('href="#premium"', false);
+        $this->get('/am')->assertOk()
             ->assertSee('<html lang="am">', false)
             ->assertSee('ረቂቅ ትርጉም')
             ->assertSee('250 ብር');
@@ -114,10 +119,11 @@ class LandingTest extends TestCase
 
     public function test_language_links_hreflang_and_canonical(): void
     {
-        $this->get('/premium')
-            ->assertSee('<link rel="alternate" hreflang="so" href="'.url('/so/premium').'">', false)
-            ->assertSee('<link rel="canonical" href="'.url('/premium').'">', false)
-            ->assertSee('href="/am/premium"', false);
+        $this->get('/app')
+            ->assertSee('<link rel="alternate" hreflang="so" href="'.url('/so/app').'">', false)
+            ->assertSee('<link rel="canonical" href="'.url('/app').'">', false)
+            ->assertSee('href="/am/app"', false);
+        $this->get('/')->assertSee('<link rel="alternate" hreflang="am" href="'.url('/am').'">', false);
     }
 
     public function test_legal_pages_explain_data_and_deletion(): void
@@ -135,14 +141,15 @@ class LandingTest extends TestCase
     public function test_sitemap_lists_every_page(): void
     {
         $xml = (string) $this->get('/sitemap.xml')->assertOk()->assertHeader('Content-Type', 'application/xml; charset=UTF-8')->getContent();
-        foreach (['/', '/app', '/premium', '/privacy', '/terms', '/delete-account', '/so/app', '/am/premium'] as $p) {
+        foreach (['/', '/app', '/privacy', '/terms', '/delete-account', '/so', '/so/app', '/am', '/am/app'] as $p) {
             $this->assertStringContainsString('<loc>'.url($p).'</loc>', $xml, $p);
         }
+        $this->assertStringNotContainsString('premium', $xml, 'redirects are not listed');
     }
 
     public function test_no_outside_scripts_fonts_or_styles(): void
     {
-        foreach (['/', '/app', '/premium', '/privacy'] as $path) {
+        foreach (['/', '/app', '/privacy', '/so', '/am/app'] as $path) {
             $html = (string) $this->get($path)->getContent();
             $this->assertStringNotContainsString('<script', $html, $path);
             $this->assertDoesNotMatchRegularExpression('/<link[^>]+stylesheet/i', $html, $path);

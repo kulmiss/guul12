@@ -27,7 +27,7 @@
     @include('landing._subjects')
     @include('landing._offline')
     @include('landing._reviews')
-    @include('landing._compare', ['premiumLink' => null])
+    @include('landing._compare', ['withPlans' => false])
     @include('landing._faq')
     @include('landing._final')
 @endsection

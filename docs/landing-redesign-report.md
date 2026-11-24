@@ -13,14 +13,14 @@
 | 4 | Numbers | None | **Live**: 9 subjects · 82 chapters · 2,460 questions · 722 flashcards · 26 mock exams. They update by themselves when content changes |
 | 5 | Exam countdown | None | "217 days left until the national exam" from `exam_date` in Nova. Hidden when empty or past |
 | 6 | Reviews | None | **Nova → Settings → Website reviews.** Hidden until you add a real one |
-| 7 | Premium page | 2 plain cards | Benefit cards, plan cards ("Best value"), 4 steps, **WhatsApp / Telegram / email buttons** |
+| 7 | Premium | A separate `/premium` page | **On the home page** (your request, decision #42): the Free vs Premium table, then plan cards with prices ("Best value"), 4 steps, **WhatsApp / Telegram / email buttons**. Old `/premium` links redirect there |
 | 8 | Phones | — | A **"Get Guul 12 free"** bar stays at the bottom while scrolling |
 | 9 | Somali / Amharic | Old texts | Every new text as a **draft** for native review |
 
 **To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table with a "See Premium plans" button, FAQ answering the usual worries, a final call, and the bottom bar on phones.
 
 **Kept safe:**
-- Prices only on `/premium`.
+- Prices only on the home page's Premium part (`/#premium`).
 - `/app` and the legal pages (linked from the app) never show a price, a payment contact, or a link to `/` or `/premium`. A test checks every word.
 - **No fake reviews.** You asked for placeholders. I did not publish them: invented reviews mislead students and break Google Play and consumer rules. The section stays hidden until you add a real review.
 
@@ -37,14 +37,14 @@
 
 ## 3. Screenshots
 
-Sent in chat: `final_home_computer.png`, `final_home_phone.png`, `final_premium_computer.png`, `final_amharic_phone.png`.
+Sent in chat: `home_v2_computer.png`, `home_v2_phone.png` (with the Premium part), `final_amharic_phone.png`.
 The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/img/landing/`.
 
 ## 4. Numbers
 
 | Check | Result |
 |---|---|
-| Backend tests | **331 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
+| Backend tests | **332 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
 | Nova tests | **89 passed**; Larastan with Nova 0 |
 | App tests | **408 passed** (9 new landing pictures; all other pictures unchanged); analyze 0; format clean |
 | Lighthouse in CI (full content) | Every page: performance 99–100, accessibility 100, best practices 100, SEO 100 (Somali/Amharic drafts are noindex on purpose) |
@@ -59,7 +59,7 @@ The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/i
 
 ## 6. Status
 
-📍 Landing redesign · Step 5 of 5: done → next: your review + merge of PR #8
+📍 Landing redesign · Step 6 of 6: Premium moved into the home page → next: your review + merge of PR #8
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on your tasks
 ⚠️ None.

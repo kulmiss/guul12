@@ -8,12 +8,14 @@ use App\Services\Branding\Branding;
 use App\Services\LandingStats;
 use App\Services\Settings;
 use Carbon\CarbonImmutable;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
 
 /**
- * Public website. "/" and "/premium" are for social media and show prices and how to pay.
+ * Public website. "/" is for social media and shows prices and how to pay (its Premium part;
+ * the old "/premium" address redirects there).
  * "/app" (linked from the app and the summary PDFs) and the legal pages never show prices and
  * never link to them (Google Play payments policy, DECISIONS #3).
  */
@@ -38,7 +40,15 @@ class LandingController extends Controller
     {
         $this->useLocale($locale);
 
-        return view('landing.home', $this->shared($locale, 'home') + $this->marketing());
+        return view('landing.home', $this->shared($locale, 'home') + $this->marketing() + [
+            'termPrice' => $this->settings->int('premium_price_term_birr'),
+            'yearPrice' => $this->settings->int('premium_price_year_birr'),
+            'termDays' => $this->settings->int('premium_term_days'),
+            'yearDays' => $this->settings->int('premium_year_days'),
+            'whatsapp' => self::whatsappDigits($this->settings->get('contact_whatsapp')),
+            'telegram' => ConfigController::telegramName($this->settings->get('contact_telegram')),
+            'email' => self::cleanEmail($this->settings->get('contact_email')),
+        ]);
     }
 
     public function app(?string $locale = null): View
@@ -48,19 +58,10 @@ class LandingController extends Controller
         return view('landing.app', $this->shared($locale, 'app') + $this->marketing());
     }
 
-    public function premium(?string $locale = null): View
+    /** The Premium part now lives on the home page; old links keep working. */
+    public function premium(?string $locale = null): RedirectResponse
     {
-        $this->useLocale($locale);
-
-        return view('landing.premium', $this->shared($locale, 'premium') + [
-            'termPrice' => $this->settings->int('premium_price_term_birr'),
-            'yearPrice' => $this->settings->int('premium_price_year_birr'),
-            'termDays' => $this->settings->int('premium_term_days'),
-            'yearDays' => $this->settings->int('premium_year_days'),
-            'whatsapp' => self::whatsappDigits($this->settings->get('contact_whatsapp')),
-            'telegram' => ConfigController::telegramName($this->settings->get('contact_telegram')),
-            'email' => self::cleanEmail($this->settings->get('contact_email')),
-        ]);
+        return redirect(($locale === null ? '/' : '/'.$locale).'#premium', 301);
     }
 
     public function legal(string $page): View
@@ -79,9 +80,9 @@ class LandingController extends Controller
 
     public function sitemap(): Response
     {
-        $paths = ['/', '/app', '/premium', '/privacy', '/terms', '/delete-account'];
+        $paths = ['/', '/app', '/privacy', '/terms', '/delete-account'];
         foreach (self::DRAFT_LOCALES as $l) {
-            array_push($paths, "/{$l}", "/{$l}/app", "/{$l}/premium");
+            array_push($paths, "/{$l}", "/{$l}/app");
         }
         $xml = '<?xml version="1.0" encoding="UTF-8"?>'."\n".'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         foreach ($paths as $p) {
@@ -173,7 +174,7 @@ class LandingController extends Controller
      */
     private static function alternates(string $page): array
     {
-        if (! in_array($page, ['home', 'app', 'premium'], true)) {
+        if (! in_array($page, ['home', 'app'], true)) {
             return [];
         }
         $suffix = $page === 'home' ? '' : '/'.$page;

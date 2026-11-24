@@ -8,7 +8,6 @@ return [
     'description' => 'Ku celceli imtixaanka qaranka ee Fasalka 12: casharro gaagaaban, su’aalo asal ah oo sharaxaad leh, imtixaanno tijaabo ah iyo qorshe waxbarasho maalinle ah. Wuxuu shaqeeyaa internet la’aan.',
     'skip' => 'U gudub nuxurka',
     'nav_label' => 'Liiska ugu weyn',
-    'nav_home' => 'Bogga hore',
     'nav_features' => 'Astaamaha',
     'nav_subjects' => 'Maaddooyinka',
     'nav_premium' => 'Premium',
@@ -112,7 +111,6 @@ return [
         '“Explain more” caawimaad tallaabo-tallaabo ah (AI)',
         'Xayeysiis la’aan',
     ],
-    'compare_button' => 'Eeg qorshayaasha Premium',
 
     'reviews_kicker' => 'Ardayda',
     'reviews_title' => 'Waxa ardaydu yiraahdaan',
@@ -142,15 +140,6 @@ return [
     'app_title' => 'Guul 12 – abka diyaargarowga imtixaanka',
     'app_body' => 'Guul 12 wuxuu ardayda Fasalka 12 ee Itoobiya ka caawiyaa inay u diyaargaroobaan imtixaanka qaranka.',
 
-    'premium_title' => 'Premium',
-    'premium_page_title' => 'Wax badan ku hel Premium',
-    'premium_intro' => 'Premium wuxuu furaa dhammaan imtixaannada tijaabada, imtixaanno ka yimid khaladaadkaaga, dhammaan maaddooyinka internet la’aan hal mar, “Explain more” iyo xayeysiis la’aan.',
-    'premium_benefits' => [
-        ['Dhammaan imtixaannada tijaabada', 'Saddexda imtixaan tijaabo ah ee maaddo kasta, iyo imtixaanno ka yimid khaladaadkaaga.'],
-        ['Maaddooyin dhan internet la’aan', 'Hal mar soo dejiso maaddo dhan oo wax ku baro internet la’aan.'],
-        ['“Explain more”', 'Weydii sharaxaad fudud oo tallaabo-tallaabo ah su’aal kasta.'],
-        ['Xayeysiis la’aan', 'Wax baro adigoon xayeysiis arkin.'],
-    ],
     'plans_title' => 'Dooro qorshahaaga',
     'plan_term' => 'Hal xilli',
     'plan_term_days' => ':days maalmood',

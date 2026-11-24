@@ -109,7 +109,6 @@
         .cards-3{grid-template-columns:repeat(3,1fr)}
         .cards-4{grid-template-columns:repeat(4,1fr)}
         .card{background:var(--card);color:var(--ink);border-radius:var(--radius-card);padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-        .h3{font-size:1.1rem;margin:0 0 6px}
         .sec-white .card{background:var(--cream);box-shadow:none}
         .card p{margin:0}
         .step-n{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;font-weight:800;font-size:1.2rem;margin-bottom:14px;background:var(--teal);color:var(--on-teal)}
@@ -149,7 +148,6 @@
         .cmp tbody tr:nth-child(odd){background:var(--cream)}
         .cmp tbody td.pcol{background:var(--accent-tint)}
         .mark{width:22px;height:22px;display:inline-block;vertical-align:middle}
-        .center{text-align:center;margin-top:28px}
 
         /* Reviews */
         .rev{margin:0;position:relative}
@@ -179,8 +177,12 @@
         .legal-line{margin-top:30px;padding-top:20px;border-top:1px solid var(--on-deep);font-size:.9rem}
         .sticky-cta{display:none}
 
-        /* Premium page */
-        .page-hero{position:relative;padding-top:48px;padding-bottom:90px}
+        /* Premium part of the home page */
+        .sub-title{font-size:1.5rem;margin:48px 0 0}
+        .plan h4{margin:0;font-size:1.1rem}
+        .contact{margin-top:30px}
+        .contact h3{font-size:1.5rem;margin-bottom:8px}
+        .card .note{margin-top:18px}
         .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}
         .plan{position:relative;text-align:center;padding:30px 24px}
         .plan .amount{font-size:2.6rem;font-weight:800;color:var(--teal);margin:6px 0;font-family:var(--font-heading),var(--font-body),sans-serif}
