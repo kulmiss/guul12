@@ -3,8 +3,10 @@ library;
 
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:guul12/app/practice_set.dart';
 import 'package:guul12/data/repository.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -166,11 +168,21 @@ void main() {
   for (final MapEntry(key: name, value: (dark, scene)) in scenes.entries) {
     final file = 'goldens/landing/$name.png';
     testWidgets(file, (tester) async {
+      late Repository repository;
       await pumpGuul(
         tester,
         server: _server(),
         pixelRatio: 2,
+        // The app shuffles practice questions with a new random order each time; a fixed order
+        // keeps the picture the same on every run.
+        overrides: [
+          practiceSetProvider.overrideWith(
+            (ref, request) =>
+                buildPracticeSet(repository, request, random: Random(7), now: testNow),
+          ),
+        ],
         before: (repo) async {
+          repository = repo;
           await prepared(repo);
           await repo.chapter(22);
           await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');

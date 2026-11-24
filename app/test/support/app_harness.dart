@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:guul12/app/ads_providers.dart';
 import 'package:guul12/app/app.dart';
@@ -59,6 +60,7 @@ Future<(Repository, FakeServer)> pumpGuul(
   Future<void> Function(Repository repo)? before,
   DateTime Function()? clock,
   double pixelRatio = 1,
+  List<Override> overrides = const [],
 }) async {
   // [size] is in logical pixels; a pixel ratio of 2 draws a sharper picture of the same screen.
   tester.view.physicalSize = size * pixelRatio;
@@ -83,6 +85,7 @@ Future<(Repository, FakeServer)> pumpGuul(
         hookQuestionsProvider.overrideWith(
           (ref) => parseHookQuestions(File(hookQuestionsAsset).readAsStringSync()),
         ),
+        ...overrides,
       ],
       child: const GuulApp(),
     ),
