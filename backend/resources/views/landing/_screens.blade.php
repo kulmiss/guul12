@@ -4,6 +4,7 @@
         <p class="kicker">{{ __('landing.screens_kicker') }}</p>
         <h2 id="screens-title">{{ __('landing.screens_title') }}</h2>
     </div>
+    <p class="swipe" aria-hidden="true">{{ __('landing.screens_swipe') }}</p>
     <ul class="gallery" tabindex="0" aria-label="{{ __('landing.screens_label') }}">
         @foreach ($screens as $name)
             @php($caption = __('landing.screens.'.$name))

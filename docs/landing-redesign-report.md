@@ -16,6 +16,7 @@
 | 7 | Premium | A separate `/premium` page | **On the home page** (your request, decision #42): the Free vs Premium table, then plan cards with prices ("Best value"), 4 steps, **WhatsApp / Telegram / email buttons**. Old `/premium` links redirect there |
 | 8 | Phones | — | A **"Get Guul 12 free"** bar stays at the bottom while scrolling |
 | 9 | Somali / Amharic | Old texts | Every new text as a **draft** for native review |
+| 10 | Scrollbars + polish (your request) | App pictures and the phone menu scrolled sideways with a scrollbar | **No horizontal scrollbar anywhere.** Computers/tablets: pictures in a neat grid. Phones: swipe with a hidden bar, faded edges and "Swipe to see more →"; the menu wraps. Plus centred titles with an accent line, cards and buttons that lift, round step numbers, gently floating phones, a dotted hero pattern, shorter cards on phones. A CI check fails if any page ever scrolls sideways (320–1920 px) |
 
 **To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table with a "See Premium plans" button, FAQ answering the usual worries, a final call, and the bottom bar on phones.
 
@@ -47,6 +48,7 @@ The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/i
 | Backend tests | **332 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
 | Nova tests | **89 passed**; Larastan with Nova 0 |
 | App tests | **408 passed** (9 new landing pictures; all other pictures unchanged); analyze 0; format clean |
+| Layout check | 9 pages × 7 widths (320–1920 px): no sideways scrolling, no horizontal scrollbar (it failed on the old layout, passes now) |
 | Lighthouse in CI (full content) | Every page: performance 99–100, accessibility 100, best practices 100, SEO 100 (Somali/Amharic drafts are noindex on purpose) |
 | gitleaks | Clean |
 | CI | Green: app, backend (PHP 8.2, 8.3, MySQL 8), Lighthouse, secrets |
@@ -59,7 +61,7 @@ The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/i
 
 ## 6. Status
 
-📍 Landing redesign · Step 6 of 6: Premium moved into the home page → next: your review + merge of PR #8
+📍 Landing redesign · Step 7 of 7: no horizontal scrollbars, nicer UI → next: your review + merge of PR #8
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on your tasks
 ⚠️ None.

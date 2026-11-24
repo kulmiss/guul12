@@ -46,25 +46,27 @@
         .draft{background:#FDE7C8;color:#5A3200;padding:10px 20px;text-align:center;margin:0}
 
         /* Header */
-        .top{position:sticky;top:0;z-index:10;background:var(--deep);color:var(--on-deep)}
+        .top{position:sticky;top:0;z-index:10;background:var(--deep);color:var(--on-deep);box-shadow:0 1px 0 rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.12)}
         .nav{display:flex;align-items:center;gap:18px;min-height:68px;flex-wrap:wrap}
         .brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;color:var(--on-deep);text-decoration:none}
         .brand img{height:32px;width:auto}
         .logo-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--on-accent);font-weight:800}
         .menu{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
-        .menu a{color:var(--on-deep);text-decoration:none;font-weight:700;padding:10px 10px;border-radius:8px}
-        .menu a:hover{text-decoration:underline}
+        .menu a{color:var(--on-deep);text-decoration:none;font-weight:700;padding:10px 14px;border-radius:99px;transition:background-color .2s}
+        .menu a:hover{background:var(--deep-light);text-decoration:underline}
 
         /* Buttons */
         .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;text-decoration:none;padding:14px 22px;border-radius:var(--radius-button);line-height:1.2;background:var(--accent);color:var(--on-accent);border:2px solid var(--accent);min-height:48px}
-        .btn:hover{filter:brightness(1.05)}
+        .btn{box-shadow:0 8px 20px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.24)}
+        .btn:active{transform:translateY(0)}
         .btn-sm{padding:9px 16px;min-height:44px}
         .btn-ghost{background:transparent;color:var(--on-deep);border-color:var(--on-deep)}
         .btn-dark{background:var(--teal);color:var(--on-teal);border-color:var(--teal)}
         .btn-store span{display:flex;flex-direction:column;align-items:flex-start;font-size:1.15rem}
         .btn-store small{font-size:.75rem;font-weight:700}
         .soon{cursor:default}
-        .soon:hover{filter:none}
+        .soon:hover{transform:none;box-shadow:0 8px 20px rgba(0,0,0,.18)}
 
         /* Hero */
         .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--deep),var(--deep-light));color:var(--on-deep)}
@@ -80,7 +82,12 @@
         .chips .ic{width:16px;height:16px}
         .countdown{margin:18px 0 0}
         .countdown strong{color:var(--highlight)}
+        .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent,#000 60%);pointer-events:none}
+        .hero-grid{z-index:1}
         .hero-art{position:relative;height:540px}
+        .p-front img{animation:float 6s ease-in-out infinite}
+        .p-back img{animation:float 6s ease-in-out -3s infinite}
+        @keyframes float{50%{transform:translateY(-10px)}}
         .phone{margin:0;border-radius:34px;padding:8px;background:#10181B;box-shadow:0 30px 60px rgba(0,0,0,.35)}
         .phone img{border-radius:27px;width:100%}
         .hero-art .phone{position:absolute;width:250px}
@@ -94,7 +101,7 @@
         /* Numbers */
         .numbers{position:relative;z-index:2;margin-top:-34px}
         .num-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;list-style:none;padding:0;margin:0}
-        .num{text-align:center;padding:22px 10px;border-radius:var(--radius-card);background:var(--card);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+        .num{text-align:center;padding:22px 10px;border-radius:var(--radius-card);background:var(--card);box-shadow:0 12px 30px rgba(0,0,0,.08);border-top:4px solid var(--accent)}
         .num strong{display:block;font-size:2.4rem;font-weight:800;line-height:1.05;color:var(--teal);font-family:var(--font-heading),var(--font-body),sans-serif}
         .num span{font-weight:700}
 
@@ -104,28 +111,34 @@
         main>section:not(.hero):not(.numbers){content-visibility:auto;contain-intrinsic-size:auto 900px}
         .sec-white{background:var(--card)}
         .kicker{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;margin:0 0 8px;color:var(--orange)}
+        .sec>.wrap>.kicker,.sec>.wrap>h2,.sec>.wrap>.sub{text-align:center;margin-left:auto;margin-right:auto;max-width:760px}
+        .sec>.wrap>h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--accent);margin:14px auto 0}
         .sub{margin:-4px 0 26px;font-size:1.08rem}
         .cards{display:grid;gap:18px;margin-top:30px;padding:0;list-style:none}
         .cards-3{grid-template-columns:repeat(3,1fr)}
         .cards-4{grid-template-columns:repeat(4,1fr)}
-        .card{background:var(--card);color:var(--ink);border-radius:var(--radius-card);padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+        .card{background:var(--card);color:var(--ink);border-radius:var(--radius-card);padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s}
+        .card:hover,.subj:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
         .sec-white .card{background:var(--cream);box-shadow:none}
         .card p{margin:0}
-        .step-n{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;font-weight:800;font-size:1.2rem;margin-bottom:14px;background:var(--teal);color:var(--on-teal)}
+        .step-n{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;font-weight:800;font-size:1.25rem;margin-bottom:14px;background:var(--teal);color:var(--on-teal);box-shadow:0 0 0 6px var(--tint)}
         .chip-ic{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;margin-bottom:14px;background:var(--tint);color:var(--teal)}
         .alt .chip-ic{background:var(--accent-tint);color:var(--ink)}
 
         /* App pictures */
         .screens{background:linear-gradient(180deg,var(--deep),var(--deep-light));color:var(--on-deep)}
         .screens .kicker{color:var(--highlight)}
-        .gallery{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px max(20px,calc((100vw - 1120px) / 2)) 24px;list-style:none;margin:0}
+        .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 26px;padding:34px 20px 10px;list-style:none;margin:0 auto;max-width:1240px}
         .gallery:focus-visible{outline-offset:-3px}
-        .shot{flex:0 0 220px;margin:0;scroll-snap-align:center;text-align:center}
+        .shot{flex:0 0 200px;margin:0;text-align:center}
+        .shot .phone{transition:transform .3s}
+        .shot:hover .phone{transform:translateY(-6px) rotate(-1.5deg)}
+        .swipe{display:none}
         .shot .cap{font-weight:800;margin:12px 0 0}
 
         /* Subjects */
         .subj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;padding:0;margin:0}
-        .subj{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:var(--radius-card);background:var(--card);box-shadow:0 6px 20px rgba(0,0,0,.05)}
+        .subj{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:var(--radius-card);background:var(--card);box-shadow:0 6px 20px rgba(0,0,0,.05);border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s}
         .subj .chip-ic{margin:0;flex:none}
         .subj h3{margin:0}
         .subj p{margin:0;font-size:.95rem}
@@ -178,7 +191,7 @@
         .sticky-cta{display:none}
 
         /* Premium part of the home page */
-        .sub-title{font-size:1.5rem;margin:48px 0 0}
+        .sub-title{font-size:1.5rem;margin:48px 0 0;text-align:center}
         .plan h4{margin:0;font-size:1.1rem}
         .contact{margin-top:30px}
         .contact h3{font-size:1.5rem;margin-bottom:8px}
@@ -187,7 +200,7 @@
         .plan{position:relative;text-align:center;padding:30px 24px}
         .plan .amount{font-size:2.6rem;font-weight:800;color:var(--teal);margin:6px 0;font-family:var(--font-heading),var(--font-body),sans-serif}
         .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--on-accent);font-weight:800;font-size:.85rem;padding:4px 12px;border-radius:99px}
-        .plan-best{outline:3px solid var(--accent)}
+        .plan-best{outline:3px solid var(--accent);box-shadow:0 20px 44px rgba(0,0,0,.14)}
         .contact-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
         .note{font-weight:700;margin:18px 0 0}
 
@@ -200,7 +213,8 @@
             h1{font-size:2.3rem}
             h2{font-size:1.7rem}
             .top{position:static}
-            .menu{order:3;margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}
+            .menu{order:3;margin-left:0;width:100%;justify-content:center;padding-bottom:8px}
+            .menu a{padding:8px 12px}
             .nav .btn-sm{order:2;margin-left:auto}
             .hero-grid,.band-grid{grid-template-columns:1fr}
             .hero-grid{padding-top:28px;padding-bottom:80px}
@@ -214,7 +228,10 @@
             .subj-grid{grid-template-columns:1fr}
             .foot-grid{grid-template-columns:1fr}
             .sec{padding:60px 0}
-            .shot{flex-basis:190px}
+            .gallery{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:30px 24px 16px;mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+            .gallery::-webkit-scrollbar{display:none}
+            .shot{flex-basis:190px;scroll-snap-align:center}
+            .swipe{display:block;text-align:center;font-weight:700;margin:0;padding-bottom:6px}
             .cmp th,.cmp td{padding:12px 10px}
             .cmp td,.cmp thead th+th{width:72px}
             .plans{grid-template-columns:1fr}
@@ -224,9 +241,15 @@
         }
         @media (max-width:560px){
             .cards-3,.cards-4{grid-template-columns:1fr}
+            /* Phones: icon or number on the left, text on the right, so the lists stay short. */
+            .cards-4 .card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start;padding:18px}
+            .cards-4 .card>.chip-ic,.cards-4 .card>.step-n{grid-row:span 2;margin:0}
+            .cards-4 .card>h3{align-self:end}
         }
         @media (prefers-reduced-motion:reduce){
             html{scroll-behavior:auto}
+            *,*::before,*::after{animation:none!important;transition:none!important}
+            .card:hover,.subj:hover,.btn:hover,.shot:hover .phone{transform:none}
         }
     </style>
 </head>

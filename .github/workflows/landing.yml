@@ -92,3 +92,7 @@ jobs:
       - name: Scores (performance 95+, accessibility / best practices / SEO 100)
         working-directory: tools/lighthouse
         run: npm run check
+
+      - name: Layout (no sideways scrolling, no horizontal scrollbars, 320–1920 px)
+        working-directory: tools/lighthouse
+        run: npm run layout
