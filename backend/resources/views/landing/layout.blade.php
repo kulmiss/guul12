@@ -18,7 +18,10 @@
         <meta name="robots" content="noindex">
     @endif
     @php($fontFile = ['nunito' => 'nunito', 'noto_sans' => 'noto-sans', 'inter' => 'inter', 'poppins' => 'poppins'])
-    <link rel="preload" href="/fonts/{{ $fontFile[$brand['fonts']['body']] }}-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    {{-- All three font files the first screen uses, so text does not jump when a font arrives late. --}}
+    @foreach (array_unique([$fontFile[$brand['fonts']['body']].'-latin-400', $fontFile[$brand['fonts']['body']].'-latin-700', $fontFile[$brand['fonts']['heading']].'-latin-800']) as $preload)
+        <link rel="preload" href="/fonts/{{ $preload }}.woff2" as="font" type="font/woff2" crossorigin>
+    @endforeach
     @yield('preload')
     <style>
         {{-- Colours, roundness and fonts come from Nova → Settings → Branding. Every text colour is

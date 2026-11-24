@@ -279,6 +279,17 @@ class LandingTest extends TestCase
         $this->assertSame(count(LandingController::SCREENS), substr_count($html, 'a screen of the Guul 12 app"'));
     }
 
+    public function test_the_first_screen_fonts_are_preloaded_and_exist(): void
+    {
+        $html = (string) $this->get('/')->getContent();
+        preg_match_all('#<link rel="preload" href="(/fonts/[a-z-]+-latin-(\d+)\.woff2)" as="font"#', $html, $m);
+        // Body 400 and 700, heading 800: text does not jump when the fonts arrive (layout shift).
+        $this->assertSame(['400', '700', '800'], $m[2]);
+        foreach ($m[1] as $href) {
+            $this->assertFileExists(public_path(ltrim($href, '/')));
+        }
+    }
+
     public function test_every_subject_has_its_own_icon(): void
     {
         foreach (['mathematics', 'physics', 'chemistry', 'biology', 'english', 'aptitude', 'geography', 'history', 'economics'] as $code) {
