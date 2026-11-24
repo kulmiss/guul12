@@ -18,11 +18,11 @@
 | 9 | Somali / Amharic | Old texts | Every new text as a **draft** for native review |
 | 10 | Scrollbars + polish (your request) | App pictures and the phone menu scrolled sideways with a scrollbar | **No horizontal scrollbar anywhere.** Computers/tablets: pictures in a neat grid. Phones: swipe with a hidden bar, faded edges and "Swipe to see more →"; the menu wraps. Plus centred titles with an accent line, cards and buttons that lift, round step numbers, gently floating phones, a dotted hero pattern, shorter cards on phones. A CI check fails if any page ever scrolls sideways (320–1920 px) |
 
-**To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table with a "See Premium plans" button, FAQ answering the usual worries, a final call, and the bottom bar on phones.
+**To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table followed by the plans and contact buttons, FAQ answering the usual worries, a final call, and the bottom bar on phones.
 
 **Kept safe:**
 - Prices only on the home page's Premium part (`/#premium`).
-- `/app` and the legal pages (linked from the app) never show a price, a payment contact, or a link to `/` or `/premium`. A test checks every word.
+- `/app` and the legal pages (linked from the app) never show a price, a payment contact, or a link to `/`. A test checks every word.
 - **No fake reviews.** You asked for placeholders. I did not publish them: invented reviews mislead students and break Google Play and consumer rules. The section stays hidden until you add a real review.
 
 ## 2. How to add a real review
