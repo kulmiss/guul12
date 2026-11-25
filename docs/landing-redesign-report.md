@@ -18,7 +18,7 @@
 | 9 | Somali / Amharic | Old texts | Every new text as a **draft** for native review |
 | 10 | Scrollbars + polish (your request) | App pictures and the phone menu scrolled sideways with a scrollbar | **No horizontal scrollbar anywhere.** App pictures: see row 12. Phones: swipe with a hidden bar, faded edges and "Swipe to see more →"; the menu wraps. Plus centred titles with an accent line, cards and buttons that lift, round step numbers, gently floating phones, a dotted hero pattern, shorter cards on phones. A CI check fails if any page ever scrolls sideways (320–1920 px) |
 | 11 | Grades 8–12 (your decision #43) | Website said Grade 12 only | Titles, hero, FAQ, terms say **Grades 8–12**; new section **"One app from Grade 8 to Grade 12"** with 5 grade cards; "Grades" in the menu; the countdown names the Grade 12 national exam. Somali + Amharic drafts too |
-| 12 | App screens (your pick) | 5 + 4 grid on computers | **One simple row** on every screen: swipe, trackpad or shift + wheel; scrollbar hidden, soft edges, "Swipe or scroll sideways to see more →" |
+| 12 | App screens (your pick + your video) | 5 + 4 grid on a dark band, black phone frames, dark shadows | **One simple row** on every screen, on the light background like the rest of the site. Each screen is a **white rounded card with the same soft shadow** as the other cards. The row **lines up with the page text** and fades softly at both edges. Swipe, trackpad or shift + wheel; scrollbar hidden; "Swipe or scroll sideways to see more →" chip |
 
 **To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table followed by the plans and contact buttons, FAQ answering the usual worries, a final call, and the bottom bar on phones.
 
@@ -40,7 +40,7 @@
 
 ## 3. Screenshots
 
-Sent in chat: `g_computer.png`, `g_phone.png` (Grades 8–12), `gal_computer_sec.png`, `gal_phone_sec.png` (the new app screens row), `final_amharic_phone.png`.
+Sent in chat: `g_computer.png`, `g_phone.png` (Grades 8–12), `screens_computer.png`, `screens_phone.png` (the new app screens row), `final_amharic_phone.png`.
 The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/img/landing/`.
 
 ## 4. Numbers

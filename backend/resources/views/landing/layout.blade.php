@@ -133,17 +133,20 @@
         .alt .chip-ic{background:var(--accent-tint);color:var(--ink)}
 
         /* App pictures */
-        .screens{background:linear-gradient(180deg,var(--deep),var(--deep-light));color:var(--on-deep)}
-        .screens .kicker{color:var(--highlight)}
-        /* One simple row that scrolls sideways on every screen, with the scrollbar hidden. */
-        .gallery{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 max(20px,calc((100vw - 1120px) / 2));scrollbar-width:none;overscroll-behavior-x:contain;padding:30px max(20px,calc((100vw - 1120px) / 2)) 20px;list-style:none;margin:0;mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
+        /* App screens: one simple row inside the page width that scrolls sideways, scrollbar hidden.
+           Each screen is a light rounded card, like the other cards on the page. */
+        /* The row reaches 32px past the content edge on each side; that gutter fades, so cards are never cut hard and the first card lines up with the text. */
+        .gallery{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:32px;scrollbar-width:none;overscroll-behavior-x:contain;list-style:none;margin:30px -32px 0;padding:6px 32px 26px;mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent)}
         .gallery::-webkit-scrollbar{display:none}
-        .gallery:focus-visible{outline-offset:-3px}
-        .shot{flex:0 0 220px;margin:0;text-align:center;scroll-snap-align:start}
-        .shot .phone{transition:transform .3s}
-        .shot:hover .phone{transform:translateY(-6px)}
-        .swipe{text-align:center;font-weight:700;margin:14px 0 0}
-        .shot .cap{font-weight:800;margin:12px 0 0}
+        .gallery:focus-visible{outline-offset:4px;border-radius:var(--radius-card)}
+        .shot{flex:0 0 230px;margin:0;text-align:center;scroll-snap-align:start}
+        .frame{margin:0;padding:10px;border-radius:30px;background:var(--card);border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 30px rgba(0,0,0,.06);transition:transform .25s,box-shadow .25s}
+        .frame img{border-radius:21px}
+        .shot:hover .frame{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
+        .shot .cap{font-weight:800;margin:14px 0 0}
+        .swipe{display:flex;justify-content:center;margin:6px 0 0}
+        .swipe span{font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:99px;background:var(--tint);color:var(--teal)}
+        .sec-white .subj{background:var(--cream);box-shadow:none}
 
         /* Subjects */
         .subj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;padding:0;margin:0}
@@ -238,8 +241,8 @@
             .subj-grid{grid-template-columns:1fr}
             .foot-grid{grid-template-columns:1fr}
             .sec{padding:60px 0}
-            .gallery{gap:18px;padding:24px 24px 16px;scroll-padding:0 24px;mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
-            .shot{flex-basis:190px}
+            .gallery{gap:16px;margin-inline:-20px;padding-inline:20px;scroll-padding-inline:20px;mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
+            .shot{flex-basis:200px}
             .cmp th,.cmp td{padding:12px 10px}
             .cmp td,.cmp thead th+th{width:72px}
             .plans{grid-template-columns:1fr}
@@ -259,7 +262,7 @@
         @media (prefers-reduced-motion:reduce){
             html{scroll-behavior:auto}
             *,*::before,*::after{animation:none!important;transition:none!important}
-            .card:hover,.subj:hover,.btn:hover,.shot:hover .phone{transform:none}
+            .card:hover,.subj:hover,.btn:hover,.shot:hover .frame{transform:none}
         }
     </style>
 </head>

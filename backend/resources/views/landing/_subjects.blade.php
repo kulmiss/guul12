@@ -1,5 +1,5 @@
 @if ($stats['subjects'] !== [])
-    <section id="subjects" class="sec" aria-labelledby="subjects-title">
+    <section id="subjects" class="sec sec-white" aria-labelledby="subjects-title">
         <div class="wrap">
             <p class="kicker">{{ __('landing.subjects_kicker') }}</p>
             <h2 id="subjects-title">{{ __('landing.subjects_title') }}</h2>
