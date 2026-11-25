@@ -310,8 +310,10 @@ class LandingTest extends TestCase
             '/privacy' => ['/app', '/privacy', '/terms', '/delete-account']] as $path => $links) {
             $html = (string) $this->get($path)->assertOk()->getContent();
             $this->assertStringContainsString('<summary aria-label="Menu">', $html, $path);
-            preg_match('#<nav class="menu"[^>]*>(.*?)</nav>#s', $html, $wide);
-            preg_match('#<nav class="mmenu-panel"[^>]*>(.*?)</nav>#s', $html, $phone);
+            if (preg_match('#<nav class="menu"[^>]*>(.*?)</nav>#s', $html, $wide) !== 1
+                || preg_match('#<nav class="mmenu-panel"[^>]*>(.*?)</nav>#s', $html, $phone) !== 1) {
+                $this->fail("{$path}: both menus must be on the page");
+            }
             preg_match_all('#href="([^"]+)"#', $wide[1], $w);
             preg_match_all('#href="([^"]+)"#', $phone[1], $p);
             $this->assertSame($links, $w[1], $path);
