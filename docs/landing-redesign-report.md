@@ -1,6 +1,6 @@
 # Landing redesign report: "Bold" website
 
-**PRs:** #8 (`landing-top` → `develop`) ✅ merged. Follow-up **#9** (`landing-gallery-top` → `develop`): app screens row + phone view. Merge with "Create a merge commit".
+**PRs:** #8 (`landing-top` → `develop`) ✅ merged. Follow-up **#10** (`landing-gallery-top` → `develop`; replaces #9, which GitHub stopped updating): app screens row + phone view. Merge with "Create a merge commit".
 **Your choices:** Bold style (from 3 mockups), real app screens made by me, all pages, all 4 section groups + "anything that converts" (DECISIONS #41).
 
 ## 1. What changed
@@ -64,7 +64,7 @@ The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/i
 
 ## 6. Status
 
-📍 Landing redesign · Step 10 of 10: phone view redesign → next: your review + merge of PR #9
+📍 Landing redesign · Step 10 of 10: phone view redesign → next: your review + merge of PR #10
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on your tasks
 ⚠️ None.

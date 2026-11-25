@@ -1,6 +1,6 @@
 # PROGRESS
 
-📍 Landing redesign · Step 10 of 10: phone view redesign → next: owner review + merge (PR landing-top → develop)
+📍 Landing redesign · Step 10 of 10: phone view redesign → next: owner review + merge of PR #10
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
 ⚠️ Waiting for: owner review + merge of the landing PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
