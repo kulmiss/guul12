@@ -1,6 +1,8 @@
 # PROGRESS
 
 📍 Landing redesign · Step 10 of 10: all merged into develop (PRs #8, #9, #10) → next: owner's next request
+
+CI: unchanged while the repo is public (free). Decide again when going private (QUESTIONS #75).
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
 ⚠️ Waiting for: owner review + merge of the landing PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
