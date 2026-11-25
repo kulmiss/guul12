@@ -64,6 +64,7 @@ class NovaMenu
             MenuSection::make('Settings', [
                 MenuItem::resource(Resources\AppSetting::class),
                 MenuItem::resource(Resources\FeatureSwitch::class),
+                MenuItem::resource(Resources\LandingReview::class),
                 MenuItem::resource(Resources\Staff::class),
                 MenuItem::link('Branding', '/branding'),
             ])->icon('cog')->collapsable()->canSee(self::allowedTo('manage-settings')),

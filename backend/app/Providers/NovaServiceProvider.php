@@ -119,6 +119,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             Resources\Passage::class,
             Resources\AppSetting::class,
             Resources\FeatureSwitch::class,
+            Resources\LandingReview::class,
             Resources\AuditLog::class,
         ]);
     }

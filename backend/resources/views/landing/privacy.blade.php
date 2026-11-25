@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+    <article class="wrap narrow doc">
     <h1>Privacy policy</h1>
     <p class="note">Guul 12 is an exam-prep app by Kulmiss for secondary school students in Ethiopia. This page explains what we store and why. We keep as little as possible.</p>
 
@@ -51,4 +52,5 @@
         <p>Our contact email is coming soon.</p>
     @endif
     <p class="note">Last updated: 23 November 2026.</p>
+    </article>
 @endsection

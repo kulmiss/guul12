@@ -1,0 +1,1080 @@
+{
+    "unit_title": "Two-Dimensional Motion",
+    "chapters": {
+        "21": {
+            "title": "Projectile motion",
+            "summary": {
+                "id": 21,
+                "key_points": [
+                    "A projectile moves under gravity alone (air resistance ignored). Its path is a parabola.",
+                    "Treat the motion as two independent parts: horizontal motion at constant velocity $v_x = v_0 \\cos\\theta$, and vertical motion with constant acceleration $g$ downward.",
+                    "At the highest point the vertical velocity is zero; the velocity is horizontal and equals $v_0 \\cos\\theta$. The acceleration is still $g$ downward.",
+                    "Time of flight depends only on the vertical motion. A ball dropped and a ball thrown horizontally from the same height land at the same time.",
+                    "On level ground the range is greatest at $45°$. Angles that add up to $90°$ (such as $30°$ and $60°$) give the same range.",
+                    "Doubling the launch speed (same angle) doubles the time of flight and multiplies the range and maximum height by 4.",
+                    "In this chapter use $g = 10$ m/s² unless told otherwise."
+                ],
+                "formulas": [
+                    {
+                        "label": "Components of the launch velocity",
+                        "latex": "v_x = v_0 \\cos\\theta, \\quad v_y = v_0 \\sin\\theta"
+                    },
+                    {
+                        "label": "Time of flight (level ground)",
+                        "latex": "T = \\frac{2 v_0 \\sin\\theta}{g}"
+                    },
+                    {
+                        "label": "Maximum height",
+                        "latex": "H = \\frac{v_0^2 \\sin^2\\theta}{2g}"
+                    },
+                    {
+                        "label": "Range (level ground)",
+                        "latex": "R = \\frac{v_0^2 \\sin 2\\theta}{g}"
+                    },
+                    {
+                        "label": "Horizontal launch from height h",
+                        "latex": "t = \\sqrt{\\frac{2h}{g}}, \\quad x = v_0 t"
+                    }
+                ],
+                "body": null
+            },
+            "solved_exercises": [
+                {
+                    "id": 210,
+                    "problem": "A stone is thrown horizontally at 12 m/s from the top of an 80 m cliff. How long does it take to land, and how far from the cliff does it land? ($g = 10$ m/s²)",
+                    "steps": [
+                        "Vertical: $80 = \\frac{1}{2}(10)t^2$, so $t^2 = 16$ and $t = 4$ s.",
+                        "Horizontal: $x = 12 \\times 4 = 48$ m."
+                    ],
+                    "final_answer": "4 s; 48 m from the cliff.",
+                    "sort": 1
+                },
+                {
+                    "id": 211,
+                    "problem": "A football is kicked at 25 m/s at $37°$ above the ground. Take $\\sin 37° = 0.6$, $\\cos 37° = 0.8$, $g = 10$ m/s². Find the time of flight, the maximum height and the range.",
+                    "steps": [
+                        "Components: $v_x = 25 \\times 0.8 = 20$ m/s and $v_y = 25 \\times 0.6 = 15$ m/s.",
+                        "Time to the top: $\\frac{15}{10} = 1.5$ s, so the time of flight is 3 s.",
+                        "Maximum height: $\\frac{15^2}{2 \\times 10} = 11.25$ m.",
+                        "Range: $20 \\times 3 = 60$ m."
+                    ],
+                    "final_answer": "3 s; 11.25 m; 60 m",
+                    "sort": 2
+                },
+                {
+                    "id": 212,
+                    "problem": "Show that launch angles of $30°$ and $60°$ give the same range for the same speed.",
+                    "steps": [
+                        "$R = \\frac{v_0^2 \\sin 2\\theta}{g}$.",
+                        "For $30°$: $\\sin 60°$. For $60°$: $\\sin 120° = \\sin 60°$.",
+                        "The two values are equal, so the ranges are equal."
+                    ],
+                    "final_answer": "Both give $R = \\frac{v_0^2 \\sin 60°}{g}$.",
+                    "sort": 3
+                }
+            ],
+            "flashcards": [
+                {
+                    "id": 2100,
+                    "term": "Projectile",
+                    "definition": "An object moving only under the force of gravity after it is launched.",
+                    "sort": 1
+                },
+                {
+                    "id": 2101,
+                    "term": "Trajectory",
+                    "definition": "The path of a projectile; a parabola when air resistance is ignored.",
+                    "sort": 2
+                },
+                {
+                    "id": 2102,
+                    "term": "Horizontal velocity of a projectile",
+                    "definition": "Constant: $v_0 \\cos\\theta$.",
+                    "sort": 3
+                },
+                {
+                    "id": 2103,
+                    "term": "Vertical acceleration of a projectile",
+                    "definition": "$g$ downward, the same at every point of the flight.",
+                    "sort": 4
+                },
+                {
+                    "id": 2104,
+                    "term": "Time of flight",
+                    "definition": "Total time in the air: $\\frac{2 v_0 \\sin\\theta}{g}$ on level ground.",
+                    "sort": 5
+                },
+                {
+                    "id": 2105,
+                    "term": "Range",
+                    "definition": "Horizontal distance travelled: $\\frac{v_0^2 \\sin 2\\theta}{g}$ on level ground.",
+                    "sort": 6
+                },
+                {
+                    "id": 2106,
+                    "term": "Maximum height",
+                    "definition": "$\\frac{v_0^2 \\sin^2\\theta}{2g}$, reached when the vertical velocity is zero.",
+                    "sort": 7
+                },
+                {
+                    "id": 2107,
+                    "term": "Angle for maximum range",
+                    "definition": "$45°$ on level ground (no air resistance).",
+                    "sort": 8
+                }
+            ],
+            "passages": [],
+            "questions": [
+                {
+                    "id": 2101,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "Ignoring air resistance, what happens to the horizontal velocity of a projectile during its flight?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "A"
+                    },
+                    "explanation": "No horizontal force acts on the projectile, so its horizontal velocity does not change.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "It stays constant.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "It increases steadily.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "It decreases to zero at the top.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "It changes direction at the top.",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2102,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "What is the acceleration of a projectile at the highest point of its path?",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "C"
+                    },
+                    "explanation": "Gravity acts at every point, so the acceleration is always $g$ downward — even at the top, where only the vertical velocity is zero.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "Zero",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "$g$ upward",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "$g$ downward",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "It is horizontal.",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2103,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A ball is kicked at 20 m/s at $30°$ above level ground. What is its time of flight? ($g = 10$ m/s²)",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "B"
+                    },
+                    "explanation": "$T = \\frac{2 v_0 \\sin\\theta}{g} = \\frac{2 \\times 20 \\times 0.5}{10} = 2$ s.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "1 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "2 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "4 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "3.5 s",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2104,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A ball is kicked at 20 m/s at $30°$ above level ground. What maximum height does it reach? ($g = 10$ m/s²)",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "D"
+                    },
+                    "explanation": "Vertical component: $20 \\sin 30° = 10$ m/s. $H = \\frac{10^2}{2 \\times 10} = 5$ m.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "10 m",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "20 m",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "2.5 m",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "5 m",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2105,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A stone is thrown at 20 m/s at $45°$ above level ground. What is its range? ($g = 10$ m/s²)",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "A"
+                    },
+                    "explanation": "$R = \\frac{v_0^2 \\sin 90°}{g} = \\frac{400 \\times 1}{10} = 40$ m.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "40 m",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "20 m",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "80 m",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "28 m",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2106,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "Ignoring air resistance, at what launch angle is the range on level ground greatest?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "C"
+                    },
+                    "explanation": "$R = \\frac{v_0^2 \\sin 2\\theta}{g}$ is largest when $\\sin 2\\theta = 1$, that is $2\\theta = 90°$ and $\\theta = 45°$.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "$30°$",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "$60°$",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "$45°$",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "$90°$",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2107,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A projectile is launched with speed $v_0$ at angle $\\theta$. What is its velocity at the highest point?",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "B"
+                    },
+                    "explanation": "At the top the vertical velocity is zero, leaving only the unchanged horizontal velocity $v_0 \\cos\\theta$.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "Zero",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "$v_0 \\cos\\theta$, horizontal",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "$v_0 \\sin\\theta$, vertical",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "$v_0$, at angle $\\theta$",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2108,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A shell is fired at 50 m/s at $37°$ above the horizontal. Take $\\sin 37° = 0.6$ and $\\cos 37° = 0.8$. What is the vertical component of its initial velocity?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "D"
+                    },
+                    "explanation": "$v_y = 50 \\sin 37° = 50 \\times 0.6 = 30$ m/s. (The horizontal component is $50 \\times 0.8 = 40$ m/s.)",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "40 m/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "50 m/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "20 m/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "30 m/s",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2109,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A projectile has an initial vertical velocity of 30 m/s upward. How long does it take to reach its highest point? ($g = 10$ m/s²)",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "A"
+                    },
+                    "explanation": "The vertical velocity falls by 10 m/s each second: $t = \\frac{30}{10} = 3$ s.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "3 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "6 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "1.5 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "30 s",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2110,
+                    "chapter_id": 21,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "From the same height and at the same moment, ball P is dropped and ball Q is thrown horizontally. Ignoring air resistance, which lands first?",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "C"
+                    },
+                    "explanation": "Both start with zero vertical velocity and fall with the same acceleration, so they take the same time. Q simply lands farther away.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "Ball P",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "Ball Q",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "They land at the same time.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "It depends on their masses.",
+                            "media_url": null
+                        }
+                    ]
+                }
+            ]
+        },
+        "22": {
+            "title": "Circular and rotational motion",
+            "summary": {
+                "id": 22,
+                "key_points": [
+                    "Angles in rotation are measured in radians: one revolution is $2\\pi$ rad. Arc length $s = r\\theta$.",
+                    "Angular velocity $\\omega = \\frac{\\Delta\\theta}{\\Delta t} = \\frac{2\\pi}{T} = 2\\pi f$. A point at radius $r$ has linear speed $v = \\omega r$.",
+                    "In uniform circular motion the speed is constant but the direction changes, so the velocity changes and there is an acceleration towards the centre: $a_c = \\frac{v^2}{r} = \\omega^2 r$.",
+                    "A net force towards the centre, $F_c = \\frac{mv^2}{r}$, is needed: friction for a car on a bend, tension for a stone on a string, gravity for a satellite. If it disappears, the object moves off along the tangent.",
+                    "Torque is the turning effect of a force: $\\tau = rF\\sin\\theta$. A body is in rotational balance when clockwise and anticlockwise torques are equal.",
+                    "Moment of inertia $I$ is the rotational version of mass; it depends on the mass and how far it is from the axis. Rotational kinetic energy is $\\frac{1}{2}I\\omega^2$.",
+                    "Angular momentum $L = I\\omega$ is conserved when no external torque acts: a skater who pulls her arms in spins faster."
+                ],
+                "formulas": [
+                    {
+                        "label": "Angular velocity",
+                        "latex": "\\omega = \\frac{2\\pi}{T} = 2\\pi f"
+                    },
+                    {
+                        "label": "Linear and angular speed",
+                        "latex": "v = \\omega r"
+                    },
+                    {
+                        "label": "Centripetal acceleration",
+                        "latex": "a_c = \\frac{v^2}{r} = \\omega^2 r"
+                    },
+                    {
+                        "label": "Centripetal force",
+                        "latex": "F_c = \\frac{mv^2}{r}"
+                    },
+                    {
+                        "label": "Torque",
+                        "latex": "\\tau = rF\\sin\\theta"
+                    },
+                    {
+                        "label": "Rotational kinetic energy and angular momentum",
+                        "latex": "K = \\frac{1}{2}I\\omega^2, \\quad L = I\\omega"
+                    }
+                ],
+                "body": null
+            },
+            "solved_exercises": [
+                {
+                    "id": 220,
+                    "problem": "A 1 000 kg car goes round a flat bend of radius 50 m at 10 m/s. What friction force is needed?",
+                    "steps": [
+                        "Friction provides the centripetal force: $F = \\frac{mv^2}{r}$.",
+                        "$F = \\frac{1000 \\times 10^2}{50} = \\frac{100\\,000}{50}$.",
+                        "$F = 2000$ N towards the centre of the bend."
+                    ],
+                    "final_answer": "2 000 N",
+                    "sort": 1
+                },
+                {
+                    "id": 221,
+                    "problem": "A wheel turns at 120 revolutions per minute. Find its angular velocity and the speed of a point 0.25 m from the axle.",
+                    "steps": [
+                        "$120$ rev/min $= 2$ rev/s, so $\\omega = 2 \\times 2\\pi = 4\\pi$ rad/s.",
+                        "$v = \\omega r = 4\\pi \\times 0.25 = \\pi \\approx 3.14$ m/s."
+                    ],
+                    "final_answer": "$\\omega = 4\\pi$ rad/s; $v = \\pi \\approx 3.14$ m/s",
+                    "sort": 2
+                },
+                {
+                    "id": 222,
+                    "problem": "A skater spins at 2 rad/s with moment of inertia 6 kg·m². She pulls in her arms, reducing $I$ to 2 kg·m². What is her new angular velocity?",
+                    "steps": [
+                        "No external torque, so angular momentum is conserved: $I_1\\omega_1 = I_2\\omega_2$.",
+                        "$6 \\times 2 = 2 \\times \\omega_2$.",
+                        "$\\omega_2 = 6$ rad/s."
+                    ],
+                    "final_answer": "6 rad/s",
+                    "sort": 3
+                }
+            ],
+            "flashcards": [
+                {
+                    "id": 2200,
+                    "term": "Radian",
+                    "definition": "The angle for which the arc length equals the radius; $2\\pi$ rad $= 360°$.",
+                    "sort": 1
+                },
+                {
+                    "id": 2201,
+                    "term": "Angular velocity",
+                    "definition": "Angle turned per second, $\\omega$, in rad/s.",
+                    "sort": 2
+                },
+                {
+                    "id": 2202,
+                    "term": "Period",
+                    "definition": "Time for one full revolution, $T = \\frac{2\\pi}{\\omega}$.",
+                    "sort": 3
+                },
+                {
+                    "id": 2203,
+                    "term": "Centripetal acceleration",
+                    "definition": "Acceleration towards the centre of a circle: $\\frac{v^2}{r}$.",
+                    "sort": 4
+                },
+                {
+                    "id": 2204,
+                    "term": "Centripetal force",
+                    "definition": "The net inward force needed for circular motion: $\\frac{mv^2}{r}$.",
+                    "sort": 5
+                },
+                {
+                    "id": 2205,
+                    "term": "Torque",
+                    "definition": "The turning effect of a force: $\\tau = rF\\sin\\theta$.",
+                    "sort": 6
+                },
+                {
+                    "id": 2206,
+                    "term": "Moment of inertia",
+                    "definition": "Resistance to changes in rotation; depends on mass and its distance from the axis.",
+                    "sort": 7
+                },
+                {
+                    "id": 2207,
+                    "term": "Angular momentum",
+                    "definition": "$L = I\\omega$; conserved when no external torque acts.",
+                    "sort": 8
+                }
+            ],
+            "passages": [],
+            "questions": [
+                {
+                    "id": 2201,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "How many radians are there in one complete revolution?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "B"
+                    },
+                    "explanation": "The circumference is $2\\pi r$, so a full turn is an arc of $2\\pi$ radii: $2\\pi$ rad $= 360°$.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "$\\pi$",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "$2\\pi$",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "360",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "$\\frac{\\pi}{2}$",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2202,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A wheel makes one revolution every 2 s. What is its angular velocity?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "D"
+                    },
+                    "explanation": "$\\omega = \\frac{2\\pi}{T} = \\frac{2\\pi}{2} = \\pi$ rad/s.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "2 rad/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "$4\\pi$ rad/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "0.5 rad/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "$\\pi$ rad/s",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2203,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A cyclist moves at 10 m/s round a circular track of radius 5 m. What is her centripetal acceleration?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "A"
+                    },
+                    "explanation": "$a_c = \\frac{v^2}{r} = \\frac{100}{5} = 20$ m/s².",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "20 m/s²",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "2 m/s²",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "50 m/s²",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "10 m/s²",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2204,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A 2 kg ball on a string moves in a horizontal circle of radius 1.5 m at 3 m/s. What centripetal force acts on it?",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "C"
+                    },
+                    "explanation": "$F_c = \\frac{mv^2}{r} = \\frac{2 \\times 9}{1.5} = 12$ N.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "4 N",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "9 N",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "12 N",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "6 N",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2205,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "In uniform circular motion, in which direction does the acceleration point?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "A"
+                    },
+                    "explanation": "The velocity keeps turning towards the centre, so the acceleration (centripetal) points to the centre.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "Towards the centre of the circle",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "Along the tangent, in the direction of motion",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "Away from the centre",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "There is no acceleration.",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2206,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A car goes round a flat, unbanked bend. Which force provides the centripetal force?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "B"
+                    },
+                    "explanation": "On a flat road only sideways friction on the tyres can push the car towards the centre of the bend.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "The car's weight",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "Friction between the tyres and the road",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "The engine's forward force",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "Air resistance",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2207,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A spinning ice skater pulls her arms close to her body. What happens?",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "C"
+                    },
+                    "explanation": "$L = I\\omega$ is conserved. Pulling the arms in reduces $I$, so $\\omega$ must increase.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "She slows down because her moment of inertia increases.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "She keeps the same angular velocity.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "She spins faster because her angular momentum stays the same while her moment of inertia decreases.",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "She stops spinning.",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2208,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A fan blade turns at a frequency of 5 Hz. What is its period?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "D"
+                    },
+                    "explanation": "$T = \\frac{1}{f} = \\frac{1}{5} = 0.2$ s.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "5 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "$10\\pi$ s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "2 s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "0.2 s",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2209,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A flywheel with moment of inertia 2 kg·m² spins at 3 rad/s. What is its rotational kinetic energy?",
+                    "media_url": null,
+                    "difficulty": 2,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "A"
+                    },
+                    "explanation": "$K = \\frac{1}{2}I\\omega^2 = \\frac{1}{2} \\times 2 \\times 9 = 9$ J.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "9 J",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "6 J",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "18 J",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "3 J",
+                            "media_url": null
+                        }
+                    ]
+                },
+                {
+                    "id": 2210,
+                    "chapter_id": 22,
+                    "passage_id": null,
+                    "type": "single_choice",
+                    "stem": "A wheel with moment of inertia 4 kg·m² rotates at 5 rad/s. What is its angular momentum?",
+                    "media_url": null,
+                    "difficulty": 1,
+                    "is_beta": false,
+                    "answer_key": {
+                        "correct": "B"
+                    },
+                    "explanation": "$L = I\\omega = 4 \\times 5 = 20$ kg·m²/s.",
+                    "version": 1,
+                    "options": [
+                        {
+                            "key": "A",
+                            "side": null,
+                            "body": "9 kg·m²/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "B",
+                            "side": null,
+                            "body": "20 kg·m²/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "C",
+                            "side": null,
+                            "body": "50 kg·m²/s",
+                            "media_url": null
+                        },
+                        {
+                            "key": "D",
+                            "side": null,
+                            "body": "1.25 kg·m²/s",
+                            "media_url": null
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

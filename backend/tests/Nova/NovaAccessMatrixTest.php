@@ -8,6 +8,7 @@ use App\Models\AppSetting;
 use App\Models\AuditLog;
 use App\Models\Battle;
 use App\Models\Chapter;
+use App\Models\LandingReview;
 use App\Models\Mock;
 use App\Models\NicknameReport;
 use App\Models\PremiumGrant;
@@ -49,6 +50,7 @@ class NovaAccessMatrixTest extends TestCase
         $mock = Mock::query()->create(['uid' => 'm-1', 'subject_id' => Subject::factory()->create()->id, 'grade' => 12, 'number' => 1, 'title' => 'Mock 1', 'minutes' => 60]);
         $battle = Battle::query()->create(['code' => 'ABC123', 'key' => 'g12-natural', 'is_random' => false, 'question_ids' => [1], 'creator_id' => $student->id, 'expires_at' => now()->addDay()]);
         $referral = Referral::query()->create(['inviter_id' => $student->id, 'invitee_id' => User::factory()->create()->id, 'status' => Referral::PENDING]);
+        $review = LandingReview::query()->create(['name' => 'Hodan', 'grade' => 12, 'quote' => 'The mock exams helped me.', 'rating' => 5]);
 
         $premium = [UserRole::SuperAdmin, UserRole::PaymentsHelper];
         $content = [UserRole::SuperAdmin, UserRole::ContentChecker];
@@ -67,6 +69,7 @@ class NovaAccessMatrixTest extends TestCase
             'app-settings' => [$setting->id, $admin],
             'audit-logs' => [$log->id, $admin],
             'staff' => [$helper->id, $admin],
+            'website-reviews' => [$review->id, $admin],
         ];
     }
 
@@ -140,6 +143,7 @@ class NovaAccessMatrixTest extends TestCase
             'students', 'staff' => 'users',
             'app-settings' => 'app_settings',
             'audit-logs' => 'audit_logs',
+            'website-reviews' => 'landing_reviews',
             default => str_replace('-', '_', $uri),
         };
     }

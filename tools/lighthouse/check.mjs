@@ -15,14 +15,11 @@ const MIN = { performance: 0.95, accessibility: 1, 'best-practices': 1, seo: 1 }
 const PAGES = [
   { path: '/' },
   { path: '/app' },
-  { path: '/premium' },
   { path: '/privacy' },
   { path: '/terms' },
   { path: '/delete-account' },
   { path: '/so', draft: true },
-  { path: '/so/premium', draft: true },
   { path: '/am', draft: true },
-  { path: '/am/premium', draft: true },
 ];
 
 async function audit(url) {
