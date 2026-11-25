@@ -78,7 +78,7 @@ return [
     'screens_kicker' => 'Gudaha abka',
     'screens_title' => 'Arag Guul 12 oo shaqaynaya',
     'screens_label' => 'Sawirrada abka (dhinac u rog)',
-    'screens_swipe' => 'Dhinac u mari si aad wax badan u aragto →',
+    'screens_swipe' => 'Dhinac u mari ama u rog si aad wax badan u aragto →',
     'screens_alt' => ':caption: shaashad ka mid ah abka Guul 12',
     'screens' => [
         'home' => 'Maalintaada hal mar ku arag',
