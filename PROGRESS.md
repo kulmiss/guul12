@@ -5,7 +5,7 @@
 CI: unchanged while the repo is public (free). Decide again when going private (QUESTIONS #75).
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
-⚠️ Waiting for: owner review + merge of the App polish 2 PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
+⚠️ Waiting for: owner review + merge of PR #12; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -18,9 +18,9 @@ CI: unchanged while the repo is public (free). Decide again when going private (
 | Nova upgrade (extra job) | — | ✅ done — waiting for owner test (PR #6) |
 | App polish 1 (owner feedback) | — | ✅ merged (PR #7 → develop) |
 | Landing redesign (owner feedback) | — | ✅ merged (PRs #8–#11) |
-| App polish 2: Home cards + Statistics | — | ✅ done — waiting for owner review (PR) |
+| App polish 2: Home cards + Statistics | — | ✅ done — waiting for owner review (PR #12) |
 
-## App polish 2 steps (Home cards + Statistics, QUESTIONS #76)
+## App polish 2 steps (PR #12, QUESTIONS #76)
 
 | # | Step | Status |
 |---|---|---|
