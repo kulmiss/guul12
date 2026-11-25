@@ -10,6 +10,7 @@ import '../../app/premium_providers.dart';
 import '../../app/progress_providers.dart';
 import '../../app/providers.dart';
 import '../../app/review_providers.dart';
+import '../../app/statistics_providers.dart';
 import '../../data/branding.dart';
 import '../../data/models.dart';
 import '../../domain/engagement.dart';
@@ -17,14 +18,19 @@ import '../../domain/ethiopian_calendar.dart';
 import '../../domain/mastery.dart';
 import '../../domain/practice.dart';
 import '../../domain/premium_notice.dart';
+import '../../domain/statistics.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../avatars.dart';
 import '../plan/plan_screen.dart';
 import '../practice/practice_screen.dart';
 import '../progress/badges.dart';
+import '../progress/charts.dart';
+import '../progress/statistics_screen.dart';
+import '../social/leaderboard_screen.dart';
 import '../widgets/accents.dart';
 import '../widgets/brand_logo.dart';
 import '../widgets/common.dart';
+import '../widgets/math_text.dart';
 import 'study_screens.dart';
 
 /// "Sene 23, 2018" style text for an Ethiopian date.
@@ -32,13 +38,6 @@ String formatEthiopian(AppLocalizations l, DateTime gregorian) {
   final e = EthiopianDate.fromGregorian(gregorian);
   return l.ethiopianDate(l.ethiopianMonth('m${e.month}'), e.day, e.year);
 }
-
-/// "morning" (5:00–11:59), "afternoon" (12:00–16:59) or "evening", for the greeting.
-String partOfDay(DateTime now) => switch (now.hour) {
-  >= 5 && < 12 => 'morning',
-  >= 12 && < 17 => 'afternoon',
-  _ => 'evening',
-};
 
 /// How many tips the "Tip of the day" card takes turns with (see `homeTip` in the texts).
 const homeTipCount = 10;
@@ -77,6 +76,12 @@ class HomeScreen extends ConsumerWidget {
     final mistakes = ref.watch(mistakesProvider).value ?? const <int, List<Mistake>>{};
     final mistakeCount = mistakes.values.fold(0, (sum, list) => sum + list.length);
     final brand = config?.branding ?? Branding.sunrise;
+    final readiness = ref.watch(readinessProvider).value;
+    final cardOfDay = ref.watch(cardOfTheDayProvider).value;
+    // The weekly rank needs the internet, a nickname and the leaderboard switched on; without
+    // them (or when it cannot load) the card is simply not shown.
+    final rankOn = online && (config?.feature('leaderboard') ?? false) && profile?.nickname != null;
+    final board = rankOn ? ref.watch(leaderboardProvider).value : null;
 
     final recentHeaders = [for (final id in recent) ?catalog?.chapter(id)];
     final subjects = catalog?.subjectsFor(profile?.stream) ?? const <Subject>[];
@@ -116,19 +121,19 @@ class HomeScreen extends ConsumerWidget {
           line: l.homeTileSmart,
           onTap: () => context.push(PracticeScreen.playPath(PracticeMode.smart)),
         ),
-      if (due > 0)
-        _TileData(
-          icon: Icons.event_repeat_rounded,
-          title: l.homeTileReview,
-          line: l.homeReviewDue(due),
-          onTap: () => context.push(PracticeScreen.playPath(PracticeMode.review)),
-        ),
       if (mistakeCount > 0)
         _TileData(
           icon: Icons.menu_book_rounded,
           title: l.homeMistakes,
           line: l.homeMistakesBody(mistakeCount),
           onTap: () => context.push('/mistakes'),
+        ),
+      if (engagement.totalAnswered > 0)
+        _TileData(
+          icon: Icons.insights_rounded,
+          title: l.homeTileStats,
+          line: l.homeTileStatsLine,
+          onTap: () => context.go('/progress/stats'),
         ),
       if (battlesOn)
         _TileData(
@@ -216,6 +221,11 @@ class HomeScreen extends ConsumerWidget {
                             : _subjectOf(catalog, recentHeaders.first),
                       ),
                     ),
+                    if (due > 0) appear(_ReviewCard(due: due)),
+                    if (readiness != null || engagement.totalAnswered > 0)
+                      appear(
+                        _ReadinessCard(readiness: readiness, answered: engagement.totalAnswered),
+                      ),
                     if (profile != null)
                       appear(
                         _PremiumCard(
@@ -229,6 +239,16 @@ class HomeScreen extends ConsumerWidget {
                       ),
                     appear(SectionTitle(l.homeForYou)),
                     appear(_TileGrid(tiles: tiles)),
+                    if (board != null) appear(_RankCard(board: board)),
+                    if (cardOfDay != null)
+                      appear(
+                        _CardOfTheDay(
+                          // A new card (next day) starts on its front again.
+                          key: ValueKey('card-of-day-${cardOfDay.card.id}'),
+                          card: cardOfDay.card,
+                          chapterId: cardOfDay.chapterId,
+                        ),
+                      ),
                     if (weakest != null && weakChapter != null)
                       appear(
                         _WeakCard(
@@ -1157,6 +1177,314 @@ class _Banner extends StatelessWidget {
           Icon(icon, size: 20),
           const SizedBox(width: 8),
           Expanded(child: Text(text)),
+        ],
+      ),
+    );
+  }
+}
+
+/// Questions due for spaced-repetition review today, with one button to start.
+class _ReviewCard extends StatelessWidget {
+  const _ReviewCard({required this.due});
+
+  final int due;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[0];
+    void start() => context.push(PracticeScreen.playPath(PracticeMode.review));
+    return Card(
+      key: const ValueKey('home-review'),
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      color: accent.soft,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: start,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(color: accent.strong, shape: BoxShape.circle),
+                child: Icon(Icons.event_repeat_rounded, color: accent.onStrong),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l.homeReviewCardTitle,
+                      style: theme.textTheme.labelLarge?.copyWith(color: accent.onSoft),
+                    ),
+                    Text(
+                      l.homeReviewDue(due),
+                      style: theme.textTheme.titleMedium?.copyWith(
+                        color: accent.onSoft,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    Text(
+                      l.homeReviewCardLine,
+                      style: theme.textTheme.bodySmall?.copyWith(color: accent.onSoft),
+                    ),
+                    const SizedBox(height: 8),
+                    FilledButton.icon(
+                      onPressed: start,
+                      icon: const Icon(Icons.play_arrow_rounded),
+                      label: Text(l.homeReviewStart),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The likely exam score as a small gauge (or how many answers are still needed). Opens the
+/// Statistics page.
+class _ReadinessCard extends StatelessWidget {
+  const _ReadinessCard({required this.readiness, required this.answered});
+
+  final Readiness? readiness;
+  final int answered;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final r = readiness;
+    return Card(
+      key: const ValueKey('home-readiness'),
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => context.go('/progress/stats'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              if (r != null) ...[
+                ExcludeSemantics(
+                  child: RangeGauge(
+                    low: r.low,
+                    high: r.high,
+                    color: scheme.primary,
+                    track: scheme.surfaceContainerHighest,
+                    width: 96,
+                    centre: Text(
+                      '${r.middle}%',
+                      style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w900),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 14),
+              ] else ...[
+                Icon(Icons.speed_rounded, size: 40, color: scheme.primary),
+                const SizedBox(width: 14),
+              ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l.homeReadinessTitle,
+                      style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+                    ),
+                    const SizedBox(height: 2),
+                    if (r == null)
+                      Text(
+                        l.readinessNeedMore(
+                          (Readiness.minAnswers - answered).clamp(1, Readiness.minAnswers),
+                        ),
+                      )
+                    else ...[
+                      Text(l.readinessRange(r.low, r.high)),
+                      Text(
+                        readinessChangeText(l, r),
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: scheme.onSurfaceVariant,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_right_rounded),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// This week's place on the leaderboard and the XP to move up one place. Nickname only, like
+/// the leaderboard itself. Opens the leaderboard.
+class _RankCard extends StatelessWidget {
+  const _RankCard({required this.board});
+
+  final WeeklyLeaderboard board;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[1];
+    final rank = board.myRank;
+    final gap = board.xpToNextPlace;
+    final line = rank == null
+        ? l.homeRankNone
+        : rank == 1
+        ? l.homeRankFirst
+        : gap != null
+        ? l.homeRankGap(gap)
+        : l.homeRankXp(board.myXp);
+    return Card(
+      key: const ValueKey('home-rank'),
+      margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => context.go('/progress/leaderboard'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Container(
+                width: 48,
+                height: 48,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: accent.strong, shape: BoxShape.circle),
+                child: rank == null
+                    ? Icon(Icons.emoji_events_rounded, color: accent.onStrong)
+                    : Text(
+                        '$rank',
+                        style: theme.textTheme.titleMedium?.copyWith(
+                          color: accent.onStrong,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l.homeRankTitle,
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                    if (rank != null)
+                      Text(
+                        '${l.homeRankPlace(rank)} · ${l.homeRankXp(board.myXp)}',
+                        style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+                      ),
+                    Text(line, style: theme.textTheme.bodySmall),
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_right_rounded),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// One flashcard a day from the saved chapters: tap to turn it over.
+class _CardOfTheDay extends StatefulWidget {
+  const _CardOfTheDay({required this.card, required this.chapterId, super.key});
+
+  final Flashcard card;
+  final int chapterId;
+
+  @override
+  State<_CardOfTheDay> createState() => _CardOfTheDayState();
+}
+
+class _CardOfTheDayState extends State<_CardOfTheDay> {
+  var _back = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final theme = Theme.of(context);
+    final accent = accents(context)[2];
+    final reduceMotion = MediaQuery.disableAnimationsOf(context);
+    final background = _back ? accent.soft : theme.colorScheme.surfaceContainerLow;
+    final foreground = _back ? accent.onSoft : theme.colorScheme.onSurface;
+    return Card(
+      key: const ValueKey('home-card-of-day'),
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      color: background,
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          InkWell(
+            onTap: () => setState(() => _back = !_back),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.style_rounded, color: foreground, size: 20),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          l.homeCardOfDayTitle,
+                          style: theme.textTheme.labelLarge?.copyWith(color: foreground),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  AnimatedSwitcher(
+                    duration: Duration(milliseconds: reduceMotion ? 0 : 220),
+                    child: MathText(
+                      _back ? widget.card.definition : widget.card.term,
+                      key: ValueKey(_back),
+                      style: (_back ? theme.textTheme.bodyLarge : theme.textTheme.titleLarge)
+                          ?.copyWith(
+                            color: foreground,
+                            fontWeight: _back ? FontWeight.w500 : FontWeight.w900,
+                          ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    _back ? l.homeCardOfDayBack : l.homeCardOfDayTap,
+                    style: theme.textTheme.bodySmall?.copyWith(color: foreground),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Align(
+            alignment: AlignmentDirectional.centerEnd,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 4),
+              child: TextButton(
+                onPressed: () => context.push('/study/chapter/${widget.chapterId}/flashcards'),
+                child: Text(l.homeCardOfDayMore),
+              ),
+            ),
+          ),
         ],
       ),
     );

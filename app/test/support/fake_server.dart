@@ -229,6 +229,10 @@ class FakeServer {
   final Map<int, Map<String, Object?>> chapterBodies = {};
   String unitTitle = 'Two-dimensional motion';
 
+  /// More units and chapter headers for the catalog (for example one in another subject).
+  final extraUnits = <Map<String, Object?>>[];
+  final extraChapters = <Map<String, Object?>>[];
+
   Map<String, Object?> catalogJson() => {
     'cursor': cursor,
     'subjects': [
@@ -270,8 +274,9 @@ class FakeServer {
         'title': unitTitle,
         'sort': 2,
       },
+      ...extraUnits,
     ],
-    'chapters': [chapterHeader(21), chapterHeader(22)],
+    'chapters': [chapterHeader(21), chapterHeader(22), ...extraChapters],
   };
 
   Map<String, Object?> chapterHeader(int id) => {

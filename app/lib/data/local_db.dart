@@ -12,7 +12,7 @@ class LocalDb {
 
   final Database _db;
 
-  static const _version = 3;
+  static const _version = 4;
 
   /// Opens the app database. Tests pass `databaseFactoryFfi` and [inMemoryDatabasePath].
   static Future<LocalDb> open({DatabaseFactory? factory, String? path}) async {
@@ -49,7 +49,15 @@ class LocalDb {
       );
     _createV2(batch);
     _createV3(batch);
+    _createV4(batch);
     await batch.commit(noResult: true);
+  }
+
+  /// Version 4: time spent on each answer (for the Statistics page). Answers saved before this
+  /// version, and answers restored from the server, have none (null), so study time only
+  /// counts from this version on.
+  static void _createV4(Batch batch) {
+    batch.execute('ALTER TABLE answers ADD COLUMN time_ms INTEGER');
   }
 
   /// Version 3: spaced repetition of mistakes (review after 1, 3, 7 days).
@@ -77,6 +85,7 @@ class LocalDb {
     final batch = db.batch();
     if (from < 2) _createV2(batch);
     if (from < 3) _createV3(batch);
+    if (from < 4) _createV4(batch);
     await batch.commit(noResult: true);
   }
 
@@ -164,17 +173,22 @@ class LocalDb {
 
   // ---- answer history (for "only my wrong answers" and weak topics) -----------------------------
 
+  /// Saves answers given at [at]. [timeMs] holds the time spent on each one, by question id
+  /// (missing or negative: not known).
   Future<void> recordAnswers(
     List<({int questionId, int chapterId, bool correct})> answers,
-    DateTime at,
-  ) async {
+    DateTime at, {
+    Map<int, int> timeMs = const {},
+  }) async {
     final batch = _db.batch();
     for (final a in answers) {
+      final time = timeMs[a.questionId];
       batch.insert('answers', {
         'question_id': a.questionId,
         'chapter_id': a.chapterId,
         'correct': a.correct ? 1 : 0,
         'answered_at': at.millisecondsSinceEpoch,
+        'time_ms': time == null || time < 0 ? null : time,
       });
     }
     await batch.commit(noResult: true);
@@ -195,7 +209,6 @@ class LocalDb {
     return rows.map((r) => r['question_id']! as int).toSet();
   }
 
-  /// Per chapter: different questions answered, and how many were right the last time.
   /// Every saved answer's time and result (for streak and XP), oldest first.
   Future<List<({DateTime at, bool correct})>> answerEvents() async {
     final rows = await _db.rawQuery(
@@ -210,6 +223,24 @@ class LocalDb {
     ];
   }
 
+  /// Every saved answer with its chapter and time spent (null when not known), oldest first.
+  /// For the Statistics page.
+  Future<List<({DateTime at, bool correct, int chapterId, int? timeMs})>> answerRecords() async {
+    final rows = await _db.rawQuery(
+      'SELECT answered_at, correct, chapter_id, time_ms FROM answers ORDER BY answered_at, id',
+    );
+    return [
+      for (final r in rows)
+        (
+          at: DateTime.fromMillisecondsSinceEpoch(r['answered_at']! as int),
+          correct: r['correct'] == 1,
+          chapterId: r['chapter_id']! as int,
+          timeMs: r['time_ms'] as int?,
+        ),
+    ];
+  }
+
+  /// Per chapter: different questions answered, and how many were right the last time.
   Future<List<ChapterStat>> chapterStats() async {
     final rows = await _db.rawQuery(
       'SELECT a.chapter_id AS chapter_id, COUNT(*) AS answered, SUM(a.correct) AS correct FROM answers a '

@@ -12,6 +12,7 @@ import '../ui/practice/player_screen.dart';
 import '../ui/practice/practice_screen.dart';
 import '../ui/premium/premium_screen.dart';
 import '../ui/progress/progress_screen.dart';
+import '../ui/progress/statistics_screen.dart';
 import '../ui/review/mistakes_screen.dart';
 import '../ui/screens/chapter_screen.dart';
 import '../ui/screens/home_screen.dart';
@@ -177,6 +178,7 @@ final routerProvider = Provider<GoRouter>((ref) {
                 builder: (_, _) => const ProgressScreen(),
                 routes: [
                   GoRoute(path: 'leaderboard', builder: (_, _) => const LeaderboardScreen()),
+                  GoRoute(path: 'stats', builder: (_, _) => const StatisticsScreen()),
                 ],
               ),
             ],
