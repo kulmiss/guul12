@@ -11,6 +11,7 @@
 @section('header')
     @include('landing._brand')
     <nav class="menu" aria-label="{{ __('landing.nav_label') }}">
+        <a href="#grades">{{ __('landing.nav_grades') }}</a>
         <a href="#features">{{ __('landing.nav_features') }}</a>
         <a href="#subjects">{{ __('landing.nav_subjects') }}</a>
         <a href="#faq">{{ __('landing.nav_faq') }}</a>
@@ -21,6 +22,7 @@
 @section('content')
     @include('landing._hero')
     @include('landing._numbers')
+    @include('landing._grades')
     @include('landing._steps')
     @include('landing._features')
     @include('landing._screens')

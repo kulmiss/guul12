@@ -120,6 +120,10 @@
         .cards{display:grid;gap:18px;margin-top:30px;padding:0;list-style:none}
         .cards-3{grid-template-columns:repeat(3,1fr)}
         .cards-4{grid-template-columns:repeat(4,1fr)}
+        .cards-5{grid-template-columns:repeat(5,1fr)}
+        .card.grade-card{text-align:center;border-top:4px solid var(--teal)}
+        .card.grade-card:last-child{border-top-color:var(--accent)}
+        .grade-n{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 14px;border-radius:50%;font-size:1.7rem;font-weight:800;background:var(--teal);color:var(--on-teal);box-shadow:0 0 0 6px var(--tint);font-family:var(--font-heading),var(--font-body),sans-serif}
         .card{background:var(--card);color:var(--ink);border-radius:var(--radius-card);padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s}
         .card:hover,.subj:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
         .sec-white .card{background:var(--cream);box-shadow:none}
@@ -228,6 +232,7 @@
             .num-grid{grid-template-columns:repeat(2,1fr)}
             .num:last-child:nth-child(odd){grid-column:span 2}
             .cards-3,.cards-4{grid-template-columns:1fr 1fr}
+            .cards-5{grid-template-columns:repeat(3,1fr)}
             .subj-grid{grid-template-columns:1fr}
             .foot-grid{grid-template-columns:1fr}
             .sec{padding:60px 0}
@@ -243,7 +248,9 @@
             .doc{padding:22px}
         }
         @media (max-width:560px){
-            .cards-3,.cards-4{grid-template-columns:1fr}
+            .cards-3,.cards-4,.cards-5{grid-template-columns:1fr}
+            .cards-5 .card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;text-align:left;padding:18px}
+            .cards-5 .grade-n{grid-row:span 2;margin:0;width:52px;height:52px;font-size:1.4rem}
             /* Phones: icon or number on the left, text on the right, so the lists stay short. */
             .cards-4 .card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start;padding:18px}
             .cards-4 .card>.chip-ic,.cards-4 .card>.step-n{grid-row:span 2;margin:0}

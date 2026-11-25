@@ -4,10 +4,11 @@
 // Pages linked from the app (/app and the legal pages) must never mention a price or how to pay.
 return [
     'draft_notice' => '',
-    'title' => 'Guul 12 – Ethiopia Grade 12 exam prep',
-    'description' => 'Practise for the Ethiopian Grade 12 national exam: short lessons, original questions with explanations, mock exams and a daily study plan. Works offline.',
+    'title' => 'Guul 12 – exam prep for Grades 8–12 in Ethiopia',
+    'description' => 'Study and practise for Grades 8–12 and the national exams in Ethiopia: short lessons, original questions with explanations, mock exams and a daily study plan. Works offline.',
     'skip' => 'Skip to content',
     'nav_label' => 'Main menu',
+    'nav_grades' => 'Grades',
     'nav_features' => 'Features',
     'nav_subjects' => 'Subjects',
     'nav_premium' => 'Premium',
@@ -19,14 +20,14 @@ return [
     'get_app_free' => 'Get Guul 12 free',
 
     // Hero
-    'hero_eyebrow' => 'Grade 12 · National exam',
-    'hero_eyebrow_year' => 'Grade 12 · National exam :year',
-    'hero_title_a' => 'Pass the Grade 12 exam',
+    'hero_eyebrow' => 'Grades 8–12 · Ethiopia',
+    'hero_eyebrow_year' => 'Grades 8–12 · National exam :year',
+    'hero_title_a' => 'Pass your exams',
     'hero_title_b' => 'with confidence',
-    'hero_body' => 'Short lessons, practice questions with clear explanations, real mock exams and a study plan for every day. Made in Ethiopia, with special care for the Somali Region.',
+    'hero_body' => 'Short lessons, practice questions with clear explanations, real mock exams and a study plan for every day, for Grades 8 to 12. Made in Ethiopia, with special care for the Somali Region.',
     'hero_more' => 'See how it works',
     'hero_chips' => ['Free to start', 'Works offline', 'Every answer checked twice'],
-    'countdown' => '{1} <strong>1 day</strong> left until the national exam. Good luck!|[2,*] <strong>:count days</strong> left until the national exam. Start today.',
+    'countdown' => '{1} <strong>1 day</strong> left until the Grade 12 national exam. Good luck!|[2,*] <strong>:count days</strong> left until the Grade 12 national exam. Start today.',
     'download' => 'Get it on Google Play',
     'download_small' => 'Get it on',
     'coming_soon' => 'Coming soon to Google Play',
@@ -53,11 +54,22 @@ return [
         ['Practise a little every day', 'Your plan tells you what to study today. Watch your weak chapters turn green.'],
     ],
 
+    'grades_kicker' => 'Grades 8–12',
+    'grades_title' => 'One app from Grade 8 to Grade 12',
+    'grades_sub' => 'Pick your grade and the app shows your subjects, your lessons and your exams.',
+    'grades' => [
+        ['Grade 8', 'Get ready for the Grade 8 leaving exam and a strong start in secondary school.'],
+        ['Grade 9', 'Build strong basics in every subject, one short lesson at a time.'],
+        ['Grade 10', 'Master the key topics of secondary school. Many come back in the national exam.'],
+        ['Grade 11', 'Natural or social stream: go deeper in your subjects.'],
+        ['Grade 12', 'Practise for the national exam with full mock exams in real exam mode.'],
+    ],
+
     // Features (icon names are in the view)
     'features_kicker' => 'Features',
     'features_title' => 'Everything you need to get ready',
     'features' => [
-        ['Short lessons', 'Key points, formulas and solved examples for every chapter, written for Grade 12.'],
+        ['Short lessons', 'Key points, formulas and solved examples for every chapter, written for your grade.'],
         ['Questions with explanations', 'Original questions with clear explanations. Every answer is solved twice before you see it.'],
         ['Real exam mode', 'Full mock exams with a timer and a question map, like the national exam day.'],
         ['A plan for every day', 'Tell the app your minutes per day. It plans new chapters, weak topics and revision.'],
@@ -87,8 +99,8 @@ return [
 
     // Subjects
     'subjects_kicker' => 'Subjects',
-    'subjects_title' => 'All your Grade 12 subjects',
-    'subjects_sub' => 'Natural and social science, organised by the 2023 Ministry of Education curriculum.',
+    'subjects_title' => 'All your subjects, Grades 8–12',
+    'subjects_sub' => 'Every exam subject from Grade 8 to Grade 12, natural and social science, following the Ministry of Education curriculum.',
     'stream_natural' => 'Natural',
     'stream_social' => 'Social',
     'stream_both' => 'Both streams',
@@ -133,7 +145,7 @@ return [
     'faq' => [
         ['Is Guul 12 free?', 'Yes. Lessons, practice questions, the study plan and two mock exams in every subject are free. Premium adds more exams, whole-subject downloads, “Explain more” and no ads.'],
         ['Does it work without internet?', 'Yes. Every chapter you open is saved on your phone, so you can study and practise without data. Your progress syncs when you are online again.'],
-        ['Which students is it for?', 'Grade 12 students in Ethiopia preparing for the national exam, in natural and social science. It was made with special care for students in the Somali Region.'],
+        ['Which students is it for?', 'Students in Grades 8 to 12 in Ethiopia, in every exam subject, including natural and social science in Grades 11 and 12. It was made with special care for students in the Somali Region.'],
         ['Are the questions copied from textbooks?', 'No. Every lesson and question is our own writing, and every answer is solved a second time before students see it. We link to the official textbooks.'],
         ['Is my data safe?', 'We keep only what the app needs: your grade, stream, region or city and your target score. No contacts, no photos, no phone location. Others only see your nickname.'],
         ['Is this an official Ministry of Education app?', 'No. Guul 12 is an independent study app by Kulmiss.'],
@@ -143,7 +155,7 @@ return [
     'final_title' => 'Your exam is coming. Start today.',
     'final_body' => 'Study a little every day with Guul 12. It is free to start.',
 
-    'footer_tagline' => 'Exam prep for Grade 12 students in Ethiopia.',
+    'footer_tagline' => 'Exam prep for Grades 8–12 in Ethiopia.',
     'footer_links' => 'More',
     'footer_langs' => 'Language',
     'footer' => '© :year Kulmiss. Guul 12 is an independent study app and is not an official Ministry of Education app.',
@@ -151,7 +163,7 @@ return [
 
     // /app (linked from the app and the summary PDFs: no prices, no payment)
     'app_title' => 'Guul 12 – the exam-prep app',
-    'app_body' => 'Guul 12 helps Grade 12 students in Ethiopia prepare for the national exam with lessons, practice questions, mock exams and a daily plan.',
+    'app_body' => 'Guul 12 helps students in Grades 8–12 in Ethiopia study every subject and prepare for their exams with lessons, practice questions, mock exams and a daily plan.',
 
     // Premium part of the home page (prices and how to pay: never on /app or the legal pages)
     'plans_title' => 'Choose your plan',

@@ -4,10 +4,11 @@
 // Keys and list order are the same as lang/en/landing.php (the views count on the order).
 return [
     'draft_notice' => 'Qoraal qabyo ah: turjumaaddan weli lama hubin.',
-    'title' => 'Guul 12 – U diyaargarowga imtixaanka Fasalka 12 ee Itoobiya',
-    'description' => 'Ku celceli imtixaanka qaranka ee Fasalka 12: casharro gaagaaban, su’aalo asal ah oo sharaxaad leh, imtixaanno tijaabo ah iyo qorshe waxbarasho maalinle ah. Wuxuu shaqeeyaa internet la’aan.',
+    'title' => 'Guul 12 – U diyaargarowga imtixaannada Fasallada 8–12 ee Itoobiya',
+    'description' => 'Wax baro oo ku celceli Fasallada 8–12 iyo imtixaannada qaranka ee Itoobiya: casharro gaagaaban, su’aalo asal ah oo sharaxaad leh, imtixaanno tijaabo ah iyo qorshe waxbarasho maalinle ah. Wuxuu shaqeeyaa internet la’aan.',
     'skip' => 'U gudub nuxurka',
     'nav_label' => 'Liiska ugu weyn',
+    'nav_grades' => 'Fasallada',
     'nav_features' => 'Astaamaha',
     'nav_subjects' => 'Maaddooyinka',
     'nav_premium' => 'Premium',
@@ -18,14 +19,14 @@ return [
     'get_app' => 'Hel abka',
     'get_app_free' => 'Hel Guul 12 bilaash',
 
-    'hero_eyebrow' => 'Fasalka 12 · Imtixaanka qaranka',
-    'hero_eyebrow_year' => 'Fasalka 12 · Imtixaanka qaranka :year',
-    'hero_title_a' => 'Ku gudub imtixaanka Fasalka 12',
+    'hero_eyebrow' => 'Fasallada 8–12 · Itoobiya',
+    'hero_eyebrow_year' => 'Fasallada 8–12 · Imtixaanka qaranka :year',
+    'hero_title_a' => 'Ku gudub imtixaannadaada',
     'hero_title_b' => 'adigoo kalsooni leh',
-    'hero_body' => 'Casharro gaagaaban, su’aalo layli ah oo sharaxaad cad leh, imtixaanno tijaabo ah oo dhab ah iyo qorshe maalin kasta. Waxaa lagu sameeyay Itoobiya, gaar ahaan ardayda Gobolka Soomaalida.',
+    'hero_body' => 'Casharro gaagaaban, su’aalo layli ah oo sharaxaad cad leh, imtixaanno tijaabo ah oo dhab ah iyo qorshe maalin kasta, Fasallada 8 ilaa 12. Waxaa lagu sameeyay Itoobiya, gaar ahaan ardayda Gobolka Soomaalida.',
     'hero_more' => 'Eeg sida uu u shaqeeyo',
     'hero_chips' => ['Bilaash ku bilow', 'Internet la’aan ayuu shaqeeyaa', 'Jawaab kasta laba jeer ayaa la hubiyaa'],
-    'countdown' => '{1} <strong>1 maalin</strong> ayaa ka hartay imtixaanka qaranka. Guul!|[2,*] <strong>:count maalmood</strong> ayaa ka hartay imtixaanka qaranka. Maanta bilow.',
+    'countdown' => '{1} <strong>1 maalin</strong> ayaa ka hartay imtixaanka qaranka ee Fasalka 12. Guul!|[2,*] <strong>:count maalmood</strong> ayaa ka hartay imtixaanka qaranka ee Fasalka 12. Maanta bilow.',
     'download' => 'Ka soo dejiso Google Play',
     'download_small' => 'Ka hel',
     'coming_soon' => 'Dhowaan wuxuu ku iman doonaa Google Play',
@@ -50,10 +51,21 @@ return [
         ['Maalin kasta wax yar ku celceli', 'Qorshahaagu wuxuu kuu sheegayaa waxa aad maanta barato. Cutubyada aad ku liidato way cagaarayaan.'],
     ],
 
+    'grades_kicker' => 'Fasallada 8–12',
+    'grades_title' => 'Hal ab Fasalka 8 ilaa Fasalka 12',
+    'grades_sub' => 'Dooro fasalkaaga, abkuna wuxuu ku tusayaa maaddooyinkaaga, casharradaada iyo imtixaannadaada.',
+    'grades' => [
+        ['Fasalka 8', 'Isu diyaari imtixaanka dhammaadka Fasalka 8 iyo bilow fiican oo dugsiga sare ah.'],
+        ['Fasalka 9', 'Aasaas adag ka dhiso maaddo kasta, cashar gaaban mar kasta.'],
+        ['Fasalka 10', 'Si fiican u baro mawduucyada muhiimka ah ee dugsiga sare. Qaar badan ayaa imtixaanka qaranka ku soo laabta.'],
+        ['Fasalka 11', 'Qaybta dabiiciga ama bulshada: si qoto dheer u baro maaddooyinkaaga.'],
+        ['Fasalka 12', 'Ku celceli imtixaanka qaranka adigoo isticmaalaya imtixaanno tijaabo ah oo dhammaystiran.'],
+    ],
+
     'features_kicker' => 'Astaamaha',
     'features_title' => 'Wax kasta oo aad u baahan tahay si aad isu diyaariso',
     'features' => [
-        ['Casharro gaagaaban', 'Qodobada muhiimka ah, qaacidooyinka iyo tusaalooyin la xalliyay cutub kasta, loo qoray Fasalka 12.'],
+        ['Casharro gaagaaban', 'Qodobada muhiimka ah, qaacidooyinka iyo tusaalooyin la xalliyay cutub kasta, loo qoray fasalkaaga.'],
         ['Su’aalo sharaxaad leh', 'Su’aalo asal ah oo sharaxaad cad leh. Jawaab kasta laba jeer ayaa la xalliyaa ka hor inta aadan arkin.'],
         ['Hab imtixaan dhab ah', 'Imtixaanno tijaabo ah oo dhammaystiran, saacad iyo khariidad su’aalaha leh, sida maalinta imtixaanka.'],
         ['Qorshe maalin kasta', 'U sheeg abka daqiiqadaha aad maalintii haysato. Wuxuu qorsheeyaa cutubyo cusub, meelaha aad ku liidato iyo dib u eegis.'],
@@ -81,8 +93,8 @@ return [
     ],
 
     'subjects_kicker' => 'Maaddooyinka',
-    'subjects_title' => 'Dhammaan maaddooyinkaaga Fasalka 12',
-    'subjects_sub' => 'Sayniska dabiiciga iyo bulshada, sida manhajka Wasaaradda Waxbarashada ee 2023.',
+    'subjects_title' => 'Dhammaan maaddooyinkaaga, Fasallada 8–12',
+    'subjects_sub' => 'Maaddo kasta oo imtixaan ah Fasalka 8 ilaa Fasalka 12, sayniska dabiiciga iyo bulshada, sida manhajka Wasaaradda Waxbarashada.',
     'stream_natural' => 'Dabiici',
     'stream_social' => 'Bulsho',
     'stream_both' => 'Labada qaybood',
@@ -123,7 +135,7 @@ return [
     'faq' => [
         ['Guul 12 ma bilaash baa?', 'Haa. Casharrada, su’aalaha layliga, qorshaha waxbarashada iyo laba imtixaan tijaabo ah maaddo kasta waa bilaash. Premium wuxuu ku daraa imtixaanno badan, soo dejinta maaddo dhan, “Explain more” iyo xayeysiis la’aan.'],
         ['Ma shaqeeyaa internet la’aan?', 'Haa. Cutub kasta oo aad furto taleefankaaga ayuu ku kaydsamaa, markaa wax baran kartaa oo ku celcelin kartaa data la’aan. Horumarkaagu wuu isku xirmaa marka aad mar kale internet hesho.'],
-        ['Yaa loogu talagalay?', 'Ardayda Fasalka 12 ee Itoobiya ee u diyaargaroobaya imtixaanka qaranka, sayniska dabiiciga iyo bulshada. Waxaa si gaar ah loogu sameeyay ardayda Gobolka Soomaalida.'],
+        ['Yaa loogu talagalay?', 'Ardayda Fasallada 8 ilaa 12 ee Itoobiya, maaddo kasta oo imtixaan ah, oo ay ku jiraan sayniska dabiiciga iyo bulshada Fasallada 11 iyo 12. Waxaa si gaar ah loogu sameeyay ardayda Gobolka Soomaalida.'],
         ['Su’aalaha ma laga soo guuriyay buugaagta?', 'Maya. Cashar kasta iyo su’aal kasta annaga ayaa qornay, jawaab kastana mar labaad ayaa la xalliyaa ka hor inta ardaydu arkin. Waxaan ku xirnaa buugaagta rasmiga ah.'],
         ['Xogtaydu ma ammaan baa?', 'Waxaan haynaa kaliya waxa abku u baahan yahay: fasalkaaga, qaybtaada, gobolkaaga ama magaaladaada iyo dhibcaha aad hiigsanayso. Xiriirro, sawirro iyo goobta taleefanka ma qaadno. Dadka kale waxay arkaan naanaystaada kaliya.'],
         ['Kani ma ab rasmi ah oo Wasaaradda Waxbarashada baa?', 'Maya. Guul 12 waa ab waxbarasho oo madax-bannaan oo ay samaysay Kulmiss.'],
@@ -132,14 +144,14 @@ return [
     'final_title' => 'Imtixaankaagu wuu soo dhow yahay. Maanta bilow.',
     'final_body' => 'Maalin kasta wax yar ku baro Guul 12. Bilaash ayaad ku bilaabi kartaa.',
 
-    'footer_tagline' => 'U diyaargarowga imtixaanka ardayda Fasalka 12 ee Itoobiya.',
+    'footer_tagline' => 'U diyaargarowga imtixaannada Fasallada 8–12 ee Itoobiya.',
     'footer_links' => 'Wax kale',
     'footer_langs' => 'Luqadda',
     'footer' => '© :year Kulmiss. Guul 12 waa ab waxbarasho oo madax-bannaan, mana aha ab rasmi ah oo Wasaaradda Waxbarashada.',
     'lang_name' => 'Soomaali',
 
     'app_title' => 'Guul 12 – abka diyaargarowga imtixaanka',
-    'app_body' => 'Guul 12 wuxuu ardayda Fasalka 12 ee Itoobiya ka caawiyaa inay u diyaargaroobaan imtixaanka qaranka.',
+    'app_body' => 'Guul 12 wuxuu ardayda Fasallada 8–12 ee Itoobiya ka caawiyaa inay bartaan maaddo kasta oo u diyaargaroobaan imtixaannadooda.',
 
     'plans_title' => 'Dooro qorshahaaga',
     'plan_term' => 'Hal xilli',

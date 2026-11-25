@@ -16,6 +16,7 @@
 | 7 | Premium | A separate `/premium` page | **On the home page** (your request, decision #42): the Free vs Premium table, then plan cards with prices ("Best value"), 4 steps, **WhatsApp / Telegram / email buttons**. Old `/premium` links redirect there |
 | 8 | Phones | — | A **"Get Guul 12 free"** bar stays at the bottom while scrolling |
 | 9 | Somali / Amharic | Old texts | Every new text as a **draft** for native review |
+| 11 | Grades 8–12 (your decision #43) | Website said Grade 12 only | Titles, hero, FAQ, terms say **Grades 8–12**; new section **"One app from Grade 8 to Grade 12"** with 5 grade cards; "Grades" in the menu; the countdown names the Grade 12 national exam. Somali + Amharic drafts too |
 | 10 | Scrollbars + polish (your request) | App pictures and the phone menu scrolled sideways with a scrollbar | **No horizontal scrollbar anywhere.** Computers/tablets: pictures in a neat grid. Phones: swipe with a hidden bar, faded edges and "Swipe to see more →"; the menu wraps. Plus centred titles with an accent line, cards and buttons that lift, round step numbers, gently floating phones, a dotted hero pattern, shorter cards on phones. A CI check fails if any page ever scrolls sideways (320–1920 px) |
 
 **To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table followed by the plans and contact buttons, FAQ answering the usual worries, a final call, and the bottom bar on phones.
@@ -45,7 +46,7 @@ The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/i
 
 | Check | Result |
 |---|---|
-| Backend tests | **333 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
+| Backend tests | **334 passed** on SQLite and MariaDB; Pint clean; Larastan 0 |
 | Nova tests | **89 passed**; Larastan with Nova 0 |
 | App tests | **408 passed** (9 new landing pictures; all other pictures unchanged); analyze 0; format clean |
 | Layout check | 9 pages × 7 widths (320–1920 px): no sideways scrolling, no horizontal scrollbar (it failed on the old layout, passes now) |
@@ -61,13 +62,14 @@ The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/i
 
 ## 6. Status
 
-📍 Landing redesign · Step 7 of 7: no horizontal scrollbars, nicer UI → next: your review + merge of PR #8
+📍 Landing redesign · Step 8 of 8: website for Grades 8–12 → next: your review + merge of PR #8
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on your tasks
 ⚠️ None.
 
+**Later tasks (we do them before launch):** lessons, questions and mocks for Grades 11, 10, 9 and 8 (Grade 8 needs research first); Grade 8 in the app and backend; Play store texts for Grades 8–12.
+
 **Your open tasks:**
-- Nova on the server (licence);
 - Google sign-in keys;
 - AdMob IDs;
 - Firebase (later);

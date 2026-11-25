@@ -29,7 +29,7 @@ class LandingTest extends TestCase
     public function test_home_page_shows_live_prices_and_how_to_pay_in_its_premium_part(): void
     {
         $this->get('/')->assertOk()
-            ->assertSee('Pass the Grade 12 exam')
+            ->assertSee('Pass your exams')
             ->assertSee('href="#premium"', false)
             ->assertSee('id="premium"', false)
             ->assertSeeText('Coming soon to Google Play')
@@ -254,12 +254,12 @@ class LandingTest extends TestCase
         $this->assertNull(LandingController::daysUntilExam('29/06/2027', $now));
         $this->assertNull(LandingController::daysUntilExam(null, $now));
 
-        $this->get('/')->assertDontSee('left until the national exam')->assertSee('Grade 12 · National exam<', false);
+        $this->get('/')->assertDontSee('left until the Grade 12 national exam')->assertSee('Grades 8–12 · Ethiopia<', false);
         app(Settings::class)->set('exam_date', now('Africa/Addis_Ababa')->addDays(40)->format('Y-m-d'));
-        $this->get('/')->assertSee('<strong>40 days</strong> left until the national exam', false)
-            ->assertSee('Grade 12 · National exam '.now('Africa/Addis_Ababa')->addDays(40)->format('Y'), false);
+        $this->get('/')->assertSee('<strong>40 days</strong> left until the Grade 12 national exam', false)
+            ->assertSee('Grades 8–12 · National exam '.now('Africa/Addis_Ababa')->addDays(40)->format('Y'), false);
         app(Settings::class)->set('exam_date', now('Africa/Addis_Ababa')->addDay()->format('Y-m-d'));
-        $this->get('/')->assertSee('<strong>1 day</strong> left until the national exam. Good luck!', false);
+        $this->get('/')->assertSee('<strong>1 day</strong> left until the Grade 12 national exam. Good luck!', false);
     }
 
     public function test_every_app_picture_is_on_the_website_as_webp(): void
@@ -288,6 +288,20 @@ class LandingTest extends TestCase
         foreach ($m[1] as $href) {
             $this->assertFileExists(public_path(ltrim($href, '/')));
         }
+    }
+
+    public function test_the_website_covers_grades_8_to_12(): void
+    {
+        foreach (['/', '/app'] as $path) {
+            $html = (string) $this->get($path)->assertOk()->getContent();
+            $this->assertStringContainsString('href="#grades"', $html, $path);
+            preg_match_all('#<span class="grade-n" aria-hidden="true">(\d+)</span><h3>([^<]+)</h3>#', $html, $m);
+            $this->assertSame(['8', '9', '10', '11', '12'], $m[1], $path);
+            $this->assertSame(['Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'], $m[2], $path);
+        }
+        $this->get('/')->assertSee('<title>Guul 12 – exam prep for Grades 8–12 in Ethiopia</title>', false);
+        $this->get('/so')->assertSee('<h3>Fasalka 8</h3>', false);
+        $this->get('/am')->assertSee('<h3>12ኛ ክፍል</h3>', false);
     }
 
     public function test_every_subject_has_its_own_icon(): void

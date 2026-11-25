@@ -1,6 +1,6 @@
 # PROGRESS
 
-📍 Landing redesign · Step 7 of 7: no horizontal scrollbars, nicer UI → next: owner review + merge (PR landing-top → develop)
+📍 Landing redesign · Step 8 of 8: website for Grades 8–12 → next: owner review + merge (PR landing-top → develop)
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
 ⚠️ Waiting for: owner review + merge of the landing PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
@@ -28,6 +28,18 @@
 | 5 | Tests, Lighthouse on full content, PR | ✅ |
 | 6 | Premium moved into the home page (`/premium` redirects), decision #42 | ✅ |
 | 7 | No horizontal scrollbars + UI polish; CI layout check (QUESTIONS #72) | ✅ |
+| 8 | Website for Grades 8–12 (decision #43) | ✅ |
+
+## Later tasks (owner: "we will do that later")
+
+| # | Task | Status |
+|---|---|---|
+| L1 | Lessons, questions and mock exams for Grade 11 | ⏳ later |
+| L2 | Lessons, questions and mock exams for Grade 10 | ⏳ later |
+| L3 | Lessons, questions and mock exams for Grade 9 | ⏳ later |
+| L4 | Grade 8: research the Grade 8 leaving exam and subjects, then lessons, questions and mocks | ⏳ later |
+| L5 | App + backend accept Grade 8 (today 9–12) | ⏳ later (owner: not yet) |
+| L6 | Play store texts and screenshots for Grades 8–12 | ⏳ later |
 
 ## App polish 1 steps (PR #7)
 
