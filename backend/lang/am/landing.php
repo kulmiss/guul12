@@ -78,7 +78,7 @@ return [
     'screens_kicker' => 'በመተግበሪያው ውስጥ',
     'screens_title' => 'ጉል 12ን በስራ ላይ ይመልከቱ',
     'screens_label' => 'የመተግበሪያው ምስሎች (ወደ ጎን ያንሸራቱ)',
-    'screens_swipe' => 'ተጨማሪ ለማየት ያንሸራትቱ →',
+    'screens_swipe' => 'ተጨማሪ ለማየት ወደ ጎን ያንሸራትቱ →',
     'screens_alt' => ':caption፡ የጉል 12 መተግበሪያ ገጽ',
     'screens' => [
         'home' => 'ቀንዎን በአንድ እይታ',

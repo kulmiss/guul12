@@ -1,6 +1,6 @@
 // Checks every landing page at phone, tablet and computer widths: the page never scrolls sideways,
-// and no part shows a horizontal scrollbar. (On phones the app pictures may be swiped sideways,
-// but with the scrollbar hidden.)
+// and no part shows a horizontal scrollbar. The row of app pictures must scroll sideways at every
+// width (swipe, trackpad, shift + wheel or arrow keys), with its scrollbar hidden.
 //
 //   php artisan serve --port=8000        (in backend/)
 //   npm ci && npm run layout             (here; BASE_URL defaults to http://127.0.0.1:8000)
@@ -35,6 +35,11 @@ try {
           // A visible scrollbar takes room: offsetHeight minus borders is bigger than clientHeight.
           const bar = el.offsetHeight - parseFloat(cs.borderTopWidth) - parseFloat(cs.borderBottomWidth) - el.clientHeight;
           if (bar > 0) out.push(`<${el.tagName.toLowerCase()} class="${el.className}"> shows a horizontal scrollbar`);
+        }
+        const gallery = document.querySelector('.gallery');
+        if (gallery !== null) {
+          if (gallery.scrollWidth <= gallery.clientWidth) out.push('the app pictures row does not scroll sideways');
+          if (gallery.tabIndex !== 0) out.push('the app pictures row cannot be reached with the keyboard');
         }
         return out;
       });

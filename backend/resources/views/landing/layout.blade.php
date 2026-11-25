@@ -135,12 +135,14 @@
         /* App pictures */
         .screens{background:linear-gradient(180deg,var(--deep),var(--deep-light));color:var(--on-deep)}
         .screens .kicker{color:var(--highlight)}
-        .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 26px;padding:34px 20px 10px;list-style:none;margin:0 auto;max-width:1240px}
+        /* One simple row that scrolls sideways on every screen, with the scrollbar hidden. */
+        .gallery{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 max(20px,calc((100vw - 1120px) / 2));scrollbar-width:none;overscroll-behavior-x:contain;padding:30px max(20px,calc((100vw - 1120px) / 2)) 20px;list-style:none;margin:0;mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
+        .gallery::-webkit-scrollbar{display:none}
         .gallery:focus-visible{outline-offset:-3px}
-        .shot{flex:0 0 200px;margin:0;text-align:center}
+        .shot{flex:0 0 220px;margin:0;text-align:center;scroll-snap-align:start}
         .shot .phone{transition:transform .3s}
-        .shot:hover .phone{transform:translateY(-6px) rotate(-1.5deg)}
-        .swipe{display:none}
+        .shot:hover .phone{transform:translateY(-6px)}
+        .swipe{text-align:center;font-weight:700;margin:14px 0 0}
         .shot .cap{font-weight:800;margin:12px 0 0}
 
         /* Subjects */
@@ -236,10 +238,8 @@
             .subj-grid{grid-template-columns:1fr}
             .foot-grid{grid-template-columns:1fr}
             .sec{padding:60px 0}
-            .gallery{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:30px 24px 16px;mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
-            .gallery::-webkit-scrollbar{display:none}
-            .shot{flex-basis:190px;scroll-snap-align:center}
-            .swipe{display:block;text-align:center;font-weight:700;margin:0;padding-bottom:6px}
+            .gallery{gap:18px;padding:24px 24px 16px;scroll-padding:0 24px;mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
+            .shot{flex-basis:190px}
             .cmp th,.cmp td{padding:12px 10px}
             .cmp td,.cmp thead th+th{width:72px}
             .plans{grid-template-columns:1fr}

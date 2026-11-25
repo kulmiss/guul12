@@ -83,7 +83,7 @@ return [
     'screens_kicker' => 'Inside the app',
     'screens_title' => 'See Guul 12 in action',
     'screens_label' => 'Pictures of the app (scroll sideways)',
-    'screens_swipe' => 'Swipe to see more →',
+    'screens_swipe' => 'Swipe or scroll sideways to see more →',
     'screens_alt' => ':caption: a screen of the Guul 12 app',
     'screens' => [
         'home' => 'Your day at a glance',

@@ -1,6 +1,6 @@
 # PROGRESS
 
-📍 Landing redesign · Step 8 of 8: website for Grades 8–12 → next: owner review + merge (PR landing-top → develop)
+📍 Landing redesign · Step 9 of 9: app screens as one simple sideways row → next: owner review + merge (PR landing-top → develop)
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
 ⚠️ Waiting for: owner review + merge of the landing PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
@@ -29,6 +29,7 @@
 | 6 | Premium moved into the home page (`/premium` redirects), decision #42 | ✅ |
 | 7 | No horizontal scrollbars + UI polish; CI layout check (QUESTIONS #72) | ✅ |
 | 8 | Website for Grades 8–12 (decision #43) | ✅ |
+| 9 | App screens: one simple sideways row everywhere, scrollbar hidden (QUESTIONS #73) | ✅ |
 
 ## Later tasks (owner: "we will do that later")
 
