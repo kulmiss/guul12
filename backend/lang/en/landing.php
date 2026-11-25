@@ -8,6 +8,7 @@ return [
     'description' => 'Study and practise for Grades 8–12 and the national exams in Ethiopia: short lessons, original questions with explanations, mock exams and a daily study plan. Works offline.',
     'skip' => 'Skip to content',
     'nav_label' => 'Main menu',
+    'nav_menu' => 'Menu',
     'nav_grades' => 'Grades',
     'nav_features' => 'Features',
     'nav_subjects' => 'Subjects',

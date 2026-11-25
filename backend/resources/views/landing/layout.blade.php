@@ -57,6 +57,7 @@
         .menu{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
         .menu a{color:var(--on-deep);text-decoration:none;font-weight:700;padding:10px 14px;border-radius:99px;transition:background-color .2s}
         .menu a:hover{background:var(--deep-light);text-decoration:underline}
+        .mmenu{display:none}
 
         /* Buttons */
         .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;text-decoration:none;padding:14px 22px;border-radius:var(--radius-button);line-height:1.2;background:var(--accent);color:var(--on-accent);border:2px solid var(--accent);min-height:48px}
@@ -225,9 +226,15 @@
             h1{font-size:2.3rem}
             h2{font-size:1.7rem}
             .top{position:static}
-            .menu{order:3;margin-left:0;width:100%;justify-content:center;padding-bottom:8px}
-            .menu a{padding:8px 12px}
-            .nav .btn-sm{order:2;margin-left:auto}
+            .nav{flex-wrap:nowrap;gap:10px;min-height:64px}
+            .menu{display:none}
+            .nav>.brand{margin-right:auto}
+            .mmenu{display:block;position:relative}
+            .mmenu summary{list-style:none;cursor:pointer;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--deep-light);color:var(--on-deep);border:1px solid var(--on-deep)}
+            .mmenu summary::-webkit-details-marker{display:none}
+            .mmenu-panel{position:absolute;right:0;top:54px;z-index:20;min-width:220px;display:grid;gap:2px;padding:8px;border-radius:16px;background:var(--card);box-shadow:0 18px 40px rgba(0,0,0,.25)}
+            .mmenu-panel a{color:var(--ink);text-decoration:none;font-weight:700;padding:12px 14px;border-radius:10px}
+            .mmenu-panel a:hover{background:var(--tint)}
             .hero-grid,.band-grid{grid-template-columns:1fr}
             .hero-grid{padding-top:28px;padding-bottom:80px}
             .hero-art{height:420px;max-width:380px;margin:0 auto;width:100%}
@@ -250,14 +257,83 @@
             .sticky-cta .btn{width:100%}
             .doc{padding:22px}
         }
-        @media (max-width:560px){
-            .cards-3,.cards-4,.cards-5{grid-template-columns:1fr}
-            .cards-5 .card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;text-align:left;padding:18px}
-            .cards-5 .grade-n{grid-row:span 2;margin:0;width:52px;height:52px;font-size:1.4rem}
-            /* Phones: icon or number on the left, text on the right, so the lists stay short. */
-            .cards-4 .card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start;padding:18px}
-            .cards-4 .card>.chip-ic,.cards-4 .card>.step-n{grid-row:span 2;margin:0}
-            .cards-4 .card>h3{align-self:end}
+        /* Phones: most visitors. Short page, big tap targets, swipe rails instead of long columns. */
+        @media (max-width:600px){
+            h1{font-size:2.1rem}
+            h2{font-size:1.55rem}
+            .sec{padding:52px 0}
+            .sub{font-size:1rem;margin-bottom:18px}
+            .lead{font-size:1.03rem;margin-bottom:20px}
+            .hero-grid{gap:16px;padding-top:24px;padding-bottom:70px}
+            .eyebrow{font-size:.82rem}
+            .cta-row{flex-direction:column;align-items:stretch}
+            .cta-row .btn{width:100%}
+            .chips{gap:6px;margin-top:16px}
+            .chips li{font-size:.84rem;padding:5px 10px}
+            .countdown{margin-top:14px;padding:10px 14px;border-radius:14px;background:var(--deep-light);border:1px solid var(--on-deep);font-size:.95rem}
+            .hero-art{height:380px;max-width:340px}
+            .hero-art .phone{width:180px}
+            .p-front{left:calc(50% - 150px)}
+            .p-back{right:calc(50% - 160px);top:56px}
+            .sticker{font-size:.8rem;padding:6px 10px}
+            .s1{left:0;top:96px}
+            .s2{right:6px;bottom:24px}
+            /* Numbers: 3 + 2 small boxes */
+            .num-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+            .num{flex:1 1 calc(33.333% - 10px);padding:14px 6px}
+            .num:last-child:nth-child(odd){grid-column:auto}
+            .num strong{font-size:1.6rem}
+            .num span{font-size:.8rem;line-height:1.25;display:block}
+            /* Swipe rails (grades, reviews): one row, scrollbar hidden, soft edges */
+            .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;margin:22px -20px 0;padding:6px 20px 18px;scroll-padding-inline:20px;mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
+            .rail::-webkit-scrollbar{display:none}
+            .rail>li{flex:0 0 76%;scroll-snap-align:start}
+            .rail .grade-card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start;text-align:left;padding:18px}
+            .rail .grade-n{grid-row:span 2;margin:0;width:52px;height:52px;font-size:1.35rem}
+            .rail .grade-card h3{margin-top:4px}
+            /* Features: 2 compact columns */
+            .features{grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+            .features .card{padding:16px 14px}
+            .features .chip-ic{width:40px;height:40px;margin-bottom:10px}
+            .features h3{font-size:.98rem}
+            .features p{font-size:.88rem;line-height:1.45}
+            /* Steps and "how to get Premium": a timeline */
+            .steps-list{grid-template-columns:1fr;gap:0;margin-top:24px}
+            .steps-list .card{position:relative;display:grid;grid-template-columns:48px 1fr;column-gap:14px;align-items:start;background:none;border:0;box-shadow:none;padding:0 0 24px}
+            .steps-list .card:hover{transform:none;box-shadow:none}
+            .steps-list .step-n{grid-row:span 2;margin:0}
+            .steps-list .card:not(:last-child)::before{content:"";position:absolute;left:23px;top:56px;bottom:6px;width:2px;border-radius:2px;background:var(--tint)}
+            .steps-list h3{margin-top:10px}
+            .steps-list .card>p:only-of-type{align-self:center}
+            /* Subjects: 2 compact tiles */
+            .subj-grid{grid-template-columns:1fr 1fr;gap:10px}
+            .subj{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}
+            .subj h3{font-size:1rem}
+            .subj p{font-size:.82rem;line-height:1.4}
+            /* Offline band, table, plans */
+            .band{padding:52px 0}
+            .band p{font-size:1rem}
+            .cmp th,.cmp td{padding:11px 8px;font-size:.9rem}
+            .cmp td,.cmp thead th+th{width:62px}
+            .plans{grid-template-columns:1fr 1fr;gap:12px}
+            .plan{padding:24px 12px 18px}
+            .plan .amount{font-size:1.65rem}
+            .plan p{font-size:.85rem}
+            .badge{font-size:.75rem;white-space:nowrap}
+            .sub-title{font-size:1.3rem;margin-top:36px}
+            .contact-list .btn{width:100%}
+            .qa{padding:0 16px}
+            .qa summary{font-size:1rem;padding:16px 0}
+            .final{padding:8px 0 56px}
+            .final-box{padding:40px 18px;border-radius:22px}
+            .final-box .btn{width:100%}
+            .shot{flex-basis:190px}
+            /* Footer: 2 columns */
+            .foot{padding:40px 0 24px}
+            .foot-grid{grid-template-columns:1fr 1fr;gap:24px}
+            .foot-grid>div:first-child{grid-column:1 / -1}
+            .sticky-cta{padding:8px 14px;background:color-mix(in srgb,var(--cream) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+            .sticky-cta .btn{min-height:46px;padding:11px 18px}
         }
         @media (prefers-reduced-motion:reduce){
             html{scroll-behavior:auto}

@@ -17,7 +17,7 @@
     </div>
 
     <h3 class="sub-title">{{ __('landing.how_title') }}</h3>
-    <ol class="cards cards-4">
+    <ol class="cards cards-4 steps-list">
         @foreach (__('landing.how_steps') as $i => $step)
             <li class="card"><span class="step-n" aria-hidden="true">{{ $i + 1 }}</span><p>{{ $step }}</p></li>
         @endforeach

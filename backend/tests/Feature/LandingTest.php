@@ -304,6 +304,24 @@ class LandingTest extends TestCase
         $this->get('/am')->assertSee('<h3>12ኛ ክፍል</h3>', false);
     }
 
+    public function test_phones_get_a_menu_button_with_the_same_links(): void
+    {
+        foreach (['/' => ['#grades', '#features', '#subjects', '#premium', '#faq'], '/app' => ['#grades', '#features', '#subjects', '#faq'],
+            '/privacy' => ['/app', '/privacy', '/terms', '/delete-account']] as $path => $links) {
+            $html = (string) $this->get($path)->assertOk()->getContent();
+            $this->assertStringContainsString('<summary aria-label="Menu">', $html, $path);
+            if (preg_match('#<nav class="menu"[^>]*>(.*?)</nav>#s', $html, $wide) !== 1
+                || preg_match('#<nav class="mmenu-panel"[^>]*>(.*?)</nav>#s', $html, $phone) !== 1) {
+                $this->fail("{$path}: both menus must be on the page");
+            }
+            preg_match_all('#href="([^"]+)"#', $wide[1], $w);
+            preg_match_all('#href="([^"]+)"#', $phone[1], $p);
+            $this->assertSame($links, $w[1], $path);
+            $this->assertSame($links, $p[1], "{$path}: the phone menu has the same links");
+        }
+        $this->get('/so')->assertSee('<summary aria-label="Liiska">', false);
+    }
+
     public function test_every_subject_has_its_own_icon(): void
     {
         foreach (['mathematics', 'physics', 'chemistry', 'biology', 'english', 'aptitude', 'geography', 'history', 'economics'] as $code) {
