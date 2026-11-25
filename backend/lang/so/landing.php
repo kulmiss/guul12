@@ -8,6 +8,7 @@ return [
     'description' => 'Wax baro oo ku celceli Fasallada 8–12 iyo imtixaannada qaranka ee Itoobiya: casharro gaagaaban, su’aalo asal ah oo sharaxaad leh, imtixaanno tijaabo ah iyo qorshe waxbarasho maalinle ah. Wuxuu shaqeeyaa internet la’aan.',
     'skip' => 'U gudub nuxurka',
     'nav_label' => 'Liiska ugu weyn',
+    'nav_menu' => 'Liiska',
     'nav_grades' => 'Fasallada',
     'nav_features' => 'Astaamaha',
     'nav_subjects' => 'Maaddooyinka',

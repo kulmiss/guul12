@@ -5,7 +5,7 @@
         <div class="wrap">
             <p class="kicker">{{ __('landing.reviews_kicker') }}</p>
             <h2 id="reviews-title">{{ __('landing.reviews_title') }}</h2>
-            <ul class="cards cards-3">
+            <ul class="cards cards-3 rail">
                 @foreach ($reviews as $review)
                     <li class="card">
                         <figure class="rev">

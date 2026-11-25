@@ -36,6 +36,9 @@ try {
           const bar = el.offsetHeight - parseFloat(cs.borderTopWidth) - parseFloat(cs.borderBottomWidth) - el.clientHeight;
           if (bar > 0) out.push(`<${el.tagName.toLowerCase()} class="${el.className}"> shows a horizontal scrollbar`);
         }
+        // The header stays one short row (on phones the links sit behind the menu button).
+        const nav = document.querySelector('.nav');
+        if (nav !== null && nav.offsetHeight > 90) out.push(`the header is ${nav.offsetHeight}px tall (more than one row)`);
         const gallery = document.querySelector('.gallery');
         if (gallery !== null) {
           if (gallery.scrollWidth <= gallery.clientWidth) out.push('the app pictures row does not scroll sideways');

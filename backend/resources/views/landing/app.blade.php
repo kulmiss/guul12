@@ -9,14 +9,12 @@
 @endsection
 
 @section('header')
-    @include('landing._brand')
-    <nav class="menu" aria-label="{{ __('landing.nav_label') }}">
-        <a href="#grades">{{ __('landing.nav_grades') }}</a>
-        <a href="#features">{{ __('landing.nav_features') }}</a>
-        <a href="#subjects">{{ __('landing.nav_subjects') }}</a>
-        <a href="#faq">{{ __('landing.nav_faq') }}</a>
-    </nav>
-    <a class="btn btn-sm" href="{{ $playUrl ?? '#download' }}" @if ($playUrl) rel="noopener" @endif>{{ __('landing.get_app') }}</a>
+    @include('landing._nav', ['links' => [
+        ['#grades', __('landing.nav_grades')],
+        ['#features', __('landing.nav_features')],
+        ['#subjects', __('landing.nav_subjects')],
+        ['#faq', __('landing.nav_faq')],
+    ]])
 @endsection
 
 @section('content')
