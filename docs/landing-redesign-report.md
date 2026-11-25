@@ -16,8 +16,8 @@
 | 7 | Premium | A separate `/premium` page | **On the home page** (your request, decision #42): the Free vs Premium table, then plan cards with prices ("Best value"), 4 steps, **WhatsApp / Telegram / email buttons**. Old `/premium` links redirect there |
 | 8 | Phones | — | A **"Get Guul 12 free"** bar stays at the bottom while scrolling |
 | 9 | Somali / Amharic | Old texts | Every new text as a **draft** for native review |
-| 11 | Grades 8–12 (your decision #43) | Website said Grade 12 only | Titles, hero, FAQ, terms say **Grades 8–12**; new section **"One app from Grade 8 to Grade 12"** with 5 grade cards; "Grades" in the menu; the countdown names the Grade 12 national exam. Somali + Amharic drafts too |
 | 10 | Scrollbars + polish (your request) | App pictures and the phone menu scrolled sideways with a scrollbar | **No horizontal scrollbar anywhere.** Computers/tablets: pictures in a neat grid. Phones: swipe with a hidden bar, faded edges and "Swipe to see more →"; the menu wraps. Plus centred titles with an accent line, cards and buttons that lift, round step numbers, gently floating phones, a dotted hero pattern, shorter cards on phones. A CI check fails if any page ever scrolls sideways (320–1920 px) |
+| 11 | Grades 8–12 (your decision #43) | Website said Grade 12 only | Titles, hero, FAQ, terms say **Grades 8–12**; new section **"One app from Grade 8 to Grade 12"** with 5 grade cards; "Grades" in the menu; the countdown names the Grade 12 national exam. Somali + Amharic drafts too |
 
 **To convert visitors:** exam countdown, trust ticks (free to start, works offline, every answer checked twice), real numbers, real screens, a Free vs Premium table followed by the plans and contact buttons, FAQ answering the usual worries, a final call, and the bottom bar on phones.
 
@@ -39,7 +39,7 @@
 
 ## 3. Screenshots
 
-Sent in chat: `new_ui_computer.png`, `new_ui_phone.png` (latest look), `final_amharic_phone.png`.
+Sent in chat: `g_computer.png`, `g_phone.png` (latest look, Grades 8–12), `final_amharic_phone.png`.
 The app pictures are in `app/test/golden/goldens/landing/` and `backend/public/img/landing/`.
 
 ## 4. Numbers
