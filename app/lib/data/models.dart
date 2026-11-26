@@ -694,6 +694,18 @@ class WeeklyLeaderboard {
   /// Null without a nickname or before any points this week.
   final int? myRank;
   final bool hasNickname;
+
+  /// XP needed to move up one place (to pass the student just above); null when first, without
+  /// a rank, or when not everyone above is in [top] (then the gap is not known).
+  int? get xpToNextPlace {
+    final rank = myRank;
+    if (rank == null || rank <= 1) return null;
+    final above = top.where((e) => !e.isMe && e.rank < rank).toList();
+    if (above.isEmpty || above.length < rank - 1) return null;
+    final lowest = above.map((e) => e.xp).reduce((a, b) => a < b ? a : b);
+    final gap = lowest - myXp + 1;
+    return gap < 1 ? 1 : gap;
+  }
 }
 
 /// Today's daily challenge: the same questions for every student of a grade and stream.

@@ -2377,10 +2377,6 @@
   "@homeTileSmart": {
     "description": "Smart practice tile line"
   },
-  "homeTileReview": "Review",
-  "@homeTileReview": {
-    "description": "Review tile title"
-  },
   "homeTileMore": "More practice",
   "@homeTileMore": {
     "description": "Tile that opens all practice modes"
@@ -2573,5 +2569,407 @@
   "premiumContactMessageNoId": "Hello! I want Guul 12 Premium.",
   "@premiumContactMessageNoId": {
     "description": "Pre-filled WhatsApp message when the student ID is not known yet"
+  },
+  "homeReviewCardTitle": "Review time",
+  "@homeReviewCardTitle": {
+    "description": "Home card: spaced-repetition questions due today"
+  },
+  "homeReviewCardLine": "A few minutes now keeps them in your memory.",
+  "@homeReviewCardLine": {
+    "description": "Home review card"
+  },
+  "homeReviewStart": "Start review",
+  "@homeReviewStart": {
+    "description": "Home review card button"
+  },
+  "homeReadinessTitle": "Exam readiness",
+  "@homeReadinessTitle": {
+    "description": "Home card: likely exam score"
+  },
+  "readinessRange": "Likely score: {low}–{high}%",
+  "@readinessRange": {
+    "description": "Readiness estimate range",
+    "placeholders": {
+      "low": {
+        "type": "int"
+      },
+      "high": {
+        "type": "int"
+      }
+    }
+  },
+  "readinessUp": "Up {points} this week",
+  "@readinessUp": {
+    "description": "Readiness went up",
+    "placeholders": {
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "readinessDown": "Down {points} this week",
+  "@readinessDown": {
+    "description": "Readiness went down",
+    "placeholders": {
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "readinessSame": "Same as last week",
+  "@readinessSame": {
+    "description": "Readiness unchanged"
+  },
+  "readinessBasedOn": "{count, plural, =1{From your last answer} other{From your last {count} answers}}",
+  "@readinessBasedOn": {
+    "description": "What the estimate is based on",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readinessNeedMore": "{count, plural, =1{Answer 1 more question to see your likely exam score.} other{Answer {count} more questions to see your likely exam score.}}",
+  "@readinessNeedMore": {
+    "description": "Before there are enough answers",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readinessNote": "An estimate from your recent answers, not a promise. Practise more chapters to make it surer.",
+  "@readinessNote": {
+    "description": "Readiness explanation"
+  },
+  "homeRankTitle": "Your rank this week",
+  "@homeRankTitle": {
+    "description": "Home card: weekly leaderboard place"
+  },
+  "homeRankPlace": "Place {rank}",
+  "@homeRankPlace": {
+    "description": "Leaderboard place",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "homeRankGap": "{xp} XP to move up one place",
+  "@homeRankGap": {
+    "description": "XP needed to pass the student above",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "homeRankFirst": "You are first. Keep it up!",
+  "@homeRankFirst": {
+    "description": "Leaderboard first place"
+  },
+  "homeRankNone": "Answer questions to get on the board.",
+  "@homeRankNone": {
+    "description": "No rank yet this week"
+  },
+  "homeRankXp": "{xp} XP this week",
+  "@homeRankXp": {
+    "description": "Student weekly XP",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "homeCardOfDayTitle": "Card of the day",
+  "@homeCardOfDayTitle": {
+    "description": "Home card: one flashcard a day"
+  },
+  "homeCardOfDayTap": "Tap to see the answer",
+  "@homeCardOfDayTap": {
+    "description": "Flip hint"
+  },
+  "homeCardOfDayBack": "Tap to see the term again",
+  "@homeCardOfDayBack": {
+    "description": "Flip back hint"
+  },
+  "homeCardOfDayMore": "More cards",
+  "@homeCardOfDayMore": {
+    "description": "Opens the chapter flashcards"
+  },
+  "homeTileStats": "Statistics",
+  "@homeTileStats": {
+    "description": "Home tile title"
+  },
+  "homeTileStatsLine": "Charts of your progress",
+  "@homeTileStatsLine": {
+    "description": "Home tile line"
+  },
+  "statsTitle": "Statistics",
+  "@statsTitle": {
+    "description": "Statistics page title"
+  },
+  "statsOpen": "See your statistics",
+  "@statsOpen": {
+    "description": "Progress tab button"
+  },
+  "statsEmpty": "Answer some questions and your charts will appear here.",
+  "@statsEmpty": {
+    "description": "Statistics with no data"
+  },
+  "statsAnswered": "Answered",
+  "@statsAnswered": {
+    "description": "Summary tile"
+  },
+  "statsRight": "Right",
+  "@statsRight": {
+    "description": "Summary tile and legend"
+  },
+  "statsWrong": "Wrong",
+  "@statsWrong": {
+    "description": "Legend"
+  },
+  "statsDaysStudied": "Days studied",
+  "@statsDaysStudied": {
+    "description": "Summary tile"
+  },
+  "statsBestStreak": "Best streak",
+  "@statsBestStreak": {
+    "description": "Summary tile"
+  },
+  "statsExams": "Exams taken",
+  "@statsExams": {
+    "description": "Summary tile"
+  },
+  "statsBestExam": "Best exam",
+  "@statsBestExam": {
+    "description": "Summary tile"
+  },
+  "statsStudyTime": "Study time",
+  "@statsStudyTime": {
+    "description": "Summary tile"
+  },
+  "statsPerQuestion": "Time per question",
+  "@statsPerQuestion": {
+    "description": "Summary tile"
+  },
+  "statsNoValue": "–",
+  "@statsNoValue": {
+    "description": "No value yet"
+  },
+  "statsPercent": "{percent}%",
+  "@statsPercent": {
+    "description": "A percentage",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "statsDays": "{days, plural, =1{1 day} other{{days} days}}",
+  "@statsDays": {
+    "description": "A number of days",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "statsHours": "{hours} h {minutes} min",
+  "@statsHours": {
+    "description": "Duration",
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "statsMinutes": "{minutes} min",
+  "@statsMinutes": {
+    "description": "Duration",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "statsSeconds": "{seconds} s",
+  "@statsSeconds": {
+    "description": "Duration",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "statsStudyTimeNote": "Study time counts from this app version on, at most 5 minutes a question.",
+  "@statsStudyTimeNote": {
+    "description": "Study time explanation"
+  },
+  "statsTapHint": "Tap a bar, point or square to see its numbers.",
+  "@statsTapHint": {
+    "description": "How to read the charts"
+  },
+  "statsDaysTitle": "Last 14 days",
+  "@statsDaysTitle": {
+    "description": "Chart title"
+  },
+  "statsDaysSubtitle": "Questions answered each day",
+  "@statsDaysSubtitle": {
+    "description": "Chart subtitle"
+  },
+  "statsDayDetail": "{date}: {right} right, {wrong} wrong",
+  "@statsDayDetail": {
+    "description": "Chart value",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "right": {
+        "type": "int"
+      },
+      "wrong": {
+        "type": "int"
+      }
+    }
+  },
+  "statsWeeksTitle": "Accuracy by week",
+  "@statsWeeksTitle": {
+    "description": "Chart title"
+  },
+  "statsWeeksSubtitle": "Share of answers right, last 8 weeks",
+  "@statsWeeksSubtitle": {
+    "description": "Chart subtitle"
+  },
+  "statsWeekDetail": "{count, plural, =1{Week of {date}: {percent}% right of 1 answer} other{Week of {date}: {percent}% right of {count} answers}}",
+  "@statsWeekDetail": {
+    "description": "Chart value",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsWeekNone": "Week of {date}: no answers",
+  "@statsWeekNone": {
+    "description": "Chart value",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "statsSubjectsTitle": "Accuracy by subject",
+  "@statsSubjectsTitle": {
+    "description": "Chart title"
+  },
+  "statsShareLine": "{count, plural, =1{{percent}% · 1 answer} other{{percent}% · {count} answers}}",
+  "@statsShareLine": {
+    "description": "Bar value",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsShareNone": "No answers",
+  "@statsShareNone": {
+    "description": "Bar value"
+  },
+  "statsExamsTitle": "Exam scores",
+  "@statsExamsTitle": {
+    "description": "Chart title"
+  },
+  "statsExamsSubtitle": "Your last 10 exams",
+  "@statsExamsSubtitle": {
+    "description": "Chart subtitle"
+  },
+  "statsExamDetail": "{date} · {title}: {percent}%",
+  "@statsExamDetail": {
+    "description": "Chart value",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "statsExamsNone": "Finish an exam to see your scores here.",
+  "@statsExamsNone": {
+    "description": "No exams yet"
+  },
+  "statsMasteryTitle": "Chapters by strength",
+  "@statsMasteryTitle": {
+    "description": "Chart title"
+  },
+  "statsMasteryItem": "{level}: {count}",
+  "@statsMasteryItem": {
+    "description": "Legend entry",
+    "placeholders": {
+      "level": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsHeatmapTitle": "Activity",
+  "@statsHeatmapTitle": {
+    "description": "Chart title"
+  },
+  "statsHeatmapSubtitle": "Last 12 weeks, one square a day",
+  "@statsHeatmapSubtitle": {
+    "description": "Chart subtitle"
+  },
+  "statsHeatmapDetail": "{count, plural, =0{{date}: no questions} =1{{date}: 1 question} other{{date}: {count} questions}}",
+  "@statsHeatmapDetail": {
+    "description": "Chart value",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsLess": "Less",
+  "@statsLess": {
+    "description": "Heatmap legend"
+  },
+  "statsMore": "More",
+  "@statsMore": {
+    "description": "Heatmap legend"
+  },
+  "statsPartsTitle": "When you study",
+  "@statsPartsTitle": {
+    "description": "Chart title"
+  },
+  "statsPart": "{part, select, morning{Morning} afternoon{Afternoon} other{Evening}}",
+  "@statsPart": {
+    "description": "Part of the day",
+    "placeholders": {
+      "part": {
+        "type": "String"
+      }
+    }
   }
 }

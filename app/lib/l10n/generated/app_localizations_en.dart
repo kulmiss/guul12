@@ -1737,9 +1737,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeTileSmart => 'Your weak spots';
 
   @override
-  String get homeTileReview => 'Review';
-
-  @override
   String get homeTileMore => 'More practice';
 
   @override
@@ -1872,4 +1869,288 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get premiumContactMessageNoId => 'Hello! I want Guul 12 Premium.';
+
+  @override
+  String get homeReviewCardTitle => 'Review time';
+
+  @override
+  String get homeReviewCardLine => 'A few minutes now keeps them in your memory.';
+
+  @override
+  String get homeReviewStart => 'Start review';
+
+  @override
+  String get homeReadinessTitle => 'Exam readiness';
+
+  @override
+  String readinessRange(int low, int high) {
+    return 'Likely score: $low–$high%';
+  }
+
+  @override
+  String readinessUp(int points) {
+    return 'Up $points this week';
+  }
+
+  @override
+  String readinessDown(int points) {
+    return 'Down $points this week';
+  }
+
+  @override
+  String get readinessSame => 'Same as last week';
+
+  @override
+  String readinessBasedOn(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'From your last $count answers',
+      one: 'From your last answer',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String readinessNeedMore(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Answer $count more questions to see your likely exam score.',
+      one: 'Answer 1 more question to see your likely exam score.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get readinessNote =>
+      'An estimate from your recent answers, not a promise. Practise more chapters to make it surer.';
+
+  @override
+  String get homeRankTitle => 'Your rank this week';
+
+  @override
+  String homeRankPlace(int rank) {
+    return 'Place $rank';
+  }
+
+  @override
+  String homeRankGap(int xp) {
+    return '$xp XP to move up one place';
+  }
+
+  @override
+  String get homeRankFirst => 'You are first. Keep it up!';
+
+  @override
+  String get homeRankNone => 'Answer questions to get on the board.';
+
+  @override
+  String homeRankXp(int xp) {
+    return '$xp XP this week';
+  }
+
+  @override
+  String get homeCardOfDayTitle => 'Card of the day';
+
+  @override
+  String get homeCardOfDayTap => 'Tap to see the answer';
+
+  @override
+  String get homeCardOfDayBack => 'Tap to see the term again';
+
+  @override
+  String get homeCardOfDayMore => 'More cards';
+
+  @override
+  String get homeTileStats => 'Statistics';
+
+  @override
+  String get homeTileStatsLine => 'Charts of your progress';
+
+  @override
+  String get statsTitle => 'Statistics';
+
+  @override
+  String get statsOpen => 'See your statistics';
+
+  @override
+  String get statsEmpty => 'Answer some questions and your charts will appear here.';
+
+  @override
+  String get statsAnswered => 'Answered';
+
+  @override
+  String get statsRight => 'Right';
+
+  @override
+  String get statsWrong => 'Wrong';
+
+  @override
+  String get statsDaysStudied => 'Days studied';
+
+  @override
+  String get statsBestStreak => 'Best streak';
+
+  @override
+  String get statsExams => 'Exams taken';
+
+  @override
+  String get statsBestExam => 'Best exam';
+
+  @override
+  String get statsStudyTime => 'Study time';
+
+  @override
+  String get statsPerQuestion => 'Time per question';
+
+  @override
+  String get statsNoValue => '–';
+
+  @override
+  String statsPercent(int percent) {
+    return '$percent%';
+  }
+
+  @override
+  String statsDays(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: '$days days',
+      one: '1 day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String statsHours(int hours, int minutes) {
+    return '$hours h $minutes min';
+  }
+
+  @override
+  String statsMinutes(int minutes) {
+    return '$minutes min';
+  }
+
+  @override
+  String statsSeconds(int seconds) {
+    return '$seconds s';
+  }
+
+  @override
+  String get statsStudyTimeNote =>
+      'Study time counts from this app version on, at most 5 minutes a question.';
+
+  @override
+  String get statsTapHint => 'Tap a bar, point or square to see its numbers.';
+
+  @override
+  String get statsDaysTitle => 'Last 14 days';
+
+  @override
+  String get statsDaysSubtitle => 'Questions answered each day';
+
+  @override
+  String statsDayDetail(String date, int right, int wrong) {
+    return '$date: $right right, $wrong wrong';
+  }
+
+  @override
+  String get statsWeeksTitle => 'Accuracy by week';
+
+  @override
+  String get statsWeeksSubtitle => 'Share of answers right, last 8 weeks';
+
+  @override
+  String statsWeekDetail(String date, int percent, int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Week of $date: $percent% right of $count answers',
+      one: 'Week of $date: $percent% right of 1 answer',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String statsWeekNone(String date) {
+    return 'Week of $date: no answers';
+  }
+
+  @override
+  String get statsSubjectsTitle => 'Accuracy by subject';
+
+  @override
+  String statsShareLine(int percent, int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$percent% · $count answers',
+      one: '$percent% · 1 answer',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get statsShareNone => 'No answers';
+
+  @override
+  String get statsExamsTitle => 'Exam scores';
+
+  @override
+  String get statsExamsSubtitle => 'Your last 10 exams';
+
+  @override
+  String statsExamDetail(String date, String title, int percent) {
+    return '$date · $title: $percent%';
+  }
+
+  @override
+  String get statsExamsNone => 'Finish an exam to see your scores here.';
+
+  @override
+  String get statsMasteryTitle => 'Chapters by strength';
+
+  @override
+  String statsMasteryItem(String level, int count) {
+    return '$level: $count';
+  }
+
+  @override
+  String get statsHeatmapTitle => 'Activity';
+
+  @override
+  String get statsHeatmapSubtitle => 'Last 12 weeks, one square a day';
+
+  @override
+  String statsHeatmapDetail(String date, int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$date: $count questions',
+      one: '$date: 1 question',
+      zero: '$date: no questions',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get statsLess => 'Less';
+
+  @override
+  String get statsMore => 'More';
+
+  @override
+  String get statsPartsTitle => 'When you study';
+
+  @override
+  String statsPart(String part) {
+    String _temp0 = intl.Intl.selectLogic(part, {
+      'morning': 'Morning',
+      'afternoon': 'Afternoon',
+      'other': 'Evening',
+    });
+    return '$_temp0';
+  }
 }

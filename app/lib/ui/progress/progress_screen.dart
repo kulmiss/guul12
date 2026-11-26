@@ -81,6 +81,15 @@ class ProgressScreen extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (engagement != null) StreakCard(view: engagement),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                  child: FilledButton.tonalIcon(
+                    key: const ValueKey('progress-stats'),
+                    icon: const Icon(Icons.insights_rounded),
+                    label: Text(l.statsOpen),
+                    onPressed: () => context.push('/progress/stats'),
+                  ),
+                ),
                 if (leaderboardOn)
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),

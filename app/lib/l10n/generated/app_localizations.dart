@@ -2852,12 +2852,6 @@ abstract class AppLocalizations {
   /// **'Your weak spots'**
   String get homeTileSmart;
 
-  /// Review tile title
-  ///
-  /// In en, this message translates to:
-  /// **'Review'**
-  String get homeTileReview;
-
   /// Tile that opens all practice modes
   ///
   /// In en, this message translates to:
@@ -3073,6 +3067,402 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hello! I want Guul 12 Premium.'**
   String get premiumContactMessageNoId;
+
+  /// Home card: spaced-repetition questions due today
+  ///
+  /// In en, this message translates to:
+  /// **'Review time'**
+  String get homeReviewCardTitle;
+
+  /// Home review card
+  ///
+  /// In en, this message translates to:
+  /// **'A few minutes now keeps them in your memory.'**
+  String get homeReviewCardLine;
+
+  /// Home review card button
+  ///
+  /// In en, this message translates to:
+  /// **'Start review'**
+  String get homeReviewStart;
+
+  /// Home card: likely exam score
+  ///
+  /// In en, this message translates to:
+  /// **'Exam readiness'**
+  String get homeReadinessTitle;
+
+  /// Readiness estimate range
+  ///
+  /// In en, this message translates to:
+  /// **'Likely score: {low}–{high}%'**
+  String readinessRange(int low, int high);
+
+  /// Readiness went up
+  ///
+  /// In en, this message translates to:
+  /// **'Up {points} this week'**
+  String readinessUp(int points);
+
+  /// Readiness went down
+  ///
+  /// In en, this message translates to:
+  /// **'Down {points} this week'**
+  String readinessDown(int points);
+
+  /// Readiness unchanged
+  ///
+  /// In en, this message translates to:
+  /// **'Same as last week'**
+  String get readinessSame;
+
+  /// What the estimate is based on
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{From your last answer} other{From your last {count} answers}}'**
+  String readinessBasedOn(int count);
+
+  /// Before there are enough answers
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{Answer 1 more question to see your likely exam score.} other{Answer {count} more questions to see your likely exam score.}}'**
+  String readinessNeedMore(int count);
+
+  /// Readiness explanation
+  ///
+  /// In en, this message translates to:
+  /// **'An estimate from your recent answers, not a promise. Practise more chapters to make it surer.'**
+  String get readinessNote;
+
+  /// Home card: weekly leaderboard place
+  ///
+  /// In en, this message translates to:
+  /// **'Your rank this week'**
+  String get homeRankTitle;
+
+  /// Leaderboard place
+  ///
+  /// In en, this message translates to:
+  /// **'Place {rank}'**
+  String homeRankPlace(int rank);
+
+  /// XP needed to pass the student above
+  ///
+  /// In en, this message translates to:
+  /// **'{xp} XP to move up one place'**
+  String homeRankGap(int xp);
+
+  /// Leaderboard first place
+  ///
+  /// In en, this message translates to:
+  /// **'You are first. Keep it up!'**
+  String get homeRankFirst;
+
+  /// No rank yet this week
+  ///
+  /// In en, this message translates to:
+  /// **'Answer questions to get on the board.'**
+  String get homeRankNone;
+
+  /// Student weekly XP
+  ///
+  /// In en, this message translates to:
+  /// **'{xp} XP this week'**
+  String homeRankXp(int xp);
+
+  /// Home card: one flashcard a day
+  ///
+  /// In en, this message translates to:
+  /// **'Card of the day'**
+  String get homeCardOfDayTitle;
+
+  /// Flip hint
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to see the answer'**
+  String get homeCardOfDayTap;
+
+  /// Flip back hint
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to see the term again'**
+  String get homeCardOfDayBack;
+
+  /// Opens the chapter flashcards
+  ///
+  /// In en, this message translates to:
+  /// **'More cards'**
+  String get homeCardOfDayMore;
+
+  /// Home tile title
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics'**
+  String get homeTileStats;
+
+  /// Home tile line
+  ///
+  /// In en, this message translates to:
+  /// **'Charts of your progress'**
+  String get homeTileStatsLine;
+
+  /// Statistics page title
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics'**
+  String get statsTitle;
+
+  /// Progress tab button
+  ///
+  /// In en, this message translates to:
+  /// **'See your statistics'**
+  String get statsOpen;
+
+  /// Statistics with no data
+  ///
+  /// In en, this message translates to:
+  /// **'Answer some questions and your charts will appear here.'**
+  String get statsEmpty;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Answered'**
+  String get statsAnswered;
+
+  /// Summary tile and legend
+  ///
+  /// In en, this message translates to:
+  /// **'Right'**
+  String get statsRight;
+
+  /// Legend
+  ///
+  /// In en, this message translates to:
+  /// **'Wrong'**
+  String get statsWrong;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Days studied'**
+  String get statsDaysStudied;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Best streak'**
+  String get statsBestStreak;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Exams taken'**
+  String get statsExams;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Best exam'**
+  String get statsBestExam;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Study time'**
+  String get statsStudyTime;
+
+  /// Summary tile
+  ///
+  /// In en, this message translates to:
+  /// **'Time per question'**
+  String get statsPerQuestion;
+
+  /// No value yet
+  ///
+  /// In en, this message translates to:
+  /// **'–'**
+  String get statsNoValue;
+
+  /// A percentage
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}%'**
+  String statsPercent(int percent);
+
+  /// A number of days
+  ///
+  /// In en, this message translates to:
+  /// **'{days, plural, =1{1 day} other{{days} days}}'**
+  String statsDays(int days);
+
+  /// Duration
+  ///
+  /// In en, this message translates to:
+  /// **'{hours} h {minutes} min'**
+  String statsHours(int hours, int minutes);
+
+  /// Duration
+  ///
+  /// In en, this message translates to:
+  /// **'{minutes} min'**
+  String statsMinutes(int minutes);
+
+  /// Duration
+  ///
+  /// In en, this message translates to:
+  /// **'{seconds} s'**
+  String statsSeconds(int seconds);
+
+  /// Study time explanation
+  ///
+  /// In en, this message translates to:
+  /// **'Study time counts from this app version on, at most 5 minutes a question.'**
+  String get statsStudyTimeNote;
+
+  /// How to read the charts
+  ///
+  /// In en, this message translates to:
+  /// **'Tap a bar, point or square to see its numbers.'**
+  String get statsTapHint;
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'Last 14 days'**
+  String get statsDaysTitle;
+
+  /// Chart subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Questions answered each day'**
+  String get statsDaysSubtitle;
+
+  /// Chart value
+  ///
+  /// In en, this message translates to:
+  /// **'{date}: {right} right, {wrong} wrong'**
+  String statsDayDetail(String date, int right, int wrong);
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'Accuracy by week'**
+  String get statsWeeksTitle;
+
+  /// Chart subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Share of answers right, last 8 weeks'**
+  String get statsWeeksSubtitle;
+
+  /// Chart value
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{Week of {date}: {percent}% right of 1 answer} other{Week of {date}: {percent}% right of {count} answers}}'**
+  String statsWeekDetail(String date, int percent, int count);
+
+  /// Chart value
+  ///
+  /// In en, this message translates to:
+  /// **'Week of {date}: no answers'**
+  String statsWeekNone(String date);
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'Accuracy by subject'**
+  String get statsSubjectsTitle;
+
+  /// Bar value
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{{percent}% · 1 answer} other{{percent}% · {count} answers}}'**
+  String statsShareLine(int percent, int count);
+
+  /// Bar value
+  ///
+  /// In en, this message translates to:
+  /// **'No answers'**
+  String get statsShareNone;
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'Exam scores'**
+  String get statsExamsTitle;
+
+  /// Chart subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Your last 10 exams'**
+  String get statsExamsSubtitle;
+
+  /// Chart value
+  ///
+  /// In en, this message translates to:
+  /// **'{date} · {title}: {percent}%'**
+  String statsExamDetail(String date, String title, int percent);
+
+  /// No exams yet
+  ///
+  /// In en, this message translates to:
+  /// **'Finish an exam to see your scores here.'**
+  String get statsExamsNone;
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'Chapters by strength'**
+  String get statsMasteryTitle;
+
+  /// Legend entry
+  ///
+  /// In en, this message translates to:
+  /// **'{level}: {count}'**
+  String statsMasteryItem(String level, int count);
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'Activity'**
+  String get statsHeatmapTitle;
+
+  /// Chart subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Last 12 weeks, one square a day'**
+  String get statsHeatmapSubtitle;
+
+  /// Chart value
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =0{{date}: no questions} =1{{date}: 1 question} other{{date}: {count} questions}}'**
+  String statsHeatmapDetail(String date, int count);
+
+  /// Heatmap legend
+  ///
+  /// In en, this message translates to:
+  /// **'Less'**
+  String get statsLess;
+
+  /// Heatmap legend
+  ///
+  /// In en, this message translates to:
+  /// **'More'**
+  String get statsMore;
+
+  /// Chart title
+  ///
+  /// In en, this message translates to:
+  /// **'When you study'**
+  String get statsPartsTitle;
+
+  /// Part of the day
+  ///
+  /// In en, this message translates to:
+  /// **'{part, select, morning{Morning} afternoon{Afternoon} other{Evening}}'**
+  String statsPart(String part);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
