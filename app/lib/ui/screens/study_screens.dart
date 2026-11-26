@@ -175,6 +175,18 @@ class _UnitTile extends StatelessWidget {
                   : const Icon(Icons.chevron_right),
               onTap: () => context.push('/study/chapter/${c.id}'),
             ),
+          if (unit.reviewQuestionCount > 0)
+            ListTile(
+              key: ValueKey('unit-review-${unit.id}'),
+              leading: Icon(
+                Icons.assignment_turned_in_outlined,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              title: Text(l.reviewTile),
+              subtitle: Text(l.reviewTileLine(unit.reviewQuestionCount)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/study/unit/${unit.id}/review'),
+            ),
         ],
       ),
     );

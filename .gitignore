@@ -13,6 +13,10 @@ firebase_options.dart
 *.pem
 *.p12
 
+# Solved textbook exercises (real textbook questions): kept out of git while the repo is
+# public (DECISIONS.md #44). Import them with `php artisan content:import-textbook`.
+content/textbook/
+
 # Real data, receipts, backups
 backups/
 *.sql

@@ -3463,6 +3463,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{part, select, morning{Morning} afternoon{Afternoon} other{Evening}}'**
   String statsPart(String part);
+
+  /// Study: unit row that opens the solved textbook review exercise
+  ///
+  /// In en, this message translates to:
+  /// **'Review exercise (textbook)'**
+  String get reviewTile;
+
+  /// Study: review exercise row
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 question, solved step by step} other{{count} questions, solved step by step}}'**
+  String reviewTileLine(int count);
+
+  /// Review exercise screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Unit {unit} review exercise'**
+  String reviewTitle(int unit);
+
+  /// Where the questions come from
+  ///
+  /// In en, this message translates to:
+  /// **'{book} · pages {pages}'**
+  String reviewSource(String book, String pages);
+
+  /// Review exercise tip
+  ///
+  /// In en, this message translates to:
+  /// **'Try each question on paper first, then check the solution.'**
+  String get reviewHint;
+
+  /// Heading for the formulas the solutions use
+  ///
+  /// In en, this message translates to:
+  /// **'Formulas used'**
+  String get reviewFormulas;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Show solution'**
+  String get reviewShowSolution;
+
+  /// Button
+  ///
+  /// In en, this message translates to:
+  /// **'Hide solution'**
+  String get reviewHideSolution;
+
+  /// Label before the final answer
+  ///
+  /// In en, this message translates to:
+  /// **'Answer'**
+  String get reviewAnswer;
+
+  /// Badge on a question that cannot be solved as printed
+  ///
+  /// In en, this message translates to:
+  /// **'Error in the book'**
+  String get reviewBookError;
+
+  /// Question uses a figure from the book
+  ///
+  /// In en, this message translates to:
+  /// **'See {figure} in your textbook.'**
+  String reviewFigure(String figure);
+
+  /// Review exercise missing
+  ///
+  /// In en, this message translates to:
+  /// **'This review exercise is not available yet.'**
+  String get reviewNotFound;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

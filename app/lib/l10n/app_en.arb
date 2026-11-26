@@ -2971,5 +2971,76 @@
         "type": "String"
       }
     }
+  },
+  "reviewTile": "Review exercise (textbook)",
+  "@reviewTile": {
+    "description": "Study: unit row that opens the solved textbook review exercise"
+  },
+  "reviewTileLine": "{count, plural, =1{1 question, solved step by step} other{{count} questions, solved step by step}}",
+  "@reviewTileLine": {
+    "description": "Study: review exercise row",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewTitle": "Unit {unit} review exercise",
+  "@reviewTitle": {
+    "description": "Review exercise screen title",
+    "placeholders": {
+      "unit": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewSource": "{book} · pages {pages}",
+  "@reviewSource": {
+    "description": "Where the questions come from",
+    "placeholders": {
+      "book": {
+        "type": "String"
+      },
+      "pages": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewHint": "Try each question on paper first, then check the solution.",
+  "@reviewHint": {
+    "description": "Review exercise tip"
+  },
+  "reviewFormulas": "Formulas used",
+  "@reviewFormulas": {
+    "description": "Heading for the formulas the solutions use"
+  },
+  "reviewShowSolution": "Show solution",
+  "@reviewShowSolution": {
+    "description": "Button"
+  },
+  "reviewHideSolution": "Hide solution",
+  "@reviewHideSolution": {
+    "description": "Button"
+  },
+  "reviewAnswer": "Answer",
+  "@reviewAnswer": {
+    "description": "Label before the final answer"
+  },
+  "reviewBookError": "Error in the book",
+  "@reviewBookError": {
+    "description": "Badge on a question that cannot be solved as printed"
+  },
+  "reviewFigure": "See {figure} in your textbook.",
+  "@reviewFigure": {
+    "description": "Question uses a figure from the book",
+    "placeholders": {
+      "figure": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewNotFound": "This review exercise is not available yet.",
+  "@reviewNotFound": {
+    "description": "Review exercise missing"
   }
 }

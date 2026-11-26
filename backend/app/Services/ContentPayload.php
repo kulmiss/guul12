@@ -9,6 +9,7 @@ use App\Models\Question;
 use App\Models\QuestionOption;
 use App\Models\SolvedExercise;
 use App\Models\Subject;
+use App\Models\TextbookReview;
 use App\Models\Unit;
 use Illuminate\Support\Facades\Storage;
 
@@ -25,6 +26,7 @@ class ContentPayload
         $subjects = Subject::query()->where('is_active', true)->orderBy('sort')->orderBy('id')->get();
         $units = Unit::query()->where('is_active', true)->orderBy('sort')->orderBy('number')->get();
         $chapters = Chapter::query()->where('is_active', true)->orderBy('sort')->orderBy('number')->get();
+        $reviewCounts = TextbookReview::query()->pluck('question_count', 'unit_id');
 
         return [
             'subjects' => $subjects->map(fn (Subject $s): array => [
@@ -44,6 +46,8 @@ class ContentPayload
                 'number' => $u->number,
                 'title' => $u->title,
                 'sort' => $u->sort,
+                // Questions in the unit's solved textbook review exercise (0: none yet).
+                'review_question_count' => (int) ($reviewCounts[$u->id] ?? 0),
             ])->values()->all(),
             'chapters' => $chapters->map(fn (Chapter $c): array => $this->chapterHeader($c))->values()->all(),
         ];
@@ -139,6 +143,22 @@ class ContentPayload
                 'body' => $o->body,
                 'media_url' => $o->media_path !== null ? asset('storage/'.$o->media_path) : null,
             ])->values()->all(),
+        ];
+    }
+
+    /**
+     * The solved review exercise of a unit, as the app shows it.
+     *
+     * @return array<string, mixed>
+     */
+    public function textbookReview(TextbookReview $review): array
+    {
+        return [
+            'unit_id' => $review->unit_id,
+            'book' => $review->book,
+            'pages' => $review->pages,
+            'intro' => $review->intro,
+            'items' => $review->items,
         ];
     }
 }

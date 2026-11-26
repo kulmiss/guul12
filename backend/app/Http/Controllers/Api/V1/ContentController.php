@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Models\Chapter;
 use App\Models\ContentChange;
+use App\Models\TextbookReview;
+use App\Models\Unit;
 use App\Models\User;
 use App\Services\ContentPayload;
 use App\Services\PremiumService;
@@ -16,6 +18,7 @@ use Illuminate\Http\Request;
  *
  * - /catalog: subjects, units, chapter headers (small, free).
  * - /chapters/{id}: one chapter with everything to study it offline (free).
+ * - /units/{id}/review: the unit's solved textbook review exercise (free).
  * - /sync/changes: what changed since the app's last cursor, so it refreshes only those chapters.
  * - /sync/pack: a whole subject + grade at once (offline pack, Premium).
  */
@@ -43,6 +46,17 @@ class ContentController extends Controller
         ]);
     }
 
+    /**
+     * The solved review exercise at the end of a textbook unit (free, like chapters).
+     */
+    public function review(Unit $unit): JsonResponse
+    {
+        $review = TextbookReview::query()->where('unit_id', $unit->id)->first();
+        abort_if(! $unit->is_active || $review === null, 404);
+
+        return response()->json($this->payload->textbookReview($review));
+    }
+
     public function changes(Request $request): JsonResponse
     {
         $data = $request->validate([
@@ -58,7 +72,7 @@ class ContentController extends Controller
         $hasMore = $rows->count() > self::CHANGES_PAGE;
         $rows = $rows->take(self::CHANGES_PAGE);
 
-        $catalogChanged = $rows->contains(fn (ContentChange $c): bool => in_array($c->entity, ['subject', 'unit', 'chapter'], true));
+        $catalogChanged = $rows->contains(fn (ContentChange $c): bool => in_array($c->entity, ['subject', 'unit', 'chapter', 'textbook_review'], true));
 
         return response()->json([
             'cursor' => $rows->isEmpty() ? (int) $data['since'] : (int) $rows->max('id'),

@@ -1,11 +1,11 @@
 # PROGRESS
 
-📍 App polish 2 · Step 5 of 5: Home cards + Statistics page done, PR open → next: owner review + merge
+📍 Textbook review exercises · Grade 12 Mathematics done (app section + 102 solved questions), PR open → next: owner review + merge, then Physics
 
 CI: unchanged while the repo is public (free). Decide again when going private (QUESTIONS #75).
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
-⚠️ Waiting for: owner review + merge of PR #12; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
+⚠️ Waiting for: owner review + merge of the textbook review PR; repo private before the solved files go into git; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -18,7 +18,9 @@ CI: unchanged while the repo is public (free). Decide again when going private (
 | Nova upgrade (extra job) | — | ✅ done — waiting for owner test (PR #6) |
 | App polish 1 (owner feedback) | — | ✅ merged (PR #7 → develop) |
 | Landing redesign (owner feedback) | — | ✅ merged (PRs #8–#11) |
-| App polish 2: Home cards + Statistics | — | ✅ done — waiting for owner review (PR #12) |
+| App polish 2: Home cards + Statistics | — | ✅ merged (PR #12) |
+| Bug fix: TLS errors count as offline | — | ✅ merged (PR #13) |
+| Textbook review exercises (decision #44) | — | Grade 12 Mathematics ✅ (PR); other subjects next |
 
 ## App polish 2 steps (PR #12, QUESTIONS #76)
 
