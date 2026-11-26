@@ -20,6 +20,7 @@ import '../ui/screens/identity_screen.dart';
 import '../ui/screens/me_screen.dart';
 import '../ui/screens/onboarding_screen.dart';
 import '../ui/screens/study_screens.dart';
+import '../ui/screens/textbook_review_screen.dart';
 import '../ui/social/battles_screen.dart';
 import '../ui/social/invite_screen.dart';
 import '../ui/social/leaderboard_screen.dart';
@@ -153,6 +154,10 @@ final routerProvider = Provider<GoRouter>((ref) {
                   GoRoute(
                     path: 'subject/:id',
                     builder: (_, state) => SubjectScreen(subjectId: _pathId(state)),
+                  ),
+                  GoRoute(
+                    path: 'unit/:id/review',
+                    builder: (_, state) => TextbookReviewScreen(unitId: _pathId(state)),
                   ),
                   GoRoute(
                     path: 'chapter/:id',

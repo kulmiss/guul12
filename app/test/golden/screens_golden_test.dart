@@ -12,6 +12,7 @@ import 'package:material_ui/material_ui.dart';
 import '../support/app_harness.dart';
 import '../support/branding_fixtures.dart';
 import '../support/fake_server.dart';
+import '../support/review_fixture.dart';
 import '../support/stats_seed.dart';
 
 /// Real fonts, so the pictures look like the phone (tests use a box font by default).
@@ -398,5 +399,27 @@ void main() {
         await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
       });
     }
+  }
+
+  // The solved textbook review exercise of a unit, one solution open (made-up sample questions).
+  for (final dark in [false, true]) {
+    final file = 'textbook_review_phone_${dark ? 'dark' : 'light'}.png';
+    testWidgets(file, (tester) async {
+      final server = richServer()..reviews[11] = sampleReview();
+      await pumpGuul(
+        tester,
+        server: server,
+        before: (repo) async {
+          await prepared(repo);
+          await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+        },
+      );
+      await tapOn(tester, find.text('Study'));
+      await tapOn(tester, find.text('Physics'));
+      await tapOn(tester, find.text('Unit 2: Two-dimensional motion'));
+      await tapOn(tester, find.text('Review exercise (textbook)'));
+      await tapOn(tester, find.text('Show solution').first);
+      await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+    });
   }
 }

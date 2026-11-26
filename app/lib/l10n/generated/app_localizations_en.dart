@@ -2153,4 +2153,54 @@ class AppLocalizationsEn extends AppLocalizations {
     });
     return '$_temp0';
   }
+
+  @override
+  String get reviewTile => 'Review exercise (textbook)';
+
+  @override
+  String reviewTileLine(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count questions, solved step by step',
+      one: '1 question, solved step by step',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String reviewTitle(int unit) {
+    return 'Unit $unit review exercise';
+  }
+
+  @override
+  String reviewSource(String book, String pages) {
+    return '$book · pages $pages';
+  }
+
+  @override
+  String get reviewHint => 'Try each question on paper first, then check the solution.';
+
+  @override
+  String get reviewFormulas => 'Formulas used';
+
+  @override
+  String get reviewShowSolution => 'Show solution';
+
+  @override
+  String get reviewHideSolution => 'Hide solution';
+
+  @override
+  String get reviewAnswer => 'Answer';
+
+  @override
+  String get reviewBookError => 'Error in the book';
+
+  @override
+  String reviewFigure(String figure) {
+    return 'See $figure in your textbook.';
+  }
+
+  @override
+  String get reviewNotFound => 'This review exercise is not available yet.';
 }

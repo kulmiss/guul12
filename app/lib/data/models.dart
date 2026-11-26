@@ -103,6 +103,7 @@ class Unit {
     required this.number,
     required this.title,
     required this.sort,
+    this.reviewQuestionCount = 0,
   });
 
   factory Unit.fromJson(Map<String, Object?> json) => Unit(
@@ -113,6 +114,8 @@ class Unit {
     number: asInt(json['number']),
     title: asString(json['title']),
     sort: asInt(json['sort']),
+    // Older servers and catalogs saved before this field: no review exercise.
+    reviewQuestionCount: asIntOrNull(json['review_question_count']) ?? 0,
   );
 
   final int id;
@@ -122,6 +125,9 @@ class Unit {
   final int number;
   final String title;
   final int sort;
+
+  /// Questions in the unit's solved textbook review exercise; 0 when there is none.
+  final int reviewQuestionCount;
 
   bool isFor(String? studentStream) =>
       stream == null || studentStream == null || stream == studentStream;
@@ -918,4 +924,104 @@ class AiExplanation {
   final int id;
   final String body;
   final int remainingToday;
+}
+
+/// One question (or part of a question) of a textbook review exercise, with its solution.
+class ReviewPart {
+  const ReviewPart({
+    required this.ref,
+    required this.question,
+    this.note,
+    this.steps = const [],
+    this.answer,
+  });
+
+  factory ReviewPart.fromJson(Map<String, Object?> json) => ReviewPart(
+    ref: asString(json['ref']),
+    question: asString(json['question']),
+    note: asStringOrNull(json['note']),
+    steps: [for (final s in asList(json['steps'] ?? const <Object?>[])) asString(s)],
+    answer: asStringOrNull(json['answer']),
+  );
+
+  final String ref;
+  final String question;
+  final String? note;
+  final List<String> steps;
+  final String? answer;
+
+  bool get hasSolution => steps.isNotEmpty || answer != null;
+}
+
+class ReviewItem extends ReviewPart {
+  const ReviewItem({
+    required super.ref,
+    required super.question,
+    super.note,
+    super.steps,
+    super.answer,
+    this.figure,
+    this.table,
+    this.bookError = false,
+    this.parts = const [],
+  });
+
+  factory ReviewItem.fromJson(Map<String, Object?> json) {
+    final base = ReviewPart.fromJson(json);
+    final table = json['table'];
+    return ReviewItem(
+      ref: base.ref,
+      question: base.question,
+      note: base.note,
+      steps: base.steps,
+      answer: base.answer,
+      figure: asStringOrNull(json['figure']),
+      table: table == null
+          ? null
+          : {
+              for (final e in asMap(table).entries) e.key: [for (final c in asList(e.value)) '$c'],
+            },
+      bookError: json['book_error'] == true,
+      parts: [
+        for (final p in asList(json['parts'] ?? const <Object?>[])) ReviewPart.fromJson(asMap(p)),
+      ],
+    );
+  }
+
+  /// A figure in the textbook the question refers to (for example "Figure 2.40").
+  final String? figure;
+
+  /// A small data table: column (row) name to its cells, in order.
+  final Map<String, List<String>>? table;
+
+  /// The question cannot be solved as printed in the book (explained in [note]).
+  final bool bookError;
+  final List<ReviewPart> parts;
+}
+
+/// The solved review exercise at the end of a textbook unit.
+class TextbookReview {
+  const TextbookReview({
+    required this.unitId,
+    required this.book,
+    required this.pages,
+    required this.intro,
+    required this.items,
+  });
+
+  factory TextbookReview.fromJson(Map<String, Object?> json) => TextbookReview(
+    unitId: asInt(json['unit_id']),
+    book: asString(json['book']),
+    pages: asStringOrNull(json['pages']),
+    intro: asStringOrNull(json['intro']),
+    items: [for (final i in asList(json['items'])) ReviewItem.fromJson(asMap(i))],
+  );
+
+  final int unitId;
+  final String book;
+  final String? pages;
+
+  /// Formulas or conventions the solutions use (as in the book).
+  final String? intro;
+  final List<ReviewItem> items;
 }

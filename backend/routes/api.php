@@ -34,6 +34,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
 
         Route::get('catalog', [ContentController::class, 'catalog'])->name('catalog');
         Route::get('chapters/{chapter}', [ContentController::class, 'chapter'])->whereNumber('chapter')->name('chapters.show');
+        Route::get('units/{unit}/review', [ContentController::class, 'review'])->whereNumber('unit')->name('units.review');
         Route::get('sync/changes', [ContentController::class, 'changes'])->name('sync.changes');
         Route::get('sync/pack', [ContentController::class, 'pack'])->name('sync.pack');
 

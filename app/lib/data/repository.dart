@@ -14,6 +14,7 @@ import 'token_store.dart';
 /// Keys in the local key/value table.
 abstract final class Keys {
   static const catalog = 'catalog';
+  static const textbookReviewPrefix = 'textbook_review_';
   static const cursor = 'sync_cursor';
   static const serverProfile = 'profile_server';
   static const pendingProfile = 'profile_pending';
@@ -284,6 +285,21 @@ class Repository {
     final local = await db.chapter(id);
     if (local != null) return local;
     return downloadChapter(id);
+  }
+
+  /// The solved review exercise of a unit. Asks the server first (so corrections arrive) and
+  /// keeps a copy; without internet the saved copy is used.
+  Future<TextbookReview> textbookReview(int unitId) async {
+    final key = '${Keys.textbookReviewPrefix}$unitId';
+    try {
+      final json = await _authed(() => api.get('units/$unitId/review'));
+      await db.writeJson(key, json);
+      return TextbookReview.fromJson(json);
+    } on ApiException catch (e) {
+      final saved = e.isOffline ? await db.readJson(key) : null;
+      if (saved == null) rethrow;
+      return TextbookReview.fromJson(saved);
+    }
   }
 
   Future<ChapterContent> downloadChapter(int id) async {

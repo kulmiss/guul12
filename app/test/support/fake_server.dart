@@ -233,6 +233,9 @@ class FakeServer {
   final extraUnits = <Map<String, Object?>>[];
   final extraChapters = <Map<String, Object?>>[];
 
+  /// Solved textbook review exercises by unit id (GET units/{id}/review); none by default.
+  final Map<int, Map<String, Object?>> reviews = {};
+
   Map<String, Object?> catalogJson() => {
     'cursor': cursor,
     'subjects': [
@@ -273,6 +276,7 @@ class FakeServer {
         'number': 2,
         'title': unitTitle,
         'sort': 2,
+        'review_question_count': asList(reviews[11]?['items'] ?? const <Object?>[]).length,
       },
       ...extraUnits,
     ],
@@ -405,6 +409,9 @@ class FakeServer {
       case ('POST', final p) when p.startsWith('explanations/') && p.endsWith('/feedback'):
         explainVotes.add((int.parse(p.split('/')[1]), body()['helpful'] == true));
         return json({'ok': true});
+      case ('GET', final p) when p.startsWith('units/') && p.endsWith('/review'):
+        final review = reviews[int.parse(p.split('/')[1])];
+        return review == null ? json({'message': 'not found'}, 404) : json(review);
       case ('GET', 'referral'):
         return json({'referral': referral});
       case ('POST', 'referral'):
