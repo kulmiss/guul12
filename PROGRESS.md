@@ -1,11 +1,11 @@
 # PROGRESS
 
-📍 Landing redesign · Step 10 of 10: all merged into develop (PRs #8, #9, #10) → next: owner's next request
+📍 App polish 2 · Step 5 of 5: Home cards + Statistics page done, PR open → next: owner review + merge
 
 CI: unchanged while the repo is public (free). Decide again when going private (QUESTIONS #75).
 📊 This job: ▓▓▓▓▓▓▓▓▓▓ 100% done · 0% left
 📊 Whole project: ▓▓▓▓▓▓▓▓▓▓ 100% of the build done · launch waits on owner tasks
-⚠️ Waiting for: owner review + merge of the landing PR; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
+⚠️ Waiting for: owner review + merge of PR #12; real student reviews (Nova → Website reviews); exam_date in Nova; Play account, upload key, AdMob IDs, Google sign-in IDs, Nova licence on the server
 
 | Phase | Weight | Status |
 |---|---|---|
@@ -17,7 +17,18 @@ CI: unchanged while the repo is public (free). Decide again when going private (
 | 5 Landing + ops + store + Nova | 14% | ✅ done — waiting for owner test (PR #5) |
 | Nova upgrade (extra job) | — | ✅ done — waiting for owner test (PR #6) |
 | App polish 1 (owner feedback) | — | ✅ merged (PR #7 → develop) |
-| Landing redesign (owner feedback) | — | ✅ done — waiting for owner review (landing PR) |
+| Landing redesign (owner feedback) | — | ✅ merged (PRs #8–#11) |
+| App polish 2: Home cards + Statistics | — | ✅ done — waiting for owner review (PR #12) |
+
+## App polish 2 steps (PR #12, QUESTIONS #76)
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Numbers worked out on the phone (domain + tests); answers now keep the time spent (database version 4) | ✅ |
+| 2 | Statistics page: 8 summary numbers, likely exam score, last 14 days, accuracy by week, exam scores, accuracy by subject, chapters by strength, 12-week activity, when you study | ✅ |
+| 3 | Home: review card with Start, exam readiness gauge, weekly rank, card of the day, Statistics tile | ✅ |
+| 4 | Widget tests, goldens (light + dark), landing pictures updated | ✅ |
+| 5 | Analyze, all 447 tests, release APK build, PR | ✅ |
 
 ## Landing redesign steps
 

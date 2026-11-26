@@ -12,6 +12,7 @@ import 'package:material_ui/material_ui.dart';
 import '../support/app_harness.dart';
 import '../support/branding_fixtures.dart';
 import '../support/fake_server.dart';
+import '../support/stats_seed.dart';
 
 /// Real fonts, so the pictures look like the phone (tests use a box font by default).
 Future<void> loadFonts() async {
@@ -372,4 +373,30 @@ void main() {
       matchesGoldenFile('goldens/welcome_nile_phone_light.png'),
     );
   });
+
+  // Statistics after a few weeks of study (two subjects, three exams): top and bottom.
+  for (final (part, scroll) in [('top', 0.0), ('bottom', -3000.0)]) {
+    for (final dark in [false, true]) {
+      final file = 'statistics_${part}_phone_${dark ? 'dark' : 'light'}.png';
+      testWidgets(file, (tester) async {
+        final server = richServer();
+        addEnglishChapter(server);
+        await pumpGuul(
+          tester,
+          server: server,
+          before: (repo) async {
+            await prepared(repo);
+            await repo.chapter(31);
+            await repo.db.writeString('theme_mode', dark ? 'dark' : 'light');
+            await seedStudyHistory(repo);
+          },
+        );
+        await tapOn(tester, find.text('Progress').last);
+        await tapOn(tester, find.text('See your statistics'));
+        await tester.drag(find.byType(ListView).first, Offset(0, scroll));
+        await settle(tester);
+        await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/$file'));
+      });
+    }
+  }
 }

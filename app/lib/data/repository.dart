@@ -367,7 +367,11 @@ class Repository {
       for (final a in answers)
         (questionId: a.questionId, chapterId: a.chapterId, correct: a.correctLocally),
     ];
-    await db.recordAnswers(results, finishedAt);
+    await db.recordAnswers(
+      results,
+      finishedAt,
+      timeMs: {for (final a in answers) a.questionId: a.timeMs},
+    );
     // Skipped questions count as wrong, so they come back for review too.
     await db.applySrs(results, finishedAt);
   }

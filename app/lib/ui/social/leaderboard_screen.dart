@@ -10,7 +10,10 @@ import '../avatars.dart';
 import '../widgets/common.dart';
 import 'report_nickname.dart';
 
+/// Asked again after every sync (pull to refresh on Home, coming back online), so the Home rank
+/// card does not keep an old place.
 final leaderboardProvider = FutureProvider.autoDispose<WeeklyLeaderboard>((ref) {
+  ref.watch(syncGenerationProvider);
   final repo = ref.watch(repositoryProvider);
   return repo.leaderboard(appVersion: ref.watch(appVersionProvider));
 });
