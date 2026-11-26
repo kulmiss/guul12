@@ -30,6 +30,9 @@ cd app
 flutter pub get
 flutter test                       # unit + widget + golden tests
 flutter run --dart-define=API_BASE_URL=http://10.0.2.2:8000   # emulator → local backend
+# real phone on USB → local backend (php artisan serve --port=8000 on the PC):
+adb reverse tcp:8000 tcp:8000
+flutter run --dart-define=API_BASE_URL=http://127.0.0.1:8000
 flutter build apk --release --split-per-abi
 ```
 
