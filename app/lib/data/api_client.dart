@@ -76,7 +76,10 @@ class ApiClient {
     final http.Response response;
     try {
       response = await http.Response.fromStream(await _client.send(request).timeout(timeout));
-    } on SocketException {
+    } on IOException {
+      // No network, a TLS problem (for example a certificate for another name: the domain is not
+      // set up yet, or a Wi-Fi sign-in page) or a connection closed early: the server cannot be
+      // reached safely, so the work stays on the phone and is tried again later.
       throw const ApiException.offline();
     } on TimeoutException {
       throw const ApiException.offline();
