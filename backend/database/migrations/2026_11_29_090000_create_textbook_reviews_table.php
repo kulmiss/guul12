@@ -17,7 +17,9 @@ return new class extends Migration
             $table->string('book', 160);
             $table->string('pages', 20)->nullable();
             $table->text('intro')->nullable();
-            $table->json('items');
+            // Text, not a JSON column: MySQL 8 reorders the keys of JSON objects, and the rows of a
+            // data table must stay in the book's order.
+            $table->longText('items');
             $table->unsignedSmallInteger('question_count');
             $table->timestamps();
         });
