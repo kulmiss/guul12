@@ -20,4 +20,8 @@ return [
         'bot_token' => env('TELEGRAM_BOT_TOKEN'),
         'ops_chat_id' => env('TELEGRAM_OPS_CHAT_ID'),
     ],
+
+    // Behind a proxy or load balancer (shared hosting panel, Cloudflare): the proxy addresses,
+    // comma-separated, or * for any. Then HTTPS and the visitor address are seen correctly.
+    'trusted_proxies' => env('TRUSTED_PROXIES'),
 ];

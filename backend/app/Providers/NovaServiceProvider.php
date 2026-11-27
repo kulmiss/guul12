@@ -17,6 +17,7 @@ use App\Services\Branding\Branding;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Fortify\Features;
 use Laravel\Nova\Dashboard;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -61,6 +62,20 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             Nova::provideToScript(['logo' => Nova::logo(), 'brandColors' => Nova::brandColors(), 'brandColorsCSS' => Nova::brandColorsCSS()]);
             Nova::provideToScript(['guulEmptyHelp' => EmptyStates::all()]);
         });
+    }
+
+    /**
+     * Staff can change their password and turn on two-step sign-in (an authenticator app code)
+     * from the user menu → Security. Turning it on needs the code once (confirm) and the password.
+     */
+    protected function fortify(): void
+    {
+        Nova::fortify()
+            ->features([
+                Features::updatePasswords(),
+                Features::twoFactorAuthentication(['confirm' => true, 'confirmPassword' => true]),
+            ])
+            ->register();
     }
 
     protected function routes(): void

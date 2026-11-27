@@ -13,15 +13,23 @@ use App\Services\Ops\BackupService;
 use App\Services\Ops\LogStaffNotifier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Middleware\TrustProxies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
+use Laravel\Fortify\Fortify;
+use Laravel\Passkeys\Passkeys;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
+        // Fortify and Passkeys are only used by Nova (staff sign-in, 2FA). Their own public pages
+        // (sign up, password reset, passkey login) must not exist.
+        Fortify::ignoreRoutes();
+        Passkeys::ignoreRoutes();
         // Nova's service provider swaps this for bell notifications when Nova is installed.
         $this->app->singletonIf(StaffNotifier::class, LogStaffNotifier::class);
         $this->app->bind(GoogleIdTokenVerifier::class, function (): GoogleIdTokenVerifier {
@@ -46,8 +54,22 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::shouldBeStrict(! $this->app->isProduction());
 
+        $proxies = trim((string) config('guul.trusted_proxies'));
+        if ($proxies !== '') {
+            TrustProxies::at($proxies === '*' ? '*' : array_values(array_filter(array_map('trim', explode(',', $proxies)))));
+        }
+
         RateLimiter::for('api', fn (Request $request) => Limit::perMinute(120)->by($request->user()?->id ?: $request->ip()));
         RateLimiter::for('auth', fn (Request $request) => Limit::perMinute(10)->by($request->ip()));
+        // Staff sign-in (Nova, through config/fortify.php): 5 tries a minute per email and address,
+        // and 20 a minute per address across all emails.
+        RateLimiter::for('login', fn (Request $request) => [
+            Limit::perMinute(5)->by(Str::lower(trim((string) $request->input('email'))).'|'.$request->ip()),
+            Limit::perMinute(20)->by((string) $request->ip()),
+        ]);
+        // The two-step code after the password: 5 tries a minute per sign-in.
+        RateLimiter::for('two-factor', fn (Request $request) => Limit::perMinute(5)->by(
+            (string) ($request->hasSession() ? $request->session()->get('login.id') : null).'|'.$request->ip()));
 
         // Staff roles. Every action they take is written to audit_logs.
         Gate::define('manage-premium', fn (User $user): bool => $user->hasRole(UserRole::SuperAdmin, UserRole::PaymentsHelper));
