@@ -241,7 +241,7 @@ questions:
     difficulty: 1
     stem: 'World Consumer Rights Day is held every year in which month? Write the month as a number (January = 1).'
     answer: {value: 3, tolerance: 0}
-    explanation: 'It marks a 1962 speech by US President John F. Kennedy on consumer rights.'
+    explanation: 'It is held on 15 March, so the answer is 3. It marks a 1962 speech by US President John F. Kennedy on consumer rights.'
 
   - uid: g12-economics-3-1-q019
     type: numeric
