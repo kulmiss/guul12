@@ -28,7 +28,13 @@ class _ExamScreenState extends ConsumerState<ExamScreen> with WidgetsBindingObse
   bool _submitting = false;
   Timer? _ticker;
 
-  DateTime _now() => ref.read(clockProvider)();
+  int _ticks = 0;
+
+  /// The exam's own time: it ignores changes to the phone clock (see [ExamSession.observe]).
+  DateTime _now() {
+    final wall = ref.read(clockProvider)();
+    return _session?.observe(wall, ref.read(uptimeClockProvider).nowMs()) ?? wall;
+  }
 
   @override
   void initState() {
@@ -51,6 +57,7 @@ class _ExamScreenState extends ConsumerState<ExamScreen> with WidgetsBindingObse
   }
 
   Future<void> _load() async {
+    await ref.read(uptimeClockProvider).start();
     final session = await ref.read(repositoryProvider).examInProgress();
     if (!mounted) return;
     setState(() {
@@ -60,12 +67,17 @@ class _ExamScreenState extends ConsumerState<ExamScreen> with WidgetsBindingObse
     if (session == null) return;
     _ticker = Timer.periodic(const Duration(seconds: 1), (_) => _tick());
     _tick();
+    // Keep the exam clock's reading, so closing the app cannot turn it back.
+    fireAndForget(_save());
   }
 
   void _tick() {
     final session = _session;
     if (!mounted || session == null || _submitting) return;
-    if (session.isTimeUp(_now())) {
+    final now = _now();
+    // Saved every 15 seconds, so even after a restart of the phone the exam resumes with the right time.
+    if (++_ticks % 15 == 0) fireAndForget(_save());
+    if (session.isTimeUp(now)) {
       fireAndForget(_submit(timeUp: true));
     } else {
       setState(() {});

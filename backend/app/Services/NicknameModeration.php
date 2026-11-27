@@ -8,6 +8,7 @@ use App\Enums\NicknameReportStatus;
 use App\Models\AuditLog;
 use App\Models\NicknameReport;
 use App\Models\User;
+use App\Support\LocalTime;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -73,7 +74,7 @@ class NicknameModeration
     {
         return NicknameReport::query()
             ->where('reporter_id', $reporter->id)
-            ->where('created_at', '>=', Carbon::now()->startOfDay())
+            ->where('created_at', '>=', LocalTime::startOfToday())
             ->count();
     }
 

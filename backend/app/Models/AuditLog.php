@@ -44,8 +44,21 @@ class AuditLog extends Model
             'subject_type' => $subject !== null ? class_basename($subject) : null,
             'subject_id' => $subject?->getKey(),
             'data' => $data === [] ? null : $data,
-            'ip' => app()->runningInConsole() ? null : request()->ip(),
+            'ip' => self::ipOf($actor),
         ]);
+    }
+
+    /**
+     * Staff actions keep the IP address (safety). A student's own actions never do (privacy:
+     * minimum data). Console commands have no real address.
+     */
+    private static function ipOf(?User $actor): ?string
+    {
+        if ($actor === null || ! $actor->isStaff() || (app()->runningInConsole() && ! app()->runningUnitTests())) {
+            return null;
+        }
+
+        return request()->ip();
     }
 
     /**

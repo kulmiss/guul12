@@ -103,6 +103,65 @@ void main() {
       ]);
     });
 
+    group('the exam clock cannot be turned back (bug hunt)', () {
+      const sec = 1000;
+      test('moving the phone clock back does not give more time', () {
+        final s = ExamSession(paper: paper([eq(1)]), clientUuid: 'u', startedAt: start);
+        // Phone time and the time since the phone started (cannot be changed by the student).
+        expect(s.observe(start, 1000 * sec), start);
+        final at5 = s.observe(start.add(const Duration(minutes: 5)), 1300 * sec);
+        expect(s.remaining(at5), const Duration(minutes: 5));
+        // The student sets the clock back 1 hour; 1 more real minute passes.
+        final back = s.observe(start.subtract(const Duration(minutes: 55)), 1360 * sec);
+        expect(s.remaining(back), const Duration(minutes: 4));
+        expect(
+          s.isTimeUp(s.observe(start.subtract(const Duration(minutes: 51)), 1600 * sec)),
+          isTrue,
+        );
+      });
+
+      test('moving the clock forward (or a time zone change) does not steal time', () {
+        final s = ExamSession(paper: paper([eq(1)]), clientUuid: 'u', startedAt: start);
+        s.observe(start, 50 * sec);
+        final now = s.observe(start.add(const Duration(hours: 3)), 110 * sec);
+        expect(s.remaining(now), const Duration(minutes: 9));
+      });
+
+      test('closing the app keeps the clock (saved and loaded)', () {
+        final s = ExamSession(paper: paper([eq(1)]), clientUuid: 'u', startedAt: start);
+        s.observe(start, 10 * sec);
+        s.observe(start.add(const Duration(minutes: 2)), 130 * sec);
+        final back = ExamSession.fromJson(
+          jsonDecode(jsonEncode(s.toJson())) as Map<String, Object?>,
+        );
+        // Closed for 3 real minutes, and the clock was set back meanwhile.
+        final now = back.observe(start.subtract(const Duration(hours: 1)), 310 * sec);
+        expect(back.remaining(now), const Duration(minutes: 5));
+      });
+
+      test('after a restart of the phone the clock only moves forward', () {
+        final s = ExamSession(paper: paper([eq(1)]), clientUuid: 'u', startedAt: start);
+        s.observe(start, 900 * sec);
+        s.observe(start.add(const Duration(minutes: 4)), 1140 * sec);
+        // Restarted: the counter began again; the phone clock is 2 minutes later.
+        final now = s.observe(start.add(const Duration(minutes: 6)), 5 * sec);
+        expect(s.remaining(now), const Duration(minutes: 4));
+        // Restarted and the clock set back: no time is given back.
+        final again = s.observe(start.add(const Duration(minutes: 1)), 2 * sec);
+        expect(s.remaining(again), const Duration(minutes: 4));
+      });
+
+      test(
+        'without the counter (tests, other platforms) the phone clock is used, never backwards',
+        () {
+          final s = ExamSession(paper: paper([eq(1)]), clientUuid: 'u', startedAt: start);
+          s.observe(start.add(const Duration(minutes: 3)), null);
+          final now = s.observe(start.add(const Duration(minutes: 1)), null);
+          expect(s.remaining(now), const Duration(minutes: 7));
+        },
+      );
+    });
+
     test('saves and loads to the same state (resume after the app was closed)', () {
       final s = ExamSession(
         paper: paper([eq(1, passageId: 9), eq(2, key: 'D')]),

@@ -147,6 +147,15 @@ class AttemptTest extends TestCase
 
         $this->postJson('/api/v1/attempts', $this->payload([['question_id' => 1, 'version' => 0, 'time_ms' => -1]]))
             ->assertUnprocessable()->assertJsonValidationErrors(['answers.0.version', 'answers.0.time_ms', 'answers.0.response']);
+
+        // Finished before it started.
+        $this->postJson('/api/v1/attempts', [...$this->payload([]), 'started_at' => now()->toIso8601String(), 'finished_at' => now()->subMinute()->toIso8601String()])
+            ->assertUnprocessable()->assertJsonValidationErrors(['finished_at']);
+        // A number instead of a date: a clear error, not a server crash (bug hunt).
+        $this->postJson('/api/v1/attempts', [...$this->payload([]), 'started_at' => PHP_INT_MAX, 'finished_at' => now()->toIso8601String()])
+            ->assertUnprocessable()->assertJsonValidationErrors(['started_at'])->assertJsonMissingValidationErrors(['finished_at']);
+        $this->postJson('/api/v1/attempts', [...$this->payload([]), 'started_at' => now()->toIso8601String(), 'finished_at' => PHP_INT_MAX])
+            ->assertUnprocessable()->assertJsonValidationErrors(['finished_at']);
     }
 
     public function test_every_mode_the_app_sends_is_accepted(): void

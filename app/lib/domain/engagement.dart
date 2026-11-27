@@ -6,7 +6,8 @@ library;
 typedef AnswerEvent = ({DateTime at, bool correct});
 
 /// One finished exam.
-typedef ExamEvent = ({DateTime at, int correct, int total});
+/// A finished exam. [answered] = questions really answered (not skipped).
+typedef ExamEvent = ({DateTime at, int correct, int total, int answered});
 
 abstract final class EngagementRules {
   /// Questions to answer in a day for the day to count in the streak.
@@ -14,6 +15,10 @@ abstract final class EngagementRules {
   static const xpCorrect = 10;
   static const xpWrong = 2;
   static const xpExam = 50;
+
+  /// An exam gives its [xpExam] points only with this many answered questions (the server's
+  /// leaderboard uses the same rule, so a one-question "exam" cannot be repeated for points).
+  static const examMinAnswered = 10;
 }
 
 DateTime _day(DateTime t) => DateTime(t.year, t.month, t.day);
@@ -94,9 +99,11 @@ Engagement engagementFrom({
   }
   int? best;
   for (final e in exams) {
-    xp += EngagementRules.xpExam;
-    final day = _day(e.at);
-    if (!day.isBefore(week) && !day.isAfter(today)) weekXp += EngagementRules.xpExam;
+    if (e.answered >= EngagementRules.examMinAnswered) {
+      xp += EngagementRules.xpExam;
+      final day = _day(e.at);
+      if (!day.isBefore(week) && !day.isAfter(today)) weekXp += EngagementRules.xpExam;
+    }
     if (e.total > 0) {
       final percent = (100 * e.correct / e.total).round();
       if (best == null || percent > best) best = percent;

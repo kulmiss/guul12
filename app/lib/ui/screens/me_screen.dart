@@ -315,11 +315,17 @@ class _InfoRow extends StatelessWidget {
   final String label;
   final String value;
 
+  // The value may take at most half the row, so large text wraps instead of breaking the row.
   @override
-  Widget build(BuildContext context) => ListTile(
-    dense: true,
-    title: Text(label),
-    trailing: Text(value, style: Theme.of(context).textTheme.bodyLarge),
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) => ListTile(
+      dense: true,
+      title: Text(label),
+      trailing: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: constraints.maxWidth / 2),
+        child: Text(value, textAlign: TextAlign.end, style: Theme.of(context).textTheme.bodyLarge),
+      ),
+    ),
   );
 }
 

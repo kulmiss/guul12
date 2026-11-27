@@ -97,13 +97,19 @@ class StreakCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Icon(Icons.local_fire_department, color: theme.colorScheme.secondary),
-                const SizedBox(width: 8),
-                Expanded(child: Text(l.streakDays(e.streak), style: theme.textTheme.titleMedium)),
-                Text(l.engagementBest(e.bestStreak)),
-              ],
+            // The best streak takes at most half the row, so large text wraps instead of overflowing.
+            LayoutBuilder(
+              builder: (context, constraints) => Row(
+                children: [
+                  Icon(Icons.local_fire_department, color: theme.colorScheme.secondary),
+                  const SizedBox(width: 8),
+                  Expanded(child: Text(l.streakDays(e.streak), style: theme.textTheme.titleMedium)),
+                  ConstrainedBox(
+                    constraints: BoxConstraints(maxWidth: constraints.maxWidth / 2),
+                    child: Text(l.engagementBest(e.bestStreak), textAlign: TextAlign.end),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 6),
             Text(

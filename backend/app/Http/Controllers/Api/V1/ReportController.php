@@ -8,6 +8,7 @@ use App\Models\Question;
 use App\Models\QuestionReport;
 use App\Models\User;
 use App\Services\Quality\QualityGate;
+use App\Support\LocalTime;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -29,7 +30,7 @@ class ReportController extends Controller
             'note' => ['nullable', 'string', 'max:500'],
         ]);
 
-        $today = QuestionReport::query()->where('user_id', $user->id)->where('created_at', '>=', now()->startOfDay())->count();
+        $today = QuestionReport::query()->where('user_id', $user->id)->where('created_at', '>=', LocalTime::startOfToday())->count();
         if ($today >= self::DAILY_LIMIT) {
             return response()->json(['code' => 'report_limit', 'message' => 'Thanks! You have sent many reports today. Please try again tomorrow.'], 429);
         }

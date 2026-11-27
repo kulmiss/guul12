@@ -23,12 +23,14 @@ use Illuminate\Support\Carbon;
  * @property Carbon $finished_at
  * @property int $total
  * @property int $correct
+ * @property int $answered questions really answered (not skipped)
+ * @property bool $over_time a fixed mock sent far after its time limit
  * @property int $too_fast
  * @property-read Collection<int, AttemptAnswer> $answers
  */
 class Attempt extends Model
 {
-    protected $fillable = ['user_id', 'client_uuid', 'mode', 'chapter_id', 'mock_id', 'challenge_date', 'challenge_key', 'battle_id', 'started_at', 'finished_at', 'total', 'correct', 'too_fast'];
+    protected $fillable = ['user_id', 'client_uuid', 'mode', 'chapter_id', 'mock_id', 'challenge_date', 'challenge_key', 'battle_id', 'started_at', 'finished_at', 'total', 'correct', 'answered', 'over_time', 'too_fast'];
 
     /**
      * @return array<string, string>
@@ -42,6 +44,8 @@ class Attempt extends Model
             'challenge_date' => 'date',
             'total' => 'integer',
             'correct' => 'integer',
+            'answered' => 'integer',
+            'over_time' => 'boolean',
             'too_fast' => 'integer',
         ];
     }

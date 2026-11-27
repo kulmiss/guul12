@@ -37,7 +37,8 @@ final engagementProvider = FutureProvider<EngagementView>((ref) async {
   final engagement = engagementFrom(
     answers: answers,
     exams: [
-      for (final e in exams) (at: e.finishedAt.toLocal(), correct: e.correct, total: e.total),
+      for (final e in exams)
+        (at: e.finishedAt.toLocal(), correct: e.correct, total: e.total, answered: e.answered),
     ],
     now: now,
   );

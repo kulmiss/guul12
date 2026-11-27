@@ -876,7 +876,11 @@ class ReferralInfo {
     required this.canEnterCode,
     required this.rewardDays,
     required this.minAnswers,
+    required this.qualifyDays,
     required this.maxPerMonth,
+    required this.friendsPerReward,
+    required this.towardNext,
+    required this.waitingRewards,
   });
 
   factory ReferralInfo.fromJson(Map<String, Object?> json) => ReferralInfo(
@@ -887,7 +891,11 @@ class ReferralInfo {
     canEnterCode: asBool(json['can_enter_code']),
     rewardDays: asInt(json['reward_days']),
     minAnswers: asInt(json['min_answers']),
+    qualifyDays: asInt(json['qualify_days']),
     maxPerMonth: asInt(json['max_per_month']),
+    friendsPerReward: asInt(json['friends_per_reward']).clamp(1, 1000),
+    towardNext: asInt(json['toward_next']),
+    waitingRewards: asInt(json['waiting_rewards']),
   );
 
   final String code;
@@ -902,10 +910,24 @@ class ReferralInfo {
   /// True while I may still enter the code of a friend who invited me.
   final bool canEnterCode;
 
-  /// Premium days per counted friend (0 = no Premium reward).
+  /// Premium days per reward (0 = no Premium reward).
   final int rewardDays;
+
+  /// A friend counts after answering this many different questions within [qualifyDays] days.
   final int minAnswers;
+  final int qualifyDays;
+
+  /// Rewards a month at most.
   final int maxPerMonth;
+
+  /// Counted friends needed for one reward.
+  final int friendsPerReward;
+
+  /// Counted friends toward the next reward (less than [friendsPerReward]).
+  final int towardNext;
+
+  /// Full groups waiting for next month because of the monthly limit.
+  final int waitingRewards;
 }
 
 /// An AI explanation ("Explain more", Premium).

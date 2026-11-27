@@ -54,6 +54,8 @@ class ExamResultService
             ->where('mode', PracticeMode::ExamFixed->value)
             ->where('user_id', '!=', $attempt->user_id)
             ->where('total', '>', 0)
+            // A mock sent far after its time limit is no rival.
+            ->where('over_time', false)
             ->groupBy('user_id')
             ->selectRaw('min(id) as id');
 

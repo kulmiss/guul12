@@ -61,3 +61,43 @@ Point a free uptime monitor (for example UptimeRobot) at `https://guul12.kulmiss
   `flutter test test/golden/landing_screens_test.dart --update-goldens && tool/landing_images.sh`
   and commit the new `backend/public/img/landing/*.webp`.
 - Pages linked from the app (`/app`, `/privacy`, `/terms`, `/delete-account`) never show a price, a contact for paying, or a link to `/` (a test checks every word). The old `/premium` address redirects to `/#premium`.
+
+## The domain and HTTPS (guul12.kulmiss.com)
+
+Found in the bug hunt (27 Nov 2026): `guul12.kulmiss.com` points to the cPanel server `91.204.209.17`,
+but the subdomain is **not set up in cPanel**. Over HTTP the server shows its "default web page"
+(`/cgi-sys/defaultwebpage.cgi`). Over HTTPS another site on the same server (abcobs.com, a WordPress
+site on PHP 7.0) answers with **its own certificate**, so phones and browsers report a name mismatch,
+and the app treats it as "offline". Steps (in cPanel, as the account that should own the site):
+
+1. **Domains → Create a new domain**: `guul12.kulmiss.com`. Untick "Share document root". Document
+   root: the Laravel `public` folder, e.g. `/home/<user>/guul12/backend/public`.
+2. **MultiPHP Manager**: set `guul12.kulmiss.com` to **PHP 8.3** (8.2 is the lowest that works).
+   **Select PHP Extensions** (or MultiPHP INI): `pdo_mysql`, `mbstring`, `intl`, `bcmath`, `gd`,
+   `zip`, `fileinfo`, `openssl`, `curl`.
+3. **SSL/TLS Status**: tick `guul12.kulmiss.com` and press **Run AutoSSL** (Let's Encrypt or
+   Sectigo). DNS already points to the server, so it can be checked over port 80. Wait until the
+   row shows a green lock.
+4. DNS: keep `guul12` as an **A record to 91.204.209.17**. If it is later put behind Cloudflare
+   (orange cloud), set Cloudflare SSL to **Full (strict)** and `TRUSTED_PROXIES=*` in `.env`.
+5. Check from any computer: `curl -I https://guul12.kulmiss.com/health` must answer `200` with no
+   certificate error, and `https://guul12.kulmiss.com/` must show the Guul 12 page.
+
+Server `.env` lines for production (never in git):
+
+```
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://guul12.kulmiss.com
+SESSION_SECURE_COOKIE=true
+# Only behind a proxy or Cloudflare (comma-separated addresses, or *):
+TRUSTED_PROXIES=
+```
+
+## Staff sign-in
+
+Every staff member can turn on **two-step sign-in** in Nova: user menu (top right) → **Security** →
+Two-factor authentication → scan the QR code with an authenticator app (Google Authenticator,
+Microsoft Authenticator, Aegis) → type the code → keep the recovery codes somewhere safe. Recommended
+for every super admin. Sign-in is limited to 5 tries a minute per email and 20 per address.
+

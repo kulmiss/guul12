@@ -1469,8 +1469,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get inviteYourCode => 'Your invite code';
 
   @override
-  String inviteRewardRule(int answers, int days, int max) {
-    return 'When a friend you invite answers $answers questions, you get $days days of Premium (up to $max friends a month).';
+  String inviteRewardRule(int friends, int answers, int qualifyDays, int days, int max) {
+    String _temp0 = intl.Intl.pluralLogic(
+      friends,
+      locale: localeName,
+      other:
+          'When $friends friends you invite each answer $answers questions within $qualifyDays days, you get $days days of Premium (limit: $max a month).',
+      one:
+          'When a friend you invite answers $answers questions within $qualifyDays days, you get $days days of Premium (limit: $max a month).',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String inviteProgress(int done, int friends) {
+    return 'Next reward: $done of $friends friends';
+  }
+
+  @override
+  String inviteWaiting(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count rewards are waiting for next month.',
+      one: '1 reward is waiting for next month.',
+    );
+    return '$_temp0';
   }
 
   @override

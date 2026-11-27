@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:guul12/services/uptime_clock.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../support/app_harness.dart';
@@ -187,6 +188,35 @@ void main() {
     expect(find.text('Time is up. Your exam was submitted.'), findsOneWidget);
     expect(find.text('Exam result'), findsOneWidget);
     expect(find.text('1 / 4 correct'), findsOneWidget);
+    final sent = server.receivedAttempts.single;
+    expect(sent['finished_at'], testNow.add(const Duration(minutes: 6)).toUtc().toIso8601String());
+  });
+
+  testWidgets('setting the phone clock back does not give more exam time (bug hunt)', (
+    tester,
+  ) async {
+    var now = testNow;
+    final uptime = FakeUptimeClock(1000);
+    final (_, server) = await pumpGuul(
+      tester,
+      server: examServer(),
+      clock: () => now,
+      uptime: uptime,
+    );
+    await openExams(tester);
+    await startMock1(tester);
+    await tapOn(tester, find.text('Option A'));
+
+    // 5½ real minutes pass, but the student turned the phone clock back by 1 hour.
+    uptime.ms = 1000 + 330000;
+    now = testNow.subtract(const Duration(hours: 1));
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.text('00:30'), findsOneWidget);
+
+    uptime.ms = 1000 + 361000;
+    await tester.pump(const Duration(seconds: 1));
+    await settle(tester);
+    expect(find.text('Time is up. Your exam was submitted.'), findsOneWidget);
     final sent = server.receivedAttempts.single;
     expect(sent['finished_at'], testNow.add(const Duration(minutes: 6)).toUtc().toIso8601String());
   });
