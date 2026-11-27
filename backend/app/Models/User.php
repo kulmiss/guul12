@@ -46,13 +46,16 @@ class User extends Authenticatable
 
     /**
      * Deleting a student (app or Nova) also removes what the database cannot remove by itself:
-     * sign-in tokens and staff log lines about the student. Only the Premium accounting lines
+     * sign-in tokens and staff log lines about the student (staff accounts keep their history). Only the Premium accounting lines
      * stay (privacy page, "What we keep").
      */
     protected static function booted(): void
     {
         static::deleting(function (User $user): void {
             $user->tokens()->delete();
+            if ($user->isStaff()) {
+                return; // a staff account keeps its history (accountability)
+            }
             $reports = NicknameReport::query()
                 ->where(fn ($q) => $q->where('reporter_id', $user->id)->orWhere('reported_user_id', $user->id))
                 ->pluck('id');

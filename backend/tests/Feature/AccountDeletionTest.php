@@ -105,6 +105,12 @@ class AccountDeletionTest extends TestCase
         $this->assertSame(['premium.granted'], $left->pluck('action')->all(), 'only the accounting line stays (delete page: "What we keep")');
         $this->assertSame($grant->id, $left->sole()->subject_id);
         $this->assertStringNotContainsString('Leaving', (string) json_encode($left->all()));
+
+        // A staff account keeps its history when it is removed (accountability).
+        $helper = User::factory()->staff(UserRole::PaymentsHelper)->create();
+        AuditLog::write($staff, 'staff.role_changed', $helper, ['old' => 'content_checker', 'new' => 'payments_helper']);
+        $helper->delete();
+        $this->assertSame(1, AuditLog::query()->where('action', 'staff.role_changed')->count());
     }
 
     public function test_a_student_s_own_actions_never_store_their_ip_address(): void
