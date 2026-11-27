@@ -54,10 +54,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::shouldBeStrict(! $this->app->isProduction());
 
-        $proxies = trim((string) config('guul.trusted_proxies'));
-        if ($proxies !== '') {
-            TrustProxies::at($proxies === '*' ? '*' : array_values(array_filter(array_map('trim', explode(',', $proxies)))));
-        }
+        self::trustConfiguredProxies();
 
         RateLimiter::for('api', fn (Request $request) => Limit::perMinute(120)->by($request->user()?->id ?: $request->ip()));
         RateLimiter::for('auth', fn (Request $request) => Limit::perMinute(10)->by($request->ip()));
@@ -77,5 +74,14 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('moderate', fn (User $user): bool => $user->hasRole(UserRole::SuperAdmin, UserRole::ContentChecker));
         Gate::define('manage-settings', fn (User $user): bool => $user->hasRole(UserRole::SuperAdmin));
         Gate::define('view-students', fn (User $user): bool => $user->hasRole(UserRole::SuperAdmin, UserRole::PaymentsHelper));
+    }
+
+    /** Behind a proxy or Cloudflare: TRUSTED_PROXIES in .env (config guul.trusted_proxies). */
+    public static function trustConfiguredProxies(): void
+    {
+        $proxies = trim((string) config('guul.trusted_proxies'));
+        if ($proxies !== '') {
+            TrustProxies::at($proxies === '*' ? '*' : array_values(array_filter(array_map('trim', explode(',', $proxies)))));
+        }
     }
 }

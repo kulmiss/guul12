@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Providers\AppServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Middleware\TrustProxies;
 use Tests\TestCase;
@@ -50,12 +51,11 @@ class SecurityHeadersTest extends TestCase
         // Not trusted (the default): a visitor cannot pretend to be on HTTPS.
         $this->withServerVariables($forwarded)->get('http://localhost/')->assertHeaderMissing('Strict-Transport-Security');
 
-        putenv('TRUSTED_PROXIES=*');
+        config(['guul.trusted_proxies' => '*']);
         try {
-            $this->refreshApplication();
+            AppServiceProvider::trustConfiguredProxies();
             $this->withServerVariables($forwarded)->get('http://localhost/')->assertHeader('Strict-Transport-Security', 'max-age=31536000');
         } finally {
-            putenv('TRUSTED_PROXIES');
             TrustProxies::flushState();
         }
     }
