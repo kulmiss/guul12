@@ -71,13 +71,16 @@ class Settings
             // "Better than X% of students" on a mock result, once this many students took it (DECISIONS #19).
             'percentile_min_students' => 30,
 
-            // Referral: a friend counts after this many real answers within the days below; the
-            // inviter then gets this many Premium days (0 = no Premium reward), at most this many
-            // times a month. A code can be entered up to this many days after first opening the app.
-            'referral_min_answers' => 50,
+            // Referral (owner, QUESTIONS #40): a friend counts after answering this many different
+            // questions for real (not too fast) within the days below. Every time this many friends
+            // have counted, the inviter gets this many Premium days (0 = no Premium reward), at most
+            // this many rewards a month. A code can be entered up to this many days after first
+            // opening the app.
+            'referral_min_answers' => 20,
             'referral_qualify_days' => 14,
+            'referral_friends_per_reward' => 3,
             'referral_premium_days' => 7,
-            'referral_max_per_month' => 4,
+            'referral_max_per_month' => 2,
             'referral_enter_days' => 7,
 
             // Start of the current school term (YYYY-MM-DD) for the "This term" range on the Nova

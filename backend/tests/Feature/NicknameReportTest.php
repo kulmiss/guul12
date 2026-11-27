@@ -147,6 +147,25 @@ class NicknameReportTest extends TestCase
             ->assertStatus(429)->assertJsonPath('code', 'report_limit');
     }
 
+    public function test_daily_limit_follows_the_addis_ababa_day(): void
+    {
+        $me = $this->student('Ayan');
+        Sanctum::actingAs($me);
+        $moderation = app(NicknameModeration::class);
+        // 02:30 in Addis Ababa = 23:30 UTC the day before.
+        Carbon::setTestNow(Carbon::parse('2026-11-09 23:30', 'UTC'));
+        for ($i = 0; $i < NicknameModeration::DAILY_LIMIT; $i++) {
+            $this->postJson('/api/v1/nickname-reports', ['ref' => $moderation->refFor($this->student("Name{$i}")), 'reason' => 'rude'])->assertCreated();
+        }
+        // 04:00 in Addis Ababa: the same day.
+        Carbon::setTestNow(Carbon::parse('2026-11-10 01:00', 'UTC'));
+        $this->postJson('/api/v1/nickname-reports', ['ref' => $moderation->refFor($this->student('Later')), 'reason' => 'rude'])->assertStatus(429);
+        // Midnight in Addis Ababa: a new day.
+        Carbon::setTestNow(Carbon::parse('2026-11-10 21:00', 'UTC'));
+        $this->postJson('/api/v1/nickname-reports', ['ref' => $moderation->refFor($this->student('NextDay')), 'reason' => 'rude'])->assertCreated();
+        Carbon::setTestNow();
+    }
+
     public function test_battle_opponent_carries_a_reference(): void
     {
         $ayan = $this->student('Ayan');

@@ -2432,11 +2432,23 @@ abstract class AppLocalizations {
   /// **'Your invite code'**
   String get inviteYourCode;
 
-  /// Rule with reward
+  /// Rule with reward (owner, QUESTIONS #40)
   ///
   /// In en, this message translates to:
-  /// **'When a friend you invite answers {answers} questions, you get {days} days of Premium (up to {max} friends a month).'**
-  String inviteRewardRule(int answers, int days, int max);
+  /// **'{friends, plural, =1{When a friend you invite answers {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).} other{When {friends} friends you invite each answer {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).}}'**
+  String inviteRewardRule(int friends, int answers, int qualifyDays, int days, int max);
+
+  /// Counted friends toward the next reward
+  ///
+  /// In en, this message translates to:
+  /// **'Next reward: {done} of {friends} friends'**
+  String inviteProgress(int done, int friends);
+
+  /// Full groups over the monthly limit
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 reward is waiting for next month.} other{{count} rewards are waiting for next month.}}'**
+  String inviteWaiting(int count);
 
   /// Rule without reward
   ///

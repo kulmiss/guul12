@@ -2013,17 +2013,44 @@
   "@inviteYourCode": {
     "description": "Label"
   },
-  "inviteRewardRule": "When a friend you invite answers {answers} questions, you get {days} days of Premium (up to {max} friends a month).",
+  "inviteRewardRule": "{friends, plural, =1{When a friend you invite answers {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).} other{When {friends} friends you invite each answer {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).}}",
   "@inviteRewardRule": {
-    "description": "Rule with reward",
+    "description": "Rule with reward (owner, QUESTIONS #40)",
     "placeholders": {
+      "friends": {
+        "type": "int"
+      },
       "answers": {
+        "type": "int"
+      },
+      "qualifyDays": {
         "type": "int"
       },
       "days": {
         "type": "int"
       },
       "max": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteProgress": "Next reward: {done} of {friends} friends",
+  "@inviteProgress": {
+    "description": "Counted friends toward the next reward",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "friends": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteWaiting": "{count, plural, =1{1 reward is waiting for next month.} other{{count} rewards are waiting for next month.}}",
+  "@inviteWaiting": {
+    "description": "Full groups over the monthly limit",
+    "placeholders": {
+      "count": {
         "type": "int"
       }
     }

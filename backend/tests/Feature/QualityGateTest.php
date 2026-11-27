@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Services\Quality\QualityGate;
 use App\Services\Settings;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Carbon;
 use Illuminate\Testing\TestResponse;
 use Laravel\Sanctum\Sanctum;
 use Symfony\Component\HttpFoundation\Response;
@@ -85,6 +86,23 @@ class QualityGateTest extends TestCase
             $this->report($q, user: $student)->assertCreated();
         }
         $this->report($oneMore, user: $student)->assertStatus(429)->assertJsonPath('code', 'report_limit');
+    }
+
+    public function test_daily_report_limit_follows_the_addis_ababa_day(): void
+    {
+        // 02:30 in Addis Ababa = 23:30 UTC the day before.
+        Carbon::setTestNow(Carbon::parse('2026-11-09 23:30', 'UTC'));
+        $student = User::factory()->create();
+        foreach (Question::factory()->count(30)->status(QuestionStatus::Beta)->create() as $q) {
+            $this->report($q, user: $student)->assertCreated();
+        }
+        // 04:00 in Addis Ababa: still the same day for the student (a new day only in UTC).
+        Carbon::setTestNow(Carbon::parse('2026-11-10 01:00', 'UTC'));
+        $this->report(Question::factory()->status(QuestionStatus::Beta)->create(), user: $student)->assertStatus(429);
+        // Midnight in Addis Ababa: a new day.
+        Carbon::setTestNow(Carbon::parse('2026-11-10 21:00', 'UTC'));
+        $this->report(Question::factory()->status(QuestionStatus::Beta)->create(), user: $student)->assertCreated();
+        Carbon::setTestNow();
     }
 
     public function test_promotion_publishes_clean_questions_and_flags_suspicious_ones(): void

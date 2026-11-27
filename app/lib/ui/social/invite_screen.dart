@@ -146,11 +146,25 @@ class _InviteBodyState extends ConsumerState<_InviteBody> {
           const SizedBox(height: 16),
           Text(
             info.rewardDays > 0
-                ? l.inviteRewardRule(info.minAnswers, info.rewardDays, info.maxPerMonth)
+                ? l.inviteRewardRule(
+                    info.friendsPerReward,
+                    info.minAnswers,
+                    info.qualifyDays,
+                    info.rewardDays,
+                    info.maxPerMonth,
+                  )
                 : l.inviteNoRewardRule,
           ),
           const SizedBox(height: 8),
           Text(l.inviteStats(info.pending + info.valid, info.valid, info.rewardedDays)),
+          if (info.rewardDays > 0 && info.friendsPerReward > 1) ...[
+            const SizedBox(height: 4),
+            Text(l.inviteProgress(info.towardNext, info.friendsPerReward)),
+          ],
+          if (info.rewardDays > 0 && info.waitingRewards > 0) ...[
+            const SizedBox(height: 4),
+            Text(l.inviteWaiting(info.waitingRewards)),
+          ],
           if (info.canEnterCode) ...[
             const SizedBox(height: 24),
             Text(l.inviteEnterTitle, style: theme.textTheme.titleMedium),

@@ -89,8 +89,12 @@ class ReferralTest extends TestCase
             'rewarded_days' => 0,
             'can_enter_code' => true,
             'reward_days' => 7,
-            'min_answers' => 50,
-            'max_per_month' => 4,
+            'min_answers' => 20,
+            'qualify_days' => 14,
+            'max_per_month' => 2,
+            'friends_per_reward' => 3,
+            'toward_next' => 0,
+            'waiting_rewards' => 0,
         ]);
     }
 
@@ -132,48 +136,97 @@ class ReferralTest extends TestCase
         return $this->getJson('/api/v1/referral')->json('referral');
     }
 
-    public function test_the_friend_counts_after_50_real_answers_and_the_inviter_gets_premium(): void
+    /**
+     * @return list<User>
+     */
+    private function inviteMany(User $inviter, int $count, int $answers = 20): array
+    {
+        $friends = [];
+        for ($i = 0; $i < $count; $i++) {
+            $friend = $this->invite($inviter);
+            $this->answer($friend, $answers);
+            $friends[] = $friend;
+        }
+
+        return $friends;
+    }
+
+    public function test_three_friends_who_answer_20_real_questions_give_7_premium_days(): void
     {
         $inviter = User::factory()->create();
-        $friend = $this->invite($inviter);
 
-        $this->answer($friend, 40);
-        $this->answer($friend, 30, 100); // too fast: guessing does not count
+        // Friend 1: 15 real answers + 10 too fast (guessing does not count) = still pending.
+        $first = $this->invite($inviter);
+        $this->answer($first, 15);
+        $this->answer($first, 25, 100);
         $this->assertSame(Referral::PENDING, Referral::query()->sole()->status);
-        $this->assertFalse(app(PremiumService::class)->isPremium($inviter));
+        $this->answer($first, 20);
+        $this->assertSame(Referral::VALID, Referral::query()->sole()->status);
 
-        $this->answer($friend, 10);
-        $referral = Referral::query()->sole();
-        $this->assertSame(Referral::VALID, $referral->status);
-        $grant = PremiumGrant::query()->findOrFail($referral->premium_grant_id);
+        // One or two counted friends: no reward yet, the app shows the progress.
+        $this->inviteMany($inviter, 1);
+        $this->assertSame(0, PremiumGrant::query()->count());
+        $this->assertFalse(app(PremiumService::class)->isPremium($inviter));
+        $this->assertSame(['valid' => 2, 'rewarded_days' => 0, 'toward_next' => 2], array_intersect_key(
+            $this->codeOfSummary($inviter), ['valid' => 0, 'rewarded_days' => 0, 'toward_next' => 0]));
+
+        // The third friend: 7 Premium days, one grant shared by the three referrals.
+        $this->inviteMany($inviter, 1);
+        $grant = PremiumGrant::query()->sole();
         $this->assertSame(PremiumPlan::Referral, $grant->plan);
         $this->assertSame($inviter->id, $grant->user_id);
         $this->assertSame(7, (int) $grant->starts_at->diffInDays($grant->ends_at));
+        $this->assertSame(3, Referral::query()->where('premium_grant_id', $grant->id)->count());
         $this->assertTrue(app(PremiumService::class)->isPremium($inviter));
-        $this->assertSame(['valid' => 1, 'rewarded_days' => 7], array_intersect_key($this->codeOfSummary($inviter), ['valid' => 0, 'rewarded_days' => 0]));
+        $this->assertSame(['valid' => 3, 'rewarded_days' => 7, 'toward_next' => 0], array_intersect_key(
+            $this->codeOfSummary($inviter), ['valid' => 0, 'rewarded_days' => 0, 'toward_next' => 0]));
 
-        // More answers later do not give a second reward.
-        $this->answer($friend, 20);
+        // More answers later never give a second reward.
+        $this->answer($first, 20);
         $this->assertSame(1, PremiumGrant::query()->count());
     }
 
-    public function test_monthly_limit_and_premium_days_setting(): void
+    public function test_the_same_question_answered_again_counts_once(): void
     {
         $inviter = User::factory()->create();
-        for ($i = 0; $i < 5; $i++) {
-            $this->answer($this->invite($inviter), 50);
+        $friend = $this->invite($inviter);
+        // 40 answers, but only 10 different questions.
+        for ($i = 0; $i < 4; $i++) {
+            $this->answer($friend, 10);
         }
-        $this->assertSame(5, Referral::query()->where('status', Referral::VALID)->count());
-        $this->assertSame(4, Referral::query()->whereNotNull('premium_grant_id')->count());
+        $this->assertSame(Referral::PENDING, Referral::query()->sole()->status);
+        $this->answer($friend, 20);
+        $this->assertSame(Referral::VALID, Referral::query()->sole()->status);
+    }
 
-        // A new month: rewards again. With 0 days set: valid but no Premium.
-        Carbon::setTestNow(Carbon::parse('2026-12-02 08:00', 'UTC'));
+    public function test_at_most_two_rewards_a_month_and_waiting_friends_carry_over(): void
+    {
+        $inviter = User::factory()->create();
+        $this->inviteMany($inviter, 8);
+        $this->assertSame(8, Referral::query()->where('status', Referral::VALID)->count());
+        $this->assertSame(2, PremiumGrant::query()->count(), '2 rewards a month');
+        $this->assertSame(6, Referral::query()->whereNotNull('premium_grant_id')->count());
+        $this->assertSame(['toward_next' => 2, 'waiting_rewards' => 0], array_intersect_key(
+            $this->codeOfSummary($inviter), ['toward_next' => 0, 'waiting_rewards' => 0]));
+        $this->inviteMany($inviter, 1);
+        $this->assertSame(2, PremiumGrant::query()->count(), 'still 2: the third group waits');
+        $this->assertSame(['toward_next' => 0, 'waiting_rewards' => 1], array_intersect_key(
+            $this->codeOfSummary($inviter), ['toward_next' => 0, 'waiting_rewards' => 0]));
+
+        // A new month (Addis Ababa time): the next friend who counts releases the waiting group.
+        Carbon::setTestNow(Carbon::parse('2026-11-30 21:30', 'UTC')); // 1 December 00:30 in Addis Ababa
+        $this->inviteMany($inviter, 1);
+        $this->assertSame(3, PremiumGrant::query()->count());
+        $this->assertSame(1, Referral::query()->where('status', Referral::VALID)->whereNull('premium_grant_id')->count());
+        $this->inviteMany($inviter, 1);
+
+        // With 0 days set: friends still count, but no Premium.
         app(Settings::class)->set('referral_premium_days', 0);
-        $this->answer($this->invite($inviter), 50);
-        $this->assertSame(4, Referral::query()->whereNotNull('premium_grant_id')->count());
+        $this->inviteMany($inviter, 3);
+        $this->assertSame(3, PremiumGrant::query()->count());
         app(Settings::class)->set('referral_premium_days', 7);
-        $this->answer($this->invite($inviter), 50);
-        $this->assertSame(5, Referral::query()->whereNotNull('premium_grant_id')->count());
+        $this->inviteMany($inviter, 1);
+        $this->assertSame(4, PremiumGrant::query()->count(), 'the waiting friends are rewarded when it is on again');
     }
 
     public function test_a_friend_who_does_not_study_in_time_expires(): void
@@ -181,7 +234,7 @@ class ReferralTest extends TestCase
         $inviter = User::factory()->create();
         $friend = $this->invite($inviter);
         Carbon::setTestNow(Carbon::now()->addDays(15));
-        $this->answer($friend, 50);
+        $this->answer($friend, 20);
         $this->assertSame(Referral::EXPIRED, Referral::query()->sole()->status);
         $this->assertSame(0, PremiumGrant::query()->count());
     }
@@ -192,7 +245,7 @@ class ReferralTest extends TestCase
         $friend = $this->invite($inviter);
         app(FeatureSwitches::class)->set('referral', false);
         $this->getJson('/api/v1/referral')->assertForbidden()->assertJsonPath('code', 'feature_disabled');
-        $this->answer($friend, 50);
+        $this->answer($friend, 20);
         $this->assertSame(Referral::PENDING, Referral::query()->sole()->status, 'no reward while switched off');
     }
 }

@@ -52,11 +52,15 @@ class FakeServer {
     'code': 'Q4WX7P',
     'pending': 1,
     'valid': 2,
-    'rewarded_days': 14,
+    'rewarded_days': 7,
     'can_enter_code': true,
     'reward_days': 7,
-    'min_answers': 50,
-    'max_per_month': 4,
+    'min_answers': 20,
+    'qualify_days': 14,
+    'max_per_month': 2,
+    'friends_per_reward': 3,
+    'toward_next': 2,
+    'waiting_rewards': 0,
   };
 
   /// Battles started or joined by the student, oldest first.
