@@ -84,6 +84,8 @@ class ExamSession {
     Map<int, int>? timeMs,
     this._index = 0,
     DateTime? shownAt,
+    this._clockTime,
+    this._clockCounter,
   }) : answers = answers ?? {},
        flagged = flagged ?? {},
        timeMs = timeMs ?? {},
@@ -98,6 +100,8 @@ class ExamSession {
     timeMs: asMap(json['time_ms']).map((k, v) => MapEntry(int.parse(k), asInt(v))),
     index: asInt(json['index']),
     shownAt: DateTime.parse(asString(json['shown_at'])),
+    clockTime: json['clock_time'] == null ? null : DateTime.parse(asString(json['clock_time'])),
+    clockCounter: asIntOrNull(json['clock_counter']),
   );
 
   final ExamPaper paper;
@@ -112,6 +116,38 @@ class ExamSession {
   final Map<int, int> timeMs;
   int _index;
   DateTime _shownAt;
+
+  /// The exam's own clock: the time it last saw, and the phone's "time since start-up" counter then.
+  DateTime? _clockTime;
+  int? _clockCounter;
+
+  /// Turns the phone's clock reading into the exam's time, which never goes back and ignores
+  /// changes to the phone clock (bug hunt: setting the clock back gave more time).
+  ///
+  /// [counter] is the phone's time since start-up in milliseconds (Android's elapsedRealtime;
+  /// the student cannot change it). While it moves on, it decides how much time passed. After a
+  /// restart of the phone (it starts again from 0) or without it, the phone clock decides, but
+  /// never backwards. Use the returned time for every other call.
+  DateTime observe(DateTime wall, int? counter) {
+    final last = _clockTime;
+    final lastCounter = _clockCounter;
+    if (last == null) {
+      _clockTime = wall;
+      _clockCounter = counter;
+      return wall;
+    }
+    final int passedMs;
+    if (counter != null && lastCounter != null && counter >= lastCounter) {
+      passedMs = counter - lastCounter;
+    } else {
+      final ms = wall.difference(last).inMilliseconds;
+      passedMs = ms > 0 ? ms : 0;
+    }
+    final now = last.add(Duration(milliseconds: passedMs));
+    _clockTime = now;
+    _clockCounter = counter;
+    return now;
+  }
 
   int get index => _index;
   int get total => paper.questions.length;
@@ -185,6 +221,8 @@ class ExamSession {
     'time_ms': timeMs.map((k, v) => MapEntry('$k', v)),
     'index': _index,
     'shown_at': _shownAt.toUtc().toIso8601String(),
+    'clock_time': _clockTime?.toUtc().toIso8601String(),
+    'clock_counter': _clockCounter,
   };
 }
 

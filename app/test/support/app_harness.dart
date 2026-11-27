@@ -13,6 +13,7 @@ import 'package:guul12/services/google_auth.dart';
 import 'package:guul12/services/reminders.dart';
 import 'package:guul12/services/sharing.dart';
 import 'package:guul12/services/speech.dart';
+import 'package:guul12/services/uptime_clock.dart';
 import 'package:guul12/ui/screens/onboarding_screen.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -59,6 +60,7 @@ Future<(Repository, FakeServer)> pumpGuul(
   GoogleAuth? googleAuth,
   Future<void> Function(Repository repo)? before,
   DateTime Function()? clock,
+  UptimeClock? uptime,
   double pixelRatio = 1,
   List<Override> overrides = const [],
 }) async {
@@ -75,6 +77,7 @@ Future<(Repository, FakeServer)> pumpGuul(
       overrides: [
         repositoryProvider.overrideWithValue(repo),
         clockProvider.overrideWithValue(clock ?? () => testNow),
+        uptimeClockProvider.overrideWithValue(uptime ?? FakeUptimeClock()),
         appVersionProvider.overrideWithValue(appVersion),
         speechProvider.overrideWithValue(speech ?? const SilentSpeech()),
         remindersProvider.overrideWithValue(reminders ?? const NoReminders()),

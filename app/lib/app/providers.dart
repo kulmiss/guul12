@@ -10,6 +10,7 @@ import '../services/google_auth.dart';
 import '../services/reminders.dart';
 import '../services/sharing.dart';
 import '../services/speech.dart';
+import '../services/uptime_clock.dart';
 
 /// Overridden in main() and in tests.
 final repositoryProvider = Provider<Repository>(
@@ -20,6 +21,9 @@ final speechProvider = Provider<Speech>((ref) => const SilentSpeech());
 final remindersProvider = Provider<Reminders>((ref) => const NoReminders());
 final sharingProvider = Provider<Sharing>((ref) => const NoSharing());
 final clockProvider = Provider<DateTime Function()>((ref) => DateTime.now);
+
+/// The phone's time since start-up, for the exam clock (null in tests unless replaced).
+final uptimeClockProvider = Provider<UptimeClock>((ref) => UptimeClock());
 final appVersionProvider = Provider<String>((ref) => '1.0.0+1');
 
 class ProfileNotifier extends AsyncNotifier<Profile> {

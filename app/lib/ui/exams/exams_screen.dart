@@ -213,7 +213,7 @@ class _ExamsScreenState extends ConsumerState<ExamsScreen> {
                         subtitle: Text(
                           l.examsContinueBody(
                             inProgress.paper.title,
-                            formatDuration(inProgress.remaining(now)),
+                            formatDuration(inProgress.remaining(inProgress.observe(now, null))),
                           ),
                         ),
                         trailing: const Icon(Icons.chevron_right),

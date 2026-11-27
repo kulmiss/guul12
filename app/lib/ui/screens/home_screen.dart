@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -552,18 +554,36 @@ class _GoalRing extends StatelessWidget {
                   if (done >= goal)
                     Icon(Icons.check_rounded, color: on, size: 32)
                   else
-                    Text(
-                      '$done/$goal',
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        color: on,
-                        fontWeight: FontWeight.w900,
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          '$done/$goal',
+                          maxLines: 1,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: on,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
                       ),
                     ),
                 ],
               ),
             ),
             const SizedBox(height: 6),
-            Text(l.homeGoalLabel, style: theme.textTheme.labelMedium?.copyWith(color: on)),
+            // Large text: the label shrinks to the ring's width instead of pushing the row wider.
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 88),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  l.homeGoalLabel,
+                  maxLines: 1,
+                  style: theme.textTheme.labelMedium?.copyWith(color: on),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -835,48 +855,55 @@ class _WeekCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 for (final d in week)
-                  Semantics(
-                    container: true, // one spoken item per day
-                    label: d.reached
-                        ? l.homeWeekDayReached(DateFormat.EEEE(l.localeName).format(d.day))
-                        : l.homeWeekDayCount(
-                            DateFormat.EEEE(l.localeName).format(d.day),
-                            d.answered,
-                            EngagementRules.dailyGoal,
-                          ),
-                    child: ExcludeSemantics(
-                      child: Column(
-                        children: [
-                          Text(
-                            DateFormat.E(l.localeName).format(d.day),
-                            style: theme.textTheme.labelSmall?.copyWith(
-                              fontWeight: d.isToday ? FontWeight.w900 : FontWeight.w500,
-                              color: d.isToday ? scheme.primary : scheme.onSurfaceVariant,
+                  Expanded(
+                    child: Semantics(
+                      container: true, // one spoken item per day
+                      label: d.reached
+                          ? l.homeWeekDayReached(DateFormat.EEEE(l.localeName).format(d.day))
+                          : l.homeWeekDayCount(
+                              DateFormat.EEEE(l.localeName).format(d.day),
+                              d.answered,
+                              EngagementRules.dailyGoal,
                             ),
-                          ),
-                          const SizedBox(height: 6),
-                          Container(
-                            width: 32,
-                            height: 32,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: d.reached
-                                  ? green.strong
-                                  : d.isFuture
-                                  ? scheme.surfaceContainerHigh
-                                  : Colors.transparent,
-                              border: d.reached || d.isFuture
-                                  ? null
-                                  : Border.all(
-                                      color: d.isToday ? scheme.primary : scheme.outlineVariant,
-                                      width: d.isToday ? 2.5 : 1.5,
-                                    ),
+                      child: ExcludeSemantics(
+                        child: Column(
+                          children: [
+                            // Large text in the phone settings: the short day name shrinks to fit.
+                            FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                DateFormat.E(l.localeName).format(d.day),
+                                maxLines: 1,
+                                style: theme.textTheme.labelSmall?.copyWith(
+                                  fontWeight: d.isToday ? FontWeight.w900 : FontWeight.w500,
+                                  color: d.isToday ? scheme.primary : scheme.onSurfaceVariant,
+                                ),
+                              ),
                             ),
-                            child: d.reached
-                                ? Icon(Icons.check_rounded, size: 20, color: green.onStrong)
-                                : null,
-                          ),
-                        ],
+                            const SizedBox(height: 6),
+                            Container(
+                              width: 32,
+                              height: 32,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: d.reached
+                                    ? green.strong
+                                    : d.isFuture
+                                    ? scheme.surfaceContainerHigh
+                                    : Colors.transparent,
+                                border: d.reached || d.isFuture
+                                    ? null
+                                    : Border.all(
+                                        color: d.isToday ? scheme.primary : scheme.outlineVariant,
+                                        width: d.isToday ? 2.5 : 1.5,
+                                      ),
+                              ),
+                              child: d.reached
+                                  ? Icon(Icons.check_rounded, size: 20, color: green.onStrong)
+                                  : null,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -1071,8 +1098,12 @@ class _SubjectRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final colours = accents(context);
     final theme = Theme.of(context);
+    // Circle, gap, padding and one line of the name, which grows with large text in the settings.
+    final nameLine = MediaQuery.textScalerOf(context).scale(
+      (theme.textTheme.labelMedium?.fontSize ?? 12) * (theme.textTheme.labelMedium?.height ?? 1.4),
+    );
     return SizedBox(
-      height: 104,
+      height: max(104, 56 + 6 + 12 + nameLine + 6),
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 16),
