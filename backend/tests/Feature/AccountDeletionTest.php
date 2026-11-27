@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Enums\PremiumPlan;
 use App\Enums\UserRole;
 use App\Models\Attempt;
+use App\Models\AuditLog;
 use App\Models\Battle;
 use App\Models\Chapter;
 use App\Models\NicknameReport;
@@ -12,8 +13,10 @@ use App\Models\PaymentRequest;
 use App\Models\Question;
 use App\Models\Referral;
 use App\Models\User;
+use App\Services\NicknameModeration;
 use App\Services\PremiumService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
@@ -74,6 +77,46 @@ class AccountDeletionTest extends TestCase
         // The old token no longer works.
         $this->app['auth']->forgetGuards();
         $this->withToken($token)->getJson('/api/v1/me')->assertUnauthorized();
+    }
+
+    public function test_staff_logs_about_the_student_go_too_except_the_premium_accounting_lines(): void
+    {
+        $me = User::factory()->create(['nickname' => 'Leaving']);
+        $other = User::factory()->create(['nickname' => 'Other']);
+        $staff = User::factory()->staff(UserRole::SuperAdmin)->create();
+        // I invited a friend (inviter side), and staff acted on my nickname and my reports.
+        Referral::query()->create(['inviter_id' => $me->id, 'invitee_id' => $other->id, 'status' => Referral::PENDING]);
+        $aboutMe = NicknameReport::query()->create(['reporter_id' => $other->id, 'reported_user_id' => $me->id, 'nickname' => 'Leaving', 'reason' => 'rude']);
+        $moderation = app(NicknameModeration::class);
+        $moderation->dismiss($aboutMe, $staff);
+        $moderation->block($me, $staff);
+        $me->forceFill(['nickname' => 'Leaving'])->save();
+        $moderation->reset($me, $staff);
+        $grant = app(PremiumService::class)->grant($me, PremiumPlan::Term, $staff, 'TX-9');
+        $me->createToken('phone');
+        $this->assertGreaterThanOrEqual(4, AuditLog::query()->count());
+
+        // Deleted the way Nova does it (and the app: both call delete on the student).
+        $me->delete();
+
+        $this->assertSame(0, Referral::query()->count());
+        $this->assertSame(0, DB::table('personal_access_tokens')->where('tokenable_id', $me->id)->count(), 'tokens go even without the app');
+        $left = AuditLog::query()->get();
+        $this->assertSame(['premium.granted'], $left->pluck('action')->all(), 'only the accounting line stays (delete page: "What we keep")');
+        $this->assertSame($grant->id, $left->sole()->subject_id);
+        $this->assertStringNotContainsString('Leaving', (string) json_encode($left->all()));
+    }
+
+    public function test_a_student_s_own_actions_never_store_their_ip_address(): void
+    {
+        $student = User::factory()->create();
+        $staff = User::factory()->staff(UserRole::SuperAdmin)->create();
+        $this->app->instance('request', Request::create('/api/v1/auth/google', 'POST', server: ['REMOTE_ADDR' => '196.188.1.2']));
+        AuditLog::write($student, 'account.google_linked', $student);
+        AuditLog::write($staff, 'ops.cache_refreshed');
+
+        $this->assertNull(AuditLog::query()->where('actor_id', $student->id)->value('ip'));
+        $this->assertSame('196.188.1.2', AuditLog::query()->where('actor_id', $staff->id)->value('ip'), 'staff actions keep the IP, for safety');
     }
 
     public function test_staff_cannot_delete_themselves_here_and_guests_cannot_call_it(): void

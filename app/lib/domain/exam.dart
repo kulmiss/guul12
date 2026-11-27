@@ -327,6 +327,9 @@ class ExamRecord {
 
   int get total => items.length;
   int get correct => items.where((i) => i.correct).length;
+
+  /// Questions really answered (not skipped).
+  int get answered => items.where((i) => i.response?.isNotEmpty ?? false).length;
   List<ChapterScore> get chapters => chapterScores(items);
   Duration get timeUsed => finishedAt.difference(startedAt);
 

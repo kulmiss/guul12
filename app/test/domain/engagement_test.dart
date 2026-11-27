@@ -26,13 +26,27 @@ void main() {
   });
 
   test('XP: 10 per right answer, 2 per wrong, 50 per exam', () {
-    final e = run(day(ago(0), 3, correct: 2), exams: [(at: now, correct: 1, total: 4)]);
+    final e = run(
+      day(ago(0), 3, correct: 2),
+      exams: [(at: now, correct: 1, total: 40, answered: 10)],
+    );
     expect(e.xp, 2 * 10 + 2 + 50);
     expect(e.totalAnswered, 3);
     expect(e.totalCorrect, 2);
     expect(e.exams, 1);
-    expect(e.bestExamPercent, 25);
+    expect(e.bestExamPercent, 3);
   });
+
+  test(
+    'an exam gives its 50 points only with 10 answered questions (the server does the same)',
+    () {
+      final few = run(const [], exams: [(at: now, correct: 3, total: 50, answered: 9)]);
+      expect(few.xp, 0);
+      expect(few.exams, 1, reason: 'it still counts as an exam taken');
+      expect(few.bestExamPercent, 6);
+      expect(run(const [], exams: [(at: now, correct: 3, total: 50, answered: 10)]).xp, 50);
+    },
+  );
 
   test('the goal needs 10 answers in a day', () {
     expect(run(day(ago(0), 9)).goalReachedToday, isFalse);
@@ -95,8 +109,8 @@ void main() {
         ...day(DateTime(2026, 11, 23), 1, correct: 1),
       ],
       exams: [
-        (at: DateTime(2026, 11, 22, 10), correct: 1, total: 1),
-        (at: now, correct: 0, total: 2),
+        (at: DateTime(2026, 11, 22, 10), correct: 10, total: 10, answered: 10),
+        (at: now, correct: 0, total: 20, answered: 10),
       ],
     );
     expect(e.weekXp, 10 + 50);
@@ -105,14 +119,17 @@ void main() {
   });
 
   test('an exam with no questions does not set a best score', () {
-    expect(run(const [], exams: [(at: now, correct: 0, total: 0)]).bestExamPercent, isNull);
+    expect(
+      run(const [], exams: [(at: now, correct: 0, total: 0, answered: 0)]).bestExamPercent,
+      isNull,
+    );
   });
 
   group('achievements', () {
     test('progress and earned', () {
       final e = run(
         [...day(ago(2), 10), ...day(ago(1), 10), ...day(ago(0), 10)],
-        exams: [(at: now, correct: 41, total: 50)],
+        exams: [(at: now, correct: 41, total: 50, answered: 50)],
       );
       expect(Achievement.firstSteps.earned(e, strongChapters: 0), isTrue);
       expect(Achievement.hundred.progress(e, strongChapters: 0), 30);

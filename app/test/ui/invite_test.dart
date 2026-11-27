@@ -26,7 +26,7 @@ void main() {
     expect(find.text('Q4WX7P'), findsOneWidget);
     expect(
       find.text(
-        'When 3 friends you invite each answer 20 questions within 14 days, you get 7 days of Premium (up to 2 times a month).',
+        'When 3 friends you invite each answer 20 questions within 14 days, you get 7 days of Premium (limit: 2 a month).',
       ),
       findsOneWidget,
     );
@@ -65,7 +65,7 @@ void main() {
     await tapOn(tester, find.text('Me'));
     await tapOn(tester, find.text('Invite friends'));
     expect(find.text('Invite friends to study for the exam with you.'), findsOneWidget);
-    expect(find.textContaining('Premium (up to'), findsNothing);
+    expect(find.textContaining('days of Premium'), findsNothing);
     expect(find.text('Share'), findsNothing);
     expect(find.text('Copy'), findsOneWidget);
   });
@@ -85,7 +85,7 @@ void main() {
     await tapOn(tester, find.text('Invite friends'));
     expect(
       find.text(
-        'When a friend you invite answers 20 questions within 14 days, you get 7 days of Premium (up to 2 times a month).',
+        'When a friend you invite answers 20 questions within 14 days, you get 7 days of Premium (limit: 2 a month).',
       ),
       findsOneWidget,
     );

@@ -2013,7 +2013,7 @@
   "@inviteYourCode": {
     "description": "Label"
   },
-  "inviteRewardRule": "{friends, plural, =1{When a friend you invite answers {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).} other{When {friends} friends you invite each answer {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).}}",
+  "inviteRewardRule": "{friends, plural, =1{When a friend you invite answers {answers} questions within {qualifyDays} days, you get {days} days of Premium (limit: {max} a month).} other{When {friends} friends you invite each answer {answers} questions within {qualifyDays} days, you get {days} days of Premium (limit: {max} a month).}}",
   "@inviteRewardRule": {
     "description": "Rule with reward (owner, QUESTIONS #40)",
     "placeholders": {

@@ -34,7 +34,8 @@ Future<void> runReminder({
     final engagement = engagementFrom(
       answers: await db.answerEvents(),
       exams: [
-        for (final e in exams) (at: e.finishedAt.toLocal(), correct: e.correct, total: e.total),
+        for (final e in exams)
+          (at: e.finishedAt.toLocal(), correct: e.correct, total: e.total, answered: e.answered),
       ],
       now: now,
     );

@@ -12,6 +12,7 @@ use App\Models\Mock;
 use App\Models\Passage;
 use App\Models\Question;
 use App\Models\User;
+use App\Services\Leaderboard;
 use App\Services\PremiumService;
 use App\Services\Settings;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -198,6 +199,73 @@ class ExamApiTest extends TestCase
         app(Settings::class)->set('percentile_min_students', 5);
         $later = $this->getJson("/api/v1/attempts/{$uuid}")->assertOk()->json('attempt.exam');
         $this->assertSame([null, 4], [$later['better_than_percent'], $later['students']]);
+    }
+
+    public function test_a_fixed_mock_counts_only_its_own_questions_and_missing_ones_are_wrong(): void
+    {
+        $mock = $this->makeMock(1, Access::Free, [$this->questions[0], $this->questions[1]]);
+
+        // A fake phone sends one right answer from the mock and one right answer from elsewhere.
+        $json = $this->postJson('/api/v1/attempts', $this->exam('exam_fixed', [0 => 'B', 2 => 'B'], $mock))->assertCreated()->json('attempt');
+
+        $this->assertSame([2, 1], [$json['total'], $json['correct']], 'the mock has 2 questions; the unanswered one is wrong');
+        $this->assertSame([['chapter_id' => $this->chapterA->id, 'total' => 1, 'correct' => 1]], $json['exam']['chapters']);
+    }
+
+    public function test_a_half_sent_mock_cannot_beat_students_who_sat_the_whole_mock(): void
+    {
+        app(Settings::class)->set('percentile_min_students', 2);
+        $mock = $this->makeMock(1, Access::Free, $this->questions);
+        foreach ([['B', 'B', null], ['B', null, null]] as $responses) {
+            Sanctum::actingAs(User::factory()->create());
+            $this->postJson('/api/v1/attempts', $this->exam('exam_fixed', $responses, $mock))->assertCreated();
+        }
+
+        // Only one (right) answer sent: 1 of 3, not 1 of 1.
+        Sanctum::actingAs($this->student);
+        $json = $this->postJson('/api/v1/attempts', $this->exam('exam_fixed', [0 => 'B'], $mock))->assertCreated()->json('attempt');
+        $this->assertSame([3, 1], [$json['total'], $json['correct']]);
+        $this->assertSame(0, $json['exam']['better_than_percent'], 'ties with 1/3 and loses to 2/3');
+    }
+
+    public function test_a_fixed_mock_far_over_its_time_gets_no_exam_bonus_and_is_no_rival(): void
+    {
+        app(Settings::class)->set('percentile_min_students', 1);
+        $more = Question::factory()->count(7)->withOptions()->create(['chapter_id' => $this->chapterA->id])->all();
+        $this->questions = [...$this->questions, ...$more];
+        $mock = $this->makeMock(1, Access::Free, $this->questions); // 10 questions, 75 minutes
+        $allRight = array_fill(0, 10, 'B');
+
+        // A fake phone claims 3 hours for a 75-minute mock, all right.
+        $cheater = User::factory()->create();
+        Sanctum::actingAs($cheater);
+        $this->postJson('/api/v1/attempts', [...$this->exam('exam_fixed', $allRight, $mock),
+            'started_at' => now()->subHours(3)->toIso8601String()])->assertCreated();
+        $this->assertSame(10 * Leaderboard::XP_CORRECT, app(Leaderboard::class)->xpOf($cheater, now()), 'answers count, the 50 exam points do not');
+
+        // In time (75 minutes + 5 minutes for a slow phone is fine): the exam points count.
+        $honest = User::factory()->create();
+        Sanctum::actingAs($honest);
+        $json = $this->postJson('/api/v1/attempts', [...$this->exam('exam_fixed', $allRight, $mock),
+            'started_at' => now()->subMinutes(79)->toIso8601String()])->assertCreated()->json('attempt.exam');
+        $this->assertSame(10 * Leaderboard::XP_CORRECT + Leaderboard::XP_EXAM, app(Leaderboard::class)->xpOf($honest, now()));
+        // The over-time mock is not a rival: no one to compare with yet.
+        $this->assertSame([null, 0], [$json['better_than_percent'], $json['students']]);
+    }
+
+    public function test_the_exam_bonus_needs_at_least_ten_answers(): void
+    {
+        $more = Question::factory()->count(7)->withOptions()->create(['chapter_id' => $this->chapterA->id])->all();
+        $this->questions = [...$this->questions, ...$more];
+
+        // A one-question "exam" sent again and again used to give 50 points each time.
+        for ($i = 0; $i < 3; $i++) {
+            $this->postJson('/api/v1/attempts', $this->exam('exam_mistakes', [0 => 'B']))->assertCreated();
+        }
+        $this->assertSame(3 * Leaderboard::XP_CORRECT, app(Leaderboard::class)->xpOf($this->student, now()));
+
+        $this->postJson('/api/v1/attempts', $this->exam('exam_random', array_fill(0, 10, 'B')))->assertCreated();
+        $this->assertSame(13 * Leaderboard::XP_CORRECT + Leaderboard::XP_EXAM, app(Leaderboard::class)->xpOf($this->student, now()));
     }
 
     public function test_an_attempt_can_be_read_again_only_by_its_owner(): void

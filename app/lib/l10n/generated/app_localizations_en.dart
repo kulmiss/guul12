@@ -1474,9 +1474,9 @@ class AppLocalizationsEn extends AppLocalizations {
       friends,
       locale: localeName,
       other:
-          'When $friends friends you invite each answer $answers questions within $qualifyDays days, you get $days days of Premium (up to $max times a month).',
+          'When $friends friends you invite each answer $answers questions within $qualifyDays days, you get $days days of Premium (limit: $max a month).',
       one:
-          'When a friend you invite answers $answers questions within $qualifyDays days, you get $days days of Premium (up to $max times a month).',
+          'When a friend you invite answers $answers questions within $qualifyDays days, you get $days days of Premium (limit: $max a month).',
     );
     return '$_temp0';
   }

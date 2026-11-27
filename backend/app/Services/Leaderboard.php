@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Cache;
 
 /**
  * Weekly leaderboard. Points are the same XP the app shows: 10 per right answer, 2 per wrong
- * answer, 50 per finished exam, from server-scored attempts finished since Monday 00:00
+ * answer, 50 per finished exam with at least 10 answered questions (and, for a fixed mock, sent in time), from server-scored attempts finished since Monday 00:00
  * (Addis Ababa time). Only students who chose a nickname appear; only nickname + avatar are shown.
  */
 class Leaderboard
@@ -26,6 +26,9 @@ class Leaderboard
     public const XP_WRONG = 2;
 
     public const XP_EXAM = 50;
+
+    /** An exam gives its 50 points only with this many answered questions (same rule in the app). */
+    public const EXAM_MIN_ANSWERED = 10;
 
     private const CACHE_SECONDS = 60;
 
@@ -122,7 +125,8 @@ class Leaderboard
 
         return 'SUM(attempts.correct * '.self::XP_CORRECT
             .' + (attempts.total - attempts.correct) * '.self::XP_WRONG
-            .' + CASE WHEN attempts.mode IN ('.$placeholders.') THEN '.self::XP_EXAM.' ELSE 0 END)';
+            .' + CASE WHEN attempts.mode IN ('.$placeholders.') AND attempts.answered >= '.self::EXAM_MIN_ANSWERED
+            .' AND attempts.over_time = 0 THEN '.self::XP_EXAM.' ELSE 0 END)';
     }
 
     /**

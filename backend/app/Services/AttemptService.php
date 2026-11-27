@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\PracticeMode;
 use App\Models\Attempt;
 use App\Models\Battle;
+use App\Models\Mock;
 use App\Models\Question;
 use App\Models\User;
 use App\Services\Scoring\AnswerScorer;
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\DB;
  */
 class AttemptService
 {
+    /** A fixed mock may end this many minutes after its time limit (slow phone, upload) and still count. */
+    public const MOCK_GRACE_MINUTES = 5;
+
     public function __construct(
         private readonly AnswerScorer $scorer,
         private readonly Settings $settings,
@@ -60,6 +64,13 @@ class AttemptService
             $ids = array_values(array_intersect($ids, $battle === null ? [] : $battle->question_ids));
         }
 
+        $mock = null;
+        if (PracticeMode::from($data['mode']) === PracticeMode::ExamFixed && isset($data['mock_id'])) {
+            // Only the mock's own questions count, and a question left out counts as wrong.
+            $mock = Mock::query()->find($data['mock_id']);
+            $ids = array_values(array_intersect($ids, $mock === null ? [] : $this->mockQuestionIds($mock)));
+        }
+
         /** @var Collection<int, Question> $questions */
         $questions = Question::query()
             ->visibleToStudents()
@@ -68,7 +79,7 @@ class AttemptService
             ->keyBy('id');
 
         try {
-            $attempt = $this->store($user, $data, $questions, $minMs, $maxMs, $challengeKey === null ? null : [$challengeDate, $challengeKey], $battleId);
+            $attempt = $this->store($user, $data, $questions, $minMs, $maxMs, $challengeKey === null ? null : [$challengeDate, $challengeKey], $battleId, $mock);
         } catch (UniqueConstraintViolationException) {
             // The same attempt arrived twice at the same moment; the first one won.
             $attempt = Attempt::query()->where('user_id', $user->id)->where('client_uuid', $data['client_uuid'])->firstOrFail();
@@ -87,10 +98,13 @@ class AttemptService
      * @param  Collection<int, Question>  $questions
      * @param  array{0: string, 1: string}|null  $challenge  date and key of a daily challenge
      * @param  int|null  $battleId  for battles
+     * @param  Mock|null  $mock  for fixed mocks
      */
-    private function store(User $user, array $data, $questions, int $minMs, int $maxMs, ?array $challenge, ?int $battleId): Attempt
+    private function store(User $user, array $data, $questions, int $minMs, int $maxMs, ?array $challenge, ?int $battleId, ?Mock $mock): Attempt
     {
-        return DB::transaction(function () use ($user, $data, $questions, $minMs, $maxMs, $challenge, $battleId): Attempt {
+        return DB::transaction(function () use ($user, $data, $questions, $minMs, $maxMs, $challenge, $battleId, $mock): Attempt {
+            $startedAt = Carbon::parse($data['started_at'])->utc();
+            $finishedAt = Carbon::parse($data['finished_at'])->utc();
             $attempt = Attempt::query()->create([
                 'user_id' => $user->id,
                 'client_uuid' => $data['client_uuid'],
@@ -100,14 +114,15 @@ class AttemptService
                 'challenge_date' => $challenge[0] ?? null,
                 'challenge_key' => $challenge[1] ?? null,
                 'battle_id' => $battleId,
-                'started_at' => Carbon::parse($data['started_at'])->utc(),
-                'finished_at' => Carbon::parse($data['finished_at'])->utc(),
+                'started_at' => $startedAt,
+                'finished_at' => $finishedAt,
                 'total' => 0,
                 'correct' => 0,
             ]);
 
             $total = 0;
             $correct = 0;
+            $answered = 0;
             $tooFast = 0;
             $seen = [];
 
@@ -141,12 +156,32 @@ class AttemptService
 
                 $total++;
                 $correct += $isCorrect ? 1 : 0;
+                $answered += $answer['response'] === null || $answer['response'] === '' || $answer['response'] === [] ? 0 : 1;
                 $tooFast += $isTooFast ? 1 : 0;
             }
 
-            $attempt->forceFill(['total' => $total, 'correct' => $correct, 'too_fast' => $tooFast])->save();
+            $overTime = false;
+            if ($mock !== null) {
+                $total = max($total, Question::query()->visibleToStudents()->whereIn('id', $this->mockQuestionIds($mock))->count());
+                $overTime = $startedAt->diffInSeconds($finishedAt) > ($mock->minutes + self::MOCK_GRACE_MINUTES) * 60;
+            }
+
+            $attempt->forceFill([
+                'total' => $total, 'correct' => $correct, 'answered' => $answered, 'too_fast' => $tooFast, 'over_time' => $overTime,
+            ])->save();
 
             return $attempt;
         });
+    }
+
+    /**
+     * @return list<int>
+     */
+    private function mockQuestionIds(Mock $mock): array
+    {
+        return array_values(array_map(
+            fn (mixed $id): int => (int) $id,
+            DB::table('mock_questions')->where('mock_id', $mock->id)->pluck('question_id')->all(),
+        ));
     }
 }

@@ -15,6 +15,7 @@ use App\Services\FeatureSwitches;
 use App\Services\ReferralService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Validation\Rule;
 
 class AttemptController extends Controller
@@ -39,8 +40,16 @@ class AttemptController extends Controller
             'mock_id' => ['nullable', 'integer', 'exists:mocks,id', 'required_if:mode,'.PracticeMode::ExamFixed->value, 'prohibited_unless:mode,'.PracticeMode::ExamFixed->value],
             'challenge_date' => ['nullable', 'date_format:Y-m-d', 'required_if:mode,'.PracticeMode::DailyChallenge->value, 'prohibited_unless:mode,'.PracticeMode::DailyChallenge->value],
             'battle_id' => ['nullable', 'integer', 'required_if:mode,'.PracticeMode::Battle->value, 'prohibited_unless:mode,'.PracticeMode::Battle->value],
-            'started_at' => ['required', 'date'],
-            'finished_at' => ['required', 'date', 'after_or_equal:started_at', 'before_or_equal:'.now()->addMinutes(10)->toIso8601String()],
+            'started_at' => ['bail', 'required', 'string', 'date'],
+            // Compared by hand: Laravel's after_or_equal:started_at crashes when started_at is a number.
+            'finished_at' => ['bail', 'required', 'string', 'date', 'before_or_equal:'.now()->addMinutes(10)->toIso8601String(),
+                function (string $attribute, mixed $value, \Closure $fail) use ($request): void {
+                    $started = $request->input('started_at');
+                    if (is_string($started) && strtotime($started) !== false && is_string($value)
+                        && Carbon::parse($value)->lessThan(Carbon::parse($started))) {
+                        $fail('The finished at field must be a date after or equal to started at.');
+                    }
+                }],
             'answers' => ['required', 'array', 'min:1', 'max:'.self::MAX_ANSWERS],
             'answers.*.question_id' => ['required', 'integer'],
             'answers.*.version' => ['required', 'integer', 'min:1'],

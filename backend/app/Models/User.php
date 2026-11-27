@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\Gender;
 use App\Enums\UserRole;
+use App\Services\NicknameModeration;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -41,6 +42,27 @@ class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use HasApiTokens, HasFactory, Notifiable;
+
+    /**
+     * Deleting a student (app or Nova) also removes what the database cannot remove by itself:
+     * sign-in tokens and staff log lines about the student. Only the Premium accounting lines
+     * stay (privacy page, "What we keep").
+     */
+    protected static function booted(): void
+    {
+        static::deleting(function (User $user): void {
+            $user->tokens()->delete();
+            $reports = NicknameReport::query()
+                ->where(fn ($q) => $q->where('reporter_id', $user->id)->orWhere('reported_user_id', $user->id))
+                ->pluck('id');
+            AuditLog::query()->where('subject_type', 'User')->where('subject_id', $user->id)->delete();
+            AuditLog::query()->where('subject_type', 'NicknameReport')->whereIn('subject_id', $reports)->delete();
+        });
+        static::deleted(function (): void {
+            // A deleted nickname leaves the cached leaderboard at once.
+            NicknameModeration::refreshLeaderboard();
+        });
+    }
 
     /**
      * Only profile fields are mass assignable; role, student_id and google_sub are set explicitly.

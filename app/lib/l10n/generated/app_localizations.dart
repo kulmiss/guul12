@@ -2435,7 +2435,7 @@ abstract class AppLocalizations {
   /// Rule with reward (owner, QUESTIONS #40)
   ///
   /// In en, this message translates to:
-  /// **'{friends, plural, =1{When a friend you invite answers {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).} other{When {friends} friends you invite each answer {answers} questions within {qualifyDays} days, you get {days} days of Premium (up to {max} times a month).}}'**
+  /// **'{friends, plural, =1{When a friend you invite answers {answers} questions within {qualifyDays} days, you get {days} days of Premium (limit: {max} a month).} other{When {friends} friends you invite each answer {answers} questions within {qualifyDays} days, you get {days} days of Premium (limit: {max} a month).}}'**
   String inviteRewardRule(int friends, int answers, int qualifyDays, int days, int max);
 
   /// Counted friends toward the next reward

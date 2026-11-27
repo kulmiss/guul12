@@ -54,6 +54,7 @@ class LeaderboardTest extends TestCase
             'finished_at' => $at,
             'total' => $total,
             'correct' => $correct,
+            'answered' => $total,
         ]);
     }
 
