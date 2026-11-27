@@ -52,7 +52,7 @@ class AttemptController extends Controller
                 }],
             'answers' => ['required', 'array', 'min:1', 'max:'.self::MAX_ANSWERS],
             'answers.*.question_id' => ['required', 'integer'],
-            'answers.*.version' => ['required', 'integer', 'min:1'],
+            'answers.*.version' => ['required', 'integer', 'min:1', 'max:1000000'],
             'answers.*.response' => ['present'],
             'answers.*.time_ms' => ['required', 'integer', 'min:0'],
         ]);
